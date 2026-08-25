@@ -20,8 +20,6 @@ Two views, one app:
 
 Selecting conferences in the shared sidebar applies to both views at once.
 
-Selecting conferences in the shared sidebar applies to both views at once.
-
 ### Citation Graph
 *Papers as nodes (sized by in-corpus citations), edges coloured by direction —
 within-community versus cross-community citation flow at a glance.*
