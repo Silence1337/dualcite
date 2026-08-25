@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Cache Saver: A Modular Framework for Efficient, Affordable, and Reproducible LLM Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nearchos</forename><surname>Potatmitis</surname></persName>
+							<email>nearchos.potamitis@cs.au.dk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lars</forename><surname>Klein</surname></persName>
+							<email>lars.klein@epfl.ch</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bardia</forename><surname>Mohammadi</surname></persName>
+							<email>bmohamma@mpi-sws.org</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chongyang</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Attreyee</forename><surname>Mukherjee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Laurent</forename><surname>Bindschaedler</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Niket</forename><surname>Tandon</surname></persName>
+							<email>niket.tandon@microsoft.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Akhil</forename><surname>Arora</surname></persName>
+							<email>akhil.arora@cs.au.dk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Epfl</forename><forename type="middle">♤</forename><surname>Mpi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Microsoft</forename><surname>Research</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Aarhus University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Cache Saver: A Modular Framework for Efficient, Affordable, and Reproducible LLM Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E7DB8C116E2BF20CA0DFF58E21792A67</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Inference constitutes the majority of costs throughout the lifecycle of a large language model (LLM). While numerous LLM inference engines focusing primarily on low-level optimizations have been developed, there is a scarcity of non-intrusive client-side frameworks that perform high-level optimizations. In this paper, we introduce Cache Saver, a modular, plug-and-play, and asynchronous framework that facilitates high-level inference optimizations, thereby integrating cleanly into existing systems without requiring changes to the end-user application logic or the underlying LLM. The key novelty is a namespaceaware list-valued cache that ensures statistical integrity of LLM responses by generating i.i.d. responses within a namespace as well as ensuring reproducibility. Moreover, as a direct consequence of operating at a high level, Cache Saver supports both local and online models. We conduct extensive experiments with five representative state-of-the-art reasoning strategies, five diverse benchmark tasks, and three different LLMs. On average across all methods, tasks, and LLMs, Cache Saver reduces cost by ≃ 25% and CO 2 by ≃ 35%. Notably, Cache Saver excels in practical machine learning scenarios such as benchmarking across multiple methods or conducting ablation analysis of a specific method, obtaining substantial cost and carbon footprint reduction of ≃ 60%. Cache Saver is publicly available at https://github.com/au-clan/cachesaver.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

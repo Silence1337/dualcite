@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Bi-Tuning with Collaborative Information for Controllable LLM-based Sequential Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linmei</forename><surname>Hu</surname></persName>
+							<email>hulinmei@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Luhao</forename><surname>Zhang</surname></persName>
+							<email>zhangluhao@bit.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wentao</forename><surname>Cheng</surname></persName>
+							<email>wentao.cheng23@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yashen</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Artificial Intelligence Institute of CETC</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ge</forename><surname>Shi</surname></persName>
+							<email>shige@bjut.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Beijing University of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chong</forename><surname>Feng</surname></persName>
+							<email>fengchong@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liqiang</forename><surname>Nie</surname></persName>
+							<email>nieliqiang@gmail.com</email>
+							<affiliation key="aff3">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Bi-Tuning with Collaborative Information for Controllable LLM-based Sequential Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2F0DEA79028A5E15A9A6905AA3CA399C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Sequential recommender systems, which leverage historical interactions to deliver targeted recommendations, have been significantly advanced by large language models (LLMs). However, LLM-based generative sequential recommendation often faces two key challenges: the lack of collaborative knowledge and the limited controllability over the generated content. In this paper, we propose a simple Bi-Tuning framework with collaborative information for controllable Large Language Modelbased Sequential Recommendation (Laser). Specifically, Bi-Tuning works through incorporating learnable virtual tokens at both the prefix and suffix of the input text, where the prefix tokens enable the adaptation of LLMs with collaborative information, while the suffix token transforms the LLM output into item/user embeddings for similarity comparison, thereby facilitating controllable recommendations. Furthermore, we introduce an MoE-based querying transformer that selectively activates experts to extract relevant information from varying collaborative signals of frozen ID-based recommenders into the prefix, coupled with a multi-task loss function incorporating the MoE load-balancing objective. Finally, a two-phase training strategy is employed to progressively obtain high-quality item and user embeddings through the learnable suffix. Experiments on real-world datasets show that Laser effectively adapts LLMs for sequential recommendation, outperforming state-of-the-art baselines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

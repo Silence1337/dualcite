@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LongRecipe : Recipe for Efficient Long Context Generalization in Large Languge Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhiyuan</forename><surname>Hu</surname></persName>
+							<email>zhiyuan_hu@u.nus.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuliang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institute</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Nanjing University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinman</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Toronto</orgName>
+								<address>
+									<addrLine>5 Mila</addrLine>
+									<region>Québec</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Suyuchen</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yan</forename><surname>Wang</surname></persName>
+							<affiliation key="aff6">
+								<orgName type="institution">The University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Shen</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Nanjing University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qing</forename><surname>Gu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Nanjing University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anh</forename><forename type="middle">Tuan</forename><surname>Luu</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">Nanyang Technological University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">See-Kiong</forename><surname>Ng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiwei</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Nanjing University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bryan</forename><surname>Hooi</surname></persName>
+							<email>bhooi@comp.nus.edu.sg</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">AI Institute / Université de Montréal</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LongRecipe : Recipe for Efficient Long Context Generalization in Large Languge Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7AB865D57A9AE4A5D1C4A9CEAB07C1B1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) face significant challenges in handling long-context tasks because of their limited effective context window size during pretraining, which restricts their ability to generalize over extended sequences. Meanwhile, extending the context window in LLMs through post-pretraining is highly resource-intensive. To address this, we introduce LongRecipe, an efficient training strategy for extending the context window of LLMs, including impactful token analysis, position index transformation, and training optimization strategies. It simulates long-sequence inputs while maintaining training efficiency and significantly improves the model&apos;s understanding of long-range dependencies. Experiments on three types of LLMs show that Lon-gRecipe can utilize long sequences while requiring only 30% of the target context window size, and reduces computational training resource over 85% compared to full sequence training. Furthermore, LongRecipe also preserves the original LLM&apos;s capabilities in general tasks. Ultimately, we can extend effective context window of open-source LLMs from 8k to 128k, achieving performance close to GPT-4 with just one day of dedicated training using a single GPU with 80G memory. Our code is released at https://github.com/ zhiyuanhubj/LongRecipe.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

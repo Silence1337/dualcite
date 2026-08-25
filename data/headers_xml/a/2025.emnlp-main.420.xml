@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Middle Path for On-Premises LLM Deployment: Preserving Privacy Without Sacrificing Model Confidentiality</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hanbo</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yihan</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bowen</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lin</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruoyu</forename><surname>Sun</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Chinese University of Hong Kong (Shenzhen)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhuotao</forename><surname>Liu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shiyu</forename><surname>Liang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Middle Path for On-Premises LLM Deployment: Preserving Privacy Without Sacrificing Model Confidentiality</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C9FD8BDA49CDE75F9A2C4529CA50B835</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:59+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Privacy-sensitive users require deploying large language models (LLMs) within their own infrastructure (on-premises) to safeguard private data and enable customization. However, vulnerabilities in local environments can lead to unauthorized access and potential model theft. To address this, prior research on small models has explored securing only the output layer within hardware-secured devices to balance model confidentiality and customization. Yet this approach fails to protect LLMs effectively. In this paper, we discover that (1) query-based distillation attacks targeting the secured top layer can produce a functionally equivalent replica of the victim model; (2) securing the same number of layers, bottom layers before a transition layer provide stronger protection against distillation attacks than top layers, with comparable effects on customization performance; and (3) the number of secured layers creates a trade-off between protection and customization flexibility. Based on these insights, we propose SOLID, a novel deployment framework that secures a few bottom layers in a secure environment and introduces an efficient metric to optimize the trade-off by determining the ideal number of hidden layers. Extensive experiments on five models (1.3B to 70B parameters) demonstrate that SOLID outperforms baselines, achieving a better balance between protection and downstream customization. Our code can be found at: https://github.com/ OTTO-OTO/SOLID-OnPremiseDeployment.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">HHGT: Hierarchical Heterogeneous Graph Transformer for Heterogeneous Graph Representation Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qiuyu</forename><surname>Zhu</surname></persName>
+							<email>qiuyu002@e.ntu.edu.sg</email>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Zhang</surname></persName>
+							<email>zhangl@hec.fr</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qianxiong</forename><surname>Xu</surname></persName>
+							<email>qianxion001@e.ntu.edu.sg</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kaijun</forename><surname>Liu</surname></persName>
+							<email>kaijun001@e.ntu.edu.sg</email>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Long</surname></persName>
+							<email>c.long@ntu.edu.sg</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyang</forename><surname>Wang</surname></persName>
+							<email>xiaoyang.wang1@unsw.edu.au</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit2">HEC Paris</orgName>
+								<address>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit2">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit3">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit4">University of New</orgName>
+								<address>
+									<country>South Wales Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">HHGT: Hierarchical Heterogeneous Graph Transformer for Heterogeneous Graph Representation Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B5D979C430F4CFBE1D8558FD44C0C2E1</idno>
+					<idno type="DOI">10.1145/3701551.3703511</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Computing methodologies → Learning latent representations;</term>
+					<term>Information systems → Data mining heterogeneous information network, node representation learning, hierarchical heterogeneous graph Transformer</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Despite the success of Heterogeneous Graph Neural Networks (HGNNs) in modeling real-world Heterogeneous Information Networks (HINs), challenges such as expressiveness limitations and over-smoothing have prompted researchers to explore Graph Transformers (GTs) for enhanced HIN representation learning. However, research on GT in HINs remains limited, with two key shortcomings in existing work: (1) A node&apos;s neighbors at different distances in HINs convey diverse semantics; for instance, a paper&apos;s direct neighbor (a paper) in an academic graph signifies a citation relation, whereas the indirect neighbor (another paper) implies a thematic association, reflecting distinct meanings. Unfortunately, existing methods ignore such differences and uniformly treat neighbors within a given distance in a coarse manner, which results in semantic confusion. (2) Nodes in HINs have various types, each with unique semantics, e.g., papers and authors in an academic graph carry distinct meanings. Nevertheless, existing methods mix nodes of different types during neighbor aggregation, hindering the capture of proper correlations between nodes of diverse types. To bridge these gaps, we design an innovative structure named (𝑘, 𝑡)-ring neighborhood, where nodes are initially organized by their distance, forming different non-overlapping 𝑘-ring neighborhoods for each distance. Within each 𝑘-ring structure, nodes are further categorized into different groups according to their types, thus emphasizing the heterogeneity of both distances and types in HINs naturally. Based on this structure, we propose a novel Hierarchical Heterogeneous Graph Transformer (HHGT) model, which seamlessly integrates a Type-level Transformer for aggregating nodes of different types within each 𝑘-ring neighborhood, followed by a Ring-level Transformer for aggregating different 𝑘-ring neighborhoods in a hierarchical manner. Extensive experiments are conducted on downstream tasks to verify HHGT&apos;s superiority over 14 baselines, with a notable improvement of up to 24.75% in * Co-corresponding authors. † The work was done while Liang Zhang was a PhD student at NTU.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

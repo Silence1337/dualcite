@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Socratic-MCTS: Test-Time Visual Reasoning by Asking the Right Questions</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">David</forename><surname>Acuna</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ximing</forename><surname>Lu</surname></persName>
+							<email>ximingl@nvidia.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaehun</forename><surname>Jung</surname></persName>
+							<email>jaehunj@nvidia.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyunwoo</forename><surname>Kim</surname></persName>
+							<email>hyunwook@nvidia.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amlan</forename><surname>Kar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sanja</forename><surname>Fidler</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yejin</forename><surname>Choi</surname></persName>
+							<email>yejinc@nvidia.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">†</forename><surname>Nvidia</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Socratic-MCTS: Test-Time Visual Reasoning by Asking the Right Questions</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">516D1C52168EF5EF6611EFDD86D0CC1A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent research in vision-language models (VLMs) has centered around the possibility of equipping them with implicit long-form chainof-thought reasoning-akin to the success observed in language models-via distillation and reinforcement learning. But what about the non-reasoning models already trained and deployed across the internet? Should we simply abandon them, or is there hope for a search mechanism that can elicit hidden knowledge and induce long reasoning traces-without any additional training or supervision? In this paper, we explore this possibility using a Monte Carlo Tree Search (MCTS)-inspired algorithm, which injects subquestion-subanswer pairs into the model&apos;s output stream. We show that framing reasoning as a search process-where subquestions act as latent decisions within a broader inference trajectory-helps the model &quot;connect the dots&quot; between fragmented knowledge and produce extended reasoning traces in nonreasoning models. We evaluate our method across three benchmarks and observe consistent improvements. Notably, our approach yields a 2% overall improvement on MMMU-PRO, including a significant 9% gain in Liberal Arts. Problem (P) What is the position of the blue car in the image? A: parked on the sidewalk B: driving on the road C: parked on the grass D: parked on the road CoT: To determine the position of the blue car in the image, let&apos;s analyze the scene: * The image shows a busy urban street with several vehicles. * The blue car is located on the right side of the image. * It is positioned on what appears to be a paved surface, which is consistent with a road. * The car is not on the grass or the sidewalk, as those areas are clearly distinguishable in the image. * The car is stationary, suggesting it is parked. Given these observations, the blue car is parked on the road. Answer: D [Wrong]</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

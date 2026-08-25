@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Node-Aware Dynamic Quantization Approach for Graph Collaborative Filtering</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Lin</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chunyang</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Yin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaohui</forename><surname>Tao</surname></persName>
+							<email>xiaohui.tao@unisq.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianwei</forename><surname>Zhang</surname></persName>
+							<email>zhang@iwate-u.ac.jp</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University of Technology Wuhan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Wuhan University of Technology Wuhan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Wuhan University of Technology Wuhan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<settlement>Ltd Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Southern Queensland Springfield</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Iwate University Morioka</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Node-Aware Dynamic Quantization Approach for Graph Collaborative Filtering</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F7895B04B8F017BCE3FFBD5EA5707463</idno>
+					<idno type="DOI">10.1145/3746252.3761244</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Graph Collaborative Filtering</term>
+					<term>Quantization-aware Training</term>
+					<term>Dynamic Quantization</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>In the realm of collaborative filtering recommendation systems, Graph Neural Networks (GNNs) have demonstrated remarkable performance but face significant challenges in deployment on resourceconstrained edge devices due to their high embedding parameter requirements and computational costs. Using common quantization method directly on node embeddings may overlooks their graph based structure, causing error accumulation during message passing and degrading the quality of quantized embeddings.To address this, we propose Graph based Node-Aware Dynamic Quantization training for collaborative filtering (GNAQ), a novel quantization approach that leverages graph structural information to enhance the balance between efficiency and accuracy of GNNs for Top-K recommendation. GNAQ introduces a node-aware dynamic quantization strategy that adapts quantization scales to individual node embeddings by incorporating graph interaction relationships. Specifically, it initializes quantization intervals based on node-wise feature distributions and dynamically refines them through message passing in GNN layers. This approach mitigates information loss caused by fixed quantization scales and captures hierarchical semantic features in user-item interaction graphs. Additionally, GNAQ employs graph relation-aware gradient estimation to replace traditional straight-through estimators, ensuring more accurate gradient propagation during training. Extensive experiments on four real-world datasets demonstrate that GNAQ outperforms state-of-the-art quantization methods, including BiGeaR and N2UQ, by achieving average improvement in 27.8% Recall@10 and 17.6% NDCG@10 under 2-bit quantization. In particular, GNAQ is capable of maintaining the performance of full-precision models while reducing their model sizes by 8 to 12 times; in addition, the training time is twice as fast compared to quantization baseline methods.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

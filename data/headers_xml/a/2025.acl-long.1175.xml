@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Enhancing Retrieval-Augmented Generation via Evidence Tree Search</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Hao</forename><surname>Sun</surname></persName>
+							<email>sunhao@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of General Artificial Intelligence</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Intelligence Science and Technology</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hengyi</forename><surname>Cai</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuchen</forename><surname>Li</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuanbo</forename><surname>Fan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of General Artificial Intelligence</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Intelligence Science and Technology</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaochi</forename><surname>Wei</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuaiqiang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yan</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of General Artificial Intelligence</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Intelligence Science and Technology</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dawei</forename><surname>Yin</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Enhancing Retrieval-Augmented Generation via Evidence Tree Search</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">10F047D890160385A71589F67BFEF1D9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-Augmented Generation (RAG) is widely used to enhance Large Language Models (LLMs) by grounding responses in external knowledge. However, in real-world applications, retrievers often return lengthy documents with redundant or irrelevant content, confusing downstream readers. While evidence retrieval aims to address this by extracting key information, it faces critical challenges: (1) inability to model synergistic inter-dependencies among evidence sentences, (2) lack of supervision for evaluating multi-sentence evidence quality, and (3) computational inefficiency in navigating exponentially growing search spaces of candidate evidence sets. To tackle these challenges, we propose ETS (Evidence Tree Search), a novel framework that reformulates evidence retrieval as a dynamic tree expansion process. Our approach first constructs an evidence tree where each path represents a candidate evidence set, explicitly modeling inter-sentence dependencies through context-aware node selection. We then leverage Monte Carlo Tree Search (MCTS) to efficiently assess evidence quality and introduce an Early-Terminating Beam Search strategy to efficiently accelerate the model inference. Extensive experiments on five datasets demonstrate that ETS significantly outperforms existing methods across different readers. Our code and datasets will be released to facilitate future research.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

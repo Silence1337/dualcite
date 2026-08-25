@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ChemActor: Enhancing Automated Extraction of Chemical Synthesis Actions with LLM-Generated Data</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">AI Institute</orgName>
+								<orgName type="institution" key="instit2">Shanghai Jiao Tong University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruijie</forename><surname>Yu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jidong</forename><surname>Tian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">AI Institute</orgName>
+								<orgName type="institution" key="instit2">Shanghai Jiao Tong University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">AI Institute</orgName>
+								<orgName type="institution" key="instit2">Shanghai Jiao Tong University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiapeng</forename><surname>Liu</surname></persName>
+							<email>liujiapeng@x-imaging.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">AI Institute</orgName>
+								<orgName type="institution" key="instit2">Shanghai Jiao Tong University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">X-Imaging Intelligent Technology (Shanghai)</orgName>
+								<orgName type="institution">Co. LTD</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaokang</forename><surname>Yang</surname></persName>
+							<email>xkyang@sjtu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">AI Institute</orgName>
+								<orgName type="institution" key="instit2">Shanghai Jiao Tong University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yaohui</forename><surname>Jin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">AI Institute</orgName>
+								<orgName type="institution" key="instit2">Shanghai Jiao Tong University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanyan</forename><surname>Xu</surname></persName>
+							<email>yanyanxu@sjtu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">AI Institute</orgName>
+								<orgName type="institution" key="instit2">Shanghai Jiao Tong University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ChemActor: Enhancing Automated Extraction of Chemical Synthesis Actions with LLM-Generated Data</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F1786F76CCC2575C25028E679B16EFD2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>With the increasing interest in robotic synthesis in the context of organic chemistry, the automated extraction of chemical procedures from literature is critical. However, this task remains challenging due to the inherent ambiguity of chemical language and the high cost of human annotation required for developing reliable computer-aided extraction protocols. Here, we present ChemActor, a fully fine-tuned large language model (LLM), as a chemical executor to convert between unstructured experimental procedures and structured action sequences. We propose a sequential LLM-generated data framework to address the challenges of insufficient and low-quality annotated data. This framework integrates a data selection module that selects data based on distribution divergence, with a general-purpose LLM, to generate machine-executable actions from a single molecule input. Additionally, we introduce a novel multi-round LLMs circle review metric, which reflects the model&apos;s advanced understanding of chemical experimental procedures. Extensive experiments on reactionto-description (R2D) and description-to-action (D2A) tasks demonstrate that ChemActor, augmented by LLM-generated data, achieves stateof-the-art performance, outperforming the baseline model by 10%. The code is available at: https://github.com/Zhanghahah/ChemActor.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

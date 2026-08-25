@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Decoding by Contrasting Knowledge: Enhancing Large Language Model Confidence on Edited Facts</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Baolong</forename><surname>Bi</surname></persName>
+							<email>bibaolong23z@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="institution">ICT</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shenghua</forename><surname>Liu</surname></persName>
+							<email>liushenghua@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="institution">ICT</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiwei</forename><surname>Wang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Merced</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lingrui</forename><surname>Mei</surname></persName>
+							<email>meilingrui25b@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="institution">ICT</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junfeng</forename><surname>Fang</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pengliang</forename><surname>Ji</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">Carnegie Mellon University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xueqi</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="institution">ICT</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Decoding by Contrasting Knowledge: Enhancing Large Language Model Confidence on Edited Facts</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A43A3B6A2AFED807669900F1A3D51E19</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The knowledge within large language models (LLMs) may become outdated quickly. While in-context editing (ICE) is currently the most effective method for knowledge editing (KE), it is constrained by the black-box modeling of LLMs and thus lacks interpretability. Our work aims to elucidate the superior performance of ICE in KE by analyzing the impacts of in-context new knowledge on token-wise distributions. We observe that despite a significant boost in logits of the new knowledge, the performance of ICE is still hindered by stubborn knowledge. We propose a novel approach termed Decoding by Contrasting Knowledge (DeCK). DeCK derives the distribution of the next token by contrasting the logits obtained from the newly edited knowledge guided by ICE with those from the unedited parametric knowledge. Our experiments demonstrate that DeCK enhances the confidence of LLMs in edited facts. For instance, it improves the performance of LLAMA3-8B-INSTRUCT on MQUAKE by up to 219%, demonstrating its capability to strengthen ICE. DeCK can be easily integrated into any ICE method as a decoding component to enhance editing capabilities. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

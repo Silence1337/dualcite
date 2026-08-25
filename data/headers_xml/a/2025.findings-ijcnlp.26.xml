@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">RewriteNets: End-to-End Trainable String-Rewriting for Generative Sequence Modeling</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Harshil</forename><surname>Vejendla</surname></persName>
+							<email>harshil.vejendla@rutgers.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">-New Brunswick</orgName>
+								<orgName type="institution">Rutgers University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">RewriteNets: End-to-End Trainable String-Rewriting for Generative Sequence Modeling</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">512DCB30215A02088A9FDB2F1BABA1C9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Dominant sequence models like the Transformer represent structure implicitly through dense attention weights, incurring quadratic complexity. We propose RewriteNets, a novel neural architecture built on an alternative paradigm: explicit, parallel string rewriting. Each layer in a RewriteNet contains a set of learnable rules. For each position in an input sequence, the layer performs four operations: (1) fuzzy matching of rule patterns, (2) conflict resolution via a differentiable assignment operator to select non-overlapping rewrites, (3) application of the chosen rules to replace input segments with output segments of potentially different lengths, and (4) propagation of untouched tokens. While the discrete assignment of rules is non-differentiable, we employ a straight-through Gumbel-Sinkhorn estimator, enabling stable end-to-end training. We evaluate RewriteNets on algorithmic, compositional, and string manipulation tasks, comparing them against strong LSTM and Transformer baselines. Results show that RewriteNets excel at tasks requiring systematic generalization (achieving 98.7% accuracy on the SCAN benchmark&apos;s length split) and are computationally more efficient than Transformers. We also provide an analysis of learned rules and an extensive ablation study, demonstrating that this architecture presents a promising direction for sequence modeling with explicit structural inductive biases.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

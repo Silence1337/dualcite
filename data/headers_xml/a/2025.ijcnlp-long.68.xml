@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fine-grained Confidence Estimation for Spurious Correctness Detection in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ai</forename><surname>Ishii</surname></persName>
+							<email>ai.ishii@jaist.ac.jp</email>
+							<affiliation key="aff0">
+								<orgName type="institution">BIPROGY Inc</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Japan Advanced Institute of Science and Technology</orgName>
+								<address>
+									<settlement>Ishikawa</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Naoya</forename><surname>Inoue</surname></persName>
+							<email>naoya-i@jaist.ac.jp</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Japan Advanced Institute of Science and Technology</orgName>
+								<address>
+									<settlement>Ishikawa</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hisami</forename><surname>Suzuki</surname></persName>
+							<email>hisamis@nii.ac.jp</email>
+							<affiliation key="aff2">
+								<orgName type="institution">National Institute of Informatics</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Satoshi</forename><surname>Sekine</surname></persName>
+							<email>sekine@nii.ac.jp</email>
+							<affiliation key="aff2">
+								<orgName type="institution">National Institute of Informatics</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fine-grained Confidence Estimation for Spurious Correctness Detection in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">03A1EE01A8220EA9929A92587E4B5B71</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In the deployment of Large Language Models (LLMs), &quot;spurious correctness&quot;-where answers are correct but reasoning contains errors-poses a critical risk by creating an illusion of reliability. While prior work on LLM confidence estimation focuses on answerlevel or entire reasoning path confidence, these coarse-grained approaches fail to identify which specific parts of the reasoning contain errors. We propose a fine-grained confidence estimation framework that computes confidence scores for individual evidence triplets within reasoning chains, enabling precise localization of errors. Using carefully designed prompts, we generate answers, evidence in triplet format, and their respective confidence scores simultaneously, allowing automatic detection of spurious correctness patterns where partial evidence contains factual errors. Evaluated on both Japanese and English multi-hop QA benchmarks across multiple models from three model families representing different architectures and training approaches, we show that our approach exhibits superior calibration performance for evidence confidence and demonstrates effective ability to detect spurious correct answers (up to 0.84 on our primary discrimination metric). The consistent improvements across languages demonstrate the generalizability of our method. As a secondary benefit, joint generation of confidence scores improves answer confidence calibration by up to 43%. This prompt-based approach requires no model retraining and is immediately applicable to existing LLMs.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

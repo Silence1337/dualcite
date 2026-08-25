@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yushen</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">MoE Key Lab of Artificial Intelligence, X-LANCE Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhikang</forename><surname>Niu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">MoE Key Lab of Artificial Intelligence, X-LANCE Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ziyang</forename><surname>Ma</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">MoE Key Lab of Artificial Intelligence, X-LANCE Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Keqi</forename><surname>Deng</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Cambridge</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chunhui</forename><surname>Wang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Geely Automobile Research Institute (Ningbo) Company Ltd</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jian</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Geely Automobile Research Institute (Ningbo) Company Ltd</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">MoE Key Lab of Artificial Intelligence, X-LANCE Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Xie</forename><surname>Chen</surname></persName>
+							<email>chenxie95@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="laboratory">MoE Key Lab of Artificial Intelligence, X-LANCE Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institute</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D1A0D860F3D9BD5794A3B7F6992A9F8E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:29+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper introduces F5-TTS, a fully nonautoregressive text-to-speech system based on flow matching with Diffusion Transformer (DiT). Without requiring complex designs such as duration model, text encoder, and phoneme alignment, the text input is simply padded with filler tokens to the same length as input speech, and then the denoising is performed for speech generation, which was originally proved feasible by E2 TTS. However, the original design of E2 TTS makes it hard to follow due to its slow convergence and low robustness. To address these issues, we first model the input with ConvNeXt to refine the text representation, making it easy to align with the speech. We further propose an inference-time Sway Sampling strategy, which significantly improves our model&apos;s performance and efficiency. This sampling strategy for flow step can be easily applied to existing flow matching based models without retraining. Our design allows faster training and achieves an inference RTF of 0.15, which is greatly improved compared to state-of-the-art diffusion-based TTS models. Trained on a public 100K hours multilingual dataset, our F5-TTS exhibits highly natural and expressive zero-shot ability, seamless code-switching capability, and speed control efficiency. We have released all codes and checkpoints to promote community development, at https://SWivid.github.io/F5-TTS/.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

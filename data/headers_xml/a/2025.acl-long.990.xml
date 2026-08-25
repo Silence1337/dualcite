@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AutoMixAlign: Adaptive Data Mixing for Multi-Task Preference Optimization in LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nicholas</forename><forename type="middle">E</forename><surname>Corrado</surname></persName>
+							<email>ncorrado@wisc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Wisconsin-Madison</orgName>
+								<address>
+									<addrLine>2 Amazon</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Julian</forename><surname>Katz-Samuels</surname></persName>
+							<email>jkatzsamuels@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Adithya</forename><surname>Devraj</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hyokun</forename><surname>Yun</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Pan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Bing</forename><surname>Yin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Trishul</forename><surname>Chilimbi</surname></persName>
+						</author>
+						<title level="a" type="main">AutoMixAlign: Adaptive Data Mixing for Multi-Task Preference Optimization in LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4D17E8CB667908EB8A9043C0E2A6557B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:45+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>When aligning large language models (LLMs), their performance on various tasks (such as being helpful, harmless, and honest) depends heavily on the composition of their training data. However, selecting a data mixture that achieves strong performance across all tasks is challenging. Existing approaches rely on large ablation studies, heuristics, or human intuition, but these can be prohibitively expensive and suboptimal. We study this problem in the setting of preference optimization via DPO and introduce AutoMixAlign (AMA), a theoretically-grounded algorithm that adaptively mixes datasets during training to balance performance across tasks. AMA first trains specialist models for each task to determine losses that correspond to strong task performance. Then, it trains a generalist model using a novel minimax optimization that prioritizes tasks for which generalist model losses deviate most from specialist model losses. To optimize this problem, we propose two algorithms: (1) AMA-R, which adaptively reweights the objective to prioritize tasks, and (2) AMA-S, which adaptively adjusts how much data is sampled from each task to prioritize tasks. Both algorithms achieve a convergence rate of O(1/ √ T) in the convex case. AMA-R&apos;s convergence result follows from Sagawa et al. (2019), and we provide a convergence proof for AMA-S using online learning techniques such as EXP3 (Auer, 2002). We evaluate AMA on several multitask alignment setups and find that AMA outperforms the standard alignment approach-which simply optimizes the total loss across all tasksand also outperforms model merging methods.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

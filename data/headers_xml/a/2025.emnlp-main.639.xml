@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Following the Autoregressive Nature of LLM Embeddings via Compression and Alignment</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jingcheng</forename><surname>Deng</surname></persName>
+							<email>dengjingcheng23s@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of AI Safety</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhongtao</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Kuaishou Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Pang</surname></persName>
+							<email>pangliang@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of AI Safety</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zihao</forename><surname>Wei</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of AI Safety</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liwei</forename><surname>Chen</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Kuaishou Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kun</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Song</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Huawei</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of AI Safety</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xueqi</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of AI Safety</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Following the Autoregressive Nature of LLM Embeddings via Compression and Alignment</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3081F6D8AC436FF1FBB18C17F02100A3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>A new trend uses LLMs as dense text encoders via contrastive learning. However, since LLM embeddings predict the probability distribution of the next token, they are inherently generative and distributive, conflicting with contrastive learning, which requires embeddings to capture full-text semantics and align via cosine similarity. This discrepancy hinders the full utilization of LLMs&apos; pre-training capabilities, resulting in inefficient learning. In response to this issue, we propose AutoRegEmbed, a new contrastive learning method built on embedding conditional probability distributions, which integrates two core tasks: information compression and conditional distribution alignment. The information compression task encodes text into the embedding space, ensuring that the embedding vectors capture global semantics. The conditional distribution alignment task focuses on aligning text embeddings with positive samples embeddings by leveraging the conditional distribution of embeddings while simultaneously reducing the likelihood of generating negative samples from text embeddings, thereby achieving embedding alignment and uniformity. Experimental results demonstrate that our method significantly outperforms traditional contrastive learning approaches and achieves performance comparable to state-ofthe-art models when using the same amount of data. Our code is available at https:// github.com/TrustedLLM/AutoRegEmbed</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

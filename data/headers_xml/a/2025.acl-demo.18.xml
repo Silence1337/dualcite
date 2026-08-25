@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">OLMOTRACE: Tracing Language Model Outputs Back to Trillions of Training Tokens</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiacheng</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Taylor</forename><surname>Blanton</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanai</forename><surname>Elazar</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sewon</forename><surname>Min</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yensung</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Arnavi</forename><surname>Chheda-Kothary</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Huy</forename><surname>Tran</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Byron</forename><surname>Bischoff</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Eric</forename><surname>Marsh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Schmitz</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cassidy</forename><surname>Trier</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aaron</forename><surname>Sarnat</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jenna</forename><surname>James</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jon</forename><surname>Borchardt</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bailey</forename><surname>Kuehl</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Evie</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Karen</forename><surname>Farley</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sruthi</forename><surname>Sreeram</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Taira</forename><surname>Anderson</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Albright</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carissa</forename><surname>Schoenick</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Luca</forename><surname>Soldaini</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dirk</forename><surname>Groeneveld</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rock</forename><forename type="middle">Yuren</forename><surname>Pang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Washington β UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Pang</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Koh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Noah</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sophie</forename><surname>Lebrecht</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yejin</forename><surname>Choi</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hannaneh</forename><surname>Hajishirzi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ali</forename><surname>Farhadi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jesse</forename><surname>Dodge</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">OLMOTRACE: Tracing Language Model Outputs Back to Trillions of Training Tokens</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0EAA9E9992F6CC233E6FA55F96A369CD</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We present OLMOTRACE, the first system that traces the outputs of language models back to their full, multi-trillion-token training data in real time. OLMOTRACE finds and shows verbatim matches between segments of language model output and documents in the training text corpora. Powered by an extended version of infini-gram (Liu et al., 2024), our system returns tracing results within a few seconds. OLMOTRACE can help users understand the behavior of language models through the lens of their training data. We showcase how it can be used to explore fact checking, hallucination, and the creativity of language models. OLMOTRACE is publicly available and fully open-source.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

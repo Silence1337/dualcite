@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FairSteer: Inference Time Debiasing for LLMs with Dynamic Activation Steering</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yichen</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiting</forename><surname>Fan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruizhe</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaotang</forename><surname>Gai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Luqi</forename><surname>Gong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yan</forename><surname>Zhang</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Zuozhu</forename><surname>Liu</surname></persName>
+							<email>zuozhuliu@intl.zju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Zhejiang Key Laboratory of Medical Imaging Artificial Intelligence</orgName>
+								<address>
+									<addrLine>3 Zhejiang Lab 4 ByteDance</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FairSteer: Inference Time Debiasing for LLMs with Dynamic Activation Steering</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C6CBADDA8270AA7C5E1DBB0DDF0DE1C6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) are prone to capturing biases from training corpus, leading to potential negative social impacts. Existing prompt-based debiasing methods exhibit instability due to their sensitivity to prompt changes, while fine-tuning-based techniques incur substantial computational overhead and catastrophic forgetting. In this paper, we propose FairSteer, a novel inference-time debiasing framework without requiring customized prompt design or model retraining. Motivated by the linear representation hypothesis, our preliminary investigation demonstrates that fairness-related features can be encoded into separable directions in the hidden activation space. FairSteer operates in three steps: biased activation detection, debiasing steering vector (DSV) computation, and dynamic activation steering. Specifically, it first trains a lightweight linear classifier to detect bias signatures in activations, and then computes DSVs as intervention directions derived from small contrastive prompt pairs. Subsequently, it performs debiasing by adjusting activations with DSVs in the inference stage. Comprehensive evaluation with six LLMs demonstrates the superiority of FairSteer across question-answering, counterfactual input evaluation and open-ended text generation tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

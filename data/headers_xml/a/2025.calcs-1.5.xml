@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Tongue-Tied: Breaking LLMs Safety Through New Language Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bibek</forename><surname>Upadhayay</surname></persName>
+							<email>bupadhayay@newhaven.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">SAIL Lab University of New Haven West Haven</orgName>
+								<address>
+									<postCode>06516</postCode>
+									<region>CT</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Ph.D</roleName><forename type="first">Vahid</forename><surname>Behzadan</surname></persName>
+							<email>vbehzadan@newhaven.edu</email>
+							<affiliation key="aff1">
+								<orgName type="institution">SAIL Lab University of New Haven West Haven</orgName>
+								<address>
+									<postCode>06516</postCode>
+									<region>CT</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Tongue-Tied: Breaking LLMs Safety Through New Language Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B77E909EC88593C7A94FEE7F02173A77</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The safety mechanisms of large language models (LLMs) have been shown to be fragile, as attackers can exploit prompts to generate harmful responses. Low-cost jailbreak attacks, such as those utilizing low-resource languages and code-switching, demonstrate that LLM safety mechanisms are vulnerable to low-resource languages. This indicates that safety training is particularly ineffective in low-resource languages. Furthermore, research has shown that fine-tuning LLMs with a small number of adversarial samples can compromise their safety training, implying that safety mechanism objectives can be overridden with the latest finetuning objectives. Based on the aforementioned statements, we hypothesize that the safety training of LLMs is language-dependent, and LLMs can potentially be compromised by fine-tuning them with new languages, even when using only harmless data. In this work, we used the low-resource language Newari and created two fake languages to LoRA-finetune LLMs with non-harmful data. Our results show that simply fine-tuning LLMs with new languages, even without the presence of harmful data, will jailbreak LLMs. Furthermore, we demonstrate that as we introduce English-to-and-from new language translation pairs in the training dataset, the attack success rate increases with harmful responses becoming more coherent. Additionally, we show the transferability of the attack by jailbreaking GPT-4 through finetuning with only 4,000 data points, and demonstrate that higher-capability models such as Claude-3.5-Sonnet can be compelled to learn to write in new languages through few-shot examples from in-context learning and can be jailbroken with new languages without fine-tuning. We furthermore investigate the fine-tuned LLMs&apos; latents with logit lens and find that the new language fine-tuning weakens safety mechanisms by prioritizing new language fidelity over alignment, enabling jailbreaks via late-layer pivots to new language tokens that bypass English-centric safeguards. We have publicly released our trained model weights, dataset, and artifacts at this URL. CAUTION: The text in this paper contains offensive and harmful language.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CopySpec: Accelerating LLMs with Speculative Copy-and-Paste</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Razvan-Gabriel</forename><surname>Dumitru</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Arizona</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minglai</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Arizona</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vikas</forename><surname>Yadav</surname></persName>
+							<email>vikas.yadav@servicenow.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">ServiceNow Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mihai</forename><surname>Surdeanu</surname></persName>
+							<email>msurdeanu@arizona.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Arizona</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CopySpec: Accelerating LLMs with Speculative Copy-and-Paste</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FC0D3A3E37F516BF94381F733AA44B60</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We introduce CopySpec, a simple yet effective technique to tackle the inefficiencies LLMs face when generating responses that closely resemble previous outputs or responses that can be verbatim extracted from context. CopySpec identifies repeated sequences in the model&apos;s chat history or context and speculates that the same tokens will follow, enabling seamless copying without compromising output quality and without requiring additional GPU memory. To evaluate the effectiveness of our approach, we conducted experiments using seven LLMs and five datasets: MT-Bench, CNN/DM, GSM8K, HumanEval, and our newly created dataset, MT-Redundant. MT-Redundant, introduced in this paper, transforms the second turn of MT-Bench into a request for variations of the first turn&apos;s answer, simulating realworld scenarios where users request modifications to prior responses. Our results demonstrate significant speed-ups: up to 2.35× on CNN/DM, 3.08× on the second turn of select MT-Redundant categories, and 2.66× on the third turn of GSM8K&apos;s self-correction tasks. Importantly, we show that CopySpec integrates seamlessly with speculative decoding, yielding an average 49% additional speedup over speculative decoding for the second turn of MT-Redundant across all eight categories. While LLMs, even with speculative decoding, suffer from slower inference as context size grows, CopySpec leverages larger contexts to accelerate inference, making it a faster complementary solution. Our code and dataset are publicly available at https://github.com/RazvanDu/CopySpec.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

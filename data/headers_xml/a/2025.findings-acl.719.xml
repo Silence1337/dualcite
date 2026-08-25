@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Decoupling Memories, Muting Neurons: Towards Practical Machine Unlearning for Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Lishuai</forename><surname>Hou</surname></persName>
+							<email>lishuaihou@hust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Hubei Key Laboratory of Internet of Intelligence School of EIC</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zixiong</forename><surname>Wang</surname></persName>
+							<email>zixwang@hust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Hubei Key Laboratory of Internet of Intelligence School of EIC</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gaoyang</forename><surname>Liu</surname></persName>
+							<email>liugaoyang@hust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Hubei Key Laboratory of Internet of Intelligence School of EIC</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Wang</surname></persName>
+							<email>chenwang@hust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Hubei Key Laboratory of Internet of Intelligence School of EIC</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Liu</surname></persName>
+							<email>liuwei@hust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Hubei Key Laboratory of Internet of Intelligence School of EIC</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Peng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Hubei Key Laboratory of Internet of Intelligence School of EIC</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Decoupling Memories, Muting Neurons: Towards Practical Machine Unlearning for Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E558DAEE574B0C5F21E80DAD57A37E6B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Machine Unlearning (MU) has emerged as a promising solution for removing the influence of data that an owner wishes to unlearn from Large Language Models (LLMs). However, existing MU methods, which require tuning the entire model parameters on the unlearned data with random labels or perturbed gradients, significantly degrade model utility, especially given the difficulty of accessing the original training data. This presents a key challenge: how can we achieve MU using only the unlearned data while preserving model utility? In this paper, we propose NeuMuter, a simple but effective MU method that eliminates the influence of unlearned data from LLMs by modulating the outputs of merely 1% of the neurons in the feed-forward network (FFN) modules within the Transformer blocks, minimizing disruption to the model&apos;s performance. We design a trainable masking scheme that decouples the memorization of different training data within the neurons of LLMs, allowing us to precisely identify and modify neurons associated with the unlearned data. Through comprehensive evaluations on two benchmarks across four different LLMs, we demonstrate that modifying the outputs of a few fraction of the total neurons can effectively achieve MU while preserving the model&apos;s utility across downstream tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

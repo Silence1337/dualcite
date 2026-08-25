@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SR-LLM: Rethinking the Structured Representation in Large Language Model</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Jiahuan</forename><surname>Zhang</surname></persName>
+							<email>zhangjiahuan78@westlake.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Autolab</orgName>
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">KMind Technology Co., Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianheng</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Autolab</orgName>
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hanqing</forename><surname>Wu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">KMind Technology Co., Ltd</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ziyi</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Autolab</orgName>
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Weihai</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yulong</forename><surname>Wu</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongbai</forename><surname>Chen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">KMind Technology Co., Ltd</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linfeng</forename><surname>Song</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="department">Tencent AI Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Autolab</orgName>
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guozheng</forename><surname>Rao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaicheng</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Autolab</orgName>
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">KMind Technology Co., Ltd</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SR-LLM: Rethinking the Structured Representation in Large Language Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CCFF32713649ED74412582C2A930E056</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Structured representations, exemplified by Abstract Meaning Representation (AMR), have long been pivotal in computational linguistics. However, their role remains ambiguous in the Large Language Models (LLMs) era. Initial attempts to integrate structured representation into LLMs via a zero-shot setting yielded inferior performance. We hypothesize that such a decline stems from the structure information being passed into LLMs in a code format unfamiliar to LLMs&apos; training corpora. Consequently, we propose SR-LLM, an innovative framework with two settings to explore a superior way of integrating structured representation with LLMs from training-free and training-dependent perspectives. The former integrates structural information through natural language descriptions in LLM prompts, whereas its counterpart augments the model&apos;s inference capability through fine-tuning on linguistically described structured representations. Performance improvements were observed in widely downstream datasets, with particularly notable gains of 3.17% and 12.38% in PAWS. To the best of our knowledge, this work represents the pioneering demonstration that leveraging structural representations can substantially enhance LLMs&apos; inference capability. We hope that our work sheds light and encourages future research to enhance the reasoning and interoperability of LLMs by structure data.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

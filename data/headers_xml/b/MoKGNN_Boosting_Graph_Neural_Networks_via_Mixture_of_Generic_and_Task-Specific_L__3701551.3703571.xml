@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MoKGNN: Boosting Graph Neural Networks via Mixture of Generic and Task-Specific Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Yan</surname></persName>
+							<idno type="ORCID">0009-0007-7631-9375</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Chaozhuo</forename><surname>Li</surname></persName>
+							<email>lichaozhuo1991@gmail.com</email>
+							<idno type="ORCID">0000-0002-8179-7503</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Yin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Weihao</forename><surname>Han</surname></persName>
+							<email>weihao.han@microsoft.com</email>
+							<idno type="ORCID">0000-0002-5533-6455</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Sun</surname></persName>
+							<email>hasun@microsoft.com</email>
+							<idno type="ORCID">0009-0004-5027-7478</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Senzhang</forename><surname>Wang</surname></persName>
+							<email>szwang@csu.edu.cn</email>
+							<idno type="ORCID">0000-0002-3615-4859</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jian</forename><surname>Zhang</surname></persName>
+							<email>jianzhang@csu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianxin</forename><surname>Wang</surname></persName>
+							<email>jxwang@mail.csu.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Central South University Changsha</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Research Asia Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Central South University Changsha</orgName>
+								<address>
+									<settlement>Microsoft AI Beijing Microsoft AI Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Central South University Changsha</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Central South University Changsha</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Central South University Changsha</orgName>
+								<address>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country>China USA, 9 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MoKGNN: Boosting Graph Neural Networks via Mixture of Generic and Task-Specific Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8AA232935F018774375F0CB8B0FA3A3A</idno>
+					<idno type="DOI">10.1145/3701551.3703571</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Computing methodologies → Natural language processing</term>
+					<term>Supervised learning by classification</term>
+					<term>Neural networks Language Models, Graph Neural Networks, Text-Attributed Graph</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Text-Attributed Graphs (TAGs) are prevalent in various real-world scenarios, where each node is associated with a text attribute. Representation learning on TAGs relies on a comprehensive understanding of both the textual attributes associated with nodes and the topological connections between nodes. Recent works have tried to enhance graph neural networks (GNNs) with pre-trained language models (PLMs) for textual attribute learning, which has achieved promising result compared with shallow text representation learning models such as BoW. With the advent of more powerful LLMs, it is worth to further exploring how to effectively and efficiently incorporate the generic knowledge in LLMs to enhance GNNs. To this aim, we for the first time investigate whether the mainstream generative LLMs can provide high-quality generic text embedding for GNNs. To simultaneously use the generic knowledge in the LLM and the task-specific knowledge in the tuned PLM (TLM), we propose a dual channel knowledge fusion framework, named MoKGNN, to enhance the representation learning on TAGs. Specifically, we first propose a dual channel feature extraction stage to derive text embeddings that contain generic knowledge and task-specific knowledge separately. Next, we introduce a Knowledge Alignment Network to align the higher-dimensional General Embedding with the lowerdimensional Task-Specific Embedding. Finally, we adopt a mix-up operation to integrate the generic and task-specific textual attribute representation to enhance downstream GNNs. Extensive experiments on four TAG datasets demonstrate the effectiveness of our</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

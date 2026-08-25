@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Precise Zero-Shot Pointwise Ranking with LLMs through Post-Aggregated Global Context Information</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-06-12">12 Jun 2025</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kehan</forename><surname>Long</surname></persName>
+							<email>longkehan15@nudt.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shasha</forename><surname>Li</surname></persName>
+							<email>shashali@nudt.edu.cn</email>
+							<idno type="ORCID">0000-0002-6508-5119</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Xu</surname></persName>
+							<email>xuchen@nudt.edu.cn</email>
+							<idno type="ORCID">0009-0009-1715-435X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jintao</forename><surname>Tang</surname></persName>
+							<email>tangjintao@nudt.edu.cn</email>
+							<idno type="ORCID">0000-0002-8802-3906</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ting</forename><surname>Wang</surname></persName>
+							<email>tingwang@nudt.edu.cn</email>
+							<idno type="ORCID">0000-0002-7780-2330</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Precise Zero-Shot Pointwise Ranking with LLMs through Post-Aggregated Global Context Information</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2025-06-12">12 Jun 2025</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">088A9CA7B51425C3976423180207B2FA</idno>
+					<idno type="DOI">10.1145/3726302.3730061</idno>
+					<idno type="arXiv">arXiv:2506.10859v1[cs.IR]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>• Information systems → Language models; Rank aggregation LLMs for Zero-Shot Ranking</term>
+					<term>Pointwise Ranking</term>
+					<term>Global Context</term>
+					<term>Rank Aggregation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Recent advancements have successfully harnessed the power of Large Language Models (LLMs) for zero-shot document ranking, exploring a variety of prompting strategies. Comparative approaches like pairwise and listwise achieve high effectiveness but are computationally intensive and thus less practical for larger-scale applications. Scoring-based pointwise approaches exhibit superior efficiency by independently and simultaneously generating the relevance scores for each candidate document. However, this independence ignores critical comparative insights between documents, resulting in inconsistent scoring and suboptimal performance. In this paper, we aim to improve the effectiveness of pointwise methods while preserving their efficiency through two key innovations: (1) We propose a novel Global-Consistent Comparative Pointwise Ranking (GCCP) strategy that incorporates global reference comparisons between each candidate and an anchor document to generate contrastive relevance scores. We strategically design the anchor document as a query-focused summary of pseudo-relevant candidates, which serves as an effective reference point by capturing the global context for document comparison. (2) These contrastive relevance scores can be efficiently Post-Aggregated with existing pointwise methods, seamlessly integrating essential Global Context information in a training-free manner (PAGC). Extensive experiments on the TREC DL and BEIR benchmark demonstrate that our approach significantly outperforms previous pointwise methods while maintaining comparable efficiency. Our method also achieves competitive performance against comparative methods that require substantially more computational resources. More analyses further validate the efficacy of our anchor construction strategy.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

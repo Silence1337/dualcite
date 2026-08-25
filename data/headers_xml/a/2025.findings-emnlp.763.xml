@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SelfAug: Mitigating Catastrophic Forgetting in Retrieval-Augmented Generation via Distribution Self-Alignment</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuqing</forename><surname>Huang</surname></persName>
+							<email>huangyuq@mail.ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rongyang</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qimeng</forename><surname>Wang</surname></persName>
+							<email>qimengwang@xiaohongshu.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Xiaohongshu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengqiang</forename><surname>Lu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Xiaohongshu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yan</forename><surname>Gao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Xiaohongshu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Wu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Xiaohongshu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yao</forename><surname>Hu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Xiaohongshu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuyang</forename><surname>Zhi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guiquan</forename><surname>Liu</surname></persName>
+							<email>gqliu@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Li</surname></persName>
+							<email>leexin@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Wang</surname></persName>
+							<email>wanghao3@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enhong</forename><surname>Chen</surname></persName>
+							<email>cheneh@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SelfAug: Mitigating Catastrophic Forgetting in Retrieval-Augmented Generation via Distribution Self-Alignment</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">606A70ECF345A8FFD030E257E7EF0699</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advancements in large language models (LLMs) have revolutionized natural language processing through their remarkable capabilities in understanding and executing diverse tasks. While supervised fine-tuning, particularly in Retrieval-Augmented Generation (RAG) scenarios, effectively enhances taskspecific performance, it often leads to catastrophic forgetting, where models lose their previously acquired knowledge and general capabilities. Existing solutions either require access to general instruction data or face limitations in preserving the model&apos;s original distribution. To overcome these limitations, we propose SelfAug, a self-distribution alignment method that aligns input sequence logits to preserve the model&apos;s semantic distribution, thereby mitigating catastrophic forgetting and improving downstream performance. Extensive experiments demonstrate that SelfAug achieves a superior balance between downstream learning and general capability retention. Our comprehensive empirical analysis reveals a direct correlation between distribution shifts and the severity of catastrophic forgetting in RAG scenarios, highlighting how the absence of RAG capabilities in general instruction tuning leads to significant distribution shifts during finetuning. Our findings not only advance the understanding of catastrophic forgetting in RAG contexts but also provide a practical solution applicable across diverse fine-tuning scenarios. Our code is publicly available at https: //github.com/USTC-StarTeam/SelfAug.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GLTW: Joint Improved Graph-Transformer Encoder and LLM via Three-Word Language for Knowledge Graph Completion</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kangyang</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuzhuo</forename><surname>Bai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Gao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Si</forename><forename type="middle">♠</forename><surname>Shuzheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yingli</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhu</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhitong</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cunliang</forename><surname>Kong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenhao</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yufei</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">♠</forename><surname>Ye</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent Robotics X ⋆ Jiangsu Collaborative Innovation Center for Language Ability</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuantang</forename><surname>Xiong</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent Robotics X ⋆ Jiangsu Collaborative Innovation Center for Language Ability</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">♢</forename><surname>Lei</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent Robotics X ⋆ Jiangsu Collaborative Innovation Center for Language Ability</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Maosong</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University ♣ Institute for AI</orgName>
+								<orgName type="institution" key="instit2">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GLTW: Joint Improved Graph-Transformer Encoder and LLM via Three-Word Language for Knowledge Graph Completion</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8228CF71DABE1D11944EFA0E772BDE79</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Knowledge Graph Completion (KGC), which aims to infer missing or incomplete facts, is a crucial task for KGs. However, integrating the vital structural information of KGs into large language models (LLMs) and outputting predictions deterministically remains challenging. To address this, we propose a new method called GLTW, which encodes the structural information of KGs and merges it with LLMs to enhance KGC performance. Specifically, we introduce an improved Graph Transformer (iGT) that effectively encodes subgraphs with both local and global structural information and inherits the characteristics of language model, bypassing training from scratch. Also, we develop a subgraph-based multi-classification training objective, using all entities within KG as classification objects, to boost learning efficiency. Importantly, we combine iGT with an LLM that takes KG language prompts as input. Our extensive experiments on various KG datasets show that GLTW achieves significant performance gains compared to SOTA baselines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

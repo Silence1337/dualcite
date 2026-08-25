@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">VARIUM: Variational Autoencoder for Multi-Interest Representation with Inter-User Memory</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nhu-Thuat</forename><surname>Tran</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Computing and Information Systems</orgName>
+								<orgName type="department" key="dep2">School of Computing and Information Systems</orgName>
+								<orgName type="institution" key="instit1">Singapore Management University</orgName>
+								<orgName type="institution" key="instit2">Singapore Management University</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Hady</forename><forename type="middle">W</forename><surname>Lauw</surname></persName>
+							<email>hadywlauw@smu.edu.sg</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Computing and Information Systems</orgName>
+								<orgName type="department" key="dep2">School of Computing and Information Systems</orgName>
+								<orgName type="institution" key="instit1">Singapore Management University</orgName>
+								<orgName type="institution" key="instit2">Singapore Management University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">VARIUM: Variational Autoencoder for Multi-Interest Representation with Inter-User Memory</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">332AA5360AC6322F4340D9DAF64BF2E4</idno>
+					<idno type="DOI">10.1145/3701551.3703558</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Multi-interest representation</term>
+					<term>inter-user memory</term>
+					<term>VAE</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Frameworks for discovering multiple user interest factors based on Variational AutoEncoder (VAE) has demonstrated competitive recommendation performance. However, as VAE only considers one user as input at a time, sharing across like-minded users may not be adequately facilitated. Moreover, interest sharing between users is not always available and thus, poses a challenge for VAE to explicitly model this information. To resolve this, we introduce an inter-user memory-based mechanism to unsupervisedly discover latent interest sharing between users under VAE framework. Concretely, we design a memory including an array of prototypes, each hypothetically representing a group of users sharing a particular interest. These memory prototypes are jointly trained with the backbone VAE-based recommendation model. For each user, we first discover multiple intra-user interest factors behind their item adoptions. Next, intra-user interest factors query to memory to retrieve the inter-user interest clues from like-minded users. This query-retrieve process is performed sequentially via a series of attention-transformation steps. Then, interest clues retrieved from memory are incorporated into interest factor representations of each user to increase their expressiveness. Thorough experiments on real-world datasets verify the strength of our method over an array of baselines. We further conduct qualitative analysis to understand the inner working of our memory-based refinement approach. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

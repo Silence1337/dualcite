@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Accelerating Listwise Reranking: Reproducing and Enhancing FIRST</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zijian</forename><surname>Chen</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Jimmy</forename><surname>Lin</surname></persName>
+							<email>jimmylin@uwaterloo.ca</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Waterloo Waterloo</orgName>
+								<address>
+									<region>Ontario</region>
+									<country>Canada Ronak Pradeep</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Waterloo Waterloo</orgName>
+								<address>
+									<region>Ontario</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">University of Waterloo Waterloo</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<region>Ontario</region>
+									<country>Canada Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Accelerating Listwise Reranking: Reproducing and Enhancing FIRST</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">740FEEFB4F76160A2651E95B6FB9F430</idno>
+					<idno type="DOI">10.1145/3726302.3730287</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Language models</term>
+					<term>Retrieval efficiency</term>
+					<term>Retrieval effectiveness Information Retrieval</term>
+					<term>Listwise Reranking</term>
+					<term>Large Language Models</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large language models (LLMs) have emerged as powerful listwise rerankers but remain prohibitively slow for many real-world applications. What&apos;s more, training on the language modeling (LM) objective is not intrinsically aligned with reranking tasks. To address these challenges, FIRST, a novel approach for listwise reranking, integrates a learning-to-rank objective and leverages only the logits of the first generated token for reranking, significantly reducing computational overhead while preserving effectiveness. We systematically evaluate the capabilities and limitations of FIRST. By extending its evaluation to TREC Deep Learning collections (DL19-23), we show that FIRST achieves robust out-of-domain effectiveness. Through training FIRST on a variety of backbone models, we demonstrate its generalizability across different model architectures, and achieve effectiveness surpassing the original implementation. Further analysis of the interaction between FIRST and various firststage retrievers reveals diminishing returns akin to traditional LLM rerankers. A comprehensive latency study confirms that FIRST consistently delivers a 40% efficiency gain over traditional rerankers without sacrificing effectiveness. Notably, while LM training implicitly improves zero-shot single-token reranking, our experiments also highlight potential conflicts between LM pre-training and subsequent fine-tuning on the FIRST objective. These findings pave the way for more efficient and effective listwise reranking in future applications. Our code is available at: https://rankllm.ai.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

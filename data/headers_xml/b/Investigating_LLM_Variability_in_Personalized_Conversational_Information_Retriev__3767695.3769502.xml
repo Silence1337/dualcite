@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Investigating LLM Variability in Personalized Conversational Information Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Simon</forename><surname>Lupart</surname></persName>
+							<email>s.c.lupart@uva.nl</email>
+							<idno type="ORCID">0009-0008-2383-4557</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Daniël</forename><surname>Van Dijk</surname></persName>
+							<email>daniel.van.dijk@student.uva.nl</email>
+							<idno type="ORCID">0009-0004-2571-842X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Eric</forename><surname>Langezaal</surname></persName>
+							<email>eric.langezaal@student.uva.nl</email>
+							<idno type="ORCID">0009-0008-5614-1749</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ian</forename><surname>Van Dort</surname></persName>
+							<email>ian.van.dort@student.uva.nl</email>
+							<idno type="ORCID">0009-0008-5881-760X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammad</forename><surname>Aliannejadi</surname></persName>
+							<email>m.aliannejadi@uva.nl</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Amsterdam Amsterdam</orgName>
+								<address>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Amsterdam Amsterdam</orgName>
+								<address>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Amsterdam Amsterdam</orgName>
+								<address>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Amsterdam Amsterdam</orgName>
+								<address>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Amsterdam Amsterdam</orgName>
+								<address>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Investigating LLM Variability in Personalized Conversational Information Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">77DA9BDA228007EB6605F4FE74C303B7</idno>
+					<idno type="DOI">10.1145/3767695.3769502</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Conversational Information Retrieval</term>
+					<term>Personalization</term>
+					<term>Interactive Retrieval</term>
+					<term>Large Language Model</term>
+					<term>Conversational Search</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Personalized Conversational Information Retrieval (CIR) has seen rapid progress in recent years, driven by the development of Large Language Models (LLMs). Personalized CIR aims to enhance document retrieval by leveraging user-specific information, such as preferences, knowledge, or constraints, to tailor responses to individual needs. A key resource developed for this task is the TREC iKAT 2023 dataset, designed to evaluate the integration of personalization into CIR pipelines. Building on this resource, Mo et al. [31] explored several strategies for incorporating Personal Textual Knowledge Bases (PTKB) into LLM-based query reformulation. Their findings suggested that personalization from PTKB could be detrimental and that human annotations were often noisy. However, these conclusions were based on single-run experiments using the commercial GPT-3.5 Turbo model, raising concerns about output variability and repeatability. In this reproducibility study, we rigorously reproduce and extend their work, with a focus on LLM output variability and model generalization. We apply the original methods to the newly released TREC iKAT 2024 dataset, and evaluate a diverse range of models, including Llama (1B to 70B), Qwen-7B, and closed-source models like GPT-3.5 and GPT-4o-mini. Our results show that human-selected PTKBs consistently enhance retrieval performance, while LLM-based selection methods do not reliably outperform manual choices. We further compare variance across datasets and observe substantially higher variability on iKAT than on CAsT, highlighting the challenges of evaluating personalized CIR. Notably, recall-oriented metrics exhibit lower variance than precision-oriented ones, a critical insight for first-stage retrievers, not addressed in the original study. Finally, we underscore the need for multi-run evaluations and variance reporting when assessing LLM-based CIR systems, especially in dense and sparse retrieval or in-context learning settings. By broadening the scope of evaluation across models, datasets, and metrics, our study contributes to more robust and generalizable practices for personalized CIR.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

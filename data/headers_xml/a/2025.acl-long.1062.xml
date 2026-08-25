@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FaithfulRAG: Fact-Level Conflict Modeling for Context-Faithful Retrieval-Augmented Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qinggang</forename><surname>Zhang</surname></persName>
+							<email>zqg.zhang@hotmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">Xiamen University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhishang</forename><surname>Xiang</surname></persName>
+							<email>xzs.xiang@hotmail.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Xiamen University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yilin</forename><surname>Xiao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The Hong Kong Polytechnic University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Le</forename><surname>Wang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Migu Meland Co</orgName>
+								<address>
+									<settlement>Ltd</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junhui</forename><surname>Li</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinrun</forename><surname>Wang</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">Singapore Management University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinsong</forename><surname>Su</surname></persName>
+							<email>jssu@xmu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">Xiamen University</orgName>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FaithfulRAG: Fact-Level Conflict Modeling for Context-Faithful Retrieval-Augmented Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D241F3E543077355215D402324C9C7EB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:13+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) augmented with retrieval systems have demonstrated significant potential in handling knowledge-intensive tasks. However, these models often struggle with unfaithfulness issues, generating outputs that either ignore the retrieved context or inconsistently blend it with the LLM&apos;s parametric knowledge. This issue is particularly severe in cases of knowledge conflict, where the retrieved context conflicts with the model&apos;s parametric knowledge. While existing faithful RAG approaches enforce strict context adherence through well-designed prompts or modified decoding strategies, our analysis reveals a critical limitation: they achieve faithfulness by forcibly suppressing the model&apos;s parametric knowledge, which undermines the model&apos;s internal knowledge structure and increases the risk of misinterpreting the context. To this end, this paper proposes FaithfulRAG, a novel framework that resolves knowledge conflicts by explicitly modeling discrepancies between the model&apos;s parametric knowledge and retrieved context. Specifically, FaithfulRAG identifies conflicting knowledge at the fact level and designs a self-thinking process, allowing LLMs to reason about and integrate conflicting facts before generating responses. Extensive experiments demonstrate that our method outperforms state-of-the-art methods. The code is available at https:// github.com/DeepLearnXMU/Faithful-RAG.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

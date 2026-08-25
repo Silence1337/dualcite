@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SWAM: Adaptive Sliding Window and Memory-Augmented Attention Model for Rumor Detection</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mei</forename><surname>Guo</surname></persName>
+							<email>guomei@mail.nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">MoE Key</orgName>
+								<orgName type="laboratory">Lab of DISSec</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Chen</surname></persName>
+							<email>nkchenchen@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">MoE Key</orgName>
+								<orgName type="laboratory">Lab of DISSec</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chunyan</forename><surname>Hou</surname></persName>
+							<email>chunyanhou@163.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of CSE</orgName>
+								<orgName type="institution">Tianjin University of Technology</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yike</forename><surname>Wu</surname></persName>
+							<email>wuyike@nankai.edu.cn</email>
+							<affiliation key="aff3">
+								<orgName type="department">School of Journalism and Communication</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaojie</forename><surname>Yuan</surname></persName>
+							<email>yuanxj@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">MoE Key</orgName>
+								<orgName type="laboratory">Lab of DISSec</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SWAM: Adaptive Sliding Window and Memory-Augmented Attention Model for Rumor Detection</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AC2C11BCDC98B67E3C0A4315B94FA6C3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Detecting rumors on social media has become a critical task in combating misinformation. Existing propagation-based rumor detection methods often focus on the static propagation graph, overlooking that rumor propagation is inherently dynamic and incremental in the real world. Recently propagation-based rumor detection models attempt to use the dynamic graph that is associated with coarse-grained temporal information. However, these methods fail to capture the long-term time dependency and detailed temporal features of propagation. To address these issues, we propose a novel adaptive Sliding Window and memory-augmented Attention Model (SWAM) for rumor detection. The adaptive sliding window divides the sequence of posts into consecutive disjoint windows based on the propagation rate of nodes. We also propose a memory-augmented attention to capture the long-term dependency and the depth of nodes in the propagation graph. Multi-head attention mechanism is applied between nodes in the memorybank and incremental nodes to iteratively update the memorybank, and the depth information of nodes is also considered. Finally, the propagation features of nodes in the memorybank are utilized for rumor detection. Experimental results on two public real-world datasets demonstrate the effectiveness of our model compared with the state-of-the-art baselines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

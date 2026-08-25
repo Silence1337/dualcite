@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Adaptive Context-Infused Performance Evaluator for Iterative Feature Space Optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yanping</forename><surname>Wu</surname></persName>
+							<email>yanping@ku.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yanyong</forename><surname>Huang</surname></persName>
+							<email>huangyy@swufe.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zijun</forename><surname>Yao</surname></persName>
+							<email>zyao@ku.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yanjie</forename><surname>Fu</surname></persName>
+							<email>yanjie.fu@asu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kunpeng</forename><surname>Liu</surname></persName>
+							<email>kunpeng@pdx.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Luo</surname></persName>
+							<email>xiaoluo@cs.ucla.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dongjie</forename><surname>Wang</surname></persName>
+							<email>wangdongjie@ku.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Kansas Lawrence</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Southwestern University of Finance and Economics Chengdu</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Kansas Lawrence</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Arizona State University</orgName>
+								<address>
+									<settlement>Tempe</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Portland State University</orgName>
+								<address>
+									<settlement>Portland</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">University of California Los Angeles</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">University of Kansas Lawrence</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">University of Kansas</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Adaptive Context-Infused Performance Evaluator for Iterative Feature Space Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6A33AE8604BC60EF39C5FC0AFB472493</idno>
+					<idno type="DOI">10.1145/3746252.3761123</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Automated Feature Optimization</term>
+					<term>Incremental Learning</term>
+					<term>Feature Space Evaluator</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Iterative feature space optimization includes continuously evaluating and refining the feature space to improve downstream task performance. However, existing methods commonly suffer from three major limitations: 1) ignoring differences between samples leads to evaluation bias; 2) the feature space is overly tailored to specific models, resulting in overfitting and poor generalization; and 3) retraining the evaluator from scratch in each iteration significantly reduces overall efficiency. To bridge these gaps, we introduce EASE (gEneralized Adaptive feature Space Evaluator), a generalized framework for efficient and objective evaluation of iteratively generated feature spaces. This framework includes two key components: Feature-Sample Subspace Generator and Contextual Attention Evaluator. The first component aims to mitigate evaluation bias by decoupling the information distribution within the feature space. To achieve this, based on feedback from the subsequent evaluator, we identify the samples most challenging for evaluation and the features most relevant to prediction tasks. The second component intends to incrementally capture evolving patterns of the feature space for efficient evaluation. Specifically, we propose a weighted-sharing multi-head attention mechanism to encode the feature space into an embedding vector for evaluation, and update the evaluator incrementally to retain prior knowledge while incorporating new information. Extensive experiments on fifteen public datasets demonstrate the effectiveness of EASE. We have released our code and data to the public 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

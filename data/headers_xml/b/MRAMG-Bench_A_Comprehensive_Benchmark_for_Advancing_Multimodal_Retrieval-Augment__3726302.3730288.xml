@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MRAMG-Bench: A Comprehensive Benchmark for Advancing Multimodal Retrieval-Augmented Multimodal Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qinhan</forename><surname>Yu</surname></persName>
+							<email>yuqinhan@stu.pku.edu.cn</email>
+							<idno type="ORCID">0009-0004-0445-0786</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyou</forename><surname>Xiao</surname></persName>
+							<email>xiaozhiyou@stu.pku.edu.cn</email>
+							<idno type="ORCID">0009-0002-8919-0113</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Binghui</forename><surname>Li</surname></persName>
+							<email>libinghui@pku.edu.cn</email>
+							<idno type="ORCID">0009-0004-3506-3770</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Chong</forename><surname>Chen</surname></persName>
+							<email>chenchong55@huawei.com</email>
+							<idno type="ORCID">0000-0003-1417-2295</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Peking University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Peking University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Zhengren Wang</orgName>
+								<orgName type="institution">Peking University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Peking University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Wentao Zhang</orgName>
+								<orgName type="institution">Huawei Cloud BU Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Peking University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MRAMG-Bench: A Comprehensive Benchmark for Advancing Multimodal Retrieval-Augmented Multimodal Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D3EDAAB1AB262EB165F126A4A69C29BC</idno>
+					<idno type="DOI">10.1145/3726302.3730288</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Multimodal Retrieval-Augmented Multimodal Generation</term>
+					<term>Large Language Model</term>
+					<term>Multimodal Large Language Model</term>
+					<term>Evaluation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Recent advances in Retrieval-Augmented Generation (RAG) have significantly improved response accuracy and relevance by incorporating external knowledge into Large Language Models (LLMs). However, existing RAG methods primarily focus on generating text-only answers, even in Multimodal Retrieval-Augmented Generation (MRAG) scenarios, where multimodal elements are retrieved to assist in generating text answers. To address this, we introduce the Multimodal Retrieval-Augmented Multimodal Generation (MRAMG) task, in which we aim to generate multimodal answers that combine both text and images, fully leveraging the multimodal data within a corpus. Despite growing attention to this challenging task, a notable lack of a comprehensive benchmark persists for effectively evaluating its performance. To bridge this gap, we provide MRAMG-Bench, a meticulously curated, human-annotated benchmark comprising 4,346 documents, 14,190 images, and 4,800 QA pairs, distributed across six distinct datasets and spanning three domains: Web, Academia, and Lifestyle. The datasets incorporate diverse difficulty levels and complex multi-image scenarios, providing a robust foundation for evaluating the MRAMG task. To facilitate rigorous evaluation, MRAMG-Bench incorporates a comprehensive suite of both statistical and LLM-based metrics, enabling a thorough analysis of the performance of generative models in the MRAMG task. Additionally, we propose an efficient and flexible multimodal answer generation framework that can leverage LLMs/MLLMs to generate multimodal responses. Our datasets and complete evaluation results for 11 popular generative models are available at https://github.com/MRAMG-Bench/MRAMG.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

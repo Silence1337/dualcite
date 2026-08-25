@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Maximum Score Routing For Mixture-of-Experts</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bowen</forename><surname>Dong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yilong</forename><surname>Fan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yutao</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenyu</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tengyu</forename><surname>Pan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xun</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Seed-Foundation-Model Team</orgName>
+								<address>
+									<country>ByteDance</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianyong</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Maximum Score Routing For Mixture-of-Experts</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D762ADFBD25C1F92D00923023BFD81FA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Routing networks in sparsely activated mixtureof-experts (MoE) dynamically allocate input tokens to top-k experts through differentiable sparse transformations, enabling scalable model capacity while preserving computational efficiency. Traditional MoE networks impose an expert capacity constraint to ensure GPU-friendly computation. However, this leads to token dropping when capacity is saturated and results in low hardware efficiency due to padding in underutilized experts. Removing the capacity constraint, in turn, compromises load balancing and computational efficiency. To address these issues, we propose Maximum Score Routing (MaxScore), a novel MoE routing paradigm that models routing as a minimum-cost maximum-flow problem and integrates a SoftTopk operator. MaxScore resolves the fundamental limitations of iterative rerouting and optimal transport formulations, achieving lower training losses and higher evaluation scores at equivalent FLOPs compared to both constrained and unconstrained baselines. Implementation details and experimental configurations can be obtained from https: //github.com/dongbw18/MaxScore.git.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

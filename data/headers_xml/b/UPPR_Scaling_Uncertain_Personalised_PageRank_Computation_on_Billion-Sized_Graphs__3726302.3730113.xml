@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">UPPR+: Scaling Uncertain Personalised PageRank Computation on Billion-Sized Graphs with Mutually Exclusive Edges</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Zhang</surname></persName>
+							<email>min.zhang.2@warwick.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Warwick Coventry</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weiren</forename><surname>Yu</surname></persName>
+							<email>weiren.yu@warwick.ac.uk</email>
+							<affiliation key="aff1">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">University of Warwick Coventry</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>UK Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">UPPR+: Scaling Uncertain Personalised PageRank Computation on Billion-Sized Graphs with Mutually Exclusive Edges</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">565042D3A33CAD9335676A2C82210308</idno>
+					<idno type="DOI">10.1145/3726302.3730113</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Link Analysis</term>
+					<term>Uncertain Graphs</term>
+					<term>PageRank</term>
+					<term>Ranking Algorithms</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>While Personalised PageRank (PPR) is widely used for ranking nodes in certain graphs, research on PPR for uncertain graphs remains limited. Real-world graphs often exhibit uncertainty in some edges with interdependent probabilities. The best-of-breed work by Kim et al. [13] proposed a fast approximate algorithm, UPPR, leveraging the Sherman-Morrison formula with singular value decomposition. However, UPPR lacks error guarantees, and struggles to scale on large graphs due to the high cost to precompute block matrix inverses over the certain part of the graph. To address these problems, we propose UPPR+, an efficient scheme to retrieve PPR on billion-scale uncertain graphs. 1) We first propose an efficient approach that groupifies uncertain edges to remove duplicates of source node set and maps uncertainties into a small subspace using low-dimensional embeddings. 2) To further accelerate the computation, we devise a novel uncertain subspace reduction method and advance the aggregation of PPRs over all possible worlds within the subspace via &quot;subset embedding&quot;. 3) We provide theoretical guarantees on the exactness of UPPR+ and analyse its time and space complexities. Extensive empirical studies on various real datasets validate that UPPR+ is 23-106x faster than state-of-the-art competitors, and scales well on billion-edge graphs without compromising accuracy. CCS Concepts • Information systems → Retrieval models and ranking.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

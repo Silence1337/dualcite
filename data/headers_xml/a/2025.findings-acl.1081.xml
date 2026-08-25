@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">An Adaptive Multi-Threshold Loss and a General Framework for Collaborating Losses in Document-Level Relation Extraction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Huangming</forename><surname>Xu</surname></persName>
+							<email>xuhuangming@foxmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fu</forename><surname>Zhang</surname></persName>
+							<email>zhangfu@mail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingwei</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">An Adaptive Multi-Threshold Loss and a General Framework for Collaborating Losses in Document-Level Relation Extraction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8E0781399865E547FDF1E5AECD964A28</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The goal of document-level relation extraction (DocRE) is to identify relations for a given entity pair within a document. As a multilabel classification task, the most commonly employed method involves introducing an adaptive threshold. Specifically, for an entity pair, if the scores of predicted relations exceed the threshold, the relations exist. However, we observe two phenomena that significantly weaken the model&apos;s performance in DocRE: (1) as the label space (the number of relations) expands, the model&apos;s performance gradually declines; (2) the model tends to prioritize predicting high-frequency relations in the long-tail problem. To address these challenges, we propose an innovative Adaptive Multi-Threshold Loss (AMTL), which for the first time proposes to partition the label space into different sub-label spaces (thus reducing its overall size) and learn an adaptive threshold for each sub-label space. This approach allows for more precise tuning of the model&apos;s sensitivity to diverse relations, mitigating the performance degradation associated with label space expansion and the long-tail problem. Moreover, our adaptive multi-threshold method can be considered as a general framework that seamlessly integrates different losses in different sub-label spaces, facilitating the concurrent application of multiple losses. Experimental results demonstrate that AMTL significantly enhances the performance of existing DocRE models across four datasets, achieving stateof-the-art results. The experiments on the concurrent application of multiple losses with our framework show stable performance and outperform single-loss methods. Code is available at https://github.com/xhm-code/AMTL.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

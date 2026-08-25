@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">PROCESSBENCH: Identifying Process Errors in Mathematical Reasoning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chujie</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenru</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Beichen</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Runji</forename><surname>Lin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Keming</forename><surname>Lu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bowen</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dayiheng</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingren</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junyang</forename><surname>Lin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qwen Team</orgName>
+								<orgName type="institution" key="instit2">Alibaba Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">PROCESSBENCH: Identifying Process Errors in Mathematical Reasoning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5D44ADEEB9986CBD023B548ECA017339</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>As language models regularly make mistakes when solving math problems, automated identification of errors in the reasoning process becomes increasingly significant for their scalable oversight. In this paper, we introduce PRO-CESSBENCH for measuring the ability to identify erroneous steps in mathematical reasoning. It consists of 3,400 test cases, primarily focused on competition-and Olympiad-level math problems. Each test case contains a step-by-step solution with error location annotated by human experts. Models are required to identify the earliest step that contains an error, or conclude that all steps are correct. We conduct extensive evaluation on PROCESSBENCH, involving two types of models: process reward models (PRMs) and critic models, where for the latter we prompt general language models to critique each solution step by step. We draw two main observations: (1) Existing PRMs typically fail to generalize to more challenging math problems beyond GSM8K and MATH. They underperform both critic models (i.e., prompted general language models) and our own trained PRM that is straightforwardly fine-tuned on the PRM800K dataset. (2) The best open-source model, QwQ-32B-Preview, has demonstrated the critique capability competitive with the proprietary model GPT-4o, despite that it still lags behind the reasoning-specialized o1-mini. We hope PROCESSBENCH can foster future research in reasoning process assessment, paving the way toward scalable oversight of language models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

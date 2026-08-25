@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Hybrid 2 : Distributed GNN Training System Enhanced by Dual-Hybrid for Sampling and Loading</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chu</forename><surname>Zhao</surname></persName>
+							<idno type="ORCID">0009-0001-8716-8206</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Shengjie</forename><surname>Dong</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhai</forename><surname>Zhao</surname></persName>
+							<email>zhaoyuhai@mail.neu.edu.cn</email>
+							<idno type="ORCID">0000-0002-1080-0859</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yuan</forename><surname>Li</surname></persName>
+							<email>liyuan@ncut.edu.cn</email>
+							<idno type="ORCID">0000-0002-3567-2101</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengkui</forename><surname>Wang</surname></persName>
+							<email>zhengkui.wang@singaporetech.edu.sg</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xingwei</forename><surname>Wang</surname></persName>
+							<email>wangxw@mail.neu.edu.cn</email>
+							<idno type="ORCID">0000-0003-2856-4716</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering Key Laboratory of Intelligent Computing in Medical Image of Ministry of Education Northeastern University Shenyang</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Engineering Key Laboratory of Intelligent Computing in Medical Image of Ministry of Education Northeastern University Shenyang</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science and Engineering Key Laboratory of Intelligent Computing in Medical Image of Ministry of Education Northeastern University Shenyang</orgName>
+								<orgName type="institution">North China University of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Singapore Institute of Technology Singapore</orgName>
+								<address>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Northeastern University Shenyang</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Hybrid 2 : Distributed GNN Training System Enhanced by Dual-Hybrid for Sampling and Loading</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">761CEE4D9189E51335719742955475A2</idno>
+					<idno type="DOI">10.1145/3746252.3761187</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Graph Neural Network</term>
+					<term>Cache</term>
+					<term>Mini-batch</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Graph Neural Networks (GNNs) are the rising standard for graph tasks, yet their distributed training in servers or computing power network remains challenging. Cross-machine sampling and data loading often create bottlenecks, leading to inefficient resource utilization. In this paper, we present Hybrid 2 , a distributed GNN training system that combines full-graph and mini-batch training through a novel hybrid-batch training method. It also adopts hybrid feature extraction, leveraging both local caching and remote access to improve feature retrieval efficiency. The integration of these methods in Hybrid2 results in a dual hybrid-gain effect. First, it reduces sampling and loading overhead by pre-aggregating neighbors for each target vertex, minimizing the layers to sample and load. Second, it accelerates data loading by dynamically identifying and locally caching the most frequently accessed vertices during training, maximizing memory efficiency. Experimental results demonstrate that Hybrid2 brings substantial performance improvements across key components of distributed GNN training. Network communication overhead is reduced by up to tens of times, while both sampling and loading achieve at least several-fold speedups. These gains contribute to an overall training acceleration exceeding 20× compared to DistDGL, all with comparable GPU memory usage and no loss in accuracy. Compared to the state-of-the-art system, it achieves nearly 3× speedup while using fewer resources.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

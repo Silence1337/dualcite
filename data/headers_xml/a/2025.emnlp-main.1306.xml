@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Aurick</forename><surname>Qiao</surname></persName>
+							<email>aurick.qiao@snowflake.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Snowflake AI Research Menlo Park</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhewei</forename><surname>Yao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Snowflake AI Research Menlo Park</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Samyam</forename><surname>Rajbhandari</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Snowflake AI Research Menlo Park</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuxiong</forename><surname>He</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Snowflake AI Research Menlo Park</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">945B3AA3FE673E0CF4689697E3C260B9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLM inference for enterprise applications, such as summarization, RAG, and code-generation, typically observe much longer prompt than generations, leading to high prefill cost and response latency. We present SwiftKV, a novel model transformation and distillation procedure targeted at reducing the prefill compute (in FLOPs) of prompt tokens while preserving high generation quality. First, SwiftKV prefills later layers&apos; KV cache using an earlier layer&apos;s output, allowing prompt tokens to skip those later layers. Second, SwiftKV employs a lightweight knowledge-preserving distillation procedure that can adapt existing LLMs with minimal accuracy impact. Third, SwiftKV can naturally incorporate KV cache compression to improve inference performance in low-memory scenarios. Our comprehensive experiments show that SwiftKV can effectively reduce prefill computation by 25-50% across several LLM families while incurring minimum quality degradation. In the end-to-end inference serving, SwiftKV realizes up to 2× higher aggregate throughput and 60% lower time per output token. It can achieve a staggering 560 TFlops/GPU of normalized inference throughput, which translates to 16K tokens/s for Llama-3.1-70B. SwiftKV is open-sourced at</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

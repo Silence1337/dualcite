@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LoRA-drop: Efficient LoRA Parameter Pruning based on Output Evaluation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongyun</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Computing</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Lu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Computing</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wang</forename><surname>Xu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science &amp; Technology</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Conghui</forename><surname>Zhu</surname></persName>
+							<email>conghui@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Computing</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tiejun</forename><surname>Zhao</surname></persName>
+							<email>tjzhao@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Computing</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Muyun</forename><surname>Yang</surname></persName>
+							<email>yangmuyun@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Faculty of Computing</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LoRA-drop: Efficient LoRA Parameter Pruning based on Output Evaluation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0DCA778DF27CB2EE2BDADBB544EF4A96</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Low-Rank Adaptation (LoRA) is currently the most commonly used Parameter-efficient finetuning (PEFT) method. However, it still faces high computational and storage costs to models with billions of parameters. Most previous studies have tackled this issue by using pruning techniques. Nonetheless, these efforts only analyze LoRA parameter features to evaluate their importance, such as parameter count, size, and gradient. In fact, the output of LoRA directly impacts the fine-tuned model. Preliminary experiments indicate that a fraction of LoRA possesses significantly high output values, substantially influencing the layer output. Motivated by the observation, we propose LoRA-drop. Concretely, LoRA-drop evaluates the importance of LoRA based on the LoRA output. Then we retain LoRA for important layers and the other layers share the same LoRA. We conduct abundant experiments with models of different scales on NLU and NLG tasks. Results demonstrate that LoRA-drop can achieve performance comparable to full fine-tuning and LoRA while retaining 50% of the LoRA parameters on average.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

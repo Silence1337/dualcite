@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Data Usage Privacy Auditing for Semi-supervised GNNs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kaike</forename><surname>Zhang</surname></persName>
+							<email>zhangkaike21s@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Bingbing</forename><surname>Xu</surname></persName>
+							<email>xubingbing@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Sun</surname></persName>
+							<email>sunfei@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Cao</surname></persName>
+							<email>caoqi@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Huawei</forename><surname>Shen</surname></persName>
+							<email>shenhuawei@ict.ac.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution">CAS University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution">CAS University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<address>
+									<addrLine>CAS Beijing</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<address>
+									<addrLine>CAS Beijing</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<address>
+									<addrLine>CAS Beijing</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<address>
+									<addrLine>CAS Beijing</addrLine>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country>China USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Data Usage Privacy Auditing for Semi-supervised GNNs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AE85E2C4C0463CCDE7C57F97721DEA52</idno>
+					<idno type="DOI">10.1145/3767695.3769497</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Data Usage Privacy Auditing</term>
+					<term>Membership Inference Attack</term>
+					<term>Semisupervised GNNs</term>
+					<term>Message Passing</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Graph Neural Networks (GNNs) have achieved promising results in numerous applications. To ensure accurate predictions, GNNs may exploit user data beyond the scope of consent, raising significant concerns regarding data usage and privacy. A critical task, therefore, is data usage privacy auditing, which aims to infer whether a data subject&apos;s information was improperly used during model training. While Membership Inference Attacks (MIA) are commonly used to audit data usage in fully supervised settings, most GNNs operate under a semi-supervised paradigm, where nodes fall into three distinct categories with varying degrees of involvement in training. This heterogeneity introduces a key challenge for applying traditional binary MIA methods. To address this, we study ternary data usage privacy auditing for semi-supervised GNNs in a black-box setting using a shadow training-based MIA framework. We identify that the main obstacle lies in the effects of message passing, which entangles node representations across categories. To tackle this, we propose MPMIA-a novel Message Passing-aware Membership Inference Attack-which leverages point-wise KL divergence to quantify and exploit the influence of message passing on node embeddings. Extensive experiments validate the effectiveness of MPMIA, showing clear improvements over baseline methods in accurately auditing data usage within semi-supervised GNNs. CCS Concepts • Security and privacy → Formal methods and theory of security; • Theory of computation → Graph algorithms analysis.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

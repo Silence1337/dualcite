@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Learning to Translate Ambiguous Terminology by Preference Optimization on Post-Edits</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nathaniel</forename><surname>Berger</surname></persName>
+							<email>berger@cl.uni-heidelberg.de</email>
+							<affiliation key="aff0">
+								<orgName type="department">SAP SE</orgName>
+								<orgName type="institution" key="instit1">§ Computational Linguistics &amp; † IWR</orgName>
+								<orgName type="institution" key="instit2">Heidelberg University</orgName>
+								<address>
+									<addrLine>Dietmar-Hopp-Allee 16</addrLine>
+									<postCode>69190</postCode>
+									<settlement>Walldorf</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Johannes</forename><surname>Eschbach-Dymanus</surname></persName>
+							<email>johannes.eschbach-dymanus@sap.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">SAP SE</orgName>
+								<orgName type="institution" key="instit1">§ Computational Linguistics &amp; † IWR</orgName>
+								<orgName type="institution" key="instit2">Heidelberg University</orgName>
+								<address>
+									<addrLine>Dietmar-Hopp-Allee 16</addrLine>
+									<postCode>69190</postCode>
+									<settlement>Walldorf</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Miriam</forename><surname>Exel</surname></persName>
+							<email>miriam.exel@sap.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">SAP SE</orgName>
+								<orgName type="institution" key="instit1">§ Computational Linguistics &amp; † IWR</orgName>
+								<orgName type="institution" key="instit2">Heidelberg University</orgName>
+								<address>
+									<addrLine>Dietmar-Hopp-Allee 16</addrLine>
+									<postCode>69190</postCode>
+									<settlement>Walldorf</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matthias</forename><surname>Huck</surname></persName>
+							<email>matthias.huck@sap.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">SAP SE</orgName>
+								<orgName type="institution" key="instit1">§ Computational Linguistics &amp; † IWR</orgName>
+								<orgName type="institution" key="instit2">Heidelberg University</orgName>
+								<address>
+									<addrLine>Dietmar-Hopp-Allee 16</addrLine>
+									<postCode>69190</postCode>
+									<settlement>Walldorf</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stefan</forename><surname>Riezler</surname></persName>
+							<email>riezler@cl.uni-heidelberg.de</email>
+							<affiliation key="aff0">
+								<orgName type="department">SAP SE</orgName>
+								<orgName type="institution" key="instit1">§ Computational Linguistics &amp; † IWR</orgName>
+								<orgName type="institution" key="instit2">Heidelberg University</orgName>
+								<address>
+									<addrLine>Dietmar-Hopp-Allee 16</addrLine>
+									<postCode>69190</postCode>
+									<settlement>Walldorf</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Learning to Translate Ambiguous Terminology by Preference Optimization on Post-Edits</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">238B4580E23719DC816BAFD390038BD2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In real world translation scenarios, terminology is rarely one-to-one. Instead, multiple valid translations may appear in a terminology dictionary, but correctness of a translation depends on corporate style guides and context. This can be challenging for neural machine translation (NMT) systems. Luckily, in a corporate context, many examples of human post-edits of valid but incorrect terminology exist. The goal of this work is to learn how to disambiguate our terminology based on these corrections. Our approach is based on preference optimization, using the term post-edit as the knowledge to be preferred. While previous work had to rely on unambiguous translation dictionaries to set hard constraints during decoding, or to add soft constraints in the input, our framework requires neither one-to-one dictionaries nor human intervention at decoding time. We report results on English-German post-edited data and find that the optimal combination of supervised fine-tuning and preference optimization, with both term-specific and full sequence objectives, yields statistically significant improvements in term accuracy over a strong translation oriented LLM without significant losses in COMET score. Additionally, we release test sets from our post-edited data and terminology dictionary.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

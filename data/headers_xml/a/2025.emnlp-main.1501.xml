@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">How Does DPO Reduce Toxicity? A Mechanistic Neuron-Level Analysis</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yushi</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Filip</forename><surname>Sondej</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Jagiellonian University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Harry</forename><surname>Mayne</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Lee</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Harvard University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Adam</forename><surname>Mahdi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">How Does DPO Reduce Toxicity? A Mechanistic Neuron-Level Analysis</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">113D732AC65A799B1C771C6395E96DC4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Safety fine-tuning algorithms reduce harmful outputs in language models, yet their mechanisms remain under-explored. Direct Preference Optimization (DPO) is a popular choice of algorithm, but prior explanations, attributing its effects solely to dampened toxic neurons in the MLP layers, are incomplete. In this study, we analyse four language models (Llama-3.1-8B, Gemma-2-2B, Mistral-7B, GPT-2-Medium) and show that toxic neurons only account for 2.5% to 24% of DPO&apos;s effects across models. Instead, DPO balances distributed activation shifts across a majority of MLP neurons to create a net toxicity reduction. We attribute this reduction to four neuron groups, two aligned with reducing toxicity and two promoting anti-toxicity, whose combined effects replicate DPO across models. To further validate this understanding, we develop an activation editing method mimicking DPO through distributed shifts along a toxicity representation in both probe-based and probe-free settings. This method outperforms DPO in reducing toxicity while preserving perplexity across models, without requiring any weight updates. Our work provides a mechanistic understanding of DPO and introduces an efficient, tuning-free alternative for safety fine-tuning. Our code is available on dpo-toxic-neurons.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

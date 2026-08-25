@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">W-RAG: Weakly Supervised Dense Retrieval in RAG for Open-domain Question Answering</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-04-25">25 Apr 2025</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jinming</forename><surname>Nian</surname></persName>
+							<email>jnian@scu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyuan</forename><surname>Peng</surname></persName>
+							<email>zpeng@scu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qifan</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Fang</surname></persName>
+							<email>yfang@scu.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Santa Clara University Santa Clara</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Santa Clara University Santa Clara</orgName>
+								<address>
+									<settlement>Meta AI Menlo Park</settlement>
+									<region>CA CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Santa Clara University Santa Clara</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">W-RAG: Weakly Supervised Dense Retrieval in RAG for Open-domain Question Answering</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2025-04-25">25 Apr 2025</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">427FC05F2A2B0665C68452523CC5D5F5</idno>
+					<idno type="arXiv">arXiv:2408.08444v2[cs.CL]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In knowledge-intensive tasks such as open-domain question answering (OpenQA), large language models (LLMs) often struggle to generate factual answers, relying solely on their internal (parametric) knowledge. To address this limitation, Retrieval-Augmented Generation (RAG) systems enhance LLMs by retrieving relevant information from external sources, thereby positioning the retriever as a pivotal component. Although dense retrieval demonstrates state-of-the-art performance, its training poses challenges due to the scarcity of ground-truth evidence, largely attributed to the high costs of human annotation. In this paper, we propose W-RAG, a method that draws weak training signals from the downstream task (such as OpenQA) of an LLM, and fine-tunes the retriever to prioritize passages that most benefit the task. Specifically, we rerank the top-𝑘 passages retrieved via BM25 by assessing the probability that the LLM will generate the correct answer for a question given each passage. The highest-ranking passages are then used as positive fine-tuning examples for dense retrieval. We conduct comprehensive experiments across four publicly available OpenQA datasets to demonstrate that our approach enhances both retrieval and OpenQA performance compared to baseline models, achieving results comparable to models fine-tuned with human-labeled data. Source code is published 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

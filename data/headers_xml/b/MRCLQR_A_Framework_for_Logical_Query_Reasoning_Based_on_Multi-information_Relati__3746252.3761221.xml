@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MRCLQR: A Framework for Logical Query Reasoning Based on Multi-information Relation Constraints</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Pengwei</forename><surname>Pan</surname></persName>
+							<email>pwpan@stu.suda.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Liu</surname></persName>
+							<email>liuyu@uir.edu.cn</email>
+							<idno type="ORCID">0000-0002-5080-9102</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Ma</surname></persName>
+							<email>majun@uir.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianfeng</forename><surname>Qu</surname></persName>
+							<email>jfqu@suda.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wen</forename><surname>Hua</surname></persName>
+							<email>wency.hua@polyu.edu.hk</email>
+							<idno type="ORCID">0000-0001-5456-7035</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yanmei</forename><surname>Kang</surname></persName>
+							<idno type="ORCID">0009-0006-4564-6843</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Soochow University</orgName>
+								<address>
+									<addrLine>and Technology Su Zhou</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of International Relations Bei Jing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of International Relations Bei Jing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Soochow University</orgName>
+								<address>
+									<addrLine>and Technology Su Zhou</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">The Hong Kong Polytechnic University Department of Computing Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">University of International Relations Bei Jing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MRCLQR: A Framework for Logical Query Reasoning Based on Multi-information Relation Constraints</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">86E7DFB073663C37CC57F3DFB76C2374</idno>
+					<idno type="DOI">10.1145/3746252.3761221</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>• Computing methodologies → Knowledge representation and reasoning</term>
+					<term>Neural networks</term>
+					<term>• Information systems → Query languages Knowledge Graph, Complex Logical Query Answering, First-order Logical Reasoning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The Knowledge Graph logical reasoning task faces a dual challenge of insufficient semantic coverage from type information and missing structural information from relations. Although type annotations provide semantic priors for entities, their coarse-grained features cannot comprehensively characterize entity attributes; conversely, relational structure can enhance semantic representation, but the incompleteness of edges in real-world graphs limits modeling when relying on a single information source. To address these issues, we propose MRCLQR (Multi-information Relation Constraint-based Logical Query Reasoning), a framework with three core innovations: (1) an Information Semantic Alignment module based on contrastive learning, which achieves cross-modal semantic collaboration via entity-type-structure pairing; (2) a Constraint-aware Relation Encoding method that decomposes relation semantics into domain aggregation features, relation ontology semantics, and range constraint features; and (3) Neural-Symbolic Operators guided by domain constraints, which narrow the reasoning space through a constraint-aware attention mechanism. Experiments on FB15k, FB15k-237, and NELL-995 demonstrate that MRCLQR achieves average MRR scores of 35.8%, 16.2%, and 19.6%, respectively improving over the strongest baselines by 0.5%, 0.2%, and 0.2%-and exhibits an 8.0% average gain on complex queries involving negation. Ablation studies validate the effectiveness of multi-source collaboration and the curriculum learning strategy. This work offers a novel paradigm for heterogeneous knowledge fusion and logical query reasoning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

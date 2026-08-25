@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Closer Look into Mixture-of-Experts in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ka</forename><forename type="middle">Man</forename><surname>Lo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Lab</orgName>
+								<orgName type="institution" key="instit1">University of Macau</orgName>
+								<orgName type="institution" key="instit2">University of Edinburgh</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<orgName type="institution" key="instit4">INF Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zeyu</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Lab</orgName>
+								<orgName type="institution" key="instit1">University of Macau</orgName>
+								<orgName type="institution" key="instit2">University of Edinburgh</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<orgName type="institution" key="instit4">INF Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zihan</forename><surname>Qiu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Lab</orgName>
+								<orgName type="institution" key="instit1">University of Macau</orgName>
+								<orgName type="institution" key="instit2">University of Edinburgh</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<orgName type="institution" key="instit4">INF Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zili</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Lab</orgName>
+								<orgName type="institution" key="instit1">University of Macau</orgName>
+								<orgName type="institution" key="instit2">University of Edinburgh</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<orgName type="institution" key="instit4">INF Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Fu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Lab</orgName>
+								<orgName type="institution" key="instit1">University of Macau</orgName>
+								<orgName type="institution" key="instit2">University of Edinburgh</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<orgName type="institution" key="instit4">INF Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Closer Look into Mixture-of-Experts in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">91B807A211B4B63C0F2DF1691F2C0725</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Mixture-of-experts (MoE) is gaining increasing attention due to its unique properties and remarkable performance, especially for language tasks. By sparsely activating a subset of parameters for each token, MoE architecture could increase the model size without sacrificing computational efficiency, achieving a better trade-off between performance and training costs. However, the underlying mechanism of MoE still lacks further exploration, and its modularization degree remains questionable. In this paper, we make an initial attempt to understand the inner workings of MoE-based large language models. Concretely, we comprehensively study the parametric and behavioral features of four popular MoE-based models and reveal some intriguing observations, including 1) Neurons act like fine-grained experts; 2) The router of MoE usually selects experts with larger output norms; 3) The expert diversity increases as the layer increases, while the last layer is an outlier, which is further validated by an initial experiment. Based on the observations, we also provide suggestions for a broad spectrum of MoE practitioners, such as router design and expert allocation. We hope this work could shed light on future research on the MoE framework and other modular architectures. Code is available at https://github. com/kamanphoebe/Look-into-MoEs.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

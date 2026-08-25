@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TC-RAG: Turing-Complete RAG&apos;s Case study on Medical LLM Systems</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xinke</forename><surname>Jiang</surname></persName>
+							<email>xinkejiang@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Fang</surname></persName>
+							<email>fangyue@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rihong</forename><surname>Qiu</surname></persName>
+							<email>rihongqiu@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoyu</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff6">
+								<orgName type="institution">City University of Hong Kong (Dongguan)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yongxin</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Chen</surname></persName>
+							<affiliation key="aff7">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wentao</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff8">
+								<orgName type="institution">ShanghaiTech University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruizhe</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuchen</forename><surname>Fang</surname></persName>
+							<affiliation key="aff9">
+								<orgName type="institution">University of Electronic Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Ma</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xu</forename><surname>Chu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Center on Frontiers of Computing Studies</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution">Peking University Information Technology Institute</orgName>
+								<address>
+									<settlement>Tianjin Binhai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junfeng</forename><surname>Zhao</surname></persName>
+							<email>zhaojf@pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Big Data Technology Research Center</orgName>
+								<orgName type="laboratory">Nanhu Laboratory</orgName>
+								<address>
+									<settlement>Jiaxing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yasha</forename><surname>Wang</surname></persName>
+							<email>wangyasha@pku.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Lab of HCST (PKU)</orgName>
+								<orgName type="institution" key="instit1">MOE; SCS</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">National Engineering Research Center For Software Engineering</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution">Peking University Information Technology Institute</orgName>
+								<address>
+									<settlement>Tianjin Binhai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TC-RAG: Turing-Complete RAG&apos;s Case study on Medical LLM Systems</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3D87C91F9E7DFA4DE066E6522DEE0C26</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In the pursuit of enhancing domain-specific Large Language Models (LLMs), Retrieval-Augmented Generation (RAG) emerges as a promising solution to mitigate issues such as hallucinations, outdated knowledge, and limited expertise in highly specialized queries. However, existing approaches to RAG fall short by neglecting system state variables, which are crucial for ensuring adaptive control, retrieval halting, and system convergence. In this paper, we introduce the Turing-Complete-RAG (TC-RAG) through rigorous proof, a novel framework that addresses these challenges by incorporating a Turing Complete System to manage state variables, thereby enabling more efficient and accurate knowledge retrieval. By leveraging a memory stack system with adaptive retrieval, reasoning, and planning capabilities, TC-RAG not only ensures the controlled halting of retrieval processes but also mitigates the accumulation of erroneous knowledge via Push and Pop actions. In the case study of the medical and general domain, our extensive experiments on seven real-world healthcare and general-domain datasets demonstrate the superiority of TC-RAG over existing methods in accuracy by over 7.20%. Our code, datasets and RAG resources have been available at https://github.com/Artessay/TC-RAG .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

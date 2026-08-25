@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Koel-TTS: Enhancing LLM based Speech Generation with Preference Alignment and Classifier Free Guidance</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Samarah</forename><surname>Shehzeen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Paarth</forename><surname>Hussain</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuesong</forename><surname>Neekhara</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Edresson</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Subhankar</forename><surname>Casanova</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mikyas</forename><forename type="middle">T</forename><surname>Ghosh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Roy</forename><surname>Desta</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rafael</forename><surname>Fejgin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jason</forename><surname>Valle</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NVIDIA Corporation</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Koel-TTS: Enhancing LLM based Speech Generation with Preference Alignment and Classifier Free Guidance</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">13B2E67D2B92F5CD153ED81E297BE393</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Autoregressive speech token generation models produce speech with remarkable variety and naturalness but often suffer from hallucinations and undesired vocalizations that do not conform to conditioning inputs. To address these challenges, we introduce Koel-TTS, an encoder-decoder transformer model for multilingual TTS that improves contextual adherence of speech generation LLMs through preference alignment and classifier-free guidance (CFG). For preference alignment, we design a reward system that ranks model outputs using automatic metrics derived from speech recognition and speaker verification models, encouraging generations that better match the input text and speaker identity. CFG further allows fine-grained control over the influence of conditioning inputs during inference by interpolating conditional and unconditional logits. Notably, applying CFG to a preference-aligned model yields additional gains in transcription accuracy and speaker similarity, demonstrating the complementary benefits of both techniques. Koel-TTS achieves state-of-the-art results in zeroshot TTS, outperforming prior LLM-based models on intelligibility, speaker similarity, and naturalness, despite being trained on significantly less data. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

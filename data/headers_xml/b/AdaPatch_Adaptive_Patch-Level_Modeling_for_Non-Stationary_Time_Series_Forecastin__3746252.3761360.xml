@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AdaPatch: Adaptive Patch-Level Modeling for Non-Stationary Time Series Forecasting</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kun</forename><surname>Liu</surname></persName>
+							<idno type="ORCID">0009-0003-2177-5489</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Zhongjie</forename><surname>Duan</surname></persName>
+							<email>zjduan@stu.ecnu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Cen</forename><surname>Chen</surname></persName>
+							<email>cenchen@dase.ecnu.edu.cn</email>
+							<idno type="ORCID">0000-0003-0325-1705</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yanhao</forename><surname>Wang</surname></persName>
+							<email>yhwang@dase.ecnu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dawei</forename><surname>Cheng</surname></persName>
+							<email>dcheng@tongji.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yuqi</forename><surname>Liang</surname></persName>
+							<email>roly.liang@seek-data.com</email>
+						</author>
+						<author>
+							<persName><surname>Adapatch</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">East China Normal University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">East China Normal University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">East China Normal University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">East China Normal University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Seek Data Group</orgName>
+								<orgName type="institution">Tongji University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Emoney Inc. Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AdaPatch: Adaptive Patch-Level Modeling for Non-Stationary Time Series Forecasting</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A61AA868D2E29D2508FD333E6E498650</idno>
+					<idno type="DOI">10.1145/3746252.3761360</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Multivariate Time Series Forecasting</term>
+					<term>Non-Stationarity</term>
+					<term>Patch-Level Modeling</term>
+					<term>Adaptive Normalization</term>
+					<term>Multi-Layer Perceptron</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Time series forecasting has witnessed significant advancements through deep learning techniques. However, most existing methods struggle in non-stationary environments, where data distributions evolve over time due to concept drift. To address the challenge of non-stationarity in time series, various stabilization techniques have been proposed to mitigate temporal variations. Nonetheless, these methods operate at the instance level, assuming a homogeneous distribution across all time steps within an instance and relying on fixed statistical normalization. This limits their ability to effectively capture fine-grained distributional shifts. In this paper, we introduce AdaPatch, a novel forecasting model specifically designed to tackle non-stationary multivariate time series. AdaPatch addresses intra-instance distributional shifts by adopting an adaptive scheme for patch-level encoding and normalization, which makes the model capture fine-grained temporal variations more effectively. To further enhance the quality of representations, AdaPatch incorporates a patch reconstruction branch and jointly optimizes a reconstruction loss alongside the forecasting objective. This auxiliary path serves as an implicit regularization mechanism, guiding the encoder to retain meaningful local temporal structures. Furthermore, to enable AdaPatch to better model complex local dynamics, we propose a patch-based predictive decoding strategy that leverages the decoder from the reconstruction branch to replace conventional point-wise forecasting with a more structured patch-level prediction mechanism. Extensive experiments conducted on six real-world multivariate time series datasets demonstrate that AdaPatch achieves superior performance compared to several state-of-the-art baselines, highlighting its effectiveness and strong generalization capability. Our code and data are publicly available at https://github.com/iuaku/AdaPatch.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

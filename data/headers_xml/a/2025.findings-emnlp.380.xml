@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GUARD: Glocal Uncertainty-Aware Robust Decoding for Effective and Efficient Open-Ended Text Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuanhao</forename><surname>Ding</surname></persName>
+							<email>yhding@henu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Henan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Esteban</forename><surname>Garces Arias</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Statistics</orgName>
+								<orgName type="institution">LMU Munich</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Munich Center for Machine Learning (MCML)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Meimingwei</forename><surname>Li</surname></persName>
+							<email>m.li@campus.lmu.dej.rodemann</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Statistics</orgName>
+								<orgName type="institution">LMU Munich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Julian</forename><surname>Rodemann</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Statistics</orgName>
+								<orgName type="institution">LMU Munich</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">CISPA Helmholtz Center for Information Security</orgName>
+								<address>
+									<settlement>Saarbrücken</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matthias</forename><surname>Aßenmacher</surname></persName>
+							<email>matthias@stat.uni-muenchen.de</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Statistics</orgName>
+								<orgName type="institution">LMU Munich</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Munich Center for Machine Learning (MCML)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Danlu</forename><surname>Chen</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>San Diego</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gaojuan</forename><surname>Fan</surname></persName>
+							<email>fangaojuan@henu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Henan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christian</forename><surname>Heumann</surname></persName>
+							<email>christian.heumann@lmu.de</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Statistics</orgName>
+								<orgName type="institution">LMU Munich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chongsheng</forename><surname>Zhang</surname></persName>
+							<email>cszhang@henu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Henan University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GUARD: Glocal Uncertainty-Aware Robust Decoding for Effective and Efficient Open-Ended Text Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">47E21B8D98C3C755C73C62F42D86F7D3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Open-ended text generation faces a critical challenge: balancing coherence with diversity in LLM outputs. While contrastive search-based decoding strategies have emerged to address this trade-off, their practical utility is often limited by hyperparameter dependence and high computational costs. We introduce GUARD, a self-adaptive decoding method that effectively balances these competing objectives through a novel &quot;Glocal&quot; uncertainty-driven framework. GUARD combines global entropy estimates with local entropy deviations to integrate both long-term and short-term uncertainty signals. We demonstrate that our proposed global entropy formulation effectively mitigates abrupt variations in uncertainty, such as sudden overconfidence or high entropy spikes, and provides theoretical guarantees of unbiasedness and consistency. To reduce computational overhead, we incorporate a simple yet effective token-count-based penalty into GUARD. Experimental results demonstrate that GUARD achieves a good balance between text diversity and coherence, while exhibiting substantial improvements in generation speed. In a more nuanced comparison study across different dimensions of text quality, both human and LLM evaluators validated its remarkable performance. Our code is available at https: //github.com/YecanLee/GUARD.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

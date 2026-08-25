@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Proactive Reliability Metric for Detecting Failures in Large Language Model Training</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Maryam</forename><surname>Fatima</surname></persName>
+						</author>
+						<title level="a" type="main">A Proactive Reliability Metric for Detecting Failures in Large Language Model Training</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4052F3F13C7BB6A2491C45336ED00FD6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Training large language models (LLMs) at scale is fraught with instabilities that can lead to catastrophic failures, wasting millions of dollars in compute resources. Current approaches rely on reactive interventions like checkpointing, which only mitigate failures after detection. We introduce the R-Metric, a proactive reliability metric that combines signals from hardware monitoring (λ), training dynamics (σ 2), and model performance (∆L) to predict failures before they occur. Through extensive experiments across 720 simulated runs and real-world validation on diverse hardware (NVIDIA T4/L4 GPUs) and model architectures (Llama 3.2-1B, GPT-2 Large, Qwen3-0.6B, Liquid AI LFM2-700M), we demonstrate that the R-Metric achieves 0.973 F1-Score in simulation and perfect 1.00 F1-Score in realworld deployment with an average lead time of 255 steps (12.8 minutes for small models, scaling to 2-8 minutes at production training speeds), enabling preemptive intervention. Importantly, our optimized weights (λ=0.10, σ 2 =0.45, ∆L=0.70) transfer across architectures with less than 3% performance degradation, eliminating expensive retuning. The metric&apos;s lightweight computational overhead (1.8% training time increase) makes it immediately deployable for resource-constrained organizations-academic labs, startups, and opensource communities-democratizing access to enterprise-grade reliability monitoring.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

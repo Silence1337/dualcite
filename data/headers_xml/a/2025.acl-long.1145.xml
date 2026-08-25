@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Marco-o1 v2: Towards Widening The Distillation Bottleneck for Reasoning Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Huifeng</forename><surname>Yin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minghao</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Monash University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuanfan</forename><surname>Ni</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Zeng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianqi</forename><surname>Shi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liangying</forename><surname>Shao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenyang</forename><surname>Lyu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Longyue</forename><surname>Wang</surname></persName>
+							<email>wanglongyue.wly@alibaba-inc.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weihua</forename><surname>Luo</surname></persName>
+							<email>weihua.luowh@alibaba-inc.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaifu</forename><surname>Zhang</surname></persName>
+							<email>kaifu.zkf@alibaba-inc.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Marco-o1 v2: Towards Widening The Distillation Bottleneck for Reasoning Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6538C083B25F4FF39563AB2DE3061CEA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Reasoning Models (LRMs) such as Ope-nAI o1 and DeepSeek-R1 have shown remarkable reasoning capabilities by scaling testtime compute and generating long Chain-of-Thought (CoT). Distillation post-training on LRMs-generated data is a straightforward yet effective method to enhance the reasoning abilities of smaller models, but faces a critical bottleneck: we found that distilled long CoT data poses learning difficulty for small models and leads to the inheritance of biases (i.e. over-thinking) when using Supervised Fine-tuning (SFT) and Reinforcement Learning (RL) methods. To alleviate this bottleneck, we propose constructing tree-based CoT data from scratch via Monte Carlo Tree Search (MCTS). We then exploit a set of CoTaware approaches, including Thoughts Length Balance, Fine-grained DPO, and Joint Posttraining Objective, to enhance SFT and RL on the construted data. We conduct evaluation on various benchmarks such as math (GSM8K, MATH, AIME). instruction-following (Multi-IF) and planning (Blocksworld), results demonstrate our approaches substantially improve the reasoning performance of distilled models compared to standard distilled models via reducing the hallucinations in long-time thinking. The project homepage is https://github.com/ AIDC-AI/Marco-o1.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

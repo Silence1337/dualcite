@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LeadFairRec: LLM-enhanced Discriminative Counterfactual Debiasing for Two-sided Fairness in Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yimin</forename><surname>Hou</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Yue</forename><surname>Kou</surname></persName>
+							<email>kouyue@cse.neu.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University Shenyang</orgName>
+								<address>
+									<settlement>Liaoning</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University Shenyang</orgName>
+								<address>
+									<settlement>Liaoning</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Derong Shen</orgName>
+								<orgName type="department" key="dep2">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University Shenyang</orgName>
+								<address>
+									<settlement>Liaoning</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department" key="dep1">Xiangmin Zhou</orgName>
+								<orgName type="department" key="dep2">School of Computing Technologies</orgName>
+								<orgName type="institution">RMIT University Melbourne</orgName>
+								<address>
+									<settlement>Victoria</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Dong Li</orgName>
+								<orgName type="department" key="dep2">School of Information</orgName>
+								<orgName type="institution">Liaoning University Shenyang</orgName>
+								<address>
+									<settlement>Liaoning</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department" key="dep1">Tiezheng Nie</orgName>
+								<orgName type="department" key="dep2">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University Shenyang</orgName>
+								<address>
+									<settlement>Liaoning</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department" key="dep1">Ge Yu</orgName>
+								<orgName type="department" key="dep2">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University Shenyang</orgName>
+								<address>
+									<settlement>Liaoning</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LeadFairRec: LLM-enhanced Discriminative Counterfactual Debiasing for Two-sided Fairness in Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6818B8F9C3A1A5643BFF6934E4E96AA2</idno>
+					<idno type="DOI">10.1145/3746252.3761126</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Recommender System</term>
+					<term>Two-sided Fairness</term>
+					<term>Discriminative Counterfactual Debiasing</term>
+					<term>LLM-Enhanced Counterfactual Inference</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Fairness-aware recommendation has emerged as a pivotal research area in recent years. Current fairness studies primarily examine two independent dimensions: user-side fairness and item-side fairness. However, most approaches address each side&apos;s fairness in isolation while neglecting their complex interdependencies. In this paper, we propose an LLM-Enhanced DiscriminAtive Counterfactual Debiasing Model for Two-sided Fairness in Recommendation (LeadFairRec). Specifically, we first design a two-sided causal graph that jointly models provider-customer fairness interactions through their causal relationships. Then we propose a discriminative counterfactual debiasing method, which effectively removes spurious correlations while maintaining true user-item interactions. Finally, we propose an LLM-enhanced counterfactual inference method to derive noise-resistant user/item representations from interaction data, enhancing the robustness of causal debiasing. The experimental results demonstrate the high effectiveness of our proposed model. We provide our code at https://github.com/houyimin660/ LeadFairRec. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

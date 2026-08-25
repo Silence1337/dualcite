@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Continuously Steering LLMs Sensitivity to Contextual Knowledge with Proxy Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yilin</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Jiaotong University</orgName>
+								<orgName type="institution" key="instit2">Xi&apos;an Jiaotong University</orgName>
+								<address>
+									<postCode>710049</postCode>
+									<settlement>Xi&apos;an</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Heng</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Jiaotong University</orgName>
+								<orgName type="institution" key="instit2">Xi&apos;an Jiaotong University</orgName>
+								<address>
+									<postCode>710049</postCode>
+									<settlement>Xi&apos;an</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuyang</forename><surname>Bai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Jiaotong University</orgName>
+								<orgName type="institution" key="instit2">Xi&apos;an Jiaotong University</orgName>
+								<address>
+									<postCode>710049</postCode>
+									<settlement>Xi&apos;an</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minnan</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Jiaotong University</orgName>
+								<orgName type="institution" key="instit2">Xi&apos;an Jiaotong University</orgName>
+								<address>
+									<postCode>710049</postCode>
+									<settlement>Xi&apos;an</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit1">Jiaotong University</orgName>
+								<orgName type="institution" key="instit2">Xi&apos;an Jiaotong University</orgName>
+								<address>
+									<postCode>710049</postCode>
+									<settlement>Xi&apos;an</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Continuously Steering LLMs Sensitivity to Contextual Knowledge with Proxy Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">ADDB3986B03B126F53CF946F13F7CA77</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In Large Language Models (LLMs) generation, there exist knowledge conflicts and scenarios where parametric knowledge contradicts knowledge provided in the context. Previous works studied tuning, decoding algorithms, or locating and editing context-aware neurons to adapt LLMs to be faithful to new contextual knowledge. However, they are usually inefficient or ineffective for large models, not workable for black-box models, or unable to continuously adjust LLMs&apos; sensitivity to the knowledge provided in the context. To mitigate these problems, we propose CSKS (Continuously Steering Knowledge Sensitivity), a simple framework that can steer LLMs&apos; sensitivity to contextual knowledge continuously at a lightweight cost. Specifically, we tune two small LMs (i.e. proxy models) and use the difference in their output distributions to shift the original distribution of an LLM without modifying the LLM weights. In the evaluation process, we not only design synthetic data and fine-grained metrics to measure models&apos; sensitivity to contextual knowledge but also use a real conflict dataset to validate CSKS&apos;s practical efficacy. Extensive experiments demonstrate that our framework achieves continuous and precise control over LLMs&apos; sensitivity to contextual knowledge, enabling both increased sensitivity and reduced sensitivity, thereby allowing LLMs to prioritize either contextual or parametric knowledge as needed flexibly. Our data and code are available at https: //github.com/OliveJuiceLin/CSKS.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

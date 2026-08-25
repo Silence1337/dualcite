@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Balancing the Budget: Understanding Trade-offs Between Supervised and Preference-Based Finetuning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mohit</forename><surname>Raghavendra</surname></persName>
+							<email>mraghavendra6@gatech.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junmo</forename><surname>Kang</surname></persName>
+							<email>junmo.kang@gatech.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alan</forename><surname>Ritter</surname></persName>
+							<email>aritter34@gatech.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Balancing the Budget: Understanding Trade-offs Between Supervised and Preference-Based Finetuning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0E4D31EE465A9B3F4C247668AD7F281D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Post-training of Large Language Models often involves a pipeline of Supervised Finetuning (SFT) followed by Preference Finetuning (PFT) using methods like Direct Preference Optimization. Both stages require annotated data that are very different in structure and costs. We study how to optimally allocate a fixed training data budget between the two stages, through extensive experiments spanning four diverse tasks, multiple model sizes and various data annotation costs. Our findings reveal that just SFT on the base model dominates performance in low-data regimes (&lt; 1, 000 annotated examples). With larger data-budgets, we observe that a combination of SFT and PFT, often with increasing portions allocated towards preference data yields optimal performance. However, completely eliminating SFT and running PFT directly on the base model yields suboptimal performance, described as the cold start problem on tasks like mathematics. We observe that this is due to the distribution shift arising from using DPO directly on the base model to elicit step-by-step reasoning. This limitation can be effectively addressed by allocating even a small portion (&lt; 10%) of the budget to SFT first, resulting in performance improvements of 15-20% on analytical benchmarks like GSM8k. These results provide actionable insights for researchers and practitioners optimizing model development under budget constraints, where high-quality data curation often represents a significant portion of the total costs of model development.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

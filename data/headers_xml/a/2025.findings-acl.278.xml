@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SuLoRA: Subspace Low-Rank Adaptation for Parameter-Efficient Fine-Tuning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chenhao</forename><surname>Ding</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">Xi&apos;an Jiaotong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiangyang</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">National Engineering Research Center for Visual Information and Applications</orgName>
+								<orgName type="department" key="dep2">Institute of Artificial Intelligence and Robotics</orgName>
+								<orgName type="laboratory">State Key Laboratory of Human-Machine Hybrid Augmented Intelligence</orgName>
+								<orgName type="institution">Jiaotong University</orgName>
+								<address>
+									<settlement>Xi&apos;an</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Songlin</forename><surname>Dong</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">National Engineering Research Center for Visual Information and Applications</orgName>
+								<orgName type="department" key="dep2">Institute of Artificial Intelligence and Robotics</orgName>
+								<orgName type="laboratory">State Key Laboratory of Human-Machine Hybrid Augmented Intelligence</orgName>
+								<orgName type="institution">Jiaotong University</orgName>
+								<address>
+									<settlement>Xi&apos;an</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyuan</forename><surname>Gao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">Xi&apos;an Jiaotong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhang</forename><surname>He</surname></persName>
+							<email>heyuhang@xjtu.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">National Engineering Research Center for Visual Information and Applications</orgName>
+								<orgName type="department" key="dep2">Institute of Artificial Intelligence and Robotics</orgName>
+								<orgName type="laboratory">State Key Laboratory of Human-Machine Hybrid Augmented Intelligence</orgName>
+								<orgName type="institution">Jiaotong University</orgName>
+								<address>
+									<settlement>Xi&apos;an</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yihong</forename><surname>Gong</surname></persName>
+							<email>ygong@mail.xjtu.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">National Engineering Research Center for Visual Information and Applications</orgName>
+								<orgName type="department" key="dep2">Institute of Artificial Intelligence and Robotics</orgName>
+								<orgName type="laboratory">State Key Laboratory of Human-Machine Hybrid Augmented Intelligence</orgName>
+								<orgName type="institution">Jiaotong University</orgName>
+								<address>
+									<settlement>Xi&apos;an</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SuLoRA: Subspace Low-Rank Adaptation for Parameter-Efficient Fine-Tuning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C6AE50B3D23936C655D7BDFC0B162449</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>As the scale of large language models (LLMs) grows and natural language tasks become increasingly diverse, Parameter-Efficient Fine-Tuning (PEFT) has become the standard paradigm for fine-tuning LLMs. Among PEFT methods, LoRA is widely adopted for not introducing additional inference overhead. However, existing LoRA&apos;s shared parameter space paradigm introduces parameter interference, leading to a gap in generalization performance for specific tasks compared to full fine-tuning. To address this issue, we propose a parameterseparated low-rank adapter, called Subspace Low-Rank Adaptation (SuLoRA). The core idea of SuLoRA is to account for task differences by decomposing LoRA&apos;s parameter matrix into multiple independent subspaces and assigning them differentially to distinct tasks. This prevents interference across tasks and enhances the effectiveness of low-rank adaptation. Additionally, SuLoRA achieves higher rank expansion by freezing the A matrix, further improving generalization capability. We conduct extensive experiments on various NLP tasks, demonstrating that SuLoRA significantly outperforms LoRA in trainable parameter efficiency and overall model performance. Furthermore, we validate SuLoRA&apos;s effectiveness in domain generalization and multi-modal tasks, showcasing its strong generalization ability.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LAMP-CAP: Personalized Figure Caption Generation With Multimodal Figure Profiles</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ho</forename><surname>Yin '</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sam</forename><forename type="middle">'</forename><surname>Ng</surname></persName>
+							<email>sam.ng@psu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ting-Yao</forename><surname>Hsu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aashish</forename><forename type="middle">Anantha</forename><surname>Ramakrishnan</surname></persName>
+							<email>aashish@psu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Branislav</forename><surname>Kveton</surname></persName>
+							<email>kveton@adobe.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Adobe Research 1</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nedim</forename><surname>Lipka</surname></persName>
+							<email>lipka@adobe.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Adobe Research 1</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Franck</forename><surname>Dernoncourt</surname></persName>
+							<email>dernonco@adobe.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Adobe Research 1</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongwon</forename><surname>Lee</surname></persName>
+							<email>dongwon@psu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Yu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Adobe Research 1</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sungchul</forename><surname>Kim</surname></persName>
+							<email>sukim@adobe.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Adobe Research 1</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ryan</forename><forename type="middle">A</forename><surname>Rossi</surname></persName>
+							<email>ryrossi@adobe.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Adobe Research 1</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ting-Hao</forename><forename type="middle">'</forename><surname>Kenneth' Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LAMP-CAP: Personalized Figure Caption Generation With Multimodal Figure Profiles</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">66327F9DBED855AEF407A9312244C16B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:59+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Figure captions are crucial for helping readers understand and remember a figure&apos;s key message. Many models have been developed to generate these captions, helping authors compose better quality captions more easily. Yet, authors almost always need to revise generic AI-generated captions to match their writing style and the domain&apos;s style, highlighting the need for personalization. Despite language models&apos; personalization (LaMP) advances, these technologies often focus on text-only settings and rarely address scenarios where both inputs and profiles are multimodal. This paper introduces LAMP-CAP, 1 a dataset for personalized figure caption generation with multimodal figure profiles. For each target figure, LAMP-CAP provides not only the needed inputs, such as figure images, but also up to three other figures from the same document-each with its image, caption, and figure-mentioning paragraphs-as a profile to characterize the context. Experiments with four LLMs show that using profile information consistently helps generate captions closer to the original author-written ones. Ablation studies reveal that images in the profile are more helpful than figure-mentioning paragraphs, highlighting the advantage of using multimodal profiles over text-only ones.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

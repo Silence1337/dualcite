@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AGD: Adversarial Game Defense Against Jailbreak Attacks in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shilong</forename><surname>Pan</surname></persName>
+							<email>panshilong18@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiliang</forename><surname>Tian</surname></persName>
+							<email>tianzhiliang@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Huang</surname></persName>
+							<email>huangzhen@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wanlong</forename><surname>Yu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information Science and Engineering</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhihua</forename><surname>Wen</surname></persName>
+							<email>zhwen@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinwang</forename><surname>Liu</surname></persName>
+							<email>xinwangliu@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Lu</surname></persName>
+							<email>kailu@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minlie</forename><surname>Huang</surname></persName>
+							<email>aihuang@tsinghua.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongsheng</forename><surname>Li</surname></persName>
+							<email>dsli@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AGD: Adversarial Game Defense Against Jailbreak Attacks in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">69120B6312AEE42832F219AAF7078B5F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLMs demonstrate remarkable utility but remain vulnerable to jailbreak attacks that aim to elicit harmful responses. Existing defenses, including post-training alignment and prompt engineering, rely on training on safety-annotated datasets and safe prompt templates, struggling with adaptability to out-of-distribution (OOD) attacks. Steering internal representations of LLMs provides real-time adjustments to defend against OOD attacks. However, it struggles with maintaining model utility, since modifying the representation disrupts the forward pass of inference. It barely considers the competitive objectives of helpfulness and harmlessness in LLMs. We argue that adversarial game-based approaches promise a solution for conflicts between the two objectives. In this paper, we propose Adversarial Game Defense (AGD), an adversarial game-based defense method that dynamically adjusts LLMs&apos; internal representations to achieve a balanced trade-off between helpfulness and harmlessness. AGD first proposes an interquartile range (IQR) method to detect abnormal attention weights and correct the abnormal weights via adversarial training. AGD adopts a bi-level optimization to play a two-player variable-sum game to approach Nash Equilibrium (NE), where the two players adversarially refine head activations for helpfulness and harmlessness respectively. Furthermore, AGD applies an expert model to nexttoken sampling to generate safer responses. Experiments show that AGD significantly improves LLMs&apos; safety over all baselines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

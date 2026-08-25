@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Approximating Gradient-Based Influence for Scalable Instruction Data Selection</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mohammad</forename><surname>Gharehhasanloo</surname></persName>
+							<idno type="ORCID">0009-0001-4883-8342</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yueting</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Nick</forename><surname>Koudas</surname></persName>
+							<email>koudas@cs.toronto.edu</email>
+							<idno type="ORCID">0000-0001-5648-0638</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaohui</forename><surname>Yu</surname></persName>
+							<email>xhyu@yorku.ca</email>
+							<idno type="ORCID">0000-0001-8170-2327</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">York University Toronto</orgName>
+								<address>
+									<region>ON</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Seattle University Seattle</orgName>
+								<address>
+									<region>WA</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Toronto Toronto</orgName>
+								<address>
+									<region>ON</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">York University Toronto</orgName>
+								<address>
+									<region>ON</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Approximating Gradient-Based Influence for Scalable Instruction Data Selection</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D9A7C25F20066EAF8A6562721110CA25</idno>
+					<idno type="DOI">10.1145/3746252.3760808</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Large Language Models</term>
+					<term>Instruction Tuning</term>
+					<term>Data Selection</term>
+					<term>Influence Score</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Instruction Tuning (IT) is crucial for enhancing Large Language Models (LLMs), but training on all available instructions is often unnecessary and computationally costly. Recent studies show that small, well-chosen subsets can match or exceed full dataset performance, motivating efficient data selection techniques. While gradient-based methods like LESS estimate sample influence effectively, they are expensive due to per-sample gradient computation. We propose Approx-LESS, a scalable alternative that computes LoRA-based gradient features for a small fraction of the samples and trains regression models to predict influence scores for the rest. This enables selection and tuning on the most impactful samples. On three validation sets with a fixed 270K instruction corpus, Approx-LESS outperforms applicable baselines and closely matches LESS, reducing gradient extraction time by over 3×. It also shows high sample selection overlap with LESS, making it an effective, low-cost method for influence-based instruction tuning. CCS Concepts • Information systems → Data management systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

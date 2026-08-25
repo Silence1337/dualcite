@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SPECVLM: Enhancing Speculative Decoding of Video LLMs via Verifier-Guided Token Pruning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yicheng</forename><surname>Ji</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">The State Key Laboratory of Blockchain and Data Security</orgName>
+								<address>
+									<addrLine>Zhejiang University 2 Hangzhou High</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">The State Key Laboratory of Blockchain and Data Security</orgName>
+								<address>
+									<addrLine>Zhejiang University 2 Hangzhou High</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Heming</forename><surname>Xia</surname></persName>
+							<email>heming.xia@connect.polyu.hk</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computing</orgName>
+								<orgName type="institution">The Hong Kong Polytechnic University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinpeng</forename><surname>Chen</surname></persName>
+							<email>jpchen@bupt.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lidan</forename><surname>Shou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">The State Key Laboratory of Blockchain and Data Security</orgName>
+								<address>
+									<addrLine>Zhejiang University 2 Hangzhou High</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gang</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">The State Key Laboratory of Blockchain and Data Security</orgName>
+								<address>
+									<addrLine>Zhejiang University 2 Hangzhou High</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huan</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">The State Key Laboratory of Blockchain and Data Security</orgName>
+								<address>
+									<addrLine>Zhejiang University 2 Hangzhou High</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SPECVLM: Enhancing Speculative Decoding of Video LLMs via Verifier-Guided Token Pruning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6F4786E708C3975286754E943532F3B8</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:58+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Video large language models (Vid-LLMs) have shown strong capabilities in understanding video content. However, their reliance on dense video token representations introduces substantial memory and computational overhead in both prefilling and decoding. To mitigate the information loss of recent video token reduction methods and accelerate the decoding stage of Vid-LLMs losslessly, we introduce SPECVLM, a training-free speculative decoding (SD) framework tailored for Vid-LLMs that incorporates staged video token pruning. Building on our novel finding that the draft model&apos;s speculation exhibits low sensitivity to video token pruning, SPECVLM prunes up to 90% of video tokens to enable efficient speculation without sacrificing accuracy. To achieve this, we perform a two-stage pruning process: Stage I selects highly informative tokens guided by attention signals from the verifier (target model), while Stage II prunes the remaining redundant ones in a spatially uniform manner. Extensive experiments on four video understanding benchmarks demonstrate the effectiveness and robustness of SPECVLM, which achieves up to 2.68× decoding speedup for LLaVA-OneVision-72B and 2.11× speedup for Qwen2.5-VL-32B. Code is available at https: //github.com/zju-jiyicheng/SpecVLM.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

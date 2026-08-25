@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Jailbreak LLMs through Internal Stance Manipulation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shuangjie</forename><surname>Fu</surname></persName>
+							<email>fushuangjie23s@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Du</forename><surname>Su</surname></persName>
+							<email>sudu@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Beining</forename><surname>Huang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Meituan Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huawei</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xueqi</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Jailbreak LLMs through Internal Stance Manipulation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CDD2F5A9543845D21EC99B3AA821A031</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>To confront the ever-evolving safety risks of LLMs, automated jailbreak attacks have proven effective for proactively identifying security vulnerabilities at scale. Existing approaches, including GCG and AutoDAN, generate adversarial prompts for malicious requests that induce LLMs to respond following a fixed affirmative template. However, we observed that the reliance on the fixed output template is ineffective for certain malicious requests, leading to suboptimal jailbreak performance. In this work, we aim to develop a method that generalizes across all malicious requests. Our approach is inspired by the discovery of LLMs&apos; intrinsic safety mechanisms: they tend to exhibit a similar refusal stance across diverse adversarial prompts, resulting in consistent rejections. We propose Stance Manipulation (SM), a novel automated jailbreak approach that generates adversarial prompts to suppress the refusal stance and induce affirmative responses. Our experiments across four mainstream open-source LLMs demonstrate the superiority of SM&apos;s performance. Under commonly used setting, SM achieves success rates over 77.1% across all models on Advbench. Specifically, for Llama-2-7b-chat, SM outperforms the best baseline by 25.4%. In further experiments with extended iterations, SM achieves over 92.2% attack success rate across all models. Our code is publicly available at https://github.com/Zed630/Stance-Manipulation</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

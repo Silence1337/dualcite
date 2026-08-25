@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Scaling Down, Serving Fast: Compressing and Deploying Efficient LLMs for Recommendation Systems</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kayhan</forename><surname>Behdin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ata</forename><surname>Fatahibaarzi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qingquan</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yun</forename><surname>Dai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aman</forename><surname>Gupta</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Zhipeng</forename><surname>Wang</surname></persName>
+							<email>zhipwang@linkedin.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shao</forename><surname>Tang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hejian</forename><surname>Sang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gregory</forename><surname>Dexter</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sirou</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Siyu</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tejas</forename><surname>Dharamsi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vignesh</forename><surname>Kothapalli</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhoutong</forename><surname>Fu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yihan</forename><surname>Cao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pin-Lun</forename><surname>Hsu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fedor</forename><surname>Borisyuk</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Natesh</forename><surname>Pillai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Luke</forename><surname>Simon</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rahul</forename><surname>Mazumder</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LinkedIn LLM Efficiency Core Team</orgName>
+								<address>
+									<addrLine>4 MIT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Scaling Down, Serving Fast: Compressing and Deploying Efficient LLMs for Recommendation Systems</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">22B1330B686D4C8C5D35EB7C7EC7625B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have demonstrated remarkable performance across a wide range of industrial applications, from search and recommendation systems to generative tasks. Although scaling laws indicate that larger models generally yield better generalization and performance, their substantial computational requirements often render them impractical for many real-world scenarios at scale. In this paper, we present a comprehensive set of insights for training and deploying small language models (SLMs) that deliver high performance for a variety of industry use cases. We focus on two key techniques: (1) knowledge distillation and (2) model compression via structured pruning and quantization. These approaches enable SLMs to retain much of the quality of their larger counterparts while significantly reducing training/serving costs and latency. We detail the impact of these techniques on a variety of use cases in a large professional social network platform and share deployment lessons, including hardware optimization strategies that improve speed and throughput for both predictive and reasoningbased applications in Recommendation Systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

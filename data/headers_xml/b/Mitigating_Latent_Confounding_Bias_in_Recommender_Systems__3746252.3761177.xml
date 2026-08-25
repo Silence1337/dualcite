@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mitigating Latent Confounding Bias in Recommender Systems</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jianfeng</forename><surname>Deng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Qingfeng</forename><surname>Chen</surname></persName>
+							<email>qingfeng@gxu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Debo</forename><surname>Cheng</surname></persName>
+							<email>debo.cheng@unisa.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaojing</forename><surname>Du</surname></persName>
+							<email>xiaojing.du@mymail.unisa.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jiuyong</forename><surname>Li</surname></persName>
+							<email>jiuyong.li@unisa.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lin</forename><surname>Liu</surname></persName>
+							<email>lin.liu@unisa.edu.au</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Guangxi University Nanning</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Guangxi University Nanning</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Hainan University Haikou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of South Australia Adelaide</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of South Australia Adelaide</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">University of South Australia Adelaide</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mitigating Latent Confounding Bias in Recommender Systems</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D8F6E7973616793F5FA7BBC875D41AE5</idno>
+					<idno type="DOI">10.1145/3746252.3761177</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Recommender systems</term>
+					<term>Instrumental Variables</term>
+					<term>Latent Confounders</term>
+					<term>Debiasing</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Recommender systems are crucial for providing personalised experiences, but their effectiveness is often undermined by confounding bias, particularly in the presence of latent confounders. Existing debiasing methods typically address only one type of latent confounding bias, often ignoring the complex interactions caused by latent confounders, such as those between items and user feedback, and between item exposure and user feedback. To tackle these challenges, we propose a novel Deep Instrumental Variables (IV) approach for dEbiased representation learning in Recommendation Systems, referred to as DIVERS. Specifically, DIVERS leverages user feature embeddings as IVs to mitigate the confounding bias between items and user feedback caused by latent confounders, and combines the debiased item embeddings with an item exposure vector to generate a reconstructed item exposure vector. Moreover, DIVERS employs an identifiable Variational Auto-Encoder (iVAE) to infer identifiable representations by utilising information from both the original and reconstructed item exposure vectors, effectively addressing the confounding bias introduced by latent confounders between item exposure and user feedback. Additionally, we provide theoretical analyses to demonstrate the soundness of using IV and the identifiability of the representation learned by DIVERS. Extensive experiments on both synthetic and real-world datasets confirm that DIVERS outperforms state-of-the-art models in reducing bias and providing reliable recommendations. Our source code is available at: https://github.com/djf-web/DIVERS. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

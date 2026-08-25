@@ -1,0 +1,2027 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Flamingo: a visual language model for few-shot learning</title>
+		<author>
+			<persName><forename type="first">Jean-Baptiste</forename><surname>Alayrac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Donahue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pauline</forename><surname>Luc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antoine</forename><surname>Miech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iain</forename><surname>Barr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yana</forename><surname>Hasson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karel</forename><surname>Lenc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arthur</forename><surname>Mensch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Katherine</forename><surname>Millican</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Malcolm</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roman</forename><surname>Ring</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eliza</forename><surname>Rutherford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Serkan</forename><surname>Cabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tengda</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhitao</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sina</forename><surname>Samangooei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marianne</forename><surname>Monteiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename><forename type="middle">L</forename><surname>Menick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Borgeaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andy</forename><surname>Brock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aida</forename><surname>Nematzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sahand</forename><surname>Sharifzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mikolaj</forename><surname>Binkowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ricardo</forename><surname>Barreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Zisserman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karén</forename><surname>Simonyan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NeurIPS</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Jinze</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuai</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yunfei</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zeyu</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenbin</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fei</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Binyuan</forename><surname>Hui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luo</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junyang</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Runji</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dayiheng</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gao</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengqiang</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keming</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianxin</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Men</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xingzhang</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuancheng</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chuanqi</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sinan</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianhong</forename><surname>Tu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shijie</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shengguang</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benfeng</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jin</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">An</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shusheng</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongyi</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zheng</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianwei</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xingxuan</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yichang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenru</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingren</forename><surname>Zhou</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>Xiaohuan Zhou, and Tianhang Zhu. 2023a. Qwen technical report. CoRR, abs/2309.16609</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jinze</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuai</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shusheng</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shijie</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sinan</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junyang</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingren</forename><surname>Zhou</surname></persName>
+		</author>
+		<idno>CoRR, abs/2308.12966</idno>
+		<title level="m">Qwen-vl: A frontier large vision-language model with versatile abilities</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Shuai</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keqin</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuejing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jialin</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenbin</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sibo</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shijie</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Humen</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuanzhi</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Hsuan</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhaohai</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianqiang</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pengfei</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zheren</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiheng</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiabo</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianbao</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zesen</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhibo</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiyang</forename><surname>Xu</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>and Junyang Lin. 2025. Qwen2.5-vl technical report. CoRR, abs/2502.13923</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Language models are few-shot learners</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Tom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nick</forename><surname>Mann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Melanie</forename><surname>Ryder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jared</forename><surname>Subbiah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Prafulla</forename><surname>Kaplan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Dhariwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pranav</forename><surname>Neelakantan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Girish</forename><surname>Shyam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Sastry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sandhini</forename><surname>Askell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ariel</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gretchen</forename><surname>Herbert-Voss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Krueger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rewon</forename><surname>Henighan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Child</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><forename type="middle">M</forename><surname>Ramesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Ziegler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Clemens</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Winter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Hesse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mateusz</forename><surname>Sigler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Litwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jack</forename><surname>Chess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sam</forename><surname>Berner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alec</forename><surname>Mccandlish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Radford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dario</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Amodei</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NeurIPS</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Collecting highly parallel data for paraphrase evaluation</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><forename type="middle">B</forename><surname>Dolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 49th annual meeting of the association for computational linguistics: human language technologies</title>
+		<meeting>the 49th annual meeting of the association for computational linguistics: human language technologies</meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="190" to="200" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Videollama 2: Advancing spatial-temporal modeling and audio understanding in video-llms</title>
+		<author>
+			<persName><forename type="first">Zesen</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sicong</forename><surname>Leng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yifei</forename><surname>Xin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xin</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guanzheng</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongxin</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenqi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziyang</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Deli</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lidong</forename><surname>Bing</surname></persName>
+		</author>
+		<idno>CoRR, abs/2406.07476</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Vicuna: An open-source chatbot impressing gpt-4 with 90%* chatgpt quality</title>
+		<author>
+			<persName><forename type="first">Wei-Lin</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhuohan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zi</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ying</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhanghao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lianmin</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siyuan</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yonghao</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><forename type="middle">E</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<ptr target="https://vicuna.lmsys.org" />
+		<imprint>
+			<date type="published" when="2023-04">2023. April 2023</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">6</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Palm: Scaling language modeling with pathways</title>
+		<author>
+			<persName><forename type="first">Aakanksha</forename><surname>Chowdhery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sharan</forename><surname>Narang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maarten</forename><surname>Bosma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gaurav</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Barham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hyung</forename><forename type="middle">Won</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Gehrmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Parker</forename><surname>Schuh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kensen</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sasha</forename><surname>Tsvyashchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><surname>Maynez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abhishek</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Parker</forename><surname>Barnes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Tay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noam</forename><surname>Shazeer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Vinodkumar Prabhakaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nan</forename><surname>Reif</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Reiner</forename><surname>Hutchinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Pope</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Bradbury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Austin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guy</forename><surname>Isard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pengcheng</forename><surname>Gur-Ari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Toju</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anselm</forename><surname>Duke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sanjay</forename><surname>Levskaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sunipa</forename><surname>Ghemawat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Henryk</forename><surname>Dev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Michalewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vedant</forename><surname>Garcia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Misra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liam</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Denny</forename><surname>Fedus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daphne</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Ippolito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hyeontaek</forename><surname>Luan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Barret</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Zoph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Spiridonov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Sepassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shivani</forename><surname>Dohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Agrawal</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Omernick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mach. Learn. Res</title>
+		<editor>
+			<persName><forename type="first">M</forename><surname>Dai</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Thanumalayan</forename><surname>Sankaranarayana Pillai</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Marie</forename><surname>Pellat</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Aitor</forename><surname>Lewkowycz</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Erica</forename><surname>Moreira</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Rewon</forename><surname>Child</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Oleksandr</forename><surname>Polozov</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Katherine</forename><surname>Lee</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Zongwei</forename><surname>Zhou</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Xuezhi</forename><surname>Wang</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Brennan</forename><surname>Saeta</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Mark</forename><surname>Diaz</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Orhan</forename><surname>Firat</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Michele</forename><surname>Catasta</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Jason</forename><surname>Wei</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Kathy</forename><surname>Meier-Hellstern</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Douglas</forename><surname>Eck</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Jeff</forename><surname>Dean</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Slav</forename><surname>Petrov</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Noah</forename><surname>Fiedel</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page">113</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Slowfast networks for video recognition</title>
+		<author>
+			<persName><forename type="first">Christoph</forename><surname>Feichtenhofer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haoqi</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jitendra</forename><surname>Malik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kaiming</forename><surname>He</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICCV</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="6201" to="6210" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Chatgpt outperforms crowd-workers for textannotation tasks</title>
+		<author>
+			<persName><forename type="first">Fabrizio</forename><surname>Gilardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Meysam</forename><surname>Alizadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maël</forename><surname>Kubli</surname></persName>
+		</author>
+		<idno>CoRR, abs/2303.15056</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">LITA: language instructed temporallocalization assistant</title>
+		<author>
+			<persName><surname>De-An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shijia</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Subhashree</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongxu</forename><surname>Radhakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pavlo</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiding</forename><surname>Molchanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kautz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ECCV</title>
+		<title level="s">Lecture Notes in Computer Science</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">15122</biblScope>
+			<biblScope unit="page" from="202" to="218" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Can multimodal llms do visual temporal understanding and reasoning? the answer is no! CoRR</title>
+		<author>
+			<persName><forename type="first">Mohamed</forename><surname>Fazli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohamed</forename><surname>Imam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenyang</forename><surname>Lyu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alham</forename><surname>Fikri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aji</forename></persName>
+		</author>
+		<idno>abs/2501.10674</idno>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Video question answering with spatio-temporal reasoning</title>
+		<author>
+			<persName><forename type="first">Yunseok</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yale</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><forename type="middle">Dongjoo</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Youngjae</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Youngjin</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gunhee</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IJCV</title>
+		<imprint>
+			<biblScope unit="volume">127</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1385" to="1412" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">An image grid can be worth a video: Zero-shot video question answering using a VLM</title>
+		<author>
+			<persName><forename type="first">Wonkyun</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Changin</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wonseok</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wonjong</forename><surname>Rhee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Access</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="193057" to="193075" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Llava-st: A multimodal large language model for finegrained spatial-temporal understanding</title>
+		<author>
+			<persName><forename type="first">Hongyu</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jinyu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziyu</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shaofei</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianrui</forename><surname>Hui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jialin</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoming</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Si</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CVPR</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+			<biblScope unit="page" from="8592" to="8603" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">2023a. Intentqa: Context-aware video intent reasoning</title>
+		<author>
+			<persName><forename type="first">Jiapeng</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ping</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenjuan</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lifeng</forename><surname>Fan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE/CVF international conference on computer vision</title>
+		<meeting>the IEEE/CVF international conference on computer vision</meeting>
+		<imprint>
+			<biblScope unit="page" from="11963" to="11974" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">2023b. BLIP-2: bootstrapping language-image pre-training with frozen image encoders and large language models</title>
+		<author>
+			<persName><forename type="first">Junnan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongxu</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Silvio</forename><surname>Savarese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><forename type="middle">C H</forename><surname>Hoi</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<biblScope unit="volume">202</biblScope>
+			<biblScope unit="page" from="19730" to="19742" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">2023c. Videochat: Chat-centric video understanding</title>
+		<author>
+			<persName><forename type="first">Kunchang</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yinan</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yizhuo</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenhai</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ping</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yali</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Limin</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Qiao</surname></persName>
+		</author>
+		<idno>CoRR, abs/2305.06355</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Mvbench: A multi-modal video understanding benchmark</title>
+		<author>
+			<persName><forename type="first">Kunchang</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yali</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yinan</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yizhuo</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zun</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jilan</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guo</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ping</forename><surname>Lou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Limin</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Qiao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CVPR</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="22195" to="22206" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Endto-end video question answering with frame scoring mechanisms and adaptive sampling</title>
+		<author>
+			<persName><forename type="first">Jianxin</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaojun</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yueqian</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qun</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongyan</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno>CoRR, abs/2407.15047</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Video-llava: Learning united visual representation by alignment before projection</title>
+		<author>
+			<persName><forename type="first">Bin</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bin</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiaxi</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Munan</forename><surname>Ning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jin</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Yuan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP</title>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="5971" to="5984" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">Haotian</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chunyuan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuheng</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuanhan</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sheng</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yong Jae</forename><surname>Lee</surname></persName>
+		</author>
+		<title level="m">Llavanext: Improved reasoning, ocr, and world knowledge</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Visual instruction tuning</title>
+		<author>
+			<persName><forename type="first">Haotian</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chunyuan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qingyang</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yong Jae</forename><surname>Lee</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>In NeurIPS</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Video-chatgpt: Towards detailed video understanding via large vision and language models</title>
+		<author>
+			<persName><forename type="first">Muhammad</forename><surname>Maaz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanoona</forename><surname>Abdul Rasheed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Salman</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fahad</forename><surname>Khan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACL (1)</title>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="12585" to="12602" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Egoschema: A diagnostic benchmark for very long-form video language understanding</title>
+		<author>
+			<persName><forename type="first">Karttikeya</forename><surname>Mangalam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raiymbek</forename><surname>Akshulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jitendra</forename><surname>Malik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="46212" to="46244" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Ruoming Pang, Peter Grasch, Alexander Toshev, and Yinfei Yang. 2024. MM1: methods, analysis and insights from multimodal LLM pre-training</title>
+		<author>
+			<persName><forename type="first">Brandon</forename><surname>Mckinzie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhe</forename><surname>Gan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jean-Philippe</forename><surname>Fauconnier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sam</forename><surname>Dodge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philipp</forename><surname>Dufter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dhruti</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xianzhi</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Futang</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anton</forename><surname>Belyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haotian</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karanjeet</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Doug</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongyu</forename><surname>Hè</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Schwarzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Gunter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aonan</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianyu</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chong</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nan</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sam</forename><surname>Wiseman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zirui</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ECCV</title>
+		<imprint>
+			<date>15087</date>
+			<biblScope unit="page" from="304" to="323" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Ts-llava: Constructing visual tokens through thumbnail-and-sampling for training-free video large language models</title>
+		<author>
+			<persName><forename type="first">Tingyu</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mingxiao</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tinne</forename><surname>Tuytelaars</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marie-Francine</forename><surname>Moens</surname></persName>
+		</author>
+		<idno>CoRR, abs/2411.11066</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Learning transferable visual models from natural language supervision</title>
+		<author>
+			<persName><forename type="first">Alec</forename><surname>Radford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jong</forename><forename type="middle">Wook</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Hallacy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Ramesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriel</forename><surname>Goh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sandhini</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Girish</forename><surname>Sastry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Askell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pamela</forename><surname>Mishkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jack</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gretchen</forename><surname>Krueger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">ICML</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="page" from="8748" to="8763" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Direct preference optimization: Your language model is secretly a reward model</title>
+		<author>
+			<persName><forename type="first">Rafael</forename><surname>Rafailov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Archit</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Mitchell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Ermon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chelsea</forename><surname>Finn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NeurIPS</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Mohamed Elhoseiny, and Vikas Chandra. 2024. Longvu: Spatiotemporal adaptive compression for long video-language understanding</title>
+		<author>
+			<persName><forename type="first">Xiaoqian</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yunyang</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Changsheng</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lemeng</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenchen</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zechun</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fanyi</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Balakrishnan</forename><surname>Varadarajan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Florian</forename><surname>Bordes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhuang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hu</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hyunwoo</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bilge</forename><surname>Soran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raghuraman</forename><surname>Krishnamoorthi</surname></persName>
+		</author>
+		<idno>CoRR, abs/2410.17434</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Roformer: Enhanced transformer with rotary position embedding</title>
+		<author>
+			<persName><forename type="first">Jianlin</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Murtadha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shengfeng</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wen</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yunfeng</forename><surname>Bo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">568</biblScope>
+			<biblScope unit="page">127063</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">Edouard Grave, and Guillaume Lample. 2023. Llama: Open and efficient foundation language models</title>
+		<author>
+			<persName><forename type="first">Hugo</forename><surname>Touvron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thibaut</forename><surname>Lavril</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gautier</forename><surname>Izacard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Martinet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marie-Anne</forename><surname>Lachaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothée</forename><surname>Lacroix</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Baptiste</forename><surname>Rozière</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naman</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Hambro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Faisal</forename><surname>Azhar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aurélien</forename><surname>Rodriguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Armand</forename><surname>Joulin</surname></persName>
+		</author>
+		<idno>CoRR, abs/2302.13971</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">2024a. Qwen2-vl: Enhancing vision-language model&apos;s perception of the world at any resolution</title>
+		<author>
+			<persName><forename type="first">Peng</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuai</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sinan</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shijie</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhihao</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jinze</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keqin</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuejing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jialin</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenbin</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mengfei</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuancheng</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Men</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dayiheng</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingren</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junyang</forename><surname>Lin</surname></persName>
+		</author>
+		<idno>CoRR, abs/2409.12191</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Videoagent: Long-form video understanding with large language model as agent</title>
+		<author>
+			<persName><forename type="first">Xiaohan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuhui</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Orr</forename><surname>Zohar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Serena</forename><surname>Yeung-Levy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ECCV</title>
+		<title level="s">Lecture Notes in Computer Science</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">15138</biblScope>
+			<biblScope unit="page" from="58" to="76" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Vaquita: Enhancing alignment in llm-assisted video understanding</title>
+		<author>
+			<persName><forename type="first">Yizhou</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruiyi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haoliang</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Uttaran</forename><surname>Bhattacharya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yun</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gang</forename><surname>Wu</surname></persName>
+		</author>
+		<idno>CoRR, abs/2312.02310</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title level="m" type="main">2024a. Freeva: Offline MLLM as trainingfree video assistant</title>
+		<author>
+			<persName><forename type="first">Wenhao</forename><surname>Wu</surname></persName>
+		</author>
+		<idno>CoRR, abs/2405.07798</idno>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<author>
+			<persName><forename type="first">Wenhao</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2405.07798</idno>
+		<title level="m">Freeva: Offline mllm as training-free video assistant</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">Audiovisual slowfast networks for video recognition</title>
+		<author>
+			<persName><forename type="first">Fanyi</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jae</forename><surname>Yong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristen</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jitendra</forename><surname>Grauman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christoph</forename><surname>Malik</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Feichtenhofer</surname></persName>
+		</author>
+		<idno>CoRR, abs/2001.08740</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Next-qa: Next phase of questionanswering to explaining temporal actions</title>
+		<author>
+			<persName><forename type="first">Junbin</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xindi</forename><surname>Shang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Angela</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tat-Seng</forename><surname>Chua</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</title>
+		<meeting>the IEEE/CVF conference on computer vision and pattern recognition</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="9777" to="9786" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Msrvtt: A large video description dataset for bridging video and language</title>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yong</forename><surname>Rui</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE conference on computer vision and pattern recognition</title>
+		<meeting>the IEEE conference on computer vision and pattern recognition</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="5288" to="5296" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">Slowfast-llava: A strong training-free baseline for video large language models</title>
+		<author>
+			<persName><forename type="first">Mingze</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mingfei</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhe</forename><surname>Gan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hong-You</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhengfeng</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiming</forename><surname>Gang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Afshin</forename><surname>Dehghan</surname></persName>
+		</author>
+		<idno>CoRR, abs/2407.15841</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Activitynetqa: A dataset for understanding complex web videos via question answering</title>
+		<author>
+			<persName><forename type="first">Zhou</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dejing</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhou</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yueting</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dacheng</forename><surname>Tao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AAAI</title>
+		<imprint>
+			<publisher>AAAI Press</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="9127" to="9134" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Videollama: An instruction-tuned audio-visual language model for video understanding</title>
+		<author>
+			<persName><forename type="first">Hang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xin</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lidong</forename><surname>Bing</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">EMNLP (Demos)</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="543" to="553" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<author>
+			<persName><forename type="first">Yuanhan</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liangke</forename><surname>Yong Jae Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Di</forename><surname>Gui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiashi</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziwei</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chunyuan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Li</surname></persName>
+		</author>
+		<title level="m">Llava-next: A strong zero-shot video understanding model</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Boqing Gong, Philipp Krähenbühl, and Liangzhe Yuan. 2024. Distilling vision-language models on millions of videos</title>
+		<author>
+			<persName><forename type="first">Yue</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Long</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xingyi</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jialin</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chun-Te</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Miao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Florian</forename><surname>Schroff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hartwig</forename><surname>Adam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">CVPR</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<biblScope unit="page" from="13106" to="13116" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Addressing Missing Data Issue for Diffusion-based Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenyu</forename><surname>Mao</surname></persName>
+							<email>wenyumao2@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengyi</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jiancan</forename><surname>Wu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Haozhe</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>Xiang</roleName><forename type="first">Yancheng</forename><surname>Yuan</surname></persName>
+							<email>yancheng.yuan@polyu.edu.hk</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiang</forename><surname>Wang</surname></persName>
+							<email>xiangwang1223@gmail.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China Anhui</orgName>
+								<address>
+									<settlement>Hefei</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Science and Technology of China Anhui</orgName>
+								<address>
+									<settlement>Hefei</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Science and Technology of China Anhui</orgName>
+								<address>
+									<settlement>Hefei</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Science and Technology of China Anhui</orgName>
+								<address>
+									<settlement>Hefei</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">The Hong Kong Polytechnic University Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">University of Science and Technology of China Anhui</orgName>
+								<address>
+									<settlement>Hefei</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">University of Science and Technology of China Anhui</orgName>
+								<address>
+									<settlement>Hefei Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Addressing Missing Data Issue for Diffusion-based Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EAC7D58A11264452E8DE100056AABCD6</idno>
+					<idno type="DOI">10.1145/3726302.3729890</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Diffusion Models</term>
+					<term>Recommender Systems</term>
+					<term>Missing Data</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Diffusion models have shown significant potential in generating oracle items that best match user preference with guidance from user historical interaction sequences. However, the quality of guidance is often compromised by unpredictable missing data in observed sequence, leading to suboptimal item generation. Since missing data is uncertain in both occurrence and content, recovering it is impractical and may introduce additional errors. To tackle this challenge, we propose a novel dual-side Thompson sampling-based Diffusion Model (TDM), which simulates extra missing data in the guidance signals and allows diffusion models to handle existing missing data through extrapolation. To preserve user preference evolution in sequences despite extra missing data, we introduce Dual-side Thompson Sampling to implement simulation with two probability models, sampling by exploiting user preference from both item continuity and sequence stability. TDM strategically removes items from sequences based on dual-side Thompson sampling and treats these edited sequences as guidance for diffusion models, enhancing models&apos; robustness to missing data through consistency regularization. Additionally, to enhance the generation efficiency, TDM is implemented under the denoising diffusion implicit models to accelerate the reverse process. Extensive experiments and theoretical analysis validate the effectiveness of TDM in addressing missing data in sequential recommendations. Our data and code is available at https://github.com/maowenyu-11/TDM. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

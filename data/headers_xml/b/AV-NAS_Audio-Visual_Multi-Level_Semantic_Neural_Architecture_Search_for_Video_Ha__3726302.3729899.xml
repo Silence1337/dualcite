@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AV-NAS: Audio-Visual Multi-Level Semantic Neural Architecture Search for Video Hashing</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yong</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yuxiang</forename><surname>Zhou</surname></persName>
+							<email>yuxiang.zhou@bupt.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hailiang</forename><surname>Dong</surname></persName>
+							<email>hailiang.dong@bupt.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhouchen</forename><surname>Lin</surname></persName>
+							<email>zlin@pku.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dell</forename><surname>Zhang</surname></persName>
+							<email>dell.z@ieee.org</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">BUPT Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">BUPT Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">BUPT Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Beihang University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">School of Intelligence Science and Technology</orgName>
+								<orgName type="institution">Peking University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Telecom Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="department">State Key Lab of General AI &amp; Institute for AI</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<addrLine>and Pazhou Lab</addrLine>
+									<settlement>Guangzhou</settlement>
+									<region>China</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AV-NAS: Audio-Visual Multi-Level Semantic Neural Architecture Search for Video Hashing</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">008E37AC6E7B482CCCE04605461A5CEA</idno>
+					<idno type="DOI">10.1145/3726302.3729899</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Video Retrieval</term>
+					<term>Learning to Hash</term>
+					<term>Neural Architecture Search</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Existing video hashing techniques for large-scale video retrieval often overlook inherent audio signals, which can potentially compromise retrieval performance. Incorporating both visual and audio signals, however, complicates neural architecture design, rendering the manual crafting of joint audiovisual neural network models challenging. To address this issue, we propose AV-NAS, a method that leverages data-driven Neural Architecture Search (NAS) within a tailored audiovisual network space to automatically discover the optimal video hashing network. Our approach offers: (1) a versatile multi-level semantic architecture based on audiovisual signals, defining a mixed search space encompassing diverse network modules such as MLP, CNN, Transformer, and Mamba, as well as operations like Add, Hadamard, SiLU, LayerNorm, and Skip; (2) a differentiable relaxation of the combinatorial search problem, converting it into a unified differentiable optimization problem which we tackle through our &quot;coarse search-pruning-finetuning&quot; strategy. Our experiments on large-scale video datasets show that AV-NAS can discover architectures distinct from expert designs and lead to substantial performance improvements over current state-of-the-art methods including the recently emerged AVHash. CCS Concepts • Information systems → Combination, fusion and federated search; Top-k retrieval in databases; Video search.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

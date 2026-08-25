@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DeMBR: Denoising Model with Memory Pruning and Semantic Guidance for Multi-Behavior Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shuai</forename><surname>Zhang</surname></persName>
+							<email>zhang_s@stu.xidian.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hua</forename><surname>Chu</surname></persName>
+							<email>hchu@mail.xidian.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianan</forename><surname>Li</surname></persName>
+							<email>lijianan@xidian.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yangtao</forename><surname>Zhou</surname></persName>
+							<email>zhou_yt@stu.xidian.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shirong</forename><surname>Wang</surname></persName>
+							<email>wangshirong72@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qiaofei</forename><surname>Sun</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Xidian University Xi&apos;an</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Xidian University Xi&apos;an</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Xidian University Xi&apos;an</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Xidian University Xi&apos;an</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Xidian University Xi&apos;an</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Xidian University Xi&apos;an</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DeMBR: Denoising Model with Memory Pruning and Semantic Guidance for Multi-Behavior Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BDA319FE9846341E136255451FD4285F</idno>
+					<idno type="DOI">10.1145/3701551.3703532</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Multi-behavior</term>
+					<term>Denoising</term>
+					<term>Graph Convolutional Networks</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Multi-behavior recommendation systems aim to incorporate auxiliary behaviors (e.g., click, cart, etc.) to enhance the understanding of sparse target behaviors (e.g., purchase), thereby capturing user preferences more accurately. Currently, multi-behavior recommendation research focuses on modeling the associations between different user behaviors, but ignores the large amount of noise in user interaction data. This noise may come from accidental touches, curiosity, or ineffective operations during the purchasing process, and can be further categorized into two types: 1) hard noise is significantly deviates from the user&apos;s true preferences, and 2) soft noise is closer to the user&apos;s true preferences. The presence of noise can interfere with the model&apos;s ability to accurately identify the user&apos;s true preferences. To overcome the aforementioned issue, we innovatively propose a Denoising Model with Memory Pruning and Semantic Guidance for Multi-Behavior Recommendation (DeMBR). The model eliminates different types of noise at the data level and the representation level, respectively. Specifically, since hard noise significantly deviates from user preferences, we design a pruning-based denoising module that leverages a memory bank, which identifies and removes hard noise interactions from the data. Since soft noise reflects some user preferences, we design a semantic guidance denoising module that leverages behaviors with strong expressive ability (e.g., purchase) to guide those with weaker ability (e.g., click), effectively suppressing noise while preserving true&apos;s preferences. Finally, we designed a cross-learning module that allows noise-identifying signals to be exchanged between the two modules, and ultimately learn representations that accurately reflect user&apos;s preferences. Extensive experiments conducted on two public datasets demonstrate that our model substantially surpasses the state-of-the-art recommendation models. Our code is publicly</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

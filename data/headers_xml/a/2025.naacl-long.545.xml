@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MixLLM: Dynamic Routing in Mixed Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xinyuan</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Arizona State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanchi</forename><surname>Liu</surname></persName>
+							<email>yanchi@nec-labs.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">NEC Labs America</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Cheng</surname></persName>
+							<email>weicheng@nec-labs.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">NEC Labs America</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xujiang</forename><surname>Zhao</surname></persName>
+							<email>xuzhao@nec-labs.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">NEC Labs America</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengzhang</forename><surname>Chen</surname></persName>
+							<email>zchen@nec-labs.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wenchao</forename><surname>Yu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">NEC Labs America</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanjie</forename><surname>Fu</surname></persName>
+							<email>yanjie.fu@asu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Arizona State University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">NEC Labs America</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haifeng</forename><surname>Chen</surname></persName>
+							<email>haifeng@nec-labs.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">NEC Labs America</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MixLLM: Dynamic Routing in Mixed Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">47355AFB3CE1312A3B6270419BDE6C39</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) exhibit potential artificial generic intelligence recently, however, their usage is costly with high response latency. Given mixed LLMs with their own strengths and weaknesses, LLM routing aims to identify the most suitable model for each query in the stream to maximize response quality and minimize cost and latency. However, the challenges involve: (1) dynamic trade-offs among quality, cost, and latency; (2) enabling continual learning in deployed systems; and (3) navigating a varying (e.g., new LLM addition or old LLM removal) set of LLM candidates over time. To bridge these gaps, we develop MixLLM, a dynamic contextual-banditbased routing system for query-LLM assignment. Specifically, we first leverage query tags to enhance query embeddings for the routing task. Next, we design lightweight prediction models to estimate the response qualities and costs of queries over LLMs. We then devise a meta-decision maker to choose the query-LLM assignments to best tradeoff response quality, cost, and latency. Finally, the system benefits from continual training, allowing it to adapt to evolving queries and user feedback over time. Our extensive experiments show that MixLLM achieves the best trade-offs in response quality, cost, and latency (97.25% of GPT-4&apos;s quality at 24.18% of the cost under the time constraint).</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

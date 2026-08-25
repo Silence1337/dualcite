@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MoLA: MoE LoRA with Layer-wise Expert Allocation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chongyang</forename><surname>Gao</surname></persName>
+							<email>cygao@u.northwestern.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kezhen</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinmeng</forename><surname>Rao</surname></persName>
+							<email>jinmengrao@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruibo</forename><surname>Liu</surname></persName>
+							<email>ruiboliu@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Baochen</forename><surname>Sun</surname></persName>
+							<email>baochens@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yawen</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daiyi</forename><surname>Peng</surname></persName>
+							<email>daiyip@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyuan</forename><surname>Guo</surname></persName>
+							<email>xiaoyuanguo.ucas@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Subrahmanian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Northwestern</forename><surname>University</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Google</forename><surname>Deepmind</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MoLA: MoE LoRA with Layer-wise Expert Allocation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B5F5EB8290AE522A57905CD623D3E09A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent efforts to integrate low-rank adaptation (LoRA) with the Mixture-of-Experts (MoE) have managed to achieve performance comparable to full-parameter fine-tuning by tuning much fewer parameters. Despite promising results, research on improving the efficiency and expert analysis of LoRA with MoE is still in its early stages. Recent studies have shown that experts in the MoE architecture have different strengths and also exhibit some redundancy. Does this statement also apply to parameter-efficient MoE? In this paper, we introduce a novel parameter-efficient MoE method, MoE-LoRA with Layer-wise Expert Allocation (MoLA) for Transformer-based models, where each model layer uses a varying number of LoRA experts. We investigate several architectures with varying layerwise expert configurations. Experiments on six well-known NLP and commonsense QA benchmarks demonstrate that MoLA achieves equal or superior performance compared to all baselines on top of both LLAMA-2, Mistral, and Gemma. We find that allocating more LoRA experts to middle layers further enhances the effectiveness of models with a certain number of experts in total. The redundancy of the experts is more obvious in the lower layers. With much fewer parameters, this allocation strategy outperforms the setting with the same number of experts in every layer. This work can be widely used as a plug-and-play parameterefficient tuning approach for various applications. The code has been made available at https://github.com/GCYZSL/MoLA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

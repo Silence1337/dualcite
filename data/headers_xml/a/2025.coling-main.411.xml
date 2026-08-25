@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">VLR-Bench: Multilingual Benchmark Dataset for Vision-Language Retrieval Augmented Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hyeonseok</forename><surname>Lim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Seoul National University of Science and Technology (SeoulTech) ‡ SeoulTech &amp; Teddysum *</orgName>
+								<orgName type="institution" key="instit2">Hanbat National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongjae</forename><surname>Shin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Seoul National University of Science and Technology (SeoulTech) ‡ SeoulTech &amp; Teddysum *</orgName>
+								<orgName type="institution" key="instit2">Hanbat National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seohyun</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Seoul National University of Science and Technology (SeoulTech) ‡ SeoulTech &amp; Teddysum *</orgName>
+								<orgName type="institution" key="instit2">Hanbat National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Inho</forename><surname>Won</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Seoul National University of Science and Technology (SeoulTech) ‡ SeoulTech &amp; Teddysum *</orgName>
+								<orgName type="institution" key="instit2">Hanbat National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minjun</forename><surname>Kim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Seoul National University of Science and Technology (SeoulTech) ‡ SeoulTech &amp; Teddysum *</orgName>
+								<orgName type="institution" key="instit2">Hanbat National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junghun</forename><surname>Yuk</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Seoul National University of Science and Technology (SeoulTech) ‡ SeoulTech &amp; Teddysum *</orgName>
+								<orgName type="institution" key="instit2">Hanbat National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haneol</forename><surname>Jang</surname></persName>
+							<email>hejang@hanbat.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Seoul National University of Science and Technology (SeoulTech) ‡ SeoulTech &amp; Teddysum *</orgName>
+								<orgName type="institution" key="instit2">Hanbat National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kyungtae</forename><surname>Lim</surname></persName>
+							<email>ktlim@seoultech.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Seoul National University of Science and Technology (SeoulTech) ‡ SeoulTech &amp; Teddysum *</orgName>
+								<orgName type="institution" key="instit2">Hanbat National University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">VLR-Bench: Multilingual Benchmark Dataset for Vision-Language Retrieval Augmented Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E9A3C1477D2F12999F1A2B67F14ECC5E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We propose the VLR-BENCH, a visual question answering (VQA) benchmark for evaluating vision language models (VLMs) based on retrieval augmented generation (RAG). Unlike existing evaluation datasets for external knowledge-based VQA, the proposed VLR-BENCH includes five input passages. This allows testing of the ability to determine which passage is useful for answering a given query, a capability lacking in previous research. In this context, we constructed a dataset of 32,000 automatically generated instruction-following examples, which we denote as VLR-IF. This dataset is specifically designed to enhance the RAG capabilities of VLMs by enabling them to learn how to generate appropriate answers based on input passages. We evaluated the validity of the proposed benchmark and training data and verified its performance using the state-of-the-art Llama3-based VLM, the Llava-Llama-3 model. The proposed VLR-BENCH 1 and VLR-IF 2 datasets are publicly available online.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

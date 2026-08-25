@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Cross-Lingual Auto Evaluation for Assessing Multilingual LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sumanth</forename><surname>Doddapaneni</surname></persName>
+							<email>sumanthd@cse.iitm.ac.in</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammed</forename><surname>Safi Ur</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rahman</forename><surname>Khan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dilip</forename><surname>Venkatesh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Raj</forename><surname>Dabre</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anoop</forename><surname>Kunchukuttan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mitesh</forename><forename type="middle">M</forename><surname>Khapra</surname></persName>
+							<email>miteshk@cse.iitm.ac.in</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nilekani</forename><surname>Centre At Ai4bharat</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Iit</forename><surname>Madras</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National Institute of Information and Communications Technology</orgName>
+								<address>
+									<settlement>Kyoto</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Cross-Lingual Auto Evaluation for Assessing Multilingual LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DAACE43CD894D9B69A09532AB9BDEE6B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Evaluating machine-generated text remains a significant challenge in NLP, especially for non-English languages. Current methodologies, including automated metrics, human assessments, and LLM-based evaluations, predominantly focus on English, revealing a significant gap in multilingual evaluation frameworks. We introduce the Cross Lingual Auto Evaluation (CIA) Suite, an extensible framework that includes evaluator LLMs (HERCULE) and a novel test set (RECON) specifically designed for multilingual evaluation. Our test set features 500 human-annotated instructions spanning various task capabilities along with human judgment scores across six languages. This would enable benchmarking of general-purpose multilingual LLMs and facilitate meta-evaluation of Evaluator LLMs. The proposed model, HERCULE, is a cross-lingual evaluation model that addresses the scarcity of reference answers in the target language by learning to assign scores to responses based on easily available reference answers in English. Our experiments demonstrate that HERCULE aligns more closely with human judgments compared to proprietary models, demonstrating the effectiveness of such cross-lingual evaluation in low resource scenarios. Further, it is also effective in zero-shot evaluation on unseen languages. This study is the first comprehensive examination of crosslingual evaluation using LLMs, presenting a scalable and effective approach for multilingual assessment. All code, datasets, and models are available at github/CIA and hf.co/CIA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">From Observation to Understanding: Front-Door Adjustments with Uncertainty Calibration for Enhancing Egocentric Reasoning in LVLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shenshen</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Science and Technology</orgName>
+								<orgName type="institution">University of Electronic</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenxin</forename><surname>Meng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Science and Technology</orgName>
+								<orgName type="institution">University of Electronic</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lei</forename><surname>Wang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Salesforce AI Research</orgName>
+								<address>
+									<addrLine>4 Meituan</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chong</forename><surname>Peng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Yan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Fumin</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Science and Technology</orgName>
+								<orgName type="institution">University of Electronic</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingkuan</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Science and Technology</orgName>
+								<orgName type="institution">University of Electronic</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Heng</forename><forename type="middle">Tao</forename><surname>Shen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xing</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Science and Technology</orgName>
+								<orgName type="institution">University of Electronic</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Tongji University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">From Observation to Understanding: Front-Door Adjustments with Uncertainty Calibration for Enhancing Egocentric Reasoning in LVLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7B9840B1093B587D58532EFC98B267A5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent progress in large vision-language models (LVLMs) has shown substantial potential across a broad spectrum of third-person tasks. However, adapting these LVLMs to egocentric scenarios remains challenging due to their third-person training bias. Existing methods that adapt LVLMs for first-person tasks often overlook critical agent-environment interactions, limiting their ability to perform egocentric reasoning. To address these challenges, we propose a novel zero-shot paradigm termed Front-Door Adjustments with Uncertainty Calibration (FRUIT) to enhance the egocentric reasoning abilities of LVLMs by simulating human causal reasoning. Specifically, the FRUIT operates in two stages: observation and understanding. Unlike conventional prompting techniques, we formalize egocentric reasoning using a structural causal model. Then, we ground interaction regions and expand them into hierarchical visual cues, augmented with corresponding captions, to form the initial observations. To reduce noise in these observations, we employ uncertainty calibration to filter out unreliable information. These refined observations as mediators are then incorporated into the prompt template, guiding the model to understand semantics from a firstperson perspective. Extensive experiments conducted on the EgoThink benchmark demonstrate that our FRUIT method consistently enhances the performance of existing LVLMs on six distinct tasks. Our code is available at https://github.com/Mrshenshen/FRUIT.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

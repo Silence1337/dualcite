@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">IRT-Router: Effective and Interpretable Multi-LLM Routing via Item Response Theory</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenya</forename><surname>Huang</surname></persName>
+							<email>huangzhy@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Artificial Intelligence Comprehensive National Science Center</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weibo</forename><surname>Gao</surname></persName>
+							<email>weibogao@mail.ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bihan</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guanhao</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Wang</surname></persName>
+							<email>wang-fei@nus.edu.sg</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computing</orgName>
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Runze</forename><surname>Wu</surname></persName>
+							<email>wurunze1@corp.netease.com</email>
+							<affiliation key="aff3">
+								<orgName type="laboratory">NetEase Fuxi Al Lab</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">IRT-Router: Effective and Interpretable Multi-LLM Routing via Item Response Theory</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FBFE8FFC12BFCE4FE57A09AB15EFFEF7</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have demonstrated exceptional performance across a wide range of natural language tasks. However, selecting the optimal LLM to respond to a user query often necessitates a delicate balance between performance and cost. While powerful models deliver better results, they come at a high cost, whereas smaller models are more cost-effective but less capable. To address this trade-off, we propose IRT-Router, a multi-LLM routing framework that efficiently routes user queries to the most suitable LLM. Inspired by Item Response Theory (IRT), a psychological measurement methodology, IRT-Router explicitly models the relationship between LLM capabilities and user query attributes. This not only enables accurate prediction of response performance but also provides interpretable insights, such as LLM abilities and query difficulty. Additionally, we design an online query warm-up technique based on semantic similarity, further enhancing the online generalization capability of IRT-Router. Extensive experiments on 20 LLMs and 12 datasets demonstrate that IRT-Router outperforms most baseline methods in terms of effectiveness and interpretability. Its superior performance in cold-start scenarios further confirms the reliability and practicality of IRT-Router in realworld applications. Code is available at https: //github.com/Mercidaiha/IRT-Router.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

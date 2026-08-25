@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">From Evasion to Concealment: Stealthy Knowledge Unlearning for LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tianle</forename><surname>Gu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Tsinghua Shenzhen International Graduate School</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kexin</forename><surname>Huang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruilin</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Tsinghua Shenzhen International Graduate School</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanqi</forename><surname>Yao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiuying</forename><surname>Chen</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="laboratory">Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yujiu</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Tsinghua Shenzhen International Graduate School</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yan</forename><surname>Teng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yingchun</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">From Evasion to Concealment: Stealthy Knowledge Unlearning for LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D3F5DE1FAEE59A99627077CDAB1B1115</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLM Unlearning plays a crucial role in removing sensitive information from language models to mitigate potential misuse. However, previous approaches often treat nonsensical responses or template-based refusals (e.g., Sorry, I cannot answer.) as the unlearning target, which can give the impression of deliberate information suppression, making the process even more vulnerable to attacks and jailbreaks. Moreover, most methods rely on auxiliary models or retaining datasets, which adds complexity to the unlearning process. To address these challenges, we propose MEOW, a streamlined and stealthy unlearning method that eliminates the need for auxiliary models or retaining data while avoiding leakage through its innovative use of inverted facts. These inverted facts are generated by an offline LLM and serve as fine-tuning labels. Meanwhile, we introduce MEMO, a novel metric that measures the model&apos;s memorization, to select optimal fine-tuning targets. The use of inverted facts not only maintains the covert nature of the model but also ensures that sensitive information is effectively forgotten without revealing the target data. Evaluated on the ToFU Knowledge Unlearning dataset using Llama2-7B-Chat and Phi-1.5, MEOW outperforms baselines in forgetting quality while preserving model utility. MEOW also maintains strong performance across NLU and NLG tasks and demonstrates superior resilience to attacks, validated via the Min-K% membership inference method. All codes and datasets have been released and can be accessed at MEOW-repo.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

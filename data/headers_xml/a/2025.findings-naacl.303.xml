@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Multi-Stage LLM Fine-Tuning with a Continual Learning Setting</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Changhao</forename><surname>Guan</surname></persName>
+							<email>guanchanghao@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Huang</surname></persName>
+							<email>huangchao@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongliang</forename><surname>Li</surname></persName>
+							<email>hongliangli@bjtu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">You</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ning</forename><surname>Cheng</surname></persName>
+							<email>ningcheng@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zihe</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinan</forename><surname>Xu</surname></persName>
+							<email>jaxu@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yufeng</forename><surname>Chen</surname></persName>
+							<email>chenyf@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jian</forename><surname>Liu</surname></persName>
+							<email>jian.liu@ustb.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Science and Technology Beijing</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Multi-Stage LLM Fine-Tuning with a Continual Learning Setting</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">11B167021939199D958EE47CFABFDA67</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In recent years, large language models (LLMs) have made significant progress in knowledgeintensive applications. However, when adapting them to specific domains, we may encounter a multi-stage continuous learning scenario, especially in cases where domain knowledge evolves rapidly. This issue severely limits traditional fine-tuning approaches for LLMs. To overcome this limitation, we propose a new learning paradigm designed specifically for multi-stage continuous learning. This paradigm includes a preference-based learning bias to identify potential knowledge conflicts, as well as a self-distillation-based data augmentation strategy to expand and enrich the training corpus, thereby improving the integration of knowledge-compatible information. In the experiments, we show that our proposed method achieves a significant improvement in accuracy after 7 stages of fine-tuning compared to previous methods, while also demonstrating excellent performance in preserving general knowledge. We have released our code and dataset at Multi-Stage-Learning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

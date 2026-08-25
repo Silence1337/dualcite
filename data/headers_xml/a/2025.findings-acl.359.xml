@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TAMP: Token-Adaptive Layerwise Pruning in Multimodal Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jaewoo</forename><surname>Lee</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Keyang</forename><surname>Xuan</surname></persName>
+							<email>keyangx3@illinois.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Chanakya</forename><surname>Ekbote</surname></persName>
+							<email>cekbote@mit.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sandeep</forename><surname>Polisetty</surname></persName>
+							<email>spolisetty@umass.edu</email>
+						</author>
+						<author>
+							<persName><roleName>May</roleName><forename type="first">Yi</forename><forename type="middle">R</forename><surname>Fung</surname></persName>
+							<email>yrfung@cse.ust.hk</email>
+						</author>
+						<author>
+							<persName><forename type="first">Paul</forename><forename type="middle">Pu</forename><surname>Liang</surname></persName>
+							<email>ppliang@mit.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North</orgName>
+								<address>
+									<addrLine>Carolina Chapel Hill 1</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Massachusetts Institute of Technology 3</orgName>
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<addrLine>Urbana-Champaign 2</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Massachusetts</orgName>
+								<address>
+									<addrLine>Amherst 4</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TAMP: Token-Adaptive Layerwise Pruning in Multimodal Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">23B3CE173155FECEB14DB063D2BCDD8F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:27+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Multimodal Large Language Models (MLLMs) have shown remarkable versatility in understanding diverse multimodal data and tasks. However, these capabilities come with an increased model scale. While post-training pruning reduces model size in unimodal models, its application to MLLMs often yields limited success. Our analysis discovers that conventional methods fail to account for the unique token attributes across layers and modalities inherent to MLLMs. Inspired by this observation, we propose TAMP, a simple yet effective pruning framework tailored for MLLMs, featuring two key components: (1) Diversity-Aware Sparsity, which adjusts sparsity ratio per layer based on diversities among multimodal output tokens, preserving more parameters in highdiversity layers; and (2) Adaptive Multimodal Input Activation, which identifies representative multimodal input tokens using attention scores to guide unstructured weight pruning. We validate our method on two state-of-the-art MLLMs: LLaVA-NeXT, designed for visionlanguage tasks, and VideoLLaMA2, capable of processing audio, visual, and language modalities. Empirical experiments across various multimodal evaluation benchmarks demonstrate that each component of our approach substantially outperforms existing pruning techniques. Our code is available at https://github.com/G-JWLee/TAMP.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

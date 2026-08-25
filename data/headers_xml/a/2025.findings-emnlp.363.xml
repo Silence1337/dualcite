@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yingyu</forename><surname>Liang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Hong Kong</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Wisconsin-Madison</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Heshan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Carnegie Mellon University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenmei</forename><surname>Shi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Wisconsin-Madison</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhao</forename><surname>Song</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<country>Berkeley</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhuoyan</forename><surname>Xu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Wisconsin-Madison</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiale</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Guangdong University of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Zhuang</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">University of Minnesota</orgName>
+								<address>
+									<settlement>Twin Cities</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8AB01CEC260130A4D4BE82A507738D99</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The self-attention mechanism is key to the success of transformers in recent large language models (LLMs). However, the quadratic computational cost, O(n 2), with respect to the input sequence length n poses a significant obstacle to further improvement and scalability in longer contexts. In this work, we leverage the convolution-like structure of attention matrices to develop an efficient approximation method for attention computation using convolution matrices. We propose a conv basis system, analogous to the rank basis, and show that any lower triangular matrix can be decomposed as a sum of structured convolution matrices in this basis. We then design a fast algorithm to approximate the attention matrix using a sum of k convolution matrices. This enables us to compute attention during inference via Fast Fourier Transforms (FFT) in O(knd log n) time, where d is the hidden dimension, achieving nearly linear time complexity, n 1+o(1) , in practical scenarios where kd = n o(1). Furthermore, both training forward and backward gradient computations can be performed in n 1+o(1) time as well. We provide theoretical guarantees on runtime and approximation error and conduct preliminary experiments to evaluate the effectiveness of our approach. We hope this new paradigm for accelerating attention computation in transformer models facilitates their application to longer contexts.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

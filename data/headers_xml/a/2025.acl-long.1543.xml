@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ScaleBiO: Scalable Bilevel Optimization for LLM Data Reweighting</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Pan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dylan</forename><surname>Zhang</surname></persName>
+							<email>jzhanggr@ust.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hanning</forename><surname>Zhang</surname></persName>
+							<email>hanning5@illinois.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xingyuan</forename><surname>Pan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minrui</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jipeng</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Renjie</forename><surname>Pi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyu</forename><surname>Wang</surname></persName>
+							<email>maxywang@ust.hk</email>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Zhang</surname></persName>
+							<email>tongzhang@tongzhang-ml.org</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ScaleBiO: Scalable Bilevel Optimization for LLM Data Reweighting</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3147DBD10A6C4A09907E997C29A4281F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Bilevel optimization has shown its utility across various machine learning settings, yet most algorithms in practice require second-order information, making it challenging to scale them up. Only recently, a paradigm of first-order algorithms has emerged in the theoretical literature, capable of effectively addressing bilevel optimization problems. Nevertheless, the practical efficiency of this paradigm remains unverified, particularly in the context of large language models (LLMs). This paper introduces the first scalable instantiation of this paradigm called ScaleBiO, focusing on bilevel optimization for large-scale LLM data reweighting. By combining with a recently proposed memoryefficient training technique called LISA, our novel algorithm allows the paradigm to scale to ∼30B-sized LLMs on 8×H100 GPUs, marking the first successful application of bilevel optimization under practical scenarios for largesized LLMs. Empirically, extensive experiments on data reweighting verify the effectiveness of ScaleBiO for different-scaled models, including Llama-3-8B, Gemma-2-9B, Qwen-2-7B, and Qwen-2.5-32B, where bilevel optimization succeeds in instruction-following and math reasoning tasks, outperforming several popular baselines, including uniform sampling, influence-aware data filtering, and referencemodel-based sampling methods. Theoretically, ScaleBiO ensures the optimality of the learned data weights, along with a convergence guarantee matching the conventional first-order bilevel optimization paradigm on smooth and strongly convex objectives.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

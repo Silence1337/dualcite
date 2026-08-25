@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dan</forename><surname>Su</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kezhi</forename><surname>Kong</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ying</forename><surname>Lin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Joseph</forename><surname>Jennings</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Brandon</forename><surname>Norick</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Markus</forename><surname>Kliegl</surname></persName>
+							<email>mkliegl@nvidia.com.</email>
+						</author>
+						<author>
+							<persName><forename type="first">Mostofa</forename><surname>Patwary</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammad</forename><surname>Shoeybi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Bryan</forename><forename type="middle">Catanzaro</forename><surname>Nvidia</surname></persName>
+						</author>
+						<title level="a" type="main">Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">93AF91AEC2F76836CBA012215B418266</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent English Common Crawl datasets like FineWeb-Edu and DCLM achieved significant benchmark gains via aggressive model-based filtering, but at the cost of removing 90% of data. This limits their suitability for long token horizon training, such as 15T tokens for Llama 3.1. In this paper, we show how to achieve better trade-offs between accuracy and data quantity by a combination of classifier ensembling, synthetic data rephrasing, and reduced reliance on heuristic filters. When training 8B parameter models for 1T tokens, using a high-quality subset of our data improves MMLU by 5.6 over DCLM, demonstrating the efficacy of our methods for boosting accuracies over a relatively short token horizon. Furthermore, our full 6.3T token dataset matches DCLM on MMLU, but contains four times more unique real tokens than DCLM. This unlocks state-of-the-art training over a long token horizon: an 8B parameter model trained for 15T tokens, of which 7.2T came from our dataset, is better than the Llama 3.1 8B model: +5 on MMLU, +3.1 on ARC-Challenge, and +0.5 on average across ten diverse tasks. The dataset is available at https://data.commoncrawl.org/contrib/ Nemotron/Nemotron-CC/index.html.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

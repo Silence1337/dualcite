@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">JointRank: Rank Large Set with Single Pass</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Evgeny</forename><surname>Dedov</surname></persName>
+							<email>evgeny.dedov@jetbrains.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">ICTIR &apos;25</orgName>
+								<orgName type="institution">JetBrains Limassol</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>Cyprus Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">JointRank: Rank Large Set with Single Pass</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6E780305BD7B48DCD7C2A058BF3E836D</idno>
+					<idno type="DOI">10.1145/3731120.3744587</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Large Language Models for Zero-Shot Ranking, Block design</keywords>
+			</textClass>
+			<abstract>
+				<p>Efficiently ranking relevant items from large candidate pools is a cornerstone of modern information retrieval systems-such as web search, recommendation, and retrieval-augmented generation. Listwise rerankers, which improve relevance by jointly considering multiple candidates, are often limited in practice: either by model input size constraints, or by degraded quality when processing large sets. We propose a model-agnostic method for fast reranking large sets that exceed a model input limits. The method first partitions candidate items into overlapping blocks, each of which is ranked independently in parallel. Implicit pairwise comparisons are then derived from these local rankings. Finally, these comparisons are aggregated to construct a global ranking using algorithms such as Winrate or PageRank. Experiments on TREC DL-2019 show that our method achieves an nDCG@10 of 70.88 compared to the 57.68 for full-context listwise approach using gpt-4.1-mini as long-context model, while reducing latency from 21 to 8 seconds. The implementation of the algorithm and the experiments is available in the repository: https://github.com/V3RGANz/jointrank CCS Concepts • Information systems → Retrieval models and ranking; Rank aggregation; Language models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The Lookahead Limitation: Why Multi-Operand Addition is Hard for LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Tanja</forename><surname>Baeumel</surname></persName>
+							<email>tanja.baeumel@dfki.de</email>
+							<affiliation key="aff0">
+								<orgName type="department">German Research Center for AI (DFKI)</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Saarland University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center for European Research in Trusted AI (CERTAIN)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Josef</forename><surname>Van Genabith</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">German Research Center for AI (DFKI)</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Saarland University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><surname>Ostermann</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">German Research Center for AI (DFKI)</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Saarland University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Center for European Research in Trusted AI (CERTAIN)</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The Lookahead Limitation: Why Multi-Operand Addition is Hard for LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BF8AF28A342AACB5A7811A00E5A68C79</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Autoregressive large language models (LLMs) exhibit impressive performance across various tasks but struggle with simple arithmetic, such as additions of two or more operands. We show that this struggle arises from LLMs&apos; use of a simple one-digit lookahead heuristic, which forms an upper bound for LLM performance and works fairly well (but not perfect) for twooperand addition but fails in multi-operand cases, where the carry-over logic is more complex. Our probing experiments and digit-wise accuracy evaluation show that the evaluated LLMs fail precisely where a one-digit lookahead is insufficient to account for cascading carries. We further validate our findings via a targeted circuit intervention, revealing a specialized pathway responsible for direct carry detection from the next digit position. We analyze the impact of tokenization strategies on arithmetic performance and show that all investigated models, regardless of tokenization and size, are inherently limited in the addition of multiple operands due to their reliance on a one-digit lookahead heuristic. Our findings reveal fundamental limitations that prevent LLMs from generalizing to more complex numerical reasoning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

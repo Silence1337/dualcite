@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fine-Tune on the Format First: Improving Multiple-Choice Evaluation for Intermediate LLM Checkpoints</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Alec</forename><surname>Bunn</surname></persName>
+							<email>abunn2@uw.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington</orgName>
+								<address>
+									<settlement>Allen Institute for AI (Ai2</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sarah</forename><surname>Wiegreffe</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington</orgName>
+								<address>
+									<settlement>Allen Institute for AI (Ai2</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ben</forename><surname>Bogin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington</orgName>
+								<address>
+									<settlement>Allen Institute for AI (Ai2</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fine-Tune on the Format First: Improving Multiple-Choice Evaluation for Intermediate LLM Checkpoints</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C5EC4CFBE3D7CAE07C0347F72FFDC86E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Evaluation of intermediate language model checkpoints during training is critical for effective model development and selection. However, reliable evaluation using the popular multiple-choice question (MCQ) format is challenging, as small and non instruction-tuned models often lack the symbolic reasoning required for the task. This is despite the fact that MCQ evaluation is often used and needed to distinguish between the performance of different training runs. In particular, when prompted with a question and a set of labeled answer choices (e.g., &quot;A.. .. , B.. .. , C.. .. &quot;), many models struggle to emit the correct label (e.g., &quot;C&quot;), even when they can select the correct string answer choice. We propose an alternative evaluation method: fine-tuning the model on an auxiliary MCQ dataset prior to outputting labels. We validate this approach empirically by showing that training on auxiliary data improves MCQ ability on all our test datasets except 1. This approach provides a more accurate signal of model capability at intermediate checkpoints, as it disentangles the evaluation of core knowledge from the model&apos;s emerging ability to follow formatting instructions.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

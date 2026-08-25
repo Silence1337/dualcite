@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dynamic Parallel Tree Search for Efficient LLM Reasoning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yifu</forename><surname>Ding</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="laboratory">State Key Laboratory of Complex &amp; Critical Software Environment</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wentao</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Wuhan University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shunyu</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yongcheng</forename><surname>Jing</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinyang</forename><surname>Guo</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="laboratory">State Key Laboratory of Complex &amp; Critical Software Environment</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yingjie</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jing</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Wuhan University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zengmao</forename><surname>Wang</surname></persName>
+							<email>wangzengmao@whu.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Wuhan University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ziwei</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Du</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Wuhan University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xianglong</forename><surname>Liu</surname></persName>
+							<email>xlliu@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="laboratory">State Key Laboratory of Complex &amp; Critical Software Environment</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dacheng</forename><surname>Tao</surname></persName>
+							<email>dacheng.tao@gmail.com.</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dynamic Parallel Tree Search for Efficient LLM Reasoning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2B97C98BD132073D3643765CA0675CA5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Tree of Thoughts (ToT) enhances Large Language Model (LLM) reasoning by structuring problem-solving as a spanning tree. However, recent methods focus on search accuracy while overlooking computational efficiency. The challenges of accelerating the ToT lie in the frequent switching of reasoning focus, and the redundant exploration of suboptimal solutions. To alleviate this dilemma, we propose Dynamic Parallel Tree Search (DPTS), a novel parallelism framework that aims to dynamically optimize the reasoning path in inference. It includes the Parallelism Streamline in the generation phase to build up a flexible and adaptive parallelism with arbitrary paths by cache management and alignment. Meanwhile, the Search and Transition Mechanism filters potential candidates to dynamically maintain the reasoning focus on more possible solutions with less redundancy. Experiments on Qwen-2.5 and Llama-3 on math and code datasets show that DPTS significantly improves efficiency by 2-4× on average while maintaining or even surpassing existing reasoning algorithms in accuracy, making ToT-based reasoning more scalable and computationally efficient. Codes are released at: https://github.com/yifuding/DPTS.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

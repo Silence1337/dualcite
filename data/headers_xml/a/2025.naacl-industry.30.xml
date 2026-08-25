@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">QueryShield: A Platform to Mitigate Enterprise Data Leakage in Queries to External LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nitin</forename><surname>Ramrakhiyani</surname></persName>
+							<email>nitin.ramrakhiyani@tcs.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">TCS Research</orgName>
+								<orgName type="institution" key="instit2">Tata Consultancy Services Limited</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Delton</forename><surname>Myalil</surname></persName>
+							<email>delton.m@tcs.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">TCS Research</orgName>
+								<orgName type="institution" key="instit2">Tata Consultancy Services Limited</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sachin</forename><surname>Pawar</surname></persName>
+							<email>sachin7.p@tcs.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">TCS Research</orgName>
+								<orgName type="institution" key="instit2">Tata Consultancy Services Limited</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Apte</forename><surname>Manoj</surname></persName>
+							<email>manoj.apte@tcs.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">TCS Research</orgName>
+								<orgName type="institution" key="instit2">Tata Consultancy Services Limited</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Rajan</surname></persName>
+							<email>rajan.ma@tcs.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">TCS Research</orgName>
+								<orgName type="institution" key="instit2">Tata Consultancy Services Limited</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Divyesh</forename><surname>Saglani</surname></persName>
+							<email>divyesh.saglani@tcs.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">TCS Research</orgName>
+								<orgName type="institution" key="instit2">Tata Consultancy Services Limited</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Imtiyazuddin</forename><surname>Shaik</surname></persName>
+							<email>imtiyazuddin.shaik@tcs.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">TCS Research</orgName>
+								<orgName type="institution" key="instit2">Tata Consultancy Services Limited</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">QueryShield: A Platform to Mitigate Enterprise Data Leakage in Queries to External LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5C63A1AFCEAB881BC222F13F9CAC50B0</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Unrestricted access to external Large Language Models (LLM) based services like ChatGPT and Gemini can lead to potential data leakages, especially for large enterprises providing products and services to clients that require legal confidentiality guarantees. However, a blanket restriction on such services is not ideal as these LLMs boost employee productivity. Our goal is to build a solution that enables enterprise employees to query such external LLMs, without leaking confidential internal and client information. In this paper, we propose QueryShield-a platform that enterprises can use to interact with external LLMs without leaking data through queries. It detects if a query leaks data, and rephrases it to minimize data leakage while limiting the impact to its semantics. We construct a dataset of 1500 queries and manually annotate them for their sensitivity labels and their low sensitivity rephrased versions. We fine-tune a set of lightweight model candidates using this dataset and evaluate them using multiple metrics including one we propose specific to this problem.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

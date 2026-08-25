@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Language Models Can Easily Learn to Reason from Demonstrations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dacheng</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">U</forename><forename type="middle">C</forename><surname>Berkeley</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shiyi</forename><surname>Cao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tyler</forename><surname>Griggs</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shu</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangxi</forename><surname>Mo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Eric</forename><surname>Tang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anyscale</forename><surname>Sumanth</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hegde</forename><surname>Anyscale</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kourosh</forename><surname>Hakhamaneshi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shishir</forename><forename type="middle">G</forename><surname>Patil</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matei</forename><surname>Zaharia</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joseph</forename><forename type="middle">E</forename><surname>Gonzalez</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">UC Berkeley Ion Stoica</orgName>
+								<orgName type="institution" key="instit1">UC Berkeley</orgName>
+								<orgName type="institution" key="instit2">UC Berkeley</orgName>
+								<orgName type="institution" key="instit3">UC Berkeley</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Language Models Can Easily Learn to Reason from Demonstrations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8D4F7F8DB36B8D1F7CFDE3D5C3E6F2D6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large reasoning models (LRMs) tackle complex problems by following long chain-ofthoughts (Long CoT) that incorporate reflection, backtracking, and self-validation. However, the training techniques and data requirements to elicit Long CoT remain poorly understood. In this work, we find that language models can effectively learn Long CoT reasoning through data-efficient supervised finetuning (SFT) and further parameter-efficient low-rank adaptation (LoRA). Crucially, we find that the structure of Long CoT is critical to the learning process in this data-efficient fine-tuning process. Training on contentincorrect examples, e.g. those lead to incorrect answers or corrupted digits, still leads to significant performance gains. In contrast, training on structurally incorrect examples, e.g., with shuffled or deleted reasoning steps, yield smaller improvements or even degrade performance. The model, Sky-T1, and codes are available at https://github.com/ NovaSky-AI/SkyThought.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

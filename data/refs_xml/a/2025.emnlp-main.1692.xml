@@ -1,0 +1,1513 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Why can gpt learn in-context? language models secretly perform gradient descent as meta optimizers</title>
+		<author>
+			<persName><forename type="first">Damai</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yutao</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yaru</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhifang</forename><surname>Sui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Furu</forename><surname>Wei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2212.10559</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Scaling vision transformers to 22 billion parameters</title>
+		<author>
+			<persName><forename type="first">Mostafa</forename><surname>Dehghani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josip</forename><surname>Djolonga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Basil</forename><surname>Mustafa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Piotr</forename><surname>Padlewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Heek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andreas</forename><forename type="middle">Peter</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mathilde</forename><surname>Caron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Geirhos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ibrahim</forename><surname>Alabdulmohsin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rodolphe</forename><surname>Jenatton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucas</forename><surname>Beyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Tschannen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anurag</forename><surname>Arnab</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiao</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlos</forename><forename type="middle">Riquelme</forename><surname>Ruiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthias</forename><surname>Minderer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joan</forename><surname>Puigcerver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Utku</forename><surname>Evci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Manoj</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sjoerd</forename><surname>Van Steenkiste</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gamaleldin</forename><surname>Fathy Elsayed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aravindh</forename><surname>Mahendran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fisher</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Avital</forename><surname>Oliver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fantine</forename><surname>Huot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jasmijn</forename><surname>Bastings</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Collier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexey</forename><forename type="middle">A</forename><surname>Gritsenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vighnesh</forename><surname>Birodkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristina</forename><forename type="middle">Nader</forename><surname>Vasconcelos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Tay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Mensink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Kolesnikov</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 40th International Conference on Machine Learning</title>
+		<editor>
+			<persName><forename type="first">Filip</forename><surname>Pavetic</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Dustin</forename><surname>Tran</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Thomas</forename><surname>Kipf</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Mario</forename><surname>Lucic</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Xiaohua</forename><surname>Zhai</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Daniel</forename><surname>Keysers</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Jeremiah</forename><forename type="middle">J</forename><surname>Harmsen</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Neil</forename><surname>Houlsby</surname></persName>
+		</editor>
+		<meeting>the 40th International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="7480" to="7512" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Glam: Efficient scaling of language models with mixture-of-experts</title>
+		<author>
+			<persName><forename type="first">Nan</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanping</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">M</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Tong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dmitry</forename><surname>Lepikhin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuanzhong</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maxim</forename><surname>Krikun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanqi</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adams</forename><forename type="middle">Wei</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Orhan</forename><surname>Firat</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="5547" to="5569" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">2024a. Determinants of llm-assisted decision-making</title>
+		<author>
+			<persName><forename type="first">Eva</forename><surname>Eigner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thorsten</forename><surname>Händler</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2402.17385</idno>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">2024b. Determinants of llm-assisted decision-making</title>
+		<author>
+			<persName><forename type="first">Eva</forename><surname>Eigner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thorsten</forename><surname>Händler</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2402.17385</idno>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Is gpt-4 a reliable rater? evaluating consistency in gpt-4&apos;s text ratings</title>
+		<author>
+			<persName><forename type="first">Veronika</forename><surname>Hackl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><forename type="middle">Elena</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Granitzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maximilian</forename><surname>Sailer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Frontiers in Education</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1272229</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Large language models: a comprehensive survey of its applications, challenges, limitations, and future prospects</title>
+		<author>
+			<persName><forename type="first">Rizwan</forename><surname>Muhammad Usman Hadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abbas</forename><surname>Qureshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Muhammad</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anas</forename><surname>Irfan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Muhammad</forename><surname>Zafar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naveed</forename><surname>Bilal Shaikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jia</forename><surname>Akhtar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seyedali</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mirjalili</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Authorea Preprints</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1" to="26" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<author>
+			<persName><forename type="first">Wan-Ting</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chieh-Kai</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming-Ying</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kerui</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Min</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1805.06266</idno>
+		<title level="m">A unified model for extractive and abstractive summarization using inconsistency loss</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Lora: Low-rank adaptation of large language models</title>
+		<author>
+			<persName><forename type="first">Edward</forename><forename type="middle">J</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yelong</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phillip</forename><surname>Wallis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zeyuan</forename><surname>Allen-Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuanzhi</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shean</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weizhu</forename><surname>Chen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Embrace divergence for richer insights: A multi-document summarization benchmark and a case study on summarizing diverse information from news articles</title>
+		<author>
+			<persName><forename type="first">Kung-Hsiang</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philippe</forename><surname>Laban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Fabbri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Prafulla</forename><surname>Kumar Choubey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shafiq</forename><surname>Joty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caiming</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chien-Sheng</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.naacl-long.32</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>Mexico City, Mexico</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="570" to="593" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Albert</forename><forename type="middle">Q</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandre</forename><surname>Sablayrolles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arthur</forename><surname>Mensch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Bamford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Devendra</forename><surname>Singh Chaplot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diego</forename><surname>De Las Casas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Florian</forename><surname>Bressand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gianna</forename><surname>Lengyel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Lample</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucile</forename><surname>Saulnier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Renard</forename><surname>Lélio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marie-Anne</forename><surname>Lavaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Lachaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Teven</forename><surname>Stock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thibaut</forename><surname>Le Scao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Lavril</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2310.06825</idno>
+		<idno>ArXiv:2310.06825</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mistral</title>
+		<editor>
+			<persName><forename type="first">William</forename><forename type="middle">El</forename><surname>Lacroix</surname></persName>
+		</editor>
+		<editor>
+			<persName><surname>Sayed</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>cs</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jared</forename><surname>Kaplan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sam</forename><surname>Mccandlish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Henighan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><forename type="middle">B</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Chess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rewon</forename><surname>Child</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alec</forename><surname>Radford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dario</forename><surname>Amodei</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2001.08361</idno>
+		<idno type="arXiv">arXiv:2001.08361</idno>
+		<idno>ArXiv:2001.08361</idno>
+		<title level="m">Scaling laws for neural language models</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>cs, stat</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Sofsat: Towards a setlike operator based framework for semantic analysis of text</title>
+		<author>
+			<persName><forename type="first">Shubhra</forename><surname>Kanti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karmaker</forename><surname>Santu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chase</forename><surname>Geigle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Duncan</forename><surname>Ferguson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Cope</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mary</forename><surname>Kalantzis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Duane</forename><surname>Searsmith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengxiang</forename><surname>Zhai</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3299986.3299990</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACM SIGKDD Explorations Newsletter</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="21" to="30" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Efficient memory management for large language model serving with pagedattention</title>
+		<author>
+			<persName><forename type="first">Woosuk</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhuohan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siyuan</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ying</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lianmin</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cody</forename><forename type="middle">Hao</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Stoica</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3600006.3613165</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 29th Symposium on Operating Systems Principles, SOSP &apos;23</title>
+		<meeting>the 29th Symposium on Operating Systems Principles, SOSP &apos;23<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="611" to="626" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Meteor: An automatic metric for mt evaluation with high levels of correlation with human judgments</title>
+		<author>
+			<persName><forename type="first">Alon</forename><surname>Lavie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abhaya</forename><surname>Agarwal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Second Workshop on Statistical Machine Translation</title>
+		<meeting>the Second Workshop on Statistical Machine Translation<address><addrLine>Prague, Czech Republic</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="228" to="231" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Modeling extractive sentence intersection via subtree entailment</title>
+		<author>
+			<persName><forename type="first">Omer</forename><surname>Levy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ido</forename><surname>Dagan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriel</forename><surname>Stanovsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Judith</forename><surname>Eckle-Kohler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iryna</forename><surname>Gurevych</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers</title>
+		<meeting>COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers<address><addrLine>Osaka, Japan</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="2891" to="2901" />
+		</imprint>
+	</monogr>
+	<note>The COL-ING 2016 Organizing Committee</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">Junyi</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jie</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruiyang</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoxue</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wayne</forename><forename type="middle">Xin</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian-Yun</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ji-Rong</forename><surname>Wen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.03205</idno>
+		<title level="m">The dawn after the dark: An empirical study on factuality hallucination in large language models</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">ROUGE: A package for automatic evaluation of summaries</title>
+		<author>
+			<persName><forename type="first">Chin-Yew</forename><surname>Lin</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.11805</idno>
+		<idno>ArXiv:2312.11805</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Text Summarization Branches Out</title>
+		<meeting><address><addrLine>Barcelona, Spain</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="page" from="74" to="81" />
+		</imprint>
+	</monogr>
+	<note>cs</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Introducing mpt-7b: A new standard for open-source, commercially usable llms</title>
+		<author>
+			<persName><forename type="first">Nlp</forename><surname>Mosaicml</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Team</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="2024" to="2025" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Towards strict sentence intersection: Decoding and evaluation strategies</title>
+		<author>
+			<persName><forename type="first">Kapil</forename><surname>Thadani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kathleen</forename><surname>Mckeown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Workshop on Mono</title>
+		<meeting>the Workshop on Mono<address><addrLine>Portland, Oregon</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="43" to="53" />
+		</imprint>
+	</monogr>
+	<note type="report_type">lingual Text-To-Text Generation</note>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Large language models in medicine</title>
+		<author>
+			<persName><forename type="first">Arun</forename><surname>James Thirunavukarasu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Darren</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeng</forename><surname>Ting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kabilan</forename><surname>Elangovan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Laura</forename><surname>Gutierrez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Fang Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Ting</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41591-023-02448-8</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Medicine</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">88</biblScope>
+			<biblScope unit="page" from="1930" to="1940" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Hugo</forename><surname>Touvron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Louis</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Stone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Albert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amjad</forename><surname>Almahairi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yasmine</forename><surname>Babaei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nikolay</forename><surname>Bashlykov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soumya</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Prajjwal</forename><surname>Bhargava</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shruti</forename><surname>Bhosale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Bikel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lukas</forename><surname>Blecher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristian Canton</forename><surname>Ferrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moya</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillem</forename><surname>Cucurull</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Esiobu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jude</forename><surname>Fernandes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeremy</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenyin</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Fuller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cynthia</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vedanuj</forename><surname>Goswami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naman</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anthony</forename><surname>Hartshorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Saghar</forename><surname>Hosseini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Hou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hakan</forename><surname>Inan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marcin</forename><surname>Kardas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Viktor</forename><surname>Kerkez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Madian</forename><surname>Khabsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Isabel</forename><surname>Kloumann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Artem</forename><surname>Korenev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Punit</forename><surname>Singh Koura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marie-Anne</forename><surname>Lachaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thibaut</forename><surname>Lavril</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jenya</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diana</forename><surname>Liskovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yinghai</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuning</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Martinet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Todor</forename><surname>Mihaylov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pushkar</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Igor</forename><surname>Molybog</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yixin</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Poulton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeremy</forename><surname>Reizenstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rashi</forename><surname>Rungta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kalyan</forename><surname>Saladi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><surname>Schelten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruan</forename><surname>Silva</surname></persName>
+		</author>
+		<idno>ArXiv:2307.09288</idno>
+		<editor>Eric Michael Smith, Ranjan Subramanian, Xiaoqing Ellen Tan, Binh Tang, Ross Taylor, Adina Williams, Jian Xiang Kuan, Puxin Xu, Zheng Yan, Iliyan Zarov, Yuchen Zhang, Angela Fan, Melanie Kambadur, Sharan Narang</editor>
+		<imprint>
+			<publisher>Aurelien Rodriguez</publisher>
+			<pubPlace>Robert Stojnic, Sergey Edunov</pubPlace>
+		</imprint>
+	</monogr>
+	<note>and Thomas Scialom. 2023. Llama 2: Open foundation and finetuned chat models cs</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Cider: Consensus-based image description evaluation</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Lawrence</forename><surname>Ramakrishna Vedantam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Devi</forename><surname>Zitnick</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Parikh</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/CVPR.2015.7299087</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="4566" to="4575" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<author>
+			<persName><forename type="first">Pauli</forename><surname>Virtanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ralf</forename><surname>Gommers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Travis</forename><forename type="middle">E</forename><surname>Oliphant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matt</forename><surname>Haberland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tyler</forename><surname>Reddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Cournapeau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Evgeni</forename><surname>Burovski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pearu</forename><surname>Peterson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Warren</forename><surname>Weckesser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Bright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Stéfan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Van Der Walt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><surname>Brett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nikolay</forename><surname>Jarrod Millman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mayorov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Andrew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Nelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Kern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C J</forename><surname>Larson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">İlhan</forename><surname>Carey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Polat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">W</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jake</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Denis</forename><surname>Vanderplas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josef</forename><surname>Laxalde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Perktold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><surname>Cimrman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Henriksen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><forename type="middle">R</forename><surname>Quintero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anne</forename><forename type="middle">M</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antônio</forename><forename type="middle">H</forename><surname>Archibald</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ribeiro</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41592-019-0686-2</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Fabian Pedregosa, Paul van Mulbregt, and SciPy 1.0 Contributors. 2020. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="261" to="272" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">The creation and analysis of a website privacy policy corpus</title>
+		<author>
+			<persName><forename type="first">Shomir</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Florian</forename><surname>Schaub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abhilash</forename><surname>Aswarth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frederick</forename><surname>Dara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sushain</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pedro</forename><surname>Cherivirala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mads</forename><surname>Giovanni Leon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Schaarup Andersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kanthashree</forename><surname>Zimmeck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">Cameron</forename><surname>Mysore Sathyendra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">B</forename><surname>Russell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eduard</forename><surname>Norton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joel</forename><surname>Hovy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Norman</forename><surname>Reidenberg</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sadeh</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P16-1126</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 54th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1330" to="1340" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Huggingface&apos;s transformers: State-of-the-art natural language processing</title>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Wolf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lysandre</forename><surname>Debut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Victor</forename><surname>Sanh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julien</forename><surname>Chaumond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Clement</forename><surname>Delangue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anthony</forename><surname>Moi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierric</forename><surname>Cistac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Rault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rémi</forename><surname>Louf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Morgan</forename><surname>Funtowicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joe</forename><surname>Davison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sam</forename><surname>Shleifer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Clara</forename><surname>Patrick Von Platen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yacine</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julien</forename><surname>Jernite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Canwen</forename><surname>Plu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Teven</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sylvain</forename><surname>Le Scao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mariama</forename><surname>Gugger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quentin</forename><surname>Drame</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">M</forename><surname>Lhoest</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rush</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.1910.03771</idno>
+		<idno>ArXiv:1910.03771</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>cs</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">Learning to extract coherent summary via deep reinforcement learning</title>
+		<author>
+			<persName><forename type="first">Yuxiang</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Baotian</forename><surname>Hu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1804.07036</idno>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Pegasus: Pre-training with extracted gap-sentences for abstractive summarization</title>
+		<author>
+			<persName><forename type="first">Jingqing</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yao</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Saleh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">J</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1912.08777</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Bertscore: Evaluating text generation with bert</title>
+		<author>
+			<persName><forename type="first">Tianyi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Varsha</forename><surname>Kishore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Felix</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kilian</forename><forename type="middle">Q</forename><surname>Weinberger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoav</forename><surname>Artzi</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Benchmarking large language models for news summarization</title>
+		<author>
+			<persName><forename type="first">Tianyi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Faisal</forename><surname>Ladhak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Esin</forename><surname>Durmus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Percy</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kathleen</forename><surname>Mckeown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatsunori</forename><forename type="middle">B</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/tacl_a_00632</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="39" to="57" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Moverscore: Text generation evaluating with contextualized embeddings and earth mover distance</title>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maxime</forename><surname>Peyrard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christian</forename><forename type="middle">M</forename><surname>Meyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steffen</forename><surname>Eger</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D19-1053</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)<address><addrLine>Hong Kong, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="563" to="578" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Judging llm-as-a-judge with mt-bench and chatbot arena</title>
+		<author>
+			<persName><forename type="first">Lianmin</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei-Lin</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ying</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siyuan</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhanghao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yonghao</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zi</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhuohan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dacheng</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">P</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><forename type="middle">E</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Stoica</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2306.05685</idno>
+		<idno>ArXiv:2306.05685</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>cs</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Xipeng Qiu, and Xuanjing Huang</title>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pengfei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiran</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Danqing</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2004.08795</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Extractive summarization as text matching</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">Searching for effective neural extractive summarization: What works and what&apos;s next</title>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pengfei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Danqing</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xipeng</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuanjing</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1907.03491</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<author>
+			<persName><forename type="first">Yongchao</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrei</forename><forename type="middle">Ioan</forename><surname>Muresanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziwen</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keiran</forename><surname>Paster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Silviu</forename><surname>Pitis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harris</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jimmy</forename><surname>Ba</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2211.01910</idno>
+		<title level="m">Large language models are human-level prompt engineers</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">An Orthogonal High-Rank Adaptation for Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Guang-Ze</forename><surname>Chen</surname></persName>
+							<email>chenguangze1999@gmail.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Macau</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuzhen</forename><surname>Li</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Pazhou Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhulin</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Pazhou Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">C</forename><forename type="middle">L Philip</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Pazhou Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Pazhou Lab</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">An Orthogonal High-Rank Adaptation for Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">99864A335340510870BD77CBE82E961A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Low-rank adaptation (LoRA) efficiently adapts LLMs to downstream tasks by decomposing LLMs&apos; weight update into trainable low-rank matrices for fine-tuning. However, the random low-rank matrices may introduce massive taskirrelevant information, while their recomposed form suffers from limited representation spaces under low-rank operations. Such dense and choked adaptation in LoRA impairs the adaptation performance of LLMs on downstream tasks. To address these challenges, this paper proposes OHoRA, an orthogonal high-rank adaptation for parameter-efficient fine-tuning on LLMs. According to the information bottleneck theory, OHoRA decomposes LLMs&apos; pre-trained weight matrices into orthogonal basis vectors via QR decomposition and splits them into two low-redundancy high-rank components to suppress task-irrelevant information. It then performs dynamic rank-elevated recomposition through Kronecker product to generate expansive task-tailored representation spaces, enabling precise LLM adaptation and enhanced generalization. OHoRA effectively operationalizes the information bottleneck theory to decompose LLMs&apos; weight matrices into low-redundancy high-rank components and recompose them in rank-elevated manner for more task-tailored representation spaces and precise LLM adaptation. Empirical evaluation shows OHoRA&apos;s effectiveness by outperforming LoRA and its variants and achieving comparable performance to full fine-tuning with only 0.0371% trainable parameters.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

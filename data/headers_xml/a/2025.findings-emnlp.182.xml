@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Instance-level Randomization: Toward More Stable LLM Evaluations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yiyang</forename><surname>Li</surname></persName>
+							<email>liyiyang06@meituan.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Meituan Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yonghuang</forename><surname>Wu</surname></persName>
+							<email>yonghuangwu21@m.fudan.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ying</forename><surname>Luo</surname></persName>
+							<email>luoying08@meituan.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Meituan Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liangtai</forename><surname>Sun</surname></persName>
+							<email>sunliangtai@meituan.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Meituan Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zishu</forename><surname>Qin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lin</forename><surname>Qiu</surname></persName>
+							<email>qiulin07@meituan.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Meituan Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuezhi</forename><surname>Cao</surname></persName>
+							<email>caoxuezhi@meituan.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Meituan Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xunliang</forename><surname>Cai</surname></persName>
+							<email>caixunliang@meituan.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Meituan Group</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Instance-level Randomization: Toward More Stable LLM Evaluations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0A84561C97777EABC20F57A7AB9B6614</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:51+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Evaluations of large language models (LLMs) suffer from instability, where small changes of random factors such as few-shot examples can lead to drastic fluctuations of scores and even model rankings. Moreover, different LLMs can have different preferences for a certain setting of random factors. As a result, using a fixed setting of random factors, which is often adopted as the paradigm of current evaluations, can lead to potential unfair comparisons between LLMs. To mitigate the volatility of evaluations, we first theoretically analyze the sources of variance induced by changes in random factors. Targeting these specific sources, we then propose the instance-level randomization (ILR) method to reduce variance and enhance fairness in model comparisons. Instead of using a fixed setting across the whole benchmark in a single experiment, we randomize all factors that affect evaluation scores for every single instance, run multiple experiments and report the averaged score. Theoretical analyses and empirical results demonstrate that ILR can reduce the variance and unfair comparisons caused by random factors, as well as achieve similar robustness level with less than half computational cost compared with previous methods. Codes and data are available at https://github.com/EricLee8/ Instance-level-Randomization.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

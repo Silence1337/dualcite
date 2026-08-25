@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Enhancing Fake News Video Detection via LLM-Driven Creative Process Simulation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-10-05">October 5, 2025</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuyan</forename><surname>Bu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Media Synthesis and Forensics Lab</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiang</forename><surname>Sheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Media Synthesis and Forensics Lab</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Juan</forename><surname>Cao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Media Synthesis and Forensics Lab</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shaofei</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Media Synthesis and Forensics Lab</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Qi</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhui</forename><surname>Shi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Media Synthesis and Forensics Lab</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Beizhe</forename><surname>Hu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Media Synthesis and Forensics Lab</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Enhancing Fake News Video Detection via LLM-Driven Creative Process Simulation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2025-10-05">October 5, 2025</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A196F0A2D7200557956F0CF68D11BD5C</idno>
+					<idno type="DOI">10.1145/3746252.3760933</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The emergence of fake news on short video platforms has become a new significant societal concern, necessitating automatic video-news-specific detection. Current detectors primarily rely on pattern-based features to separate fake news videos from real ones. However, limited and less diversified training data lead to biased patterns and hinder their performance. This weakness stems from the complex many-to-many relationships between video material segments and fabricated news events in real-world scenarios: a single video clip can be utilized in multiple ways to create different fake narratives, while a single fabricated event often combines multiple distinct video segments. However, existing datasets do not adequately reflect such relationships due to the difficulty of collecting and annotating large-scale real-world data, resulting in sparse coverage and non-comprehensive learning of the characteristics of potential fake news video creation. To address this issue, we propose a data augmentation framework AgentAug that generates diverse fake news videos by simulating typical creative processes. AgentAug implements multiple LLM-driven pipelines of four fabrication categories for news video creation, combined with an active learning strategy based on uncertainty sampling to select the potentially useful augmented samples during training. Experimental results on two benchmark datasets demonstrate that AgentAug consistently improves the performance of short video fake news detectors.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards Adapting Open-Source Large Language Models for Expert-Level Clinical Note Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hanyin</forename><surname>Wang</surname></persName>
+							<email>wang.hanyin@mayo.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Mayo Clinic Health System</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computing and Data Science</orgName>
+								<address>
+									<country>UIUC</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chufan</forename><surname>Gao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computing and Data Science</orgName>
+								<address>
+									<country>UIUC</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bolun</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Mayo Clinic Health System</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiping</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Mayo Clinic Health System</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guleid</forename><surname>Hussein</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Mayo Clinic Health System</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohamad</forename><forename type="middle">El</forename><surname>Labban</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Mayo Clinic Health System</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kingsley</forename><surname>Iheasirim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Mayo Clinic Health System</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hariprasad</forename><surname>Korsapati</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Mayo Clinic Health System</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chuck</forename><surname>Outcalt</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Mayo Clinic Rochester</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jimeng</forename><surname>Sun</surname></persName>
+							<email>jimeng@illinois.edu</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computing and Data Science</orgName>
+								<address>
+									<country>UIUC</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Carle Illinois College of Medicine</orgName>
+								<address>
+									<country>UIUC</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards Adapting Open-Source Large Language Models for Expert-Level Clinical Note Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EAEA0093158088BE9DF55E2E5BAD18CA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Proprietary Large Language Models (LLMs) such as GPT-4 and Gemini have demonstrated promising capabilities in clinical text summarization tasks. However, due to patient data privacy concerns and computational costs, many healthcare providers prefer using small, locallyhosted models over external generic LLMs. This study presents a comprehensive domainand task-specific adaptation process for the open-source LLaMA-2 13 billion parameter model, enabling it to generate high-quality clinical notes from outpatient patient-doctor dialogues. Our process incorporates continued pretraining, supervised fine-tuning, and reinforcement learning from both AI and human feedback. We introduced a new approach, DistillDirect, for performing on-policy reinforcement learning with Gemini 1.0 Pro as the teacher model. Our resulting model, LLaMA-Clinic, can generate clinical notes comparable in quality to those authored by physicians. In a blinded physician reader study, the majority (92.8%) of individual evaluations rated the notes generated by LLaMA-Clinic as &quot;acceptable&quot; or higher across three criteria: realworld readiness, completeness, and accuracy. In the more challenging &quot;Assessment and Plan&quot; section, LLaMA-Clinic matched physicianauthored notes in real-world readiness score. We highlight key considerations for future clinical note-generation tasks, emphasizing the importance of pre-defining a &quot;best practice&quot; note format, rather than relying on LLMs to determine this for clinical practice. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

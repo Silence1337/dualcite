@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SG-FSM: A Self-Guiding Zero-Shot Prompting Paradigm for Multi-Hop Question Answering Based on Finite State Machine</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiaochen</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">National Key Laboratory for Multimedia Information Processing</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Software &amp; Microelectronics</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">International Digital Economy Academy</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junqing</forename><surname>He</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">National Key Laboratory for Multimedia Information Processing</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">International Digital Economy Academy</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Reza</forename><surname>Haf</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Data Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Monash University</orgName>
+								<address>
+									<addrLine>5 ModelTC</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhe</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">National Key Laboratory for Multimedia Information Processing</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiru</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangdi</forename><surname>Meng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">National Key Laboratory for Multimedia Information Processing</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Software &amp; Microelectronics</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kunhao</forename><surname>Pan</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">International Digital Economy Academy</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaxing</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">International Digital Economy Academy</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhifang</forename><surname>Sui</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">National Key Laboratory for Multimedia Information Processing</orgName>
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SG-FSM: A Self-Guiding Zero-Shot Prompting Paradigm for Multi-Hop Question Answering Based on Finite State Machine</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">02879D5C17149931D0F7F263073C348B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models with chain-of-thought prompting, such as OpenAI-o1, have shown impressive capabilities in natural language inference tasks. However, Multi-hop Question Answering (MHQA) remains challenging for many existing models due to issues like hallucination, error propagation, and limited context length. To address these challenges and enhance LLMs&apos; performance on MHQA, we propose the Self-Guiding prompting Finite State Machine (SG-FSM), designed to strengthen multi-hop reasoning abilities. Unlike traditional chain-of-thought methods, SG-FSM tackles MHQA by iteratively breaking down complex questions into sub-questions, correcting itself to improve accuracy. It processes one subquestion at a time, dynamically deciding the next step based on the current context and results, functioning much like an automaton. Experiments across various benchmarks demonstrate the effectiveness of our approach, outperforming strong baselines on challenging datasets such as Musique. SG-FSM reduces hallucination, enabling recovery of the correct final answer despite intermediate errors. It also improves adherence to specified output formats, simplifying evaluation significantly. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

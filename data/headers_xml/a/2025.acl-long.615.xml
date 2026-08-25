@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Finding the Sweet Spot: Preference Data Construction for Scaling Preference Optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yao</forename><surname>Xiao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Singapore University of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hai</forename><surname>Ye</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linyao</forename><surname>Chen</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hwee</forename><forename type="middle">Tou</forename><surname>Ng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lidong</forename><surname>Bing</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoli</forename><surname>Li</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Institute for Infocomm Research</orgName>
+								<orgName type="institution">A*Star</orgName>
+								<address>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ka-Wei</forename><surname>Roy</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Singapore University of Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Finding the Sweet Spot: Preference Data Construction for Scaling Preference Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6F46DA63000CD2DDC4E00365158D7A3C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Iterative data generation and model retraining are widely used to align large language models (LLMs). It typically involves a policy model to generate on-policy responses and a reward model to guide training data selection. Direct Preference Optimization (DPO) further enhances this process by constructing preference pairs of chosen and rejected responses. In this work, we aim to scale up the number of on-policy samples via repeated random sampling to improve alignment performance. Conventional practice selects the sample with the highest reward as chosen and the lowest as rejected for DPO. However, our experiments reveal that this strategy leads to a decline in performance as the sample size increases. To address this, we investigate preference data construction through the lens of the underlying normal distribution of sample rewards. We categorize the reward space into seven representative points and systematically explore all 21 (C 2 7) pairwise combinations. Through evaluations on four models using AlpacaEval 2, we find that selecting the rejected response at reward position µ-2σ, rather than the minimum reward, is crucial for optimal performance. We finally introduce a scalable preference data construction strategy that consistently enhances model performance as the number of samples scales up. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

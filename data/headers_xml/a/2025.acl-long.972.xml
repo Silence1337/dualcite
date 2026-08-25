@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AlignDistil: Token-Level Language Model Alignment as Adaptive Policy Distillation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Songming</forename><surname>Zhang</surname></persName>
+							<email>smzhang22@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Big Data &amp; Artificial Intelligence in Transportation, (Beijing Jiaotong University)</orgName>
+								<orgName type="department" key="dep2">Ministry of Education</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xue</forename><surname>Zhang</surname></persName>
+							<email>zhang_xue@bjtu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Big Data &amp; Artificial Intelligence in Transportation, (Beijing Jiaotong University)</orgName>
+								<orgName type="department" key="dep2">Ministry of Education</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Tencent Inc</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bojie</forename><surname>Hu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Tencent Inc</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yufeng</forename><surname>Chen</surname></persName>
+							<email>chenyf@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Big Data &amp; Artificial Intelligence in Transportation, (Beijing Jiaotong University)</orgName>
+								<orgName type="department" key="dep2">Ministry of Education</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinan</forename><surname>Xu</surname></persName>
+							<email>jaxu@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Big Data &amp; Artificial Intelligence in Transportation, (Beijing Jiaotong University)</orgName>
+								<orgName type="department" key="dep2">Ministry of Education</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AlignDistil: Token-Level Language Model Alignment as Adaptive Policy Distillation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">93ED5C60BCE18E89A3A2EB2A7909B8B1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:45+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In modern large language models (LLMs), LLM alignment is of crucial importance and is typically achieved through methods such as reinforcement learning from human feedback (RLHF) and direct preference optimization (DPO). However, in most existing methods for LLM alignment, all tokens in the response are optimized using a sparse, response-level reward or preference annotation. The ignorance of token-level rewards may erroneously punish high-quality tokens or encourage lowquality tokens, resulting in suboptimal performance and slow convergence speed. To address this issue, we propose AlignDistil, an RLHFequivalent distillation method for token-level reward optimization. Specifically, we introduce the reward learned by DPO into the RLHF objective and theoretically prove the equivalence between this objective and a token-level distillation process, where the teacher distribution linearly combines the logits from the DPO model and a reference model. On this basis, we further bridge the accuracy gap between the reward from the DPO model and the pure reward model, by building a contrastive DPO reward with a normal and a reverse DPO model. Moreover, to avoid under-and over-optimization on different tokens, we design a token adaptive logit extrapolation mechanism to construct an appropriate teacher distribution for each token. Experimental results demonstrate the superiority of our AlignDistil over existing methods and showcase fast convergence due to its tokenlevel distributional reward optimization.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

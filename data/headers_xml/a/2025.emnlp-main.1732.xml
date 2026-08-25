@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Lookahead Q-Cache: Achieving More Consistent KV Cache Eviction via Pseudo Query</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Yixuan</forename><surname>Wang</surname></persName>
+							<email>yixuanwang@ir.hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shiyu</forename><surname>Ji</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yijun</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuzhuang</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qingfu</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wanxiang</forename><surname>Che</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Lookahead Q-Cache: Achieving More Consistent KV Cache Eviction via Pseudo Query</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">746A9766905B7F05B1B7BA60D463CB38</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) rely on keyvalue cache (KV cache) to accelerate decoding by reducing redundant computations. However, the KV cache memory usage grows substantially with longer text sequences, posing challenges for efficient deployment. Existing KV cache eviction methods prune tokens using prefilling-stage attention scores, causing inconsistency with actual inference queries, especially under tight memory budgets. In this paper, we propose Lookahead Q-Cache (LAQ), a novel eviction framework that generates lowcost pseudo lookahead queries to better approximate the true decoding-stage queries. By using these lookahead queries as the observation window for importance estimation, LAQ achieves more consistent and accurate KV cache eviction aligned with real inference scenarios. Experimental results on LongBench and Needlein-a-Haystack benchmarks show that LAQ outperforms existing methods across various budget levels, achieving a 1 ∼ 4 point improvement on LongBench under limited cache budget. Moreover, LAQ is complementary to existing approaches and can be flexibly combined to yield further improvements.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Training MLPs on Graphs without Supervision</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zehong</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zheyuan</forename><surname>Zhang</surname></persName>
+							<email>zzhang42@nd.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Chuxu</forename><surname>Zhang</surname></persName>
+							<email>chuxu.zhang@uconn.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yanfang</forename><surname>Ye</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Notre</orgName>
+								<address>
+									<addrLine>Dame Notre Dame</addrLine>
+									<region>Indiana</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Notre</orgName>
+								<address>
+									<addrLine>Dame Notre Dame</addrLine>
+									<region>Indiana</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Connecticut Storrs</orgName>
+								<address>
+									<settlement>Connecticut</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Notre</orgName>
+								<address>
+									<addrLine>Dame Notre Dame</addrLine>
+									<region>Indiana</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Training MLPs on Graphs without Supervision</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A667E74297145D691627960A7FE969B3</idno>
+					<idno type="DOI">10.1145/3701551.3703550</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Data mining</term>
+					<term>• Computing methodologies → Unsupervised learning</term>
+					<term>Neural networks Graph Neural Networks</term>
+					<term>Inference Acceleration</term>
+					<term>Self-Supervision</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Graph Neural Networks (GNNs) have demonstrated their effectiveness in various graph learning tasks, yet their reliance on neighborhood aggregation during inference poses challenges for deployment in latency-sensitive applications, such as real-time financial fraud detection. To address this limitation, recent studies have proposed distilling knowledge from teacher GNNs into student Multi-Layer Perceptrons (MLPs) trained on node content, aiming to accelerate inference. However, these approaches often inadequately explore structural information when inferring unseen nodes. To this end, we introduce SimMLP, a Self-supervised framework for learning MLPs on graphs, designed to fully integrate rich structural information into MLPs. Notably, SimMLP is the first MLP-learning method that can achieve equivalence to GNNs in the optimal case. The key idea is to employ self-supervised learning to align the representations encoded by graph contextaware GNNs and neighborhood dependency-free MLPs, thereby fully integrating the structural information into MLPs. We provide a comprehensive theoretical analysis, demonstrating the equivalence between SimMLP and GNNs based on mutual information and inductive bias, highlighting SimMLP&apos;s advanced structural learning capabilities. Additionally, we conduct extensive experiments on 20 benchmark datasets, covering node classification, link prediction, and graph classification, to showcase SimMLP&apos;s superiority over state-of-the-art baselines, particularly in scenarios involving unseen nodes (e.g., inductive and cold-start node classification) where structural insights are crucial. Our codes are available at: https://github.com/Zehong-Wang/SimMLP.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

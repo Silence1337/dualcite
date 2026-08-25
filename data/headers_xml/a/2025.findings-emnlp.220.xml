@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ParetoRAG: Leveraging Sentence-Context Attention for Robust and Efficient Retrieval-Augmented Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ruobing</forename><surname>Yao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cybersecurity</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">State Key Laboratory of Cyberspace Security Defense</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yifei</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Shuang</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cybersecurity</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">State Key Laboratory of Cyberspace Security Defense</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">China Mobile Group</orgName>
+								<orgName type="institution">Hunan Company Limited</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Neng</forename><surname>Gao</surname></persName>
+							<email>gaoneng@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">State Key Laboratory of Cyberspace Security Defense</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenyang</forename><surname>Tu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">State Key Laboratory of Cyberspace Security Defense</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ParetoRAG: Leveraging Sentence-Context Attention for Robust and Efficient Retrieval-Augmented Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B44F3588CCA5349B52703C3E7E495F06</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>While Retrieval-Augmented Generation systems enhance Large Language Models by incorporating external knowledge, they still face persistent challenges in retrieval inefficiency and the inability of LLMs to filter out irrelevant information. We present ParetoRAG, an unsupervised framework that optimizes RAG systems through sentence-level refinement guided by the Pareto principle. By decomposing paragraphs into sentences and dynamically reweighting core content while preserving contextual coherence, ParetoRAG achieves dual improvements in retrieval precision and generation quality without requiring additional training or API resources, while using only 40% of the tokens compared to traditional RAG approaches. This framework has been empirically validated across various datasets, LLMs, and retrievers. Furthermore, we show that ParetoRAG&apos;s architectural improvements are orthogonally compatible with adaptive noiserobust models, enabling retrieval-augmented optimization and robust training to enhance generation quality mutually. This highlights complementary architectural refinements and noise mitigation, offering insights for integrating retrieval augmentation with robustness enhancement.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

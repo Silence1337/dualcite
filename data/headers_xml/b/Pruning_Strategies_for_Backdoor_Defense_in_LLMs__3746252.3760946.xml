@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Pruning Strategies for Backdoor Defense in LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Santosh</forename><surname>Chapagain</surname></persName>
+							<email>santosh.chapagain@usu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Utah State University</orgName>
+								<orgName type="institution" key="instit2">Utah State University</orgName>
+								<orgName type="institution" key="instit3">Utah State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shah</forename><forename type="middle">Muhammad</forename><surname>Hamdi</surname></persName>
+							<email>s.hamdi@usu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Utah State University</orgName>
+								<orgName type="institution" key="instit2">Utah State University</orgName>
+								<orgName type="institution" key="instit3">Utah State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Soukaina</forename><surname>Filali Boubrahimi</surname></persName>
+							<email>soukaina.boubrahimi@usu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Utah State University</orgName>
+								<orgName type="institution" key="instit2">Utah State University</orgName>
+								<orgName type="institution" key="instit3">Utah State University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Pruning Strategies for Backdoor Defense in LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">79FD3A902D845D9BF6340B00352ED9AC</idno>
+					<idno type="DOI">10.1145/3746252.3760946</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Machine Learning</term>
+					<term>Backdoor Attacks</term>
+					<term>NLP Security</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Backdoor attacks are a significant threat to the performance and integrity of pre-trained language models. Although such models are routinely fine-tuned for downstream NLP tasks, recent work shows they remain vulnerable to backdoor attacks that survive vanilla fine-tuning. These attacks are difficult to defend because end users typically lack knowledge of the attack triggers. Such attacks consist of stealthy malicious triggers introduced through subtle syntactic or stylistic manipulations, which can bypass traditional detection and remain in the model, making post-hoc purification essential. In this study, we explore whether attention-head pruning can mitigate these threats without any knowledge of the trigger or access to a clean reference model. To this end, we design and implement six pruning-based strategies: (i) gradient-based pruning, (ii) layer-wise variance pruning, (iii) gradient-based pruning with structured L1/L2 sparsification, (iv) randomized ensemble pruning, (v) reinforcementlearning-guided pruning, and (vi) Bayesian uncertainty pruning. Each method iteratively removes the least informative heads while monitoring validation accuracy to avoid over-pruning. Experimental evaluation shows that gradient-based pruning performs best while defending the syntactic triggers, whereas reinforcement learning and Bayesian pruning better withstand stylistic attacks. CCS Concepts • Computing methodologies → Natural language processing; Natural language processing (NLP); • Security and privacy → Malware and its mitigation; Malware mitigation.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

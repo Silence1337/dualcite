@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Efficient One-shot Compression via Low-Rank Local Feature Distillation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yaya</forename><surname>Sy</surname></persName>
+							<email>yaya.sy@loria.fr</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Université de Lorraine</orgName>
+								<orgName type="institution" key="instit2">CNRS</orgName>
+								<address>
+									<postCode>F-54000</postCode>
+									<settlement>Nancy</settlement>
+									<region>Inria LORIA</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christophe</forename><surname>Cerisara</surname></persName>
+							<email>christophe.cerisara@loria.fr</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Université de Lorraine</orgName>
+								<orgName type="institution" key="instit2">CNRS</orgName>
+								<address>
+									<postCode>F-54000</postCode>
+									<settlement>Nancy</settlement>
+									<region>Inria LORIA</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Irina</forename><surname>Illina</surname></persName>
+							<email>illina@loria.fr</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Université de Lorraine</orgName>
+								<orgName type="institution" key="instit2">CNRS</orgName>
+								<address>
+									<postCode>F-54000</postCode>
+									<settlement>Nancy</settlement>
+									<region>Inria LORIA</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Efficient One-shot Compression via Low-Rank Local Feature Distillation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E3D5170824F14BD88BD3FDA88C746BA2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Current structured pruning approaches for large language models typically involve two steps: (1) compression using calibration data and (2) costly continued pretraining on billions of tokens to recover lost performance. This second step is necessary as the first significantly impacts model accuracy. Moreover, prior research suggests that pretrained Transformer weights are not necessarily low-rank, unlike their activations, making one-shot structured pruning challenging. Based on this observation, we propose Lillama, a compression method that locally distills activations with low-rank weights. Using SVD for initialization and a joint loss combining teacher and student activations, we accelerate convergence and reduce memory use with local gradient updates. Lillama compresses Mixtral-8x7B within minutes on a single A100 GPU, removing 10 billion parameters while retaining over 95% of its original performance. Phi-2 3B can be compressed by 40% with just 13 million calibration tokens, resulting in a small model that competes with recent models of similar size. The method generalizes well to non-transformer architectures, compressing Mamba-3B by 20% while maintaining 99% performance 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

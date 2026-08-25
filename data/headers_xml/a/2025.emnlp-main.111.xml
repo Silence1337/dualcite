@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Unveiling Internal Reasoning Modes in LLMs: A Deep Dive into Latent Reasoning vs. Factual Shortcuts with Attribute Rate Ratio</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yiran</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haifeng</forename><surname>Sun</surname></persName>
+							<email>hfsun@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingyu</forename><surname>Wang</surname></persName>
+							<email>wangjingyu@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Qi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zirui</forename><surname>Zhuang</surname></persName>
+							<email>zhuangzirui@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huazheng</forename><surname>Wang</surname></persName>
+							<email>wanghz@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pengfei</forename><surname>Ren</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianxin</forename><surname>Liao</surname></persName>
+							<email>liaojx@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Unveiling Internal Reasoning Modes in LLMs: A Deep Dive into Latent Reasoning vs. Factual Shortcuts with Attribute Rate Ratio</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">16098BEC9EE5AF57BD8ABC3CF7796FB9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Existing research in multi-hop questions has identified two reasoning modes: latent reasoning and factual shortcuts, but has not deeply investigated how these modes differ during inference. This impacts both model generalization ability and downstream reasoning tasks. In this work, we systematically examine these distinctions and propose a simple and efficient classification metric, Attribute Rate Ratio (ARR). First, we construct specialized datasets corresponding to the two reasoning modes based on our proposed criteria. Then, using reverse engineering methods, including attention knockout and logit lens techniques, we reveal that subject representations differ significantly across modes: latent reasoning encodes bridge-related information for final answer extraction, while factual shortcuts bypass intermediate reasoning and resemble single-hop factual queries. Finally, our proposed ARR achieves around 90% accuracy on our datasets and demonstrates effectiveness in RAG conflict scenarios, showing that model behavior under conflicting prompts is closely tied to its underlying reasoning mode. Our findings and proposed metric have significant potential for advancing LLM development and applications.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

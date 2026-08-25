@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">HELENE: Hessian Layer-wise Clipping and Gradient Annealing for Accelerating Fine-Tuning LLM with Zeroth-Order Optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Huaqin</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Georgia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaxi</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Georgia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Pan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Georgia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shizhe</forename><surname>Liang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Georgia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaofeng</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Emory University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Dou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Georgia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianming</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Georgia</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Jin</forename><surname>Lu</surname></persName>
+							<email>jin.lu@uga.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Georgia</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">HELENE: Hessian Layer-wise Clipping and Gradient Annealing for Accelerating Fine-Tuning LLM with Zeroth-Order Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D9B2112E2413C097DAB81698B8D492AC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Fine-tuning large language models (LLMs) faces significant memory challenges due to the high cost of back-propagation. MeZO addresses this issue using zeroth-order (ZO) optimization, matching memory usage to inference but suffering from slow convergence due to varying curvatures across model parameters. To overcome this limitation, we propose HELENE, a scalable and memoryefficient optimizer that integrates annealed A-GNB gradients with diagonal Hessian estimation and layer-wise clipping as a second-order pre-conditioner. HELENE provably accelerates and stabilizes convergence by reducing dependence on total parameter space and scaling with the larger layer dimension. Experiments on RoBERTa-large and OPT-1.3B demonstrate superior performances, achieving up to 20× speedup over MeZO with an average accuracy improvement of 1.5%. HELENE also supports full and parameter-efficient fine-tuning methods, outperforming several state-of-the-art optimizers.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

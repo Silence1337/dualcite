@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Enhancing Cross-Tokenizer Knowledge Distillation with Contextual Dynamical Mapping</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yijie</forename><surname>Chen</surname></persName>
+							<email>chenyf@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="laboratory">Key Laboratory of Big Data &amp; Artificial Intelligence in Transportation (Beijing Jiaotong University)</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yijin</forename><surname>Liu</surname></persName>
+							<email>yijinliu@tencent.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<region>Tencent Inc</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fandong</forename><surname>Meng</surname></persName>
+							<email>fandongmeng@tencent.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<region>Tencent Inc</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yufeng</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="laboratory">Key Laboratory of Big Data &amp; Artificial Intelligence in Transportation (Beijing Jiaotong University)</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinan</forename><surname>Xu</surname></persName>
+							<email>jaxu@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="laboratory">Key Laboratory of Big Data &amp; Artificial Intelligence in Transportation (Beijing Jiaotong University)</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<region>Tencent Inc</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Enhancing Cross-Tokenizer Knowledge Distillation with Contextual Dynamical Mapping</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4DB7D035C7D18718F4ED396BF37947AB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Knowledge Distillation (KD) has emerged as a prominent technique for model compression. However, conventional KD approaches primarily focus on homogeneous architectures with identical tokenizers, constraining their applicability in cross-architecture scenarios. As for the cross-tokenizer KD, the differences in the tokenizers give rise to two fundamental challenges: (1) sequence misalignment caused by divergent tokenization strategies, and (2) mismatched vocabulary size and composition. While existing probability-matching methods attempt to address these issues, their efficacy remains limited due to suboptimal alignment in both the sequence and vocabulary aspects. To overcome these limitations, we propose Contextual Dynamic Mapping (CDM), a novel crosstokenizer distillation framework that employs contextual information to enhance sequence alignment precision and dynamically improves vocabulary mapping. We evaluated the effectiveness of our approach across five advanced and widely-used model families (i.e, LLama3, Phi3, Gemma2, OPT and Qwen2), which were configured into three distinct teacher-student pairs. Our method shows significant advantages over existing cross-tokenizer distillation baselines across diverse benchmarks, including instruction-following, code generation and math. Notably, our analysis reveals that combining conventional same-tokenizer distillation and cross-tokenizer distillation through CDM yields further performance improvements. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

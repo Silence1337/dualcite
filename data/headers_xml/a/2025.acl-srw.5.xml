@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rethinking Full Finetuning from Pretraining Checkpoints in Active Learning for African Languages</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bonaventure</forename><forename type="middle">F P</forename><surname>Dossou</surname></persName>
+							<email>bonaventure.dossou@mila.quebec</email>
+							<affiliation key="aff0">
+								<orgName type="institution">McGill University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">AI Institute 3 York University</orgName>
+								<address>
+									<settlement>Mila</settlement>
+									<region>Quebec</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Inès</forename><surname>Arous</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jackie</forename><surname>Chi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kit</forename><surname>Cheung</surname></persName>
+							<email>cheungja@mila.quebec</email>
+							<affiliation key="aff0">
+								<orgName type="institution">McGill University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">CIFAR AI Chair</orgName>
+								<address>
+									<region>Mila</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rethinking Full Finetuning from Pretraining Checkpoints in Active Learning for African Languages</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8E25333F8D2E3A9867EB3DB3EFCF4FC0</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Active learning (AL) aims to reduce annotation effort by iteratively selecting the most informative samples for labeling. The dominant strategy in AL involves fully finetuning the model on all acquired data after each round, which is computationally expensive in multilingual and low-resource settings. This paper investigates continual finetuning (CF), an alternative update strategy where the model is updated only on newly acquired samples at each round. We evaluate CF against full finetuning (FA) across 28 African languages using MasakhaNEWS and SIB-200. Our analysis reveals three key findings. First, CF matches or outperforms FA for languages included in the model&apos;s pretraining, achieving up to 35% reductions in GPU memory, FLOPs, and training time. Second, CF performs comparably even for languages not seen during pretraining when they are typologically similar to those that were. Third, CF&apos;s effectiveness depends critically on uncertainty-based acquisition; without it, performance deteriorates significantly. While FA remains preferable for some low-resource languages, the overall results establish CF as a robust, cost-efficient alternative for active learning in multilingual NLP. These findings motivate the development of hybrid AL strategies that adapt fine-tuning behavior based on pretraining coverage, language typology, and acquisition dynamics. Our code is available here.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

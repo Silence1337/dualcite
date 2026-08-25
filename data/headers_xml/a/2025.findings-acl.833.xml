@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Boost, Disentangle, and Customize: A Robust System2-to-System1 Pipeline for Code Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kounianhua</forename><surname>Du</surname></persName>
+							<email>kounianhuadu@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hanjing</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianxing</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jizheng</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyi</forename><surname>Dai</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yasheng</forename><surname>Wang</surname></persName>
+							<email>wangyasheng@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruiming</forename><surname>Tang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yong</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Wang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University College London Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weinan</forename><surname>Zhang</surname></persName>
+							<email>wnzhang@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Boost, Disentangle, and Customize: A Robust System2-to-System1 Pipeline for Code Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D173299BE7F2AB3F7B7EEA4A8B007627</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have demonstrated remarkable capabilities in various domains, particularly in system 1 tasks, yet the intricacies of their problem-solving mechanisms in system 2 tasks are not sufficiently explored. Recent research on System2-to-System1 methods surge, exploring the System 2 reasoning knowledge via inference-time computation and compressing the explored knowledge into System 1 process. In this paper, we focus on code generation, which is a representative System 2 task, and identify two primary challenges: (1) the complex hidden reasoning processes and (2) the heterogeneous data distributions that complicate the exploration and training of robust LLM solvers. To address these limitations, we propose BDC, a novel framework that Boosts reasoning exploration via multi-agent collaboration, Disentangles heterogeneous data into specialized experts, and Customizes solutions through dynamic model composition. BDC integrates a Monte Carlo Tree-of-Agents algorithm, where multiple LLMs mutually verify and refine reasoning paths through reflectionguided pruning, enabling efficient exploration of high-quality solutions. To handle data diversity, we cluster problems by latent semantics, train composable LoRA experts on each cluster, and deploy an input-aware hypernetwork to dynamically merge these experts into tailored solvers. Experiments on APPS and CodeContest benchmarks demonstrate BDC&apos;s superiority: it achieves up to 73.8% accuracy on hard problems, outperforming state-of-the-art methods like LATS and RethinkMCTS by 9-15%. This work lays the groundwork for advancing LLM capabilities in complex reasoning tasks, offering a novel System2-to-System1 solution.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

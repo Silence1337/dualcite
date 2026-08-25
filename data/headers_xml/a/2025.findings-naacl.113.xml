@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GPT-4V Cannot Generate Radiology Reports Yet</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuyang</forename><surname>Jiang</surname></persName>
+							<email>yuyang2001@uchicago.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Chicago</orgName>
+								<orgName type="institution" key="instit2">University of Chicago</orgName>
+								<orgName type="institution" key="instit3">University of Chicago</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">University of Chicago</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chacha</forename><surname>Chen</surname></persName>
+							<email>chacha@uchicago.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Chicago</orgName>
+								<orgName type="institution" key="instit2">University of Chicago</orgName>
+								<orgName type="institution" key="instit3">University of Chicago</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">University of Chicago</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dang</forename><surname>Nguyen</surname></persName>
+							<email>dangnguyen@uchicago.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Chicago</orgName>
+								<orgName type="institution" key="instit2">University of Chicago</orgName>
+								<orgName type="institution" key="instit3">University of Chicago</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">University of Chicago</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benjamin</forename><forename type="middle">M</forename><surname>Mervak</surname></persName>
+							<email>bmervak@med.umich.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Chicago</orgName>
+								<orgName type="institution" key="instit2">University of Chicago</orgName>
+								<orgName type="institution" key="instit3">University of Chicago</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">University of Chicago</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+							<email>chenhao@uchicago.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Chicago</orgName>
+								<orgName type="institution" key="instit2">University of Chicago</orgName>
+								<orgName type="institution" key="instit3">University of Chicago</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">University of Chicago</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GPT-4V Cannot Generate Radiology Reports Yet</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">463FF63E7167CEBDA41C2F175A3223B3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:13+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>GPT-4&apos;s purported strong multimodal abilities raise interests in using it to automate radiology report writing, but there lacks thorough evaluations. In this work, we perform a systematic evaluation of GPT-4 (4o and visionpreview) in generating radiology reports across three chest X-ray report benchmarks: MIMIC-CXR, CheXpert Plus, and IU X-Ray. We attempt to directly generate reports with different prompting strategies and find that the models fail terribly in both lexical metrics and clinical efficacy metrics. To understand the low performance, we decompose the task into two steps: 1) the medical image reasoning step of predicting medical condition labels from images; and 2) the report synthesis step of generating reports from (groundtruth) conditions. We show that GPT-4&apos;s performance in image reasoning is consistently low across different prompts. In fact, the distributions of modelpredicted labels remain constant regardless of which groundtruth conditions are present on the image, suggesting that the model is not interpreting chest X-rays meaningfully. Even when given groundtruth conditions in report synthesis, its generated reports are less correct and less natural-sounding than a finetuned Llama. Altogether, our findings cast doubt on the viability of using GPT-4 in a radiology workflow. * Equal contribution.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

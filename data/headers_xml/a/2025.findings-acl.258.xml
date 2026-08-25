@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AdaV: Adaptive Text-visual Redirection for Vision-Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiayi</forename><surname>Han</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Laboratory of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Du</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Interactive Entertainment Group</orgName>
+								<orgName type="institution">Tencent Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiwen</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Laboratory of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guanming</forename><surname>Liang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Interactive Entertainment Group</orgName>
+								<orgName type="institution">Tencent Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangguo</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Laboratory of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weibo</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Laboratory of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Donghong</forename><surname>Han</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Zixun</forename><surname>Sun</surname></persName>
+							<email>zixunsun@tencent.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Interactive Entertainment Group</orgName>
+								<orgName type="institution">Tencent Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AdaV: Adaptive Text-visual Redirection for Vision-Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">656F2BA000EC52D3CB5588C5B148AD05</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The success of Vision-Language Models (VLMs) often relies on high-resolution schemes that preserve image details, while these approaches also generate an excess of visual tokens, leading to a substantial decrease in model efficiency. A typical VLM includes a visual encoder, a text encoder, and an LLM. Recent studies suggest pruning visual tokens based on visual and textual priors to accelerate VLMs without additional training costs. However, these methods often overlook prompt semantics or suffer from biased self-attention in the LLM. Inspired by the efficient mechanisms of the human brain for multimodal understanding, we introduce AdaV, a novel training-free visual token pruning method. By emulating the neural pathways that preprocess visual and auditory information before the reasoning stage, we shift text-guided visual attention redirection to the pre-LLM stage, which reduces biased token pruning and enhances model robustness with a limited visual token budget. A Self-adaptive Cross-modality Attention Redirection (SCAR) module is further proposed that effectively merges and redirects visual attention with text-to-image attention. Extensive experiments on seven challenging benchmarks demonstrate that our AdaV achieves SOTA performance in training-free VLM acceleration and can be plug-and-play on various VLMs. The code will be publicly available at https://github.com/JiayiV/AdaV.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

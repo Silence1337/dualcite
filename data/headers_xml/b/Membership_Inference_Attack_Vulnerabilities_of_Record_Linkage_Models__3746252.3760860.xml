@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Membership Inference Attack Vulnerabilities of Record Linkage Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Piyumi</forename><surname>Seneviratne</surname></persName>
+							<email>piyumi.seneviratne@mq.edu.au</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Macquarie University Sydney</orgName>
+								<address>
+									<region>NSW</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dinusha</forename><surname>Vatsalan</surname></persName>
+							<email>dinusha.vatsalan@mq.edu.au</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Macquarie University Sydney</orgName>
+								<address>
+									<region>NSW</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dali</forename><surname>Kaafar</surname></persName>
+							<email>dali.kaafar@mq.edu.au</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Macquarie University Sydney</orgName>
+								<address>
+									<region>NSW</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Membership Inference Attack Vulnerabilities of Record Linkage Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">20C6CB5A6309E1A19701537DD7D99414</idno>
+					<idno type="DOI">10.1145/3746252.3760860</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Deduplication</term>
+					<term>Entity resolution</term>
+					<term>• Security and privacy</term>
+					<term>Unstructured Record Linkage, Membership Inference</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Record linkage plays a crucial role in integrating health, legal, and administrative data. In domains such as healthcare, unstructured records, including clinical notes, contain rich information, making their integration valuable for applications like clinical trials. While deep learning models have improved linkage quality, their privacy risks remain under-explored. We present what is, to our knowledge, the first systematic study of membership inference attack vulnerabilities in record linkage models trained on de-identified texts. Unlike traditional classifiers, linkage models operate on record pairs, prompting a rethinking of what constitutes membership leakage. Does it occur if only a record pair was seen together during training or individually? Or if neither was seen, but the pair resembles known patterns? We introduce a black-box attack based on semantic perturbation sensitivity, requiring no access to the model&apos;s internals. Our findings expose a previously unaddressed membership inference vulnerability in record linkage models: black-box attacks, even with a simple threshold-based attack model, achieved up to 92% precision and AUC 0.79. Across record linkage models trained on MIMIC-IV and PMC-Patients datasets, we observe that perturbing training-seen phrases causes significantly larger confidence shifts (e.g., Δ𝑠 =-0.648) and higher change in predicted label (label flip from 0 = non-match to 1 = match and vice versa) (e.g., 68.75%) compared to unseen variants. These preliminary results reveal membership inference vulnerabilities in text-based linkage systems, highlighting the need for deeper investigation into privacy risks, motivating new lines of privacy defences for pairwise models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

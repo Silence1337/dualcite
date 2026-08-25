@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Sliding Windows Are Not the End: Exploring Full Ranking with Long-Context Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenhan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Ma</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Baidu Inc</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yutao</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ziliang</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuaiqiang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Baidu Inc</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dawei</forename><surname>Yin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Baidu Inc</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Zhicheng</forename><surname>Dou</surname></persName>
+							<email>dou@ruc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Beijing Key Laboratory of Research on Large Models and Intelligent Governance</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Sliding Windows Are Not the End: Exploring Full Ranking with Long-Context Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AEA1477AD3593ECCD013F074FAB7CA91</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) have shown exciting performance in listwise passage ranking. Due to the limited input length, existing methods often adopt the sliding window strategy. Such a strategy, though effective, is inefficient as it involves repetitive and serialized processing, which usually re-evaluates relevant passages multiple times. As a result, it incurs redundant API costs, which are proportional to the number of inference tokens. The development of long-context LLMs enables the full ranking of all passages within a single inference, avoiding redundant API costs. In this paper, we conduct a comprehensive study of long-context LLMs for ranking tasks in terms of efficiency and effectiveness. Surprisingly, our experiments reveal that full ranking with long-context LLMs can deliver superior performance in the supervised fine-tuning setting with a huge efficiency improvement. Furthermore, we identify two limitations of fine-tuning the full ranking model based on existing methods: (1) the sliding window strategy fails to produce a full ranking list as a training label, and (2) the language modeling loss cannot emphasize top-ranked passage IDs in the label. To alleviate these issues, we propose a complete listwise label construction approach and a novel importance-aware learning objective for full ranking. Experiments show the superior performance of our method over baselines. Our codes are available at https: //github.com/RUC-NLPIR/fullrank.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

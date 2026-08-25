@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LITEASR: Efficient Automatic Speech Recognition with Low-Rank Approximation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Keisuke</forename><surname>Kamahori</surname></persName>
+							<email>kamahori@cs.washington.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Kotoba Technologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jungo</forename><surname>Kasai</surname></persName>
+							<email>jkasai@kotoba.tech</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Kotoba Technologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Noriyuki</forename><surname>Kojima</surname></persName>
+							<email>nkojima@kotoba.tech</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Kotoba Technologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Baris</forename><surname>Kasikci</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LITEASR: Efficient Automatic Speech Recognition with Low-Rank Approximation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2600A57E231AB2E720DDC80C6E1201D4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:51+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Modern automatic speech recognition (ASR) models, such as OpenAI&apos;s Whisper, rely on deep encoder-decoder architectures, and their encoders are a critical bottleneck for efficient deployment due to high computational intensity. We introduce LITEASR, a low-rank compression scheme for ASR encoders that significantly reduces inference costs while maintaining transcription accuracy. Our approach leverages the strong low-rank properties observed in intermediate activations: by applying principal component analysis (PCA) with a small calibration dataset, we approximate linear transformations with a chain of low-rank matrix multiplications, and further optimize self-attention to work in reduced dimensionality. Evaluation results show that our method can compress Whisper large-v3&apos;s encoder size by over 50%, matching Whisper medium&apos;s size with better transcription accuracy, thereby establishing a new Pareto frontier of accuracy and efficiency. The code of LITEASR is available at https://github.com/efeslab/LiteASR.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

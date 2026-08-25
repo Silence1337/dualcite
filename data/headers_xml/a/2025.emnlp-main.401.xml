@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">WEBAGENT-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhepei</forename><surname>Wei</surname></persName>
+							<email>zhepei.wei@virginia.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenlin</forename><surname>Yao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yao</forename><surname>Liu</surname></persName>
+							<email>yaoliuai@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weizhi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qin</forename><surname>Lu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Qiu</surname></persName>
+							<email>liangqxx@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Changlong</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Puyang</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Zhang</surname></persName>
+							<email>chaozhang@gatech.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bing</forename><surname>Yin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyokun</forename><surname>Yun</surname></persName>
+							<email>yunhyoku@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lihong</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia ‡ Amazon § Georgia Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">WEBAGENT-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BF1334630EE9B7D0DFBC07EAAB446146</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:59+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>While reinforcement learning (RL) has demonstrated remarkable success in enhancing large language models (LLMs), it has primarily focused on single-turn tasks such as solving math problems. Training effective web agents for multi-turn interactions remains challenging due to the complexity of long-horizon decisionmaking across dynamic web interfaces. In this work, we present WEBAGENT-R1, a simple yet effective end-to-end multi-turn RL framework for training web agents. It learns directly from online interactions with web environments by generating diverse trajectories in parallel, entirely guided by binary rewards depending on task success. Experiments on the WebArena-Lite benchmark demonstrate the effectiveness of WEBAGENT-R1, boosting the task success rate of Qwen-2.5-3B from 6.1% to 33.9% and Llama-3.1-8B from 8.5% to 44.8%, significantly outperforming existing state-of-the-art methods and strong proprietary models such as OpenAI o3. In-depth analyses reveal the effectiveness of the thinking-based prompting strategy and test-time scaling through increased interactions for web tasks. We further investigate different RL initialization policies by introducing two variants, namely WEBAGENT-R1-ZERO and WEBAGENT-R1-COT, which highlight the importance of the warm-up training stage (i.e., behavior cloning) and provide insights on incorporating long chain-of-thought (CoT) reasoning in web agents. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

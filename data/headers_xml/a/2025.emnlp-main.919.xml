@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Improbable Bigrams Expose Vulnerabilities of Incomplete Tokens in Byte-Level Tokenizers</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Eugene</forename><surname>Jang</surname></persName>
+							<email>jang.eu@northeastern.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Northeastern University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kimin</forename><surname>Lee</surname></persName>
+							<email>kiminlee@kaist.ac.kr</email>
+							<affiliation key="aff1">
+								<orgName type="institution">KAIST</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jin-Woo</forename><surname>Chung</surname></persName>
+							<email>jwchung@s2w.inc</email>
+							<affiliation key="aff2">
+								<orgName type="institution">S2W Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Keuntae</forename><surname>Park</surname></persName>
+							<email>keuntae.park@s2w.inc</email>
+							<affiliation key="aff2">
+								<orgName type="institution">S2W Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seungwon</forename><surname>Shin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">KAIST</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Improbable Bigrams Expose Vulnerabilities of Incomplete Tokens in Byte-Level Tokenizers</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">93F267B63411066E0AD5C20B98833FA9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Tokenization is a crucial step that bridges human-readable text with model-readable discrete tokens. However, recent studies have revealed that tokenizers can be exploited to elicit unwanted model behaviors. In this work, we investigate incomplete tokens, i.e., undecodable tokens with stray bytes resulting from bytelevel byte-pair encoding (BPE) tokenization. We hypothesize that such tokens are heavily reliant on their adjacent tokens and are fragile when paired with unfamiliar tokens. To demonstrate this vulnerability, we introduce improbable bigrams: out-of-distribution combinations of incomplete tokens designed to exploit their dependency. Our experiments show that improbable bigrams are significantly prone to hallucinatory behaviors. Surprisingly, the same phrases have drastically lower rates of hallucination (90% reduction in Llama3.1) when an alternative tokenization is used. We caution against the potential vulnerabilities introduced by byte-level BPE tokenizers, which may introduce blind spots to language models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

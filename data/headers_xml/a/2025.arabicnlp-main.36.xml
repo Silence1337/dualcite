@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ArabicWeb-Edu: Educational Quality Data for Arabic LLM Training</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Majd</forename><surname>Hawasly</surname></persName>
+							<email>mhawasly@hbku.edu.qa</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qatar Computing Research Institute</orgName>
+								<orgName type="institution" key="instit2">HBKU Doha</orgName>
+								<address>
+									<country key="QA">Qatar</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tasnim</forename><surname>Mohiuddin</surname></persName>
+							<email>mmohiuddin@hbku.edu.qa</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qatar Computing Research Institute</orgName>
+								<orgName type="institution" key="instit2">HBKU Doha</orgName>
+								<address>
+									<country key="QA">Qatar</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hamdy</forename><surname>Mubarak</surname></persName>
+							<email>hmubarak@hbku.edu.qa</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qatar Computing Research Institute</orgName>
+								<orgName type="institution" key="instit2">HBKU Doha</orgName>
+								<address>
+									<country key="QA">Qatar</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sabri</forename><surname>Boughorbel</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Qatar Computing Research Institute</orgName>
+								<orgName type="institution" key="instit2">HBKU Doha</orgName>
+								<address>
+									<country key="QA">Qatar</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ArabicWeb-Edu: Educational Quality Data for Arabic LLM Training</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C05336DC52206E5A77AC4BA7176A44FB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The quality of training data plays a critical role in the performance of large language models (LLMs). This is especially true for low-resource languages where high-quality content is relatively scarce. Inspired by the success of FineWeb-Edu (Lozhkov et al., 2024) for English, we construct a native Arabic educational-quality dataset using similar methodological principles. We begin by sampling 1 million Arabic web documents from Common Crawl and labeling them into six quality classes (0-5) with Qwen-2.5-72B-Instruct model using a classification prompt adapted from FineWeb-Edu. These labeled examples are used to train a robust classifier capable of distinguishing educational content from general web text. We train a classification head on top of a multilingual 300M encoder model, then use this classifier to filter a large Arabic web corpus, discarding documents with low educational value. To evaluate the impact of this curation, we pretrain from scratch two bilingual English-Arabic 7B LLMs on 800 billion tokens using the filtered and unfiltered data and compare their performance across a suite of benchmarks. Our results show a significant improvement when using the filtered educational dataset, validating the effectiveness of quality filtering as a component in a balanced data mixture for Arabic LLM development. This work addresses the scarcity of high-quality Arabic training data and offers a scalable methodology for curating educational quality content in low-resource languages.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

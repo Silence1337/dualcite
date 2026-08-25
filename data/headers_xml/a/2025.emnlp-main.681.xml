@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Do Large Language Models Truly Grasp Addition? A Rule-Focused Diagnostic Using Two-Integer Arithmetic</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Yan</surname></persName>
+							<email>yan.yang@zju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Engineering</orgName>
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Lu</surname></persName>
+							<email>luyu@westlake.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Engineering</orgName>
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Renjun</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenzhong</forename><surname>Lan</surname></persName>
+							<email>lanzhenzhong@westlake.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Engineering</orgName>
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Do Large Language Models Truly Grasp Addition? A Rule-Focused Diagnostic Using Two-Integer Arithmetic</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AFBA52D232423EBFB6425B25141CF5A5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:05+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) achieve impressive results on advanced mathematics benchmarks but sometimes fail on basic arithmetic tasks, raising the question of whether they have truly grasped fundamental arithmetic rules or are merely relying on pattern matching. To unravel this issue, we systematically probe LLMs&apos; understanding of two-integer addition (0 to 2 64) by testing three crucial properties: commutativity (A + B = B + A), representation invariance via symbolic remapping (e.g., 7 → Y), and consistent accuracy scaling with operand length. Our evaluation of 12 leading LLMs reveals a stark disconnect: while models achieve high numeric accuracy (73.8-99.8%), they systematically fail these diagnostics. Specifically, accuracy plummets to ≤ 7.5% with symbolic inputs, commutativity is violated in up to 20% of cases, and accuracy scaling is non-monotonic. Interventions further expose this pattern-matching reliance: explicitly providing rules degrades performance by 29.49%, while prompting for explanations before answering merely maintains baseline accuracy. These findings demonstrate that current LLMs address elementary addition via pattern matching, not robust rule induction, motivating new diagnostic benchmarks and innovations in model architecture and training to cultivate genuine mathematical reasoning. we release both our diagnostic dataset and the code for dataset generation at https://github.com/ kuri-leo/llm-arithmetic-diagnostic.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

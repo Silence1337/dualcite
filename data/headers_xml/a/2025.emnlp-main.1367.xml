@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Spec-VLA: Speculative Decoding for Vision-Language-Action Models with Relaxed Acceptance</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Songsheng</forename><surname>Wang</surname></persName>
+							<email>nlp2ct.songsheng@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Rucheng</forename><surname>Yu</surname></persName>
+							<email>ruchengyu1130@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer and Information Science</orgName>
+								<orgName type="laboratory">CT Lab</orgName>
+								<orgName type="institution">University of Macau</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Infinigence AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhihang</forename><surname>Yuan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer and Information Science</orgName>
+								<orgName type="laboratory">CT Lab</orgName>
+								<orgName type="institution">University of Macau</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Infinigence AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Yu</surname></persName>
+							<email>yuchao@mail.tsinghua.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Gao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Wang</surname></persName>
+							<email>yu-wang@mail.tsinghua.edu</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Derek</forename><forename type="middle">F</forename><surname>Wong</surname></persName>
+							<email>derekfw@um.edu.mo</email>
+						</author>
+						<author>
+							<persName><surname>Nlp</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Zhongguancun Academy</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Spec-VLA: Speculative Decoding for Vision-Language-Action Models with Relaxed Acceptance</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">96A7CDDD9A55D624C9EE72D332563598</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Vision-Language-Action (VLA) models have made substantial progress by leveraging the robust capabilities of Visual Language Models (VLMs). However, VLMs&apos; significant parameter size and autoregressive (AR) decoding nature impose considerable computational demands on VLA models. While Speculative Decoding (SD) has shown efficacy in accelerating Large Language Models (LLMs) by incorporating efficient drafting and parallel verification, allowing multiple tokens to be generated in one forward pass, its application to VLA models remains unexplored. This work introduces Spec-VLA, an SD framework designed to accelerate VLA models. Due to the difficulty of the action prediction task and the greedy decoding mechanism of the VLA models, the direct application of the advanced SD framework to the VLA prediction task yields a minor speed improvement. To boost the generation speed, we propose an effective mechanism to relax acceptance utilizing the relative distances represented by the action tokens of the VLA model. Empirical results across diverse test scenarios affirm the effectiveness of the Spec-VLA framework, and further analysis substantiates the impact of our proposed strategies, which enhance the acceptance length by 44%, achieving 1.42× speedup compared with the OpenVLA baseline, without compromising the success rate. The success of the Spec-VLA framework highlights the potential for broader application of speculative execution in VLA prediction scenarios. We make our code and data publicly available at https: //github.com/PineTreeWss/SpecVLA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

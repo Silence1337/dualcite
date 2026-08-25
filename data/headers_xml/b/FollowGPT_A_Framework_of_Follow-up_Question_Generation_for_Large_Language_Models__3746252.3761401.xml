@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FollowGPT: A Framework of Follow-up Question Generation for Large Language Models via Conversation Log Mining</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ziliang</forename><surname>Zhao</surname></persName>
+							<email>zhaoziliang@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhicheng</forename><surname>Dou</surname></persName>
+							<email>dou@ruc.edu.cn</email>
+							<idno type="ORCID">0000-0002-9781-948X</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Shiren Song Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FollowGPT: A Framework of Follow-up Question Generation for Large Language Models via Conversation Log Mining</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C084E9F705C96E1E63A17696B4A27CD0</idno>
+					<idno type="DOI">10.1145/3746252.3761401</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Follow-up Question</term>
+					<term>Large Language Model</term>
+					<term>Conversational Search</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>During interactions between users and Large Language Models (LLMs), users often engage in multi-turn questioning. Understanding the user&apos;s potential follow-up intents and generating follow-up question candidates for the user is crucial for enhancing their experience with LLMs. Existing methods for follow-up question generation mainly rely on hand-crafted rules, the internal knowledge of LLMs, or the integration of external knowledge. However, these approaches fail to effectively leverage real-world user follow-up intents when interacting with LLMs, resulting in generated questions that do not meet the needs of practical scenarios. In this paper, we propose FollowGPT, a model that mines user follow-up intents from user-LLM conversational logs. However, directly introducing raw conversation logs leads to significant noise and sparsity issues. Therefore, to address noises, FollowGPT adopts a hierarchical filtering strategy for data cleaning. To mitigate the sparsity issue, FollowGPT employs data synthesis methods to augment the log data across three dimensions: topic diversity, intent transition diversity, and negative sample diversity. The processed data is then consolidated into a new dataset named ShareFQG for both training and evaluation. Finally, we train FollowGPT using a two-stage training framework involving supervised fine-tuning and preference optimization. In our experiments, we evaluate on both the Share-FQG test set and a publicly available dataset, FollowupQG, using both automated metrics and GPT-4o-based comparative evaluation. The experimental results demonstrate that our method outperforms existing baselines in various metrics, including lexical similarity, semantic similarity, and GPT-4-based evaluation for follow-up question generation, demonstrating FollowGPT&apos;s effectiveness. CCS Concepts • Information systems → Language models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

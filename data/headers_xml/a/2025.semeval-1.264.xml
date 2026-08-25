@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">YNU at SemEval-2025 Task 4: Synthetic Token Alternative Training for LLM Unlearning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Chen</surname></persName>
+							<email>chenyang3@stu.ynu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Yunnan Key Laboratory of Intelligent Systems and Computing</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Kunming</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information Science and Engineering</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Kunming</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zheyang</forename><surname>Luo</surname></persName>
+							<email>luozheyang@stu.ynu.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information Science and Engineering</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Kunming</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiwen</forename><surname>Tang</surname></persName>
+							<email>zhiwen.tang@ynu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Yunnan Key Laboratory of Intelligent Systems and Computing</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Kunming</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information Science and Engineering</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Kunming</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">YNU at SemEval-2025 Task 4: Synthetic Token Alternative Training for LLM Unlearning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D453727D079EEEC44918EA3FD28ABC92</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper describes our system submitted to SemEval-2025 Task 4, which introduces the Synthetic Token Alternative Training (STAT) algorithm for efficient unlearning in large language models (LLMs). The proposed method aims to enable pretrained models to selectively forget designated data (the forget set) while preserving performance on the remaining data (the retain set). The STAT framework adopts a dual-stage process. In the first stage, pseudo tokens are generated through random sampling and applied to the forget set, facilitating more effective targeted unlearning. In the second stage, the model undergoes gradient-based optimization using an alternative training scheme that alternates between pseudo-token-augmented samples from the forget set and unmodified samples from the retain set. This design promotes stable unlearning of the specified data while accelerating convergence and preserving the model&apos;s general performance. Our system achieved 3rd place in the 7B model track (OLMo-7B) and 7th place in the 1B model track (OLMo-1B), demonstrating substantial improvements over the official baselines, exhibiting superior stability in knowledge retention and more effective targeted forgetting compared to existing approaches. Code is available at https://github.com/carbonatedbeverages/Synthetic-Token-Alternative-Training-for-LLM-Unlearning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

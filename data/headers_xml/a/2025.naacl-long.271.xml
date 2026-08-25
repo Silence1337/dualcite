@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DIRAS: Efficient LLM Annotation of Document Relevance for Retrieval Augmented Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jingwei</forename><surname>Ni</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Zurich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tobias</forename><surname>Schimanski</surname></persName>
+							<email>tobias.schimanski@df.uzh.ch</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Zurich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Meihong</forename><surname>Lin</surname></persName>
+							<email>meihong_lin@uestc.edu.ch</email>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Electronic Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mrinmaya</forename><surname>Sachan</surname></persName>
+							<email>msachan@ethz.ch</email>
+						</author>
+						<author>
+							<persName><forename type="first">Elliott</forename><surname>Ash</surname></persName>
+							<email>ashe@ethz.ch</email>
+						</author>
+						<author>
+							<persName><forename type="first">Markus</forename><surname>Leippold</surname></persName>
+							<email>markus.leippold@df.uzh.ch</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Zurich</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Swiss Finance Institute (SFI)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Eth</forename><surname>Zurich</surname></persName>
+						</author>
+						<title level="a" type="main">DIRAS: Efficient LLM Annotation of Document Relevance for Retrieval Augmented Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1CF15744F45E587DD609E5C16AF237D9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval Augmented Generation (RAG) is widely employed to ground responses to queries on domain-specific documents. But do RAG implementations leave out important information when answering queries that need an integrated analysis of information (e.g., Tell me good news in the stock market today.)? To address these concerns, RAG developers need to annotate information retrieval (IR) data for their domain of interest, which is challenging because (1) domain-specific queries usually need nuanced definitions of relevance beyond shallow semantic relevance; and (2) human or GPT-4 annotation is costly and cannot cover all (query, document) pairs (i.e., annotation selection bias), thus harming the effectiveness in evaluating IR recall. To address these challenges, we propose DIRAS (Domainspecific Information Retrieval Annotation with Scalability), a manual-annotation-free schema that fine-tunes open-sourced LLMs to consider nuanced relevance definition and annotate (partial) relevance labels with calibrated relevance scores. Extensive evaluation shows that DIRAS enables smaller (8B) LLMs to achieve GPT-4level performance on annotating and ranking unseen (query, document) pairs, and is helpful for real-world RAG development. 1 * Equal Contributions. 1 All code, LLM generations, and human annotations in https://github.com/EdisonNi-hku/DIRAS.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

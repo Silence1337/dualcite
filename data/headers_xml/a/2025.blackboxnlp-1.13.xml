@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">PrivacyScalpel: Enhancing LLM Privacy via Interpretable Feature Intervention with Sparse Autoencoders</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ahmed</forename><surname>Frikha</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huawei Munich Research Center</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Muhammad</forename><surname>Reza</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huawei Munich Research Center</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ar</forename><surname>Razi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huawei Munich Research Center</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Krishna</forename><surname>Kanth Nakka</surname></persName>
+							<email>krishna.kanth.nakka@huawei.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Huawei Munich Research Center</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ricardo</forename><surname>Mendes</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huawei Munich Research Center</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xue</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huawei Munich Research Center</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuebing</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huawei Munich Research Center</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">PrivacyScalpel: Enhancing LLM Privacy via Interpretable Feature Intervention with Sparse Autoencoders</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3A327C9A3934C5E9B3E563281F671FB4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language processing but also pose significant privacy risks by memorizing and leaking Personally Identifiable Information (PII). Existing mitigation strategies, such as differential privacy and neuron-level interventions, often degrade model utility or fail to effectively prevent leakage. To address this challenge, we introduce PrivacyScalpel, a novel privacypreserving framework that leverages LLM interpretability techniques to identify and mitigate PII leakage while maintaining performance. PrivacyScalpel comprises three key steps: (1) Feature Probing, which identifies layers in the model that encode PII-rich representations, (2) Sparse Autoencoding, where a k-Sparse Autoencoder (k-SAE) disentangles and isolates privacy-sensitive features, and (3) Feature-Level Interventions, which employ targeted ablation and vector steering to suppress PII leakage. Our empirical evaluation on Gemma2-2b and Llama2-7b, fine-tuned on the Enron dataset, shows that PrivacyScalpel significantly reduces email leakage from 5.15% to as low as 0.0%, while maintaining over 99.4% of the original model&apos;s utility. Notably, our method outperforms neuron-level interventions in privacyutility trade-offs, demonstrating that acting on sparse, monosemantic features is more effective than manipulating polysemantic neurons. Beyond improving LLM privacy, our approach offers insights into the mechanisms underlying PII memorization, contributing to the broader field of model interpretability and secure AI deployment.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

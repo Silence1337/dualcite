@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">WisPerMed @ PerAnsSumm 2025: Strong Reasoning Through Structured Prompting and Careful Answer Selection Enhances Perspective Extraction and Summarization of Healthcare Forum Threads</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tabea</forename><forename type="middle">M G</forename><surname>Pakull</surname></persName>
+							<email>tabea.pakull@uk-essen.de</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute for Transfusion Medicine</orgName>
+								<orgName type="institution">University Hospital Essen</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Computer Science</orgName>
+								<orgName type="department" key="dep2">Sciences and Arts Dortmund</orgName>
+								<orgName type="institution">University of Applied</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hendrik</forename><surname>Damm</surname></persName>
+							<email>hendrik.damm@fh-dortmund.de</email>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Computer Science</orgName>
+								<orgName type="department" key="dep2">Sciences and Arts Dortmund</orgName>
+								<orgName type="institution">University of Applied</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Institute for Medical Informatics, Biometry and Epidemiology</orgName>
+								<orgName type="institution">University Hospital Essen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Henning</forename><surname>Schäfer</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute for Transfusion Medicine</orgName>
+								<orgName type="institution">University Hospital Essen</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Computer Science</orgName>
+								<orgName type="department" key="dep2">Sciences and Arts Dortmund</orgName>
+								<orgName type="institution">University of Applied</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peter</forename><forename type="middle">A</forename><surname>Horn</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute for Transfusion Medicine</orgName>
+								<orgName type="institution">University Hospital Essen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christoph</forename><forename type="middle">M</forename><surname>Friedrich</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Computer Science</orgName>
+								<orgName type="department" key="dep2">Sciences and Arts Dortmund</orgName>
+								<orgName type="institution">University of Applied</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Institute for Medical Informatics, Biometry and Epidemiology</orgName>
+								<orgName type="institution">University Hospital Essen</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">WisPerMed @ PerAnsSumm 2025: Strong Reasoning Through Structured Prompting and Careful Answer Selection Enhances Perspective Extraction and Summarization of Healthcare Forum Threads</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">32430C7A16C595004589A9E42F234848</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Healthcare community question-answering (CQA) forums provide multi-perspective insights into patient experiences and medical advice. Summarizations of these threads must account for these perspectives, rather than relying on a single &quot;best&quot; answer. This paper presents the participation of the WisPerMed team in the PerAnsSumm shared task 2025, which consists of two sub-tasks: (A) span identification and classification, and (B) perspectivebased summarization. For Task A, encoder models, decoder-based LLMs, and reasoningfocused models are evaluated under finetuning, instruction-tuning, and prompt-based paradigms. The experimental evaluations employing automatic metrics demonstrate that DeepSeek-R1 attains a high proportional recall (0.738) and F1-Score (0.676) in zero-shot settings, though strict boundary alignment remains challenging (F1-Score: 0.196). For Task B, filtering answers by labeling them with perspectives prior to summarization with Mistral-7B-v0.3 enhances summarization. This approach ensures that the model is trained exclusively on relevant data, while discarding non-essential information, leading to enhanced relevance (ROUGE-1: 0.452) and balanced factuality (SummaC: 0.296). The analysis uncovers two key limitations: data imbalance and hallucinations of decoder-based LLMs, with underrepresented perspectives exhibiting suboptimal performance. The WisPerMed team&apos;s approach secured the highest overall ranking in the shared task.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

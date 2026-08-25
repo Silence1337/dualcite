@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FLASHBACK : Efficient Retrieval-Augmented Language Modeling for Fast Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Runheng</forename><surname>Liu</surname></persName>
+							<email>rhliu@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xingchen</forename><surname>Xiao</surname></persName>
+							<email>xcxiao@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Heyan</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zewen</forename><surname>Chi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhijing</forename><surname>Wu</surname></persName>
+							<email>zhijingwu@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FLASHBACK : Efficient Retrieval-Augmented Language Modeling for Fast Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2D11489CA01A2BEE62AC1C8DDB91784F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-Augmented Language Modeling (RALM) by integrating large language models (LLM) with relevant documents from an external corpus is a proven methodology for enabling the LLM to generate information beyond the scope of its pre-training corpus. Previous work by retrieving a set of tokens iteratively with retrieved content prepending to the input poses a high run-time issue, which degrades the inference efficiency of the LLMs because they fail to use the Key-Value (KV) cache efficiently. We propose FLASHBACK, a modular RALM designed to improve the inference efficiency of RALM with the appending context pattern while maintaining decent performance after fine-tuning by Low-Rank Adaption. FLASHBACK appends retrieved documents at the end of the context to efficiently utilize the KV cache. We also introduce the Marking Token as two special prompt tokens for marking the appending context during fine-tuning. Our experiments show that FLASHBACK can improve language modeling performance in the perplexity metric. We proved that the Marking Token is a usable add-on when fine-tuning models on specific context patterns. By bypassing unnecessary recomputation, FLASHBACK achieves fast inference speed with long context input. The inference speed is up to 4× faster than the prepending counterpart on a 7B LLM (Llama 2) in the runtime test.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

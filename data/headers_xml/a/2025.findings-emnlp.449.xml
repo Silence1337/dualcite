@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Lvzhou</forename><surname>Luo</surname></persName>
+							<email>luolvzhou23s@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Key Lab of Intelligent Information Processing</orgName>
+								<orgName type="institution">Chinese Academy of Sciences (CAS)</orgName>
+								<address>
+									<postCode>100190</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Lab of AI Safety</orgName>
+								<address>
+									<postCode>100190</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">CAS</orgName>
+								<address>
+									<postCode>100049</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yixuan</forename><surname>Cao</surname></persName>
+							<email>caoyixuan@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Key Lab of Intelligent Information Processing</orgName>
+								<orgName type="institution">Chinese Academy of Sciences (CAS)</orgName>
+								<address>
+									<postCode>100190</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Lab of AI Safety</orgName>
+								<address>
+									<postCode>100190</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">CAS</orgName>
+								<address>
+									<postCode>100049</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ping</forename><surname>Luo</surname></persName>
+							<email>luop@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">Key Lab of Intelligent Information Processing</orgName>
+								<orgName type="institution">Chinese Academy of Sciences (CAS)</orgName>
+								<address>
+									<postCode>100190</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Lab of AI Safety</orgName>
+								<address>
+									<postCode>100190</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">CAS</orgName>
+								<address>
+									<postCode>100049</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F4CD84155150C278824FF9FADF09A673</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-augmented generation improves the factual accuracy of Large Language Models (LLMs) by incorporating external context, but often suffers from irrelevant retrieved content that hinders effectiveness. Context compression addresses this issue by filtering out irrelevant information from context before LLM generation. However, existing methods struggle to adaptively adjust compression rates for different context, maintain low latency and integrate information across multiple documents. To overcome these limitations, We introduce AttnComp, an adaptive, efficient and contextaware compression framework. By leveraging the attention mechanism of LLMs to identify relevant information, AttnComp employs a Top-P compression algorithm to retain the minimal set of documents whose cumulative attention weights exceeds a predefined threshold. In addition to compression, AttnComp estimates response confidence by assessing the overall relevance of the retrieved content, enabling users to gauge response reliability. Experiments demonstrate that AttnComp outperforms existing compression methods and uncompressed baselines, achieving higher accuracy with substantial compression rates and lower latency.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

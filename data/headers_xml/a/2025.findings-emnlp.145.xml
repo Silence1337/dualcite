@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">How Do Large Language Models Perform on PDE Discovery: A Coarse-to-fine Perspective</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Luo</surname></persName>
+							<email>xiao.luo@wisc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Statistics</orgName>
+								<orgName type="department" key="dep2">Department of Statistics</orgName>
+								<orgName type="institution" key="instit1">University of Wisconsin-Madison ♠</orgName>
+								<orgName type="institution" key="instit2">University of California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Changhu</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yizhou</forename><surname>Sun</surname></persName>
+							<email>yzsun@cs.ucla.edu</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Wang</surname></persName>
+							<email>weiwang@cs.ucla.edu</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">How Do Large Language Models Perform on PDE Discovery: A Coarse-to-fine Perspective</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">05143842F3E91341A2022BD6A2F62FA0</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper studies the problem of how to use large language models (LLMs) to identify the underlying partial differential equations (PDEs) out of very limited observations of a physical system. Previous methods usually utilize physics-informed neural networks (PINNs) to learn the PDE solver and coefficient of PDEs simultaneously, which could suffer from performance degradation under extreme data scarcity. Towards this end, this paper attempts to utilize LLMs to solve this problem without further fine-tuning by proposing a novel framework named LLM for PDE Discovery (LLM4PD). The core of our LLM4PD is to utilize a coarseto-fine paradigm to automatically discover underlying PDEs. In the coarse phase, LLM4PD selects the crucial terms from a library with hierarchical prompts and incorporates a review agent to enhance the accuracy. In the fine phase, LLM4PD interacts with a PDE solver to optimize the coefficient of the selected terms with the optimization trajectory. We also provide an adaptive hybrid optimization strategy switching between fine-tuning and exploration to balance the stability and efficiency. Extensive experiments on several systems validate the effectiveness of our LLM4PD in different settings.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

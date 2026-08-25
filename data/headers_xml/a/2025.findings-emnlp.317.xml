@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Constructing Your Model&apos;s Value Distinction: Towards LLM Alignment with Anchor Words Tuning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Yang</surname></persName>
+							<email>bityangzhen@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ping</forename><surname>Jian</surname></persName>
+							<email>pjian@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengzhi</forename><surname>Li</surname></persName>
+							<email>lichengzhi@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenxu</forename><surname>Wang</surname></persName>
+							<email>wangchenxu@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyue</forename><surname>Zhang</surname></persName>
+							<email>zhangxinyue@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenpeng</forename><surname>Lu</surname></persName>
+							<email>wenpeng.lu@qlu.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Ministry of Education</orgName>
+								<orgName type="department" key="dep2">Shandong Computer Science Center (National Supercomputer Center in Jinan)</orgName>
+								<orgName type="department" key="dep3">Shandong Academy of Sciences)</orgName>
+								<orgName type="laboratory">Key Laboratory of Computing Power Network and Information Security</orgName>
+								<orgName type="institution">Qilu University of Technology</orgName>
+								<address>
+									<settlement>Jinan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Constructing Your Model&apos;s Value Distinction: Towards LLM Alignment with Anchor Words Tuning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E5BDDC39800BB2044FEDD4E1E046BF4B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>With the widespread applications of large language models (LLMs), aligning LLMs with human values has emerged as a critical challenge. For alignment, we always expect LLMs to be honest, positive, harmless, etc. And LLMs appear to be capable of generating the desired outputs after the alignment tuning process, such as the preference tuning via reinforcement learning from human feedback (RLHF). However, it also raises a question about after alignment, do LLMs genuinely obtain a value distinction between positives and negatives, beyond the generation of positive outputs? In this work, we start by investigating this question from the token distribution perspective. Our findings reveal that compared to the unaligned versions, LLMs after alignment exhibit a larger logits gap between positive and negative tokens at each generation step, which suggests that LLMs do obtain a value distinction of positives and negatives after alignment. Meanwhile, it also motivates us to achieve alignment by directly constructing such value distinction, thus alleviating the excessive reliance on computational resources required by training-time alignment. Specifically, we propose a representation editing method that intervenes the last hidden representation by amplifying the logits difference between positive and negative tokens (defined as anchor words). Experimental results demonstrate that the proposed method not only achieves effective alignment, but also requires fewer computational resources compared to training-time alignment methods 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

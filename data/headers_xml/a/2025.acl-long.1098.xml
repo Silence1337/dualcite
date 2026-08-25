@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">WhiSPA: Semantically and Psychologically Aligned Whisper with Self-Supervised Contrastive and Student-Teacher Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Rajath</forename><surname>Rao</surname></persName>
+							<email>rajath.rao@stonybrook.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Adithya</forename><forename type="middle">V</forename><surname>Ganesan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Oscar</forename><surname>Kjell</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jonah</forename><surname>Luby</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Akshay</forename><surname>Raghavan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Scott</forename><surname>Feltman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Whitney</forename><surname>Ringwald</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Minnesota</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ryan</forename><forename type="middle">L</forename><surname>Boyd</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Texas at Dallas</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benjamin</forename><surname>Luft</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Camilo</forename><surname>Ruggero</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Texas at Dallas</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Neville</forename><surname>Ryant</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Pennsylvania</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Roman</forename><surname>Kotov</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">H</forename><forename type="middle">Andrew</forename><surname>Schwartz</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stony Brook University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">WhiSPA: Semantically and Psychologically Aligned Whisper with Self-Supervised Contrastive and Student-Teacher Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">88F414A5D05257B75E410F5D240B5E97</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:14+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Current speech encoding pipelines often rely on an additional text-based LM to get robust representations of human communication, even though SotA speech-to-text models often have a LM within. This work proposes an approach to improve the LM within an audio model such that the subsequent text-LM is unnecessary. We introduce WhiSPA (Whisper with Semantic and Psychological Alignment), which leverages a novel audio training objective: contrastive loss with a language model embedding as a teacher. Using over 500k speech segments from mental health audio interviews, we evaluate the utility of aligning Whisper&apos;s latent space with semantic representations from a text autoencoder (SBERT) and lexically derived embeddings of basic psychological dimensions: emotion and personality. Over self-supervised affective tasks and downstream psychological tasks, WhiSPA surpasses current speech encoders, achieving an average error reduction of 73.4% and 83.8%, respectively. WhiSPA demonstrates that it is not always necessary to run a subsequent text LM on speech-to-text output in order to get a rich psychological representation of human communication.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Failing Forward: Improving Generative Error Correction for ASR with Synthetic Data and Retrieval Augmentation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Sreyan</forename><surname>Ghosh</surname></persName>
+							<email>sreyang@umd.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammad</forename><forename type="middle">Sadegh</forename><surname>Rasooli</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Meta Reality Labs</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Levit</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peidong</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jian</forename><surname>Xue</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dinesh</forename><surname>Manocha</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Maryland</orgName>
+								<address>
+									<settlement>College Park</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinyu</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Failing Forward: Improving Generative Error Correction for ASR with Synthetic Data and Retrieval Augmentation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B5AE4783A944EE5257017EC353C30672</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:19+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Generative Error Correction (GEC) has emerged as a powerful post-processing method to boost the performance of Automatic Speech Recognition (ASR) systems. In this paper, we first show that GEC models struggle to generalize beyond the specific types of errors encountered during training, limiting their ability to correct new, unseen errors at test time, particularly in out-of-domain (OOD) scenarios. This phenomenon amplifies with named entities (NEs), where, in addition to insufficient contextual information or knowledge about the NEs, novel NEs keep emerging. To address these issues, we propose DARAG (Data-and Retrieval-Augmented Generative Error Correction), a novel approach designed to improve GEC for ASR in in-domain (ID) and OOD scenarios. First, we augment the GEC training dataset with synthetic data generated using foundational generative models, thereby simulating additional errors from which the model can learn from. For out-of-domain scenarios, we simulate test-time errors from new domains similarly and in an unsupervised fashion. Additionally, to better handle NEs, we introduce retrieval-augmented correction wherein we augment the model input with entities retrieved from a datastore of NEs. Our approach is simple, scalable, and both domain-and languageagnostic. We experiment on multiple datasets and settings, showing that DARAG outperforms all our baselines, achieving 8%-30% relative WER improvements in ID and 10%-33% improvements in OOD settings. 1 * Work done during an internship at Microsoft, USA † Work done while at Microsoft 1 For implementation details, please reach out to the author.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

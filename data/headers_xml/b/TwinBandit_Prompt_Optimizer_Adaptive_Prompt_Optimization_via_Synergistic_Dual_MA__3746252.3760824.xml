@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TwinBandit Prompt Optimizer: Adaptive Prompt Optimization via Synergistic Dual MAB-Guided Feedback</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Young-Joon</forename><surname>Park</surname></persName>
+							<email>yjpark@agilesoda.ai</email>
+						</author>
+						<author>
+							<persName><forename type="first">Daewoo</forename><surname>Choi</surname></persName>
+							<email>daewoo.choi@hufs.ac.kr</email>
+							<idno type="ORCID">0009-0004-4540-3564</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Agilesoda Seoul</orgName>
+								<address>
+									<addrLine>Republic of Korea Seong-Ryeong Lee Anh-Dung Vo Minsung Jung</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Agilesoda Seoul</orgName>
+								<orgName type="institution">Hankuk University of Foreign Studies Seoul</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TwinBandit Prompt Optimizer: Adaptive Prompt Optimization via Synergistic Dual MAB-Guided Feedback</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AC9F0760D396F50823014D2272C293A1</idno>
+					<idno type="DOI">10.1145/3746252.3760824</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Automatic Prompt Engineering</term>
+					<term>Large Language Models</term>
+					<term>Generative AI</term>
+					<term>Natural Language Processing</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>A common deficiency in Automatic Prompt Engineering (APE) is the failure to strategically employ specific failure feedback in concert with the adaptive and coordinated selection of diverse generation strategies. To address this deficiency, we introduce TwinBandit Prompt Optimizer (TBPO), an APE framework that employs a synergistic dual Multi-Armed Bandit (MAB) mechanism for adaptive prompt generation, applicable to black-box Large Language Models (LLMs). The first MAB identifies the most challenging training instances, informing an LLM-driven feedback pipeline responsible for generating (1) parameterized changes to guide prompt evolution and (2) n-shot example configurations. A second MAB then adaptively selects and ranks the proposed changes based on the empirical performance of previously generated prompts. TBPO then combines these ranked modifications and n-shot configurations to generate child prompts with targeted enhancements that specifically address these challenging instances. Iteratively applying this process to the best-performing prompts, TBPO forms a closed-loop cycle, strategically generating and exploring a tree of enhanced prompts. Benchmarking shows that TBPO achieves stronger performance compared to state-of-the-art APE baselines, highlighted by a 3.87% higher exact match rate on the GPQA-Diamond dataset. Our approach offers a more targeted and adaptive APE method by strategically learning from common failures and leveraging empirically validated generation strategies for a given dataset. More information is available at https://github.com/yjpark-pub/ tbpo_release. CCS Concepts • Information systems → Information retrieval; • Computing methodologies → Natural language processing.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

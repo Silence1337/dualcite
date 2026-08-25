@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SELECT-THEN-ROUTE: Taxonomy guided Routing for LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Soham</forename><surname>Shah</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Ema Unlimited, Inc</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Kumar</forename><surname>Shridhar</surname></persName>
+							<email>shridhar@ema.co</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Ema Unlimited, Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SELECT-THEN-ROUTE: Taxonomy guided Routing for LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C7A83A3890728797489E7ECB3D6CB33C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advances in large language models (LLMs) have boosted performance across a broad spectrum of natural-language tasks, yet no single model excels uniformly across domains. Sending each query to the most suitable model mitigates this limitation, but deciding among all available LLMs for each query is prohibitively expensive. Both the accuracy and latency can improve if the decision space for model choice is first narrowed, followed by selecting the suitable model for the given query. We introduce SELECT-THEN-ROUTE (StR), a two-stage framework that first selects a small, task-appropriate pool of LLMs and then routes each query within that pool through an adaptive cascade. StR first employs a lightweight, taxonomy-guided selector that maps each query to models proven proficient for its semantic class (e.g., reasoning, code, summarization). Within the selected pool, a confidence-based cascade begins with the cheapest model and escalates only when a multi-judge agreement test signals low reliability. Across six public benchmarks of various domains, StR improves the end-to-end accuracy from 91.7% (best single model) to 94.3% while reducing inference cost by 4×. Because both the taxonomy and multi-judge evaluation thresholds are tunable, StR exposes a smooth cost-accuracy frontier, enabling users to dial in the trade-off that best fits their latency and budget constraints.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

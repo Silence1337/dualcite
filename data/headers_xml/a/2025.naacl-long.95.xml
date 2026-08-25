@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Option Symbol Matters: Investigating and Mitigating Multiple-Choice Option Symbol Bias of Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Yang</surname></persName>
+							<email>bityangzhen@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ping</forename><surname>Jian</surname></persName>
+							<email>pjian@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Beijing Engineering Research Center of High Volume Language Information Processing and Cloud Computing Applications</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengzhi</forename><surname>Li</surname></persName>
+							<email>lichengzhi@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Option Symbol Matters: Investigating and Mitigating Multiple-Choice Option Symbol Bias of Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BD6BB7E0E6E071FBE8B0856467EC3399</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Multiple-Choice Question Answering (MCQA) is a widely used task in the evaluation of Large Language Models (LLMs). In this work, we reveal that current LLMs&apos; performance in MCQA could be heavily influenced by the choice of option symbol sets, due to the option symbol bias. That is, when altering only the option symbols (e.g., A/B/C/D→ i/ii/iii/iv), the results could vary sharply, leading to a margin of approximately 10% in accuracy. To uncover the mechanisms behind this, we investigate the internal components of LLMs from a causal perspective. By measuring the causal effects, we identify a small subset of attention heads responsible for the symbol bias. Subsequently, we interpret these key components in a human-understandable way, showing that attention heads with higher causal effects are more likely to focus on only option symbols, while those with lower causal effects tend to distribute their attention across the content of questions and options. It also motivates us to pursue debiasing based on the causal effects. Specifically, to mitigate such bias, we propose a tuning-free, causal effect driven debiasing method which intervenes the activations of identified components according to their causal effects, with stronger interventions corresponding to higher causal effects. Experimental results demonstrate that the proposed method not only alleviates aforementioned bias, but also improves the MCQA performance of LLMs 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Batched Self-Consistency Improves LLM Relevance Assessment and Ranking</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Anton</forename><surname>Korikov</surname></persName>
+							<email>anton.korikov@mail.utoronto.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Thomson Reuters Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Scott</forename><surname>Sanner</surname></persName>
+							<email>ssanner@mie.utoronto.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Thomson Reuters Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Navid</forename><surname>Rekabsaz</surname></persName>
+							<email>navid.rekabsaz@thomsonreuters.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Thomson Reuters Labs</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Batched Self-Consistency Improves LLM Relevance Assessment and Ranking</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E9FE5C8D06ADDC5AA8DD05EB02B818D9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLM query-passage relevance assessment is typically studied using a one-by-one pointwise (PW) strategy where each LLM call judges one passage at a time. However, this strategy requires as many LLM calls as there are passages while also preventing information sharing between passages. We thus hypothesize that batched PW methods, which evaluate multiple passages per LLM call, can improve not only efficiency but also judgment quality-by enabling content from multiple passages to be seen jointly. Moreover, batched PW methods may be better suited to harness the test-time scaling benefits of self-consistency-the ensembling technique of repeating (potentially perturbed) LLM tasks in parallel and aggregating results-since batching can naturally enable prompt diversification through varied batch permutations and compositions to create more robust ensembles. We evaluate several batched PW methods against one-by-one PW and listwise ranking baselines on LLM relevance assessment and ranking tasks, using three passage retrieval datasets and GPT-4o, Claude Sonnet 3, and Amazon Nova Pro. We show that batching can greatly amplify self-consistency benefits, making batched PW methods achieve the best performance while often reducing latency by an order of magnitude or more compared to one-by-one PW methods. For instance, on legal search, batched PW ranking with GPT-4o improves from 43.8% to 51.3% NDCG@10 when using 1 vs. 15 self-consistency calls, compared to one-by-one PW ranking improving from 44.9% to 46.8% and being 15.3x slower.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SAFEERASER: Enhancing Safety in Multimodal Large Language Models through Multimodal Machine Unlearning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Junkai</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Southeast University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhijie</forename><surname>Deng</surname></persName>
+							<email>zhijiedeng376@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kening</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yibo</forename><surname>Yan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuliang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peijun</forename><surname>Wu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Southeast University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peijie</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="laboratory">Ant Group</orgName>
+								<address>
+									<country>Alibaba</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jia</forename><surname>Liu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="laboratory">Ant Group</orgName>
+								<address>
+									<country>Alibaba</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuming</forename><surname>Hu</surname></persName>
+							<email>xuminghu@hkust-gz.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SAFEERASER: Enhancing Safety in Multimodal Large Language Models through Multimodal Machine Unlearning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4C2F8C7C454028057834529D664DB739</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>As Multimodal Large Language Models (MLLMs) develop, their potential security issues have become increasingly prominent. Machine Unlearning (MU), as an effective strategy for forgetting specific knowledge in training data, has been widely used in privacy protection. However, MU for safety in MLLM has yet to be fully explored. To address this issue, we propose SAFEERASER, a safety unlearning benchmark for MLLMs, consisting of 3,000 images and 28.8K VQA pairs. We comprehensively evaluate unlearning methods from two perspectives: forget quality and model utility. Our findings show that existing MU methods struggle to maintain model performance while implementing the forget operation and often suffer from over-forgetting. Hence, we introduce Prompt Decouple (PD) Loss to alleviate over-forgetting through decouple prompt during unlearning process. To quantitatively measure over-forgetting mitigated by PD Loss, we propose a new metric called Safe Answer Refusal Rate (SARR). Experimental results demonstrate that combining PD Loss with existing unlearning methods can effectively prevent over-forgetting and achieve a decrease of 79.5% in the SARR metric of LLaVA-7B and LLaVA-13B, while maintaining forget quality and model utility. Our code and dataset can be found in https://github.com/yuu250/ SafeEraser. Warning: This paper contains examples of harmful language and images, and reader discretion is recommended.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

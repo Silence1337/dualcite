@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ALPACA AGAINST VICUNA: Using LLMs to Uncover Memorization of LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Aly</forename><forename type="middle">M</forename><surname>Kassem</surname></persName>
+							<email>kassem6@uwindsor.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Windsor</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Omar</forename><surname>Mahmoud</surname></persName>
+							<email>o.mahmoud@deakin.edu.au</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">A2I2</orgName>
+								<address>
+									<country>Deakin University</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Niloofar</forename><surname>Mireshghallah</surname></persName>
+							<email>niloofar@cs.washington.edu</email>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyunwoo</forename><surname>Kim</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">NVIDIA</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yulia</forename><surname>Tsvetkov</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yejin</forename><surname>Choi</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sherif</forename><surname>Saad</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Windsor</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Santu</forename><surname>Rana</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">A2I2</orgName>
+								<address>
+									<country>Deakin University</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ALPACA AGAINST VICUNA: Using LLMs to Uncover Memorization of LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D099B1E27DFD5D6F7E45B64D927A289A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In this paper, we investigate the overlooked impact of instruction-tuning on memorization in large language models (LLMs), which has largely been studied in base, pre-trained models. We propose a black-box prompt optimization method where an attacker LLM agent uncovers higher levels of memorization in a victim agent, surpassing traditional approaches that prompt the model directly with training data. Using an iterative rejection-sampling process, we design instruction-based prompts that minimize overlap with training data to avoid providing direct solutions while maximizing overlap between the victim&apos;s output and the training data to induce memorization. Our method shows 23.7% more overlap with training data compared to state-of-the-art baselines. We explore two attack settings: an analytical approach that determines the empirical upper bound of the attack, both with and without access to responses for prompt initialization, and a practical classifierbased method for assessing memorization without access to memorized data. Our findings reveal that instruction-tuned models can expose pre-training data as much as, or more than, base models; contexts beyond the original training data can lead to leakage; and instructions generated by other LLMs open new avenues for automated attacks, which we believe require further exploration. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

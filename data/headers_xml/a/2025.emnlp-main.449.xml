@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Judging Quality Across Languages: A Multilingual Approach to Pretraining Data Filtering with Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mehdi</forename><surname>Ali</surname></persName>
+							<email>mehdi.ali@iais.fraunhofer.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Manuel</forename><surname>Brack</surname></persName>
+							<email>brack@cs.tu-darmstadt.de</email>
+						</author>
+						<author>
+							<persName><forename type="first">Max</forename><surname>Lübbering</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Elias</forename><surname>Wendt</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Computer Science Department</orgName>
+								<address>
+									<postCode>TU</postCode>
+									<settlement>Darmstadt</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Abbas</forename><surname>Goher Khan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Richard</forename><surname>Rutmann</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alex</forename><surname>Jude</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Maurice</forename><surname>Kraus</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">DFKI</orgName>
+								<address>
+									<addrLine>4 Hessian AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexander</forename><forename type="middle">Arno</forename><surname>Weber</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Felix</forename><surname>Stollenwerk</surname></persName>
+							<affiliation key="aff4">
+								<address>
+									<country key="SE">Sweden</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Kaczér</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Florian</forename><surname>Mai</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lucie</forename><surname>Flek</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rafet</forename><surname>Sifa</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nicolas</forename><surname>Flores-Herr</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joachim</forename><surname>Köhler</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Patrick</forename><surname>Schramowski</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">DFKI</orgName>
+								<address>
+									<addrLine>4 Hessian AI</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Computer Science Department</orgName>
+								<address>
+									<postCode>TU</postCode>
+									<settlement>Darmstadt</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Fromm</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fraunhofer IAIS</orgName>
+								<address>
+									<settlement>Sankt Augustin Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute</orgName>
+								<address>
+									<settlement>Bonn</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kristian</forename><surname>Kersting</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">DFKI</orgName>
+								<address>
+									<addrLine>4 Hessian AI</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Computer Science Department</orgName>
+								<address>
+									<postCode>TU</postCode>
+									<settlement>Darmstadt</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Judging Quality Across Languages: A Multilingual Approach to Pretraining Data Filtering with Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D89FEB87FC831848D5B84A9B8F711F65</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>High-quality multilingual training data is essential for effectively pretraining large language models (LLMs). Yet, the availability of suitable open-source multilingual datasets remains limited. Existing state-of-the-art datasets mostly rely on heuristic filtering methods, restricting both their cross-lingual transferability and scalability. Here, we introduce JQL, a systematic approach that efficiently curates diverse and high-quality multilingual data at scale while significantly reducing computational demands. JQL distills LLMs&apos; annotation capabilities into lightweight annotators based on pretrained multilingual embeddings. These models exhibit robust multilingual and cross-lingual performance, even for languages and scripts unseen during training. Evaluated empirically across 35 languages, the resulting annotation pipeline substantially outperforms current heuristic filtering methods like Fineweb2. JQL notably enhances downstream model training quality and increases data retention rates. Our research provides practical insights and valuable resources for multilingual data curation, raising the standards of multilingual dataset development.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

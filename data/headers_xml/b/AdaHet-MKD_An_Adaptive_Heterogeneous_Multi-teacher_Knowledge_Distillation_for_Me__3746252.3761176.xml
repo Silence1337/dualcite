@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AdaHet-MKD: An Adaptive Heterogeneous Multi-teacher Knowledge Distillation for Medical Image Analysis</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Helin</forename><surname>Wang</surname></persName>
+							<email>wanghelin@mail.sdu.edu.cn</email>
+							<idno type="ORCID">0009-0001-6661-4975</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Du</surname></persName>
+							<email>duwei@sdu.edu.cn</email>
+							<idno type="ORCID">0000-0001-5356-2427</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ning</forename><surname>Liu</surname></persName>
+							<idno type="ORCID">0000-0001-7475-9739</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Qian</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yanyu</forename><surname>Xu</surname></persName>
+							<email>xu_yanyu@sdu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lizhen</forename><surname>Cui</surname></persName>
+							<idno type="ORCID">0000-0002-8262-8883</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software</orgName>
+								<orgName type="institution">Shandong University Jinan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Software</orgName>
+								<orgName type="institution">Shandong University Jinan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Software</orgName>
+								<orgName type="institution">Shandong University Jinan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">The Joint SDU-NTU Centre for Artificial Intelligence Research (C-FAIR) Jinan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">School of Software</orgName>
+								<orgName type="institution">The Joint SDU-NTU Centre for Artificial Intelligence Research (C-FAIR) Jinan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Shandong University Jinan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AdaHet-MKD: An Adaptive Heterogeneous Multi-teacher Knowledge Distillation for Medical Image Analysis</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">32E9EDEEE857AAB923E30D5FFEA8D4C1</idno>
+					<idno type="DOI">10.1145/3746252.3761176</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Knowledge Distillation</term>
+					<term>Medical Data Analysis</term>
+					<term>Chest X-ray</term>
+					<term>Contrastive Learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Contrastive Language-Image Pre-training (CLIP) has emerged as an effective framework for multi-modal representation learning, achieving notable success in diverse tasks such as medical image analysis. CLIP&apos;s growing prominence in medical image applications is restricted by its significant computational demands, creating implementation challenges in resource-constrained clinical environments. While knowledge distillation offers an effective approach for model compression with preserved accuracy, existing methods suffer from two fundamental limitations. Firstly, existing methods focus on learning better information from single models while ignoring the fact that student models can generalize well under the guidance of multiple teachers. Secondly, they overlook the complementary information in the CLIP model where the text encoder and image encoder can be leveraged as heterogeneous information to teach one single modality. To tackle these challenges, we propose an Adaptive Heterogeneous Multi-teacher Knowledge Distillation (AdaHet-MKD) framework for effective knowledge transfer across heterogeneous text-image models and among multiple teacher models. The key innovations include: (i) adaptively determining the contribution of each teacher model to specific instances, thereby generating integrated soft logits, and (ii) enabling the student model to operate independently of the teacher model&apos;s architecture, which enhances flexibility in teacher-student pairings. Experimental evaluations on publicly available medical datasets demonstrate that our approach has achieved the state-of-the-art performance compared to baselines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

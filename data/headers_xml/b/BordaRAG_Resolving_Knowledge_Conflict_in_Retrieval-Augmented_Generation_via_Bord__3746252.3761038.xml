@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">BordaRAG: Resolving Knowledge Conflict in Retrieval-Augmented Generation via Borda Voting Process</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuxin</forename><surname>Li</surname></persName>
+							<email>yuxin_li@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Xu</surname></persName>
+							<email>xc_chen@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Xu</surname></persName>
+							<email>junxu@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ji-Rong</forename><surname>Wen</surname></persName>
+							<email>jrwen@ruc.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">BordaRAG: Resolving Knowledge Conflict in Retrieval-Augmented Generation via Borda Voting Process</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EF7AF99FB90D0C1A861B04149B5183FE</idno>
+					<idno type="DOI">10.1145/3746252.3761038</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:27+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Retrieval-Augmented Generation</term>
+					<term>Knowledge Conflict</term>
+					<term>Social Choice</term>
+					<term>Borda Voting</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Recently, research found that the documents retrieved from the Retrieval-Augmented Generation (RAG) may contain conflicting knowledge with each other, leading Large Language Models (LLMs) to generate incorrect responses. To solve such a problem, existing approaches usually only keep the most frequently mentioned knowledge from these documents, since they assume that the most representative knowledge aligns best with the true answer. Although effective in certain scenarios, these approaches often underperform when the most frequent knowledge is not the correct one. From the voting perspective, these methods can be regarded as a Majority Voting (MV) process, which chooses the most frequent candidates among different candidate knowledge. However, we show that the underperformance of such methods stems from that MV is only effective with a small number of candidates and binary voting scores. In contrast, in the RAG scenario, the candidates (knowledge) are very diverse, and the voting scores (document relevance scores) are typically continuous. Simply adapting MV in RAG will result in poor performance of LLMs. In voting theory, on the other hand, the preference-based voting methods represented by the Borda Voting (BV) consider the whole preference order of voters over all candidates, enabling the selection of candidates that better represent the collective viewpoint. Inspired by such an insight, we propose BordaRAG, a model designed to better select the most appropriate documents from conflicting documents. Specifically, BordaRAG first computes the preference scores of the documents over the candidate answers. After that, a BV component is designed to select the winning documents according to the preference scores. Finally, the chosen documents are provided to LLMs, which will generate * Jun Xu is the corresponding author. Work partially done at Engineering Research Center of Next-Generation Intelligent Search and Recommendation, Ministry of Education.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

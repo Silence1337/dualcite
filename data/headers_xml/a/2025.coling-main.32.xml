@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TRANSMI: A Framework to Create Strong Baselines from Multilingual Pretrained Language Models for Transliterated Data</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yihong</forename><surname>Liu</surname></persName>
+							<email>yihong@cis.lmu.de</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Center for Information and Language Processing</orgName>
+								<orgName type="department" key="dep2">Center for Machine Learning (MCML)</orgName>
+								<orgName type="institution">LMU Munich Munich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chunlan</forename><surname>Ma</surname></persName>
+							<email>chunlan@cis.lmu.de</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Center for Information and Language Processing</orgName>
+								<orgName type="department" key="dep2">Center for Machine Learning (MCML)</orgName>
+								<orgName type="institution">LMU Munich Munich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haotian</forename><surname>Ye</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Center for Information and Language Processing</orgName>
+								<orgName type="department" key="dep2">Center for Machine Learning (MCML)</orgName>
+								<orgName type="institution">LMU Munich Munich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hinrich</forename><surname>Schütze</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Center for Information and Language Processing</orgName>
+								<orgName type="department" key="dep2">Center for Machine Learning (MCML)</orgName>
+								<orgName type="institution">LMU Munich Munich</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TRANSMI: A Framework to Create Strong Baselines from Multilingual Pretrained Language Models for Transliterated Data</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4834563EA9E8BC82EE9CE14E8077C7E2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Transliterating related languages that use different scripts into a common script is effective for improving crosslingual transfer in downstream tasks. However, this methodology often makes pretraining a model from scratch unavoidable, as transliteration brings about new subwords not covered in existing multilingual pretrained language models (mPLMs). This is undesirable because it requires a large computation budget. A more promising way is to make full use of available mPLMs. To this end, this paper proposes a simple but effective framework: Transliterate-Merge-Initialize (TRANSMI). TRANSMI can create strong baselines for data that is transliterated into a common script by exploiting an existing mPLM and its tokenizer without any training. 1 TRANSMI has three stages: (a) transliterate the vocabulary of an mPLM into a common script; (b) merge the new vocabulary with the original vocabulary; and (c) initialize the embeddings of the new subwords. We apply TRANSMI to three strong recent mPLMs. Our experiments demonstrate that TRANSMI not only preserves the mPLM&apos;s ability to handle nontransliterated data, but also enables it to effectively process transliterated data, thereby facilitating crosslingual transfer across scripts. The results show consistent improvements of 3% to 34% for different mPLMs and tasks. We make our code and models publicly available at https://github.com/cisnlp/TransMI.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

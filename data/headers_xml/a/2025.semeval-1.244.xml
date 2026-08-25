@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Stanford MLab at SemEval-2025 Task 11: Track B-Emotion Intensity Detection</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Joseph</forename><surname>Le</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hannah</forename><surname>Cui</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">James</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Stanford MLab at SemEval-2025 Task 11: Track B-Emotion Intensity Detection</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CAFFF19C2C963D1D493DB61760935BA5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We here outline our SemEval 2025 Track B: Emotion Intensity Prediction submission, for which the objective is to predict the intensity of six primary emotions-anger, disgust, fear, joy, sadness, and surprise-between 0 and 3, with 0 being none and 3 being very strong. We used a regression fine-tuned BERT-based model that makes use of pretrained embeddings in order to sense subtle emotional wordings in text. We include tokenization with a BERT tokenizer, training with AdamW optimization, and an Ex-ponentialLR scheduler used for learning rate modification. Performance is monitored based on validation loss and accuracy through closeness of model outputs to gold labels. Our best-performing model is 68.97% accurate in validation and has a validation loss of 0.373, demonstrating BERT&apos;s capability in finegrained emotion intensity prediction. Key findings include that fine-tuning transformer models with regression loss improves prediction accuracy and that early stopping and learning rate scheduling avoid overfitting. Future improvements can include larger datasets, ensemble models, or other architectures such as RoBERTa and T5. This paper shows the potential of pretrained transformers for emotion intensity estimation and lays the groundwork for future computational emotion analysis research.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

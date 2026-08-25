@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">JI 2 S: Joint Influence-Aware Instruction Data Selection for Efficient Fine-Tuning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jingyu</forename><surname>Wei</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha Hunan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Academy of Military Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianjiao</forename><surname>Wan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha Hunan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Baoyun</forename><surname>Peng</surname></persName>
+							<email>pengbaoyun13@alumni.nudt.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Academy of Military Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xingkong</forename><surname>Ma</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha Hunan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mengmeng</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha Hunan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">JI 2 S: Joint Influence-Aware Instruction Data Selection for Efficient Fine-Tuning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C37FBBBB4A55C1F0CA931E33580F5100</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Instruction tuning (IT) improves large language models (LLMs) by aligning their outputs with human instructions, but its success depends critically on training data quality, and datasets such as Alpaca often contain noisy or suboptimal examples that undermine fine-tuning. Prior selection strategies score samples using general-purpose LLMs (e.g., GPT), leveraging their strong language understanding yet introducing inherent biases that misalign with the target model&apos;s behavior and yield unstable downstream performance. Influence-based methods address this by estimating each example&apos;s marginal contribution to overall performance, but they typically assume additive contributions and therefore overlook higher-order interactions among samples. To overcome these limitations, we propose JI 2 S, a novel framework that jointly models both marginal and combinatorial influences within sample groups. Applying JI 2 S to select the top 1,000 most influential examples from Alpaca, we fine-tune LLaMA2-7B, Mistral-7B, and LLaMA2-13B and evaluate them on Open LLM Benchmarks, MT-Bench, and GPT-4-judged pairwise comparisons. Our experiments show that JI 2 S consistently outperforms full-dataset training and strong baselines, highlighting the value of capturing joint influence for high-quality instruction fine-tuning. We provide our code in this GitHub repository.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

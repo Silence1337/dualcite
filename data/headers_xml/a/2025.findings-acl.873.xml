@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Automatic Transmission for LLM Tiers: Optimizing Cost and Accuracy in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Injae</forename><surname>Na</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Applied Artificial Intelligence</orgName>
+								<orgName type="institution">Hanyang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Keonwoong</forename><surname>Noh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Applied Artificial Intelligence</orgName>
+								<orgName type="institution">Hanyang University</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Woohwan</forename><surname>Jung</surname></persName>
+							<email>whjung@hanyang.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Applied Artificial Intelligence</orgName>
+								<orgName type="institution">Hanyang University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Automatic Transmission for LLM Tiers: Optimizing Cost and Accuracy in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">59D88DFA223B6DE9DE08357C778DAA36</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLM providers typically offer multiple LLM tiers, varying in performance and price. As NLP tasks become more complex and modularized, selecting the suitable LLM tier for each subtask is a key challenge to balance cost and performance. To address the problem, we introduce the LLM Automatic Transmission (LLM-AT) framework that automatically selects LLM tiers without training. LLM-AT consists of Starter, Generator, and Judge. The starter selects the initial LLM tier expected to solve the question, the generator produces a response using the LLM of the selected tier, and the judge evaluates its validity. If the response is invalid, LLM-AT iteratively upgrades to a highertier model, generates a new response, and reevaluates until a valid response is obtained. Additionally, we propose accuracy estimator, allowing the selection of a suitable initial tier without training. Given an input, accuracy estimator estimates the expected accuracy of each LLM tier by computing the valid response rate for top-k similar queries from past inference records. Experiments demonstrate that LLM-AT achieves superior performance while reducing costs, making it a practical solution for realworld applications. Our code is available at https://github.com/hyudsl/LLM-AT.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

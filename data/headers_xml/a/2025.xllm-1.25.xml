@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DocIE@XLLM25: ZeroSemble -Robust and Efficient Zero-Shot Document Information Extraction with Heterogeneous Large Language Model Ensembles</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nguyen</forename><surname>Pham</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hoang</forename><surname>Le</surname></persName>
+							<idno type="ORCID">0009-0007-6448-5640</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Information Technology</orgName>
+								<address>
+									<settlement>Ho Chi Minh City</settlement>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Vietnam National University</orgName>
+								<address>
+									<settlement>Ho Chi Minh City</settlement>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">An</forename><forename type="middle">Dinh</forename><surname>Thien</surname></persName>
+							<idno type="ORCID">0009-0003-9909-8852</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Information Technology</orgName>
+								<address>
+									<settlement>Ho Chi Minh City</settlement>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Vietnam National University</orgName>
+								<address>
+									<settlement>Ho Chi Minh City</settlement>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Son</forename><forename type="middle">T</forename><surname>Luu</surname></persName>
+							<idno type="ORCID">0000-0002-1231-5865</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Information Technology</orgName>
+								<address>
+									<settlement>Ho Chi Minh City</settlement>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Vietnam National University</orgName>
+								<address>
+									<settlement>Ho Chi Minh City</settlement>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Kiet</forename><forename type="middle">Van</forename><surname>Nguyen</surname></persName>
+							<email>kietnv@uit.edu.vn</email>
+							<idno type="ORCID">0000-0002-8456-2742</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Information Technology</orgName>
+								<address>
+									<settlement>Ho Chi Minh City</settlement>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Vietnam National University</orgName>
+								<address>
+									<settlement>Ho Chi Minh City</settlement>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DocIE@XLLM25: ZeroSemble -Robust and Efficient Zero-Shot Document Information Extraction with Heterogeneous Large Language Model Ensembles</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">00A8D594879E95218F4F187BD3EB3D0A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The schematization of knowledge, including the extraction of entities and relations from documents, poses significant challenges to traditional approaches because of the document&apos;s ambiguity, heterogeneity, and high cost domainspecific training. Although Large Language Models (LLMs) allow for extraction without prior training on the dataset, the requirement of fine-tuning along with low precision, especially in relation extraction, serves as an obstacle. In absence of domain-specific training, we present a new zero-shot ensemble approach using DeepSeek-R1-Distill-Llama-70B, Llama-3.3-70B, and Qwen-2.5-32B. Our key innovation is a two-stage pipeline that first consolidates high-confidence entities through ensemble techniques, then leverages Qwen-2.5-32B with engineered prompts to generate precise semantic triples. This approach effectively resolves the low precision problem typically encountered in relation extraction. Experiments demonstrate significant gains in both accuracy and efficiency across diverse domains, with our method ranking in the top 2 on the official leaderboard in Shared Task-IV of The 1st Joint Workshop on Large Language Models and Structure Modeling. This competitive performance validates our approach as a compelling solution for practitioners seeking robust document-level information extraction without the burden of task-specific fine-tuning. Our code can be found at https://github.com/ dinhthienan33/ZeroSemble.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

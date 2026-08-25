@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Efficient Recommendation with Millions of Items by Dynamic Pruning of Sub-Item Embeddings</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Aleksandr</forename><forename type="middle">V</forename><surname>Petrov</surname></persName>
+							<email>a.petrov.1@research.gla.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Glasgow</orgName>
+								<address>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Craig</forename><surname>Macdonald</surname></persName>
+							<email>craig.macdonald@glasgow.ac.uk</email>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Glasgow</orgName>
+								<address>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nicola</forename><surname>Tonellotto</surname></persName>
+							<email>nicola.tonellotto@unipi.it</email>
+							<affiliation key="aff2">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">University of Pisa Italy</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Efficient Recommendation with Millions of Items by Dynamic Pruning of Sub-Item Embeddings</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C710B64AB2115C62DE432A5F5729C793</idno>
+					<idno type="DOI">10.1145/3726302.3729963</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Dynamic Pruning, Recommendation Systems</keywords>
+			</textClass>
+			<abstract>
+				<p>A large item catalogue is a major challenge for deploying modern sequential recommender models, since it makes the memory footprint of the model large and increases inference latency. One promising approach to address this is RecJPQ, which replaces item embeddings with sub-item embeddings. However, slow inference remains problematic because finding the top highest-scored items usually requires scoring all items in the catalogue, which may not be feasible for large catalogues. By adapting dynamic pruning concepts from document retrieval, we propose the RecJPQPrune dynamic pruning algorithm to efficiently find the top highest-scored items without computing the scores of all items in the catalogue. Our RecJPQPrune algorithm is safe-up-to-rank 𝐾 since it theoretically guarantees that no potentially high-scored item is excluded from the final top 𝐾 recommendation list, thereby ensuring no impact on effectiveness. Our experiments on two large datasets and three recommendation models demonstrate the efficiency achievable using RecJPQPrune: for instance, on the Tmall dataset with 2.2M items, we can reduce the median model scoring time by 64× compared to the Transformer Default baseline, and 5.3× compared to a recent scoring approach called PQTopK. Overall, this paper demonstrates the effective and efficient inference of Transformer-based recommendation models at catalogue scales not previously reported in the literature. Indeed, our RecJPQPrune algorithm can score 2 million items in under 10 milliseconds without GPUs, and without relying on Approximate Nearest Neighbour (ANN) techniques. CCS Concepts • Information systems → Information retrieval.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

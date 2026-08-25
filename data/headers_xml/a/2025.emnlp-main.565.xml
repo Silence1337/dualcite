@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SUA: Stealthy Multimodal Large Language Model Unlearning Attack</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xianren</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hui</forename><surname>Liu</surname></persName>
+							<email>liunhu@amazon.com</email>
+							<affiliation key="aff1">
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Delvin</forename><forename type="middle">Ce</forename><surname>Zhang</surname></persName>
+							<email>delvin.ce.zhang@sheffield.ac.uk</email>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Sheffield</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xianfeng</forename><surname>Tang</surname></persName>
+							<affiliation key="aff1">
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>He</surname></persName>
+							<affiliation key="aff1">
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongwon</forename><surname>Lee</surname></persName>
+							<email>dongwon@psu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Suhang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SUA: Stealthy Multimodal Large Language Model Unlearning Attack</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AF489D4B243D373E9AF5A74057960AC8</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Multimodal Large Language Models (MLLMs) trained on massive data may memorize sensitive personal information and photos, posing serious privacy risks. To mitigate this, MLLM unlearning methods are proposed, which finetune MLLMs to forget sensitive information. However, it remains unclear whether the knowledge has been truly forgotten or just hidden in the model. Therefore, we propose to study a novel problem of MLLM unlearning attack, which aims to recover the unlearned knowledge of an unlearned MLLM. To achieve the goal, we propose a novel framework-Stealthy Unlearning Attack (SUA)-that learns a universal noise pattern. When applied to input images, this noise can trigger the model to reveal unlearned content. While pixel-level perturbations may be visually subtle, they can be detected in the semantic embedding space, making such attacks vulnerable to potential defenses. To improve stealthiness, we introduce an embedding alignment loss that minimizes the difference between the perturbed and denoised image embeddings, ensuring that the attack remains semantically unnoticeable. Experimental results show that SUA can effectively recover unlearned information from MLLMs. Furthermore, the learned noise generalizes well-i.e., a single perturbation trained on a few samples can reveal forgotten contents in unseen images. Implementation code is available at: https://github.com/Zood123/ MLLM-Unlearning-Attack.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

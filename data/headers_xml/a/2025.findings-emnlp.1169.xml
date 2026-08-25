@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Think Clearly: Improving Reasoning via Redundant Token Pruning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Daewon</forename><surname>Choi</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Jimin</forename><surname>Lee</surname></persName>
+							<email>jiminl@kaist.ac.kr</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jihoon</forename><surname>Tack</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Woomin</forename><surname>Song</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Saket</forename><surname>Dingliwal</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sai</forename><forename type="middle">Muralidhar</forename><surname>Jayanthi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Bhavana</forename><surname>Ganesh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jinwoo</forename><surname>Shin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Aram</forename><surname>Galstyan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sravan</forename><forename type="middle">Babu</forename><surname>Bodapati</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Amazon</forename><surname>Agi</surname></persName>
+						</author>
+						<title level="a" type="main">Think Clearly: Improving Reasoning via Redundant Token Pruning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">83C62D08099D6F3687D4042AFB4A052F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:45+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent large language models have shown promising capabilities in long-form reasoning, following structured chains of thought before arriving at a final answer. However, we observe that these reasoning paths tend to include substantial redundancy; analyzing attention patterns reveals that attention scores are widely scattered, particularly incorrect answers exhibit greater attention sparsity. In this paper, we demonstrate that deliberately removing this redundancy in the reasoning process significantly improves performance through clear thinking, i.e., removing distraction. Specifically, we systematically identify reasoning redundancy by measuring token-level attention scores to a special end-of-thinking token, which is appended to an explicit instruction inserted to conclude each intermediate reasoning step. Furthermore, we propose structure-aware pruning that prioritizes removing tokens in low-contributing reasoning chunks over individual tokens. After evicting redundant tokens, we remove the injected end-of-thinking instruction, then resume the reasoning generation. We demonstrate that our method significantly improves overall accuracy across reasoning-intensive benchmarks without any training involved. In particular, our method shows strong performance on challenging mathematical competition benchmarks such as AIME and AMC, where reasoning redundancy is more prevalent.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

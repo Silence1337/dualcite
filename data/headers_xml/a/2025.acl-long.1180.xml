@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GRaMPa: Subword Regularisation by Skewing Uniform Segmentation Distributions with an Efficient Path-counting Markov Model</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Bauwens</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">David</forename><surname>Kaczér</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Bonn-Aachen International Center for Information Technology</orgName>
+								<orgName type="institution">University of Bonn</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Miryam</forename><surname>De Lhoneux ↑ ↑ L A G O M•nlp</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">KU Leuven</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GRaMPa: Subword Regularisation by Skewing Uniform Segmentation Distributions with an Efficient Path-counting Markov Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EB0A26E0E5BDBE34EF9B5F16E08306CC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Stochastically sampling word segmentations from a subword tokeniser, also called subword regularisation, is a known way to increase robustness of language models to outof-distribution inputs, such as text containing spelling errors. Recent work has observed that usual augmentations that make popular deterministic subword tokenisers stochastic still cause only a handful of all possible segmentations to be sampled. It has been proposed to uniformly sample across these instead, through rejection sampling of paths in an unweighted segmentation graph. In this paper, we argue that uniformly random segmentation in turn skews the distributions of certain segmentational properties (e.g. token lengths and amount of tokens produced) away from uniformity, which still ends up hiding meaningfully diverse tokenisations. We propose an alternative uniform sampler using the same segmentation graph, but weighted by counting the paths through it. Our sampling algorithm, GRaMPa, provides hyperparameters allowing sampled tokenisations to skew towards fewer, longer tokens. Furthermore, GRaMPa is single-pass, guaranteeing significantly better computational complexity than previous approaches relying on rejection sampling. We show experimentally that language models trained with GRaMPa outperform existing regularising tokenisers in a data-scarce setting on token-level tasks such as dependency parsing, especially with spelling errors present.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

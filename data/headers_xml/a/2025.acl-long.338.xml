@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Turning Trash into Treasure: Accelerating Inference of Large Language Models with Token Recycling</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xianzhen</forename><surname>Luo</surname></persName>
+							<email>xzluo@ir.hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Harbin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">https://github.com/Luowaterbi/TokenRecycling</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yixuan</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Harbin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">https://github.com/Luowaterbi/TokenRecycling</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qingfu</forename><surname>Zhu</surname></persName>
+							<email>qfzhu@ir.hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Harbin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">https://github.com/Luowaterbi/TokenRecycling</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiming</forename><surname>Zhang</surname></persName>
+							<email>zmzhang@ir.hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Harbin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">https://github.com/Luowaterbi/TokenRecycling</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuanyu</forename><surname>Zhang</surname></persName>
+							<email>zhangxuanyu@duxiaoman.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Du Xiaoman (Beijing) Science Technology Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qing</forename><surname>Yang</surname></persName>
+							<email>yangqing@duxiaoman.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Du Xiaoman (Beijing) Science Technology Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongliang</forename><surname>Xu</surname></persName>
+							<email>xudongliang@duxiaoman.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Du Xiaoman (Beijing) Science Technology Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Turning Trash into Treasure: Accelerating Inference of Large Language Models with Token Recycling</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E4973EE8D79AEE66B3CDE178B0E7EF7D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Massive parameters of LLMs have made inference latency a fundamental bottleneck. Speculative decoding represents a lossless approach to accelerate inference through a guess-andverify paradigm. Some methods rely on additional architectures to guess draft tokens, which need extra training before use. Alternatively, retrieval-based training-free techniques build libraries from pre-existing corpora or by n-gram generation. However, they face challenges like large storage requirements, time-consuming retrieval, and limited adaptability. Observing that candidate tokens generated during the decoding process are likely to reoccur in future sequences, we propose Token Recycling. It stores candidate tokens in an adjacency matrix and employs a breadth-first-search (BFS)-like algorithm to construct a draft tree, which is then validated through tree attention. New candidate tokens from the decoding process are then used to update the matrix. Token Recycling requires &lt;2MB of additional storage and achieves approximately 2x speedup across all sizes of LLMs. It significantly outperforms existing train-free methods by 30% and even a widely recognized training method by 25% 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

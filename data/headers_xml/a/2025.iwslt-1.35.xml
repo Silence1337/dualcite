@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MLLP-VRAIN UPV system for the IWSLT 2025 Simultaneous Speech Translation Translation task</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jorge</forename><surname>Iranzo-Sánchez</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departament d&apos;Informàtica</orgName>
+								<orgName type="laboratory">Machine Learning and Language Processing</orgName>
+								<orgName type="institution" key="instit1">VRAIN</orgName>
+								<orgName type="institution" key="instit2">Universitat Politècnica de València †</orgName>
+								<orgName type="institution" key="instit3">Escola Tècnica Superior d&apos;Enginyeria</orgName>
+								<orgName type="institution" key="instit4">Universitat de València</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Javier</forename><surname>Iranzo-Sánchez</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departament d&apos;Informàtica</orgName>
+								<orgName type="laboratory">Machine Learning and Language Processing</orgName>
+								<orgName type="institution" key="instit1">VRAIN</orgName>
+								<orgName type="institution" key="instit2">Universitat Politècnica de València †</orgName>
+								<orgName type="institution" key="instit3">Escola Tècnica Superior d&apos;Enginyeria</orgName>
+								<orgName type="institution" key="instit4">Universitat de València</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Adrià</forename><surname>Giménez</surname></persName>
+							<email>adria.gimenez@uv.es</email>
+							<affiliation key="aff0">
+								<orgName type="department">Departament d&apos;Informàtica</orgName>
+								<orgName type="laboratory">Machine Learning and Language Processing</orgName>
+								<orgName type="institution" key="instit1">VRAIN</orgName>
+								<orgName type="institution" key="instit2">Universitat Politècnica de València †</orgName>
+								<orgName type="institution" key="instit3">Escola Tècnica Superior d&apos;Enginyeria</orgName>
+								<orgName type="institution" key="instit4">Universitat de València</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jorge</forename><surname>Civera</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departament d&apos;Informàtica</orgName>
+								<orgName type="laboratory">Machine Learning and Language Processing</orgName>
+								<orgName type="institution" key="instit1">VRAIN</orgName>
+								<orgName type="institution" key="instit2">Universitat Politècnica de València †</orgName>
+								<orgName type="institution" key="instit3">Escola Tècnica Superior d&apos;Enginyeria</orgName>
+								<orgName type="institution" key="instit4">Universitat de València</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alfons</forename><surname>Juan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Departament d&apos;Informàtica</orgName>
+								<orgName type="laboratory">Machine Learning and Language Processing</orgName>
+								<orgName type="institution" key="instit1">VRAIN</orgName>
+								<orgName type="institution" key="instit2">Universitat Politècnica de València †</orgName>
+								<orgName type="institution" key="instit3">Escola Tècnica Superior d&apos;Enginyeria</orgName>
+								<orgName type="institution" key="instit4">Universitat de València</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MLLP-VRAIN UPV system for the IWSLT 2025 Simultaneous Speech Translation Translation task</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">234415545CDD7546666FCAC9AF3FF197</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This work describes the participation of the MLLP-VRAIN research group in the shared task of the IWSLT 2025 Simultaneous Speech Translation track. Our submission addresses the unique challenges of real-time translation of long-form speech by developing a modular cascade system that adapts strong pre-trained models to streaming scenarios. We combine Whisper Large-V3-Turbo for ASR with the multilingual NLLB-3.3B model for MT, implementing lightweight adaptation techniques rather than training new end-to-end models from scratch. Our approach employs document-level adaptation with prefix training to enhance the MT model&apos;s ability to handle incomplete inputs, while incorporating adaptive emission policies including a wait-k strategy and RALCP for managing the translation stream. Specialized buffer management techniques and segmentation strategies ensure coherent translations across long audio sequences. Experimental results on the ACL60/60 dataset demonstrate that our system achieves a favorable balance between translation quality and latency, with a BLEU score of 31.96 and non-computationalaware StreamLAAL latency of 2.94 seconds. Our final model achieves a preliminary score on the official test set (IWSLT25Instruct) of 29.8 BLEU. Our work demonstrates that carefully adapted pre-trained components can create effective simultaneous translation systems for long-form content without requiring extensive in-domain parallel data or specialized endto-end training.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

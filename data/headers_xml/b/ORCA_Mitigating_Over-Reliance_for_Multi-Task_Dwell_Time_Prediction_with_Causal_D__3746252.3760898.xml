@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ORCA: Mitigating Over-Reliance for Multi-Task Dwell Time Prediction with Causal Decoupling</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Huishi</forename><surname>Luo</surname></persName>
+							<idno type="ORCID">0000-0002-3553-2280</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Fuzhen</forename><surname>Zhuang</surname></persName>
+							<email>zhuangfuzhen@buaa.edu.cn</email>
+							<idno type="ORCID">0000-0001-9170-7009</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jin</forename><surname>Dong</surname></persName>
+							<email>dongjin@baec.org.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University Beijing</orgName>
+								<address>
+									<addrLine>China Yongchun Zhu Yiqing Wu</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Bo Kang</orgName>
+								<orgName type="department" key="dep2">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department" key="dep1">Ruobing Xie Feng Xia</orgName>
+								<orgName type="department" key="dep2">Independent Researcher Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Deqing Wang</orgName>
+								<orgName type="department" key="dep2">SKLSDE</orgName>
+								<orgName type="department" key="dep3">School of Computer Science</orgName>
+								<orgName type="institution">Beihang University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Beijing Advanced Innovation Center for Future Blockchain and Privacy Computing Beijing</orgName>
+								<orgName type="laboratory">Zhongguancun Laboratory</orgName>
+								<orgName type="institution">Beihang University Beijing</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<region>China</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Fuzhen Zhuang</orgName>
+								<orgName type="institution">Huishi Luo</orgName>
+								<address>
+									<addrLine>Yongchun Zhu, Yiqing Wu Bo Kang, Ruobing Xie, Feng Xia</addrLine>
+									<settlement>Deqing Wang</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ORCA: Mitigating Over-Reliance for Multi-Task Dwell Time Prediction with Causal Decoupling</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B1FF16D11C773D443344F1615AE2E123</idno>
+					<idno type="DOI">10.1145/3746252.3760898</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Dwell Time Prediction</term>
+					<term>Multi-Task Learning</term>
+					<term>Causal Learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Dwell time (DT) is a critical post-click metric for evaluating user preference in recommender systems, complementing the traditional click-through rate (CTR). Although multi-task learning is widely adopted to jointly optimize DT and CTR, we observe that multi-task models systematically collapse their DT predictions to the shortest and longest bins, under-predicting the moderate durations. We attribute this moderate-duration bin under-representation to overreliance on the CTR-DT spurious correlation, and propose ORCA to address it with causal-decoupling. Specifically, ORCA explicitly models and subtracts CTR&apos;s negative transfer while preserving its positive transfer. We further introduce (i) feature-level counterfactual intervention, and (ii) a task-interaction module with instance inverse-weighting, weakening CTR-mediated effect and restoring direct DT semantics. ORCA is model-agnostic and easy to deploy. Experiments show an average 10.6% lift in DT metrics without harming CTR. Code is available here. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

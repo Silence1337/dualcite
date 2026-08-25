@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Weight-based Analysis of Detokenization in Language Models: Understanding the First Stage of Inference Without Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Go</forename><surname>Kamoda</surname></persName>
+							<email>go.kamoda@dc.tohoku.ac.jp</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Tohoku University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benjamin</forename><surname>Heinzerling</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tohoku University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">RIKEN</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tatsuro</forename><surname>Inaba</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Kyoto University</orgName>
+								<address>
+									<addrLine>4 MBZUAI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Keito</forename><surname>Kudo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tohoku University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Keisuke</forename><surname>Sakaguchi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tohoku University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">RIKEN</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kentaro</forename><surname>Inui</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tohoku University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">RIKEN</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Weight-based Analysis of Detokenization in Language Models: Understanding the First Stage of Inference Without Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F1A890E4D94E9F02CD21DAF612205C51</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:18+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>According to the stages-of-inference hypothesis, early layers of language models map their subword-tokenized input, which does not necessarily correspond to a linguistically meaningful segmentation, to more meaningful representations that form the model&apos;s &quot;inner vocabulary&quot;. Prior analysis of this detokenization stage has predominantly relied on probing and interventions such as path patching, which involve selecting particular inputs, choosing a subset of components that will be patched, and then observing changes in model behavior. Here, we show that several important aspects of the detokenization stage can be understood purely by analyzing model weights, without performing any model inference steps. Specifically, we introduce an analytical decomposition of first-layer attention in GPT-2. Our decomposition yields interpretable terms that quantify the relative contributions of position-related, token-related, and mixed effects. By focusing on terms in this decomposition, we discover weight-based explanations of attention bias toward close tokens and attention for detokenization. github.com/gokamoda/lm-detokenization</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

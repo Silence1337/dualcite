@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Bypass Back-propagation: Optimization-based Structural Pruning for Large Language Models via Policy Gradient</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuan</forename><surname>Gao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<address>
+									<country>Wuhan University</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zujing</forename><surname>Liu</surname></persName>
+							<email>zujing.liu@whu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weizhong</forename><surname>Zhang</surname></persName>
+							<email>weizhongzhang@fudan.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of Data Science</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Du</surname></persName>
+							<email>dubo@whu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gui-Song</forename><surname>Xia</surname></persName>
+							<email>guisong.xia@whu.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<address>
+									<country>Wuhan University</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Bypass Back-propagation: Optimization-based Structural Pruning for Large Language Models via Policy Gradient</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6093AA4AE0FFD1EF09D1E6CBF2EBBDBC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent Large-Language Models (LLMs) pruning methods typically operate at the posttraining phase without the expensive weight finetuning, however, their pruning criteria often rely on heuristically hand-crafted metrics, potentially leading to suboptimal performance. We instead propose a novel optimizationbased structural pruning that learns the pruning masks in a probabilistic space directly by optimizing the loss of the pruned model. To preserve efficiency, our method eliminates the back-propagation through the LLM per se during optimization, requiring only the forward pass of the LLM. We achieve this by learning an underlying Bernoulli distribution to sample binary pruning masks, where we decouple the Bernoulli parameters from LLM loss, facilitating efficient optimization via policy gradient estimator without back-propagation. Thus, our method can 1) support global and heterogeneous pruning (i.e., automatically determine different redundancy for different layers), and 2) optionally initialize with a metric-based method (for our Bernoulli distributions). Extensive experiments conducted on LLaMA, LLaMA-2, LLaMA-3, Vicuna, and Mistral models using the C4 and WikiText2 datasets demonstrate the promising performance of our method in efficiency and effectiveness. Code is available at https://github.com/ ethanygao/backprop-free_LLM_pruning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

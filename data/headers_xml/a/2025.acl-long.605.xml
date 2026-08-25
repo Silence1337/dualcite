@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Can a Single Model Master Both Multi-turn Conversations and Tool Use? CoALM: A Unified Conversational Agentic Language Model</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Emre</forename><surname>Can Acikgoz</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jeremiah</forename><surname>Greer</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Akul</forename><surname>Datta</surname></persName>
+							<email>akuld2@illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ze</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">William</forename><surname>Zeng</surname></persName>
+							<email>william@oumi.ai</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Oussama</forename><surname>Elachqar</surname></persName>
+							<email>oussama@oumi.ai</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Emmanouil</forename><surname>Koukoumidis</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dilek</forename><surname>Hakkani-Tür</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gokhan</forename><surname>Tur</surname></persName>
+							<email>gokhan@illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana-Champaign</orgName>
+								<address>
+									<addrLine>2 Oumi</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Can a Single Model Master Both Multi-turn Conversations and Tool Use? CoALM: A Unified Conversational Agentic Language Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7D44A5BAF23E8FFF3C1A4FCE186322A0</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) with APIcalling capabilities enabled building effective Language Agents (LA), while also revolutionizing the conventional task-oriented dialogue (TOD) paradigm. However, current approaches face a critical dilemma: TOD systems are often trained on a limited set of target APIs, requiring new data to maintain their quality when interfacing with new services, while LAs are not trained to maintain user intent over multi-turn conversations. Because both robust multi-turn management and advanced function calling are crucial for effective conversational agents, we evaluate these skills on three popular benchmarks: MultiWOZ 2.4 (TOD), BFCL V3 (LA), and API-Bank (LA)-and our analyses reveal that specialized approaches excel in one domain but underperform in the other. To bridge this chasm, we introduce CoALM (Conversational Agentic Language Model), a unified approach that integrates both conversational and agentic capabilities. We created CoALM-IT, a carefully constructed multi-task dataset that interleave multi-turn ReAct reasoning with complex API usage. Using CoALM-IT, we train three models CoALM 8B, CoALM 70B, and CoALM 405B, which outperform top domain-specific models, including GPT-4o, across all three benchmarks. This demonstrates the feasibility of a single model approach for both TOD and LA, setting a new standard for conversational agents 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

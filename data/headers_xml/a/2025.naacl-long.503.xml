@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Correcting Negative Bias in Large Language Models through Negative Attention Score Alignment</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sangwon</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jongyoon</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bongkyu</forename><surname>Hwang</surname></persName>
+							<email>bongkyu.hwang@samsung.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Samsung SDS</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hoyoung</forename><surname>Kang</surname></persName>
+							<email>hoyoung.kang@samsung.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Samsung SDS</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sooah</forename><surname>Cho</surname></persName>
+							<email>sooah.cho@samsung.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Samsung SDS</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junhwa</forename><surname>Choi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Samsung SDS</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seongho</forename><surname>Joe</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Samsung SDS</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Taehee</forename><surname>Lee</surname></persName>
+							<email>taehee23.lee@samsung.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Samsung SDS</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Youngjune</forename><surname>Gwon</surname></persName>
+							<email>gyj.gwon@samsung.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Samsung SDS</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sungroh</forename><surname>Yoon</surname></persName>
+							<email>sryoon@snu.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">AIIS</orgName>
+								<orgName type="institution" key="instit1">ASRI</orgName>
+								<orgName type="institution" key="instit2">INMC</orgName>
+								<orgName type="institution" key="instit3">ISRC, and IPAI</orgName>
+								<orgName type="institution" key="instit4">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Correcting Negative Bias in Large Language Models through Negative Attention Score Alignment</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">12F3A219CBA766B3C4C17C940AB1E1FB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>A binary decision task, like yes-no questions or answer verification, reflects a significant realworld scenario such as where users look for confirmation about the correctness of their decisions on specific issues. In this work, we observe that language models exhibit a negative bias in the binary decisions of complex reasoning tasks. Based on our observations and the rationale about attention-based model dynamics, we propose a negative attention score (NAS) to systematically and quantitatively formulate negative bias. Based on NAS, we identify attention heads that attend to negative tokens provided in the instructions as answer candidate of binary decisions, regardless of the question in the prompt, and validate their association with the negative bias. Additionally, we propose the negative attention score alignment (NASA) method, which is a parameter-efficient fine-tuning technique to address the extracted negatively biased attention heads. Experimental results from various domains of reasoning tasks and large model search space demonstrate that NASA significantly reduces the gap between precision and recall caused by negative bias while preserving their generalization abilities.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

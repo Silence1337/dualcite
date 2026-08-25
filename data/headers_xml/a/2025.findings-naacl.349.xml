@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Selective Self-to-Supervised Fine-Tuning for Generalization in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Sonam</forename><surname>Gupta</surname></persName>
+							<email>sonam.gupta7@ibm.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yatin</forename><surname>Nandwani</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Asaf</forename><surname>Yehudai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dinesh</forename><surname>Khandelwal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dinesh</forename><surname>Raghu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sachindra</forename><surname>Joshi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Selective Self-to-Supervised Fine-Tuning for Generalization in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6FB9D94E7F0659B1DD941E6062683B9E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:18+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Fine-tuning Large Language Models (LLMs) on specific datasets is a common practice to improve performance on target tasks. However, this performance gain often leads to overfitting, where the model becomes too specialized in either the task or the characteristics of the training data, resulting in a loss of generalization. This paper introduces Selective Self-to-Supervised Fine-Tuning (S3FT), a finetuning approach that achieves better performance than the standard supervised fine-tuning (SFT) while improving generalization. S3FT leverages the existence of multiple valid responses to a query. By utilizing the model&apos;s correct responses, S3FT reduces model specialization during the fine-tuning stage. S3FT first identifies the correct model responses from the training set by deploying an appropriate judge. Then, it fine-tunes the model using the correct model responses and the gold response (or its paraphrase) for the remaining samples. The effectiveness of S3FT is demonstrated through experiments on mathematical reasoning, Python programming and reading comprehension tasks. The results show that standard SFT can lead to an average performance drop of up to 4.4 on multiple benchmarks, such as MMLU and TruthfulQA. In contrast, S3FT reduces this drop by half, i.e. 2.5, indicating better generalization capabilities than SFT while performing significantly better on the fine-tuning tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

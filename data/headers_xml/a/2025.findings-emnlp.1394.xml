@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DM-Codec: Distilling Multimodal Representations for Speech Tokenization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Md</forename><forename type="middle">Mubtasim</forename><surname>Ahasan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Computational &amp; Data Sciences</orgName>
+								<orgName type="institution">Independent University</orgName>
+								<address>
+									<country key="BD">Bangladesh</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tasnim</forename><surname>Mohiuddin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Computational &amp; Data Sciences</orgName>
+								<orgName type="institution">Independent University</orgName>
+								<address>
+									<country key="BD">Bangladesh</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Qatar Computing Research Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><forename type="middle">K M Mahbubur</forename><surname>Rahman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Computational &amp; Data Sciences</orgName>
+								<orgName type="institution">Independent University</orgName>
+								<address>
+									<country key="BD">Bangladesh</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aman</forename><surname>Chadha</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon GenAI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tariq</forename><surname>Iqbal</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Virginia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ashraful</forename><surname>Amin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Computational &amp; Data Sciences</orgName>
+								<orgName type="institution">Independent University</orgName>
+								<address>
+									<country key="BD">Bangladesh</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amin</forename><surname>Ahsan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Computational &amp; Data Sciences</orgName>
+								<orgName type="institution">Independent University</orgName>
+								<address>
+									<country key="BD">Bangladesh</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon GenAI</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Virginia</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DM-Codec: Distilling Multimodal Representations for Speech Tokenization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EA506F73C85A4BC35246CF94E6B68058</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advancements in speech-language models have yielded significant improvements in speech tokenization and synthesis. However, effectively mapping the complex, multidimensional attributes of speech into discrete tokens remains challenging. This process demands acoustic, semantic, and contextual information for precise speech representations. Existing speech representations generally fall into two categories: acoustic tokens from audio codecs and semantic tokens from speech selfsupervised learning models. Although recent efforts have unified acoustic and semantic tokens for improved performance, they overlook the crucial role of contextual representation in comprehensive speech modeling. Our empirical investigations reveal that the absence of contextual representations results in elevated Word Error Rate (WER) and Word Information Lost (WIL) scores in speech transcriptions. To address these limitations, we propose two novel distillation approaches: (1) a language model (LM)-guided distillation method that incorporates contextual information, and (2) a combined LM and self-supervised speech model (SM)-guided distillation technique that effectively distills multimodal representations (acoustic, semantic, and contextual) into a comprehensive speech tokenizer, termed DM-Codec. The DM-Codec architecture adopts a streamlined encoder-decoder framework with a Residual Vector Quantizer (RVQ) and incorporates the LM and SM during the training process. Experiments show DM-Codec significantly outperforms state-of-the-art speech tokenization models, reducing WER by up to 13.46%, WIL by 9.82%, and improving speech quality by 5.84% and intelligibility by 1.85% on the LibriSpeech benchmark dataset. Code, samples, and checkpoints are available at github.com/mubtasimahasan/DM-Codec</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

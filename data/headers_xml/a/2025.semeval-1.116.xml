@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">HalluRAG-RUG at SemEval-2025 Task 3: Using Retrieval-Augmented Generation for Hallucination Detection in Model Outputs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Silvana</forename><surname>Abdi</surname></persName>
+							<email>s.abdi.4@student.rug.nl</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Groningen</orgName>
+								<orgName type="institution" key="instit2">University of Groningen</orgName>
+								<orgName type="institution" key="instit3">University of Groningen</orgName>
+								<orgName type="institution" key="instit4">University of Groningen</orgName>
+								<orgName type="institution" key="instit5">University of Groningen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mahrokh</forename><surname>Hassani</surname></persName>
+							<email>m.hassani@student.rug.nl</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Groningen</orgName>
+								<orgName type="institution" key="instit2">University of Groningen</orgName>
+								<orgName type="institution" key="instit3">University of Groningen</orgName>
+								<orgName type="institution" key="instit4">University of Groningen</orgName>
+								<orgName type="institution" key="instit5">University of Groningen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rosalien</forename><surname>Kinds</surname></persName>
+							<email>r.a.kinds@student.rug.nl</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Groningen</orgName>
+								<orgName type="institution" key="instit2">University of Groningen</orgName>
+								<orgName type="institution" key="instit3">University of Groningen</orgName>
+								<orgName type="institution" key="instit4">University of Groningen</orgName>
+								<orgName type="institution" key="instit5">University of Groningen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Timo</forename><surname>Strijbis</surname></persName>
+							<email>t.strijbis@student.rug.nl</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Groningen</orgName>
+								<orgName type="institution" key="instit2">University of Groningen</orgName>
+								<orgName type="institution" key="instit3">University of Groningen</orgName>
+								<orgName type="institution" key="instit4">University of Groningen</orgName>
+								<orgName type="institution" key="instit5">University of Groningen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Roman</forename><surname>Terpstra</surname></persName>
+							<email>r.p.terpstra@student.rug.nl</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Groningen</orgName>
+								<orgName type="institution" key="instit2">University of Groningen</orgName>
+								<orgName type="institution" key="instit3">University of Groningen</orgName>
+								<orgName type="institution" key="instit4">University of Groningen</orgName>
+								<orgName type="institution" key="instit5">University of Groningen</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">HalluRAG-RUG at SemEval-2025 Task 3: Using Retrieval-Augmented Generation for Hallucination Detection in Model Outputs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A48A437B6ACA984828720590BA9D5D3C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) suffer from a critical limitation: hallucinations, which refer to models generating fluent but factually incorrect text. This paper presents our approach to hallucination detection in English model outputs as part of the SemEval-2025 Task 3 (Mu-SHROOM). Our method, HalluRAG-RUG, integrates Retrieval-Augmented Generation (RAG) using Llama-3 and prediction models using token probabilities and semantic similarity. We retrieved relevant factual information using a named entity recognition (NER)based Wikipedia search and applied abstractive summarization to refine the knowledge base. The hallucination detection pipeline then used this retrieved knowledge to identify inconsistent spans in model-generated text. This result was combined with the results of two systems, which identified hallucinations based on token probabilities and low-similarity sentences. Our system placed 33rd out of 41, performing slightly below the &apos;mark all&apos; baseline but surpassing the &apos;mark none&apos; and &apos;neural&apos; baselines with an IoU of 0.3093 and a correlation of 0.0833.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

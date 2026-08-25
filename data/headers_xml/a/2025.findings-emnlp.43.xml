@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Bag of Tricks for Sparse Mixture-of-Experts: A Benchmark Across Reasoning, Efficiency, and Safety</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mufan</forename><surname>Qiu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Equal Contribution † Equal Supervision</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zheyu</forename><surname>Shen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Maryland</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Equal Contribution † Equal Supervision</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pingzhi</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ang</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Maryland</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianlong</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Bag of Tricks for Sparse Mixture-of-Experts: A Benchmark Across Reasoning, Efficiency, and Safety</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">53D353AD1A682A73735C144043532CF0</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Mixture-of-Experts (MoE) has emerged as a promising approach for scaling large language models efficiently. However, how to design a desired MoE architecture given performance, efficiency, or safety goals remains absent. Existing benchmarks often focus on isolated aspects (e.g., reasoning, efficiency, safety), and there is a lack of consensus on optimal design choices, such as the number and size of experts, the type of routers, and the regularization during pre-training, or strategies like freezing, learning rate adjustments, and limiting expert collaboration during fine-tuning, with prior works often yielding conflicting conclusions. Motivated by this research gap, we introduce MoE-Bench, the first comprehensive assessment of MoE designs across the three dimensions of reasoning ability, efficiency, and safety. Our benchmark systematically evaluates optimal architectural choices during both pre-training and fine-tuning phases. We evaluate two popular MoE backbones across four dimensions of design choices on over eight metrics. Our empirical findings uncover hidden underlying correlations among MoE design choices. Specifically, we observe that (1) tokenlevel routing and z-loss regularization improve reasoning performance; (2) shared experts enhance training stability but reduce specialization; and (3) collaboration-constrained routing and freezing strategies significantly influence load balance, specialization, and safety alignment. Furthermore, we propose three &quot;sweet point&quot; combinations of optimal strategies tailored to different scenarios. We hope this study provides actionable insights for building more robust, efficient, and secure MoE models. Code, checkpoints, and raw data will be released upon acceptance of the paper.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

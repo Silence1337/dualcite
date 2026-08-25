@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">RAG-RewardBench: Benchmarking Reward Models in Retrieval Augmented Generation for Preference Alignment</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhuoran</forename><surname>Jin</surname></persName>
+							<email>zhuoran.jin@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongbang</forename><surname>Yuan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianyi</forename><surname>Men</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pengfei</forename><surname>Cao</surname></persName>
+							<email>pengfei.cao@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yubo</forename><surname>Chen</surname></persName>
+							<email>yubo.chen@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiexin</forename><surname>Xu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Merchants Bank</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huaijun</forename><surname>Li</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Merchants Bank</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaojian</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Merchants Bank</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kang</forename><surname>Liu</surname></persName>
+							<email>kliu@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Zhao</surname></persName>
+							<email>jzhao@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">RAG-RewardBench: Benchmarking Reward Models in Retrieval Augmented Generation for Preference Alignment</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B2D0B46004DF0DD5DCD16D3A3B2B4894</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Despite the significant progress made by existing retrieval augmented language models (RALMs) in providing trustworthy responses and grounding in reliable sources, they often overlook effective alignment with human preferences. In the alignment process, reward models (RMs) act as a crucial proxy for human values to guide optimization. However, it remains unclear how to evaluate and select a reliable RM for preference alignment in RALMs. To this end, we propose RAG-RewardBench, the first benchmark for evaluating RMs in RAG settings. First, we design four crucial and challenging RAG-specific scenarios to assess RMs, including multi-hop reasoning, fine-grained citation, appropriate abstain, and conflict robustness. Then, we incorporate 18 RAG subsets, six retrievers, and 24 RALMs to increase the diversity of data sources. Finally, we adopt an LLMas-a-judge approach to improve preference annotation efficiency and effectiveness, exhibiting a strong correlation with human annotations. Based on the RAG-RewardBench, we conduct a comprehensive evaluation of 45 RMs and uncover their limitations in RAG scenarios. Additionally, we also reveal that existing trained RALMs show almost no improvement in preference alignment, highlighting the need for a shift towards preference-aligned training.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

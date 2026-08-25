@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yixiao</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ziyu</forename><surname>Zhao</surname></persName>
+							<email>ziyuzhao.cs@zju.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongzhou</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institute</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Laboratory</orgName>
+								<orgName type="institution">Southeast University</orgName>
+								<address>
+									<addrLine>4 Shanghai</addrLine>
+									<region>AI</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiliang</forename><surname>Wu</surname></persName>
+							<email>wu_zhiliang@zju.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Gui</surname></persName>
+							<email>guijie@seu.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Laboratory</orgName>
+								<orgName type="institution">Southeast University</orgName>
+								<address>
+									<addrLine>4 Shanghai</addrLine>
+									<region>AI</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Yang</surname></persName>
+							<email>yangyics@zju.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Wu</surname></persName>
+							<email>wufei@zju.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Cheng</surname></persName>
+							<email>chengyu@cse.cuhk.edu.hk</email>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institute</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hehe</forename><surname>Fan</surname></persName>
+							<email>hehefan@zju.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0F591E9145EC78388F388CFA77C52FBF</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:05+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Sparse Mixture-of-Experts (SMoE) architectures are widely used in large language models (LLMs) due to their computational efficiency. However, though only a few experts are activated for each token, SMoE still requires loading all expert parameters, leading to high memory usage and challenges in deployment. Previous work has tried to reduce the overhead by pruning and merging experts, but primarily focused on expert-level operations, leaving neuron-level structure underexplored. We propose DERN (Dropping Experts, Recombining Neurons), a task-agnostic and retraining-free framework for expert pruning and reconstruction. We observe that experts are often misaligned and contain semantic conflicts at the neuron level, which poses challenges for direct merging. To solve this, DERN works in three steps: it first prunes redundant experts using router statistics; then it decomposes them into neuron-level expert segments, assigning each segment to its most compatible retained expert; and finally, it merges segments within each retained expert to build a compact representation. Experiments on Mixtral, Qwen, and DeepSeek SMoE models show that DERN achieves over a 5% performance gains than previous methods on commonsense reasoning and MMLU benchmarks under 50% expert sparsity, without extra training. It also greatly reduces the number of experts and memory usage, making SMoE LLMs easier to deploy in practice.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

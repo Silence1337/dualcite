@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">PRACTIQ: A Practical Conversational text-to-SQL dataset with Ambiguous and Unanswerable Queries</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mingwen</forename><surname>Dong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nischal</forename><surname>Ashok Kumar</surname></persName>
+							<email>nashokkumar@cs.umass.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiqun</forename><surname>Hu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anuj</forename><surname>Chauhan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chung-Wei</forename><surname>Hang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuaichen</forename><surname>Chang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lin</forename><surname>Pan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wuwei</forename><surname>Lan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Henghui</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiarong</forename><surname>Jiang</surname></persName>
+							<email>jiarongj@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Patrick</forename><surname>Ng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiguo</forename><surname>Wang</surname></persName>
+							<email>zhiguow@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts at Amherst</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">PRACTIQ: A Practical Conversational text-to-SQL dataset with Ambiguous and Unanswerable Queries</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A423986855507CEC056B31934AA79897</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Previous text-to-SQL datasets and systems have primarily focused on user questions with clear intentions that can be answered. However, real user questions can often be ambiguous with multiple interpretations or unanswerable due to a lack of relevant data. In this work, we construct a practical conversational text-to-SQL dataset called PRACTIQ, consisting of ambiguous and unanswerable questions inspired by real-world user questions. We first identified four categories of ambiguous questions and four categories of unanswerable questions by studying existing text-to-SQL datasets. Then, we generate conversations with four turns: the initial user question, an assistant response seeking clarification, the user&apos;s clarification, and the assistant&apos;s clarified SQL response with the natural language explanation of the execution results. For some ambiguous queries, we also directly generate helpful SQL responses, that consider multiple aspects of ambiguity, instead of requesting user clarification. To benchmark the performance on ambiguous, unanswerable, and answerable questions, we implemented large language model (LLM)-based baselines using various LLMs. Our approach involves two steps: question category classification and clarification SQL prediction. Our experiments reveal that state-of-the-art systems struggle to handle ambiguous and unanswerable questions effectively. We will release our code for data generation and experiments on GitHub 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

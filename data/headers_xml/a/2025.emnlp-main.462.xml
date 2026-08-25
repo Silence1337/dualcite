@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Predicate-Guided Generation for Mathematical Reasoning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiajun</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Data Science</orgName>
+								<orgName type="institution">New York University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yik-Cheung</forename><surname>Tam</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Data Science</orgName>
+								<orgName type="institution">New York University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Predicate-Guided Generation for Mathematical Reasoning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3C512800B0B9D514744170AAD650F6AE</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We present Prolog-MATH, a curated corpus designed to support mathematical reasoning in large language models (LLMs) through logic programming. Each verbal math problem in the dataset is paired with a chain-of-thought explanation to generate Prolog program via a two-stage automated pipeline. In the first stage, an LLM (e.g., Deepseek-V3) predicts a set of relevant mathematical predicates that could be useful in solving the problem. In the second stage, the LLM uses these suggested predicates along with the expected answer type to generate a complete Prolog program. To improve coverage, we fine-tune an open-source LLM using supervised fine-tuning, followed by GRPO (Group Relative Policy Optimization) training to address problems that Deepseek-V3 fails to solve. To support this training, we propose a predicate-aware reward function that evaluates how well the generated solution incorporates the suggested predicates, complementing the standard binary reward. Experimental results show that: 1) Our two-stage pipeline achieves 81.3% solution coverage on the MATH training set; 2) GRPO training with the predicate-aware reward function enables a series of base models to correctly solve additional problems missed by Deepseek-V3, further increasing solution coverage to 97.4%. Data and source code can be obtained at the Github repository 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

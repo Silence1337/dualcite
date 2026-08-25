@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Evidence Contextualization and Counterfactual Attribution for Conversational QA over Heterogeneous Data with RAG Systems</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rishiraj</forename><surname>Saha</surname></persName>
+							<email>rishiraj.saha.roy@iis.fraunhofer.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution">AME Fraunhofer IIS Erlangen</orgName>
+								<address>
+									<settlement>Bavaria</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joel</forename><surname>Schlotthauer</surname></persName>
+							<email>joel.schlotthauer@iis.fraunhofer.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution">AME Fraunhofer IIS Erlangen</orgName>
+								<address>
+									<settlement>Bavaria</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chris</forename><surname>Hinze</surname></persName>
+							<email>chris.hinze@iis.fraunhofer.de</email>
+							<idno type="ORCID">0009-0006-3196-6280</idno>
+							<affiliation key="aff1">
+								<orgName type="institution">AME Fraunhofer IIS Erlangen</orgName>
+								<address>
+									<settlement>Bavaria</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andreas</forename><surname>Foltyn</surname></persName>
+							<email>andreas.foltyn@iis.fraunhofer.de</email>
+							<affiliation key="aff2">
+								<orgName type="institution">AME Fraunhofer IIS Erlangen</orgName>
+								<address>
+									<settlement>Bavaria</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Luzian</forename><surname>Hahn</surname></persName>
+							<email>luzian.hahn@iis.fraunhofer.de</email>
+							<idno type="ORCID">0009-0005-8450-2714</idno>
+							<affiliation key="aff3">
+								<orgName type="institution">AME Fraunhofer IIS Erlangen</orgName>
+								<address>
+									<settlement>Bavaria</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fabian</forename><surname>Kuech</surname></persName>
+							<email>fabian.kuech@iis.fraunhofer.de</email>
+							<idno type="ORCID">0009-0005-4665-387X</idno>
+							<affiliation key="aff4">
+								<orgName type="institution">AME Fraunhofer IIS Erlangen</orgName>
+								<address>
+									<settlement>Bavaria</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Evidence Contextualization and Counterfactual Attribution for Conversational QA over Heterogeneous Data with RAG Systems</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">369F708AE86D0853F57E7B3710408A3F</idno>
+					<idno type="DOI">10.1145/3701551.3704126</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Question answering</term>
+					<term>Conversations</term>
+					<term>Large Language Models</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Retrieval Augmented Generation (RAG) works as a backbone for interacting with an enterprise&apos;s own data via Conversational Question Answering (ConvQA). In a RAG system, a retriever fetches passages from a collection in response to a question, which are then included in the prompt of a large language model (LLM) for generating a natural language (NL) answer. However, several RAG systems today suffer from two shortcomings: (i) retrieved passages usually contain their raw text and lack appropriate document context, negatively impacting both retrieval and answering quality; and (ii) attribution strategies that explain answer generation typically rely only on similarity between the answer and the retrieved passages, thereby only generating plausible but not causal explanations. In this work, we demonstrate RAGonite, a RAG system that remedies the above concerns by: (i) contextualizing evidence with source metadata and surrounding text; and (ii) computing counterfactual attribution, a causal explanation approach where the contribution of an evidence to an answer is determined by the similarity of the original response to the answer obtained by removing that evidence. To evaluate our proposals, we release a new benchmark ConfQuestions: it has 300 hand-created conversational questions, each in English and German, coupled with ground truth URLs, completed questions, and answers from 215 public Confluence pages. These documents are typical of enterprise wiki spaces with heterogeneous elements. Experiments with RAGonite on ConfQuestions show the viability of our ideas: contextualization improves RAG performance, and counterfactual explanations outperform standard attribution. CCS Concepts • Information systems → Question answering.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

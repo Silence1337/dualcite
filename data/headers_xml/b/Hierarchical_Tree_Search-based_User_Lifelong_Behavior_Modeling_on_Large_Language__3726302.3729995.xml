@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Hierarchical Tree Search-based User Lifelong Behavior Modeling on Large Language Model</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Xia</surname></persName>
+							<idno type="ORCID">0009-0002-4128-6968</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Zhong</surname></persName>
+							<email>zhongrui@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Gu</surname></persName>
+							<email>guhao@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Yang</surname></persName>
+							<email>yangwei08@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Chi</forename><surname>Lu</surname></persName>
+							<email>luchi@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Jiang</surname></persName>
+							<email>jiangpeng@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kun</forename><surname>Gai</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Software</orgName>
+								<orgName type="institution">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Hierarchical Tree Search-based User Lifelong Behavior Modeling on Large Language Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5F9FE240FEFB8A91FC4688FC96AD980A</idno>
+					<idno type="DOI">10.1145/3726302.3729995</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Recommender systems Large Language Models</term>
+					<term>Recommender Systems</term>
+					<term>User Behavior Modeling</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large Language Models (LLMs) have garnered significant attention in Recommendation Systems (RS) due to their extensive world knowledge and robust reasoning capabilities. However, a critical challenge lies in enabling LLMs to effectively comprehend and extract insights from massive user behaviors. Current approaches that directly leverage LLMs for user interest learning face limitations in handling long sequential behaviors, effectively extracting interest, and applying interest in practical scenarios. To address these issues, we propose a Hierarchical Tree Search-based User Lifelong Behavior Modeling framework (HiT-LBM). HiT-LBM integrates Chunked User Behavior Extraction (CUBE) and Hierarchical Tree Search for Interest (HTS) to capture diverse interests and interest evolution of user. CUBE divides user lifelong behaviors into multiple chunks and learns the interest and interest evolution within each chunk in a cascading manner. HTS generates candidate interests through hierarchical expansion and searches for the optimal interest with process rating model to ensure information gain for each behavior chunk. Additionally, we design Temporal-Ware Interest Fusion (TIF) to integrate interests from multiple behavior chunks, constructing a comprehensive representation of user lifelong interests. The representation can be embedded into any recommendation model to enhance performance. Extensive experiments demonstrate the effectiveness of our approach, showing that it surpasses state-of-the-art methods. We also deploy HiT-LBM on * Both authors contributed equally to this research.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

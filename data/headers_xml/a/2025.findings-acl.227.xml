@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mitigating Paraphrase Attacks on Machine-Text Detectors via Paraphrase Inversion</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rafael</forename><forename type="middle">Rivera</forename><surname>Soto</surname></persName>
+							<email>rafaelriverasoto@jhu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Lawrence Livermore National Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Barry</forename><surname>Chen</surname></persName>
+							<email>chen52@llnl.gov</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Lawrence Livermore National Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nicholas</forename><surname>Andrews</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mitigating Paraphrase Attacks on Machine-Text Detectors via Paraphrase Inversion</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A63822A5771A6CD8180169C3FF098D02</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>High-quality paraphrases are easy to produce using instruction-tuned language models or specialized paraphrasing models. Although this capability has a variety of benign applications, paraphrasing attacks-paraphrases applied to machine-generated texts-are known to significantly degrade the performance of machinetext detectors. This motivates us to consider the novel problem of paraphrase inversion, where, given paraphrased text, the objective is to recover an approximation of the original text. The closer the approximation is to the original text, the better machine-text detectors will perform. We propose an approach which frames the problem as translation from paraphrased text back to the original text, which requires examples of texts and corresponding paraphrases to train the inversion model. Fortunately, such training data can easily be generated, given a corpus of original texts and one or more paraphrasing models. We find that language models such as GPT-4 and Llama-3 exhibit biases when paraphrasing which an inversion model can learn with a modest amount of data. Perhaps surprisingly, we also find that such models generalize well, including to paraphrase models unseen at training time. Finally, we show that when combined with a paraphrased-text detector, our inversion models provide an effective defense against paraphrasing attacks, and overall our approach yields an average improvement of +22% AUROC across seven machinetext detectors and three different domains.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

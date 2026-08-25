@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">COGUMELO at SemEval-2025 Task 3: A Synthetic Approach to Detecting Hallucinations in Language Models based on Named Entity Recognition</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Aldan</forename><surname>Creo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Independent Author</orgName>
+								<address>
+									<settlement>Dublin</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Héctor</forename><surname>Cerezo-Costas</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Maximiliano</forename><forename type="middle">Hormazábal</forename><surname>Lagos</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Pedro</forename><forename type="middle">Alonso</forename><surname>Doval</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">IE † Fundación Centro Tecnolóxico de Telecomunicacións de Galicia (GRADIANT)</orgName>
+								<address>
+									<settlement>Vigo</settlement>
+									<region>ES</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">COGUMELO at SemEval-2025 Task 3: A Synthetic Approach to Detecting Hallucinations in Language Models based on Named Entity Recognition</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B3CF0640A221440B452B206DE35D63EE</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In this paper, we propose an approach to detecting hallucinations based on a Named Entity Recognition (NER) task. We train a model to identify spans of text likely to contain hallucinations, treating them as a form of named entity. We focus on efficiency, aiming to develop a model that can detect hallucinations without relying on external data sources or expensive computations that involve state-ofthe-art large language models with upwards of tens of billions of parameters. We utilize the SQuAD question answering dataset to generate a synthetic version that contains both correct and hallucinated responses and train encoder language models of a moderate size (RoBERTa and FLAN-T5) to predict spans of text that are highly likely to contain a hallucination. We test our models on a separate dataset of expertannotated question-answer pairs and find that our approach achieves a Jaccard similarity of up to 0.358 and 0.227 Spearman correlation, which suggests that our models can serve as moderately accurate hallucination detectors, ideally as part of a detection pipeline involving human supervision. We also observe that larger models seem to develop an emergent ability to leverage their background knowledge to make more informed decisions, while smaller models seem to take shortcuts that can lead to a higher number of false positives. We make our data and code publicly accessible, along with an online visualizer. We also release our trained models under an open license.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

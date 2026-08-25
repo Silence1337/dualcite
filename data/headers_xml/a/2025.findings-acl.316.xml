@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mitigate Position Bias in LLMs via Scaling a Single Hidden States Channel</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yijiong</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huiqiang</forename><surname>Jiang</surname></persName>
+							<email>hjiang@microsoft.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Corporation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xufang</forename><surname>Luo</surname></persName>
+							<email>xufluo@microsoft.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Corporation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qianhui</forename><surname>Wu</surname></persName>
+							<email>qianhuiwu@microsoft.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Corporation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chin-Yew</forename><surname>Lin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Corporation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongsheng</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yuqing</forename><surname>Yang</surname></persName>
+							<email>yuqyang@microsoft.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Corporation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yongfeng</forename><surname>Huang</surname></persName>
+							<email>yfhuang@tsinghua.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Corporation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lili</forename><surname>Qiu</surname></persName>
+							<email>liliqiu@microsoft.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Corporation</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mitigate Position Bias in LLMs via Scaling a Single Hidden States Channel</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AC820A5C45F51E6103004FDB64A2AC49</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Long-context language models (LCLMs) can process long context, but still exhibit position bias, also known as &quot;lost in the middle&quot;, which indicates placing key information in the middle of the context will significantly affect performance. To mitigating this, we first explore the micro-level manifestations of position bias, concluding that attention weights are a microlevel expression of position bias. Then we identify that, in addition to position embeddings, positional information in hidden states also contributes to position bias, and it manifests itself in specific channels of hidden states, called positional hidden states. Based on these, we propose a method to mitigate position bias by scaling positional hidden states. Experiments on NaturalQuestions Multi-document QA, KV retrieval and LongBench, using various models including RoPE models, context windowextended models, and Alibi models, demonstrate the effectiveness and generalizability of our approach. Our method can improve performance by up to 15.2% in &quot;lost in the middle&quot; benchmark by modifying just one channel of hidden states. Our code is available at https://aka.ms/PositionalHidden.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

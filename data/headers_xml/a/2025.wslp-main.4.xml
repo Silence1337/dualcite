@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Augmenting Sign Language Translation Datasets with Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Pedro</forename><surname>Dal Bianco</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Jean</forename><surname>Paul</surname></persName>
+							<email>jean.pnr@inf.ufpel.edu.br</email>
+						</author>
+						<author>
+							<persName><forename type="first">Nunes</forename><surname>Reinhold</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Facundo</forename><surname>Quiroga</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Franco</forename><surname>Ronchetti</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">III-LIDI Universidad Nacional de La</orgName>
+								<address>
+									<settlement>Plata</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">III-LIDI Comisión de Investigaciones Científicas</orgName>
+								<orgName type="institution" key="instit1">CDTEC</orgName>
+								<orgName type="institution" key="instit2">Federal University of Pelotas</orgName>
+								<orgName type="institution" key="instit3">Universidad Nacional de La</orgName>
+								<address>
+									<settlement>Plata</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">III-LIDI Comisión de Investigaciones Científicas</orgName>
+								<orgName type="institution">Universidad Nacional de La</orgName>
+								<address>
+									<settlement>Plata</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Augmenting Sign Language Translation Datasets with Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D518222AA7F8ECADAA2845EF46710C6F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Sign language translation (SLT) is a challenging task due to the scarcity of labeled data and the heavy-tailed distribution of sign language vocabularies. In this paper, we explore a novel data augmentation approach for SLT: using a large language model (LLM) to generate paraphrases of the target language sentences in the training data. We experiment with a Transformer-based SLT model (Signformer) on three datasets spanning German, Greek, and Argentinian Sign Languages. For models trained with augmentation, we adopt a two-stage regime: pre-train on the LLM-augmented corpus and then fine-tune on the original, non-augmented training set. Our augmented training sets, expanded with GPT-4-generated paraphrases, yield mixed results. On a medium-scale German SL corpus (PHOENIX14T), LLM augmentation improves BLEU-4 from 9.56 to 10.33. In contrast, a small-vocabulary Greek SL dataset with a nearperfect baseline (94.38 BLEU) sees a slight drop to 92.22 BLEU, and a complex Argentinian SL corpus with a long-tail vocabulary distribution remains around 1.2 BLEU despite augmentation. We analyze these outcomes in relation to each dataset&apos;s complexity and token frequency distribution, finding that LLMbased augmentation is more beneficial when the dataset contains a richer vocabulary and many infrequent tokens. To our knowledge, this work is the first to apply LLM paraphrasing to SLT, and we discuss these results with respect to prior data augmentation efforts in sign language translation.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

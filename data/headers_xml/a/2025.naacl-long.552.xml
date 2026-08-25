@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Systematic Examination of Preference Learning through the Lens of Instruction-Following</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Joongwon</forename><surname>Kim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anirudh</forename><surname>Goyal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aston</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Xiong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Hou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Melanie</forename><surname>Kambadur</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dhruv</forename><surname>Mahajan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Hannaneh</roleName><forename type="first">Hajishirzi</forename><surname>‡♡</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Tan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">†</forename><surname>Genai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Washington</orgName>
+								<orgName type="institution" key="instit2">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Systematic Examination of Preference Learning through the Lens of Instruction-Following</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4DA4A12C0615F2DA610A34C319B8B94A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In this work we systematically investigate how specific attributes of preference datasets affect the alignment and downstream performance of LLMs in instruction-following tasks. We use a novel synthetic data generation pipeline to generate 48,000 unique instruction-following prompts with combinations of 23 verifiable constraints that enable fine-grained and automated quality assessments of model responses. With our synthetic prompts, we use rejection sampling (RS) and Monte Carlo Tree Search (MCTS) to obtain preference pairs. Then, we perform experiments investigating the effects of (1) the presence of shared prefixes between the chosen and rejected responses, (2) the contrast and quality of the chosen, rejected responses and (3) the complexity of the training prompts. Our experiments reveal that shared prefixes provide marginal but consistent improvements and greater stability across challenging training configurations. While high-contrast preference pairs generally outperform low-contrast pairs, combining both often yields the best performance. Additionally, training on prompts of moderate difficulty leads to better generalization across different tasks. Our findings provide actionable insights into optimizing preference data curation for instruction-following tasks, offering a scalable and effective framework for enhancing LLM training and alignment.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

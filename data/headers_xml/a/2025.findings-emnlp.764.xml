@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SEKE: Specialised Experts for Keyword Extraction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Matej</forename><surname>Martinc</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Jožef Stefan Institute</orgName>
+								<address>
+									<settlement>Ljubljana</settlement>
+									<country key="SI">Slovenia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hanh</forename><surname>Thi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Jožef Stefan Institute</orgName>
+								<address>
+									<settlement>Ljubljana</settlement>
+									<country key="SI">Slovenia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hong</forename><surname>Tran</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Jožef Stefan Institute</orgName>
+								<address>
+									<settlement>Ljubljana</settlement>
+									<country key="SI">Slovenia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Senja</forename><surname>Pollak</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Jožef Stefan Institute</orgName>
+								<address>
+									<settlement>Ljubljana</settlement>
+									<country key="SI">Slovenia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Boshko</forename><surname>Koloski</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Jožef Stefan Institute</orgName>
+								<address>
+									<settlement>Ljubljana</settlement>
+									<country key="SI">Slovenia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SEKE: Specialised Experts for Keyword Extraction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1FAB2B52B63E782234BF66657FEE9D33</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Keyword extraction involves identifying the most descriptive words in a document, allowing automatic categorisation and summarisation of large quantities of diverse textual data. Relying on the insight that real-world keyword detection often requires handling of diverse content, we propose a novel supervised keyword extraction approach based on the mixture of experts (MoE) technique. MoE uses a learnable routing sub-network to direct information to specialised experts, allowing them to specialise in distinct regions of the input space. SEKE, a mixture of Specialised Experts for supervised Keyword Extraction, uses DeBERTa as the backbone model and builds on the MoE framework, where experts attend to each token, by integrating it with a bidirectional Long short-term memory (BiLSTM) network, to allow successful extraction even on smaller corpora, where specialisation is harder due to lack of training data. The MoE framework also provides an insight into inner workings of individual experts, enhancing the explainability of the approach. We benchmark SEKE on multiple English datasets, achieving state-of-the-art performance compared to strong supervised and unsupervised baselines. Our analysis reveals that depending on data size and type, experts specialise in distinct syntactic and semantic components, such as punctuation, stopwords, parts-of-speech, or named entities. Code is available at https://github.com/ matejMartinc/SEKE_keyword_extraction.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

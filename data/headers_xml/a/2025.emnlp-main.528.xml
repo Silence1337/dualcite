@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Bit-Flip Error Resilience in LLMs: A Comprehensive Analysis and Defense Framework</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuhang</forename><surname>Chen</surname></persName>
+							<email>yuhang@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Tan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Arizona State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ajay</forename><surname>Jaiswal</surname></persName>
+							<email>ajayjaiswal@utexas.edu</email>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Texas at Austin</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huaizhi</forename><surname>Qu</surname></persName>
+							<email>huaizhiq@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Lin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Arizona State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Cheng</surname></persName>
+							<email>chengyu05@gmail.com</email>
+							<affiliation key="aff3">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Kwong</surname></persName>
+							<email>andrew@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhichao</forename><surname>Cao</surname></persName>
+							<email>zhichao.cao@asu.edu</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Arizona State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianlong</forename><surname>Chen</surname></persName>
+							<email>tianlong@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Bit-Flip Error Resilience in LLMs: A Comprehensive Analysis and Defense Framework</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F9BE5FD687A845B49B440BD50B7D4AAE</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Bit-flip errors (BFEs) are hardware faults where individual bits in memory or processing units are unintentionally flipped. These errors pose a significant threat to neural network reliability because even small changes in model parameters can lead to large output shifts. Large language models (LLMs) are particularly vulnerable to resource-constrained or outdated hardware. Such hardware often lacks errorcorrection mechanisms and faces aging issues, leading to instability under the vast parameter counts and heavy computational loads of LLMs. While the impact of BFEs on traditional networks like CNNs is relatively wellstudied, their effect on the complex architecture of transformers remains largely unexplored. Firstly, this paper presents a comprehensive systematic analysis of BFE vulnerabilities in key LLM components, revealing distinct sensitivities across parameters, activations, and gradients during fine-tuning and inference. Secondly, based on our findings, we introduce a novel defense strategy FlipGuard: (i) exponent bit protection, and (ii) a self-correction based fine-tuning mechanism, to address BFE consequences. FlipGuard minimizes performance degradation while significantly enhancing robustness against BFEs. Experiments demonstrate an average 9.27% reduction in accuracy drop under 1% BFEs on the SST-2 dataset using BERT, and an average 36.35-point improvement in perplexity on the Wikitext-103 dataset using GPT-2, compared to unprotected models. These results show the potential of our approach in enabling reliable LLM deployment on diverse and less reliable hardware platforms.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

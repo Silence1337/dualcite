@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Beyond Contrastive Learning: Synthetic Data Enables List-wise Training with Multiple Levels of Relevance</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Reza</forename><surname>Esfandiarpoor</surname></persName>
+							<email>reza_esfandiarpoor@brown.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">George</forename><surname>Zerveas</surname></persName>
+							<email>gzerveas@microsoft.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruochen</forename><surname>Zhang</surname></persName>
+							<email>ruochen_zhang@brown.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Macton</forename><surname>Mgonzo</surname></persName>
+							<email>macton_mgonzo@brown.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carsten</forename><surname>Eickhoff</surname></persName>
+							<email>c.eickhoff@acm.org</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stephen</forename><forename type="middle">H</forename><surname>Bach</surname></persName>
+							<email>stephen_bach@brown.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Brown</forename><surname>University</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Microsoft</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Beyond Contrastive Learning: Synthetic Data Enables List-wise Training with Multiple Levels of Relevance</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8BDB338794FF36A8A16AF315DDBDCE2F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Although synthetic data has changed various aspects of information retrieval (IR) pipelines, the main training paradigm remains: contrastive learning with binary relevance labels, where one positive document is compared against several negatives using the InfoNCE loss. This objective treats all documents that are not explicitly annotated as relevant on an equally negative footing, regardless of their actual degree of relevance, thus missing subtle nuances useful for ranking. To overcome this limitation, in this work, we forgo real documents and annotations and use large language models to directly generate synthetic documents that answer the MS MARCO queries according to several different levels of relevance. We also propose using Wasserstein distance as a more effective loss function for training transformerbased retrievers with graduated relevance labels. Our experiments on MS MARCO and BEIR benchmark show that our proposed approach outperforms conventional training with InfoNCE by a large margin. Without using any real documents, our method significantly improves self-supervised retrievers and is more robust to distribution shift compared to contrastive learning using real data. Our method also successfully integrates existing real data into the synthetic ranking context, further boosting the performance. Overall, we show that generating multi-level ranking contexts is a better approach to synthetic data generation for IR than just generating the standard positive and negative documents.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

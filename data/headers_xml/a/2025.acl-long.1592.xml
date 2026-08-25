@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LlamaDuo: LLMOps Pipeline for Seamless Migration from Service LLMs to Small-Scale Local LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chansung</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Electronics and Telecommunications Research Institute</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+								<orgName type="institution" key="instit2">The Hong Kong University of Science and Technology ♠ Hugging Face</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">Electronics and Telecommunications Research Institute</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+								<orgName type="institution" key="instit2">The Hong Kong University of Science and Technology ♠ Hugging Face</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Juyong</forename><surname>Jiang</surname></persName>
+							<email>csjuyongjiang@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Electronics and Telecommunications Research Institute</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+								<orgName type="institution" key="instit2">The Hong Kong University of Science and Technology ♠ Hugging Face</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">Electronics and Telecommunications Research Institute</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+								<orgName type="institution" key="instit2">The Hong Kong University of Science and Technology ♠ Hugging Face</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fan</forename><surname>Wang</surname></persName>
+							<email>csfanwang@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Electronics and Telecommunications Research Institute</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+								<orgName type="institution" key="instit2">The Hong Kong University of Science and Technology ♠ Hugging Face</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sayak</forename><surname>Paul</surname></persName>
+							<email>spsayakpaul@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Electronics and Telecommunications Research Institute</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+								<orgName type="institution" key="instit2">The Hong Kong University of Science and Technology ♠ Hugging Face</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jing</forename><surname>Tang</surname></persName>
+							<email>jingtang@ust.hk</email>
+							<affiliation key="aff0">
+								<orgName type="department">Electronics and Telecommunications Research Institute</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+								<orgName type="institution" key="instit2">The Hong Kong University of Science and Technology ♠ Hugging Face</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fan</forename><forename type="middle">Wang</forename><surname>Listing</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Electronics and Telecommunications Research Institute</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+								<orgName type="institution" key="instit2">The Hong Kong University of Science and Technology ♠ Hugging Face</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LlamaDuo: LLMOps Pipeline for Seamless Migration from Service LLMs to Small-Scale Local LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">76A1A4431D7E6C0147E773F567B0022C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The widespread adoption of cloud-based proprietary large language models (LLMs) has introduced significant challenges, including operational dependencies, privacy concerns, and the necessity of continuous internet connectivity. In this work, we introduce an LLMOps pipeline, &quot;LlamaDuo&quot;, for the seamless migration of knowledge and abilities from serviceoriented LLMs to smaller, locally manageable models. This pipeline is crucial for ensuring service continuity in the presence of operational failures, strict privacy policies, or offline requirements. Our LlamaDuo involves fine-tuning a small language model against the service LLM using a synthetic dataset generated by the latter. If the performance of the fine-tuned model falls short of expectations, it is automatically improved through additional fine-tuning using extra similar data generated by the service LLM. This multi-turn process guarantees that the smaller model can eventually match or even surpass the service LLM&apos;s capabilities in specific downstream tasks, offering a practical and scalable solution for managing AI deployments in constrained environments. Extensive experiments with leadingedge LLMs are conducted to demonstrate the effectiveness, adaptability, and affordability of LlamaDuo across various downstream tasks. Our pipeline implementation is available at https://github.com/deep-diver/llamaduo.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mark</forename><forename type="middle">)</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Imperial College London</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wayne</forename><surname>Luk</surname></persName>
+							<email>w.luk@ic.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Imperial College London</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ka</forename><surname>Fai</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Cedric</forename><surname>Yiu</surname></persName>
+							<email>cedric.yiu@polyu.edu.hk</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Hong Kong Polytechnic University</orgName>
+								<address>
+									<country key="HK">Hong Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Li</surname></persName>
+							<email>rui.li@samsung.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Samsung AI Center</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Konstantin</forename><surname>Mishchenko</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Samsung AI Center</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stylianos</forename><forename type="middle">I</forename><surname>Venieris</surname></persName>
+							<email>s.venieris@samsung.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Samsung AI Center</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongxiang</forename><surname>Fan</surname></persName>
+							<email>hongxiangfan@ieee.org</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Imperial College London</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Samsung AI Center</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Hardware-Aware Parallel Prompt Decoding for Memory-Efficient Acceleration of LLM Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">57363E775FAC8B6AE6872173D5415EA5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The auto-regressive decoding of Large Language Models (LLMs) results in significant overheads in their hardware performance. While recent research has explored various speculative decoding techniques for multitoken generation, these methods introduce high memory costs from the additional weights and KV cache of separate draft models, limiting efficiency in edge and long-context scenarios. To overcome these limitations in edge-scale LLMs, we propose a novel parallel prompt decoding that requires only 0.0004% runtime memory overhead by employing a unified single model for both speculation and verification. Inspired by the human natural language generation process, PPD approximates outputs generated at future timesteps in parallel by using multiple prompt tokens. Furthermore, we present a hardware-aware two-stage tree pruning algorithm that adaptively optimizes this decoding scheme to fully leverage the computational capacities on different GPUs. Through extensive experiments across LLMs ranging from Mo-bileLlama to Vicuna-13B on a wide range of benchmarks, our approach demonstrates up to 2.49× speedup. Moreover, our parallel prompt decoding can serve as an orthogonal optimization for synergistic integration with existing speculative decoding, showing up to 1.22× further speed improvement. To support future development, we have included our code implementation with this submission.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

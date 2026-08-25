@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">KELE: Residual Knowledge Erasure for Enhanced Multi-hop Reasoning in Knowledge Editing</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mengqi</forename><surname>Zhang</surname></persName>
+							<email>mengqi.zhang@sdu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Shandong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bowen</forename><surname>Fang</surname></persName>
+							<email>bwn.fang@gmail.com</email>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Intelligence Systems (MAIS) Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">New Laboratory of Pattern Recognition (NLPR) State Key Laboratory of Multimodal Artificial</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Zhongguancun Academy</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Intelligence Systems (MAIS) Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">New Laboratory of Pattern Recognition (NLPR) State Key Laboratory of Multimodal Artificial</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaotian</forename><surname>Ye</surname></persName>
+							<email>yexiaotian@bupt.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shu</forename><surname>Wu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Intelligence Systems (MAIS) Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">New Laboratory of Pattern Recognition (NLPR) State Key Laboratory of Multimodal Artificial</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pengjie</forename><surname>Ren</surname></persName>
+							<email>renpengjie@sdu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Shandong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhumin</forename><surname>Chen</surname></persName>
+							<email>chenzhumin@sdu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Shandong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Wang</surname></persName>
+							<email>wangliang@nlpr.ia.ac.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Intelligence Systems (MAIS) Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">New Laboratory of Pattern Recognition (NLPR) State Key Laboratory of Multimodal Artificial</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">KELE: Residual Knowledge Erasure for Enhanced Multi-hop Reasoning in Knowledge Editing</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BCCC02BD916BD1E86FB4894C7C9C8675</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) face challenges with internal knowledge inaccuracies and outdated information. Knowledge editing has emerged as a pivotal approach to mitigate these issues. Although current knowledge editing techniques exhibit promising performance in single-hop reasoning tasks, they show limitations when applied to multi-hop reasoning. Drawing on cognitive neuroscience and the operational mechanisms of LLMs, we hypothesize that the residual single-hop knowledge after editing causes edited models to revert to their original answers when processing multihop questions, thereby undermining their performance in multi-hop reasoning tasks. To validate this hypothesis, we conduct a series of experiments that empirically confirm our assumptions. Building on the validated hypothesis, we propose a novel knowledge editing method that incorporates a Knowledge Erasure mechanism for Large language model Editing (KELE). Specifically, we design an erasure function for residual knowledge and an injection function for new knowledge. Through joint optimization, we derive the optimal recall vector, which is subsequently utilized within a rank-one editing framework to update the parameters of targeted model layers. Extensive experiments on GPT-J (6B) and LLaMA-2 (7B) demonstrate that KELE substantially enhances the multi-hop reasoning capability of edited LLMs.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

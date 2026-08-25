@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ITL-LIME: Instance-Based Transfer Learning for Enhancing Local Explanations in Low-Resource Data Settings</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rehan</forename><surname>Raza</surname></persName>
+							<idno type="ORCID">0000-0002-2938-8470</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Guanjin</forename><surname>Wang</surname></persName>
+							<email>guanjin.wang@murdoch.edu.au</email>
+							<idno type="ORCID">0000-0002-5258-0532</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Wai</forename><surname>Kok</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Wong</surname></persName>
+							<email>k.wong@murdoch.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hamid</forename><surname>Laga</surname></persName>
+							<email>h.laga@murdoch.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Marco</forename><surname>Fisichella</surname></persName>
+							<email>mfisichella@l3s.de</email>
+							<idno type="ORCID">0000-0002-6894-1101</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Information Technology Murdoch University Perth</orgName>
+								<address>
+									<region>Western Australia</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information Technology Murdoch University Perth</orgName>
+								<address>
+									<region>Western Australia</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Information Technology Murdoch University Perth</orgName>
+								<address>
+									<region>Western Australia</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">School of Information Technology Murdoch University Perth</orgName>
+								<orgName type="institution">L3S Research Center Leibniz University Hannover</orgName>
+								<address>
+									<region>Western Australia</region>
+									<country>Australia Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ITL-LIME: Instance-Based Transfer Learning for Enhancing Local Explanations in Low-Resource Data Settings</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E1DFF0FE4218B08C6C27F13FCFBCDF24</idno>
+					<idno type="DOI">10.1145/3746252.3761183</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Explainable AI</term>
+					<term>Model Agnostic Explanation</term>
+					<term>LIME</term>
+					<term>Instance Transfer Learning</term>
+					<term>Contrastive Learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Explainable Artificial Intelligence (XAI) methods, such as Local Interpretable Model-Agnostic Explanations (LIME), have advanced the interpretability of black-box machine learning models by approximating their behavior locally using interpretable surrogate models. However, LIME&apos;s inherent randomness in perturbation and sampling can lead to locality and instability issues, especially in scenarios with limited training data. In such cases, data scarcity can result in the generation of unrealistic variations and samples that deviate from the true data manifold. Consequently, the surrogate model may fail to accurately approximate the complex decision boundary of the original model. To address these challenges, we propose a novel Instance-based Transfer Learning LIME framework (ITL-LIME) that enhances explanation fidelity and stability in dataconstrained environments. ITL-LIME introduces instance transfer learning into the LIME framework by leveraging relevant real instances from a related source domain to aid the explanation process in the target domain. Specifically, we employ clustering to partition the source domain into clusters with representative prototypes. Instead of generating random perturbations, our method retrieves pertinent real source instances from the source cluster whose prototype is most similar to the target instance. These are then combined with the target instance&apos;s neighboring real instances. To define a compact locality, we further construct a contrastive learningbased encoder as a weighting mechanism to assign weights to the instances from the combined set based on their proximity to the target instance. Finally, these weighted source and target instances are used to train the surrogate model for explanation purposes. Experimental evaluation with real-world datasets demonstrates that ITL-LIME greatly improves the stability and fidelity of LIME * Corresponding author.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

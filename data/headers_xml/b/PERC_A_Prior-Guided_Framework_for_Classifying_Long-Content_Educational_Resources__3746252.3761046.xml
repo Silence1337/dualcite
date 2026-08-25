@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">PERC: A Prior-Guided Framework for Classifying Long-Content Educational Resources with Imbalanced Category Distributions</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Quanlong</forename><surname>Guan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiuliang</forename><surname>Duan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhi</forename><surname>Chen</surname></persName>
+							<email>chenzhi@stu2022.jnu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xingyu</forename><surname>Zhu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jianbo</forename><surname>Huang</surname></persName>
+							<email>jbhuang@scut.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xinzhong</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zonglin</forename><surname>Liu</surname></persName>
+							<email>zonglin.liu@lango-tech.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Jinan University Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Jinan University Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Jinan University Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Jinan University Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">South China University of Technology</orgName>
+								<address>
+									<settlement>Guangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Jinan University Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">LANGO Tech Co.,Ltd. Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">Liangda Fang Jinan University Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">PERC: A Prior-Guided Framework for Classifying Long-Content Educational Resources with Imbalanced Category Distributions</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">151FB74F47D3D64AB1D86D376933655D</idno>
+					<idno type="DOI">10.1145/3756252.3761046</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Educational Resource Classification</term>
+					<term>Long-Content Classification</term>
+					<term>Imbalanced Categories</term>
+					<term>Prior Knowledge</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>With the rapid growth of online education, the types and volumes of educational resources have increased significantly. Efficient classification of these resources can substantially reduce manual workload and enhance management effectiveness. However, existing models often struggle to accurately classify long-content educational content, particularly under imbalanced category distributions. To address these challenges, we propose PERC, a prior-guided framework for classifying long educational resources with imbalanced categories. To the best of our knowledge, PERC is the first framework to incorporate the foundational cognitive dimensions of Bloom&apos;s Taxonomy into educational resource classification. First, PERC leverages standardized pedagogical classification guidelines and maps the original label space into a semantically structured prior category space using a Structured State-Space Learning framework. Second, to handle the length and high information density of educational texts, we introduce a Dynamic Sliding Window Attention mechanism that captures both local and partial global dependencies, enabling the extraction of compact, semantically rich representations. Finally, a category-aware classifier integrates the prior representation of each category with the semantic representation of the resource to produce a category-aware embedding for final prediction. To evaluate PERC, we constructed two datasets: EduMix-24 and EduMath-24, comprising 18,799 educational resources manually annotated across 9 lesson types, 15 teaching modes, and 9 activity elements. Classification experiments on all three tasks consistently demonstrate that PERC outperforms state-of-the-art baselines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

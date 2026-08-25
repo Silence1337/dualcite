@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Decoder-only Pre-training Enhancement for Spatio-temporal Traffic Forecasting</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tao</forename><surname>Yu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Junhong</forename><surname>Wan</surname></persName>
+							<email>wanjunhong@hikvision.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yao</forename><surname>Fu</surname></persName>
+							<email>fuyao@hikvision.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Weihao</forename><surname>Jiang</surname></persName>
+							<email>jiangweihao5@hikvision.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jiang</forename><surname>Zhu</surname></persName>
+							<email>zhujiang.hri@hikvision.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Hikvision Research Institute Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Hikvision Research Institute Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Hikvision Research Institute Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Hikvision Research Institute Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Hikvision Research Institute Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Decoder-only Pre-training Enhancement for Spatio-temporal Traffic Forecasting</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">235135BDCAE3AA2C2C66FC5CBA6C5D75</idno>
+					<idno type="DOI">10.1145/3746252.3761432</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Traffic forecasting</term>
+					<term>Spatio-temporal graph neural network</term>
+					<term>Pretraining model</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Although spatio-temporal graph neural networks (STGNNs) become widely used methods in traffic forecasting, they still encounter an issue named short-sightedness. Specifically, due to high model complexity and GPU memory usage, STGNNs are restricted to processing only very short input time series. This limited context often causes STGNNs to focus on local variations and overlook long-term patterns, leading to misinterpretation of time series trends. To tackle this issue, recent studies propose to perform mask reconstruction pre-training on traffic series to enhance STGNNs. However, we argue that mask reconstruction is a suboptimal pre-training paradigm for traffic forecasting, because there exists a great gap between pre-training and downstream forecasting, caused by their inconsistent training targets. To eliminate this gap, we propose a new pre-training paradigm named next patch prediction and prove its advantages from both empirical and theoretical perspectives. Based on this paradigm, we introduce a new framework called Decoderonly Pre-training Enhancement (DoP) to unleash the potential of traffic pre-training model. Specifically, DoP uses Transformer decoders as infrastructure, and leverages next patch prediction as target to conduct pre-training. In addition, we propose a new dualview temporal embedding to fully capture temporal information and spatial spectral enhancement to model spatial information. After pre-training, DoP enhances existing STGNNs seamlessly with periodic enhancement mechanism. On four real-world traffic benchmarks, we demonstrate its start-of-the-art performance. CCS Concepts • Computing methodologies → Artificial intelligence.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

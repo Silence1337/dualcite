@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Refuse Whenever You Feel Unsafe: Improving Safety in LLMs via Decoupled Refusal Training</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Youliang</forename><surname>Yuan</surname></persName>
+							<email>youliangyuan@link.cuhk.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Data Science</orgName>
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shenzhen Research Institute of Big Data</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Work was done when Youliang Yuan</orgName>
+								<address>
+									<addrLine>Wenxuan Wang</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenxiang</forename><surname>Jiao</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<country>Tencent</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenxuan</forename><surname>Wang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Work was done when Youliang Yuan</orgName>
+								<address>
+									<addrLine>Wenxuan Wang</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jen-Tse</forename><surname>Huang</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Work was done when Youliang Yuan</orgName>
+								<address>
+									<addrLine>Wenxuan Wang</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiahao</forename><surname>Xu</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<country>Tencent</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tian</forename><surname>Liang</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<country>Tencent</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pinjia</forename><surname>He</surname></persName>
+							<email>hepinjia@cuhk.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Data Science</orgName>
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shenzhen Research Institute of Big Data</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhaopeng</forename><surname>Tu</surname></persName>
+							<email>zptu@tencent.com</email>
+							<affiliation key="aff2">
+								<address>
+									<country>Tencent</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Refuse Whenever You Feel Unsafe: Improving Safety in LLMs via Decoupled Refusal Training</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">69653C57D48B4E8CF4CAEA6394E1F606</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This study addresses a critical gap in safety tuning practices for Large Language Models (LLMs) by identifying and tackling a refusal position bias within safety tuning data, which compromises the models&apos; ability to appropriately refuse generating unsafe content. We introduce a novel approach, Decoupled Refusal Training (DeRTa), designed to empower LLMs to refuse compliance to harmful prompts at any response position, significantly enhancing their safety capabilities. DeRTa incorporates two novel components: (1) Maximum Likelihood Estimation (MLE) with Harmful Response Prefix, which trains models to recognize and avoid unsafe content by appending a segment of harmful response to the beginning of a safe response, and (2) Reinforced Transition Optimization (RTO), which equips models with the ability to transition from potential harm to safety refusal consistently throughout the harmful response sequence. Our empirical evaluation, conducted using LLaMA3 and Mistral model families across six attack scenarios, demonstrates that our method not only improves model safety without compromising performance but also surpasses baseline methods in defending against attacks. 1 WARNING: This paper contains unsafe model responses.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

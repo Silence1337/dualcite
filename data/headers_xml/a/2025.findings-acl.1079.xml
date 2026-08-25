@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">APT: Improving Specialist LLM Performance with Weakness Case Acquisition and Iterative Preference Training</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Rao</surname></persName>
+							<email>rao7jun@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing and Intelligence</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zepeng</forename><surname>Lin</surname></persName>
+							<email>zepenglin11@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing and Intelligence</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuebo</forename><surname>Liu</surname></persName>
+							<email>liuxuebo@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing and Intelligence</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaopeng</forename><surname>Ke</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing and Intelligence</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lian</forename><surname>Lian</surname></persName>
+							<email>lianlian3@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Cloud Computing Technologies Co., Ltd</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dong</forename><surname>Jin</surname></persName>
+							<email>jindong2@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Cloud Computing Technologies Co., Ltd</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shengjun</forename><surname>Cheng</surname></persName>
+							<email>chengshengjun@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Cloud Computing Technologies Co., Ltd</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Yu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">School of Intelligence Science and Engineering</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Zhang</surname></persName>
+							<email>zhangmin2021@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing and Intelligence</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">APT: Improving Specialist LLM Performance with Weakness Case Acquisition and Iterative Preference Training</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5DF9FF793B93B99AE587FA7C67964F25</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) often require domain-specific fine-tuning to address targeted tasks, which risks degrading their general capabilities. Maintaining a balance between domain-specific enhancements and general model utility is a key challenge. This paper proposes a novel approach named APT (Weakness Case Acquisition and Iterative Preference Training) to enhance domain-specific performance with self-generated dis-preferred weakness data (bad cases and similar cases). APT uniquely focuses on training the model using only those samples where errors occur, alongside a small, similar set of samples retrieved for this purpose. This targeted training minimizes interference with the model&apos;s existing knowledge base, effectively retaining generic capabilities. Experimental results on the LLama-2 and Mistral-V0.3 models across various benchmarks demonstrate that APT ensures no reduction in generic capacity and achieves superior performance on downstream tasks compared to various existing methods. This validates our method as an effective strategy for enhancing domain-specific capabilities without sacrificing the model&apos;s broader applicability.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

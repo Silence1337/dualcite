@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Efficient Multimodal Streaming Recommendation via Expandable Side Mixture-of-Experts</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yunke</forename><surname>Qu</surname></persName>
+							<email>yunke.qu@uq.net.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Qu</surname></persName>
+							<email>l.qu@ecu.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Chen</surname></persName>
+							<email>tong.chen@uq.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Quoc</forename><surname>Viet</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hung</forename><surname>Nguyen</surname></persName>
+							<email>henry.nguyen@griffith.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hongzhi</forename><surname>Yin</surname></persName>
+							<email>h.yin1@uq.edu.au</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Queensland Brisbane</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Edith Cowan University Perth</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Queensland Brisbane</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Griffith University Gold Coast</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">The University of Queensland Brisbane</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Efficient Multimodal Streaming Recommendation via Expandable Side Mixture-of-Experts</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9A9768CEB442FAAFEA38EA312370A773</idno>
+					<idno type="DOI">10.1145/3746252.3761390</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Recommender Systems</term>
+					<term>Continual Learning</term>
+					<term>Parameter-Efficient Tuning</term>
+					<term>Streaming Recommender Systems</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Streaming recommender systems (SRSs) are widely deployed in real-world applications, where user interests shift and new items arrive over time. As a result, effectively capturing users&apos; latest preferences is challenging, as interactions reflecting recent interests are limited and new items often lack sufficient feedback. A common solution is to enrich item representations using multimodal encoders (e.g., BERT or ViT) to extract visual and textual features. However, these encoders are pretrained on general-purpose tasks: they are not tailored to user preference modeling, and they overlook the fact that user tastes toward modality-specific features such as visual styles and textual tones can also drift over time. This presents two key challenges in streaming scenarios: the high cost of fine-tuning large multimodal encoders, and the risk of forgetting long-term user preferences due to continuous model updates. To tackle these challenges, we propose Expandable Side Mixtureof-Experts (XSMoE), a memory-efficient framework for multimodal streaming recommendation. XSMoE attaches lightweight side-tuning modules consisting of expandable expert networks to frozen pretrained encoders and incrementally expands them in response to evolving user feedback. A gating router dynamically combines expert and backbone outputs, while a utilization-based pruning strategy maintains model compactness. By learning new patterns through expandable experts without overwriting previously acquired knowledge, XSMoE effectively captures both cold start and shifting preferences in multimodal features. Experiments on three real-world datasets demonstrate that XSMoE outperforms state-of-the-art baselines in both recommendation quality and computational efficiency. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LLaMA-Berry: Pairwise Optimization for Olympiad-level Mathematical Reasoning via O1-like Monte Carlo Tree Search</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Di</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianbo</forename><surname>Wu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Merced</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingdi</forename><surname>Lei</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Che</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Independent Researcher</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiatong</forename><surname>Li</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Hong Kong Polytechnic University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Xie</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">University of New</orgName>
+								<address>
+									<addrLine>South Wales 7 Shanghai</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoshui</forename><surname>Huang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Shufei</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marco</forename><surname>Pavone</surname></persName>
+							<affiliation key="aff6">
+								<orgName type="institution" key="instit1">Jiao Tong University</orgName>
+								<orgName type="institution" key="instit2">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuqiang</forename><surname>Li</surname></persName>
+							<email>liyuqiang@pjlab.org.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wanli</forename><surname>Ouyang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongzhan</forename><surname>Zhou</surname></persName>
+							<email>zhoudongzhan@pjlab.org.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LLaMA-Berry: Pairwise Optimization for Olympiad-level Mathematical Reasoning via O1-like Monte Carlo Tree Search</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">280247E1124CAF0686BDB0DA6467A72E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper presents LLaMA-Berry, an advanced mathematical reasoning framework to enhance the problem-solving ability of large language models (LLMs). The framework combines Monte Carlo Tree Search with Self-Refine (SR-MCTS) to optimize the reasoning paths and utilizes a pairwise reward model to evaluate different paths globally. By leveraging the self-critique and rewriting capabilities of LLMs, our SR-MCTS overcomes the inefficiencies and limitations of conventional stepwise and greedy search algorithms, enabling a more efficient exploration of solution spaces. To guide the search process, we propose the Pairwise Preference Reward Model (PPRM), which predicts pairwise preferences between solutions through instruction-following capabilities trained by Reinforcement Learning from Human Feedback (RLHF). Finally, the Enhanced Borda Count (EBC) method is adopted to synthesize pairwise preferences into global quantile scores for evaluations. This approach mitigates the challenges of scoring variability and non-independent distributions in mathematical reasoning tasks. The framework has been tested on general and advanced benchmarks, showing superior search efficiency and performance compared to existing open-source and closed-source methods, particularly in complex Olympiad-level benchmarks, including AIME24 and AMC23.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

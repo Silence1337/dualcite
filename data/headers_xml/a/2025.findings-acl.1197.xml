@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SAFECHAIN: Safety of Language Models with Long Chain-of-Thought Reasoning Capabilities</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fengqing</forename><surname>Jiang</surname></persName>
+							<email>fqjiang@uw.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington ✠ University of Georgia ♠ UIUC</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhangchen</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington ✠ University of Georgia ♠ UIUC</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuetai</forename><surname>Li</surname></persName>
+							<email>yuetaili@uw.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington ✠ University of Georgia ♠ UIUC</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">♣</forename><surname>Luyao</surname></persName>
+							<email>luyaoniu@uw.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington ✠ University of Georgia ♠ UIUC</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington ✠ University of Georgia ♠ UIUC</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">♠</forename><surname>Bill</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington ✠ University of Georgia ♠ UIUC</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuchen</forename><surname>Lin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington ✠ University of Georgia ♠ UIUC</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Radha</forename><surname>Poovendran</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Washington ✠ University of Georgia ♠ UIUC</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SAFECHAIN: Safety of Language Models with Long Chain-of-Thought Reasoning Capabilities</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5E5F439C1DDE3986486EFA161A5D4619</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:18+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Emerging large reasoning models (LRMs), such as DeepSeek-R1 models, leverage long chain-of-thought (CoT) reasoning to generate structured intermediate steps, enhancing their reasoning capabilities. However, long CoT does not inherently guarantee safe outputs, potentially leading to harmful consequences such as the introduction of security vulnerabilities in code or the spread of misinformation. Current research on large language model (LLM) safety usually focuses on short-answer responses, overlooking the long CoT style outputs of LRMs. To bridge this gap, we conduct a systematic study of LRM safety. First, we investigate safety evaluators calibrated against human annotations. Using our newly developed metrics, we thoroughly assess the safety of 13 state-of-the-art LRMs on StrongReject and WildJailbreak datasets. Our results show that LRMs are not safe compared to their reasoning advance. Further, we perform a finegrained analysis of the reasoning trace and final answer. We find that three decoding strategies-ZeroThink, LessThink, and MoreThink-can improve model safety without additional training. However, these strategies either use constrained reasoning traces or incur high inference costs. To better strengthen LRM safety, we introduce SAFECHAIN, the first-of-its-kind safety training dataset in CoT style. We fine-tune two LRMs with SAFECHAIN, showing that it not only enhances model safety but also preserves performance across 6 reasoning benchmarks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

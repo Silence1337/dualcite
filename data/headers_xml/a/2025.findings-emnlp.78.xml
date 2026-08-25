@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Training Language Models to Critique With Multi-agent Feedback</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tian</forename><surname>Lan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenwei</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengqi</forename><surname>Lyu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuaibin</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Heyan</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dahua</forename><surname>Lin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">MMLab</orgName>
+								<orgName type="institution">The Chinese University of Hong</orgName>
+								<address>
+									<addrLine>Kong 4 Key</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="laboratory">Laboratory of Brain Health Intelligent Evaluation and Intervention</orgName>
+								<orgName type="institution" key="instit1">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">CPII under InnoHK</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xian-Ling</forename><surname>Mao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Beijing Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Training Language Models to Critique With Multi-agent Feedback</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">318AD5905028BFEFCB5522CE3BC235EB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Critique ability, a meta-cognitive capability of humans, presents significant challenges for LLMs to improve. While utilizing human annotation can enhance critique ability effectively, most recent works primarily rely on supervised fine-tuning (SFT) using critiques generated by a single LLM like GPT-4, which is more scalable and cost-effective. However, such modelgenerated critiques often suffer from inherent flaws due to the complexity of critique. Consequently, fine-tuning LLMs on these flawed critiques not only limits performance but also propagates errors into the learned model. To address this issue, we propose MultiCritique, a unified framework that leverages multi-agent feedback to improve critique ability in both the supervised fine-tuning (SFT) and reinforcement learning (RL) stages. In the SFT stage, MultiCritique aggregates high-quality multiagent critiques through a fine-grained metacritique mechanism. In the RL stage, preference critiques are constructed and refined by validating their contributions to revisions, thereby enhancing robustness of RL in improving critique ability. Based on MultiCritique, we construct SFT and RL datasets. Extensive experimental results on two benchmarks highlight the key benefits of our dataset, including superior quality, enhanced data efficiency, strong generalization on unseen tasks, and improvements in the general capability of LLMs. Notably, our fine-tuned 7B model significantly surpasses advanced 7B-13B models, approaching advanced 70B LLMs and GPT-4. Resources have been publicly available 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

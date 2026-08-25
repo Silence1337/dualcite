@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Reproducibility Study of LLM Setwise Reranking using Heapsort</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dawn</forename><surname>Lawrie</surname></persName>
+							<email>lawrie@jhu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Efsun</forename><surname>Kayi</surname></persName>
+							<email>ekayi1@jhu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">James</forename><surname>Mayfield</surname></persName>
+							<email>mayfield@jhu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Eugene</forename><surname>Yang</surname></persName>
+							<email>eugene.yang@jhu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Yates</surname></persName>
+							<email>andrew.yates@jhu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Douglas</forename><forename type="middle">W</forename><surname>Oard</surname></persName>
+							<email>oard@umd.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Johns Hopkins HLTCOE Baltimore</orgName>
+								<address>
+									<region>MD</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Johns Hopkins HLTCOE Baltimore</orgName>
+								<address>
+									<region>MD</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Johns Hopkins HLTCOE Baltimore</orgName>
+								<address>
+									<region>MD</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Maryland College Park</orgName>
+								<address>
+									<region>MD</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Reproducibility Study of LLM Setwise Reranking using Heapsort</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BC1DEBD916F5311668D11274AFEA03C6</idno>
+					<idno type="DOI">10.1145/3726302.3730338</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Setwise LLM Reranker</term>
+					<term>Heapsort</term>
+					<term>Large Language Model for Zeroshot ranking</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large language models (LLMs) can be effective at retrieval but are generally too expensive to use as first-stage rankers. As a consequence, several approaches to their use as rerankers of less expensive first-stage retrieval results have been suggested. Zhuang et al. recommend setwise approaches. In particular, they use heapsort to efficiently return top-ranked documents by obtaining a partial order from each LLM call. Utilizing rerankers requires setting parameters such as number of input documents, number of documents to be reranked, evaluation depth, number of tokens per document, and selection of LLM, all of which contribute to latency and effectiveness. In this work, we reproduce the batching and reranking of Zhuang et al. with a larger comparison window size. Furthermore, we determine that the document truncation used in the original implementation is suboptimal. By providing more context to the LLM, we show that the reranker is more effective than originally reported. CCS Concepts • Information systems → Retrieval models and ranking.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

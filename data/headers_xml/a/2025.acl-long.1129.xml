@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Enhancing Chain-of-Thought Reasoning with Critical Representation Fine-tuning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chenxi</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">the State Key Laboratory of CAD&amp;CG</orgName>
+								<orgName type="institution" key="instit2">Zhejiang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Cloud Computing</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shaotian</forename><surname>Yan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Cloud Computing</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Xie</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Cloud Computing</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">Zhejiang University of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Binbin</forename><surname>Lin</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sinan</forename><surname>Fan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Cloud Computing</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Xin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Cloud Computing</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Deng</forename><surname>Cai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">the State Key Laboratory of CAD&amp;CG</orgName>
+								<orgName type="institution" key="instit2">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Shen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Cloud Computing</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jieping</forename><surname>Ye</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Cloud Computing</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Enhancing Chain-of-Thought Reasoning with Critical Representation Fine-tuning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">05A0986A4649C57271FDFE713955FB07</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Representation Fine-tuning (ReFT), a recently proposed Parameter-Efficient Fine-Tuning (PEFT) method, has attracted widespread attention for significantly improving parameter efficiency by editing representation space alone. In this work, we investigate applying ReFT to complex reasoning tasks. However, directly using the native ReFT method, which modifies fixed representations at the beginning and end of each layer, yields suboptimal performance, as these fixed-position representations have uncertain impact on the outputs. We observe that, in complex reasoning tasks, there often exist certain critical representations. These representations either integrate significant information from preceding layers or regulate subsequent layer representations. Through layer-by-layer propagation, they exert a substantial influence on the final output. Naturally, fine-tuning these critical representations has the potential to greatly enhance reasoning performance. Building upon these insights, we propose Critical Representation Fine-Tuning (CRFT), a novel method that identifies and optimizes these critical representations through information flow analysis. CRFT operates within a supervised learning framework, dynamically optimizing critical representations in a lowrank linear subspace while freezing the base model. The effectiveness and efficiency of our method are validated across eight benchmarks for arithmetic and commonsense reasoning, using LLaMA and Mistral model families. Notably, our method improves the accuracy of LLaMA-2-7B and ReFT by 18.2% and 3.8%, respectively, on GSM8K, while using only 0.016% of the model parameters, significantly less than other PEFT methods. Furthermore, our method also adapts effectively to fewshot settings, boosting one-shot accuracy by</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

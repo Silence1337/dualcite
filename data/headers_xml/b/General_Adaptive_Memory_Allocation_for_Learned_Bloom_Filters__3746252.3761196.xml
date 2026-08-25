@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">General Adaptive Memory Allocation for Learned Bloom Filters</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">You</forename><surname>Shang</surname></persName>
+							<email>you.shang@stu.cqu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ruiyuan</forename><surname>Li</surname></persName>
+							<email>ruiyuan.li@cqu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yingying</forename><surname>Sun</surname></persName>
+							<email>yingying.sun@cqu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Guanyao</forename><surname>Li</surname></persName>
+							<email>guanyaoli@uic.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Guangchao</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Junbo</forename><surname>Zhang</surname></persName>
+							<email>msjunbozhang@outlook.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Zheng</surname></persName>
+							<email>msyuzheng@outlook.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Chongqing University Chongqing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Chongqing University Chongqing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Chongqing University Chongqing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Chongqing University Chongqing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Beijing Normal-Hong Kong Baptist University Zhuhai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">JD Intelligent Cities Research JD iCity, JD Technology Beijing</orgName>
+								<orgName type="institution">Chongqing University Chongqing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">JD Intelligent Cities Research JD iCity, JD Technology Beijing</orgName>
+								<address>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country>China USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">General Adaptive Memory Allocation for Learned Bloom Filters</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BC7B192CC4FB88AF98CA9614F479E6FB</idno>
+					<idno type="DOI">10.1145/3746252.3761196</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Learned Bloom Filter, Bayesian Optimization</keywords>
+			</textClass>
+			<abstract>
+				<p>Membership testing, which determines whether an element belongs to a set, is widely used in fields like database systems and network applications. Bloom Filters (BFs) can solve this problem efficiently but suffer from high False Positive Rates (FPRs) and large memory requirements for massive datasets. Learned Bloom Filters (LBFs), combining a learning model with a backup Bloom Filter, mitigate these issues by capturing data distributions. However, the critical problem of memory allocation between the learning model and the backup filter has usually been overlooked, despite its significant impact on LBF performance under constrained budgets. To this end, we propose Gama, the first General Adaptive Memory Allocation framework for LBFs as far as we know. Gama introduces two memory allocation strategies: Loop-Based method and Bayesian-Based method. Loop-Based method evaluates all configurations at each training epoch, making it well-suited for scenarios with tight memory constraints. However, it faces efficiency challenges under large memory budgets due to the requirement for exhaustive evaluations. In contrast, Bayesian-Based method efficiently navigates the search space through probabilistic exploration, which reduces the number of configurations evaluated and significantly improves the efficiency while maintaining FPRs. Furthermore, we propose a hybrid approach that combines their strengths to dynamically adapt to different constraints. Experiments on three real-world datasets show that Gama can achieve a relative performance improvement of 69% in terms of FPR in the best case. CCS Concepts • Computing methodologies → Optimization algorithms; Machine learning approaches; • Theory of computation → Bloom filters and hashing; Approximation algorithms analysis.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

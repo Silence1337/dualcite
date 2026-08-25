@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Scaling Laws for Multilingual Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yifei</forename><surname>He</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alon</forename><surname>Benhaim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Barun</forename><surname>Patra</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Praneetha</forename><surname>Vaddamanu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sanchit</forename><surname>Ahuja</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vishrav</forename><surname>Chaudhary</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Han</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xia</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Scaling Laws for Multilingual Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8FE68CD9687C55A291A98B8914709D41</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We propose a novel scaling law for generalpurpose decoder-only language models (LMs) trained on multilingual data, tackling the problem of balancing languages during multilingual pretraining. A primary challenge in studying multilingual scaling is the difficulty of analyzing individual language performance due to cross-lingual transfer. To tackle this, we shift the focus from individual languages to language families. We introduce and validate a hypothesis that the test cross-entropy loss for each language family is determined solely by its own sampling ratio, independent of other languages in the mixture. This insight simplifies the complexity of multilingual scaling and make the analysis scalable to an arbitrary number of languages. Building on this hypothesis, we derive a power-law relationship that links performance with dataset size, model size and sampling ratios. This relationship enables us to predict performance across various combinations of the above three quantities, and derive the optimal sampling ratios at different model scales. To demonstrate the effectiveness and accuracy of our proposed scaling law, we perform a large-scale empirical study, training more than 100 models on 23 languages spanning 5 language families. Our experiments show that the optimal sampling ratios derived from small models (85M parameters) generalize effectively to models that are several orders of magnitude larger (1.2B parameters), offering a resource-efficient approach for multilingual LM training at scale.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

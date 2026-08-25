@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Asymmetric Diffusion Recommendation Model</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yongchun</forename><surname>Zhu</surname></persName>
+							<email>zhuyongchun.zyc@bytedance.com</email>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guanyu</forename><surname>Jiang</surname></persName>
+							<email>jiangguanyu.jgy@bytedance.com</email>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingwu</forename><surname>Chen</surname></persName>
+							<email>chenjingwu@bytedance.com</email>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Zhang</surname></persName>
+							<email>feng.zhang@bytedance.com</email>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zuotao</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Beijing Beijing ByteDance Beijing Shanghai Beijing Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Asymmetric Diffusion Recommendation Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2C2E22B43613CAFFFB17DA72C2B36FD6</idno>
+					<idno type="DOI">10.1145/3746252.3760833</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Recommendation, Diffusion Model</keywords>
+			</textClass>
+			<abstract>
+				<p>Recently, motivated by the outstanding achievements of diffusion models, the diffusion process has been employed to strengthen representation learning in recommendation systems. Most diffusionbased recommendation models typically utilize standard Gaussian noise in symmetric forward and reverse processes in continuous data space. Nevertheless, the samples derived from recommendation systems inhabit a discrete data space, which is fundamentally different from the continuous one. Moreover, Gaussian noise has the potential to corrupt personalized information within latent representations. In this work, we propose a novel and effective method, named Asymmetric Diffusion Recommendation Model (AsymDiffRec), which learns forward and reverse processes in an asymmetric manner. We define a generalized forward process that simulates the missing features in real-world recommendation samples. The reverse process is then performed in an asymmetric latent feature space. To preserve personalized information within the latent representation, a task-oriented optimization strategy is introduced. In the serving stage, the raw sample with missing features is regarded as a noisy input to generate a denoising and robust representation for the final prediction. By equipping base models with AsymDiffRec, we conduct online A/B tests, achieving improvements of +0.131% and +0.166% in terms of users&apos; active days and app usage duration respectively. Additionally, the extended offline experiments also demonstrate improvements. AsymDiffRec has been implemented in the Douyin Music App. CCS Concepts • Information systems → Recommendation systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Backdoor in Seconds: Unlocking Vulnerabilities in Large Pre-trained Models via Model Editing</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dongliang</forename><surname>Guo</surname></persName>
+							<email>dongliang.guo@virginia.edu</email>
+							<idno type="ORCID">0000-0003-2856-4011</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Mengxuan</forename><surname>Hu</surname></persName>
+							<idno type="ORCID">0000-0002-8822-2884</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Hartvigsen</surname></persName>
+							<email>hartvigsen@virginia.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sheng</forename><surname>Li</surname></persName>
+							<email>shengli@virginia.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zihan</forename><surname>Guan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Junfeng</forename><surname>Guo</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>Virginia</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>Virginia</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>Virginia</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Maryland College Park</orgName>
+								<address>
+									<settlement>Maryland</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>Virginia</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>Virginia</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Backdoor in Seconds: Unlocking Vulnerabilities in Large Pre-trained Models via Model Editing</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1482623F0E1ABF5AF9F6D6B57B6C8497</idno>
+					<idno type="DOI">10.1145/3746252.3761408</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Safety</term>
+					<term>Large Pre-trained Model</term>
+					<term>Model Editing</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large pre-trained models have achieved notable success across a range of downstream tasks. However, recent research shows that a type of adversarial attack (i.e., backdoor attack) can manipulate the behavior of machine learning models through contaminating their training dataset, posing significant threat in the real-world application of large pre-trained model, especially for those customized models. Therefore, addressing the unique challenges for exploring vulnerability of pre-trained models is of paramount importance. Through empirical studies on the capability for performing backdoor attack in large pre-trained models (e.g., ViT), we find the following unique challenges of attacking large pre-trained models: 1) the inability to manipulate or even access large training datasets, and 2) the substantial computational resources required for training or fine-tuning these models. To address these challenges, we establish new standards for an effective and feasible backdoor attack in the context of large pre-trained models. In line with these standards, we introduce our EDT model, an Efficient, Data-free, Training-free backdoor attack method. Inspired by model editing techniques, EDT injects an editing-based lightweight codebook into the backdoor of large pre-trained models, which replaces the embedding of the poisoned image with the target image without poisoning the training dataset or training the victim model. Our experiments, conducted across various pre-trained models such as ViT, CLIP, BLIP, and stable diffusion, and on downstream tasks including image classification, image captioning, and image generation, demonstrate the effectiveness of our method. Our code is available at https://github.com/donglgcn/Editing/ CCS Concepts • Security and privacy → Software and application security.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

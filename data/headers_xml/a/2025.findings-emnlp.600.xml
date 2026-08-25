@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DS-MHP: Improving Chain-of-Thought through Dynamic Subgraph-Guided Multi-Hop Path</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yongqiang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Yazhou Bay Innovation Institute</orgName>
+								<orgName type="institution">Hainan Tropical Ocean University</orgName>
+								<address>
+									<settlement>Sanya Hainan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiyao</forename><surname>Peng</surname></persName>
+							<email>qypeng@tju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Binrong</forename><surname>Liu</surname></persName>
+							<email>binrong@tju.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hongtao</forename><surname>Liu</surname></persName>
+							<email>htliu@tju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Du Xiaoman Financial</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuewei</forename><surname>Li</surname></persName>
+							<email>lixuewei@tju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenjun</forename><surname>Wang</surname></persName>
+							<email>wjwang@tju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Yazhou Bay Innovation Institute</orgName>
+								<orgName type="institution">Hainan Tropical Ocean University</orgName>
+								<address>
+									<settlement>Sanya Hainan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DS-MHP: Improving Chain-of-Thought through Dynamic Subgraph-Guided Multi-Hop Path</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E09D2D8AAEBB1A3EC013FAEC96CE379C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) excel in natural language tasks, with Chain-of-Thought (CoT) prompting enhancing reasoning through stepby-step decomposition. However, CoT struggles in knowledge-intensive tasks with multiple entities and implicit multi-hop relations, failing to connect entities systematically in zeroshot settings. Existing knowledge graph methods, limited by static structures, lack adaptability in complex scenarios. We propose DS-MHP, a zero-shot framework to enhance LLM reasoning in multi-entity relation tasks. DS-MHP operates in three stages: 1) constructing query-specific subgraphs by extracting entities and relations; 2) generating and refining multi-hop paths using a hybrid strategy of Breadth-First Search, greedy expansion, and LLM supplementation; and 3) guiding LLMs with subgraphs and paths, aggregating answers via majority voting. Evaluated on 12 datasets spanning commonsense, logical, symbolic, and arithmetic reasoning, DS-MHP outperforms baselines and state-of-the-art methods in nearly all benchmarks. It achieves overall average accuracy increases of 3.9% on Mistral-7B and 3.6% on GPT-3.5 Turbo compared to SOTA, with significant gains in logical and symbolic reasoning. Additionally, DS-MHP reduces runtime and LLM calls compared to SOTA, enhancing computational efficiency. These improvements demonstrate DS-MHP&apos;s superior reasoning accuracy, explainability, and efficiency in complex multi-entity tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

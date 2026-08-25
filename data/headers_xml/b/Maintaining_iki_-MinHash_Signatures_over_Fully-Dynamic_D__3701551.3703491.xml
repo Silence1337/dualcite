@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Maintaining 𝑘-MinHash Signatures over Fully-Dynamic Data Streams with Recovery</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Andrea</forename><surname>Clementi</surname></persName>
+							<email>clementi@mat.uniroma2.it</email>
+							<idno type="ORCID">0000-0002-9521-2457</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Luciano</forename><surname>Gualà</surname></persName>
+							<email>guala@mat.uniroma2.it</email>
+							<idno type="ORCID">0000-0001-6976-5579</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Luca</forename><forename type="middle">Pepè</forename><surname>Sciarria</surname></persName>
+							<email>luca.pepesciarria@gmail.com</email>
+							<idno type="ORCID">0000-0003-4432-6099</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Alessandro</forename><surname>Straziota</surname></persName>
+							<email>alessandro.straziota@uniroma2.it</email>
+							<idno type="ORCID">0009-0008-4543-786X</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Enterprise Engineering Rome</orgName>
+								<orgName type="institution">University of Rome &quot;Tor Vergata&quot;</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Enterprise Engineering Rome</orgName>
+								<orgName type="institution">University of Rome &quot;Tor Vergata&quot;</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Enterprise Engineering Rome</orgName>
+								<orgName type="institution">University of Rome &quot;Tor Vergata&quot;</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Enterprise Engineering Rome</orgName>
+								<orgName type="institution">University of Rome &quot;Tor Vergata&quot;</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Maintaining 𝑘-MinHash Signatures over Fully-Dynamic Data Streams with Recovery</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1DE8A49639FC6EC14EA8509DE657E48F</idno>
+					<idno type="DOI">10.1145/3701551.3703491</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Data Sketches</term>
+					<term>Jaccard Similarity Estimation</term>
+					<term>Dynamic Data Streams</term>
+					<term>MinHashing</term>
+					<term>Probabilistic/Amortized Analysis of Algorithms</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>We consider the task of performing Jaccard similarity queries over a large collection of items that are dynamically updated according to a streaming input model. An item here is a subset of a large universe 𝑈 of elements. A well-studied approach to address this important problem in data mining is to design fast-similarity data sketches. In this paper, we focus on global solutions for this problem, i.e., a single data structure which is able to answer both Similarity Estimation and All-Candidate Pairs queries, while also dynamically managing an arbitrary, online sequence of element insertions and deletions received in input. We introduce and provide an in-depth analysis of a dynamic, buffered version of the well-known 𝑘-MinHash sketch. This buffered version better manages critical update operations thus significantly reducing the number of times the sketch needs to be rebuilt from scratch using expensive recovery queries. We prove that the buffered 𝑘-MinHash uses 𝑂 (𝑘 log |𝑈 |) memory words per subset and that its amortized update time per insertion/deletion is 𝑂 (𝑘 log |𝑈 |) with high probability. Moreover, our data structure can return the 𝑘-MinHash signature of any subset in 𝑂 (𝑘) time, and this signature is exactly the same signature that would be computed from scratch (and thus the quality of the signature is the same as the one guaranteed by the static 𝑘-MinHash). Analytical and experimental comparisons with the other, state-ofthe-art global solutions for this problem given in [Bury et al.,WSDM&apos;18] show that the buffered 𝑘-MinHash turns out to be competitive in a wide and relevant range of the online input parameters.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

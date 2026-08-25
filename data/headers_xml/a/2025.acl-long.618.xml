@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Outlier-Safe Pre-Training for Robust 4-Bit Quantization of Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jungwoo</forename><surname>Park</surname></persName>
+							<email>jungwoo-park@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">AIGEN Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Taewhoo</forename><surname>Lee</surname></persName>
+							<email>taewhoo@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">AIGEN Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chanwoong</forename><surname>Yoon</surname></persName>
+							<email>cwyoon99@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyeon</forename><surname>Hwang</surname></persName>
+							<email>hyeon-hwang@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaewoo</forename><surname>Kang</surname></persName>
+							<email>kangj@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">AIGEN Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Outlier-Safe Pre-Training for Robust 4-Bit Quantization of Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DD7CA3E24C2307459AE57BB31B390A68</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Extreme activation outliers in Large Language Models (LLMs) critically degrade quantization performance, hindering efficient on-device deployment. While channel-wise operations and adaptive gradient scaling are recognized causes, practical mitigation remains challenging. We introduce Outlier-Safe Pre-Training (OSP), a practical guideline that proactively prevents outlier formation, rather than relying on posthoc mitigation. OSP combines three key innovations: (1) the Muon optimizer, eliminating privileged bases while maintaining training efficiency, (2) Single-Scale RMSNorm, preventing channel-wise amplification, and (3) a learnable embedding projection, redistributing activation magnitudes. We validate OSP by training a 1.4B-parameter model on 1 trillion tokens, which is the first production-scale LLM trained without such outliers. Under aggressive 4-bit quantization, our OSP model achieves a 35.7 average score across 10 benchmarks (versus 26.5 for an Adam-trained model), with only a 2% training overhead. Remarkably, OSP models exhibit near-zero excess kurtosis (0.04) compared to extreme values (1818.56) in standard models, fundamentally altering LLM quantization behavior. Our work demonstrates that outliers are not inherent to LLMs but are consequences of training strategies, paving the way for more efficient LLM deployment. The source code and pretrained checkpoints are available at https://github.com/ dmis-lab/Outlier-Safe-Pre-Training.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

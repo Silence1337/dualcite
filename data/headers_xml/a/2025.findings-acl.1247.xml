@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LlamaV-o1: Rethinking Step-by-step Visual Reasoning in LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Omkar</forename><surname>Thawakar</surname></persName>
+							<email>omkar.thawakar@mbzuai.ac.ae</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dinura</forename><surname>Dissanayake</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ketan</forename><surname>More</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ritesh</forename><surname>Thawkar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ahmed</forename><surname>Heakl</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Noor</forename><surname>Ahsan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhao</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammed</forename><surname>Zumri</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jean</forename><surname>Lahoud</surname></persName>
+							<email>jean.lahoud@mbzuai.ac.ae</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rao</forename><forename type="middle">Muhammad</forename><surname>Anwer</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hisham</forename><surname>Cholakkal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ivan</forename><surname>Laptev</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mubarak</forename><surname>Shah</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Central Florida</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fahad</forename><forename type="middle">Shahbaz</forename><surname>Khan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Linköping University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Salman</forename><surname>Khan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zayed University of AI</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Australian National University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LlamaV-o1: Rethinking Step-by-step Visual Reasoning in LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">707F00809B3E68BE1AF865574942A1C3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:19+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Step-by-step reasoning is crucial for solving complex visual tasks, yet existing approaches lack a comprehensive framework for evaluating this capability and do not emphasize stepwise problem-solving. To this end, we propose a comprehensive framework for advancing multi-step visual reasoning in large multimodal models (LMMs) through three key contributions. First, we introduce a Visual Reasoning Chain Benchmark (VRC-Bench), a comprehensive benchmark for multi-step visual reasoning, covering eight diverse categories and over 4k verified reasoning steps to rigorously evaluate LLMs&apos; ability to reason accurately and interpretably across multiple steps. Second, we propose a fine-grained visual reasoning metric that evaluates correctness and logical coherence at each step, providing deeper insights beyond traditional accuracy metrics. Third, we introduce LlamaV-o1, a state-of-the-art multimodal step-by-step reasoning model trained using a multi-step curriculum learning approach. LlamaV-o1 is optimized for structured step-bystep reasoning Our LlamaV-o1 obtains a significant gain of around 9% averaged across six benchmarks compared to the baseline, thereby demonstrating the impact of introducing the proposed step-by-step visual reasoning. Further, it outperforms the recent Llava-CoT with an absolute gain of 3.8% averaged across six benchmarks, while being 5× faster during inference scaling. On the VRC-Bench, LlamaV-o1 achieves the best performance among all opensource reasoning LMMs in terms of both final accuracy and steps. Our benchmark, model, and code is available at https://github.com/ mbzuai-oryx/LlamaV-o1.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

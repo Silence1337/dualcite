@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">USE-LTV: Customer LifeTime Value Prediction via Uncertain Sequence Modeling in Baidu Ads</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Lei</forename><surname>Yang</surname></persName>
+							<email>yanglei30@baidu.com</email>
+							<idno type="ORCID">0009-0000-1662-3438</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jiahui</forename><surname>Zhang</surname></persName>
+							<email>zhangjiahui05@baidu.com</email>
+							<idno type="ORCID">0009-0000-8615-987X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaohui</forename><surname>Zhao</surname></persName>
+							<email>zhaoxiaohui03@baidu.com</email>
+							<idno type="ORCID">0000-0003-2691-9835</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Guoyu</forename><surname>Liu</surname></persName>
+							<email>liuguoyu@baidu.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Houzhi</forename><surname>Wang</surname></persName>
+							<email>wanghouzhi@baidu.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyuan</forename><surname>Zhou</surname></persName>
+							<email>zhiyuan.z@rutgers.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Baidu Inc. &amp; Renmin University of China</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Guoyu Liu</orgName>
+								<orgName type="institution">Baidu Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Houzhi Wang</orgName>
+								<orgName type="institution">Baidu Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Zhiyuan Zhou</orgName>
+								<orgName type="institution">Baidu Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Rutgers University New Brunswick</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Baidu Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">USE-LTV: Customer LifeTime Value Prediction via Uncertain Sequence Modeling in Baidu Ads</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1F133B53439AF27E4EFC2D1EBE9ABBB9</idno>
+					<idno type="DOI">10.1145/3746252.3760876</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Lifetime Value Prediction</term>
+					<term>Uncertain Sequence Modeling</term>
+					<term>Dynamic Weight Mechanism</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Accurate customer LifeTime Value (LTV) predictions are of critical importance for evaluating the efficiency of customer management strategies, which could enhance advertising placement for better decision-making in ad systems. However, existing solutions for LTV prediction usually rely on determined historical sequence data, which are challenging to apply in Baidu ads due to two unique features including (i) uncertain behavior sequence of customers caused by dynamic advertising strategies, (ii) complex and long-tail distribution of LTV caused by continuous customer behaviors and unique business pattern of search and news feed ads in Baidu. To incorporate these new factors, we propose an Uncertain behavior Sequence modeling framework to predict customer LifeTime Value (USE-LTV), where we (i) utilize a transformer module to extract uncertain sequence features, and develop a dynamic weight mechanism to capture differentiated information under uncertain behavior sequence, (ii) design an continuous loss function tailored to the real-world long-tail exponential LTV distribution in Baidu ads. We extensively evaluate our method based on the industrialscale real-world data from Baidu, one of the world&apos;s largest ads platform, demonstrate that USE-LTV achieves 11.64% of NMAE improvement for a-year LTV compared to the state-of-the-art method. CCS Concepts • Information systems → Data mining.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

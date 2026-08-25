@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GRLND: A Graph Reinforcement Learning Framework for Network Dismantling</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongbo</forename><surname>Qu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xu</forename><surname>Wang</surname></persName>
+							<email>xu.wang@uts.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yu-Rong</forename><surname>Song</surname></persName>
+							<email>songyr@njupt.edu.cn</email>
+							<idno type="ORCID">0000-0002-5827-4413</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Ni</surname></persName>
+							<email>wei.ni@ieee.org</email>
+							<idno type="ORCID">0000-0003-0780-4637</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Guo-Ping</forename><surname>Jiang</surname></persName>
+							<email>jianggp@njupt.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Quan</forename><forename type="middle">Z</forename><surname>Sheng</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Nanjing University of Posts and Telecommunications Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Macquarie University Sydney</orgName>
+								<address>
+									<region>NSW</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Technology Sydney Sydney</orgName>
+								<address>
+									<region>NSW</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Nanjing University of Posts and Telecommunications Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">CSIRO Sydney</orgName>
+								<address>
+									<region>NSW</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Nanjing University of Posts and Telecommunications Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Macquarie University Sydney</orgName>
+								<address>
+									<region>NSW</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GRLND: A Graph Reinforcement Learning Framework for Network Dismantling</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C6ABA06E59A52E72DDA4F60C3464B996</idno>
+					<idno type="DOI">10.1145/3746252.3761371</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Network Dismantling</term>
+					<term>Reinforcement Learning</term>
+					<term>Complex Networks</term>
+					<term>Graph Neural Networks</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Network Dismantling (ND) seeks to identify the smallest subset of nodes whose removal fragments a network into disconnected components. Traditional methods rely on fixed centrality heuristics or supervised models trained on synthetic data, often failing to generalize across diverse topologies. We introduce GRLND, a Graph Reinforcement Learning framework that enables fully unsupervised, structure-aware dismantling through end-to-end optimization. GRLND formulates ND as a single-step Markov Decision Process (MDP), where the action is a binary mask indicating the nodes to be removed-allowing the agent to generate a complete dismantling strategy in a single forward pass while accounting for the joint effect of multiple node removals. The framework combines a Graph Convolutional Network (GCN) for topological encoding with a stochastic policy trained via the REINFORCE algorithm. Additionally, we design a task-specific reward that balances connectivity disruption and removal sparsity, guiding the policy toward compact yet high-impact dismantling solutions. Experiments on both synthetic and real-world networks show that GRLND consistently outperforms classical heuristics and recent learning-based methods, achieving strong generalization without requiring labels or pretraining. CCS Concepts • Computing methodologies → Machine learning; • Mathematics of computing → Graph theory.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

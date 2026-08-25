@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Efficient and Effective Prompt Tuning via Prompt Decomposition and Compressed Outer Product</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Pengxiang</forename><surname>Lan</surname></persName>
+							<email>pengxianglan@stumail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoyu</forename><surname>Xu</surname></persName>
+							<email>haoyuxu@stumail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enneng</forename><surname>Yang</surname></persName>
+							<email>ennengyang@stumail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuliang</forename><surname>Liang</surname></persName>
+							<email>liangyuliang@stumail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guibing</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianzhe</forename><surname>Zhao</surname></persName>
+							<email>zhaojz@swc.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xingwei</forename><surname>Wang</surname></persName>
+							<email>wangxw@mail.neu.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Efficient and Effective Prompt Tuning via Prompt Decomposition and Compressed Outer Product</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7637365EE457ACD5B6A2BD48861C42C7</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Prompt tuning (PT) offers a cost-effective alternative to fine-tuning large-scale pre-trained language models (PLMs), requiring only a few parameters in soft prompt tokens added before the input text. However, existing PT approaches face two significant issues: (i) They overlook intrinsic semantic associations between soft prompt tokens, leading to high discreteness and limited interactions, thus reducing the model&apos;s comprehension and effectiveness in complex tasks. (ii) Due to the complexity of downstream tasks, long soft prompt is necessitated to improve performance, but prompt length correlates positively with memory usage and computational costs. Achieving high efficiency and performance remains an ongoing challenge. To address these issues, we propose a novel Low-pAraMeters Prompt Tuning (LAMP) method, which leverages prompt decomposition and compressed outer product. Specifically, the prompt decomposition module employs Truncated SVD to reduce training parameters and significantly lower the dimensionality of the soft prompt parameter space. It then utilizes a compressed outer product module to facilitate multiple interactions among prompt tokens, exploring their intrinsic associations to enhance knowledge representation. Finally, LAMP uses average pooling to reduce memory usage and training/inference time. Extensive experiments across six architectures and eight datasets demonstrate that LAMP outperforms state-of-the-art PT-based and LoRAbased methods in performance and efficiency.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

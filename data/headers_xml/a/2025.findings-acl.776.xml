@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AMXFP4: Taming Activation Outliers with Asymmetric Microscaling Floating-Point for 4-bit LLM Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Janghwan</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Hanyang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiwoong</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Hanyang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinseok</forename><surname>Kim</surname></persName>
+							<email>jinseok@rebellions.ai</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Rebellions Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yongjik</forename><surname>Kim</surname></persName>
+							<email>yongjik.kim@rebellions.ai</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jungju</forename><surname>Oh</surname></persName>
+							<email>jungju.oh@rebellions.ai</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Rebellions Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinwook</forename><surname>Oh</surname></persName>
+							<email>j.oh@rebellions.ai</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Rebellions Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jungwook</forename><surname>Choi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Hanyang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Rebellions Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AMXFP4: Taming Activation Outliers with Asymmetric Microscaling Floating-Point for 4-bit LLM Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">612655AEA1B192403091FACB2C717912</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>As large language models (LLMs) grow in parameter size and context length, computation precision has been reduced from 16-bit to 4bit to improve inference efficiency. However, this reduction causes accuracy degradation due to activation outliers. Rotation-based INT4 methods address this via matrix calibration, but they introduce multi-hour overheads and leave key computations in full precision. Microscaling (MX) floating-point (FP) formats offer fine-grained representation with a shared scale, enabling fully quantized matrix multiplications through direct casting without calibration. However, existing research shows unsatisfactory empirical results for MXFP4 inference, and the robustness of MX formats remains largely unexplored. In this work, we uncover the fundamental tradeoffs of the MX format: while it effectively suppresses activation outliers, it does so at the cost of increased group-wise asymmetry. To address this, we propose AMXFP4, a 4-bit asymmetric FP format that handles both issues using asymmetric shared scales, without requiring calibration. Our custom MAC engine adds negligible hardware cost while improving accuracy: AMXFP4 outperforms MXFP4 by 3% on VQA and exceeds rotation-based methods by 1.6% on CSQA. It also surpasses recently deployed commercial MXFP4 variants. Code: https://github.com/aiha-lab/MX-QLLM</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

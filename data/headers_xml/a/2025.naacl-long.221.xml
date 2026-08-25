@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Retrieval, Reasoning, Re-ranking: A Context-Enriched Framework for Knowledge Graph Completion</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Muzhi</forename><surname>Li</surname></persName>
+							<email>limuzhi@idea.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">International Digital Economy Academy</orgName>
+								<orgName type="institution">IDEA Research</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science &amp; Engineering</orgName>
+								<orgName type="institution">The Chinese University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cehao</forename><surname>Yang</surname></persName>
+							<email>yangcehao@idea.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">International Digital Economy Academy</orgName>
+								<orgName type="institution">IDEA Research</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Artificial Intelligence Thrust</orgName>
+								<orgName type="institution">Hong Kong University of Science and Technology (Guangzhou)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengjin</forename><surname>Xu</surname></persName>
+							<email>xuchengjin@idea.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">International Digital Economy Academy</orgName>
+								<orgName type="institution">IDEA Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuhui</forename><surname>Jiang</surname></persName>
+							<email>jiangxuhui@idea.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">International Digital Economy Academy</orgName>
+								<orgName type="institution">IDEA Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiyan</forename><surname>Qi</surname></persName>
+							<email>qiyiyan@idea.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">International Digital Economy Academy</orgName>
+								<orgName type="institution">IDEA Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jian</forename><surname>Guo</surname></persName>
+							<email>guojian@idea.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">International Digital Economy Academy</orgName>
+								<orgName type="institution">IDEA Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ho-Fung</forename><surname>Leung</surname></persName>
+							<email>ho-fung.leung@outlook.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Irwin</forename><surname>King</surname></persName>
+							<email>king@cse.cuhk.edu.hk</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science &amp; Engineering</orgName>
+								<orgName type="institution">The Chinese University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Retrieval, Reasoning, Re-ranking: A Context-Enriched Framework for Knowledge Graph Completion</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F6727DBD77156C68EA9F671EA7DCB96E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The Knowledge Graph Completion (KGC) task aims to infer the missing entity from an incomplete triple. Existing embedding-based methods rely solely on triples in the KG, which is vulnerable to specious relation patterns and long-tail entities. On the other hand, text-based methods struggle with the semantic gap between KG triples and natural language. Apart from triples, entity contexts (e.g., labels, descriptions, aliases) also play a significant role in augmenting KGs. To address these limitations, we propose KGR 3 , a context-enriched framework for KGC. KGR 3 is composed of three modules. Firstly, the Retrieval module gathers supporting triples from the KG, collects plausible candidate answers from a base embedding model, and retrieves context for each related entity. Then, the Reasoning module employs a large language model to generate potential answers for each query triple. Finally, the Re-ranking module combines candidate answers from the two modules mentioned above, and fine-tunes an LLM to provide the best answer. Extensive experiments on widely used datasets demonstrate that KGR 3 consistently improves various KGC methods. Specifically, the best variant of KGR 3 achieves absolute Hits@1 improvements of 12.3% and 5.6% on the FB15k237 and WN18RR datasets.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

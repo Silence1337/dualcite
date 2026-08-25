@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CycleDistill: Bootstrapping Machine Translation using LLMs with Cyclical Distillation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Deepon</forename><surname>Halder</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Nilekani Centre at AI4Bharat</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Indian Institute of Engineering, Science and Technology</orgName>
+								<address>
+									<settlement>Shibpur</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thanmay</forename><surname>Jayakumar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Nilekani Centre at AI4Bharat</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Indian Institute of Technology</orgName>
+								<address>
+									<settlement>Madras</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Raj</forename><surname>Dabre</surname></persName>
+							<email>raj.dabre@cse.iitm.ac.in</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Nilekani Centre at AI4Bharat</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Indian Institute of Technology</orgName>
+								<address>
+									<settlement>Madras</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Indian Institute of Technology</orgName>
+								<address>
+									<settlement>Bombay</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CycleDistill: Bootstrapping Machine Translation using LLMs with Cyclical Distillation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6232C1C1CBD618C84593F8A1C3372B4D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs), despite their ability to perform few-shot machine translation (MT), often lag behind dedicated MT systems trained on parallel corpora, which are crucial for high quality machine translation (MT). However, parallel corpora are often scarce or non-existent for low-resource languages. In this paper, we propose CycleDistill, a bootstrapping approach leveraging LLMs and few-shot translation to obtain high-quality MT systems. CycleDistill involves iteratively generating synthetic parallel corpora from monolingual corpora via zero-or few-shot MT, which is then used to fine-tune the model that was used for generating said data for MT. CycleDistill does not need parallel corpora beyond 1 to 4 fewshot examples, and in our experiments focusing on three Indian languages, by relying solely on monolingual corpora, it can achieve highquality machine translation, improving upon a few-shot baseline model by 20-30 chrF points on average in the first iteration. We also study the effect of leveraging softmax activations during the distillation process and observe mild improvements in translation quality. We publicly release the source code associated with this work 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

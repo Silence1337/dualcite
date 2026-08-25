@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Tree-of-Prompts: Abstracting Control-Flow for Prompt Optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jihyuk</forename><surname>Kim</surname></persName>
+							<email>jihyuk.kim@lgresearch.ai</email>
+							<affiliation key="aff0">
+								<orgName type="department">LG AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shubham</forename><surname>Garg</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Lahari</forename><surname>Poddar</surname></persName>
+							<email>poddarl@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Seung-Won</forename><surname>Hwang</surname></persName>
+							<email>seungwonh@snu.ac.kr</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christopher</forename><surname>Hench</surname></persName>
+							<email>henchc@amazon.com</email>
+						</author>
+						<title level="a" type="main">Tree-of-Prompts: Abstracting Control-Flow for Prompt Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">370E3FEDC647EA72DA09F15A70FDC6AC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Prompt optimization (PO) generates prompts to guide Large Language Models (LLMs) in performing tasks. Existing methods, such as PromptAgent, rely on a single static prompt, which struggles with disjoint cases in complex tasks. Although Mixture-of-Prompts (MoP) uses multiple prompts, it fails to account for variations in task complexity. Inspired by programmatic control flow, we introduce a nested if-else structure to address both varying similarities and complexities across diverse cases. We propose Tree-of-Prompts (ToP), which recursively expands child prompts from a parent prompt. Sibling prompts tackle disjoint cases while inheriting shared similarities from their parent, and handle cases more complex than the parent. Evaluated on Gorilla (understanding), MATH (reasoning), and a subset of BBH benchmarks, ToP outperforms PromptAgent and MoP, with improvements of 1.4% and 4.6% over PromptAgent and 3.2% and 4.5% over MoP, when tested with GPT-4o-mini and Llama 3.2-3B, respectively.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

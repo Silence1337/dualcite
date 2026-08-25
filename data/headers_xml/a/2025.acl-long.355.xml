@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">James</forename><forename type="middle">V</forename><surname>Lester</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Miranda</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yizhong</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanai</forename><surname>Elazar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sachin</forename><surname>Kumar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">The Ohio State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Valentina</forename><surname>Pyatkin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Faeze</forename><surname>Brahman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Noah</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hannaneh</forename><surname>Hajishirzi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Washington</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pradeep</forename><surname>Dasigi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Allen Institute for AI</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7B06DF2C52381D8125BFEA579A959FF3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Learning from human feedback has enabled the alignment of language models (LMs) with human preferences. However, collecting human preferences is expensive and time-consuming, with highly variable annotation quality. An appealing alternative is to distill preferences from LMs as a source of synthetic annotations, offering a cost-effective and scalable alternative, albeit susceptible to other biases and errors. In this work, we introduce HYPER, a Hybrid Preference routER that assigns an annotation to either humans or LMs, achieving better annotation quality while reducing the cost of human-only annotation. We formulate this as an optimization problem: given a preference dataset and an evaluation metric, we (1) train a performance prediction model (PPM) to predict a reward model&apos;s (RM) performance on an arbitrary combination of human and LM annotations and (2) employ a routing strategy that selects a combination that maximizes predicted performance. We train the PPM on MUL-TIPREF, a new preference dataset with 10K instances paired with human and LM labels. We show that the selected hybrid mixture of synthetic and direct human preferences using HYPER achieves better RM performance compared to using either one exclusively by 7-13% on RewardBench and generalizes across unseen preference datasets and other base models. We also observe the same trend in other benchmarks using Best-of-N reranking, where the hybrid mix has 2-3% better performance. Finally, we analyze features from HYPER and find that prompts with moderate safety concerns or complexity benefit the most from human feedback.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Confidence Improves Self-Consistency in LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Amir</forename><surname>Taubenfeld</surname></persName>
+							<email>amirt@google.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Tom</forename><surname>Sheffer</surname></persName>
+							<email>tomsheffer@google.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Eran</forename><surname>Ofek</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Google Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amir</forename><surname>Feder</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ariel</forename><surname>Goldstein</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hebrew University of Jerusalem</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zorik</forename><surname>Gekhman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Google Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gal</forename><surname>Yona</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Google Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Columbia University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Confidence Improves Self-Consistency in LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9EBAD3966EF118FF7E3A57F0FA3676AC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:14+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Self-consistency decoding enhances LLMs&apos; performance on reasoning tasks by sampling diverse reasoning paths and selecting the most frequent answer. However, it is computationally expensive, as sampling many of these (lengthy) paths is required to increase the chances that the correct answer emerges as the most frequent one. To address this, we introduce Confidence-Informed Self-Consistency (CISC). CISC performs a weighted majority vote based on confidence scores obtained directly from the model. By prioritizing highconfidence paths, it can identify the correct answer with a significantly smaller sample size. When tested on nine models and four datasets, CISC outperforms self-consistency in nearly all configurations, reducing the required number of reasoning paths by over 40% on average. In addition, we introduce the notion of withinquestion confidence evaluation, after showing that standard evaluation methods are poor predictors of success in distinguishing correct and incorrect answers to the same question. In fact, the most calibrated confidence method proved to be the least effective for CISC. Lastly, beyond these practical implications, our results and analyses show that LLMs can effectively judge the correctness of their own outputs, contributing to the ongoing debate on this topic.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

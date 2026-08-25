@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Top-nσ: Eliminating Noise in Logit Space for Robust Token Sampling of LLM</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chenxia</forename><surname>Tang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep2">Suzhou Institute for Advanced Research</orgName>
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianchun</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep2">Suzhou Institute for Advanced Research</orgName>
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">University of Science and Technology of China</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep2">Suzhou Institute for Advanced Research</orgName>
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Hongli</forename><surname>Xu</surname></persName>
+							<email>xuhongli@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep2">Suzhou Institute for Advanced Research</orgName>
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liusheng</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">School of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep2">Suzhou Institute for Advanced Research</orgName>
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Top-nσ: Eliminating Noise in Logit Space for Robust Token Sampling of LLM</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C15F11D64B1060A6BBC0B273F0FEA26D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) rely heavily on sampling methods to generate diverse and highquality text. While existing sampling methods like top-p and min-p have identified the detrimental effects of low-probability tails in LLMs&apos; outputs, they still fail to effectively distinguish between diversity and noise. This limitation stems from their reliance on probability-based metrics that are inherently sensitive to temperature scaling. Through empirical and theoretical analysis, we make two key discoveries: (1) the pre-softmax logits exhibit a clear statistical separation between informative tokens and noise, and (2) we prove the mathematical equivalence of min-p and top-(1-p) under uniform distribution over logits. These findings motivate the design of top-nσ, a novel sampling method that identifies informative tokens by eliminating noise directly in logit space. Unlike existing methods that become unstable at high temperatures, top-nσ achieves temperature-invariant token selection while preserving output diversity. Extensive experiments across reasoning and creative writing tasks demonstrate that our method consistently outperforms existing approaches, with particularly significant improvements in high-temperature settings.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

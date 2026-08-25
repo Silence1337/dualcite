@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GRIT: An Accurate and Efficient Graph Stream Summarization for Temporal Query</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jingxian</forename><surname>Hu</surname></persName>
+							<email>hujingxian2000@163.com</email>
+							<idno type="ORCID">0009-0009-0358-2601</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Guozhang</forename><surname>Sun</surname></persName>
+							<email>sunguozhang@stumail.neu.edu.cn</email>
+							<idno type="ORCID">0009-0008-2933-8044</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Xingwei</forename><surname>Wang</surname></persName>
+							<email>wangxin1@cse.neu.edu.cn</email>
+							<idno type="ORCID">0000-0001-8341-2323</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhai</forename><surname>Zhao</surname></persName>
+							<email>zhaoyuhai@mail.neu.edu.cn</email>
+							<idno type="ORCID">0000-0002-1080-0859</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yuan</forename><surname>Li</surname></persName>
+							<email>liyuan@ncut.edu.cn</email>
+							<idno type="ORCID">0000-0002-3567-2101</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering Key Laboratory of Intelligent Computing in Medical Image of Ministry of Education Northeastern University Shenyang</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Engineering Key Laboratory of Intelligent Computing in Medical Image of Ministry of Education Northeastern University Shenyang</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science and Engineering Key Laboratory of Intelligent Computing in Medical Image of Ministry of Education Northeastern University Shenyang</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">School of Computer Science and Engineering Key Laboratory of Intelligent Computing in Medical Image of Ministry of Education Northeastern University Shenyang</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">School of Artificial Intelligence and Computer Science</orgName>
+								<orgName type="institution">North China University of Technology</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University Shenyang</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GRIT: An Accurate and Efficient Graph Stream Summarization for Temporal Query</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">03E781ADB83DDA8C4A67F32C1D7706BA</idno>
+					<idno type="DOI">10.1145/3746252.3761105</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Graph stream</term>
+					<term>Graph stream summarization</term>
+					<term>Temporal query</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Graph stream summarization refers to the technique used to process graph streams-unbounded sequences of edges-by constructing compressed representations that support approximate queries on both graph topology and temporal information in computing power networks. However, existing methods struggle to achieve accurate and efficient temporal queries due to two key limitations: (1) inefficient integration of temporal information, leading to high latency in both edge processing and query execution; and (2) redundant multilayer structures that accumulate errors, significantly reducing query accuracy. In this paper, we propose GRIT, an accurate and efficient Graph stReam summarIzation for Temporal query. GRIT introduces a new structure FlatIndex, which organizes temporal information in a flattened form, playing a critical role in minimizing error accumulation and ensuring accurate temporal queries. To further enhance edge processing efficiency, we introduce a lazy update strategy, which updates only a single element in the FlatIndex upon edge insertion, significantly reducing insertion latency. Moreover, our greedy-based decomposition (GBD) algorithm decomposes the</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

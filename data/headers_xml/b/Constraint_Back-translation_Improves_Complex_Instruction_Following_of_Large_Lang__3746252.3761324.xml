@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Constraint Back-translation Improves Complex Instruction Following of Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yunjia</forename><surname>Qi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Peng</surname></persName>
+							<email>peng-h24@mails.tsinghua.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Juanzi</forename><surname>Li</surname></persName>
+							<email>lijuanzi@tsinghua.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep2">Beijing National Research Center for Information Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Department of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep2">Beijing National Research Center for Information Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Xiaozhi Wang</orgName>
+								<orgName type="department" key="dep2">Department of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep3">Beijing National Research Center for Information Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department" key="dep1">Bin Xu</orgName>
+								<orgName type="department" key="dep2">Department of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep3">Beijing National Research Center for Information Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Lei Hou</orgName>
+								<orgName type="department" key="dep2">Department of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep3">Beijing National Research Center for Information Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department" key="dep1">Department of Computer Science and Technology</orgName>
+								<orgName type="department" key="dep2">Beijing National Research Center for Information Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Constraint Back-translation Improves Complex Instruction Following of Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">311DA60DF8880CCA88B2CC6478C1B0D1</idno>
+					<idno type="DOI">10.1145/3746252.3761324</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:29+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Post-Training</term>
+					<term>Instruction-Following</term>
+					<term>Large Language Models</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large language models (LLMs) struggle to follow instructions with complex constraints in format, length, etc. Following the conventional instruction-tuning practice, previous works conduct posttraining on complex instruction-response pairs generated by feeding complex instructions to advanced LLMs. However, even advanced LLMs cannot follow complex instructions well, thus limiting the quality of generated data. In this work, we find that existing datasets inherently contain implicit complex constraints and propose a novel data generation technique, constraint back-translation. Specifically, we take the high-quality instruction-response pairs in existing datasets and only adopt advanced LLMs to add complex constraints already met by the responses to the instructions, which naturally reduces costs and data noise. In the experiments, we adopt Llama3-70B-Instruct to back-translate constraints and create a high-quality complex instruction-response dataset, named Crab. We present that post-training on Crab improves multiple backbone LLMs&apos; complex instruction-following ability, evaluated on extensive instruction-following benchmarks. We further find that constraint back-translation also serves as a useful auxiliary training objective in post-training. Our code, data, and models are released to facilitate future research 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

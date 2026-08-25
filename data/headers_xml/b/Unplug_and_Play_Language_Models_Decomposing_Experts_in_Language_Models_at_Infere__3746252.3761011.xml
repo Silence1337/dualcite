@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Unplug and Play Language Models: Decomposing Experts in Language Models at Inference Time</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nakyeong</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiwon</forename><surname>Moon</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junseok</forename><surname>Kim</surname></persName>
+							<email>kim.junseok@snu.ac.kr</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yunah</forename><surname>Jang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kyomin</forename><surname>Jung</surname></persName>
+							<email>kjung@snu.ac.kr</email>
+							<affiliation key="aff4">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Unplug and Play Language Models: Decomposing Experts in Language Models at Inference Time</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D1FCC65B4A609218FC0BFC35EE3B3D3A</idno>
+					<idno type="DOI">10.1145/3746252.3761011</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Knowledge Localization</term>
+					<term>Decomposition of Experts</term>
+					<term>Language Model</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Enabled by large-scale text corpora with huge parameters, pretrained language models operate as multi-task experts using a single model architecture. However, recent studies have revealed that certain neurons play disproportionately important roles in solving specific tasks, suggesting that task-relevant substructures can be isolated and selectively activated for each task. Therefore, we introduce Decomposition of Experts (DoE), a novel framework that dynamically identifies and activates task-specific experts within a language model to reduce inference cost without sacrificing accuracy. We first define a task expert as a set of parameters that significantly influence the performance of a specific task and propose a four-step unplug-and-play process: (1) receiving a user request, (2) identifying the corresponding task expert, (3) performing inference using the expert-localized model, and (4) restoring the original model and waiting for the next task. Using attribution methods and prompt tuning, DoE isolates task-relevant neurons, minimizing computational overhead while maintaining task performance. We assume a setting where a language model receives user requests from five widely used natural language understanding benchmarks, processing one task at a time. In this setup, we demonstrate that DoE achieves up to a ×1.73 inference speed-up with a 65% pruning rate, without compromising accuracy. Comparisons with various task expert localization methods reveal that DoE effectively identifies task experts, while ablation studies validate the importance of its components. Additionally, we analyze the effects of batch size, token count, and layer types on inference speed-up, providing practical insights for adopting DoE. The proposed framework is both practical and scalable, applicable to any transformer-based architecture, offering a robust solution for efficient task-specific inference. CCS Concepts • Computing methodologies → Natural language processing.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

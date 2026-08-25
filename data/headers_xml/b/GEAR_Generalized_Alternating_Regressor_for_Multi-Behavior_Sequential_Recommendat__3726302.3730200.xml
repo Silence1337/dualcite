@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GEAR: Generalized Alternating Regressor for Multi-Behavior Sequential Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Junzhe</forename><surname>Jiang</surname></persName>
+							<email>jzjiang@mail.ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Zhang</surname></persName>
+							<email>kkzhang08@ustc.edu.cn</email>
+							<idno type="ORCID">0000-0001-5335-2470</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Junfeng</forename><surname>Kang</surname></persName>
+							<email>kangjf@mail.ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yucong</forename><surname>Luo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Gao</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">The First Affiliated Hospital of the USTC</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GEAR: Generalized Alternating Regressor for Multi-Behavior Sequential Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4836C8F130DF52100933ED9FC1E3CF8C</idno>
+					<idno type="DOI">10.1145/3726302.3730200</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Multi-Behavior Sequential Recommendation</term>
+					<term>Autoregressive Sequence Modeling</term>
+					<term>Temporal Dynamics</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Modern recommender systems face a critical challenge in modeling the intricate interplay between multi-behavior interactions of users (e.g., clicks, adds-to-cart and purchases) and temporal dynamics that drive evolving preferences. While existing multi-behavior sequential recommendation methods attempt to capture these signals, they often suffer from fragmented modeling, such as decoupling behaviors and items into separate sequences, neglecting time-aware transitions, or relying on computationally intensive architectures that hinder real-world scalability. To address these limitations, we propose GEneralized Alternating Regressor (GEAR), a novel framework that unifies behaviors, items, and temporal contexts into a single autoregressive sequence through an alternating architecture. At its core, GEAR represents user interactions as triplets and processes them through a modular transformer architecture. In this architecture, each triplet is alternately modeled at lower layers to disentangle fine-grained patterns, while upper layers jointly learn cross-signal dependencies. This design mimics the interlocking mechanism of gears, enabling the seamless transitions between multi-behavior dynamics and item transitions. Additionally, we incorporate a time-bias term to quantify the decay of behavioral influence across both short-and long-term horizons. Extensive experiments on real-world datasets validate the effectiveness, generalizability, and computational efficiency of the proposed framework. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

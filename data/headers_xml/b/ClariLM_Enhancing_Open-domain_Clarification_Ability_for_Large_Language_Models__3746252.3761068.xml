@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ClariLM: Enhancing Open-domain Clarification Ability for Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ziliang</forename><surname>Zhao</surname></persName>
+							<email>zhaoziliang@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Haonan</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Shiren</forename><surname>Song</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jian</forename><surname>Xie</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhicheng</forename><surname>Dou</surname></persName>
+							<email>dou@ruc.edu.cn</email>
+							<idno type="ORCID">0000-0002-9781-948X</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+								<address>
+									<settlement>Beijing Baichuan AI Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ClariLM: Enhancing Open-domain Clarification Ability for Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6287E31A20B4C1A3F66EB353E132020B</idno>
+					<idno type="DOI">10.1145/3746252.3761068</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Clarifying Question</term>
+					<term>Large Language Model</term>
+					<term>Conversational Information Seeking</term>
+					<term>Conversation Log</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Active understanding and clarification of user intent is crucial for information-seeking systems based on Large Language Models (LLMs), as it enhances search efficiency and improves user experience for human-LLM interaction. While existing systems rely on domain-specific resources to generate clarifying questions, they face challenges when extended to open-domain scenarios due to the lack of human-LLM clarification data. In this paper, we propose ClariLM to synthesize large-scale clarification data and enhance the LLMs&apos; clarification capability. Specifically, we design two key stages to prepare data: first, given a user question, the Clarification Facet Detection (CFD) stage employs a facet mining model learned from human-LLM conversation logs to predict realistic potential clarification candidates. Additionally, it incorporates direct predictions from powerful LLMs as supplements to guarantee comprehensive facet coverage. While CFD ensures high recall of facet candidates, the subsequent Optimal Facet Selection (OFS) stage synthesizes a set of new questions and employs a reasoning model to annotate the optimal facet for each question, which further improves the precision of ClariLM in clarification necessity prediction and optimal facet selection. The collected data are then applied for supervised fine-tuning, followed by constructing preference data for preference optimization. Experiments on our custom test set and two public benchmarks demonstrate that ClariLM significantly outperforms various baseline models across clarification necessity, clarifying question quality, and GPT-4-based comparative evaluation. CCS Concepts • Information systems → Language models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

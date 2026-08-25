@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dual Debiasing in LLM-based Recommendation *</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Sijin</forename><surname>Lu</surname></persName>
+							<email>lusijin@bjtu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Wu</surname></persName>
+							<idno type="ORCID">0000-0001-5733-3621</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">MoE Key Lab of Big Data &amp; Artificial Intelligence in Transportation</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<addrLine>Beijing 100044</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Zhibo Man</orgName>
+								<orgName type="department" key="dep2">School of Computer Science and Technology</orgName>
+								<address>
+									<addrLine>Beijing Jiaotong University Beijing 100044</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Fangyuan Luo</orgName>
+								<orgName type="department" key="dep2">College of Computer Science</orgName>
+								<orgName type="institution">Beijing University of Technology</orgName>
+								<address>
+									<postCode>100124</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">MoE Key Lab of Big Data &amp; Artificial Intelligence in Transportation</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<postCode>100044</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dual Debiasing in LLM-based Recommendation *</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">64BC5AE3406F1EB0C07196B59D025256</idno>
+					<idno type="DOI">10.1145/3726302.3730181</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>LLM-based Recommendation</term>
+					<term>Popularity Bias</term>
+					<term>Inverse Propensity Score</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large language models (LLMs) have been widely applied in recommender systems, achieving remarkable success. However, LLMbased recommendation (LR) suffers from more severe popularity bias than conventional recommendation (CR), stemming from both training and inference stages. In this paper, we propose a novel debiasing method for LR, which performs debiasing in such two stages, so termed as Dual Debiasing in LR (D 2 LR). Concretely, in the training stage, we conduct token-wise inverse propensity score weighting to force the LLM to pay more attention on unpopular tokens. In the inference stage, we train a more biased CR model by increasing the weights of popular items, which adjusts the generation probability of corresponding tokens according to its scores for items, hoping to suppress the excessive generation of popular tokens. Experiments conducted on three real-world datasets validate the effectiveness of our D 2 LR in mitigating popularity bias in LR. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Automatic Accent Restoration in Vedic Sanskrit with Neural Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Yuzuki</forename><surname>Tsukagoshi</surname></persName>
+							<email>yuzuki@l.u-tokyo.ac.jp</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Tokyo</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ikki</forename><surname>Ohmukai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Tokyo</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Automatic Accent Restoration in Vedic Sanskrit with Neural Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C2771060EDDE172EF3EB93B00B68600C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Vedic Sanskrit, the oldest attested form of Sanskrit, employs a distinctive pitch-accent system that marks one syllable per word. To the best of our knowledge, this work presents the first application of large language models to the automatic restoration of accent marks in transliterated Vedic Sanskrit texts. A comprehensive corpus was assembled by extracting major Vedic works from the TITUS project and constructing paired samples of unaccented input and correctly accented references, yielding more than 100,000 training examples. Three generative LLMs were fine-tuned on this corpus: a LoRA-adapted Llama 3.1 8B Instruct model, OpenAI GPT-4.1 nano, and Google Gemini 2.5 Flash. These models were trained in a sequence-to-sequence fashion to insert accent marks at appropriate positions. Evaluation on roughly 2,000 sentences using precision, recall, F1, character error rate, word error rate, and ChrF1 metrics shows that fine-tuned models substantially outperform their untuned baselines. The LoRA-tuned Llama achieves the highest F1, followed by Gemini 2.5 Flash and GPT-4.1 nano. Error analysis reveals that the models learn to infer accents from grammatical and phonological context. These results demonstrate that LLMs can capture complex accentual patterns and recover lost information, opening possibilities for potential improvements in sandhi splitting, morphological analysis, syntactic parsing and machine translation in Vedic NLP pipelines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MEXA: Multilingual Evaluation of English-Centric LLMs via Cross-Lingual Alignment</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Amir</forename><forename type="middle">Hossein</forename><surname>Kargaran</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Munich Center for Machine Learning</orgName>
+								<orgName type="institution">LMU Munich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ali</forename><surname>Modarressi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Munich Center for Machine Learning</orgName>
+								<orgName type="institution">LMU Munich</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Nafiseh</forename><surname>Nikeghbal</surname></persName>
+							<email>nafiseh.nikeghbal@tum.de</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Technical University of Munich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jana</forename><surname>Diesner</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Technical University of Munich</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">François</forename><surname>Yvon</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Sorbonne Université &amp; CNRS</orgName>
+								<address>
+									<country>ISIR</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hinrich</forename><surname>Schütze</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Munich Center for Machine Learning</orgName>
+								<orgName type="institution">LMU Munich</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MEXA: Multilingual Evaluation of English-Centric LLMs via Cross-Lingual Alignment</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">ACFFA1C0963150A8FD158820827A4030</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>English-centric large language models (LLMs) often show strong multilingual capabilities. However, their multilingual performance remains unclear and is under-evaluated for many other languages. Most benchmarks for multilinguality focus on classic NLP tasks or cover a minimal number of languages. We introduce MEXA, a method for assessing the multilingual capabilities of pre-trained English-centric LLMs using parallel sentences, which are available for more languages than existing downstream tasks. MEXA leverages that Englishcentric LLMs use English as a pivot language in their intermediate layers. MEXA computes the alignment between English and non-English languages using parallel sentences to evaluate the transfer of language understanding from English to other languages. This alignment can be used to estimate model performance in different languages. We conduct controlled experiments using various parallel datasets (FLORES-200 and Bible), models (Llama family, Gemma family, Mistral, and OLMo), and established downstream tasks (Belebele, m-MMLU, and m-ARC). We explore different methods to compute embeddings in decoder-only models. Our results show that MEXA, in its default settings, achieves an average Pearson correlation of 0.90 between its predicted scores and actual task performance across languages. This suggests that MEXA is a reliable method for estimating the multilingual capabilities of English-centric LLMs, providing a clearer understanding of their multilingual potential and the inner workings of LLMs. Leaderboard cis-lmu-mexa.hf.space Code github.com/cisnlp/MEXA</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

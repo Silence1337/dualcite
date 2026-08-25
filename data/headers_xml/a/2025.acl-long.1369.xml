@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Inner Thinking Transformer: Leveraging Dynamic Depth Scaling to Foster Adaptive Internal Thinking</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yilong</forename><surname>Chen</surname></persName>
+							<email>chenyilong@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cyber Security</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junyuan</forename><surname>Shang</surname></persName>
+							<email>shangjunyuan@baidu.com</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenyu</forename><surname>Zhang</surname></persName>
+							<email>zhangzhenyu07@baidu.com</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanxi</forename><surname>Xie</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">Beijing Normal University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiawei</forename><surname>Sheng</surname></persName>
+							<email>shengjiawei@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tingwen</forename><surname>Liu</surname></persName>
+							<email>liutingwen@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cyber Security</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuohuan</forename><surname>Wang</surname></persName>
+							<email>wangshuohuan@baidu.com</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Sun</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hua</forename><surname>Wu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haifeng</forename><surname>Wang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Inner Thinking Transformer: Leveraging Dynamic Depth Scaling to Foster Adaptive Internal Thinking</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BE788FB977A5FBC4CEA876C11F385A60</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:20+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) face a performance ceiling as scaling parameters becomes impractical. Our observations indicate that while simple tokens are efficiently resolved in early layers with stable gradients, complex tokens trigger abrupt gradient spikes across layers, underscoring architectural limitations. Existing step-by-step reasoning methods, such as Chain-of-Thought, are hindered by their dependence on accurately generating critical tokens. We introduce Inner Thinking Transformer (ITT)-a straightforward approach that enables models to &quot;think&quot; more deeply about important tokens by dynamically assigning extra inference steps through a token-wise dynamic depth architecture with residual iterative reasoning and step encoding. Experiments on LLaMA2-7B models at 355M, 1B, and 3B scales show that ITT consistently outperforms vanilla Transformers, with a 355M ITT model matching the performance of a 1B Transformer, offering a scalable, architecture-aware strategy to enhance LLM reasoning capabilities.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

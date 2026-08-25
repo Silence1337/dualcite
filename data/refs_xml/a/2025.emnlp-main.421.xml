@@ -1,0 +1,1522 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Linear attention is (maybe) all you need (to understand transformer optimization)</title>
+		<author>
+			<persName><forename type="first">Kwangjun</forename><surname>Ahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minhak</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chulhee</forename><surname>Yun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ali</forename><surname>Jadbabaie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suvrit</forename><surname>Sra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Twelfth International Conference on Learning Representations, ICLR 2024</title>
+		<meeting><address><addrLine>Vienna, Austria</addrLine></address></meeting>
+		<imprint>
+			<publisher>OpenReview</publisher>
+			<date type="published" when="2024-05-07">2024. May 7-11, 2024</date>
+		</imprint>
+	</monogr>
+	<note>net</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Layer normalization</title>
+		<author>
+			<persName><forename type="first">Jimmy</forename><surname>Lei Ba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jamie</forename><surname>Ryan Kiros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoffrey</forename><forename type="middle">E</forename><surname>Hinton</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Why do LLMs attend to the first token?</title>
+		<author>
+			<persName><forename type="first">Federico</forename><surname>Barbero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alvaro</forename><surname>Arroyo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiangming</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christos</forename><surname>Perivolaropoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Petar</forename><surname>Veličković</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Razvan</forename><surname>Pascanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">M</forename><surname>Bronstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Second Conference on Language Modeling</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Longformer: The long-document transformer</title>
+		<author>
+			<persName><forename type="first">Iz</forename><surname>Beltagy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">E</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arman</forename><surname>Cohan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of EMNLP</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Language models are few-shot learners</title>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Mann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nick</forename><surname>Ryder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Melanie</forename><surname>Subbiah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jared</forename><forename type="middle">D</forename><surname>Kaplan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Prafulla</forename><surname>Dhariwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Neelakantan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pranav</forename><surname>Shyam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Girish</forename><surname>Sastry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Askell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="1877" to="1901" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Efficientvit: Lightweight multi-scale attention for high-resolution dense prediction</title>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junyan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Muyan</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chuang</forename><surname>Gan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Song</forename><surname>Han</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE/CVF International Conference on Computer Vision</title>
+		<meeting>the IEEE/CVF International Conference on Computer Vision</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="17302" to="17313" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Spectral filters, dark signals, and attention sinks</title>
+		<author>
+			<persName><forename type="first">Nicola</forename><surname>Cancedda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 62nd Annual Meeting of the Association for Computational Linguistics<address><addrLine>Bangkok, Thailand</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="4792" to="4808" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Rethinking attention with performers</title>
+		<author>
+			<persName><forename type="first">Valerii</forename><surname>Krzysztof Marcin Choromanski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Likhosherstov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xingyou</forename><surname>Dohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andreea</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tamás</forename><surname>Gane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Sarlós</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jared</forename><forename type="middle">Quincy</forename><surname>Hawkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Afroz</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lukasz</forename><surname>Mohiuddin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">Benjamin</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucy</forename><forename type="middle">J</forename><surname>Belanger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adrian</forename><surname>Colwell</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Weller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">9th International Conference on Learning Representations, ICLR 2021, Virtual Event</title>
+		<meeting><address><addrLine>Austria</addrLine></address></meeting>
+		<imprint>
+			<publisher>OpenReview</publisher>
+			<date type="published" when="2021-05-03">2021. May 3-7, 2021</date>
+		</imprint>
+	</monogr>
+	<note>net</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Lipschitz normalization for self-attention layers with application to graph neural networks</title>
+		<author>
+			<persName><forename type="first">George</forename><surname>Dasoulas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Scaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aladin</forename><surname>Virmaux</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">In International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="2456" to="2466" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Scaling vision transformers to 22 billion parameters</title>
+		<author>
+			<persName><forename type="first">Mostafa</forename><surname>Dehghani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josip</forename><surname>Djolonga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Basil</forename><surname>Mustafa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Piotr</forename><surname>Padlewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Heek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andreas</forename><forename type="middle">Peter</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mathilde</forename><surname>Caron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Geirhos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ibrahim</forename><surname>Alabdulmohsin</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="7480" to="7512" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Exploring context window of large language models via decomposed positional vectors</title>
+		<author>
+			<persName><forename type="first">Zican</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junyi</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xin</forename><surname>Men</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wayne</forename><forename type="middle">Xin</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bingning</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhen</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weipeng</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ji-Rong</forename><surname>Wen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<publisher>Curran Associates, Inc</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="10320" to="10347" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Sliding window attention training for efficient large language models</title>
+		<author>
+			<persName><forename type="first">Zichuan</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wentao</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yejing</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xian</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yefeng</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yingying</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Derong</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuetao</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tong</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiangyu</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno>CoRR, abs/2502.18845</idno>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">Leo</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stella</forename><surname>Biderman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sid</forename><surname>Black</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Laurence</forename><surname>Golding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Travis</forename><surname>Hoppe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Phang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Horace</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anish</forename><surname>Thite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noa</forename><surname>Nabeshima</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2101.00027</idno>
+		<title level="m">The pile: An 800gb dataset of diverse text for language modeling</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">What can transformers learn in-context? a case study of simple function classes</title>
+		<author>
+			<persName><forename type="first">Shivam</forename><surname>Garg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitris</forename><surname>Tsipras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Percy</forename><forename type="middle">S</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gregory</forename><surname>Valiant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="30583" to="30598" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Intriguing properties of transformer training instabilities</title>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrea</forename><surname>Schioppa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeremy</forename><surname>Cohen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>To appear</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">When attention sink emerges in language models: An empirical view</title>
+		<author>
+			<persName><forename type="first">Xiangming</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianyu</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chao</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qian</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fengzhuo</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cunxiao</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ye</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Min</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Thirteenth International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Active-dormant attention heads: Mechanistically demystifying extremetoken phenomena in LLMs</title>
+		<author>
+			<persName><forename type="first">Tianyu</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Druv</forename><surname>Pai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiantao</forename><surname>Jiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">I</forename><surname>Jordan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Song</forename><surname>Mei</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Second Conference on Parsimony and Learning</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+	<note>Recent Spotlight Track</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Attention score is not all you need for token importance indicator in KV cache reduction: Value also matters</title>
+		<author>
+			<persName><forename type="first">Zhiyu</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hidetaka</forename><surname>Kamigaito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Taro</forename><surname>Watanabe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2024 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Miami, Florida, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="21158" to="21166" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Flatten transformer: Vision transformer using focused linear attention</title>
+		<author>
+			<persName><forename type="first">Dongchen</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuran</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yizeng</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shiji</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gao</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE/CVF international conference on computer vision</title>
+		<meeting>the IEEE/CVF international conference on computer vision</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="5961" to="5971" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Understanding and minimising outlier features in transformer training</title>
+		<author>
+			<persName><forename type="first">Bobby</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lorenzo</forename><surname>Noci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniele</forename><surname>Paliotta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Imanol</forename><surname>Schlag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Hofmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Thirty-eighth Annual Conference on Neural Information Processing Systems. Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun</title>
+		<imprint>
+			<date type="published" when="2016">2024. 2016</date>
+			<biblScope unit="page" from="770" to="778" />
+		</imprint>
+	</monogr>
+	<note>Deep residual learning for image recognition Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Query-key normalization for transformers</title>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raj</forename><surname>Prudhvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shubham</forename><surname>Dachapally</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuxuan</forename><surname>Shantaram Pawar</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of the Association for Computational Linguistics: EMNLP 2020</title>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="4246" to="4253" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Normsoftmax: Normalizing the input of softmax to accelerate and stabilize training</title>
+		<author>
+			<persName><forename type="first">Zixuan</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiaqi</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">Z</forename><surname>Pan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2023 IEEE International Conference on Omni-layer Intelligent Systems (COINS)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="1" to="6" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Transformers are rnns: Fast autoregressive transformers with linear attention</title>
+		<author>
+			<persName><forename type="first">Angelos</forename><surname>Katharopoulos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Apoorv</forename><surname>Vyas</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International conference on machine learning</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="5156" to="5165" />
+		</imprint>
+	</monogr>
+	<note>Nikolaos Pappas, and François Fleuret</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">From attention to activation: Unraveling the enigmas of large language models</title>
+		<author>
+			<persName><forename type="first">Prannay</forename><surname>Kaul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengcheng</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ismail</forename><surname>Elezi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiankang</forename><surname>Deng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Thirteenth International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Transformers get stable: an end-to-end signal propagation theory for language models</title>
+		<author>
+			<persName><forename type="first">Akhil</forename><surname>Kedia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abbas</forename><surname>Mohd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sushil</forename><surname>Zaidi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jungho</forename><surname>Khyalia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harshith</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haejun</forename><surname>Goka</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 41st International Conference on Machine Learning</title>
+		<meeting>the 41st International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>ICML&apos;24. JMLR.org</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Some fundamental aspects about lipschitz continuity of neural networks</title>
+		<author>
+			<persName><forename type="first">Grigory</forename><surname>Khromov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sidak Pal</forename><surname>Singh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Twelfth International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The lipschitz constant of self-attention</title>
+		<author>
+			<persName><forename type="first">Hyunjik</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><surname>Papamakarios</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andriy</forename><surname>Mnih</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="5562" to="5571" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Decoupled weight decay regularization</title>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Loshchilov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frank</forename><surname>Hutter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">One step of gradient descent is provably the optimal in-context learner with one layer of linear self-attention</title>
+		<author>
+			<persName><forename type="first">Arvind</forename><forename type="middle">V</forename><surname>Mahankali</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatsunori</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tengyu</forename><surname>Ma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Twelfth International Conference on Learning Representations</title>
+		<meeting><address><addrLine>Vienna, Austria</addrLine></address></meeting>
+		<imprint>
+			<publisher>OpenReview</publisher>
+			<date type="published" when="2024-05-07">2024. May 7-11, 2024</date>
+			<biblScope unit="volume">2024</biblScope>
+		</imprint>
+	</monogr>
+	<note>net</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Pointer sentinel mixture models</title>
+		<author>
+			<persName><forename type="first">Stephen</forename><surname>Merity</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caiming</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Bradbury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Attention is off by one</title>
+		<author>
+			<persName><forename type="first">Evan</forename><surname>Miller</surname></persName>
+		</author>
+		<ptr target="https://www.evanmiller.org/attention-is-off-by-one.html.Blogpost" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">The shaped transformer: Attention models in the infinite depth-and-width limit</title>
+		<author>
+			<persName><forename type="first">Lorenzo</forename><surname>Noci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chuning</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mufan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bobby</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Hofmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><forename type="middle">J</forename><surname>Maddison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Roy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="54250" to="54281" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">cosformer: Rethinking softmax in attention</title>
+		<author>
+			<persName><forename type="first">Zhen</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weixuan</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongxu</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yunshen</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Baohong</forename><surname>Lv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junjie</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lingpeng</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiran</forename><surname>Zhong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event</title>
+		<imprint>
+			<publisher>OpenReview</publisher>
+			<date type="published" when="2022-04-25">2022. April 25-29, 2022</date>
+		</imprint>
+	</monogr>
+	<note>net</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Language models are unsupervised multitask learners</title>
+		<author>
+			<persName><forename type="first">Alec</forename><surname>Radford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rewon</forename><surname>Child</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Luan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dario</forename><surname>Amodei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">OpenAI blog</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">9</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Theory, analysis, and best practices for sigmoid self-attention</title>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Ramapuram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Federico</forename><surname>Danieli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eeshan</forename><surname>Gunesh Dhekane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Floris</forename><surname>Weers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Busbridge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Ablin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatiana</forename><surname>Likhomanenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jagrit</forename><surname>Digani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zijin</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amitis</forename><surname>Shidani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Russell</forename><surname>Webb</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Thirteenth International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<author>
+			<persName><forename type="first">Oleg</forename><surname>Rybakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Chrzanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Dykas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jinze</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Lanir</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2410.16682</idno>
+		<title level="m">Methods of improving llm training stability</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<author>
+			<persName><forename type="first">Noam</forename><surname>Shazeer</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2002.05202</idno>
+		<title level="m">Glu variants improve transformer</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">How sparse attention approximates exact attention?your attention is naturally $n^c$-sparse</title>
+		<author>
+			<persName><forename type="first">Zhao</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chiwun</forename><surname>Yang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Sparsity in LLMs (SLLM): Deep Dive into Mixture of Experts, Quantization, Hardware, and Inference</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Roformer: Enhanced transformer with rotary position embedding</title>
+		<author>
+			<persName><forename type="first">Jianlin</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Murtadha</forename><surname>Ahmed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shengfeng</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wen</forename><surname>Bo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yunfeng</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurocomputing</title>
+		<imprint>
+			<biblScope unit="volume">568</biblScope>
+			<biblScope unit="page">127063</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Massive activations in large language models</title>
+		<author>
+			<persName><forename type="first">Mingjie</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinlei</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zico Kolter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhuang</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">First Conference on Language Modeling</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">Hugo</forename><surname>Touvron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thibaut</forename><surname>Lavril</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gautier</forename><surname>Izacard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Martinet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marie-Anne</forename><surname>Lachaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothée</forename><surname>Lacroix</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Baptiste</forename><surname>Rozière</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Naman</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Hambro</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2302.13971</idno>
+		<title level="m">Faisal Azhar, et al. 2023. Llama: Open and efficient foundation language models</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Attention is all you need</title>
+		<author>
+			<persName><forename type="first">Ashish</forename><surname>Vaswani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noam</forename><surname>Shazeer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niki</forename><surname>Parmar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jakob</forename><surname>Uszkoreit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Llion</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aidan</forename><forename type="middle">N</forename><surname>Gomez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Łukasz</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Illia</forename><surname>Polosukhin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in neural information processing systems</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page">30</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Transformers learn in-context by gradient descent</title>
+		<author>
+			<persName><forename type="first">Johannes</forename><surname>Von</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oswald</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eyvind</forename><surname>Niklasson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ettore</forename><surname>Randazzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">João</forename><surname>Sacramento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Mordvintsev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrey</forename><surname>Zhmoginov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Vladymyrov</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="35151" to="35174" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Small-scale proxies for large-scale transformer training instabilities</title>
+		<author>
+			<persName><forename type="first">Mitchell</forename><surname>Wortsman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lechao</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Katie</forename><forename type="middle">E</forename><surname>Everett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">A</forename><surname>Alemi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Adlam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">D</forename><surname>Co-Reyes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Izzeddin</forename><surname>Gur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abhishek</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roman</forename><surname>Novak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Pennington</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jascha</forename><surname>Sohl-Dickstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kelvin</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jaehoon</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simon</forename><surname>Kornblith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Twelfth International Conference on Learning Representations, ICLR 2024</title>
+		<meeting><address><addrLine>Vienna, Austria</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2024-05-07">2024. May 7-11, 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Efficient streaming language models with attention sinks</title>
+		<author>
+			<persName><forename type="first">Guangxuan</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuandong</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beidi</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Song</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Lewis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Twelfth International Conference on Learning Representations</title>
+		<meeting><address><addrLine>Vienna, Austria</addrLine></address></meeting>
+		<imprint>
+			<publisher>OpenReview</publisher>
+			<date type="published" when="2024-05-07">2024. May 7-11, 2024</date>
+			<biblScope unit="volume">2024</biblScope>
+		</imprint>
+	</monogr>
+	<note>net</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Unveiling and harnessing hidden attention sinks: enhancing large language models without training through attention calibration</title>
+		<author>
+			<persName><forename type="first">Zhongzhi</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zheng</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yonggan</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Huihong</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Khalid</forename><surname>Shaikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yingyan (celine)</forename><surname>Lin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 41st International Conference on Machine Learning</title>
+		<meeting>the 41st International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>ICML&apos;24. JMLR.org</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Stabilizing transformer training by preventing attention entropy collapse</title>
+		<author>
+			<persName><forename type="first">Shuangfei</forename><surname>Zhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tatiana</forename><surname>Likhomanenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Etai</forename><surname>Littwin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Busbridge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Ramapuram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yizhe</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiatao</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><forename type="middle">M</forename><surname>Susskind</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="40770" to="40803" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Root mean square layer normalization</title>
+		<author>
+			<persName><forename type="first">Biao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rico</forename><surname>Sennrich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<publisher>Curran Associates, Inc</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">32</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Trained transformers learn linear models in-context</title>
+		<author>
+			<persName><forename type="first">Ruiqi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Spencer</forename><surname>Frei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><forename type="middle">L</forename><surname>Bartlett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Machine Learning Research</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">49</biblScope>
+			<biblScope unit="page" from="1" to="55" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title level="m" type="main">Hybridnorm: Towards stable and efficient transformer training via hybrid normalization</title>
+		<author>
+			<persName><forename type="first">Zhijian</forename><surname>Zhuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yutao</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ya</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sijun</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoqing</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xun</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jinwen</forename><surname>Ma</surname></persName>
+		</author>
+		<idno>CoRR, abs/2503.04598</idno>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

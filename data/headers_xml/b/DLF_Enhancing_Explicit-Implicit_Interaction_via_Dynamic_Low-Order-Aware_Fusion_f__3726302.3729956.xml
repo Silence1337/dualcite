@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DLF: Enhancing Explicit-Implicit Interaction via Dynamic Low-Order-Aware Fusion for CTR Prediction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-05-25">25 May 2025</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kefan</forename><surname>Wang</surname></persName>
+							<email>wangkefan@mail.ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Wang</surname></persName>
+							<email>wanghao3@ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Guo</surname></persName>
+							<email>guowei67@huawei.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yong</forename><surname>Liu</surname></persName>
+							<email>liu.yong6@huawei.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianghao</forename><surname>Lin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Defu</forename><surname>Lian</surname></persName>
+							<email>liandefu@ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Enhong</forename><surname>Chen</surname></persName>
+							<email>cheneh@ustc.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab Singapore</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country>China Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab Singapore</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University Shanghai</orgName>
+								<address>
+									<country>Singapore China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DLF: Enhancing Explicit-Implicit Interaction via Dynamic Low-Order-Aware Fusion for CTR Prediction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2025-05-25">25 May 2025</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3E9B0652BBE6C0F5DEF5135D7A1F49E8</idno>
+					<idno type="DOI">10.1145/3726302.3729956</idno>
+					<idno type="arXiv">arXiv:2505.19182v1[cs.IR]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Recommender systems CTR Prediction</term>
+					<term>Recommendation System</term>
+					<term>Deep Learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Click-through rate (CTR) prediction is a critical task in online advertising and recommender systems, relying on effective modeling of feature interactions. Explicit interactions capture predefined relationships, such as inner products, but often suffer from data sparsity, while implicit interactions excel at learning complex patterns through non-linear transformations but lack inductive biases for efficient low-order modeling. Existing two-stream architectures integrate these paradigms but face challenges such as limited information sharing, gradient imbalance, and difficulty preserving low-order signals in sparse CTR data. We propose a novel framework, Dynamic Low-Order-Aware Fusion (DLF), which addresses these limitations through two key components: a Residual-Aware Low-Order Interaction Network (RLI) and a Network-Aware Attention Fusion Module (NAF). RLI explicitly preserves low-order signals while mitigating redundancy from residual connections, and NAF dynamically integrates explicit and implicit representations at each layer, enhancing information sharing and alleviating gradient imbalance. Together, these innovations balance low-order and high-order interactions, improving model expressiveness. Extensive experiments on public datasets demonstrate that DLF achieves * Corresponding author.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">3DS: Medical Domain Adaptation of LLMs via Decomposed Difficulty-based Data Selection</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongxin</forename><surname>Ding</surname></persName>
+							<email>dinghx@pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Fang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Runchuan</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinke</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinyang</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yongxin</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weibin</forename><surname>Liao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xu</forename><surname>Chu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junfeng</forename><surname>Zhao</surname></persName>
+							<email>zhaojf@pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Big Data Technology Research Center</orgName>
+								<orgName type="laboratory">Nanhu Laboratory</orgName>
+								<address>
+									<settlement>Jiaxing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yasha</forename><surname>Wang</surname></persName>
+							<email>wangyasha@pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="institution">Key Laboratory of High Confidence Software Technologies</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">National Engineering Research Center for Software Engineering</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Peking University Information Technology Institute</orgName>
+								<address>
+									<settlement>Tianjin Binhai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">3DS: Medical Domain Adaptation of LLMs via Decomposed Difficulty-based Data Selection</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">95842123CD7F42F248C9052C1D448FD2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract/>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fine-Grained Manipulation of Arithmetic Neurons</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenyu</forename><surname>Du</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Xi&apos;an Jiaotong-Liverpool University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tongxu</forename><surname>Luo</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">The Chinese</orgName>
+								<orgName type="institution">University of Hong Kong</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stephen</forename><surname>Chung</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Cambridge</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Fu</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fine-Grained Manipulation of Arithmetic Neurons</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">067A7D61C9D10ED7E7BB957A8A1A881E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>It is a longstanding challenge to understand how neural models perform mathematical reasoning. Recent mechanistic interpretability work indicates that large language models (LLMs) use a &quot;bag of heuristics&quot; in middle to late-layer MLP neurons for arithmetic, where each heuristic promotes logits for specific numerical patterns. Building on this, we aim for fine-grained manipulation of these heuristic neurons to causally steer model predictions towards specific arithmetic outcomes, moving beyond simply disrupting accuracy. This paper presents a methodology that enables the systematic identification and causal manipulation of heuristic neurons, which is applied to the addition task in this study. We train a linear classifier to predict heuristics based on activation values, achieving over 90% classification accuracy. The trained classifier also allows us to rank neurons by their importance to a given heuristic. By targeting a small set of topranked neurons (K=50), we demonstrate high success rates-over 80% for the ones place and nearly 70% for the tens place-in controlling addition outcomes. This manipulation is achieved by transforming the activation of identified neurons into specific target heuristics by zeroing out source-heuristic neurons and adjusting target-heuristic neurons towards their class activation centroids. We explain these results by hypothesizing that high-ranking neurons possess &apos;cleaner channels&apos; for their heuristics, supported by Signal-to-Noise Ratio (SNR) analysis where these neurons show higher SNR scores. Our work offers a robust approach to dissect, causally test, and precisely influence LLM arithmetic, advancing understanding of their internal mechanisms.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Deploying Tiny LVLM Judges for Real-World Evaluation of Chart Models: Lessons Learned and Best Practices</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Md</forename><surname>Tahmid</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rahman</forename><surname>Laskar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammed</forename><surname>Saidul Islam</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ridwan</forename><surname>Mahbub</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mizanur</forename><surname>Rahman</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>Md</roleName><forename type="first">Amran</forename><forename type="middle">Hossen</forename><surname>Bhuiyan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Israt</forename><surname>Jahan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mir</forename><forename type="middle">Tafseer</forename><surname>Nayeem</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">University of Alberta</orgName>
+								<orgName type="institution" key="instit2">$ Salesforce AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shafiq</forename><surname>Joty $</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Enamul</forename><surname>Hoque</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jimmy</forename><forename type="middle">Xiangji</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Deploying Tiny LVLM Judges for Real-World Evaluation of Chart Models: Lessons Learned and Best Practices</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A9A49CDE9B42FF76A252D4C711FFD1C5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Vision-Language Models (LVLMs) with only 7B parameters have shown promise as automated judges in chart comprehension tasks. However, tiny models (≤2B parameters) still perform poorly as judges, limiting their real-world use in resource-constrained settings. To address this, we propose two approaches to ensure cost-efficient evaluation: (i) multi-criteria prompting, which combines separate evaluation criteria into a single instruction, and (ii) domain-adaptive transfer learning, in which we address the low-resource problem by fine-tuning a 2B-parameter LVLM on synthetic judgments in a chart dataset to create the ChartJudge-2B model. Experiments show that multi-criteria prompting exposes robustness gaps, which led to a huge drop in performance for 7B models, including specialized LVLM judges like LLaVA-Critic. In addition, we find that by fine-tuning a tiny LVLM (i.e., ChartJudge-2B), we can effectively transfer knowledge from one dataset to another to make it a more specialized model. Our fine-grained analysis across chart types and query complexities offers actionable insights into trade-offs between model size, prompt design, and transferability-enabling scalable, low-cost evaluation for chart reasoning tasks. Our code and the data will be made publicly available.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

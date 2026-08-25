@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Interpret and Improve In-Context Learning via the Lens of Input-Label Mappings</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chenghao</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">MoE Key Laboratory of Brain-inspired Intelligent Perception and Cognition University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Huang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Independent Researcher</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yonggang</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Hong Kong Baptist University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Le</forename><surname>Lu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Independent Researcher</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Houqiang</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">MoE Key Laboratory of Brain-inspired Intelligent Perception and Cognition University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Xinmei</forename><surname>Tian</surname></persName>
+							<email>xinmei@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">MoE Key Laboratory of Brain-inspired Intelligent Perception and Cognition University of Science and Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xu</forename><surname>Shen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Independent Researcher</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jieping</forename><surname>Ye</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Independent Researcher</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Interpret and Improve In-Context Learning via the Lens of Input-Label Mappings</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">54E68BBE913E3866136AF143DF9807C4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:27+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) excel at downstream NLP tasks through in-context learning (ICL) with a few demonstrations of input-label pairs. However, the internal mechanisms behind ICL remain under-explored, particularly the mappings between inputs and labels. In this work, we reverse-engineer ICL by examining input-label mappings: what they are within LLMs, where they function, and how LLMs utilize them. (1) what: We discover input-label mappings stored within a few specific layers in the form of principal components (PCs), which capture human-interpretable and task-related words. (2) where: We propose a PC patching approach to identify the modules where input-label mappings function. Specifically, PC patching automatically crafts counterfactual representations using identified semantic PCs, rather than manually designing counterfactual text, to suppress the behavior related to LLM capability for ICL-related modules. Utilizing PC patching, we identify LLMs apply inputlabel mappings in a small fraction (5%) of attention heads. (3) how: We observe and verify that the identified key heads utilize input-label mappings from demonstrations to generate target labels for new queries. Based on these discoveries, we further show that precisely fine-tuning key ICL-related modules leads to significant improvements across diverse tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rationale-Guided Retrieval Augmented Generation for Medical Question Answering</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiwoong</forename><surname>Sohn</surname></persName>
+							<email>jw_sohn@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yein</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chanwoong</forename><surname>Yoon</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sihyeon</forename><surname>Park</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hyeon</forename><surname>Hwang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mujeen</forename><surname>Sung</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Kyung Hee University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyunjae</forename><surname>Kim</surname></persName>
+							<email>hyunjae-kim@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaewoo</forename><surname>Kang</surname></persName>
+							<email>kangj@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">AIGEN Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rationale-Guided Retrieval Augmented Generation for Medical Question Answering</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E19D430C13BE2E79DA1324E894F80FF1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLM) hold significant potential for applications in biomedicine, but they struggle with hallucinations and outdated knowledge. While retrieval-augmented generation (RAG) is generally employed to address these issues, it also has its own set of challenges: (1) LLMs are vulnerable to irrelevant or unhelpful context, (2) medical queries are often not well-targeted for helpful information, and (3) retrievers are prone to bias toward the specific source corpus they were trained on. In this study, we present RAG 2 (RAtionale-Guided RAG), a new framework for enhancing the reliability of RAG in biomedical contexts. RAG 2 incorporates three key innovations: a small filtering model trained on perplexity-based labels of rationales, which selectively augments informative snippets of documents while filtering out distractors; LLM-generated rationales as queries to improve the utility of retrieved snippets; a structure designed to retrieve snippets evenly from a comprehensive set of four biomedical corpora, effectively mitigating retriever bias. Our experiments demonstrate that RAG 2 improves the state-of-the-art LLMs of varying sizes, with improvements of up to 6.1%, and it outperforms the previous best medical RAG model by up to 5.6% across three medical question-answering benchmarks. Our code is available at https://github.com/dmis-lab/RAG2</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

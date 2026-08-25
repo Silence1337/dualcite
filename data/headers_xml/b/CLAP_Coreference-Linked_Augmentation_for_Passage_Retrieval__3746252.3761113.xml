@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CLAP: Coreference-Linked Augmentation for Passage Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Huanwei</forename><surname>Xu</surname></persName>
+							<email>huanwei.xu@adelaide.edu.au</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer and Mathematical Sciences</orgName>
+								<orgName type="institution">The University of Adelaide Adelaide</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lin</forename><surname>Xu</surname></persName>
+							<email>lin.xu@adelaide.edu.au</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer and Mathematical Sciences</orgName>
+								<orgName type="institution">The University of Adelaide Adelaide</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Yuan</surname></persName>
+							<email>liang.yuan@adelaide.edu.au</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer and Mathematical Sciences</orgName>
+								<orgName type="institution">The University of Adelaide Adelaide</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CLAP: Coreference-Linked Augmentation for Passage Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EDDFC520D28BC3E9F62CA1B7E9B2F538</idno>
+					<idno type="DOI">10.1145/3746252.3761113</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Language models</term>
+					<term>Combination, fusion and federated search</term>
+					<term>Query representation</term>
+					<term>Top-k retrieval in databases</term>
+					<term>Rank aggregation</term>
+					<term>Similarity measures</term>
+					<term>Novelty in information retrieval Passage Ranking, Passage Expansion, Pseudo-query Generation, LLMs, Coreference Resolution, Retrieval Fusion</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large Language Model (LLM)-based passage expansion has shown promise for enhancing first-stage retrieval, but often underperforms with dense retrievers due to semantic drift and misalignment with their pretrained semantic space. Beyond this, only a portion of a passage is typically relevant to a query, while the rest introduces noise-an issue compounded by chunking techniques that break coreferential continuity. We propose Coreference-Linked Augmentation for Passage Retrieval (CLAP), a lightweight LLM-based expansion framework that segments passages into coherent chunks, resolves coreference chains, and generates localized pseudo-queries aligned with dense retriever representations. A simple fusion of global topical signals and fine-grained subtopic signals achieves robust performance across domains. CLAP yields consistent gains even as retriever strength increases, enabling first-stage retrieval to match or surpass second-stage rerankers such as BM25 + MonoT5-3B-exceeding the reranker by up to +20.68 nDCG@10 on ArguAna. These improvements are especially notable in out-ofdomain settings, where conventional LLM-based expansion methods relying on domain knowledge often falter. CLAP instead adopts a logic-centric pipeline that enables robust, domain-agnostic generalization.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

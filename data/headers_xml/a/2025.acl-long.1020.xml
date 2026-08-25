@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SYNTHIA: Novel Concept Design with Affordance Composition</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hyeonjeong</forename><surname>Ha</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jin</forename><surname>Xiaomeng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jeonghwan</forename><surname>Kim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiateng</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenhailong</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Khanh</forename><forename type="middle">Duy</forename><surname>Nguyen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ansel</forename><surname>Blume</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nanyun</forename><surname>Peng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai-Wei</forename><surname>Chang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Los Angeles</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Heng</forename><surname>Ji</surname></persName>
+							<email>hengji@cs.illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<country>Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SYNTHIA: Novel Concept Design with Affordance Composition</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">89C9D0719F23558AE4572D22E06EB4AC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Text-to-image (T2I) models enable rapid concept design, making them widely used in AI-driven design. While recent studies focus on generating semantic and stylistic variations of given design concepts, functional coherence-the integration of multiple affordances into a single coherent concept-remains largely overlooked. In this paper, we introduce SYNTHIA, a framework for generating visually novel and functionally coherent designs based on desired affordances. Our approach leverages a hierarchical concept ontology that decomposes concepts into parts and affordances, serving as a crucial building block for functionally coherent design. We also develop a curriculum learning scheme based on our ontology that contrastively fine-tunes T2I models to progressively learn affordance composition while maintaining visual novelty. To elaborate, we (i) gradually increase affordance distance, guiding models from basic concept-affordance association to complex affordance compositions that integrate parts of distinct affordances into a single, coherent form, and (ii) enforce visual novelty by employing contrastive objectives to push learned representations away from existing concepts. Experimental results show that SYNTHIA outperforms state-of-the-art T2I models, demonstrating absolute gains of 25.1% and 14.7% for novelty and functional coherence in human evaluation, respectively. Code is available at https://github.com/HyeonjeongHa/SYNTHIA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

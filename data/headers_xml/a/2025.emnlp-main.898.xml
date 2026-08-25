@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Alignment for Efficient Tool Calling of Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongshen</forename><surname>Xu</surname></persName>
+							<email>xuhongshen@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">X-LANCE Lab</orgName>
+								<orgName type="department" key="dep2">MoE Key Lab of Artificial Intelligence, AI Institute School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Jiangsu Key Lab of Language Computing</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zihan</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">X-LANCE Lab</orgName>
+								<orgName type="department" key="dep2">MoE Key Lab of Artificial Intelligence, AI Institute School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Jiangsu Key Lab of Language Computing</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zichen</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">X-LANCE Lab</orgName>
+								<orgName type="department" key="dep2">MoE Key Lab of Artificial Intelligence, AI Institute School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Jiangsu Key Lab of Language Computing</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lei</forename><surname>Pan</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">AISpeech Co., Ltd</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xingyu</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">X-LANCE Lab</orgName>
+								<orgName type="department" key="dep2">MoE Key Lab of Artificial Intelligence, AI Institute School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Jiangsu Key Lab of Language Computing</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuai</forename><surname>Fan</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">AISpeech Co., Ltd</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Jiangsu Key Lab of Language Computing</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">X-LANCE Lab</orgName>
+								<orgName type="department" key="dep2">MoE Key Lab of Artificial Intelligence, AI Institute School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shanghai Innovation Institution</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Suzhou Laboratory</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Yu</surname></persName>
+							<email>kai.yu@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">X-LANCE Lab</orgName>
+								<orgName type="department" key="dep2">MoE Key Lab of Artificial Intelligence, AI Institute School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Jiangsu Key Lab of Language Computing</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Suzhou Laboratory</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Jiangsu Key Lab of Language Computing</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Alignment for Efficient Tool Calling of Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">408C4A08CB1B53500CCF6FF8EF172AD7</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advancements in tool learning have enabled large language models (LLMs) to integrate external tools, enhancing their task performance by expanding their knowledge boundaries. However, relying on tools often introduces trade-offs between performance, speed, and cost, with LLMs sometimes exhibiting overreliance and overconfidence in tool usage. This paper addresses the challenge of aligning LLMs with their knowledge boundaries to make more intelligent decisions about tool invocation. We propose a multi-objective alignment framework that combines probabilistic knowledge boundary estimation with dynamic decision-making, allowing LLMs to better assess when to invoke tools based on their confidence. Our framework includes two methods for knowledge boundary estimation-consistency-based and absolute estimation-and two training strategies for integrating these estimates into the model&apos;s decision-making process. Experimental results on various tool invocation scenarios demonstrate the effectiveness of our framework, showing significant improvements in tool efficiency by reducing unnecessary tool usage.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

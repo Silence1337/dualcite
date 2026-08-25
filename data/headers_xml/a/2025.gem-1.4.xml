@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The Fellowship of the LLMs: Multi-Model Workflows for Synthetic Preference Optimization Dataset Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Samee</forename><surname>Arif</surname></persName>
+							<email>samee.arif@lums.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Lahore University of Management Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sualeha</forename><surname>Farid</surname></persName>
+							<email>sualeha@umich.edu</email>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Michigan</orgName>
+								<address>
+									<country>Ann Arbor</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Abdul</forename><forename type="middle">Hameed</forename><surname>Azeemi</surname></persName>
+							<email>abdul.azeemi@lums.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Lahore University of Management Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Awais</forename><surname>Athar</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">EMBL European Bioinformatics Institute</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Strategize Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Agha</forename><forename type="middle">Ali</forename><surname>Raza</surname></persName>
+							<email>agha.ali.raza@lums.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Lahore University of Management Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The Fellowship of the LLMs: Multi-Model Workflows for Synthetic Preference Optimization Dataset Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">10E6F0A93042A33D41880E05685579DE</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper presents a novel methodology for generating synthetic Preference Optimization (PO) datasets using multi-model workflows. We evaluate the effectiveness and potential of these workflows in automating and enhancing the dataset generation process. PO dataset generation requires two modules: (1) response evaluation, and (2) response generation. In the response evaluation module, the responses from Large Language Models (LLMs) are evaluated and ranked-a task typically carried out by human annotators that we automate using LLMs. We assess the response evaluation module in a 2 step process. In step 1, we assess LLMs as evaluators using three distinct prompting strategies. In step 2, we apply the winning prompting strategy to compare the performance of LLM-as-a-Judge, LLMs-as-a-Jury, and LLM Debate. Our evaluation shows that GPT-4o-asa-Judge is more consistent across all datasets. For the response generation module, we use the identified LLM evaluator configuration and compare different configurations of the LLM Feedback Loop. We use the win rate to determine the best multi-model configuration for generation. Experimenting with various configurations, we find that the LLM Feedback Loop, with Llama as the generator and Gemma as the reviewer, achieves a notable 71.8% and 73.8% win rate over single-model Llama and Gemma, respectively. After identifying the best configurations for both modules, we generate our PO datasets using the above pipeline.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

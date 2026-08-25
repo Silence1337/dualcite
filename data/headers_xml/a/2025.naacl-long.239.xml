@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Constrained Decoding with Speculative Lookaheads</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nishanth</forename><surname>Nakshatri</surname></persName>
+							<email>nnakshat@purdue.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Purdue University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shamik</forename><surname>Roy</surname></persName>
+							<email>royshami@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rajarshi</forename><surname>Das</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Suthee</forename><surname>Chaidaroon</surname></persName>
+							<email>sutheec@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Leonid</forename><surname>Boytsov</surname></persName>
+							<email>lboytsov@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rashmi</forename><surname>Gangadharaiah</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Constrained Decoding with Speculative Lookaheads</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">78219EF0FEA577E4F3579BAE38EE32CE</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Constrained decoding with lookahead heuristics (CDLH) is a highly effective method for aligning LLM generations to human preferences. However, the extensive lookahead rollout operations for each generated token makes CDLH prohibitively expensive, resulting in low adoption in practice. In contrast, common decoding strategies such as greedy decoding are extremely efficient, but achieve very low constraint satisfaction. We propose constrained decoding with speculative lookaheads (CDSL), a technique that significantly improves upon the inference efficiency of CDLH without experiencing the drastic performance reduction seen with greedy decoding. CDSL is motivated by the recently proposed idea of speculative decoding that uses a much smaller draft LLM for generation and a larger target LLM for verification. In CDSL, the draft model is used to generate lookaheads which is verified by a combination of target LLM and task-specific reward functions. This process accelerates decoding by reducing the computational burden while maintaining strong performance. We evaluate CDSL in two constraint decoding tasks with three LLM families and achieve 2.2× to 12.15× speedup over CDLH without significant performance reduction.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

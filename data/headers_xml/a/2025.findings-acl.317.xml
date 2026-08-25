@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Self-attention-based Graph-of-Thought for Math Problem Solving</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ruiqiao</forename><surname>Bai</surname></persName>
+							<email>bairuiqiao@chinamobile.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">JIUTIAN Team</orgName>
+								<orgName type="institution" key="instit2">China Mobile Research Institute</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xue</forename><surname>Han</surname></persName>
+							<email>hanxueai@chinamobile.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">JIUTIAN Team</orgName>
+								<orgName type="institution" key="instit2">China Mobile Research Institute</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuo</forename><surname>Lei</surname></persName>
+							<email>leishuo@chinamobile.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">JIUTIAN Team</orgName>
+								<orgName type="institution" key="instit2">China Mobile Research Institute</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junlan</forename><surname>Feng</surname></persName>
+							<email>fengjunlan@chinamobile.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">JIUTIAN Team</orgName>
+								<orgName type="institution" key="instit2">China Mobile Research Institute</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanyan</forename><surname>Luo</surname></persName>
+							<email>luoyanyan@chinamobile.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">JIUTIAN Team</orgName>
+								<orgName type="institution" key="instit2">China Mobile Research Institute</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Deng</surname></persName>
+							<email>dengchao@chinamobile.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">JIUTIAN Team</orgName>
+								<orgName type="institution" key="instit2">China Mobile Research Institute</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Self-attention-based Graph-of-Thought for Math Problem Solving</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A53D1FE73F06C20AB0E24336263FEE4F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Applying Large Language Models (LLM) to solve math problems is one of the hottest research topics at present. Traditional Chain-of-Thought-based methods typically generate the reasoning path in a chain structure, leading to unnecessary interference caused by non-zero self-attention among weakly related reasoning steps. Such a setting also differs from humans&apos; typical graph-structured reasoning habit (with an inter-step relationship graph in mind). To solve the problem, this paper proposes a novel decoding method for Transformer-based LLM, named Self-attention-based Graph-of-Thought (SaGoT). SaGoT constructs a thought graph simultaneously as an LLM inference (based on a newly defined inter-step self-attention indicator), and generates reasoning steps with a novel graph-structured self-attention mechanism. It is a significant contribution for SaGoT to enable an LLM&apos;s graph-like reasoning ability by modifying its inner working operations, compared to SOTA prompting methods that are ex-post, rely on huge LLMs and redundant reasoning step generation to form a graph (inefficient &amp; non-human-like). In addition, SaGoT is a training-free technique that can be seamlessly incorporated into pre-trained Transformer-based LLMs. Our experimental results have shown that SaGoT could significantly enhance mathematical reasoning accuracy without the reliance on huge computationally over-expensive LLMs. It also avoids SOTA methods&apos; performance degradation issues when the LLM is too small to comprehend complex prompts. Moreover, SaGoT integrates intrinsic interpretability into the LLM&apos;s reasoning procedure, intuitively assisting humans in understanding how an LLM views the relationships among its reasoning steps, and why the LLM succeeds or fails.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

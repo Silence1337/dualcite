@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Benchmarking Recommendation, Classification, and Tracing Based on Hugging Face Knowledge Graph</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qiaosheng</forename><surname>Chen</surname></persName>
+							<email>qschen@smail.nju.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kaijia</forename><surname>Huang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Zhou</surname></persName>
+							<email>xzhou@smail.nju.edu.cn</email>
+							<idno type="ORCID">0009-0008-1132-6408</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Weiqing</forename><surname>Luo</surname></persName>
+							<email>wqluo@smail.nju.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanning</forename><surname>Cui</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Gong</forename><surname>Cheng</surname></persName>
+							<email>gcheng@nju.edu.cn</email>
+							<idno type="ORCID">0000-0003-3539-7776</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Nanjing University State Key Laboratory for Novel Software Technology Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanjing University State Key Laboratory for Novel Software Technology Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Nanjing University State Key Laboratory for Novel Software Technology Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Nanjing University State Key Laboratory for Novel Software Technology Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Nanjing University State Key Laboratory for Novel Software Technology Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Nanjing University State Key Laboratory for Novel Software Technology Nanjing</orgName>
+								<address>
+									<settlement>Jiangsu Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Benchmarking Recommendation, Classification, and Tracing Based on Hugging Face Knowledge Graph</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B283834878E33FE9EBC1314BE5BA99EA</idno>
+					<idno type="DOI">10.1145/3726302.3730277</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>knowledge graph</term>
+					<term>Hugging Face</term>
+					<term>test collection</term>
+					<term>resource recommendation</term>
+					<term>task classification</term>
+					<term>model tracing</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The rapid growth of open source machine learning (ML) resources, such as models and datasets, has accelerated IR research. However, existing platforms like Hugging Face do not explicitly utilize structured representations, limiting advanced queries and analyses such as tracing model evolution and recommending relevant datasets. To fill the gap, we construct HuggingKG, the first largescale knowledge graph built from the Hugging Face community for ML resource management. With 2.6 million nodes and 6.2 million edges, HuggingKG captures domain-specific relations and rich textual attributes. It enables us to further present HuggingBench, a multi-task benchmark with three novel test collections for IR tasks including resource recommendation, classification, and tracing. Our experiments reveal unique characteristics of HuggingKG and the derived tasks. Both resources are publicly available, expected to advance research in open source resource sharing and management. CCS Concepts • Computing methodologies → Semantic networks; • Information systems → Test collections.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Hopscotch: Discovering and Skipping Redundancies in Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Mustafa</forename><surname>Eyceoz</surname></persName>
+							<email>meyceoz@redhat.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Red Hat AI Innovation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nikhil</forename><forename type="middle">Shivakumar</forename><surname>Nayak</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Red Hat AI Innovation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Red Hat AI Innovation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ligong</forename><surname>Han</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Red Hat AI Innovation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Akash</forename><surname>Srivastava</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Red Hat AI Innovation</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Hopscotch: Discovering and Skipping Redundancies in Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4B5189CB5A407E07911CA8049439A047</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Modern causal language models stack many attention blocks to improve performance, but not all blocks are necessary for every task. We propose Hopscotch, a simple yet effective method that identifies and skips attention blocks with least contributions to a task and adapts to preserve output quality. Hopscotch jointly optimizes which blocks to skip and how to scale the outputs of the remaining layers. By introducing lightweight, trainable scaling parameters to attention and MLP blocks, it mitigates distribution shifts in hidden states caused by removing attention blocks. Hopscotch does not modify model weights or require access to pretraining or instruction-tuning data, and is compatible with existing model compression techniques. When applied to Llama-3.1-8B and Qwen2.5-7B, Hopscotch achieves less than a 2% drop in performance even after skipping four attention blocks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

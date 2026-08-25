@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">IPR: Intelligent Prompt Routing with User-Controlled Quality-Cost Trade-offs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Aosong</forename><surname>Feng</surname></persName>
+							<email>asfeng@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Balasubramaniam</forename><surname>Srinivasan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yun</forename><surname>Zhou</surname></persName>
+							<email>yunzzhou@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhichao</forename><surname>Xu</surname></persName>
+							<email>xzhichao@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kang</forename><surname>Zhou</surname></persName>
+							<email>zhoukang@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sheng</forename><surname>Guan</surname></persName>
+							<email>shguan@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yueyan</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xian</forename><surname>Wu</surname></persName>
+							<email>xianwwu@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ninad</forename><surname>Kulkarni</surname></persName>
+							<email>ninadkul@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengyuan</forename><surname>Shen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dmitriy</forename><surname>Bespalov</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Smruti</forename><surname>Soumya</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yifei</forename><surname>Mishra</surname></persName>
+							<email>yifeit@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Darren</forename><surname>Teng</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Yow-Bang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Haibo</forename><surname>Wang</surname></persName>
+							<email>ybwang@amazon.com</email>
+						</author>
+						<author>
+							<persName><surname>Ding</surname></persName>
+							<email>hbding@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lin</forename><forename type="middle">Lee</forename><surname>Cheong</surname></persName>
+							<email>lcheong@amazon.com</email>
+						</author>
+						<title level="a" type="main">IPR: Intelligent Prompt Routing with User-Controlled Quality-Cost Trade-offs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">766323F368F05F0D014AE45E6DAA46C2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Routing incoming queries to the most costeffective LLM while maintaining response quality poses a fundamental challenge in optimizing performance-cost trade-offs for largescale commercial systems. We present IPR-a quality-constrained Intelligent Prompt Routing framework that dynamically selects optimal models based on predicted response quality and user-specified tolerance levels. IPR introduces three key innovations: (1) a modular architecture with lightweight quality estimators trained on 1.5M prompts annotated with calibrated quality scores, enabling fine-grained quality prediction across model families; (2) a user-controlled routing mechanism with tolerance parameter τ ∈ [0, 1] that provides explicit control over quality-cost trade-offs; and (3) an extensible design using frozen encoders with model-specific adapters, reducing new model integration effort. To rigorously train and evaluate IPR, we detail our efforts to curate an IPR dataset containing 1.5 million examples with response quality annotations across 11 LLM candidates. Deployed on a major cloud platform, IPR achieves 43.9% cost reduction while maintaining quality parity with the strongest model in the Claude family and processes requests with consistently low latency. The deployed system and additional product details are publicly available at https://aws.amazon.com/ bedrock/intelligent-prompt-routing/.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

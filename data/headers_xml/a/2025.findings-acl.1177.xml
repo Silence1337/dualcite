@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LADDER: Language-Driven Slice Discovery and Error Rectification in Vision Classifiers</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shantanu</forename><surname>Ghosh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Boston University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rayan</forename><surname>Syed</surname></persName>
+							<email>rsyed@bu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Boston University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenyu</forename><surname>Wang</surname></persName>
+							<email>chyuwang@bu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Boston University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vaibhav</forename><surname>Choudhary</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Boston University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Binxu</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Clare</forename><forename type="middle">B</forename><surname>Poynton</surname></persName>
+							<email>clare.poynton@bmc.org</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Boston University Medical Campus</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shyam</forename><surname>Visweswaran</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Pittsburgh</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kayhan</forename><surname>Batmanghelich</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Boston University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LADDER: Language-Driven Slice Discovery and Error Rectification in Vision Classifiers</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6B99185FC029A4C9437623A7B45CC453</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Slice discovery refers to identifying systematic biases in the mistakes of pre-trained vision models. Current slice discovery methods in computer vision rely on converting input images into sets of attributes and then testing hypotheses about configurations of these precomputed attributes associated with elevated error patterns. However, such methods face several limitations: 1) they are restricted by the predefined attribute bank; 2) they lack the common sense reasoning and domain-specific knowledge often required for specialized fields e.g., radiology; 3) at best, they can only identify biases in image attributes while overlooking those introduced during preprocessing or data preparation. We hypothesize that biasinducing variables leave traces in the form of language (e.g., logs), which can be captured as unstructured text. Thus, we introduce LADDER , which leverages the reasoning capabilities and latent domain knowledge of Large Language Models (LLMs) to generate hypotheses about these mistakes. Specifically, we project the internal activations of a pre-trained model into text using a retrieval approach and prompt the LLM to propose potential bias hypotheses. To detect biases from preprocessing pipelines, we convert the preprocessing data into text and prompt the LLM. Finally, LADDER generates pseudo-labels for each identified bias, thereby mitigating all biases without requiring expensive attribute annotations. Rigorous evaluations on 3 natural and 3 medical imaging datasets, 200+ classifiers, and 4 LLMs with varied architectures and pretraining strategies-demonstrate that LADDER consistently outperforms current methods. Code is available: https://github.com/batmanlab/Ladder.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

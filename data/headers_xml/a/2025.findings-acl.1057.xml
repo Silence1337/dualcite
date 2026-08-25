@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MWPO: Enhancing LLMs Performance through Multi-Weight Preference Strength and Length Optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shiyue</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Fu</forename><surname>Zhang</surname></persName>
+							<email>zhangfu@mail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingwei</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linfeng</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MWPO: Enhancing LLMs Performance through Multi-Weight Preference Strength and Length Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">70DB18EA9BDC6EC566041F1B3A1F1C15</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Direct Preference Optimization (DPO) have proposed offline alternatives to Reinforcement Learning from Human Feedback (RLHF). In DPO, each preference pair, which serves as the foundation for learning, is typically constructed by first generating multiple responses to the same instruction and then annotating them to indicate the preferred choice. However, when the responses are highly similar, the weak preference signal can introduce annotation noise, which may hinder model optimization. Additionally, DPO suffers from the drawback of over-optimizing for verbose generation. A potential reason is the presence of length bias in preference datasets, which can lead to length exploitation. To address these issues, we propose a DPO-based multi-weight preference strength and length optimization (MWPO) method. Specifically, we propose to reweight preference pairs based on implicit reward margins and response length margins, unifying them through a geometric mixture to generate synthetic weights for optimization. This method allows preference pairs with stronger preference signals or more favorable length feature to have a more pronounced impact on model parameters. Moreover, our method does not require additional annotators. We validate our method on models of four different scales across multiple benchmarks. Our method surpasses state-of-the-art (SOTA) baselines, outperforming DPO by up to 8.7% on AlpacaEval 2 while reducing generation length by 9.4% in the Mistral setting 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

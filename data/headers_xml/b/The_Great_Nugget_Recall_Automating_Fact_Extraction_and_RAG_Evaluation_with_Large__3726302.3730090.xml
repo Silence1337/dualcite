@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The Great Nugget Recall: Automating Fact Extraction and RAG Evaluation with Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ronak</forename><surname>Pradeep</surname></persName>
+							<email>rpradeep@uwaterloo.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ian</forename><surname>Soboroff</surname></persName>
+							<email>ian.soboroff@nist.gov</email>
+							<idno type="ORCID">0000-0003-2363-3014</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jimmy</forename><surname>Lin</surname></persName>
+							<email>jimmylin@uwaterloo.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Nandan</forename><surname>Thakur</surname></persName>
+							<email>nandan.thakur@uwaterloo.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shivani</forename><surname>Upadhyay</surname></persName>
+							<email>sjupadhyay@uwaterloo.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Campos</surname></persName>
+							<email>daniel.campos@snowflake.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Nick</forename><surname>Craswell</surname></persName>
+							<email>nickcr@microsoft.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hoa</forename><forename type="middle">Trang</forename><surname>Dang</surname></persName>
+							<email>hoa.dang@nist.gov</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Waterloo Waterloo</orgName>
+								<address>
+									<country>Canada Nandan Thakur</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Waterloo Waterloo</orgName>
+								<address>
+									<country>Canada Shivani Upadhyay</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Waterloo Waterloo</orgName>
+								<address>
+									<settlement>Snowflake San Mateo Seattle</settlement>
+									<country>Canada Daniel Campos United States Nick Craswell United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">NIST Gaithersburg</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution" key="instit1">Hoa Trang Dang</orgName>
+								<orgName type="institution" key="instit2">NIST Gaithersburg</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">University of Waterloo Waterloo</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>Canada Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">The Great Nugget Recall: Automating Fact Extraction and RAG Evaluation with Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F4B41620E90595E6EC92D38CB4B0340D</idno>
+					<idno type="DOI">10.1145/3726302.3730090</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Nugget Evaluation</term>
+					<term>Atomic Facts</term>
+					<term>Automatic Evaluation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large Language Models (LLMs) have significantly enhanced the capabilities of information access systems, especially with retrievalaugmented generation (RAG). Nevertheless, the evaluation of RAG systems remains a barrier to continued progress, a challenge we tackle in this work by proposing an automatic evaluation framework that is validated against human annotations. We believe that the nugget evaluation methodology provides a solid foundation for evaluating RAG systems. This approach, originally developed for the TREC Question Answering (QA) Track in 2003, evaluates systems based on atomic facts that should be present in good answers. Our efforts focus on &quot;refactoring&quot; this methodology, where we describe the AutoNuggetizer framework that specifically applies LLMs to both automatically create nuggets and automatically assign nuggets to system answers. In the context of the TREC 2024 RAG Track, we calibrate a fully automatic approach against strategies where nuggets are created manually or semi-manually by human assessors and then assigned manually to system answers. Based on results from a community-wide evaluation, we observe strong agreement at the run level between scores derived from fully automatic nugget evaluation and human-based variants. The agreement is stronger when individual framework components such as nugget assignment are automated independently. This suggests that our evaluation framework provides tradeoffs between effort and quality that can be used to guide the development of future RAG systems. However, further research is necessary to refine our approach, particularly in establishing robust per-topic agreement to diagnose system failures effectively. CCS Concepts • Information systems → Relevance assessment.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

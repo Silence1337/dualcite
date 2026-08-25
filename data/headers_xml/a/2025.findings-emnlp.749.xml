@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">On Collaborating Small and Large Models for Few-shot Intent Detection</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Chen</surname></persName>
+							<email>hustchenpeng@hust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+								<address>
+									<settlement>Wuhan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bang</forename><surname>Wang</surname></persName>
+							<email>wangbang@hust.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Electronic Information and Communications</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+								<address>
+									<settlement>Wuhan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">On Collaborating Small and Large Models for Few-shot Intent Detection</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BF1D980DAD2369B1CDA3782764CE4400</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Few-shot intent detection (FSID) targets the classification of user queries into in-scope intent categories or detecting them as out-ofscope, with only a few or even zero labeled examples per class. Existing PLM-based methods struggle in low-resource situations; while LLM-based methods face high inference cost and label interference. To harness their complementary strengths, we propose the FCSLM, a framework that collaborates a small prediction model with a large language model for the FSID task. During training, we leverage LLMs for data augmentation in self-supervised pretraining and supervised fine-tuning a taskspecific prediction model. During inference, a multi-round reasoning process first applies the small prediction model to output candidate intents with uncertainty estimations, then invokes an LLM with enriched intent descriptions for refined prediction and OOS detection. Extensive experiments on three benchmark datasets demonstrate that our FCSLM outperforms strong competitors, achieving the new state-of-the-art performance in both intent classification and OOS detection. Our code is available at: https://github.com/ hustchenpeng/FCSLM</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

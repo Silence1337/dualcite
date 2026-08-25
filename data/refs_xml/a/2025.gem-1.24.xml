@@ -1,0 +1,1383 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Vicuna: An opensource chatbot impressing gpt-4</title>
+		<author>
+			<persName><forename type="first">Wei-Lin</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhuohan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zi</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ying</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhanghao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lianmin</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siyuan</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yonghao</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><forename type="middle">E</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ion</forename><surname>Stoica</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">P</forename><surname>Xing</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>with 90% chatgpt quality</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Scaling instruction-finetuned language models</title>
+		<author>
+			<persName><forename type="first">Chung</forename><surname>Hyung Won</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Le</forename><surname>Hou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shayne</forename><surname>Longpre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Barret</forename><surname>Zoph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Tay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Fedus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yunxuan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuezhi</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mostafa</forename><surname>Dehghani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siddhartha</forename><surname>Brahma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Albert</forename><surname>Webson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shane</forename><surname>Shixiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhuyun</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mirac</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinyun</forename><surname>Suzgun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aakanksha</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Chowdhery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marie</forename><surname>Castro-Ros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Pellat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dasha</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sharan</forename><surname>Valter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gaurav</forename><surname>Narang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adams</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vincent</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanping</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongkun</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Slav</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ed</forename><forename type="middle">H</forename><surname>Petrov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Chi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Dean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Denny</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quoc</forename><forename type="middle">V</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2210.11416</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Qlora: Efficient finetuning of quantized llms</title>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Dettmers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Artidoro</forename><surname>Pagnoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ari</forename><surname>Holtzman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luke</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.14314</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Hugo Touvron et al. 2023. Llama 2: Open foundation and fine-tuned chat models</title>
+		<author>
+			<persName><forename type="first">Albert</forename><forename type="middle">Q</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.04088</idno>
+		<idno>arXiv:2307.09288</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Mixtral of experts</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Learning to summarize from human feedback</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Stiennon</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>In NeurIPS</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Webgpt: Browser-assisted question-answering with human feedback</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nakano</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note>In arXiv</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Training a helpful and harmless assistant with reinforcement learning from human feedback</title>
+		<author>
+			<persName><forename type="first">Yuntao</forename><surname>Bai</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2204.05862</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">DialogWAE: Multimodal response generation with conditional wasserstein autoencoder</title>
+		<author>
+			<persName><forename type="first">Xiaodong</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jung-Woo</forename><surname>Ha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sunghun</forename><surname>Kim</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">On calibration of modern neural networks</title>
+		<author>
+			<persName><forename type="first">Chuan</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geoff</forename><surname>Pleiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kilian</forename><forename type="middle">Q</forename><surname>Weinberger</surname></persName>
+		</author>
+		<idno>1321-1330. JMLR.org</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 34th International Conference on Machine Learning</title>
+		<meeting>the 34th International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">70</biblScope>
+		</imprint>
+	</monogr>
+	<note>ICML&apos;17</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Investigating evaluation of open-domain dialogue systems with human generated multiple references</title>
+		<author>
+			<persName><forename type="first">Prakhar</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shikib</forename><surname>Mehri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tiancheng</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amy</forename><surname>Pavel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maxine</forename><surname>Eskenazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Bigham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 20th Annual SIGdial Meeting on Discourse and Dialogue</title>
+		<meeting>the 20th Annual SIGdial Meeting on Discourse and Dialogue<address><addrLine>Stockholm, Sweden</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="379" to="391" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A systematic evaluation of response selection for open domain dialogue</title>
+		<author>
+			<persName><forename type="first">Behnam</forename><surname>Hedayatnia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Di</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dilek</forename><surname>Hakkani-Tur</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W19-5944</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 23rd Annual Meeting of the Special Interest Group on Discourse and Dialogue</title>
+		<meeting>the 23rd Annual Meeting of the Special Interest Group on Discourse and Dialogue</meeting>
+		<imprint>
+			<publisher>Edinburgh, UK. Association for Computational Linguistics</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="298" to="311" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">The curious case of neural text degeneration</title>
+		<author>
+			<persName><forename type="first">Ari</forename><surname>Holtzman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Buys</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maxwell</forename><surname>Forbes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yejin</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2022.sigdial-1.30</idno>
+		<idno type="arXiv">arXiv:1904.09751</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><surname>Huggingface</surname></persName>
+		</author>
+		<ptr target="https://huggingface.co/OpenAssistant/reward-model-deberta-v3-large-v2" />
+		<title level="m">Openassistant/rewardmodel-deberta-v3-large-v2</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">A survey on human preference learning for large language models</title>
+		<author>
+			<persName><forename type="first">Ruili</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kehai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuefeng</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhixuan</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Juntao</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Muyun</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tiejun</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liqiang</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Min</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2406.11191</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Improving contextual coherence in variational personalized and empathetic dialogue agents</title>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kong</forename><surname>Aik Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Woon Seng</forename><surname>Gan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ICASSP 2022 -2022 IEEE International Conference on Acoustics, Speech and Signal Processing</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="7052" to="7056" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A randomized link transformer for diverse open-domain dialogue generation</title>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kong</forename><surname>Aik Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Woon Seng</forename><surname>Gan</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/ICASSP43922.2022.9747458</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 4th Workshop on NLP for Conversational AI</title>
+		<meeting>the 4th Workshop on NLP for Conversational AI<address><addrLine>Dublin, Ireland</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="1" to="11" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">An empirical Bayes framework for opendomain dialogue generation</title>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kong</forename><surname>Aik Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Woon Seng</forename><surname>Gan</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2022.nlp4convai-1.1</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Third Workshop on Natural Language Generation, Evaluation, and Metrics (GEM)</title>
+		<meeting>the Third Workshop on Natural Language Generation, Evaluation, and Metrics (GEM)</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="192" to="204" />
+		</imprint>
+	</monogr>
+	<note>Singapore</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A diversity-promoting objective function for neural conversation models</title>
+		<author>
+			<persName><forename type="first">Jiwei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michel</forename><surname>Galley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Brockett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianfeng</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bill</forename><surname>Dolan</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N16-1014</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>San Diego, California</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="110" to="119" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Dissecting human and LLM preferences</title>
+		<author>
+			<persName><forename type="first">Junlong</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fan</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shichao</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yikai</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hai</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pengfei</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/N16-1014</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 62nd Annual Meeting of the Association for Computational Linguistics<address><addrLine>Bangkok, Thailand</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1790" to="1811" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Toward explainable dialogue system using two-stage response generation</title>
+		<author>
+			<persName><forename type="first">Shaobo</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengjie</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhen</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Prayag</forename><surname>Tiwari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bingquan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Deepak</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shankar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenzhou</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mingjiang</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Trans. Asian Low-Resour. Lang. Inf. Process</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">DailyDialog: A manually labelled multi-turn dialogue dataset</title>
+		<author>
+			<persName><forename type="first">Yanran</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoyu</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenjie</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziqiang</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuzi</forename><surname>Niu</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3551869</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Eighth International Joint Conference on Natural Language Processing</title>
+		<meeting>the Eighth International Joint Conference on Natural Language Processing<address><addrLine>Taipei, Taiwan</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="986" to="995" />
+		</imprint>
+	</monogr>
+	<note>Long Papers) Asian Federation of Natural Language Processing</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m">Dream technical report for the alexa prize</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">4</biblScope>
+		</imprint>
+		<respStmt>
+			<orgName>Moscow Institute of Physics and Technology</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Openai</surname></persName>
+		</author>
+		<ptr target="https://platform.openai.com/docs/models/gp#gpt-3-5-turbo" />
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note>Gpt-3.5 turbo</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<author>
+			<persName><forename type="first">Long</forename><surname>Ouyang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xu</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diogo</forename><surname>Almeida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carroll</forename><forename type="middle">L</forename><surname>Wainwright</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pamela</forename><surname>Mishkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chong</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sandhini</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Katarina</forename><surname>Slama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Ray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Schulman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Hilton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fraser</forename><surname>Kelton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luke</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maddie</forename><surname>Simens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Askell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peter</forename><surname>Welinder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Christiano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Leike</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Lowe</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2203.02155</idno>
+		<title level="m">Training language models to follow instructions with human feedback</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m" type="main">Think twice: A human-like two-stage conversational agent for emotional response generation</title>
+		<author>
+			<persName><forename type="first">Yushan</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shangzhao</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wu</forename><surname>Bin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuo</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongming</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kun</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuexian</forename><surname>Hou</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2301.04907</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Towards empathetic opendomain conversation models: A new benchmark and dataset</title>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">Michael</forename><surname>Hannah Rashkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Margaret</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y-Lan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Boureau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 57th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Florence, Italy</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="5370" to="5381" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Contrastive learning with hard negative samples</title>
+		<author>
+			<persName><forename type="first">Joshua</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ching-Yao</forename><surname>Chuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suvrit</forename><surname>Sra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefanie</forename><surname>Jegelka</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P19-1534</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations (ICLR)</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Generating diverse conversation responses by creating and ranking multiple candidates</title>
+		<author>
+			<persName><forename type="first">Yu-Ping</forename><surname>Ruan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhen-Hua</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaodan</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jia-Chen</forename><surname>Gu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Speech Lang</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="issue">C</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Improving dialog evaluation with a multi-reference adversarial dataset and large scale pretraining</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ananya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Akash</forename><surname>Sai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siddhartha</forename><surname>Kumar Mohankumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mitesh</forename><forename type="middle">M</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Khapra</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.csl.2020.101071</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="810" to="827" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Generate, evaluate, and select: A dialogue system with a response evaluator for diversity-aware response generation</title>
+		<author>
+			<persName><forename type="first">Ryoma</forename><surname>Sakaeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daisuke</forename><surname>Kawahara</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2022.naacl-srw.10</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies: Student Research Workshop</title>
+		<meeting>the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies: Student Research Workshop</meeting>
+		<imprint>
+			<publisher>Seattle, Washington + Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="76" to="82" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">A conditional variational framework for dialog generation</title>
+		<author>
+			<persName><forename type="first">Xiaoyu</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hui</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanran</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenjie</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuzi</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Akiko</forename><surname>Aizawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guoping</forename><surname>Long</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 55th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Vancouver, Canada</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="504" to="509" />
+		</imprint>
+	</monogr>
+	<note>Short Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A novel two-stage generation framework for promoting the persona-consistency and diversity of responses in neural dialog systems</title>
+		<author>
+			<persName><forename type="first">Tianyuan</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongduan</forename><surname>Song</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P17-2080</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Neural Networks and Learning Systems</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1552" to="1562" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Human evaluation of conversations is an open problem: comparing the sensitivity of various methods for evaluating dialogue agents</title>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Orion</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rebecca</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><surname>Roller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y-Lan</forename><surname>Boureau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Weston</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2022.nlp4convai-1.8</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 4th Workshop on NLP for Conversational AI</title>
+		<meeting>the 4th Workshop on NLP for Conversational AI<address><addrLine>Dublin, Ireland</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="77" to="97" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Dial-MAE: ConTextual masked auto-encoder for retrieval-based dialogue systems</title>
+		<author>
+			<persName><forename type="first">Zhenpeng</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guangyuan</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Songlin</forename><surname>Hu</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.naacl-long.47</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies<address><addrLine>Mexico City, Mexico</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="820" to="830" />
+		</imprint>
+	</monogr>
+	<note>Long Papers) Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Generating relevant and coherent dialogue responses using self-separated conditional variational AutoEncoders</title>
+		<author>
+			<persName><forename type="first">Bin</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shaoxiong</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiwei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiamou</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kan</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.acl-long.437</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing</title>
+		<meeting>the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Online. Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="5624" to="5637" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Prompt chaining or stepwise prompt? refinement in text summarization</title>
+		<author>
+			<persName><forename type="first">Shichao</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruifeng</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziqiang</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenjie</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pengfei</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.findings-acl.449</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of the Association for Computational Linguistics: ACL 2024</title>
+		<meeting><address><addrLine>Bangkok, Thailand</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="7551" to="7558" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">A survey on response selection for retrieval-based dialogues</title>
+		<author>
+			<persName><forename type="first">Chongyang</forename><surname>Tao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiazhan</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daxin</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="DOI">10.24963/ijcai.2021/627</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence, IJCAI-21</title>
+		<meeting>the Thirtieth International Joint Conference on Artificial Intelligence, IJCAI-21</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="4619" to="4626" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Chain of thought prompting elicits knowledge augmentation</title>
+		<author>
+			<persName><forename type="first">Dingjun</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinmei</forename><surname>Huang</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2023.findings-acl.408</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of the Association for Computational Linguistics: ACL 2023</title>
+		<meeting><address><addrLine>Toronto, Canada</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="6519" to="6534" />
+		</imprint>
+	</monogr>
+	<note>Association for Computational Linguistics</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Topic-aware response selection for dialog systems</title>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zongyang</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aijun</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jimmy</forename><forename type="middle">Xiangji</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Natural Language Processing Journal</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">100087</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<title level="m" type="main">Tinyllama: An open-source small language model</title>
+		<author>
+			<persName><forename type="first">Peiyuan</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guangtao</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianduo</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Lu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.nlp.2024.100087</idno>
+		<idno type="arXiv">arXiv:2401.02385</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Learning discourse-level diversity for neural dialog models using conditional variational autoencoders</title>
+		<author>
+			<persName><forename type="first">Tiancheng</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ran</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maxine</forename><surname>Eskenazi</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P17-1061</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 55th Annual Meeting of the Association for Computational Linguistics<address><addrLine>Vancouver, Canada</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="654" to="664" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">A survey of large language models</title>
+		<author>
+			<persName><forename type="first">Kun</forename><surname>Wayne Xin Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junyi</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianyi</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaolei</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yupeng</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yingqian</forename><surname>Hou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beichen</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junjie</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zican</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yifan</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chen</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yushuo</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhipeng</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jinhao</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruiyang</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yifan</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinyu</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zikang</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peiyu</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian-Yun</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ji-Rong</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2303.18223</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Towards a unified multidimensional evaluator for text generation</title>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Da</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuning</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yizhu</forename><surname>Jiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pengfei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenguang</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ji</forename><surname>Heng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiawei</forename><surname>Han</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2022.emnlp-main.131</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2022 Conference on Empirical Methods in Natural Language Processing<address><addrLine>Abu Dhabi</addrLine></address></meeting>
+		<imprint>
+			<publisher>United Arab Emirates. Association for Computational Linguistics</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="2023" to="2038" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

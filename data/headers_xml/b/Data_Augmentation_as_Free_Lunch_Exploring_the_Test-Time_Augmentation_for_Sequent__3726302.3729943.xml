@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Data Augmentation as Free Lunch: Exploring the Test-Time Augmentation for Sequential Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yizhou</forename><surname>Dang</surname></persName>
+							<email>yzdang@stumail.neu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yuting</forename><surname>Liu</surname></persName>
+							<email>yutingliu@stumail.neu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Enneng</forename><surname>Yang</surname></persName>
+							<email>ennengyang@stumail.neu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Minhan</forename><surname>Huang</surname></persName>
+							<email>huangminhan@stumail.neu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Guibing</forename><surname>Guo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jianzhe</forename><surname>Zhao</surname></persName>
+							<email>zhaojz@swc.neu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xingwei</forename><surname>Wang</surname></persName>
+							<email>wangxw@mail.neu.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>Shenyang</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>Shenyang</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>Shenyang</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>Shenyang</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>Shenyang</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>Shenyang</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Northeastern University Shenyang</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Data Augmentation as Free Lunch: Exploring the Test-Time Augmentation for Sequential Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">54DB1D384D57CA4FC5DAD65BEEC0BCC3</idno>
+					<idno type="DOI">10.1145/3726302.3729943</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Data augmentation has become a promising method of mitigating data sparsity in sequential recommendation. Existing methods generate new yet effective data during model training to improve performance. However, deploying them requires retraining, architecture modification, or introducing additional learnable parameters. These steps are time-consuming and costly for well-trained models, especially when the model scale becomes large. In this work, we explore the test-time augmentation (TTA) for sequential recommendation, which augments the inputs during the model inference and then aggregates the model&apos;s predictions for augmented data to improve final accuracy. It avoids significant time and cost overhead from the previously mentioned steps. We first experimentally disclose the potential of existing augmentation operators for TTA and find that the Mask and Substitute consistently achieve better performance. Further analysis reveals that these two operators are effective because they retain the original sequential pattern while adding appropriate perturbations. Meanwhile, we argue that these two operators still face time-consuming item selection or interference information from mask tokens. Based on the analysis and limitations, we present TNoise and TMask. The former injects uniform noise into the original representation, avoiding the computational overhead of item selection. The latter blocks</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

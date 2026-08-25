@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Sequential Difference Maximization: Generating Adversarial Examples via Multi-Stage Optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xinlei</forename><surname>Liu</surname></persName>
+							<idno type="ORCID">0000-0001-6586-4457</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Tao</forename><surname>Hu</surname></persName>
+							<idno type="ORCID">0000-0001-7641-5622</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Yi</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Weitao</forename><surname>Han</surname></persName>
+							<email>weitaohanchn@163.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jichao</forename><surname>Xie</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Baolin</forename><forename type="middle">2025</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Information Engineering University Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Key Laboratory of Cyberspace Security</orgName>
+								<orgName type="institution">Information Engineering University Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Ministry of Education of China Zhengzhou</orgName>
+								<orgName type="institution">Information Engineering University Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department" key="dep1">Key Laboratory of Cyberspace Security</orgName>
+								<orgName type="department" key="dep2">Ministry of Education of China Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Weitao Han</orgName>
+								<orgName type="institution">Information Engineering University Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Jichao Xie</orgName>
+								<orgName type="institution">Information Engineering University Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Baolin Li</orgName>
+								<orgName type="institution">Information Engineering University Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Sequential Difference Maximization: Generating Adversarial Examples via Multi-Stage Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">66C63B4DDC99C43FD07DDA37F0137E28</idno>
+					<idno type="DOI">10.1145/3746252.3760870</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:51+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Computer Vision</term>
+					<term>Image Classification</term>
+					<term>Adversarial Example</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Efficient adversarial attack methods are critical for assessing the robustness of computer vision models. In this paper, we reconstruct the optimization objective for generating adversarial examples as &quot;maximizing the difference between the non-true labels&apos; probability upper bound and the true label&apos;s probability,&quot; and propose a gradient-based attack method termed Sequential Difference Maximization (SDM). SDM establishes a three-layer optimization framework of &quot;cycle-stage-step. &quot; The processes between cycles and between iterative steps are respectively identical, while optimization stages differ in terms of loss functions: in the initial stage, the negative probability of the true label is used as the loss function to compress the solution space; in subsequent stages, we introduce the Directional Probability Difference Ratio (DPDR) loss function to gradually increase the non-true labels&apos; probability upper bound by compressing the irrelevant labels&apos; probabilities. Experiments demonstrate that compared with previous SOTA methods, SDM not only exhibits stronger attack performance but also achieves higher attack cost-effectiveness. Additionally, SDM can be combined with adversarial training methods to enhance their defensive effects. The code is available at https://github.com/X-L-Liu/SDM. CCS Concepts • Computing methodologies → Computer vision problems; Neural networks; • Security and privacy;</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

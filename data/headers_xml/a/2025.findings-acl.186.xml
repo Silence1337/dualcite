@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Unraveling and Mitigating Safety Alignment Degradation of Vision-Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qin</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<country>Davis</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Shang</surname></persName>
+							<email>chshang@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ling</forename><surname>Liu</surname></persName>
+							<email>lingliun@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nikolaos</forename><surname>Pappas</surname></persName>
+							<email>nppappa@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Ma</surname></persName>
+							<email>jieman@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anna</forename><surname>Neha</surname></persName>
+						</author>
+						<author>
+							<persName><surname>John</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Srikanth</forename><surname>Doss</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lluís</forename><surname>Màrquez</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Miguel</forename><surname>Ballesteros</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yassine</forename><surname>Benajiba</surname></persName>
+							<email>benajiy@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Unraveling and Mitigating Safety Alignment Degradation of Vision-Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A9486CA58D2D7CAE26A32144C9FAA893</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The safety alignment ability of Vision-Language Models (VLMs) is prone to be degraded by the integration of the vision module compared to its LLM backbone. We investigate this phenomenon, dubbed as &quot;safety alignment degradation&quot; in this paper, and show that the challenge arises from the representation gap that emerges when introducing vision modality to VLMs. In particular, we show that the representations of multi-modal inputs shift away from those of text-only inputs that represent the distribution that the LLM backbone is optimized for. At the same time, the safety alignment capabilities, initially developed within the textual embedding space, do not successfully transfer to this new multi-modal representation space. To reduce safety alignment degradation, we introduce Cross-Modality Representation Manipulation (CMRM), an inference-time representation intervention method for recovering the safety alignment ability that is inherent in the LLM backbone of VLMs, while simultaneously preserving the functional capabilities of VLMs. The empirical results show that our framework significantly recovers the alignment ability that is inherited from the LLM backbone with minimal impact on the fluency and linguistic capabilities of pre-trained VLMs even without additional training. Specifically, the unsafe rate of LLaVA-7B on multi-modal input can be reduced from 61.53% to as low as 3.15% with only inference-time intervention.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

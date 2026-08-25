@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fixing Distribution Shifts of LLM Self-Critique via On-Policy Self-Play Training</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rong</forename><surname>Bao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Donglei</forename><surname>Yu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Fan</surname></persName>
+							<email>k.fan@alibaba-inc.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Tongyi Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minpeng</forename><surname>Liao</surname></persName>
+							<email>minpeng.lmp@alibaba-inc.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Tongyi Lab</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fixing Distribution Shifts of LLM Self-Critique via On-Policy Self-Play Training</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C3A13E1714C03B344529DE0EA150E46A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Self-critique mechanisms significantly improve the performance of language models in complex reasoning tasks by giving them the ability to correct errors, conduct induction and deduction, and switch thinking insights. However, synthetic data methods often require humanintroduced errors or sampling of the model&apos;s reasoning results from the previous moment, and the current output distribution of the model cannot be obtained, makes the data for critique and reasoning face the problem of distribution shifts. In this work, we propose an on-policy reinforcement learning framework to synchronize the reasoning and critique capabilities of language models. To alleviate reward hacking caused by outcome-based supervision, we design a deliberate reward framework for different purposes. The reward framework not only supervises the model reasoning process based on the results, but also uses Monte Carlo sampling to give appropriate rewards to the critique content according to the success rate of the model&apos;s correction after critique. In addition, we introduce a rule-based reward function to impose penalties on the model when it generates hallucinatory critiques. When our approach is applied to the DeepSeek-Math-7B-Base and Qwen2.5-7B-Base models, model performance improves 5.40 and 3.66 points, respectively, compared to the best baseline approach. This validates the significant advantages of our method in improving model&apos;s reasoning and self-critique capability. Code will be made available at https://github.com/rbao2018/SCOP.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

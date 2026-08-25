@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">T 2 : An Adaptive Test-Time Scaling Strategy for Contextual Question Answering</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhengyi</forename><surname>Zhao</surname></persName>
+							<email>zyzhao@se.cuhk.edu.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Ministry of Education Key Laboratory of High Confidence Software Technologies</orgName>
+								<address>
+									<country>CUHK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shubo</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of International Relations</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zezhong</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Ministry of Education Key Laboratory of High Confidence Software Technologies</orgName>
+								<address>
+									<country>CUHK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huimin</forename><surname>Wang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Tencent Jarvis Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yutian</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Tencent Jarvis Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bin</forename><surname>Liang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Ministry of Education Key Laboratory of High Confidence Software Technologies</orgName>
+								<address>
+									<country>CUHK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yefeng</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Westlake University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Binyang</forename><surname>Li</surname></persName>
+							<email>byli@uir.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="institution">University of International Relations</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kam-Fai</forename><surname>Wong</surname></persName>
+							<email>kfwong@se.cuhk.edu.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Ministry of Education Key Laboratory of High Confidence Software Technologies</orgName>
+								<address>
+									<country>CUHK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xian</forename><surname>Wu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Tencent Jarvis Lab</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">T 2 : An Adaptive Test-Time Scaling Strategy for Contextual Question Answering</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1EC11A2EB2411C7C15D79A4DAD717717</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advances in Large Language Models (LLMs) have demonstrated remarkable performance in Contextual Question Answering (CQA). However, prior approaches typically employ elaborate reasoning strategies regardless of question complexity, leading to low adaptability. Recent efficient test-time scaling methods introduce budget constraints or early stop mechanisms to avoid overthinking for straightforward questions. But they add human bias to the reasoning process and fail to leverage models&apos; inherent reasoning capabilities. To address these limitations, we present T 2 : Think-to-Think, a novel framework that dynamically adapts reasoning depth based on question complexity. T 2 leverages the insight that if an LLM can effectively solve similar questions using specific reasoning strategies, it can apply the same strategy to the original question. This insight enables the adoption of concise reasoning for straightforward questions while maintaining detailed analysis for complex problems. T 2 works through four key steps: decomposing questions into structural elements, generating similar examples with candidate reasoning strategies, evaluating these strategies against multiple criteria, and applying the most appropriate strategy to the original question. Experimental evaluation across seven diverse CQA benchmarks demonstrates that T 2 not only achieves higher accuracy than baseline methods but also reduces computational overhead by up to 25.2%.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

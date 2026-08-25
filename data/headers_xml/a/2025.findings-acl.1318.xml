@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Cautious Next Token Prediction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yizhou</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<addrLine>‡ Adobe</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lingzhi</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Bai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<addrLine>‡ Adobe</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mang</forename><forename type="middle">Tik</forename><surname>Chiu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengmian</forename><surname>Hu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mingyuan</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<addrLine>‡ Adobe</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qihua</forename><surname>Dong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<addrLine>‡ Adobe</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Yin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sohrab</forename><surname>Amirghodsi</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Yun</forename><surname>Fu</surname></persName>
+							<email>yunfu@ece.neu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<addrLine>‡ Adobe</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">§Case Western Reserve University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Cautious Next Token Prediction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">562C773F579A260E518F66944D6619F3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:20+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Next token prediction paradigm has been prevailing for autoregressive models in the era of LLMs. The current default sampling choice for popular LLMs is temperature scaling together with nucleus sampling (Holtzman et al., 2019) to balance diversity and coherence. Nevertheless, such approach leads to inferior performance in various NLP tasks when the model is not certain about testing questions. To this end, we propose a brand new training-free decoding strategy, dubbed as Cautious Next Token Prediction (CNTP). In the decoding process, if the model has comparatively high prediction entropy at a certain step, we sample multiple trials starting from the step independently and stop when encountering any punctuation. Then we select the trial with the lowest perplexity score viewed as the most probable and reliable trial path given the model&apos;s capacity. The trial number is negatively correlated with the prediction confidence, i.e., the less confident the model is, the more trials it should sample. This is consistent with human beings&apos; behaviour: when feeling uncertain or unconfident, one tends to think more creatively, exploring multiple thinking paths, to cautiously select the path one feels most confident about. Extensive experiments on both LLMs and MLLMs show that our proposed CNTP approach outperforms existing standard decoding strategies consistently by a clear margin. Moreover, the integration of CNTP with self consistency (Wang et al., 2022) can further improve over vanilla self consistency. We believe our proposed CNTP has the potential to become one of the default choices for LLM decoding. Code is available at https://github.com/wyzjack/CNTP.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Autonomous Reasoning-Retrieval for Large Language Model Based Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bowen</forename><surname>Zheng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaolei</forename><surname>Wang</surname></persName>
+							<email>xiwangai@bit.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Enze</forename><surname>Liu</surname></persName>
+							<email>enzeliu@ruc.edu.cn</email>
+							<idno type="ORCID">0009-0007-8344-4780</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Hongyu</forename><surname>Lu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wayne</forename><forename type="middle">Xin</forename><surname>Zhao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ji-Rong</forename><surname>Wen</surname></persName>
+							<email>jrwen@ruc.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Beijing Institute of Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">WeChat</orgName>
+								<address>
+									<region>Tencent Guangzhou</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">WeChat</orgName>
+								<address>
+									<region>Tencent Beijing</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Autonomous Reasoning-Retrieval for Large Language Model Based Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">590A26B26D15A38576843019ECDA0D7D</idno>
+					<idno type="DOI">10.1145/3746252.3761384</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Large Language Model</term>
+					<term>Reasoning</term>
+					<term>Recommendation</term>
+					<term>Reinforcement Learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Recently, large language models (LLMs) have been introduced into recommender systems (RSs) as recommendation backbones or to enhance traditional recommendation models (TRMs). However, existing LLM-based RSs fail to fully leverage the complementary strengths of LLMs (e.g., world knowledge and reasoning capabilities) and TRMs (e.g., recommendation-specific knowledge and computational efficiency), resulting in shallow exploration of the item space. To address this limitation, we propose DeepRec, a novel LLM-based RS approach that facilitates autonomous multi-turn interactions between LLMs and TRMs for deep item space exploration. In each interaction turn, LLMs reason over user preferences and collaborate with TRMs to retrieve candidate items. After multi-turn interaction, LLMs rank the aggregated candidates to generate the final recommendations. We utilize reinforcement learning (RL) for optimization and introduce novel contributions in three key aspects: recommendation model based data rollout, recommendationoriented hierarchical rewards, and a two-stage RL training strategy. For data rollout, we design a preference-aware TRM, with which LLMs interact to construct trajectory data. For reward design, we propose a hierarchical reward function that comprises both process-level and outcome-level rewards to optimize the interaction process and recommendation quality, respectively. For RL training, our two-stage RL strategy first guides LLMs to learn effective interactions with TRMs, followed by recommendation-oriented * Equal contribution.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

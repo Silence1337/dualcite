@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TaCL-CoMoE: Task-adaptive Contrastive Learning with Cooperative Mixture of Experts for Multi-task Social Media Analysis</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xingren</forename><surname>Wang</surname></persName>
+							<email>wangxingren@gs.zzu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer and Artificial Intelligence</orgName>
+								<orgName type="institution">Zhengzhou University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongde</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer and Artificial Intelligence</orgName>
+								<orgName type="institution">Zhengzhou University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shanhong</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Feiyang</forename><surname>Meng</surname></persName>
+							<email>fy_meng@gs.zzu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer and Artificial Intelligence</orgName>
+								<orgName type="institution">Zhengzhou University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Senbin</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer and Artificial Intelligence</orgName>
+								<orgName type="institution">Zhengzhou University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenyuan</forename><surname>He</surname></persName>
+							<email>hechenyuan_nlp@gs.zzu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer and Artificial Intelligence</orgName>
+								<orgName type="institution">Zhengzhou University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zechen</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer and Artificial Intelligence</orgName>
+								<orgName type="institution">Zhengzhou University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">College of Informatics</orgName>
+								<orgName type="institution">Huazhong Agricultural University</orgName>
+								<address>
+									<postCode>430070</postCode>
+									<settlement>Wuhan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuxiang</forename><surname>Jia</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer and Artificial Intelligence</orgName>
+								<orgName type="institution">Zhengzhou University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TaCL-CoMoE: Task-adaptive Contrastive Learning with Cooperative Mixture of Experts for Multi-task Social Media Analysis</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">62735ED58102D466B00D5DD84406CECC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Social media has become a crucial platform for information dissemination and opinion expression. The massive and continuous generation of user content has given rise to various natural language processing tasks, such as sentiment analysis and topic classification. However, existing mainstream approaches typically focus on modeling individual tasks in isolation, lacking systematic exploration of collaborative modeling across multiple tasks. This neglects the inherent correlations among social media tasks, thereby limiting the model&apos;s ability to fully comprehend and exploit the rich, multi-dimensional semantic information embedded in text. To address this challenge, we propose Task-adaptive Contrastive Learning with Cooperative Mixture of Experts (TaCL-CoMoE), a unified framework for social media multi-task learning. Specifically, we improve the gating mechanism by replacing the traditional softmax routing with sigmoid activation, enabling cooperative selection among multiple experts and mitigating the &quot;expert monopoly&quot; phenomenon. In addition, we introduce a taskadaptive contrastive learning strategy to further enhance the model&apos;s ability to capture and distinguish semantic structures across different tasks. Experimental results on multiple public social media datasets demonstrate that TaCL-CoMoE consistently achieves stateof-the-art (SOTA) performance. The code is available at https://github.com/wxr2847/ TaCL-CoMoE.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">OWL: Probing Cross-Lingual Recall of Memorized Texts via World Literature</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Alisha</forename><surname>Srivastava</surname></persName>
+							<email>alishasrivas@umass.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts Amherst University of Maryland</orgName>
+								<address>
+									<settlement>College Park Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Emir</roleName><forename type="first">Kaan</forename><surname>Korukluoglu</surname></persName>
+							<email>ekorukluoglu@umass.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts Amherst University of Maryland</orgName>
+								<address>
+									<settlement>College Park Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minh</forename><surname>Nhat</surname></persName>
+							<email>nhatminhle@umass.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts Amherst University of Maryland</orgName>
+								<address>
+									<settlement>College Park Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Le</forename><forename type="middle">⋆</forename><surname>Duyen</surname></persName>
+							<email>duyent@umass.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts Amherst University of Maryland</orgName>
+								<address>
+									<settlement>College Park Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tran</forename><surname>Chau</surname></persName>
+							<email>chau@umd.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts Amherst University of Maryland</orgName>
+								<address>
+									<settlement>College Park Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minh</forename><surname>Pham</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts Amherst University of Maryland</orgName>
+								<address>
+									<settlement>College Park Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marzena</forename><surname>Karpinska</surname></persName>
+							<email>mkarpinska@microsoft.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts Amherst University of Maryland</orgName>
+								<address>
+									<settlement>College Park Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohit</forename><surname>Iyyer</surname></persName>
+							<email>miyyer@umd.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Massachusetts Amherst University of Maryland</orgName>
+								<address>
+									<settlement>College Park Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">OWL: Probing Cross-Lingual Recall of Memorized Texts via World Literature</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DEF9B161BF60D96FDC065B5863351077</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) are known to memorize and recall English text from their pretraining data. However, the extent to which this ability generalizes to other languages or transfers across languages remains unclear. This paper investigates multilingual and cross-lingual memorization in LLMs, probing whether memorized content in one language (e.g., English) can be recalled when presented in a different language. To do so, we introduce OWL, a dataset of 31.5K aligned excerpts from 20 books in ten languages, including original English texts, official translations (Vietnamese, Spanish, Turkish), and new translations in six low-resource languages (Sesotho, Yoruba, Maithili, Malagasy, Setswana, Tahitian). We evaluate memorization across model families and sizes through three tasks: (1) direct probing, which asks the model to identify a book&apos;s title and author; (2) name cloze, which requires predicting masked character names; and (3) prefix probing, which involves generating continuations. We find that some LLMs consistently recall content across languages, even for texts without existing translation. GPT-4o, for example, identifies authors and titles 69.4% of the time and masked entities 6.3% of the time in newly translated excerpts. While perturbations (e.g., masking characters, shuffling words) reduce accuracy, the model&apos;s performance remains above chance level. Our results highlight the extent of cross-lingual memorization and provide insights on the differences between the models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

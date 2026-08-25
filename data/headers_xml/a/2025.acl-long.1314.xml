@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Understanding the Dark Side of LLMs&apos; Intrinsic Self-Correction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qingjie</forename><surname>Zhang</surname></persName>
+							<email>qj-zhang24@mails.tsinghua.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua Universty</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Di</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua Universty</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoting</forename><surname>Qian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua Universty</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiming</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianwei</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minlie</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua Universty</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ke</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua Universty</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hewu</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua Universty</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Ant Group</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Han</forename><surname>Qiu</surname></persName>
+							<email>qiuhan@tsinghua.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua Universty</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Understanding the Dark Side of LLMs&apos; Intrinsic Self-Correction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8C51CC7365E26BA7B79ABC1CB6536BE5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:19+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Intrinsic self-correction was initially proposed to improve LLMs&apos; responses via feedback solely based on their inherent capability. However, recent works show that LLMs&apos; intrinsic self-correction fails without oracle labels as feedback. In this paper, our research goal is to interpret LLMs&apos; intrinsic self-correction for different tasks, especially for those failure cases. By including one simple task and three complex tasks with state-of-the-art (SOTA) LLMs like ChatGPT, Llama, and DeepSeek, we design three interpretation methods to reveal the dark side of LLMs&apos; intrinsic self-correction. We identify intrinsic self-correction can (1) cause LLMs to waver both intermedia and final answers and lead to prompt bias on simple factual questions; (2) introduce human-like cognitive bias on complex tasks. In light of our findings, we also provide two simple yet effective strategies for alleviation: question repeating and supervised fine-tuning with a few samples. We open-source our work at 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

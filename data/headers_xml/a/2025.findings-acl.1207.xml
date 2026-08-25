@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LLM as Effective Streaming Processor: Bridging Streaming-Batch Mismatches with Group Position Encoding</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Junlong</forename><surname>Tong</surname></persName>
+							<email>tong@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ningbo Key Laboratory of Spatial Intelligence and Digital Derivative</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Digital Twin</orgName>
+								<orgName type="institution">EIT</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinlan</forename><surname>Fu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zixuan</forename><surname>Lin</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yingqi</forename><surname>Fan</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Digital Twin</orgName>
+								<orgName type="institution">EIT</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anhao</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Digital Twin</orgName>
+								<orgName type="institution">EIT</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hui</forename><surname>Su</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">Meituan Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyu</forename><surname>Shen</surname></persName>
+							<email>xyshen@eitech.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">Ningbo Key Laboratory of Spatial Intelligence and Digital Derivative</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Digital Twin</orgName>
+								<orgName type="institution">EIT</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LLM as Effective Streaming Processor: Bridging Streaming-Batch Mismatches with Group Position Encoding</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">75E08DF09E80DF290A5E26B7B5F4825C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:18+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) are primarily designed for batch processing. Existing methods for adapting LLMs to streaming rely either on expensive re-encoding or specialized architectures with limited scalability. This work identifies three key mismatches in adapting batch-oriented LLMs to streaming: (1) inputattention, (2) output-attention, and (3) position-ID mismatches. While it is commonly assumed that the latter two mismatches require frequent re-encoding, our analysis reveals that only the input-attention mismatch significantly impacts performance, indicating re-encoding outputs is largely unnecessary. To better understand this discrepancy with the common assumption, we provide the first comprehensive analysis of the impact of position encoding on LLMs in streaming, showing that preserving relative positions within source and target contexts is more critical than maintaining absolute order. Motivated by the above analysis, we introduce a group position encoding paradigm built on batch architectures to enhance consistency between streaming and batch modes. Extensive experiments on cross-lingual and cross-modal tasks demonstrate that our method outperforms existing approaches. Our method requires no architectural modifications, exhibits strong generalization in both streaming and batch modes.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

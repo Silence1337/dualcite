@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Zeng</surname></persName>
+							<email>zengchaocs@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Songwei</forename><surname>Liu</surname></persName>
+							<email>liusongwei.zju@bytedance.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shu</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fangmin</forename><surname>Chen</surname></persName>
+							<email>cfangmin@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xing</forename><surname>Mei</surname></persName>
+							<email>xing.mei@bytedance.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lean</forename><surname>Fu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5C4D1AFE4C6E4D54A0FD8B00EF93B58B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:27+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Model compression has emerged as a mainstream solution to reduce memory usage and computational overhead. This paper proposes GQSA, a novel model compression framework specifically designed for LLMs. Traditional methods typically focus exclusively on either quantization or sparsification, but relying on a single strategy often results in significant performance loss at high compression rates. In contrast, GQSA integrates quantization and sparsification in a tightly coupled manner, leveraging GPU-friendly structured group sparsity and quantization for efficient acceleration. Building upon system-algorithm co-design principles, we propose a two-stage sparse optimization strategy that ensures the performance superiority of the compressed model. On the engine side, we introduce a &quot;task-centric&quot; parallel strategy, which, to the best of our knowledge, is the first application in the domain of sparse computing. Compared to the traditional 2:4 sparse method, the GQSA offers a more flexible and adjustable sparsity rate, as well as a higher weight compression rate, and is efficiently compatible with weight-only quantization methods. Experimental results demonstrate that, under the GQSA W4S50% compression setting, the model&apos;s accuracy surpasses that of both 2:4 pruning and W2 quantization. Furthermore, at the inference level, GQSA outperforms W2 by 1.26× and 2:4 pruning by 2.35× in terms of speed.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

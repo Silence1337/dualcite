@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ReARTeR: Retrieval-Augmented Reasoning with Trustworthy Process Rewarding</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhongxiang</forename><surname>Sun</surname></persName>
+							<email>sunzhongxiang@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qipeng</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Weijie</forename><surname>Yu</surname></persName>
+							<email>yu@uibe.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoxue</forename><surname>Zang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Zheng</surname></persName>
+							<email>zhengkai@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Xu</surname></persName>
+							<email>junxu@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Zhang</surname></persName>
+							<email>zhangx89@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Song</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Han</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information Technology and Management University of International Business and Economics Beijing</orgName>
+								<orgName type="institution">Kuaishou Technology Co., Ltd. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Engineering Research Center of Next-Generation Intelligent Search and Recommendation</orgName>
+								<orgName type="institution">Kuaishou Technology Co., Ltd. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Ministry of Education</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ReARTeR: Retrieval-Augmented Reasoning with Trustworthy Process Rewarding</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BC8C327115D8F20706ED1732F65BC2CC</idno>
+					<idno type="DOI">10.1145/3726302.3730102</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Retrieval Augment Generation</term>
+					<term>Reasoning</term>
+					<term>Trustworthy</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Retrieval-Augmented Generation (RAG) systems for Large Language Models (LLMs) have shown promise in knowledge-intensive tasks, yet their reasoning capabilities, particularly for complex multi-step reasoning, remain limited. Although recent approaches have explored integrating RAG with chain-of-thought reasoning or incorporating test-time search with process reward model (PRM), these methods face several untrustworthy challenges, including lack of explanations, bias in PRM training data, early-step bias in PRM scores, and ignoring post-training that fails to fully optimize reasoning potential. To address these issues, we propose Retrieval-Augmented Reasoning through Trustworthy Process Rewarding (ReARTeR), a framework that enhances RAG systems&apos; reasoning capabilities through both post-training and test-time scaling. At test time, ReARTeR introduces Trustworthy Process Rewarding via a Process Reward Model for accurate scalar scoring and a Process Explanation Model (PEM) for generating natural language explanations, enabling step refinement. During post-training, we leverage Monte Carlo Tree Search guided by Trustworthy Process Rewarding to collect high-quality step-level preference data, which is used to optimize the model through Iterative Preference Optimization. ReARTeR tackles three key challenges: (1) misalignment between PRM and PEM, addressed through off-policy preference learning; (2) bias in PRM training data, mitigated by a balanced annotation</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Regional-TinyStories: A Small Language Model Framework for Evaluating Language Learning, Tokenizers, and Datasets</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Nirvan</forename><surname>Patil</surname></persName>
+							<email>nirvan.ajit.patil@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">BITS Pilani</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Malhar</forename><surname>Inamdar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">PICT Pune</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Agnivo</forename><surname>Gosai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Independent Researcher</orgName>
+								<address>
+									<addrLine>4 PCCoE Pune</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guruprasad</forename><surname>Pathak</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anish</forename><surname>Joshi</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anish</forename><surname>Joshirao</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rajat</forename><surname>Dandekar</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sreedath</forename><surname>Panat</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Vizuara AI Labs</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Regional-TinyStories: A Small Language Model Framework for Evaluating Language Learning, Tokenizers, and Datasets</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">44B75CEC4981D9908285D094EDD865E2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Small, resource-efficient language models are pivotal for extending high-quality text generation to low-resource and regional languagesthe true frontier of linguistic equity in AI. Yet research largely prioritises massive Englishcentric systems, leaving regional-centric (lowresource) language modelling underexplored, particularly how tokenizer design, dataset diversity, and linguistic structure shape the inference of Small Language Models (SLMs) under realistic computational and data constraints. We present Regional-TinyStories, a lightweight framework that treats SLMs as cost-effective stand-ins for LLMs, enabling rapid, variable-wise inference-based analysis. Extending TinyStories to Hindi, Marathi, and Bangla, we release datasets of 2M synthetic and translated stories per language and train over 20 SLMs spanning 5-157M parameters. Using this framework, we (i) uncover contrasts between form-oriented (grammar, fluency) and content-oriented (context, completeness, creativity) metrics; (ii) chart languagespecific learning dynamics; (iii) rank tokenizers, showing Indic-specific SARVAM-1 outperforming SUTRA and generic TIKTOKEN (GPT-2) across all metrics; and (iv) demonstrate that dataset semantic quality (translation vs. synthetic) strongly governs downstream generation. Validation through an LLM-as-Judge ensemble (GPT-4o, LLaMA-3.3-70B) and a 100+ participant human study confirms these trends while exposing systematic score inflation in automated evaluations. Regional-TinyStories offers a reproducible path to benchmark tokenizers, datasets, and SLM designs for scalable, context-faithful generation in low-resource settings.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

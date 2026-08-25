@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Context Length Alone Hurts LLM Performance Despite Perfect Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yufeng</forename><surname>Du</surname></persName>
+							<email>yufengd4@illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minyang</forename><surname>Tian</surname></persName>
+							<email>mtian8@illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Srikanth</forename><surname>Ronanki</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Subendhu</forename><surname>Rongali</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sravan</forename><surname>Bodapati</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aram</forename><surname>Galstyan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com Inc</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">USC Information Sciences Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Azton</forename><surname>Wells</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Argonne National Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Roy</forename><surname>Schwartz</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">The Hebrew University of Jerusalem</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Eliu</forename><forename type="middle">A</forename><surname>Huerta</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Argonne National Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution">University of Chicago</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Peng</surname></persName>
+							<email>haopeng@illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Context Length Alone Hurts LLM Performance Despite Perfect Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B6B451C066E8B95DC863435C3318D3E1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) often fail to scale their performance on long-context tasks performance in line with the context lengths they support. This gap is commonly attributed to retrieval failures-the models&apos; inability to identify relevant information in the long inputs. Accordingly, recent efforts often focus on evaluating and improving LLMs&apos; retrieval performance: if retrieval is perfect, a model should, in principle, perform just as well on a long input as it does on a short one-or should it? This paper presents findings that the answer to this question may be negative. Our systematic experiments across 5 open-and closedsource LLMs on math, question answering, and coding tasks reveal that, even when models can perfectly retrieve all relevant information, their performance still degrades substantially (13.9%-85%) as input length increases but remains well within the models&apos; claimed lengths. This failure occurs even when the irrelevant tokens are replaced with minimally distracting whitespace, and, more surprisingly, when they are all masked and the models are forced to attend only to the relevant tokens. A similar performance drop is observed when all relevant evidence is placed immediately before the question. Our findings reveal a previouslyunrealized limitation: the sheer length of the input alone can hurt LLM performance, independent of retrieval quality and without any distraction. They motivate our simple, modelagnostic mitigation strategy that transforms a long-context task into a short-context one by prompting the model to recite the retrieved evidence before attempting to solve the problem. On RULER, we observe a consistent improvement of GPT-4o up to 4% on an already strong baseline.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

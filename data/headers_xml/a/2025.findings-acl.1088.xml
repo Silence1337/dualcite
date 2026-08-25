@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Implicit Cross-Lingual Rewarding for Efficient Multilingual Preference Alignment</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wen</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junhong</forename><surname>Wu</surname></persName>
+							<email>wujunhong2021@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Wang</surname></persName>
+							<email>wangchen2020@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengqing</forename><surname>Zong</surname></persName>
+							<email>cqzong@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiajun</forename><surname>Zhang</surname></persName>
+							<email>jjzhang@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Institute of Automation</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Wuhan AI Research</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Implicit Cross-Lingual Rewarding for Efficient Multilingual Preference Alignment</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">26B571DD859C1487A864E1D7C084321F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Direct Preference Optimization (DPO) has become a prominent method for aligning Large Language Models (LLMs) with human preferences. While DPO has enabled significant progress in aligning English LLMs, multilingual preference alignment is hampered by data scarcity. To address this, we propose a novel approach that captures learned preferences from well-aligned English models by implicit rewards and transfers them to other languages through iterative training. Specifically, we derive an implicit reward model from the logits of an English DPO-aligned model and its corresponding reference model. This reward model is then leveraged to annotate preference relations in cross-lingual instructionresponse pairs, using English instructions to evaluate multilingual responses. The annotated data is subsequently used for multilingual DPO fine-tuning, facilitating preference knowledge transfer from English to other languages. Fine-tuning Llama3 for two iterations resulted in a 12.72% average improvement in Win Rate and a 5.97% increase in Length Control Win Rate across all training languages on the X-AlpacaEval leaderboard. Our findings demonstrate that leveraging existing English-aligned models can enable efficient and effective multilingual preference alignment, significantly reducing the need for extensive multilingual preference data. The code is available at https://github.com/ZNLP/ Implicit-Cross-Lingual-Rewarding.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

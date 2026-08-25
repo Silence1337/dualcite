@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CoRanking: Collaborative Ranking with Small and Large Ranking Agents</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenhan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Ma</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Baidu Inc</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yutao</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lixin</forename><surname>Su</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Baidu Inc</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuaiqiang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Baidu Inc</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dawei</forename><surname>Yin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Baidu Inc</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Zhicheng</forename><surname>Dou</surname></persName>
+							<email>dou@ruc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CoRanking: Collaborative Ranking with Small and Large Ranking Agents</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FDD0EFB8A593FF6B0107D0A0DB728098</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Listwise ranking based on Large Language Models (LLMs) has achieved state-of-the-art performance in Information Retrieval (IR). However, their effectiveness often depends on LLMs with massive parameter scales and computationally expensive sliding window processing, leading to substantial efficiency bottlenecks. In this paper, we propose a Collaborative Ranking framework (CoRanking) for LLM-based listwise ranking. Specifically, we strategically combine an efficient small reranker and an effective large reranker for collaborative ranking. The small reranker performs initial passage ranking, effectively filtering the passage set to a condensed top-k list (e.g., top-20 passages), and the large reranker (with stronger ranking capability) then reranks only this condensed subset rather than the full list, significantly improving efficiency. We further address that directly passing the top-ranked passages from the small reranker to the large reranker is suboptimal because of the LLM&apos;s strong positional bias in processing input sequences. To resolve this issue, we propose a passage order adjuster learned by RL that dynamically reorders the top passages returned by the small reranker to better align with the large LLM&apos;s input preferences. Our extensive experiments across three IR benchmarks demonstrate that CoRanking achieves superior efficiency, reducing ranking latency by approximately 70% while simultaneously improving effectiveness, compared to the standalone large reranker.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

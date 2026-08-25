@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Unifying Streaming and Non-streaming Zipformer-based ASR</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bidisha</forename><surname>Sharma</surname></persName>
+							<email>bidisha@uniphore.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Karthik</forename><forename type="middle">Pandia</forename><surname>Durai</surname></persName>
+							<email>karthikpandia@uniphore.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shankar</forename><surname>Venkatesan</surname></persName>
+							<email>shankar.venkatesan@uniphore.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jeena</forename><forename type="middle">J</forename><surname>Prakash</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shashi</forename><surname>Kumar</surname></persName>
+							<email>shashi.kumar@idiap.ch</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Malolan</forename><surname>Chetlur</surname></persName>
+							<email>malolan.chetlur@uniphore.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andreas</forename><surname>Stolcke</surname></persName>
+							<email>andreas.stolcke@uniphore.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">India</forename><forename type="middle">&amp;</forename><surname>Uniphore</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Usa</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Idiap Research Institute</orgName>
+								<address>
+									<country key="CH">Switzerland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Unifying Streaming and Non-streaming Zipformer-based ASR</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">76AF2AC5A8B555F1EBEAA861D6565D6D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>There has been increasing interest in unifying streaming and non-streaming automatic speech recognition (ASR) models to reduce development, training, and deployment costs. We present a unified framework that trains a single end-to-end ASR model for both streaming and non-streaming applications, leveraging future context information. We propose to use dynamic right-context through the chunked attention masking in the training of zipformer-based ASR models. We demonstrate that using rightcontext is more effective in zipformer models compared to other conformer models due to its multi-scale nature. We analyze the effect of varying the number of right-context frames on accuracy and latency of the streaming ASR models. We use Librispeech and large in-house conversational datasets to train different versions of streaming and non-streaming models and evaluate them in a production grade serverclient setup across diverse testsets of different domains. The proposed strategy reduces word error by relative 7.9% with a small degradation in user-perceived latency. By adding more right-context frames, we are able to achieve streaming performance close to that of nonstreaming models. Our approach also allows flexible control of the latency-accuracy tradeoff according to customers requirements.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

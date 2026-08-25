@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MARM: Unlocking the Recommendation Cache Scaling-Law through Memory Augmentation and Scalable Complexity</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Lv</surname></persName>
+							<email>lvxiao03@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jiangxia</forename><surname>Cao</surname></persName>
+							<email>caojiangxia@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shijie</forename><surname>Guan</surname></persName>
+							<email>guanshijie@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyou</forename><surname>Zhou</surname></persName>
+							<email>zhouxiaoyou@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiguang</forename><surname>Qi</surname></persName>
+							<email>qizhiguang@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yaqiang</forename><surname>Zang</surname></persName>
+							<email>zangyaqiang@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ben</forename><surname>Wang</surname></persName>
+							<email>wangben@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Guorui</forename><surname>Zhou</surname></persName>
+							<email>zhouguorui@kuaishou.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MARM: Unlocking the Recommendation Cache Scaling-Law through Memory Augmentation and Scalable Complexity</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">29EC444500F5A76D41E248E5521A143A</idno>
+					<idno type="DOI">10.1145/3746252.3761015</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Scaling-Laws</term>
+					<term>Cache Technique</term>
+					<term>Low-Resource Large Model</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Scaling-law has guided the language model design for past years, e.g., GPTs, enabling the estimation of expected model performance with respect to the size of learnable parameters and the scale of training samples. It is worth noting that the scaling laws of NLP cannot be directly applied to recommendation systems due to the following reasons: (1) The amount of training samples and model parameters is typically not the bottleneck for the model. Our recommendation system can generate over 50 billion user samples daily, and such a massive amount of training data can easily allow our model parameters to exceed 200 billion, surpassing many LLMs (about 100B). (2) It is essential to control FLOPs carefully in recommendation system. In training, we need to process a vast number of recommendation samples every day. During online inference, we must respond within milliseconds (LLMs usually take a few seconds). Considering the above differences with LLM, we can conclude that: for a RecSys model, compared to model parameters, the FLOPs is a more expensive factor that requires careful control. In this paper, we propose our milestone work, MARM (Memory Augmented Recommendation Model), which explores a new cache scaling-law successfully. By caching part of complex module calculation results, our MARM extends the single-layer attentionbased sequences interests modeling module to a multi-layer setting with minor inference FLOPs cost (i.e, module time complexity O(𝑛 2 * 𝑑) → O(𝑛 * 𝑑)). Equipped with the cache idea, our MARM solution significantly overcomes computational bottlenecks and can seamlessly empower all interest extraction modules for user sequences, and even other models. To support our MARM, we construct a 60TB cache storage center for offline training and online * Corresponding authors This work is licensed under a Creative Commons Attribution 4.0 International License. CIKM &apos;25, Seoul, Republic of Korea</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">BOSE: A Systematic Evaluation Method Optimized for Base Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongzhi</forename><surname>Luan</surname></persName>
+							<email>luanhongzhi.lhz@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Changxin</forename><surname>Tian</surname></persName>
+							<email>tianchangxin.tcx@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhaoxin</forename><surname>Huan</surname></persName>
+							<email>zhaoxin.hzx@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaolu</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kunlong</forename><surname>Chen</surname></persName>
+							<email>kunlong.ckl@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiqiang</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Zhou</surname></persName>
+							<email>jun.zhoujun@antgroup.com</email>
+						</author>
+						<title level="a" type="main">BOSE: A Systematic Evaluation Method Optimized for Base Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">99DA2C3CEFF1CC94400D9F2F8D25F121</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper poses two critical issues in evaluating base models (without post-training): (1) Unstable evaluation during training: in the early stages of pre-training, the models lack the capability to answer questions as required, leading to unstable evaluation results. This instability makes it difficult to provide solid conclusions to guide the training, especially for key experiments such as data ablation and scaling law. (2) Inconsistency between base and instruct models: base models generally exhibit poorer evaluation performance compared to corresponding instruct models. This gap poses a challenge for assessing whether a base model with better evaluation can truly lead to a better instruct model. To address these issues, we propose Base model Oriented Systematic Evaluation (BOSE), a method specifically designed to optimize the evaluation of base models. Specifically, BOSE introduces two key innovations: In-Context Light-instruction Prompt (ICLiP) for open-ended tasks and Blank-ppl for multichoice tasks with candidate options, which transforms the standard perplexity (ppl) metric into a fill-in-the-blank format to mitigate early-stage evaluation fluctuations. Furthermore, we are the first to propose Kendall&apos;s rank correlation to quantitatively measure the evaluation stability and consistency. Experimental results demonstrate that BOSE significantly enhances both the stability of evaluations during pre-training and the consistency between base and instruct models, thereby providing more reliable guidance for the LLMs&apos; training.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ShieldHead: Decoding-time Safeguard for Large Language Models Warning: Contains explicit and harmful examples across critically unsafe categories</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zitao</forename><surname>Xuan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Ant Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaofeng</forename><surname>Mao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Ant Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Da</forename><surname>Chen</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Bath</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Ant Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhan</forename><surname>Dong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Ant Group</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ShieldHead: Decoding-time Safeguard for Large Language Models Warning: Contains explicit and harmful examples across critically unsafe categories</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8681F99579C4E8311891C72BA8A05A3D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In light of the widespread deployment of Large Language Models (LLMs), the responsibility for safeguarding and regulating LLMgenerated content has taken on heightened significance. Recent advancements in LLM-based moderation methods, e.g., LlamaGuard, have demonstrated remarkable promise in identifying safety risks associated with both inputs and outputs in human-AI interactions. However, integrating LLM-based safeguards into a chatbot system requires an additional inference stage involving a moderation LLM with billions of parameters, which significantly increases computational costs and reduces overall efficiency. In this paper, we demonstrate that simply learning a classification head on the last-layer hidden states of the dialogue model provides a strong capability to identify harmful contents. The classification head, referred to as Shield-Head, serves as an auxiliary branch paralleled with next-token-prediction LM head, enabling the detection of potential risks in past text sequences. Additionally, a label disambiguation technique is employed to supervise ShieldHead with both token-level and sentence-level labels, which further enhances its performance. Shield-Head exhibits remarkable efficiency during inference, providing real-time moderation results alongside token-wise streaming output during the chatbot system&apos;s decoding phase. Extensive experimental results demonstrate the superiority of the proposed framework: a state-of-theart performance on the XSTest and SafeRLHF datasets while running at a speed about 300× faster (&lt;1ms) than previous LLM-based moderation models with ∼99% less parameters of LlamaGuard.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

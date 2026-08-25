@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Exploiting Prompt-induced Confidence for Black-Box Attacks on LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Meina</forename><surname>Chen</surname></persName>
+							<email>chenmeina2002@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing and Intelligence</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yihong</forename><surname>Tang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing and Intelligence</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kehai</forename><surname>Chen</surname></persName>
+							<email>chenkehai@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing and Intelligence</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Exploiting Prompt-induced Confidence for Black-Box Attacks on LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">325A0B45650B5D28F9D2DE17BDEA839E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) are vulnerable to adversarial attacks even in strict blackbox settings with only hard-label feedback. Existing attacks suffer from inefficient search due to lack of informative signals such as logits or probabilities. In this work, we propose Prompt-Guided Ensemble Attack (PGEA), a novel black-box framework that leverages prompt-induced confidence, which reflects variations in a model&apos;s self-assessed certainty across different prompt templates, as an auxiliary signal to guide attacks. We first demonstrate that confidence estimates vary significantly with prompt phrasing despite unchanged predictions. We then integrate these confidence signals in a two-stage attack: (1) estimating token-level vulnerability via confidence elicitation, and (2) applying ensemble word-level substitutions guided by these estimates. Experiments on LLaMA-3-8B-Instruct and Mistral-7B-Instruct-v0.3 on three classification tasks show that PGEA improves the attack success rate and query efficiency while maintaining semantic fidelity. Our results highlight that verbalized confidence, even without access to probabilities, is a valuable and underexplored signal for black-box adversarial attacks. The code is available at https:// github.com/cmn-bits/PGEA-main.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">On Positional Bias of Faithfulness for Long-form Summarization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">David</forename><surname>Wan</surname></persName>
+							<email>davidwan@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jesse</forename><surname>Vig</surname></persName>
+							<email>jvig@salesforce.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Salesforce AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohit</forename><surname>Bansal</surname></persName>
+							<email>mbansal@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shafiq</forename><surname>Joty</surname></persName>
+							<email>sjoty@salesforce.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Salesforce AI Research</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">On Positional Bias of Faithfulness for Long-form Summarization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A7F180823FA70702DB87E42B882888DC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:51+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) often exhibit positional bias in long-context settings, underattending to information in the middle of inputs. We investigate the presence of this bias in long-form summarization, its impact on faithfulness, and various techniques to mitigate this bias. To consistently evaluate faithfulness, we first compile a benchmark of eight humanannotated long-form summarization datasets and perform a meta-evaluation of faithfulness metrics. We show that LLM-based faithfulness metrics, though effective with full-context inputs, remain sensitive to document order, indicating positional bias. Analyzing LLMgenerated summaries across six datasets, we find a &quot;U-shaped&quot; trend in faithfulness, where LLMs faithfully summarize the beginning and end of documents but neglect middle content. Perturbing document order similarly reveals models are less faithful when important documents are placed in the middle of the input. We find that this behavior is partly due to shifting focus with context length: as context increases, summaries become less faithful, but beyond a certain length, faithfulness improves as the model focuses on the end. Finally, we experiment with different generation techniques to reduce positional bias and find that prompting techniques direct model attention to specific positions, whereas more sophisticated approaches offer limited improvements. Our data and code are available in https://github.com/ meetdavidwan/longformfact.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

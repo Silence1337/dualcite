@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SupLID: Geometrical Guidance for Out-of-Distribution Detection in Semantic Segmentation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nimeshika</forename><surname>Udayangani</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Melbourne Melbourne</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sarah</forename><surname>Erfani</surname></persName>
+							<email>sarah.erfani@unimelb.edu.au</email>
+							<affiliation key="aff1">
+								<orgName type="institution">The University of Melbourne Melbourne</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christopher</forename><surname>Leckie</surname></persName>
+							<email>caleckie@unimelb.edu.au</email>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Melbourne Melbourne</orgName>
+								<address>
+									<settlement>New York</settlement>
+									<region>NY</region>
+									<country>Australia USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SupLID: Geometrical Guidance for Out-of-Distribution Detection in Semantic Segmentation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">72D2A30901230D3DF56FDB5E64BCDAAB</idno>
+					<idno type="DOI">10.1145/3746252.3761064</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Out-of-Distribution (OOD) Detection</term>
+					<term>Semantic Segmentation</term>
+					<term>Local Intrinsic Dimensionality (LID)</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Out-of-Distribution (OOD) detection in semantic segmentation aims to localize anomalous regions at the pixel level, advancing beyond traditional image-level OOD techniques to better suit realworld applications such as autonomous driving. Recent literature has successfully explored the adaptation of commonly used imagelevel OOD methods-primarily based on classifier-derived confidence scores (e.g., energy or entropy)-for this pixel-precise task. However, these methods inherit a set of limitations, including vulnerability to overconfidence. In this work, we introduce SupLID, a novel framework that effectively guides classifier-derived OOD scores by exploiting the geometrical structure of the underlying semantic space, particularly using Linear Intrinsic Dimensionality (LID). While LID effectively characterizes the local structure of high-dimensional data by analyzing distance distributions, its direct application at the pixel level remains challenging. To overcome this, SupLID constructs a geometrical coreset that captures the intrinsic structure of the in-distribution (ID) subspace. It then computes OOD scores at the superpixel level, enabling both efficient real-time inference and improved spatial smoothness. We demonstrate that geometrical cues derived from SupLID serve as a complementary signal to traditional classifier confidence, enhancing the model&apos;s ability to detect diverse OOD scenarios. Designed as a post-hoc scoring method, SupLID can be seamlessly integrated with any semantic segmentation classifier at deployment time. Our results demonstrate that SupLID significantly enhances existing classifierbased OOD scores, achieving state-of-the-art performance across key evaluation metrics, including AUR, FPR, and AUP. Code is available at https://github.com/hdnugit/SupLID. CCS Concepts • Computing methodologies → Scene anomaly detection; Image segmentation.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

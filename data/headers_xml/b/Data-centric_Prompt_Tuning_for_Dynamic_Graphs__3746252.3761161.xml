@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Data-centric Prompt Tuning for Dynamic Graphs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yufei</forename><surname>Peng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Yang</surname></persName>
+							<email>yangcheng@bupt.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengjie</forename><surname>Fan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chuan</forename><surname>Shi</surname></persName>
+							<email>shichuan@bupt.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Beijing University of Posts and Telecommunications Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Beijing University of Posts and Telecommunications Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Beijing University of Posts and Telecommunications Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Data-centric Prompt Tuning for Dynamic Graphs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BD5EED32402BEDE20F8E4B307D3F5A7B</idno>
+					<idno type="DOI">10.1145/3746252.3761161</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Dynamic Graphs</term>
+					<term>Graph Neural Networks</term>
+					<term>Prompt Learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Dynamic graphs have attracted increasing attention due to their ability to model complex and evolving relationships in real-world scenarios. Traditional approaches typically pre-train models using dynamic link prediction and directly apply the resulting node temporal embeddings to specific downstream tasks. However, the significant differences among downstream tasks often lead to performance degradation, especially under few-shot settings. Prompt tuning has emerged as an effective solution to this problem. Existing prompting methods are often strongly coupled with specific model architectures or pretraining tasks, which makes it difficult to adapt to recent or future model designs. Moreover, their exclusive focus on modifying node or temporal features while neglecting spatial structural information leads to limited expressiveness and degraded performance. To address these limitations, we propose DDGPrompt, a data-centric prompting framework designed to effectively refine pre-trained node embeddings at the input data level, enabling better adaptability to diverse downstream tasks. We first define a unified node expression feature matrix that aggregates all relevant temporal and structural information of each node, ensuring compatibility with a wide range of dynamic graph models. Then, we introduce three prompt matrices (temporal bias, edge weight, and feature mask) to adjust the feature matrix completely, achieving task-specific adaptation of node embeddings. We evaluate DDGPrompt under a strict few-shot setting on four public dynamic graph datasets. Experimental results demonstrate that our method significantly outperforms traditional methods and prompting approaches in scenarios with limited labels and cold-start conditions. CCS Concepts • Computing methodologies → Machine learning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

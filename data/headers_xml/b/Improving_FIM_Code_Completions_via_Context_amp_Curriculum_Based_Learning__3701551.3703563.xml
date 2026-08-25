@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Improving FIM Code Completions via Context &amp; Curriculum Based Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hitesh</forename><surname>Sagtani</surname></persName>
+							<email>sagtanih@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Rishabh</forename><surname>Mehrotra</surname></persName>
+							<email>erishabh@gmail.com</email>
+							<idno type="ORCID">0000-0002-0836-4605</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Beyang</forename><surname>Liu</surname></persName>
+							<email>beyang@sourcegraph.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Sourcegraph Inc Bengaluru</orgName>
+								<address>
+									<settlement>Pavo AI London</settlement>
+									<country>India UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Sourcegraph Inc San Francisco</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Improving FIM Code Completions via Context &amp; Curriculum Based Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AF6C61F847C340C4A3C7860801F05A02</idno>
+					<idno type="DOI">10.1145/3701551.3703563</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Code Completions</term>
+					<term>Large Language Model</term>
+					<term>A/B-testing</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Fill-in-the-Middle (FIM) models play a vital role in code completion tasks, leveraging both prefix and suffix context to provide more accurate and contextually relevant suggestions. This paper presents approaches to improve FIM code completion while addressing the challenge of maintaining low latency for real-time coding assistance. We enhance FIM code completion by incorporating context and curriculum examples in the training process. We identify patterns where completion suggestions fail more frequently, revealing complexities that smaller language models struggle with. To address these challenges, we develop a curriculum dataset by extracting hard-to-complete patterns from code repositories and generate context examples using semantic and static analysis tools (e.g. TSC compiler). We fine-tune various sized models, including StarCoder and DeepSeek, on this enhanced dataset. Our evaluation encompasses three key dimensions: the Santa Coder FIM task, the Amazon CCEval benchmark, and a new Multi-Line Infilling evaluation benchmark derived from SWE-bench. Comprehensive ablation studies across multiple model sizes reveal that while all fine-tuned models show improvements, the performance gains are more pronounced for smaller parameter models and incorporating difficult-to-complete examples, as part of curriculum learning, improves the code completion performance. This finding is particularly significant given the latency constraints of code completion tasks. While larger models like GPT and Claude perform well in multi-line completions but are prohibitively challenging to use given high latency, and our fine-tuned models achieve a balance between performance and latency. Finally, we validate our approach through online A/B testing, demonstrating tangible improvements in Completion Acceptance Rate (CAR) and Completion Persistence Rate (CPR), with zero latency impact. CCS Concepts • Information systems → Language models; • Software and its engineering → Search-based software engineering.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

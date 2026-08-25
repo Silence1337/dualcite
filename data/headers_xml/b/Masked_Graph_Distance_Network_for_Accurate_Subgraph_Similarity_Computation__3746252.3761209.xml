@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Masked Graph Distance Network for Accurate Subgraph Similarity Computation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xijuan</forename><surname>Liu</surname></persName>
+							<email>liuxijuan@zjgsu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yin</forename><surname>Chen</surname></persName>
+							<email>yin.chen@student.uts.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Fan</forename><surname>Li</surname></persName>
+							<email>fan.li8@unsw.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyang</forename><surname>Wang</surname></persName>
+							<email>xiaoyang.wang1@unsw.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Haiyang</forename><surname>Hu</surname></persName>
+							<email>huhaiyang@hdu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ying</forename><surname>Zhang</surname></persName>
+							<email>ying.zhang@zjgsu.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Hangzhou Dianzi University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Technology Sydney Sydney</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of New South Wales Sydney</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of New South Wales Sydney</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Hangzhou Dianzi University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="laboratory">Masked Graph Distance Network for Accurate Subgraph Similarity Computation. In</orgName>
+								<orgName type="institution">Zhejiang Gongshang University Hangzhou</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Masked Graph Distance Network for Accurate Subgraph Similarity Computation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2B39854E334F1DCDED689C6240CB63C2</idno>
+					<idno type="DOI">10.1145/3746252.3761209</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Subgraph Edit Distance</term>
+					<term>Subgraph Similarity Computation</term>
+					<term>Graph Neural Networks</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Subgraph similarity search aims to identify target graphs in the database that approximately contain the query graph, which is a fundamental problem in graph analysis. As a key measure for subgraph similarity computation, Subgraph Edit Distance (SED) has garnered significant research attention. Unfortunately, the exact computation of SED is an NP-hard problem. In recent years, some studies have attempted to leverage Graph Neural Networks (GNNs) to learn SED. However, existing GNN-based methods suffer from two significant limitations: (1) They rely on node-centric message passing, which cannot fully capture the impact of graph topology changes caused by graph edit operations. (2) They struggle to handle the asymmetry of SED, making it challenging to balance the scale differences between the input graphs and their distances in the representation space. To address these issues, this paper proposes a novel Masked Graph Distance Network (MGDN) for accurate SED approximation. First, MGDN utilizes a unified graph encoder to perform message passing based on the original graph structure and its dual hypergraph, effectively capturing the impact of node-and edge-specific edits. Then, we introduce an adaptive graph masking module that flexibly assigns masking scores to nodes and edges in the target graph to address asymmetry. Using multi-head masking, we re-encode the input graphs to focus on substructures relevant to SED computation. Finally, a multi-view predictor is employed at the graph level to approximate the SED, enhancing estimation accuracy by integrating information from multiple perspectives. Extensive experiments on nine benchmark datasets demonstrate that MGDN significantly outperforms state-of-the-art methods. CCS Concepts • Computing methodologies → Neural networks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

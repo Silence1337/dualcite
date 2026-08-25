@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DTPN: A Diffusion-based Traffic Purification Network for Tor Website Fingerprinting</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chenchen</forename><surname>Yang</surname></persName>
+							<email>orcayang@foxmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xi</forename><surname>Xiao</surname></persName>
+							<email>xiaox@sz.tsinghua.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Guangwu</forename><surname>Hu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Ling</surname></persName>
+							<email>zhenling@seu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Shenzhen International Graduate School</orgName>
+								<orgName type="institution">Tsinghua University Shenzhen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">Key Laboratory of Cyberspace Security</orgName>
+								<orgName type="department" key="dep2">Ministry of Education of China Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Peng Cheng Laboratory Shenzhen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Shenzhen International Graduate School</orgName>
+								<orgName type="institution">Tsinghua University Shenzhen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Key Laboratory of Cyberspace Security</orgName>
+								<orgName type="department" key="dep2">Ministry of Education of China Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Peng Cheng Laboratory Shenzhen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Shenzhen Institute of Information Technology</orgName>
+								<orgName type="institution">Southeast University Nanjing</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="department">National Key Laboratory of Advanced Communication Network Shijiazhuang</orgName>
+								<orgName type="institution">Bin Zhang Peng Cheng Laboratory Shenzhen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DTPN: A Diffusion-based Traffic Purification Network for Tor Website Fingerprinting</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">702FD2C142BE055E7935CFBED14FC690</idno>
+					<idno type="DOI">10.1145/3701551.3703547</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Website Fingerprinting attack is a type of method used to classify network traffic generated by users on the Tor (The Onion Router) based on the websites they visit, leading to the leakage of individuals&apos; privacy. For Website Fingerprinting attack, network traffic defense methods involve adding noise to the original network traffic to render the attacker&apos;s methods ineffective. Previous attack methods primarily focused on improving classification accuracy by enhancing the attack model, with adversarial training being the most common approach. However, adversarial training requires frequent updates and exhibits poor generalization when dealing with previously unseen network traffic protection methods. In order to address the limitations of adversarial training, a novel method is proposed leveraging a diffusion model for network traffic purification. This paper is the first to use a diffusion model to resist network traffic defense based on adversarial perturbations. The diffusion models are theoretically suited for data purification in the training mode, i.e., removing noises generated by adversarial perturbations from the data. Our method enables existing network traffic classification methods to maintain effective classification of network traffic after protection without requiring retraining, while also achieving good generalization performance with previously unseen network traffic defense methods. The purified network traffic data can effectively improve the robustness of existing website fingerprinting methods. Experiments conducted under various network traffic * Corresponding author This work is licensed under a Creative Commons Attribution International 4.0 License.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

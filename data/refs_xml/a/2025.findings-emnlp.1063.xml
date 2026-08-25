@@ -1,0 +1,932 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Llama 3: Open and efficient foundation language models</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Meta</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2407.12345</idno>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Towards monosemanticity: Decomposing language models with dictionary learning</title>
+		<author>
+			<persName><forename type="first">Trenton</forename><surname>Bricken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adly</forename><surname>Templeton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><surname>Batson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Jermyn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Conerly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nick</forename><surname>Turner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cem</forename><surname>Anil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carson</forename><surname>Denison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Askell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Lasenby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yifan</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shauna</forename><surname>Kravec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><surname>Schiefer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Maxwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><surname>Joseph</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zac</forename><surname>Hatfield-Dodds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><surname>Tamkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karina</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brayden</forename><surname>Mclean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josiah</forename><forename type="middle">E</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tristan</forename><surname>Hume</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shan</forename><surname>Carter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Henighan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Olah</surname></persName>
+		</author>
+		<ptr target="Https://transformer-circuits.pub/2023/monosemantic-features/index.html" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note>Transformer Circuits Thread</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Language models are few-shot learners</title>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Mann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nick</forename><surname>Ryder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Melanie</forename><surname>Subbiah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jared</forename><forename type="middle">D</forename><surname>Kaplan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Prafulla</forename><surname>Dhariwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arvind</forename><surname>Neelakantan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pranav</forename><surname>Shyam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Girish</forename><surname>Sastry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amanda</forename><surname>Askell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Advances in neural information processing systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="1877" to="1901" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<author>
+			<persName><forename type="first">Madeline</forename><surname>Brumley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joe</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Krueger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dmitrii</forename><surname>Krasheninnikov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Usman</forename><surname>Anwar</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2411.07213</idno>
+		<title level="m">Comparing bottom-up and top-down steering approaches on in-context learning tasks</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Analyzing multilingualism in large language models with sparse autoencoders</title>
+		<author>
+			<persName><forename type="first">Ikhyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julia</forename><surname>Hockenmaier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Second Conference on Language Modeling</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Tutor-icl: Guiding large language models for improved in-context learning performance</title>
+		<author>
+			<persName><forename type="first">Ikhyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gaeul</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julia</forename><surname>Hockenmaier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of the Association for Computational Linguistics: EMNLP 2024</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="9496" to="9506" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">The power of bullet lists: A simple yet effective prompting approach to enhancing spatial reasoning in large language models</title>
+		<author>
+			<persName><forename type="first">Ikhyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Changyeon</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julia</forename><surname>Hockenmaier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of the Association for Computational Linguistics: NAACL 2025</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+			<biblScope unit="page" from="3047" to="3057" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<author>
+			<persName><forename type="first">Hoagy</forename><surname>Cunningham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aidan</forename><surname>Ewart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Logan</forename><surname>Riggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Huben</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename><surname>Sharkey</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.08600</idno>
+		<title level="m">Sparse autoencoders find highly interpretable features in language models</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Sparse autoencoders reveal temporal difference learning in large language models</title>
+		<author>
+			<persName><forename type="first">Can</forename><surname>Demircan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tankred</forename><surname>Saanum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Akshay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marcel</forename><surname>Jagadish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Binz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename><surname>Schulz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Damai</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ce</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiyong</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Baobao</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xu</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingjing</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhifang</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sui</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2410.01280</idno>
+		<idno>arXiv:2301.00234</idno>
+	</analytic>
+	<monogr>
+		<title level="m">A survey on in-context learning</title>
+		<imprint>
+			<date type="published" when="2022">2024. 2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<author>
+			<persName><forename type="first">Leo</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stella</forename><surname>Biderman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sid</forename><surname>Black</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Laurence</forename><surname>Golding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Travis</forename><surname>Hoppe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Phang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Horace</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anish</forename><surname>Thite</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noa</forename><surname>Nabeshima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shawn</forename><surname>Presser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Connor</forename><surname>Leahy</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2101.00027</idno>
+		<title level="m">The pile: An 800gb dataset of diverse text for language modeling</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<author>
+			<persName><forename type="first">Leo</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Dupré La Tour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Henk</forename><surname>Tillman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriel</forename><surname>Goh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rajan</forename><surname>Troll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alec</forename><surname>Radford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jan</forename><surname>Leike</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2406.04093</idno>
+		<title level="m">Scaling and evaluating sparse autoencoders</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Measuring massive multitask language understanding</title>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Hendrycks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Collin</forename><surname>Burns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Basart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andy</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mantas</forename><surname>Mazeika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dawn</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Steinhardt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the International Conference on Learning Representations (ICLR)</title>
+		<meeting>the International Conference on Learning Representations (ICLR)</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Sparse autoencoders find highly interpretable features in language models</title>
+		<author>
+			<persName><forename type="first">Robert</forename><surname>Huben</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hoagy</forename><surname>Cunningham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Logan</forename><forename type="middle">Riggs</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aidan</forename><surname>Ewart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename><surname>Sharkey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Twelfth International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Scaling sparse feature circuits for studying in-context learning</title>
+		<author>
+			<persName><forename type="first">Dmitrii</forename><surname>Kharlapenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stepan</forename><surname>Shabalin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fazl</forename><surname>Barez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neel</forename><surname>Nanda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arthur</forename><surname>Conmy</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Lieberum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Senthooran</forename><surname>Rajamanoharan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arthur</forename><surname>Conmy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lewis</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Sonnerat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vikrant</forename><surname>Varma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">János</forename><surname>Kramár</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anca</forename><surname>Dragan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rohin</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neel</forename><surname>Nanda</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.05147</idno>
+		<title level="m">Gemma scope: Open sparse autoencoders everywhere all at once on gemma 2</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jiachang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dinghan</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yizhe</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bill</forename><surname>Dolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lawrence</forename><surname>Carin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weizhu</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2101.06804</idno>
+		<title level="m">What makes good in-context examples for gpt-3? arXiv preprint</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">Sewon</forename><surname>Min</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinxi</forename><surname>Lyu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ari</forename><surname>Holtzman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mikel</forename><surname>Artetxe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hannaneh</forename><surname>Hajishirzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luke</forename><surname>Zettlemoyer</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2202.12837</idno>
+		<title level="m">Rethinking the role of demonstrations: What makes in-context learning work? arXiv preprint</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Multilingual mmlu dataset</title>
+		<author>
+			<persName><surname>Openai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hugging Face</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Harris Papageorgiou, Ion Androutsopoulos, and Suresh Manandhar</title>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Pontiki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dimitris</forename><surname>Galanis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Pavlopoulos</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/v1/S14-2004</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 8th International Workshop on Semantic Evaluation (Se-mEval 2014)</title>
+		<meeting>the 8th International Workshop on Semantic Evaluation (Se-mEval 2014)<address><addrLine>Dublin, Ireland</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="27" to="35" />
+		</imprint>
+	</monogr>
+	<note>SemEval-2014 task 4: Aspect based sentiment analysis</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Lee</forename><surname>Sharkey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Braun Beren</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note>interim research report] taking features out of superposition with sparse autoencoders</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Lee</forename><surname>Sharkey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bilal</forename><surname>Chughtai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><surname>Batson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jack</forename><surname>Lindsey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucius</forename><surname>Bushnaq</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><surname>Goldowsky-Dill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefan</forename><surname>Heimersheim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alejandro</forename><surname>Ortega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><surname>Bloom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stella</forename><surname>Biderman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adria</forename><surname>Garriga-Alonso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arthur</forename><surname>Conmy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Neel</forename><surname>Nanda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jessica</forename><surname>Rumbelow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Wattenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nandi</forename><surname>Schoots</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><forename type="middle">J</forename><surname>Michaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><surname>Casper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Tegmark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Saunders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Bau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Todd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Atticus</forename><surname>Geiger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mor</forename><surname>Geva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jesse</forename><surname>Hoogland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Murfet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Mc-Grath</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+	<note>Open problems in mechanistic interpretability</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Gemma</forename><surname>Team</surname></persName>
+		</author>
+		<idno type="DOI">10.34740/KAGGLE/M/3301</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<publisher>Gemma</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Todd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Millicent</forename><forename type="middle">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arnab</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sen</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Byron</forename><forename type="middle">C</forename><surname>Wallace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Bau</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.15213</idno>
+		<title level="m">Function vectors in large language models</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Transformers learn in-context by gradient descent</title>
+		<author>
+			<persName><forename type="first">Johannes</forename><surname>Von</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oswald</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eyvind</forename><surname>Niklasson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ettore</forename><surname>Randazzo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">João</forename><surname>Sacramento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Mordvintsev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrey</forename><surname>Zhmoginov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Vladymyrov</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="35151" to="35174" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<author>
+			<persName><forename type="first">Lean</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Damai</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Deli</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fandong</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jie</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xu</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.14160</idno>
+		<title level="m">Label words are anchors: An information flow perspective for understanding in-context learning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Compositional exemplars for in-context learning</title>
+		<author>
+			<persName><forename type="first">Jiacheng</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiyong</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiangtao</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lingpeng</forename><surname>Kong</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="39818" to="39833" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<author>
+			<persName><forename type="first">Yongchao</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrei</forename><forename type="middle">Ioan</forename><surname>Muresanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziwen</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keiran</forename><surname>Paster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Silviu</forename><surname>Pitis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harris</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jimmy</forename><surname>Ba</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2211.01910</idno>
+		<title level="m">Large language models are human-level prompt engineers</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

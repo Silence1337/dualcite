@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FIER: Fine-Grained and Efficient KV Cache Retrieval for Long-context LLM Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dongwei</forename><surname>Wang</surname></persName>
+							<email>dongweiw@arizona.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Arizona</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zijie</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Song</forename><surname>Wang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Virginia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuxin</forename><surname>Ren</surname></persName>
+							<email>yuxinr@arizona.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Arizona</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianing</forename><surname>Deng</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Pittsburgh</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingtong</forename><surname>Hu</surname></persName>
+							<email>jthu@pitt.edu</email>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Pittsburgh</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianlong</forename><surname>Chen</surname></persName>
+							<email>tianlong@cs.unc.edu</email>
+							<affiliation key="aff1">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huanrui</forename><surname>Yang</surname></persName>
+							<email>huanruiyang@arizona.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Arizona</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FIER: Fine-Grained and Efficient KV Cache Retrieval for Long-context LLM Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F45C126FAD97E63B2A8F24111153B663</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:58+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The Key-Value (KV) cache reading latency increases significantly with context lengths, hindering the efficiency of long-context LLM inference. To address this, previous works propose retaining a small fraction of KV cache based on token importance. For example, KV eviction uses static heuristics to retain tokens, while KV retrieval dynamically selects queryrelevant tokens for more adaptive cache management. However, we observe that important tokens are often sparsely distributed across the long context. This sparsity makes existing page-level KV retrieval inaccurate, as each page may include irrelevant tokens and miss critical ones. In this work, we propose Fier, a Fine-Grained and Efficient KV cache Retrieval method. Fier uses 1-bit quantized keys to estimate the importance of each token, resulting in efficient and precise retrieval. Experiments show that Fier matches full KV performance using only 11% of the cache budget across various long-context tasks, reducing decoding latency by 1.2× to 1.5×.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

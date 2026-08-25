@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">HyperG: Hypergraph-Enhanced LLMs for Structured Knowledge</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sirui</forename><surname>Huang</surname></persName>
+							<email>sirui.huang@student.uts.edu.au</email>
+							<idno type="ORCID">0000-0003-1206-2260</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Hanqian</forename><surname>Li</surname></persName>
+							<idno type="ORCID">0009-0000-6332-6241</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Yanggan</forename><surname>Gu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xuming</forename><surname>Hu</surname></persName>
+							<email>xuminghu@hkust-gz.edu.cn</email>
+							<idno type="ORCID">0000-0001-6075-4224</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Qing</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Guandong</forename><surname>Xu</surname></persName>
+							<email>guandong.xu@uts.edu.au</email>
+							<idno type="ORCID">0000-0003-4493-6663</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Technology Sydney Sydney</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Hong Kong Polytechnic University Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Hong Kong University of Science and Technology (Guangzhou) Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Hong Kong University of Science and Technology (Guangzhou) Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Hong Kong University of Science and Technology (Guangzhou) Guangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Hong Kong Polytechnic University Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">University of Technology Sydney Sydney</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Education University of Hong Kong Hong Kong SAR</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">HyperG: Hypergraph-Enhanced LLMs for Structured Knowledge</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CE04D09C191F6C39B5A877AF90D4A660</idno>
+					<idno type="DOI">10.1145/3726302.3730002</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Hypergraph</term>
+					<term>Large Language Models</term>
+					<term>Table Understanding</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Given that substantial amounts of domain-specific knowledge are stored in structured formats, such as web data organized through HTML, Large Language Models (LLMs) are expected to fully comprehend this structured information to broaden their applications in various real-world downstream tasks. Current approaches for applying LLMs to structured data fall into two main categories: serialization-based and operation-based methods. Both approaches, whether relying on serialization or using SQL-like operations as an intermediary, encounter difficulties in fully capturing structural relationships and effectively handling sparse data. To address these unique characteristics of structured data, we propose HyperG, a hypergraph-based generation framework aimed at enhancing LLMs&apos; ability to process structured knowledge. Specifically, HyperG first augment sparse data with contextual information, leveraging the generative power of LLMs, and incorporate a prompt-attentive hypergraph learning (PHL) network to encode both the augmented information and the intricate structural relationships within the data. To validate the effectiveness and generalization of HyperG, we conduct extensive experiments across two different downstream tasks requiring structured knowledge. Our code is publicly available at: https://github.com/s1ruihuang/HyperG.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

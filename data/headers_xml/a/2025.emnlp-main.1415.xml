@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yiyang</forename><surname>Zhou</surname></persName>
+							<email>yiyangai@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel-Hill</orgName>
+								<address>
+									<addrLine>2 Microsoft</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linjie</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Shi</forename><surname>Qiu</surname></persName>
+							<email>shiqiu@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel-Hill</orgName>
+								<address>
+									<addrLine>2 Microsoft</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengyuan</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yuyang</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">NUS</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Siwei</forename><surname>Han</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel-Hill</orgName>
+								<address>
+									<addrLine>2 Microsoft</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yangfan</forename><surname>He</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Minnesota</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kangqi</forename><surname>Li</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Case Western Reserve University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haonian</forename><surname>Ji</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel-Hill</orgName>
+								<address>
+									<addrLine>2 Microsoft</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zihao</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Rutgers University</orgName>
+								<address>
+									<addrLine>7 UIUC</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haibo</forename><surname>Tong</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Lijuan</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Huaxiu</forename><surname>Yao</surname></persName>
+							<email>huaxiu@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel-Hill</orgName>
+								<address>
+									<addrLine>2 Microsoft</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GLIMPSE: Do Large Vision-Language Models Truly Think With Videos or Just Glimpse at Them?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A39257BFCF215DC7CA154DB9D59D6854</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:45+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Existing video benchmarks often resemble image-based benchmarks, with question types like &quot;What actions does the person perform throughout the video?&quot; or &quot;What color is the woman&apos;s dress in the video?&quot; For these, models can often answer by scanning just a few key frames, without deep temporal reasoning. This limits our ability to assess whether large visionlanguage models (LVLMs) can truly think with videos rather than perform superficial framelevel analysis. To address this, we introduce GLIMPSE, a benchmark specifically designed to evaluate whether LVLMs can genuinely think with videos. Unlike prior benchmarks, GLIMPSE emphasizes comprehensive video understanding beyond static image cues. It consists of 3,269 videos and over 4,342 highly visual-centric questions across 11 categories, including Trajectory Analysis, Temporal Reasoning, and Forensics Detection. All questions are carefully crafted by human annotators and require watching the entire video and reasoning over full video context-this is what we mean by thinking with video. These questions cannot be answered by scanning selected frames or relying on text alone. In human evaluations, GLIMPSE achieves 94.82% accuracy, but current LVLMs face significant challenges. Even the best-performing model, GPT-o3, reaches only 66.43%, highlighting that LVLMs still struggle to move beyond surface-level reasoning to truly think with videos. We publicly release our benchmark and code at https: //github.com/aiming-lab/GLIMPSE.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

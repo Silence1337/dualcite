@@ -1,0 +1,2122 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Prompt Leakage effect and mitigation strategies for multi-turn LLM Applications</title>
+		<author>
+			<persName><forename type="first">Divyansh</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">Richard</forename><surname>Fabbri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Risher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philippe</forename><surname>Laban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shafiq</forename><surname>Joty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chien-Sheng</forename><surname>Wu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Con-ference on Empirical Methods in Natural Language Processing (EMNLP) Industry Track</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<author>
+			<persName><surname>Anthropic</surname></persName>
+		</author>
+		<ptr target="https://www.anthropic.com/news/claude-3-5-sonnet" />
+		<title level="m">Introducing Claude 3.5 Sonnet</title>
+		<imprint>
+			<date type="published" when="2024-05-19">2024. May 19, 2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Austin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Augustus</forename><surname>Odena</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maxwell</forename><surname>Nye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maarten</forename><surname>Bosma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Henryk</forename><surname>Michalewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Dohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ellen</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carrie</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Terry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quoc</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Sutton</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2108.07732</idno>
+		<title level="m">Program Synthesis with Large Language Models</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<idno type="arXiv">arXiv:2406.12934</idno>
+		<title level="m">Suriya Ganesh Ayyamperumal and Limin Ge. 2024. Current state of LLM Risks and AI Guardrails</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models</title>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Chao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edoardo</forename><surname>Debenedetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Robey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maksym</forename><surname>Andriushchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Francesco</forename><surname>Croce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vikash</forename><surname>Sehwag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edgar</forename><surname>Dobriban</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Flammarion</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">J</forename><surname>Pappas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Florian</forename><surname>Tramèr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hamed</forename><surname>Hassani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Wong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems Datasets and Benchmarks Track</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>NeurIPS D&amp;B</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<author>
+			<persName><forename type="first">Sahil</forename><surname>Chaudhary</surname></persName>
+		</author>
+		<ptr target="https://github.com/sahil280114/codealpaca" />
+		<title level="m">Code Alpaca: An Instructionfollowing LLaMA Model trained on code generation instructions</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">2024a. RMCBench: Benchmarking Large Language Models&apos; Resistance to Malicious Code</title>
+		<author>
+			<persName><forename type="first">Jiachi</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qingyuan</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanlin</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kaiwen</forename><surname>Ning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongkun</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zenan</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhe</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ting</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zibin</forename><surname>Zheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE/ACM International Conference on Automated Software Engineering (ASE)</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jerry</forename><surname>Tworek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Heewoo</forename><surname>Jun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qiming</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Henrique</forename><surname>Ponde De Oliveira Pinto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jared</forename><surname>Kaplan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Harri</forename><surname>Edwards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuri</forename><surname>Burda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><surname>Joseph</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Brockman</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2107.03374</idno>
+		<title level="m">Greg and others. 2021. Evaluating Large Language Models Trained on Code</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">2024b. When LLM Meets DRL: Advancing Jailbreaking Efficiency via DRL-guided Search</title>
+		<author>
+			<persName><forename type="first">Xuan</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuzhou</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenbo</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiangyu</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems (NeurIPS)</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<author>
+			<persName><forename type="first">Petko</forename><surname>Geminiteam</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Georgiev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><surname>Ving</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Libin</forename><surname>Burnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anmol</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Garrett</forename><surname>Gulati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Damien</forename><surname>Tanzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhufeng</forename><surname>Vincent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wang</forename><surname>Pan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2403.05530</idno>
+		<title level="m">Shibo and others. 2024. Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">2024a. RedCode: Risky Code Execution and Generation Benchmark for Code Agents</title>
+		<author>
+			<persName><forename type="first">Chengquan</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xun</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chulin</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andy</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zinan</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dawn</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems Datasets and Benchmarks Track</title>
+		<imprint/>
+	</monogr>
+	<note>NeurIPS D&amp;B</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<author>
+			<persName><forename type="first">Dejian</forename><surname>Daya Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haowei</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junxiao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruoyu</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Runxin</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qihao</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shirong</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Peiyi</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bi</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2501.12948</idno>
+		<title level="m">Xiao and others. 2025. DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">Qihao</forename><surname>Daya Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dejian</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenda</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wentao</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guanting</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiao</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Bi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">K</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fuli</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Luo</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.14196</idno>
+		<title level="m">Yingfei Xiong, and Wenfeng Liang. 2024b. DeepSeek-Coder: When the Large Language Model Meets Programming -The Rise of Code Intelligence</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">LoRA: Low-Rank Adaptation of Large Language Models</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Edward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yelong</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phillip</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zeyuan</forename><surname>Wallis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuanzhi</forename><surname>Allen-Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shean</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weizhu</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations (ICLR)</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Efficient LLM Jailbreak Via Adaptive Dense-To-Sparse Constrained Optimization</title>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weichen</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yining</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianjun</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wenhe</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lijun</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiqiang</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matt</forename><surname>Fredrikson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems (NeurIPS)</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Binyuan</forename><surname>Hui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zeyu</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiaxi</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dayiheng</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianyu</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiajun</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Dang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Others</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2409.12186</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Hurst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Lerer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><forename type="middle">P</forename><surname>Goucher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Perelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aditya</forename><surname>Ramesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aidan</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Akila</forename><surname>Ostrow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><surname>Welihinda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Radford</forename><surname>Hayes</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2410.21276</idno>
+		<title level="m">Alec and others. 2024. GPT-4o System Card</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Poisoning Programs by Un-Repairing Code: Security Concerns of AI-generated Code</title>
+		<author>
+			<persName><forename type="first">Cristina</forename><surname>Improta</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE International Symposium on Software Reliability Engineering Workshops (ISSREW)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Amazon Artificial General Intelligence</title>
+		<idno type="arXiv">arXiv:2506.12103</idno>
+	</analytic>
+	<monogr>
+		<title level="m">The Amazon Nova family of models: Technical report and model card</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<author>
+			<persName><forename type="first">Slobodan</forename><surname>Jenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingxuan</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niels</forename><surname>Mündler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Vero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><surname>Vechev</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.02509</idno>
+		<title level="m">Practical Attacks against Black-box Code Completion Engines</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">CodeAttack: Code-Based Adversarial Attacks for Pre-trained Programming Language Models</title>
+		<author>
+			<persName><forename type="first">Akshita</forename><surname>Jha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chandan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Reddy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AAAI Conference on Artificial Intelligence (AAAI)</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">2024a. WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models</title>
+		<author>
+			<persName><forename type="first">Liwei</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kavel</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seungju</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Allyson</forename><surname>Ettinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Faeze</forename><surname>Brahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sachin</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niloofar</forename><surname>Mireshghallah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ximing</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maarten</forename><surname>Sap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yejin</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nouha</forename><surname>Dziri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems (NeurIPS)</title>
+		<imprint>
+			<biblScope unit="page">22931</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<author>
+			<persName><forename type="first">Yifan</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kriti</forename><surname>Aggarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tanmay</forename><surname>Laud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kashif</forename><surname>Munir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jay</forename><surname>Pujara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Subhabrata</forename><surname>Mukherjee</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2409.17458</idno>
+		<title level="m">RED QUEEN: Safeguarding Large Language Models against Concealed Multi-Turn Jailbreaking</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Weight Poisoning Attacks on Pretrained Models</title>
+		<author>
+			<persName><forename type="first">Keita</forename><surname>Kurita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Michel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Graham</forename><surname>Neubig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Annual Meeting of the Association for Computational Linguistics (ACL)</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Multi-step Jailbreaking Privacy Attacks on ChatGPT</title>
+		<author>
+			<persName><forename type="first">Haoran</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dadi</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mingshi</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jie</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fanpu</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yangqiu</forename><surname>Song</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of the Empirical Methods in Natural Language Processing</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jia</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhuo</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Huangzhao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ge</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhi</forename><surname>Jin</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2210.17029</idno>
+		<title level="m">Xing Hu, and Xin Xia. 2022a. Poison Attack and Defense on Deep Source Code Processing Models</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Prefix-Tuning: Optimizing Continuous Prompts for Generation</title>
+		<author>
+			<persName><forename type="first">Lisa</forename><surname>Xiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Percy</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Liang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Annual Meeting of the Association for Computational Linguistics (ACL)</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">Xiaoxia</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siyuan</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiyi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aishan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ee-Chien</forename><surname>Chang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2402.14872</idno>
+		<title level="m">Semantic Mirror Jailbreak: Genetic Algorithm Based Jailbreak Prompts Against Open-source LLMs</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<author>
+			<persName><forename type="first">Xuan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhanke</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianing</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiangchao</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tongliang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Han</surname></persName>
+		</author>
+		<title level="m">Deepinception: Hypnotize large language model to be jailbreaker. NeurIPS Safe Generative AI Workshop</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Agustin and others. 2022b. Competition-level code generation with AlphaCode</title>
+		<author>
+			<persName><forename type="first">Yujia</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junyoung</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nate</forename><surname>Kushman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julian</forename><surname>Schrittwieser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rémi</forename><surname>Leblond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Eccles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Keeling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Felix</forename><surname>Gimeno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dal</forename><surname>Lago</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">378</biblScope>
+			<biblScope unit="issue">6624</biblScope>
+			<biblScope unit="page" from="1092" to="1097" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Malla: Demystifying Real-world Large Language Model Integrated Malicious Services</title>
+		<author>
+			<persName><forename type="first">Zilong</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaojing</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaofeng</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">USENIX Security Symposium</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Purpcode: Reasoning for safer code generation</title>
+		<author>
+			<persName><forename type="first">Jiawei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nirav</forename><surname>Diwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhe</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haoyu</forename><surname>Zhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaona</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kiet</forename><forename type="middle">A</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianjiao</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Muntasir</forename><surname>Wahed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yinlin</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hadjer</forename><surname>Benkraouda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuxiang</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lingming</forename><surname>Zhang Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ismini</forename><surname>Lourentzou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gang</forename><surname>Wang</surname></persName>
+		</author>
+		<imprint>
+			<pubPlace>Amazon Nova AI Proceedings</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jiawei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nirav</forename><surname>Diwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhe</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haoyu</forename><surname>Zhai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaona</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kiet</forename><forename type="middle">A</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianjiao</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Muntasir</forename><surname>Wahed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yinlin</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hadjer</forename><surname>Benkraouda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuxiang</forename><surname>Wei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2507.19060</idno>
+		<title level="m">Lingming Zhang Zhang, Ismini Lourentzou, and Gang Wang. 2025b. Purpcode: Reasoning for safer code generation</title>
+		<imprint/>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Is Your Code Generated by Chat-GPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation</title>
+		<author>
+			<persName><forename type="first">Jiawei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chunqiu</forename><surname>Steven Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuyao</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lingming</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems (NeurIPS)</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">2024a. Making Them Ask and Answer: Jailbreaking Large Language Models in Few Queries via Disguise and Reconstruction</title>
+		<author>
+			<persName><forename type="first">Tong</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yingjie</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhe</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yinpeng</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guozhu</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">USENIX Security Symposium</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models</title>
+		<author>
+			<persName><forename type="first">Xiaogeng</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nan</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Muhao</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chaowei</forename><surname>Xiao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>ICLR</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal</title>
+		<author>
+			<persName><forename type="first">Mantas</forename><surname>Mazeika</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Long</forename><surname>Phan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuwang</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andy</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zifan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Norman</forename><surname>Mu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elham</forename><surname>Sakhaee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathaniel</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Basart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Forsyth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Hendrycks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning (ICML)</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Mistral</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Team</surname></persName>
+		</author>
+		<ptr target="https://mistral.ai/news/codestral" />
+		<title level="m">Codestral: Empowering developers and democratising coding with Mistral AI</title>
+		<imprint>
+			<date type="published" when="2024-05-19">2024. May 19, 2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Mistral</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Team</surname></persName>
+		</author>
+		<ptr target="https://mistral.ai/news/mistral-large-2407" />
+		<title level="m">Large Enough: Announcing Mistral Large</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="2025" to="2025" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<author>
+			<persName><forename type="first">Thanh-Dat</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuan</forename><surname>Bach D Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patanamon</forename><surname>Thongtanunam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Lo</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2308.11161</idno>
+		<title level="m">Adversarial Attacks on Code Models with Discriminative Graph Patterns</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">Kaiwen</forename><surname>Ning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiachi</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qingyuan</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanlin</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weizhe</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zibin</forename><surname>Zheng</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2408.01354</idno>
+		<title level="m">MCGMark: An Encodable and Robust Online Watermark for LLM-Generated Malicious Code</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<author>
+			<persName><forename type="first">Sheng</forename><surname>Ouyang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yihao</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liqian</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoguang</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shangwen</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2503.17953</idno>
+		<title level="m">Smoke and Mirrors: Jailbreaking LLM-based Code Generation via Implicit Malicious Prompts</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<author>
+			<persName><forename type="first">Nikhil</forename><surname>Pinnaparaju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Reshinth</forename><surname>Adithyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Duy</forename><surname>Phung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Tow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Baicoianu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ashish</forename><surname>Datta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maksym</forename><surname>Zhuravinskyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dakota</forename><surname>Mahan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Bellagente</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlos</forename><surname>Riquelme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathan</forename><surname>Cooper</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2404.01226</idno>
+		<title level="m">Stable Code Technical Report</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<author>
+			<persName><forename type="first">Qibing</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongrui</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhanxu</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaoya</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Qiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Sha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junchi</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lizhuang</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Shao</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2410.10700v1</idno>
+		<title level="m">Derail Yourself: Multi-turn LLM Jailbreak Attack through self-discovered clues</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack</title>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Russinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ahmed</forename><surname>Salem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ronen</forename><surname>Eldan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">USENIX Security Symposium</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs Through a Global Prompt Hacking Competition</title>
+		<author>
+			<persName><forename type="first">Jeremy</forename><surname>Sander V Schulhoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anaum</forename><surname>Pinto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Louis-François</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenglei</forename><surname>Bouchard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Svetlina</forename><surname>Si</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Valen</forename><surname>Anati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anson</forename><forename type="middle">Liu</forename><surname>Tagliabue</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Kost</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jordan</forename><forename type="middle">Lee</forename><surname>Christopher R Carnahan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Boyd-Graber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Empirical Methods in Natural Language Processing</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">You Autocomplete Me: Poisoning Vulnerabilities in Neural Code Completion</title>
+		<author>
+			<persName><forename type="first">Roei</forename><surname>Schuster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Congzheng</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eran</forename><surname>Tromer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vitaly</forename><surname>Shmatikov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">USENIX Security Symposium</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation</title>
+		<author>
+			<persName><forename type="first">Rusheb</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quentin</forename><forename type="middle">Feuillade</forename><surname>Montixi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Soroush</forename><surname>Pour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arush</forename><surname>Tagade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Javier</forename><surname>Rando</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Socially Responsible Language Modelling Research</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Do Anything Now&quot;: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models</title>
+		<author>
+			<persName><forename type="first">Xinyue</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zeyuan</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Backes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yun</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACM SIGSAC Conference on Computer and Communications Security</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Code-Fusion: A Pre-trained Diffusion Model for Code Generation</title>
+		<author>
+			<persName><forename type="first">Mukul</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">José</forename><surname>Cambronero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sumit</forename><surname>Gulwani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vu</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carina</forename><surname>Negreanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gust</forename><surname>Verbruggen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Empirical Methods in Natural Language Processing</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Anton Pljonkin, Manjit Kaur, and Mohammed Amoon. 2023. Comprehensive Analysis of Advanced Techniques and Vital Tools for Detecting Malware Intrusion</title>
+		<author>
+			<persName><forename type="first">Vatsal</forename><surname>Vasani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amit</forename><surname>Kumar Bairwa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sandeep</forename><surname>Joshi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Electronics</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">20</biblScope>
+			<biblScope unit="page">4299</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">You See What I Want You to See: Poisoning Vulnerabilities in Neural Code Search</title>
+		<author>
+			<persName><forename type="first">Shijie</forename><surname>Yao Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongyu</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yulei</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guandong</forename><surname>Sui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dezhong</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hai</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lichao</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">CodeT5+: Open Code Large Language Models for Code Understanding and Generation</title>
+		<author>
+			<persName><forename type="first">Yue</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hung</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Akhilesh</forename><surname>Gotmare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nghi</forename><surname>Bui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junnan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steven</forename><surname>Hoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Empirical Methods in Natural Language Processing</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Magicoder: empowering code generation with OSS-INSTRUCT</title>
+		<author>
+			<persName><forename type="first">Yuxiang</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhe</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiawei</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yifeng</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lingming</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Machine Learning (ICML)</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Jailbreak and Guard Aligned Language Models with Only Few In-Context Demonstrations</title>
+		<author>
+			<persName><forename type="first">Zeming</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yifei</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yisen</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.06387</idno>
+		<idno>arXiv:1910.03771</idno>
+	</analytic>
+	<monogr>
+		<title level="m">HuggingFace&apos;s Transformers: State-of-the-art Natural Language Processing</title>
+		<editor>
+			<persName><forename type="first">Thomas</forename><surname>Wolf</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Lysandre</forename><surname>Debut</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Victor</forename><surname>Sanh</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Julien Chaumond, Clement Delangue, Anthony Moi</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2023. 2019</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+	<note>Pierric Cistac, Tim Rault, Rémi Louf, and Funtowicz, Morgan and others</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title level="m" type="main">DeceptPrompt: Exploiting LLM-driven Code Generation via Adversarial Natural Language Instructions</title>
+		<author>
+			<persName><forename type="first">Fangzhou</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaogeng</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chaowei</forename><surname>Xiao</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.04730</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<monogr>
+		<author>
+			<persName><forename type="first">Zeguan</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yan</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guanhua</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yun</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2403.08424</idno>
+		<title level="m">Tastle: Distract Large Language Models for Automatic Jailbreak Attack</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<author>
+			<persName><forename type="first">Liang</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kangkang</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hang</forename><surname>Xue</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.05818</idno>
+		<title level="m">SC-Safety: A Multi-round Open-ended Question Adversarial Safety Benchmark for Large Language Models in Chinese</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Bag of Tricks: Benchmarking of Jailbreak Attacks on LLMs</title>
+		<author>
+			<persName><forename type="first">Zhao</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hao</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems Datasets and Benchmarks Track</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>NeurIPS D&amp;B</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<monogr>
+		<title level="m" type="main">Haoran and others</title>
+		<author>
+			<persName><forename type="first">An</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Baosong</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Beichen</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Binyuan</forename><surname>Hui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bowen</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chengyuan</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dayiheng</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fei</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wei</forename></persName>
+		</author>
+		<idno type="arXiv">arXiv:2412.15115</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Natural Attack for Pre-trained Models of Code</title>
+		<author>
+			<persName><forename type="first">Zhou</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jieke</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junda</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Lo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Software Engineering (ICSE)</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">FuzzLLM: A Novel and Universal Fuzzing Framework for Proactively Discovering Jailbreak Vulnerabilities in Large Language Models</title>
+		<author>
+			<persName><forename type="first">Dongyu</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jianshu</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><forename type="middle">G</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marcel</forename><surname>Carlsson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE Int. Conf. on Acoustics, Speech, and Signal Processing</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<author>
+			<persName><forename type="first">Sibo</forename><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yule</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhen</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tianshuo</forename><surname>Cong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinlei</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiaxing</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ke</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qi</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2407.04295</idno>
+		<title level="m">Jailbreak Attacks and Defenses Against Large Language Models: A Survey</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">CoSafe: Evaluating Large Language Model Safety in Multi-Turn Dialogue Coreference</title>
+		<author>
+			<persName><forename type="first">Erxin</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jing</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Siqi</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gao</forename><surname>Zuchen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fei</forename><surname>Mi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lanqing</forename><surname>Hong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Empirical Methods in Natural Language Processing</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<author>
+			<persName><forename type="first">Jiahao</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xingwei</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinyu</forename><surname>Xing</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.10253</idno>
+		<title level="m">GPT-FUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Towards Robustness of Deep Program Processing Models-Detection, Estimation, and Enhancement</title>
+		<author>
+			<persName><forename type="first">Huangzhao</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiyi</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ge</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lei</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhehao</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hua'an</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yizhe</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhi</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Transactions on Software Engineering and Methodology (TOSEM)</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1" to="40" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Planning with Large Language Models for Code Generation</title>
+		<author>
+			<persName><forename type="first">Shun</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhenfang</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yikang</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mingyu</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joshua</forename><forename type="middle">B</forename><surname>Tenenbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chuang</forename><surname>Gan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations (ICLR)</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<monogr>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aneesh</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karthik</forename><surname>Suresh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roshan</forename><surname>Ravindran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sindhu</forename><surname>Tipirneni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chandan</forename><forename type="middle">K</forename><surname>Reddy</surname></persName>
+		</author>
+		<title level="m">XLCoST: A Benchmark Dataset for Cross-lingual Code Intelligence</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Universal and Transferable Adversarial Attacks on Aligned Language Models</title>
+		<author>
+			<persName><forename type="first">Andy</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zifan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Zico</forename><surname>Kolter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matt</forename><surname>Fredrikson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Table 9: Model checkpoints or API versions used in evaluation. Model Checkpoint / API Version Amazon Nova Pro amazon</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">0</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Gpt-</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2024">4o openai/gpt-4o-2024-11-20</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<monogr>
+		<title level="m" type="main">b-instruct Deepseek-Coder-6.7B deepseek-ai/deepseek-coder-6.7b-instruct Llama-3.2-3B-Instruct meta-llama/Llama-3.2-3B-Instruct Llama-3.1-8B-Instruct meta-llama/Llama-3.1-8B-Instruct Llama-3.3-70B-instruct meta</title>
+		<idno>Deepseek-Coder-1.3B deepseek-ai/deepseek-coder-1.3</idno>
+		<ptr target="-llama/llama-3.3-70b-instructMistralLargemistralai/mistral-large-2411" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

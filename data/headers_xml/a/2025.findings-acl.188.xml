@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Making RALM Robust to Irrelevant Contexts via Layer Knowledge Guided Attention</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Weijie</forename><surname>Shi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Chen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaming</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yao</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yazhong</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qijin</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jipeng</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruiyuan</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jia</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Zhejiang Key Laboratory of Intelligent Education Technology and Application</orgName>
+								<orgName type="institution">Zhejiang Normal University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiajie</forename><surname>Xu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaofang</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Making RALM Robust to Irrelevant Contexts via Layer Knowledge Guided Attention</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">714A446C94FCD5D965B701FD4FFDE8CD</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-augmented language models (RALMs) aim to incorporate external knowledge to address the issues of factual hallucination and knowledge obsolescence faced by large language models (LLMs). Inevitably, the retrieved passages based on similarity search may be irrelevant to the given question, and the aggregation of these passages can confuse the model to give a correct answer. To improve the performance of RALM in such conditions, we propose layer-knowledge guided attention for RALMs, which harnesses the layer-wise knowledge of LLMs to optimize per-layer attention on useful passages, making the model pay attention to the most relevant content and ignore irrelevant ones. Specifically, we first systematically study LLM&apos;s attention patterns and their relationship with the accuracy of RALM responses, where middle-focus attentions play a crucial role in selectively gathering relevant information. Based on this, a layer-wise passage estimator leverages the varied knowledge encoded across LLM layers to assess not only passage relevance scores but also associated confidences. Finally, a relevance-aware passage fusion enables selective attention to relevant passages, mitigating distractibility and positional bias of causal attention. Experiments show that our method outperforms existing methods on RALM benchmarks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

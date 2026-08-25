@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Team XSZ at BioLaySumm2025: Section-Wise Summarization, Retrieval-Augmented LLM, and Reinforcement Learning Fine-Tuning for Lay Summaries</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Pengcheng</forename><surname>Xu</surname></persName>
+							<email>xu_pengcheng@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Shanghai Jiao Tong University</orgName>
+								<orgName type="institution" key="instit2">University of Michigan</orgName>
+								<orgName type="institution" key="instit3">Shanghai Jiao Tong University</orgName>
+								<orgName type="institution" key="instit4">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sicheng</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Shanghai Jiao Tong University</orgName>
+								<orgName type="institution" key="instit2">University of Michigan</orgName>
+								<orgName type="institution" key="instit3">Shanghai Jiao Tong University</orgName>
+								<orgName type="institution" key="instit4">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jieli</forename><surname>Zhou</surname></persName>
+							<email>zhoujieli@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Shanghai Jiao Tong University</orgName>
+								<orgName type="institution" key="instit2">University of Michigan</orgName>
+								<orgName type="institution" key="instit3">Shanghai Jiao Tong University</orgName>
+								<orgName type="institution" key="instit4">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongyi</forename><surname>Xin</surname></persName>
+							<email>hongyi.xin@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Shanghai Jiao Tong University</orgName>
+								<orgName type="institution" key="instit2">University of Michigan</orgName>
+								<orgName type="institution" key="instit3">Shanghai Jiao Tong University</orgName>
+								<orgName type="institution" key="instit4">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Team XSZ at BioLaySumm2025: Section-Wise Summarization, Retrieval-Augmented LLM, and Reinforcement Learning Fine-Tuning for Lay Summaries</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C588E83A49BE9AC6C5B6C50E83D49A2D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We present a multi-stage pipeline for BioLay-Summ 2025 Subtask 1.1 that improves readability, relevance, and factuality. First, we select the top-5 relevant sections and generate summaries with BioBART. Next, we retrieve a Kshot demonstration using BGE embeddings to prompt Llama 3 8B and fine-tune it with LoRA. We then merge section summaries via a second BioBART pass. Finally, we apply reinforcement learning (PPO and GRPO) with a composite reward combining factuality (AlignScore, SummaC), relevance (ROUGE-L, BERTScore), and readability (LENS, FKGL, DCRS, CLI). On PLOS and eLife validation sets, our pipeline reduces DCRS from 9.23 to 8.56 and CLI from 12.98 to 12.65, and boosts AlignScore from 0.722 to 0.862, demonstrating balanced gains in lay-summary quality.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

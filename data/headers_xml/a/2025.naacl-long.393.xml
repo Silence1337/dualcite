@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LRQ: Optimizing Post-Training Quantization for Large Language Models by Learning Low-Rank Weight-Scaling Matrices</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jung</forename><forename type="middle">Hyun</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NAVER Cloud</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Jeonghoon</forename><surname>Kim</surname></persName>
+							<email>jeonghoon.samuel@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">NAVER Cloud</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">June</forename><forename type="middle">Yong</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">KAIST AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Se</roleName><forename type="first">Jung</forename><surname>Kwon</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NAVER Cloud</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Eunho</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">KAIST AI</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">AITRICS</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Kang</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Yoo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NAVER Cloud</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">SNU AI Center</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongsoo</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">NAVER Cloud</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LRQ: Optimizing Post-Training Quantization for Large Language Models by Learning Low-Rank Weight-Scaling Matrices</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">41A4D76305A8EA3943AAED2B67BDBD2C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>With the commercialization of large language models (LLMs), weight-activation quantization has emerged to compress and accelerate LLMs, achieving high throughput while reducing inference costs. However, existing post-training quantization (PTQ) techniques for quantizing weights and activations of LLMs still suffer from non-negligible accuracy drops, especially on massive multitask language understanding. To address this issue, we propose Low-Rank Quantization (LRQ)-a simple yet effective post-training weight quantization method for LLMs that reconstructs the outputs of an intermediate Transformer block by leveraging low-rank weight-scaling matrices, replacing the conventional full weight-scaling matrices that entail as many learnable scales as their associated weights. Thanks to parameter sharing via low-rank structure, LRQ only needs to learn significantly fewer parameters while enabling the individual scaling of weights, thus boosting the generalization capability of quantized LLMs. We show the superiority of LRQ over prior LLM PTQ works under (i) 8-bit weight and per-tensor activation quantization, (ii) 4-bit weight and 8-bit per-token activation quantization, and (iii) low-bit weight-only quantization schemes. Our code is available at Software.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

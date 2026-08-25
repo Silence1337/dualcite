@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FractalLLM: Lossless Self-Speculative Decoding with Layer Embedded Self-Compression</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Juhyeong</forename><surname>Kim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computing</orgName>
+								<orgName type="institution">Gachon University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sangyeon</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computing</orgName>
+								<orgName type="institution">Gachon University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gyunyeop</forename><surname>Kim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computing</orgName>
+								<orgName type="institution">Gachon University</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Sangwoo</forename><surname>Kang</surname></persName>
+							<email>swkang@gachon.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computing</orgName>
+								<orgName type="institution">Gachon University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FractalLLM: Lossless Self-Speculative Decoding with Layer Embedded Self-Compression</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1C4D4118C354D48163F7AB74278A1D5C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Autoregressive decoding in large language models (LLMs) necessitates a full forward pass for each generated token, significantly increasing inference latency. To address this limitation, we propose Fractal-LLM, a lossless self-speculative decoding method that embeds a compressed model within selected decoder layers of the original model. Specifically, our approach generates multiple draft tokens in parallel by injecting compressed layers into selected decoder layers. These draft tokens are subsequently verified through a single forward pass of the original model, ensuring the final outputs exactly match those produced by the original model. Experimental results across diverse benchmarks-including GSM8K, XSUM, CNN/DailyMail, and HumanEval-demonstrate that our method achieves substantial inference speed-ups (up to 2.47×) compared to standard autoregressive decoding, without requiring any additional training.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

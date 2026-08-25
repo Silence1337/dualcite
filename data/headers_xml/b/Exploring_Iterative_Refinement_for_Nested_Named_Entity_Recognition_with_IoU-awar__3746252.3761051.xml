@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Exploring Iterative Refinement for Nested Named Entity Recognition with IoU-aware Denoising Diffusion</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qiaoxuan</forename><surname>Yin</surname></persName>
+							<idno type="ORCID">0009-0000-1036-6573</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jianquan</forename><surname>Ouyang</surname></persName>
+							<idno type="ORCID">0000-0002-7518-5156</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Huanrong</forename><surname>Tang</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Xiangtan University School of Computer Science Xiangtan</orgName>
+								<address>
+									<settlement>Hunan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Xiangtan University School of Computer Science Xiangtan</orgName>
+								<address>
+									<settlement>Hunan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Xiangtan University School of Computer Science Xiangtan</orgName>
+								<address>
+									<settlement>Hunan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Exploring Iterative Refinement for Nested Named Entity Recognition with IoU-aware Denoising Diffusion</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">198923326340E4288C215566E3BB4823</idno>
+					<idno type="DOI">10.1145/3746252.3761051</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Nested Named Entity Recognition</term>
+					<term>IoU-aware</term>
+					<term>Denoising Diffusion</term>
+					<term>Top-k Selective Attention</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Named entity recognition (NER) is a key task in natural language processing, but existing methods often fail to effectively handle nested structures due to fuzzy entity boundaries and structural ambiguity. To address this challenge, we propose a novel nested NER method based on an IoU-aware denoising diffusion model, which formulates the nested NER task as a generative denoising process that progressively recovers gold entity spans from noisy span proposals. We generate noisy samples during training by gradually adding Gaussian noise to the ground-truth entity boundaries. We then train a denoiser incorporating a top-k selective attention mechanism to refine entity span proposals iteratively. To strengthen the alignment between boundary localization and entity classification, we introduce an IoU-aware loss function that optimizes the overlap between predicted and ground-truth spans. This design more accurately guides boundary regression and effectively reduces misalignment caused by conventional regression losses. Our model leverages sentence features and timesteps as conditional inputs to capture contextual information throughout the denoising process. During inference, the model generates final entity predictions by starting from random noise spans and iteratively refining them through a multi-step reverse diffusion process. We conduct extensive experiments on four nested NER datasets, ACE2004, ACE2005, GENIA, and KBP2017, as well as two flat NER datasets, CoNLL2003 and OntoNotes. Experimental results show that the proposed method consistently outperforms existing advanced models across all benchmarks, demonstrating its effectiveness. CCS Concepts • Information systems → Extraction, transformation and loading.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

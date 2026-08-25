@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Where Does Legal AI Fail? Evaluating RAG Pipelines</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yongjae</forename><surname>Kim</surname></persName>
+							<email>yongjaeya@kaist.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="department">The Graduate School of Culture Technology Daejeon</orgName>
+								<orgName type="institution">Korea Advanced Institute of Science and Technology</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wonjae</forename><surname>Lee</surname></persName>
+							<email>wnjlee@kaist.ac.kr</email>
+							<affiliation key="aff1">
+								<orgName type="department">The Graduate School of Culture Technology Daejeon</orgName>
+								<orgName type="institution">Korea Advanced Institute of Science and Technology</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Where Does Legal AI Fail? Evaluating RAG Pipelines</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EC09C53CDD3A29CAFEF43B6573D0354E</idno>
+					<idno type="DOI">10.1145/3746252.3761151</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>RAG</term>
+					<term>Hallucination</term>
+					<term>IR</term>
+					<term>Legal Chatbots</term>
+					<term>NLP</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Retrieval Augmented Generation (RAG) frameworks have been integrated into LLMs for QA tasks, which have enabled lower levels of hallucination during the generation stage. Despite ample research in evaluating and detecting hallucination, research regarding its source in the legal domain is still minimal. In this paper, we break down each component of the RAG framework and analyze how they affect the quality of the generation. We use the expert answers of 1,039 real Korean civil complaints provided by the Korean Ministry of Economy and Finance to analyze the quality of generation across 12 experimental configurations that vary in retrieval, reranking, and generation components. To evaluate generation quality, we employ LLM-as-Judge comparing model outputs against expert responses across three dimensions: conclusion consistency, correctness and incorrectness. We validate our findings through logistic regression analysis, establishing statistical relationships between component metrics (Recall@200, NDCG@20) and generation consistency. Despite differing performance across models, two patterns emerge from the generation evaluation: increased retrieval performance correlates with decreased generation quality, and increased reranker performance correlates with higher generation quality. Our work questions the conventional wisdom that &quot;more context is better&quot; and provides a systematic attribution framework for finding the origin of hallucination in legal RAG systems. CCS Concepts • Information systems → Retrieval models and ranking; • Computing methodologies → Natural language processing; • Applied computing → Law.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

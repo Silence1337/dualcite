@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Local Large Language Models for Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yujin</forename><surname>Jeon</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Joonseok</forename><surname>Lee</surname></persName>
+							<email>joonseok@snu.ac.kr</email>
+							<idno type="ORCID">0000-0002-0786-8086</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Seoul National Univ. Seoul</orgName>
+								<address>
+									<country>Korea Jooyoung Kim</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Seoul National Univ. Seoul</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Seoul National Univ. Seoul</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Local Large Language Models for Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8EA70A462D275F6CEF52D31EE62D841A</idno>
+					<idno type="DOI">10.1145/3746252.3761280</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Collaborative Filtering</term>
+					<term>Recommendation</term>
+					<term>Large Language Models</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Unlike traditional classification tasks, recommendation is inherently subjective-whether an item should be suggested depends not only on user preferences and item semantics, but also on latent behavioral patterns and contextual cues. While recent LLM-based recommenders excel at modeling semantics and intent through generative reasoning, they often fail to capture collaborative signals and suffer from inefficiencies when applied globally across large interaction spaces. We propose Local Large Language Models for Recommendation (L 3 Rec), a novel model-agnostic framework that integrates collaborative filtering (CF) with generative LLMs through localized modeling. Our approach first applies a lightweight CF model to derive user and item embeddings, then clusters them into behaviorally coherent subgroups. Each cluster is assigned a dedicated generative LLM-referred to as a local LLM-trained only on its corresponding data subset. This enables fine-grained personalization while improving training efficiency through parallelism. At inference time, predictions from local models are aggregated via a fusion strategy, with a global CF fallback when needed. To the best of our knowledge, this is the first LLM-based recommendation framework to incorporate local collaborative structure. Experiments show that it achieves state-of-the-art performance with significantly better scalability and efficiency. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

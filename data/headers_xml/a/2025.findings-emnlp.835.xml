@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ULTRABENCH: Benchmarking LLMs under Extreme Fine-grained Text Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Longfei</forename><surname>Yun</surname></persName>
+							<email>loyun@ucsd.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>San Diego</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Letian</forename><surname>Peng</surname></persName>
+							<email>lepeng@ucsd.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>San Diego</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingbo</forename><surname>Shang</surname></persName>
+							<email>jshang@ucsd.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>San Diego</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ULTRABENCH: Benchmarking LLMs under Extreme Fine-grained Text Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2189DC8E0A512DD8C77FED993CA4FE76</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Fine-grained control is essential for precise and customizable text generation, yet existing benchmarks evaluate models on only a few attributes, typically fewer than five. We introduce ULTRABENCH, a new benchmark for extremely fine-grained controllable generation (EFCG), which evaluates large language models (LLMs) under dense, multi-attribute constraints. Each sample includes approximately 70 attributes, combining LLM-extracted soft constraints (e.g., style and tone) with programmatically enforced hard constraints (e.g., word count). Using ULTRABENCH, we conduct a comprehensive evaluation of state-of-the-art LLMs and prompting strategies. Models such as GPT-4.1 and Qwen3-8B perform well on individual constraints, achieving instructionlevel accuracy above 70%, but consistently fail to satisfy all constraints simultaneously. To understand this limitation, we analyze model behavior across different dimensions. First, we observe a clear position bias: models tend to prioritize constraints presented later in the prompt while neglecting those that appear earlier. Second, we find that structural-related constraints are significantly more difficult to satisfy than content-or style-based ones, suggesting that current models struggle to coordinate global structure with token-level control. Finally, our error analysis reveals distinct failure modes: GPT-4.1 often attempts to follow constraints but falls short in precision, whereas LLaMA frequently omits constraints, particularly in multi-turn settings. These findings highlight fundamental limitations in EFCG and underscore the need for new methods that support dense, instruction-sensitive generation 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

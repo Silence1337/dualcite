@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">QUARTZ: QA-based Unsupervised Abstractive Refinement for Task-oriented Dialogue Summarization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mohamed</forename><forename type="middle">Imed Eddine</forename><surname>Ghebriout</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Université de Lorraine</orgName>
+								<orgName type="institution" key="instit2">CNRS</orgName>
+								<address>
+									<postCode>F-54000</postCode>
+									<settlement>Nancy</settlement>
+									<region>Inria LORIA</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gaël</forename><surname>Guibon</surname></persName>
+							<email>gael.guibon@loria.fr</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Université de Lorraine</orgName>
+								<orgName type="institution" key="instit2">CNRS</orgName>
+								<address>
+									<postCode>F-54000</postCode>
+									<settlement>Nancy</settlement>
+									<region>Inria LORIA</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratoire d&apos;Informatique de Paris Nord</orgName>
+								<orgName type="institution" key="instit1">Université Sorbonne Paris Nord</orgName>
+								<orgName type="institution" key="instit2">CNRS</orgName>
+								<orgName type="institution" key="instit3">LIPN</orgName>
+								<address>
+									<postCode>F-93430</postCode>
+									<settlement>Villetaneuse</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ivan</forename><surname>Lerner</surname></persName>
+							<email>ivan.lerner@inria.fr</email>
+							<affiliation key="aff2">
+								<orgName type="department">Centre de Recherche des Cordeliers</orgName>
+								<orgName type="laboratory">Inserm</orgName>
+								<orgName type="institution" key="instit1">Université Paris Cité</orgName>
+								<orgName type="institution" key="instit2">Sorbonne Université</orgName>
+								<address>
+									<postCode>F-75006</postCode>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">HeKA</orgName>
+								<address>
+									<addrLine>Inria Paris</addrLine>
+									<postCode>F-75012</postCode>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Medical Informatics</orgName>
+								<orgName type="institution" key="instit1">Assistance Publique Hôpitaux de Paris</orgName>
+								<orgName type="institution" key="instit2">Georges Pompidou European Hospital</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Emmanuel</forename><surname>Vincent</surname></persName>
+							<email>emmanuel.vincent@inria.fr</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Université de Lorraine</orgName>
+								<orgName type="institution" key="instit2">CNRS</orgName>
+								<address>
+									<postCode>F-54000</postCode>
+									<settlement>Nancy</settlement>
+									<region>Inria LORIA</region>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">QUARTZ: QA-based Unsupervised Abstractive Refinement for Task-oriented Dialogue Summarization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5CB0C5728393A4C933562161C10A5777</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:05+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Dialogue summarization aims to distill the core meaning of a conversation into a concise text. This is crucial for reducing the complexity and noise inherent in dialogue-heavy applications. While recent approaches typically train language models to mimic human-written summaries, such supervision is costly and often results in outputs that lack task-specific focus limiting their effectiveness in downstream applications, such as medical tasks. In this paper, we propose QUARTZ, a framework for taskoriented utility-based dialogue summarization. QUARTZ starts by generating multiple summaries and task-oriented question-answer pairs from a dialogue in a zero-shot manner using a pool of large language models (LLMs). The quality of the generated summaries is evaluated by having LLMs answer task-related questions before (i) selecting the best candidate answers and (ii) identifying the most informative summary based on these answers. Finally, we finetune the best LLM on the selected summaries. When validated on multiple datasets, QUARTZ demonstrates its effectiveness by achieving competitive results in various zero-shot settings, rivaling fully-supervised State-of-the-Art (SotA) methods. Code and supplementary material are publicly available 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

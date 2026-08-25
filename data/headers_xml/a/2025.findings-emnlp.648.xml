@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yangning</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shenzhen International Graduate School</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weizhi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuyao</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei-Chieh</forename><surname>Huang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yaozu</forename><surname>Wu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junyu</forename><surname>Luo</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanchen</forename><surname>Bei</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Illinois Urbana</orgName>
+								<address>
+									<settlement>Champaign</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Henry</forename><surname>Peng Zou</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Luo</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">University of Wisconsin</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yusheng</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chunkit</forename><surname>Chan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yankai</forename><surname>Chen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhongfen</forename><surname>Deng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yinghui</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shenzhen International Graduate School</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hai-Tao</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shenzhen International Graduate School</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongyuan</forename><surname>Li</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Renhe</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ming</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yangqiu</forename><surname>Song</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Philip</forename><forename type="middle">S</forename><surname>Yu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>-Madison</surname></persName>
+						</author>
+						<title level="a" type="main">Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">97250E1AE9994B2035451586F3D0652E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:01+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-Augmented Generation (RAG) lifts the factuality of Large Language Models (LLMs) by injecting external knowledge, yet it falls short on problems that demand multistep inference; conversely, purely reasoningoriented approaches often hallucinate or misground facts. This survey synthesizes both strands under a unified reasoning-retrieval perspective. We first map how advanced reasoning optimizes each stage of RAG (Reasoning-Enhanced RAG). Then, we show how retrieved knowledge of different type supply missing premises and expand context for complex inference (RAG-Enhanced Reasoning). Finally, we spotlight emerging Synergized RAG-Reasoning frameworks, where (agentic) LLMs iteratively interleave search and reasoning to achieve state-of-the-art performance across knowledge-intensive benchmarks. We categorize methods, datasets, and open challenges, and outline research avenues toward deeper RAG-Reasoning systems that are more effective, multimodally-adaptive, trustworthy, and human-centric. The collection is available at https://github.com/ DavidZWZ/Awesome-RAG-Reasoning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

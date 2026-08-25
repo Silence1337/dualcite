@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Climber: Toward Efficient Scaling Laws for Large Recommendation Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Songpei</forename><surname>Xu</surname></persName>
+							<email>xusongpei@corp.netease.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shijia</forename><surname>Wang</surname></persName>
+							<email>wangshijia1@corp.netease.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qiang</forename><surname>Xiao</surname></persName>
+							<email>hzxiaoqiang@corp.netease.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">NetEase Cloud Music Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Da Guo</orgName>
+								<orgName type="institution">NetEase Cloud Music Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Xianwen Guo</orgName>
+								<orgName type="institution">NetEase Cloud Music Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">NetEase Cloud Music Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Bin Huang</orgName>
+								<orgName type="institution">NetEase Cloud Music Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Guanlin Wu</orgName>
+								<orgName type="institution">NetEase Cloud Music Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Chuanjiang Luo</orgName>
+								<orgName type="institution">NetEase Cloud Music Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">NetEase Cloud Music Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Climber: Toward Efficient Scaling Laws for Large Recommendation Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">91911A79486E18367435FC25C53016BD</idno>
+					<idno type="DOI">10.1145/3746252.3761561</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Transformer-based generative models have achieved remarkable success across domains with various scaling law manifestations. However, our extensive experiments reveal persistent challenges when applying Transformer to recommendation systems: (1) Transformer scaling is not ideal with increased computational resources, due to structural incompatibilities with recommendation-specific features such as multi-source data heterogeneity; (2) critical online inference latency constraints (tens of milliseconds) that intensify with longer user behavior sequences and growing computational demands. We propose Climber, an efficient recommendation framework comprising two synergistic components: the model architecture for efficient scaling and the co-designed acceleration techniques. Our proposed model adopts two core innovations: (1) multi-scale sequence extraction that achieves a time complexity reduction by a constant factor, enabling more efficient scaling with sequence length; (2) dynamic temperature modulation adapting attention distributions to the multi-scenario and multi-behavior patterns. Complemented by acceleration techniques, Climber achieves a 5.15× throughput gain without performance degradation by adopting a &quot;single user, multiple item&quot; batched processing and memoryefficient Key-Value caching. Comprehensive offline experiments on multiple datasets validate that Climber exhibits a more ideal scaling curve. To our knowledge, this is the first publicly documented framework where controlled</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

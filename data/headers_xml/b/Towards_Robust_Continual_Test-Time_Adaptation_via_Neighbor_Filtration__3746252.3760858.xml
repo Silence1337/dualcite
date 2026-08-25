@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards Robust Continual Test-Time Adaptation via Neighbor Filtration</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Taki</forename><surname>Hasan</surname></persName>
+							<email>takihr@hanyang.ac.kr</email>
+							<idno type="ORCID">0000-0003-3920-9314</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Amit</forename><surname>Agarwal</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hitesh</forename><forename type="middle">L</forename><surname>Patel</surname></persName>
+							<email>hitesh.patel945@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dong-Kyu</forename><surname>Chae</surname></persName>
+							<idno type="ORCID">0000-0002-5410-6391</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Hanyang University Seoul</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Liverpool John Moores University</orgName>
+								<address>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">New York University New York</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Hanyang University Seoul</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards Robust Continual Test-Time Adaptation via Neighbor Filtration</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FFBDEADEC7C9A04B2B6183B8BC62C712</idno>
+					<idno type="DOI">10.1145/3746252.3760858</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Test-Time Adaptation</term>
+					<term>Continual Learning</term>
+					<term>Pseudo-Labels</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Test-Time Adaptation (TTA) aims to adapt an unseen target domain utilizing the unlabeled target data using a pre-trained source model. Continual TTA is a more challenging paradigm that deals with non-stationary environments during the test data adaptation. Most existing continual TTA methods are based on pseudo-labeling, but often (1) rely on overconfident pseudo-labels and (2) remain unstable under continual distribution shifts leading to error accumulation and catastrophic forgetting. To tackle these limitations, we propose Neighbor-Filtration based Continual Test-Time Adaptation (NF-CTTA), a reliable and memory-aware adaptation framework that addresses these challenges. NF-CTTA first calibrates pseudo-labels using class-conditional calibration error to correct over/under-confidence of the model. To further ensure reliability, we introduce an OOD Neighbor Filtration technique that selects a subset of high-confidence samples based on entropy and neighbor similarity, ensuring consistency within the semantic neighborhood. Finally, we propose a priority-guided memory buffer that retains the most informative low-entropy samples for replay, mitigating catastrophic forgetting across evolving test distributions. Extensive experiments across multiple domain shift benchmarks demonstrate that NF-CTTA achieves superior performance and stability compared to existing TTA and CTTA methods. The code is available at: https://github.com/takihasan/NF-CTTA. CCS Concepts • Computing methodologies → Machine learning algorithms.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

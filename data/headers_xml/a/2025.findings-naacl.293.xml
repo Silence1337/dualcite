@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">From Single to Multi: How LLMs Hallucinate in Multi-Document Summarization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Catarina</forename><forename type="middle">G</forename><surname>Belem</surname></persName>
+							<email>cbelem@uci.edu</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Megagon Labs</orgName>
+								<orgName type="laboratory" key="lab2">Megagon Labs</orgName>
+								<orgName type="institution">University of California Irvine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pouya</forename><surname>Pezeshkpour</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Megagon Labs</orgName>
+								<orgName type="laboratory" key="lab2">Megagon Labs</orgName>
+								<orgName type="institution">University of California Irvine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hayate</forename><surname>Iso</surname></persName>
+							<email>hayate@megagon.ai</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Megagon Labs</orgName>
+								<orgName type="laboratory" key="lab2">Megagon Labs</orgName>
+								<orgName type="institution">University of California Irvine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seiji</forename><surname>Maekawa</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Megagon Labs</orgName>
+								<orgName type="laboratory" key="lab2">Megagon Labs</orgName>
+								<orgName type="institution">University of California Irvine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nikita</forename><surname>Bhutani</surname></persName>
+							<email>nikita@megagon.ai</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Megagon Labs</orgName>
+								<orgName type="laboratory" key="lab2">Megagon Labs</orgName>
+								<orgName type="institution">University of California Irvine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Estevam</forename><surname>Hruschka</surname></persName>
+							<email>estevam@megagon.ai</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory" key="lab1">Megagon Labs</orgName>
+								<orgName type="laboratory" key="lab2">Megagon Labs</orgName>
+								<orgName type="institution">University of California Irvine</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">From Single to Multi: How LLMs Hallucinate in Multi-Document Summarization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">28360D93853C131AD15881147F4127E8</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Although many studies have investigated and reduced hallucinations in large language models (LLMs) for single-document tasks, research on hallucination in multi-document summarization (MDS) tasks remains largely unexplored. Specifically, it is unclear how the challenges arising from handling multiple documents (e.g., repetition and diversity of information) affect models outputs. In this work, we investigate how hallucinations manifest in LLMs when summarizing topic-specific information from a set of documents. Since no benchmarks exist for investigating hallucinations in MDS, we leverage existing news and conversation datasets, annotated with topicspecific insights, to create two novel multidocument benchmarks. When evaluating 5 LLMs on our benchmarks, we observe that on average, up to 75% of the content in LLMgenerated summary is hallucinated, with hallucinations more likely to occur towards the end of the summaries. Moreover, when summarizing non-existent topic-related information, gpt-3.5-turbo and GPT-4o still generate summaries about 79.35% and 44% of the time, raising concerns about their tendency to fabricate content. To better understand the characteristics of these hallucinations, we conduct a human evaluation of 700+ insights and discover that most errors stem from either failing to follow instructions or producing overly generic insights. Motivated by these observations, we investigate the efficacy of simple post-hoc baselines in mitigating hallucinations but find them only moderately effective. Our results underscore the need for more effective approaches to systematically mitigate hallucinations in MDS.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

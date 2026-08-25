@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MI4Rec: Pretrained Language Model Based Cold-Start Recommendation with Meta-Item Embeddings</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zaiyi</forename><surname>Zheng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yaochen</forename><surname>Zhu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Haochen</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Zhao</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Neil</forename><surname>Shah</surname></persName>
+							<email>nshah@snap.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jundong</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mingxuan</forename><surname>Ju</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Mi4rec</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>VA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>VA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>VA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Mingxuan Ju Snap Inc. Bellevue</orgName>
+								<address>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Snap Inc. Bellevue</orgName>
+								<address>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Snap Inc. Bellevue</orgName>
+								<address>
+									<region>WA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">University of Virginia Charlottesville</orgName>
+								<address>
+									<region>VA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MI4Rec: Pretrained Language Model Based Cold-Start Recommendation with Meta-Item Embeddings</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">22ADFCFA4C4C40F4E74468249EB73B7F</idno>
+					<idno type="DOI">10.1145/3746252.3761313</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Recommender System</term>
+					<term>Large Language Model</term>
+					<term>Cold-Start</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Recently, pretrained large language models (LLMs) have been widely adopted in recommendation systems to leverage their textual understanding and reasoning abilities to model user behaviors and suggest future items. A key challenge in this setting is that items on most platforms are not included in the LLM&apos;s training data. Therefore, existing methods often fine-tune LLMs by introducing auxiliary item tokens to capture item semantics. However, in realworld applications such as e-commerce and short video platforms, the item space evolves rapidly, which gives rise to a cold-start setting, where many newly introduced items receive little or even no user engagement. This poses challenges in both learning accurate item token embeddings and generalizing efficiently to accommodate the continual influx of new items. In this work, we propose a novel meta-item token learning strategy to address both these challenges simultaneously. Specifically, we introduce MI4Rec, an LLMbased approach for recommendation that uses just a few learnable meta-item tokens and an LLM encoder to dynamically aggregate meta-items based on item content. We show that this paradigm allows highly efficient and accurate learning in such challenging settings. Extensive experiments on Yelp and Amazon reviews datasets demonstrate the effectiveness of MI4Rec in both warm-start and cold-start recommendations. Notably, MI4Rec achieves an average performance improvement of 20.4% in Recall and NDCG compared to the best-performing baselines. The implementation of MI4Rec is available at https://github.com/zhengzaiyi/MI4Rec. CCS Concepts • Information systems → Recommender systems.;</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

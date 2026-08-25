@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dyve: Thinking Fast and Slow for Dynamic Process Verification</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Jianyuan</forename><surname>Zhong</surname></persName>
+							<email>jyzhong@cse.cuhk.edu.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zeju</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhijian</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Wen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiang</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dyve: Thinking Fast and Slow for Dynamic Process Verification</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5C8524DB3630CED5ADB715DFB271CDF7</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) have advanced significantly in complex reasoning, often leveraging external verifiers to improve multi-step process reliability. However, existing process verification methods face critical limitations: discriminative Process Reward Models (PRMs) often provide overly simplistic binary feedback and struggle with incomplete reasoning traces, while sophisticated Generative Reward Models (GenRMs) can be computationally expensive. Furthermore, curating quality supervision data for process verifier is of challenging. Therefore, we present Dyve, a dynamic process verifier that enhances reasoning error detection in LLMs by integrating fast (System 1) and slow (System 2) thinking, inspired by Kahneman&apos;s Systems Theory. Dyve adaptively applies immediate token-level confirmation for straightforward steps and comprehensive analysis for complex ones. To address data challenges and enable its adaptive fast and slow thinking, Dyve employs a novel step-wise consensus-filtered supervision strategy. This strategy leverages Monte Carlo estimation, LLM-as-a-Judge, and specialized reasoning models to extract the high-quality training signals from noisy rollouts. Experimental results on ProcessBench and the MATH dataset confirm that Dyve significantly outperforms existing process-based verifiers and boosts performance in Best-of-N settings, while maintaining computational efficiency through strategic resource allocation. Our code, data and model are released at: https://github.com/ staymylove/Dyve</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

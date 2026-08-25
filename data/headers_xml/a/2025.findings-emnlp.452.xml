@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LLM Distillation for Efficient Few-Shot Multiple Choice Question Answering</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Patrick</forename><surname>Sutanto</surname></persName>
+							<email>patrick.s21@mhs.istts.ac.id</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Informatics</orgName>
+								<orgName type="institution">Institut Sains dan Teknologi Terpadu Surabaya (ISTTS)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joan</forename><surname>Santoso</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Informatics</orgName>
+								<orgName type="institution">Institut Sains dan Teknologi Terpadu Surabaya (ISTTS)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Esther</forename><forename type="middle">Irawati</forename><surname>Setiawan</surname></persName>
+							<email>esther@istts.ac.idaji.prasetya.ft@um.ac.id</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Informatics</orgName>
+								<orgName type="institution">Institut Sains dan Teknologi Terpadu Surabaya (ISTTS)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aji</forename><surname>Prasetya Wibawa</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Electrical Engineering and Informatics</orgName>
+								<orgName type="institution">Universitas Negeri Malang</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LLM Distillation for Efficient Few-Shot Multiple Choice Question Answering</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EE3D2B8A4ED09D69843B232B0B0F3CB1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Encoder models offer efficiency for specific tasks, but their performance depend on data availability. While Large Language Models (LLMs) excel at few-shot learning, their direct application in real-world scenarios is often hindered by their high computational cost. To address this challenge, we propose a simple yet effective approach that uses LLMs for data generation and scoring to improve encoder only model performance. We evaluate this framework on few-shot Multiple Choice Question Answering (MCQA), an important task where acquiring labeled data is costly. Our approach utilizes LLMs to create MCQA questions and choices (exploring both direct JSON and decomposed generation methods) and assigns probability scores to these choices. This generated data and the LLM scores are then used to fine-tune smaller and more efficient DeBERTa-v3-base using distillation loss. Extensive experiments on the MMLU benchmark demonstrate that our method improves accuracy from 28.9% to 39.3%, representing a gain of over 10% compared to a baseline finetuned directly on 5-shot examples. This shows the effectiveness of LLM-driven data generation and knowledge distillation for few-shot MCQA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

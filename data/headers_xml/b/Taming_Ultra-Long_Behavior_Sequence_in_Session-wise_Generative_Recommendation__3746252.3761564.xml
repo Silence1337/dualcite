@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Taming Ultra-Long Behavior Sequence in Session-wise Generative Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wuchao</forename><surname>Li</surname></persName>
+							<email>liwuchao@mail.ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shiyao</forename><surname>Wang</surname></persName>
+							<email>wangshiyao08@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kuo</forename><surname>Cai</surname></persName>
+							<email>caikuo@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaxin</forename><surname>Deng</surname></persName>
+							<email>dengjiaxin03@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xingmei</forename><surname>Wang</surname></persName>
+							<email>wangxingmei@mail.ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qigen</forename><surname>Hu</surname></persName>
+							<email>huqigen03@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Defu</forename><surname>Lian</surname></persName>
+							<email>liandefu@ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Guorui</forename><surname>Zhou</surname></persName>
+							<email>zhouguorui@kuaishou.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">KuaiShou Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">KuaiShou Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">KuaiShou Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">KuaiShou Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">KuaiShou Inc. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Taming Ultra-Long Behavior Sequence in Session-wise Generative Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7AA2057AB46F8A025182FC39165C348A</idno>
+					<idno type="DOI">10.1145/3746252.3761564</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Generative Recommendation</term>
+					<term>Sequence Modeling</term>
+					<term>Multi-token Prediction</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Generative recommendation has emerged as a transformative paradigm in recommender systems, enabling modeling user behavior autoregressively without explicit target conditioning. While this approach eliminates the need for target signals, it necessitates compressing extensive historical interactions-potentially spanning lifelong sequences-into coherent interest representations. Conventional methods for handling long sequences typically rely on target-guided search mechanisms (e.g., SIM) to efficiently filter and compress behaviors. However, this strategy is incompatible with generative frameworks due to their target-agnostic nature. To address these challenges, we propose a novel encoder-decoder model named HiCoGen (Hierarchical Compression-based Sessionwise Generative Model), which efficiently models long-term interests in generative models. In the encoder, HiCoGen compresses behavior sequences using hierarchical content similarity clustering and employs a hierarchical attention architecture to reduce sequence length while preserving information integrity. In the decoder, HiCoGen uses session-wise generation instead of point-wise generation to better align with industrial short-video applications. To enhance the stability of session-wise generation, we introduce an auxiliary Hierarchical Multi-Token Prediction module. Extensive experiments on public and industrial datasets show significant * Corresponding author.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

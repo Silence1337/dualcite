@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Revisiting Pruning vs Quantization for Small Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zihan</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">TU Dortmund University</orgName>
+								<orgName type="institution" key="instit3">Lamarr Institute University of Sheffield</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><surname>Kurz</surname></persName>
+							<email>simon.kurz@tu-dortmund.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">TU Dortmund University</orgName>
+								<orgName type="institution" key="instit3">Lamarr Institute University of Sheffield</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhixue</forename><surname>Zhao</surname></persName>
+							<email>zhixue.zhao@sheffield.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">TU Dortmund University</orgName>
+								<orgName type="institution" key="instit3">Lamarr Institute University of Sheffield</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Revisiting Pruning vs Quantization for Small Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C37815AD7AB8F8855A924BE89B22FD17</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:01+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Deploying language models on resourceconstrained devices, such as mobile phones, wearables, and on-device AI assistants, demands compact, efficient models without sacrificing performance. Compressing Small Language Models (SLMs) is particularly suited for these scenarios, yet their compression dynamics remain underexplored compared to Large Language Models (LLMs). We systematically evaluate leading post-training pruning (SparseGPT, Wanda) and quantization (GPTQ, AWQ) methods across six SLMs from 0.5 to 3.8B, seven languages, and seven downstream tasks. Our results show that quantization consistently outperforms pruning in preserving model fidelity, multilingual perplexity, and reasoning accuracy. However, quantization&apos;s advantages diminish on complex knowledge and reasoning tasks like OpenBookQA, highlighting a disconnect between compression fidelity and downstream task performance. Notably, trends observed in LLMs (e.g., Wanda&apos;s competitive performance to SparseGPT) do not generalize to SLMs. For practitioners, we recommend prioritizing quantization (particularly AWQ) for SLM compression and caution against relying on a single metric.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CIFLEX: Contextual Instruction Flow for Sub-task Execution in Multi-Turn Interactions with a Single On-Device LLM</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Juntae</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Qualcomm AI Research</orgName>
+								<orgName type="institution">Qualcomm Tech- nologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jihwan</forename><surname>Bang</surname></persName>
+							<email>jihwbang@qti.qualcomm.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Qualcomm AI Research</orgName>
+								<orgName type="institution">Qualcomm Tech- nologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seunghan</forename><surname>Yang</surname></persName>
+							<email>seunghan@qti.qualcomm.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Qualcomm AI Research</orgName>
+								<orgName type="institution">Qualcomm Tech- nologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Simyung</forename><surname>Chang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Qualcomm AI Research</orgName>
+								<orgName type="institution">Qualcomm Tech- nologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">‡</forename><surname>Qualcomm</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Qualcomm AI Research</orgName>
+								<orgName type="institution">Qualcomm Tech- nologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Research</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Qualcomm AI Research</orgName>
+								<orgName type="institution">Qualcomm Tech- nologies, Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CIFLEX: Contextual Instruction Flow for Sub-task Execution in Multi-Turn Interactions with a Single On-Device LLM</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FAAA92E078777A40C9C61A27A16D1F93</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We present CIFLEX (Contextual Instruction FLow with EXecution), a novel execution system for efficient sub-task handling in multiturn interactions with a single on-device large language model (LLM). As LLMs become increasingly capable, a single model is expected to handle diverse sub-tasks that more effectively and comprehensively support answering user requests. Naive approach reprocesses the entire conversation context when switching between main and sub-tasks (e.g., query rewriting, summarization), incurring significant computational overhead. CIFLEX mitigates this overhead by reusing the key-value (KV) cache from the main task and injecting only task-specific instructions into isolated side paths. After sub-task execution, the model rolls back to the main path via cached context, thereby avoiding redundant prefill computation. To support sub-task selection, we also develop a hierarchical classification strategy tailored for small-scale models, decomposing multi-choice decisions into binary ones. Experiments show that CIFLEX significantly reduces computational costs without degrading task performance, enabling scalable and efficient multitask dialogue on-device.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

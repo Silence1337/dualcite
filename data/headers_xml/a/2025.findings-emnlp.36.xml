@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">RACQC: Advanced Retrieval-Augmented Generation for Chinese Query Correction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jinbo</forename><surname>Su</surname></persName>
+							<email>sujinbo@ruc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lingzhe</forename><surname>Gao</surname></persName>
+							<email>gaolingzhe@baidu.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Shihao</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haojie</forename><surname>Lei</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyi</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanzhao</forename><surname>Guo</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">Jilin University</orgName>
+								<address>
+									<settlement>Changchun</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ke</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daiting</forename><surname>Shi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dawei</forename><surname>Yin</surname></persName>
+							<email>yindawei02@baidu.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Baidu Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">RACQC: Advanced Retrieval-Augmented Generation for Chinese Query Correction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">33D49B4A871459697B8C3AC8EFDAB991</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In web search scenarios, erroneous queries frequently degrade users&apos; experience through irrelevant results, underscoring the pivotal role of Chinese Spelling Check (CSC) systems. Although large language models (LLMs) exhibit remarkable capabilities across many tasks, they face critical challenges in the CSC scenario: (1) poor generalization to rare entities in open-domain searches, and (2) failure to adapt to temporal entity variations due to static parameters, resulting in serious overcorrection issues. To tackle this, we present RACQC, a Chinese Query Correction system with Retrieval-Augmented Generation(RAG) and multi-task learning. Specifically, our approach (1) integrates dynamic knowledge retrieval through entity-centric RAG to address rare entities and innovatively proposes an entity-title collaborative corpus, and (2) employs contrastive correction tasks to mitigate LLM over-correction tendencies. Furthermore, we propose MDCQC, a Multi-Domain Chinese Query Correction benchmark to test the model&apos;s entity correction capabilities. Extensive experiments on several datasets show that RACQC significantly outperforms existing baselines in CSC tasks. Specifically, RACQC achieves a maximum improvement of +9.92% on the search scenario benchmark and +3.2% on the general-domain dataset under the F 1 metric. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

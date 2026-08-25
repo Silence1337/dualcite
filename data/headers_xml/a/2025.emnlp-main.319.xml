@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Glider: Global and Local Instruction-Driven Expert Router</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Pingzhi</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Prateek</forename><surname>Yadav</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaehong</forename><surname>Yoon</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanyang Technological University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Peng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi-Lin</forename><surname>Sung</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohit</forename><surname>Bansal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianlong</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of North Carolina at Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Glider: Global and Local Instruction-Driven Expert Router</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">815FA7BF18C4A7F7FD1F084129B89FAF</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The development of performant pre-trained models has driven the advancement of routingbased expert models tailored to specific tasks. However, these methods often favor generalization over performance on held-in tasks. This limitation adversely impacts practical applicability, as real-world deployments require robust performance across both known and novel tasks. We observe that current token-level routing mechanisms neglect the global semantic context of the input task. To address this, we propose a novel method, Global and Local Instruction Driven Expert Router (GLIDER) that proposes a multi-scale routing mechanism, encompassing a semantic global router and a learned local router. The global router leverages recent LLMs&apos; semantic reasoning capabilities to generate task-specific instructions from the input query, guiding expert selection across all layers. This global guidance is complemented by a local router that facilitates token-level routing decisions within each module, enabling finer control and enhanced performance on unseen and challenging tasks. Our experiments using T5-based expert models for T0 and FLAN tasks demonstrate that GLIDER achieves substantially improved held-in performance while maintaining strong generalization on held-out tasks. Additionally, we perform ablations experiments to dive deeper into the components of GLIDER and plot routing distributions to show that GLIDER can effectively retrieve the correct expert for held-in tasks while also demonstrating compositional capabilities for held-out tasks. Our experiments highlight the importance of our multi-scale routing that leverages LLM-driven semantic reasoning for MoErging methods.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

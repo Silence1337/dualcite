@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Ontology-Guided Knowledge Graph Retrieval for Multi-Hop and Cross-Granularity Store Fulfillment Queries</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mengyue</forename><surname>Zhao</surname></persName>
+							<email>mengyue.zhao@target.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wenbo</forename><surname>Dong</surname></persName>
+							<email>wenbo.dong@target.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Matthew</forename><surname>Nokleby</surname></persName>
+							<email>matthew.nokleby@target.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Deepti</forename><surname>Pachauri</surname></persName>
+							<email>deepti.pachauri@target.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Shen</surname></persName>
+							<email>bo.shen@target.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Yang</surname></persName>
+							<email>andrew.yang@target.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Mahew</forename><surname>Nokleby</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Ontology</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Target Corporation Minneapolis</orgName>
+								<address>
+									<region>MN</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Target Corporation Sunnyvale</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Target Corporation Minneapolis</orgName>
+								<address>
+									<region>MN</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Target Corporation Minneapolis</orgName>
+								<address>
+									<region>MN</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Target Corporation Sunnyvale</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Target Corporation Minneapolis</orgName>
+								<address>
+									<region>MN</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Ontology-Guided Knowledge Graph Retrieval for Multi-Hop and Cross-Granularity Store Fulfillment Queries</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EBF97341D7BA08612CF2706C622D431F</idno>
+					<idno type="DOI">10.1145/3726302.3731964</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:45+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Computing methodologies → Artificial intelligence → Knowledge representation and reasoning</term>
+					<term>Information systems → Information retrieval → Information retrieval query processing Knowledge graph</term>
+					<term>multi-hop reasoning</term>
+					<term>ontology-driven retrieval</term>
+					<term>Large Language Model</term>
+					<term>text-to-Cypher</term>
+					<term>natural language processing</term>
+					<term>hybrid search</term>
+					<term>store fulfillment</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Answering complex queries in store fulfillment, such as &quot;What percentage of employee-assigned actions remain unresolved?&quot; or &quot;How many worklists for a specific product type were completed within a timeframe at each location?&quot; requires precise, multi-hop reasoning across datasets with varying granularities. This paper introduces an ontology-based knowledge graph (KG) approach integrated with a structured text-to-Cypher generation pipeline, enabling accurate retrieval for such queries. Benchmarking against a robust hybrid search baseline combining BM25 and semantic search, our method demonstrates superior performance in addressing multi-hop and cross-granularity questions. Leveraging a KG schema designed to capture intricate relationships (e.g., (OrderLineItem)-[:INVOLVES_ACTION]-&gt;(Action)-[:INVOLVES]-&gt;(BatchProcess)-[:IS_COMPLETED_AT]-&gt;(Location)), we reveal universal patterns for constructing and querying highly relational data. This work highlights the transformative potential of ontology-driven KGs to improve reasoning, data aggregation, and decisionmaking, with broader implications for any domain requiring structured, multi-relational data analysis.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

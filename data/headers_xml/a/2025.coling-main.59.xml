@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LLMTreeRec: Unleashing the Power of Large Language Models for Cold-Start Recommendations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenlin</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">City University of Hong Kong</orgName>
+								<address>
+									<settlement>Hong Kong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chuhan</forename><surname>Wu</surname></persName>
+							<email>wuchuhan1@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Noah&apos;s Ark Lab</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyang</forename><surname>Li</surname></persName>
+							<email>lixiangyang34@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Noah&apos;s Ark Lab</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhao</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">City University of Hong Kong</orgName>
+								<address>
+									<settlement>Hong Kong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kuicai</forename><surname>Dong</surname></persName>
+							<email>dong.kuicai@huawei.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Noah&apos;s Ark Lab</orgName>
+								<address>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yichao</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Noah&apos;s Ark Lab</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyi</forename><surname>Dai</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Noah&apos;s Ark Lab</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Zhao</surname></persName>
+							<email>xianzhao@cityu.edu.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">City University of Hong Kong</orgName>
+								<address>
+									<settlement>Hong Kong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huifeng</forename><surname>Guo</surname></persName>
+							<email>huifeng.guo@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Noah&apos;s Ark Lab</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruiming</forename><surname>Tang</surname></persName>
+							<email>tangruiming@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Noah&apos;s Ark Lab</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LLMTreeRec: Unleashing the Power of Large Language Models for Cold-Start Recommendations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BECF1B9E91EBE0DE8B8D296BF1F449B3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The lack of training data gives rise to the system cold-start problem in recommendation systems, making them struggle to provide effective recommendations. To address this problem, Large Language Models(LLMs) can model recommendation tasks as language analysis tasks and provide zero-shot results based on their vast open-world knowledge. However, the large scale of the item corpus poses a challenge to LLMs, leading to substantial token consumption that makes it impractical to deploy in realworld recommendation systems. To tackle this challenge, we introduce a tree-based LLM recommendation framework LLMTreeRec, which structures all items into an item tree to improve the efficiency of LLM&apos;s item retrieval. LLMTreeRec achieves state-of-the-art performance under the system cold-start setting in two widely used datasets, which is even competitive with conventional deep recommendation systems that use substantial training data. Furthermore, LLMTreeRec outperforms the baseline model in the A/B test on Huawei industrial system. Consequently, LLMTreeRec demonstrates its effectiveness as an industryfriendly solution that has been successfully deployed online. Our code is available at: 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

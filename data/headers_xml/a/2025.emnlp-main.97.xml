@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CACHE-OF-THOUGHT: Master-Apprentice Framework for Cost-Effective Vision Language Model Reasoning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mingyuan</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jize</forename><surname>Jiang</surname></persName>
+							<email>jizej2@cs.illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haozhen</forename><surname>Zheng</surname></persName>
+							<email>haozhen3@cs.illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Meitang</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Michigan</orgName>
+								<address>
+									<settlement>Ann Arbor</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhaoheng</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Beitong</forename><surname>Tian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yongjoo</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minjia</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengxiang</forename><surname>Zhai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Klara</forename><surname>Nahrstedt</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<country>Urbana Champaign</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CACHE-OF-THOUGHT: Master-Apprentice Framework for Cost-Effective Vision Language Model Reasoning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4933355FEEC7231BBD8AC75774821BE2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Vision Language Models (VLMs) have achieved remarkable success in a wide range of vision applications of increasing complexity and scales, yet choosing the right VLM model size involves a trade-off between response quality and cost. While smaller VLMs are cheaper to run, they typically produce responses only marginally better than random guessing on benchmarks such as MMMU. In this paper, we propose Cache of Thought (CoT), a master-apprentice framework for collaborative inference between large and small VLMs. CoT manages high-quality query results from large VLMs (master) in a cache, which are then selected via a novel multi-modal retrieval and in-context learning to aid the performance of small VLMs (apprentice). We extensively evaluate CoT on various widelyrecognized and challenging general reasoning benchmarks, and show that CoT increases overall reasoning performance by up to 7.7% under the same budget, and specifically boosts the reasoning performance of apprentice VLMs by up to 36.6%. Our code is available at https://github.com/UIUC-MONET/Cache-of-Thoughts.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

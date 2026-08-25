@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Modular Approach for Clinical SLMs Driven by Synthetic Data with Pre-Instruction Tuning, Model Merging, and Clinical-Tasks Alignment</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jean-Philippe</forename><surname>Corbeil</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Microsoft Healthcare &amp; Life Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amin</forename><surname>Dada</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">IKIM</orgName>
+								<orgName type="institution" key="instit2">University Hospital Essen</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jean-Michel</forename><surname>Attendu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Microsoft Healthcare &amp; Life Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Asma</forename><forename type="middle">Ben</forename><surname>Abacha</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Microsoft Healthcare &amp; Life Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alessandro</forename><surname>Sordoni</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Research Montréal</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">Mila</orgName>
+								<orgName type="institution" key="instit2">Université de Montréal</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lucas</forename><surname>Caccia</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Research Montréal</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">François</forename><surname>Beaulieu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Microsoft Healthcare &amp; Life Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Lin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Microsoft Healthcare &amp; Life Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jens</forename><surname>Kleesiek</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">IKIM</orgName>
+								<orgName type="institution" key="instit2">University Hospital Essen</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Paul</forename><surname>Vozila</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Microsoft Healthcare &amp; Life Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Modular Approach for Clinical SLMs Driven by Synthetic Data with Pre-Instruction Tuning, Model Merging, and Clinical-Tasks Alignment</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EFF1878CB13E1655EA2D237887F5C1E4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>High computation costs and latency of large language models such as GPT-4 have limited their deployment in clinical settings. Small language models (SLMs) offer a cost-effective alternative, but their limited capacity requires biomedical domain adaptation, which remains challenging. An additional bottleneck is the unavailability and high sensitivity of clinical data. To address these challenges, we propose a novel framework for adapting SLMs into high-performing clinical models. We introduce the MediPhi collection of 3.8B-parameter SLMs developed with our novel framework: pre-instruction tuning of experts on relevant medical and clinical corpora (PMC, Medical Guideline, MedWiki, etc.), model merging, and clinical-tasks alignment. To cover most clinical tasks, we extended the CLUE benchmark to CLUE+, doubling its size. Our expert models deliver relative improvements on this benchmark over the base model without any task-specific fine-tuning: 64.3% on medical entities, 49.5% on radiology reports, and 44% on ICD-10 coding (outperforming GPT-4-0125 by 14%). We unify the expert models into MediPhi via model merging, preserving gains across benchmarks. Furthermore, we built the MediFlow collection, a synthetic dataset of 2.5 million high-quality instructions on 14 medical NLP tasks, 98 fine-grained document types, and JSON format support. Alignment of MediPhi using supervised fine-tuning and direct preference optimization achieves further gains of 18.9% on average.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

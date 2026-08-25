@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DSVD: Dynamic Self-Verify Decoding for Faithful Generation in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yiqiu</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratory</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuchen</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratory</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhe</forename><surname>Chen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratory</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Shanghai JiaoTong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pingjie</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratory</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Shanghai JiaoTong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yusheng</forename><surname>Liao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratory</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Shanghai JiaoTong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ya</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratory</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Shanghai JiaoTong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanfeng</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratory</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Shanghai JiaoTong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Laboratory</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Shanghai JiaoTong University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DSVD: Dynamic Self-Verify Decoding for Faithful Generation in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">ED60945E35806CB8F92D543C68CAEC38</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The reliability of large language models remains a critical challenge, particularly due to their susceptibility to hallucinations and factual inaccuracies during text generation. Existing solutions either underutilize models&apos; selfcorrection with preemptive strategies or use costly post-hoc verification. To further explore the potential of real-time self-verification and correction, we present Dynamic Self-Verify Decoding (DSVD), a novel decoding framework that enhances generation reliability through real-time hallucination detection and efficient error correction. DSVD integrates two key components: (1) parallel self-verification architecture for continuous quality assessment, (2) dynamic rollback mechanism for targeted error recovery. Extensive experiments across five benchmarks demonstrate DSVD&apos;s effectiveness, achieving significant improvement in truthfulness (Quesetion-Answering) and factual accuracy (FActScore). Results show the DSVD can be further incorporated with existing faithful decoding methods to achieve stronger performance. Our work establishes that real-time self-verification during generation offers a viable path toward more faithful language models without sacrificing practical deployability.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

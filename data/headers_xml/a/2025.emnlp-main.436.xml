@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DocReRank: Single-Page Hard Negative Query Generation for Training Multi-Modal RAG Rerankers</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Navve</forename><surname>Wasserman</surname></persName>
+							<email>navve.wasserman@weizmann.ac.il</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Weizmann Institute of Science</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Oliver</forename><surname>Heinimann</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Weizmann Institute of Science</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuval</forename><surname>Golbari</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Weizmann Institute of Science</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tal</forename><surname>Zimbalist</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Weizmann Institute of Science</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Eli</forename><surname>Schwartz</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">IBM Research Israel</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michal</forename><surname>Irani</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Weizmann Institute of Science</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DocReRank: Single-Page Hard Negative Query Generation for Training Multi-Modal RAG Rerankers</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">894FC954CB6A43F430530F3B9E80F33B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:59+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Rerankers play a critical role in multimodal Retrieval-Augmented Generation (RAG) by refining ranking of an initial set of retrieved documents. Rerankers are typically trained using hard negative mining, whose goal is to select pages for each query which rank high, but are actually irrelevant. However, this selection process is typically passive and restricted to what the retriever can find in the available corpus, leading to several inherent limitations. These include: limited diversity, negative examples which are often not hard enough, low controllability, and frequent false negatives which harm training. Our paper proposes an alternative approach: Single-Page Hard Negative Query Generation, which goes the other way around. Instead of retrieving negative pages per query, we generate hard negative queries per page. Using an automated LLM-VLM pipeline, and given a page and its positive query, we create hard negatives by rephrasing the query to be as similar as possible in form and context, yet not answerable from the page. This paradigm enables fine-grained control over the generated queries, resulting in diverse, hard, and targeted negatives. It also supports efficient false negative verification. Our experiments show that rerankers trained with data generated using our approach outperform existing models and significantly improve retrieval performance 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

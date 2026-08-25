@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">KITAB-Bench: A Comprehensive Multi-Domain Benchmark for Arabic OCR and Document Understanding</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ahmed</forename><surname>Heakl</surname></persName>
+							<email>ahmed.heakl@mbzuai.ac.ae</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Abdullah</forename><surname>Sohail</surname></persName>
+							<email>mabdullah.sohail@mbzuai.ac.ae</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mukul</forename><surname>Ranjan</surname></persName>
+							<email>mukul.ranjan@mbzuai.ac.ae</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rania</forename><surname>Hossam</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ghazi</forename><surname>Ahmad</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohamed</forename><surname>El-Geish</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Omar</forename><surname>Maher</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiqiang</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fahad</forename><surname>Khan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Salman</forename><surname>Khan</surname></persName>
+							<email>salman.khan@mbzuai.ac.ae</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Monta</forename><surname>Ai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Linköping University ♢ Australian National University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">KITAB-Bench: A Comprehensive Multi-Domain Benchmark for Arabic OCR and Document Understanding</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6DDBC87944A03586865AEB978B794518</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>With the growing adoption of Retrieval-Augmented Generation (RAG) in document processing, robust text recognition has become increasingly critical for knowledge extraction. While OCR (Optical Character Recognition) for English and other languages benefits from large datasets and well-established benchmarks, Arabic OCR faces unique challenges due to its cursive script, right-to-left text flow, and complex typographic and calligraphic features. We present KITAB-Bench, a comprehensive Arabic OCR benchmark that fills the gaps in current evaluation systems. Our benchmark comprises 8,809 samples across 9 major domains and 36 sub-domains, encompassing diverse document types including handwritten text, structured tables, and specialized coverage of 21 chart types for business intelligence. Our findings show that modern vision-language models (such as GPT-4, Gemini, and Qwen) outperform traditional OCR approaches (like Easy-OCR, PaddleOCR, and Surya) by an average of 60% in Character Error Rate (CER). Furthermore, we highlight significant limitations of current Arabic OCR models, particularly in PDF-to-Markdown conversion, where the best model Gemini-2.0-Flash achieves only 65% accuracy. This underscores the challenges in accurately recognizing Arabic text, including issues with complex fonts, numeral recognition errors, word elongation, and table structure detection. This work establishes a rigorous evaluation framework that can drive improvements in Arabic document analysis methods and bridge the performance gap with English OCR technologies.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

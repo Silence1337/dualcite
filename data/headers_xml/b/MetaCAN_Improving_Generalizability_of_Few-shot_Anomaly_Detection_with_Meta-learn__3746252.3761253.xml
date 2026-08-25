@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MetaCAN: Improving Generalizability of Few-shot Anomaly Detection with Meta-learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhisheng</forename><surname>Lv</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jianfeng</forename><surname>Zhang</surname></persName>
+							<email>jfzhang@nudt.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Songlei</forename><surname>Jian</surname></persName>
+							<email>jiansonglei@nudt.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Chenlin</forename><surname>Huang</surname></persName>
+							<email>clhuang@nudt.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hongguang</forename><surname>Zhang</surname></persName>
+							<email>zhang.hongguang@outlook.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Guansong</forename><surname>Pang</surname></persName>
+							<email>pangguansong@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhong</forename><surname>Liu</surname></persName>
+							<email>zhongliu@nudt.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology Changsha</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology Changsha</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology Changsha</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology Changsha</orgName>
+								<address>
+									<addrLine>PLA Beijing</addrLine>
+									<postCode>32010</postCode>
+									<settlement>Unit</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">School of Computing and Information Systems</orgName>
+								<orgName type="institution">Singapore Management University</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology Changsha</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MetaCAN: Improving Generalizability of Few-shot Anomaly Detection with Meta-learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7335466F4E69DCF55D0A7A7038128222</idno>
+					<idno type="DOI">10.1145/3746252.3761253</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Anomaly Detection</term>
+					<term>Meta Learning</term>
+					<term>Few-shot Learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Few-shot Anomaly Detection (AD) for images aims to detect anomalies with few-shot normal samples from the target dataset. It is a crucial task when only few samples can be obtained, and it is challenging since it needs to be generalized to different domains. Existing methods try to enhance the generalizability of AD by incorporating large vision-language models (LVLMs). However, how to transform category semantic information in LVLMs into anomaly information to improve the generalizability of AD remains a challenge facing existing methods. To address the challenge, we propose a few-shot AD method called MetaCAN, a novel categoryto-anomaly network trained with AD meta-learning scheme based on an LVLM. Specifically, MetaCAN constructs the auxiliary training data and multiple tasks based on different categories to perform AD meta-learning, which ensures that the optimization toward the achievement of optimal anomaly detection across all categories. Moreover, MetaCAN introduces an image-image anomaly discriminator and an image-text anomaly detector to fully exploit the * Equal contributions.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Guide To Effectively Leveraging LLMs for Low-Resource Text Summarization: Data Augmentation and Semi-supervised Approaches</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Gaurav</forename><surname>Sahu</surname></persName>
+							<email>gaurav.sahu@uwaterloo.ca</email>
+							<affiliation key="aff0">
+								<orgName type="department">Cheriton School of Computer Science</orgName>
+								<orgName type="institution">University of Waterloo</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">ServiceNow Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Olga</forename><surname>Vechtomova</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Cheriton School of Computer Science</orgName>
+								<orgName type="institution">University of Waterloo</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Issam</forename><forename type="middle">H</forename><surname>Laradji</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Cheriton School of Computer Science</orgName>
+								<orgName type="institution">University of Waterloo</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">ServiceNow Research</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">University of British Columbia</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Guide To Effectively Leveraging LLMs for Low-Resource Text Summarization: Data Augmentation and Semi-supervised Approaches</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F077845A2203CDA067AA67B91A712873</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Existing approaches for low-resource text summarization primarily employ large language models (LLMs) like GPT-3 or GPT-4 at inference time to generate summaries directly; however, such approaches often suffer from inconsistent LLM outputs and are difficult to adapt to domain-specific data in low-resource scenarios. In this work, we propose two novel methods to effectively utilize LLMs for low-resource text summarization: 1) MixSumm, an LLMbased data augmentation regime that synthesizes high-quality documents (short and long) for few-shot text summarization, and 2) PPSL, a prompt-based pseudolabeling strategy for sample-efficient semi-supervised text summarization. Specifically, MixSumm leverages the open-source LLaMA-3-70b-Instruct model to generate new documents by mixing topical information derived from a small seed set, and PPSL leverages the LLaMA-3-70b-Instruct model to generate high-quality pseudo-labels in a semi-supervised learning setup. We evaluate our methods on the TweetSumm, Wiki-How, and ArXiv/PubMed datasets and use L-Eval, a LLaMA-3-based evaluation metric, and ROUGE scores to measure the quality of generated summaries. Our experiments on extractive and abstractive summarization show that Mix-Summ and PPSL achieve competitive ROUGE scores as a fully supervised method with 5% of the labeled data. We release our codebase here: https://github.com/ServiceNow/ text-summarization-with-llms/</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

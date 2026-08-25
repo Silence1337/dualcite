@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SST: Multi-Scale Hybrid Mamba-Transformer Experts for Time Series Forecasting</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiongxiao</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Canyu</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yueqing</forename><surname>Liang</surname></persName>
+							<email>yliang40@hawk.illinoistech.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Baixiang</forename><surname>Huang</surname></persName>
+							<email>baixiang.huang@emory.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Guangji</forename><surname>Bai</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Zhao</surname></persName>
+							<email>liang.zhao@emory.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Shu</surname></persName>
+							<email>kai.shu@emory.edu</email>
+						</author>
+						<author>
+							<persName><surname>Sst</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Illinois Institute of Technology Chicago</orgName>
+								<address>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Illinois Institute of Technology Chicago</orgName>
+								<address>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Illinois Institute of Technology Chicago</orgName>
+								<address>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Emory University Atlanta</orgName>
+								<address>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Emory University Atlanta</orgName>
+								<address>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Emory University Atlanta</orgName>
+								<address>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Emory University Atlanta</orgName>
+								<address>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SST: Multi-Scale Hybrid Mamba-Transformer Experts for Time Series Forecasting</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6E4DB7F318A1C2665F880CF893BE8CBB</idno>
+					<idno type="DOI">10.1145/3746252.3761394</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Time Series Forecasting</term>
+					<term>Mamba</term>
+					<term>Transformer</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Time series forecasting has made significant advances, including with Transformer-based models. The attention mechanism in Transformer effectively captures temporal dependencies by attending to all past inputs simultaneously. However, its quadratic computational complexity with respect to sequence length limits the scalability for long-range modeling. Recent state space models (SSMs) such as Mamba offer a promising alternative by achieving linear complexity without attention. Yet, Mamba compresses historical information into a fixed-size latent state, potentially causing information loss and limiting representational effectiveness. This raises a key research question: Can we design a hybrid Mamba-Transformer architecture that is both effective and efficient for time series forecasting? To address it, we adapt a hybrid Mamba-Transformer architecture Mambaformer, originally proposed for language modeling, to the time series domain. Preliminary experiments reveal that naively stacking Mamba and Transformer layers in Mambaformer is suboptimal for time series forecasting, due to an information interference problem. To mitigate this issue, we introduce a new time series decomposition strategy that separates time series into long-range patterns and short-range variations. Then we show that Mamba excels at capturing long-term structures, while Transformer is more effective at modeling short-term dynamics. Building on this insight, we propose State Space Transformer (SST), a multiscale hybrid model with expert modules: a Mamba expert for longrange patterns and a Transformer expert for short-term variations. To facilitate learning the patterns and variations, SST employs a multi-scale patching mechanism to adaptively adjust time series resolution: low resolution for long-term patterns and high resolution for short-term variations. Comprehensive experiments on This work is licensed under a Creative Commons Attribution 4.0 International License. CIKM &apos;25, Seoul, Republic of Korea</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rethinking Pseudo Word Learning in Zero-Shot Composed Image Retrieval: From an Object-Aware Perspective</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhe</forename><surname>Li</surname></persName>
+							<idno type="ORCID">0000-0003-4716-614X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Lei</forename><surname>Zhang</surname></persName>
+							<idno type="ORCID">0000-0002-2839-8693</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Kun</forename><surname>Zhang</surname></persName>
+							<email>kkzhang@ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Weidong</forename><surname>Chen</surname></persName>
+							<email>chenweidong@ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yongdong</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhendong</forename><surname>Mao</surname></persName>
+							<email>zdmao@ustc.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">Suzhou Institute for Advance Research</orgName>
+								<orgName type="institution" key="instit2">USTC Suzhou</orgName>
+								<address>
+									<settlement>Jiangsu</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rethinking Pseudo Word Learning in Zero-Shot Composed Image Retrieval: From an Object-Aware Perspective</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B768B7F2CC37E3275D77394FBAB61113</idno>
+					<idno type="DOI">10.1145/3726302.3730074</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Composed image retrieval</term>
+					<term>Zero-shot learning</term>
+					<term>Multimodal retrieval</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Composed Image Retrieval (CIR) takes a composed query of a reference image and a text describing the user&apos;s intention, with the aim to retrieve the target image under both conditions. Conventional CIR approaches heavily rely on massive annotated triplets, which often comes at a considerable cost. Zero-Shot CIR (ZS-CIR) offers a new solution that can perform diverse CIR tasks without training on the triplet datasets. The key to the ZS-CIR task is to make specified changes to specific objects in the reference image based on the text. Previous works utilize a projection module to map the reference image into single or multiple pseudo words. However, they are either only applicable to single-object scenarios, or naively convert entire image features into multiple pseudo words and fail to focus on the desired target objects specified by the text description. In this work, we rethink how to learn pseudo words based on the objects attended by the text and propose a Multi-Object Aware ZS-CIR framework (MOA). Specifically, a multi-object recognizer first recognizes valid objects in the reference image guided by a set of learnable object queries. Then, we devise an object filtering strategy, which utilizes contextual prompts comprised of noun categories to guide the model in precisely screening out the objects that need to be modified. Finally, the pseudo word learning branch adaptively converts the screened objects into multiple pseudo words for accurate ZS-CIR. Although simple, our MOA consistently outperforms previous state-of-the-art methods across diverse benchmarks and even achieves competitive results with many supervised methods. CCS Concepts • Information systems → Image search.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

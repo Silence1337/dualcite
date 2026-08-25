@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FinSage: A Multi-aspect RAG System for Financial Filings Question Answering</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Wang</surname></persName>
+							<email>xinyu.wang5@mail.mcgill.ca</email>
+							<idno type="ORCID">0009-0004-0521-2077</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jijun</forename><surname>Chi</surname></persName>
+							<idno type="ORCID">0009-0002-0057-9174</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenghan</forename><surname>Tai</surname></persName>
+							<idno type="ORCID">0009-0003-3896-5131</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Tung</forename><surname>Sum</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Kwok</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hailin</forename><surname>He</surname></persName>
+							<idno type="ORCID">0009-0002-5825-3089</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Zhuhong</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yuchen</forename><surname>Hua</surname></persName>
+							<idno type="ORCID">0009-0002-4214-3344</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Muzhi</forename><surname>Li</surname></persName>
+							<email>mzli@cse.cuhk.edu.hk</email>
+							<idno type="ORCID">0009-0008-1331-3061</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Lu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Suyuchen</forename><surname>Wang</surname></persName>
+							<email>suyuchen.wang@umontreal.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yihong</forename><surname>Wu</surname></persName>
+							<email>yihong.wu@umontreal.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jerry</forename><surname>Huang</surname></persName>
+							<email>jerryhuang265@hotmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jingrui</forename><surname>Tian</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Fengran</forename><surname>Mo</surname></persName>
+							<email>fengran.mo@umontreal.ca</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yufei</forename><surname>Cui</surname></persName>
+							<email>yufeicui92@gmail.com</email>
+							<idno type="ORCID">0000-0002-9663-0079</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ling</forename><surname>Zhou</surname></persName>
+							<email>ling.zhou@cgmatrix.com</email>
+							<idno type="ORCID">0009-0006-7548-0899</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">SimpleWay.AI Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">SimpleWay.AI Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">SimpleWay.AI Toronto</orgName>
+								<address>
+									<region>ON</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">SimpleWay.AI Los Angeles</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">SimpleWay.AI Chengdu</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">SimpleWay.AI Durham</orgName>
+								<address>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">SimpleWay.AI Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">The Chinese University of Hong Kong Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff8">
+								<orgName type="institution">Université de Montréal Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff9">
+								<orgName type="institution">Mila -Quebec AI Institute Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff10">
+								<orgName type="institution">Université de Montréal Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff11">
+								<orgName type="institution">Mila -Quebec AI Institute Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff12">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>Los Angeles Los Angeles</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff13">
+								<orgName type="institution">Université de Montréal Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff14">
+								<orgName type="institution">McGill University Montreal</orgName>
+								<address>
+									<region>QC</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff15">
+								<orgName type="institution">CG Matrix Technology Limited Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FinSage: A Multi-aspect RAG System for Financial Filings Question Answering</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">965FCED534286038A7A8D156E931CAC8</idno>
+					<idno type="DOI">10.1145/3746252.3761587</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Leveraging large language models in real-world settings often entails a need to utilize domain-specific data and tools in order to follow the complex regulations that need to be followed for acceptable use. Within financial sectors, modern enterprises increasingly rely on Retrieval-Augmented Generation (RAG) systems to address complex information retrieval in financial document workflows. However, existing solutions struggle to account for the inherent heterogeneity of data (e.g., text, tables, diagrams) and evolving complexity in financial filings, leading to compromised accuracy in critical information extraction. We propose the FinSage framework as a solution, utilizing a multi-aspect RAG framework tailored for data</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

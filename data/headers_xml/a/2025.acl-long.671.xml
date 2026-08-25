@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jaeseong</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Snowflake AI Research</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seung-Won</forename><surname>Hwang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Snowflake AI Research</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aurick</forename><surname>Qiao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Snowflake AI Research</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Campos</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Snowflake AI Research</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhewei</forename><surname>Yao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Snowflake AI Research</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuxiong</forename><surname>He</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Snowflake AI Research</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">11D043D7AD71B00CED0AF64A3964C8F7</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Mixture-of-experts (MoEs) have been adopted to reduce inference costs by sparsely activating experts in large language models (LLMs). Despite these reductions, the massive number of parameters in MoEs still makes them expensive to serve. Conventionally, unstructured or structured pruning has been considered to reduce the number of parameters. Our key contribution is exploring the interpolation between structured and unstructured pruning, to propose a novel structured-then-unstructured (STUN) approach outperforming both structured and unstructured pruning, especially for MoEs. In the first stage, we show a scalable expert pruning with O(1) forward pass, unlike existing work requiring O(k n √ n) forward passes for n experts that cannot scale for recent MoEs with hundreds of experts. We then show our expert-pruned MoEs are robust to unstructured pruning to follow. Experiments on Snowflake Arctic and Mixtral show that our proposal is highly effective-For Snowflake Arctic, a 480B-sized MoE with 128 experts, our method needs only one H100 and two hours to achieve nearly no loss in performance with 40% sparsity, even in generative tasks such as GSM8K, where state-of-the-art structured or unstructured pruning methods fail. The code is publicly available. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Learnable Orthogonal Decomposition for Non-Regressive Prediction for PDE</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yun</forename><forename type="middle">Young</forename><surname>Choi</surname></persName>
+							<idno type="ORCID">0000-0002-6017-258X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Kyujin</forename><surname>Han</surname></persName>
+							<email>kyujin@postech.ac.kr</email>
+							<idno type="ORCID">0000-0002-9504-9768</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Solverx</forename><surname>Seoul</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">South</forename><surname>Korea</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Joohwan</forename><surname>Ko</surname></persName>
+							<email>joohwanko@cs.umass.edu</email>
+							<idno type="ORCID">0000-0002-4741-9189</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Sangwook</forename><surname>Baek</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">SolverX Seoul</orgName>
+								<orgName type="institution">University of Massachusetts Amherst Amherst</orgName>
+								<address>
+									<region>Massachusetts</region>
+									<country>South Korea United States Sangwook Baek</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">SolverX Seoul</orgName>
+								<orgName type="institution">Seunghwan Lee</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">SolverX Seoul</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Learnable Orthogonal Decomposition for Non-Regressive Prediction for PDE</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">00AA356A8A74D1D32396F73D06840F43</idno>
+					<idno type="DOI">10.1145/3746252.3761364</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Spatiotemporal Learning</term>
+					<term>Scientific Machine Learning</term>
+					<term>Proper Orthogonal Decomposition</term>
+					<term>Non-regressive Forecasting</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Modeling the spatio-temporal evolution of complex physical systems remains a fundamental challenge in both deep learning and scientific computing. While recent methods such as Transformers and Neural Operators have shown promise in learning PDE solutions, their reliance on auto-regressive forecasting often increases computational overhead and accumulates prediction errors over time. In this paper, we propose Learnable Orthogonal Decomposition (LOD), a non-regressive framework that integrates ideas from classical Proper Orthogonal Decomposition (POD) with modern deep learning. LOD first performs parameter-wise POD: at each time step, we apply POD to an ensemble of PDE solutions generated under different physical parameters, yielding a time-indexed set of orthonormal spatial bases. These bases initialize a learnable dictionary and are refined during end-to-end training. Given only a short prefix of initial conditions for a target parameter setting, a neural encoder predicts-in a single shot-the entire trajectory of parameter-wise POD coefficients. The final solution field is reconstructed by combining the predicted coefficients with the learned bases, avoiding error accumulation inherent to auto-regressive strategies. Comprehensive experiments on various PDE benchmark datasets demonstrate that LOD achieves state-of-the-art accuracy while significantly reducing computational costs. The code and models are publicly available at https://github.com/voltwin-dev/LOD-ML. CCS Concepts • Computing methodologies → Neural networks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

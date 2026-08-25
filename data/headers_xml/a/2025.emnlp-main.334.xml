@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TurboRAG: Accelerating Retrieval-Augmented Generation with Precomputed KV Caches for Chunked Text</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Songshuo</forename><surname>Lu</surname></persName>
+							<email>lusongshuo97@gmail.com</email>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Moore Threads AI</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hua</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Moore Threads AI</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yutian</forename><surname>Rong</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Moore Threads AI</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhi</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Moore Threads AI</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yaohua</forename><surname>Tang</surname></persName>
+							<email>tangyaohua28@gmail.com</email>
+							<affiliation key="aff0">
+								<address>
+									<settlement>Moore Threads AI</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TurboRAG: Accelerating Retrieval-Augmented Generation with Precomputed KV Caches for Chunked Text</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C3992DA21E14B12BC485DD14346EF869</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Current Retrieval-Augmented Generation (RAG) systems concatenate and process numerous retrieved document chunks for prefill which requires a large volume of online computation, therefore leading to significant latency in time-to-first-token (TTFT). To reduce the computation overhead as well as TTFT, we introduce TurboRAG, a hybrid offline-online paradigm that (i) pre-computes chunk-level key-value (KV) caches, (ii) stitches them together at inference time using independent-attention and reordered-RoPE techniques, and (iii) preserves answer quality without changing the model architecture. Our approach is applicable to most existing large language models and their applications without any requirement in modification of models and inference systems. Experimental results across a suite of RAG benchmarks demonstrate that TurboRAG reduces TTFT by up to 9.4x compared to the conventional RAG systems (on an average of 8.6x), but reserving comparable performance to the standard RAG systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

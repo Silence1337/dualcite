@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Edge Classification on Graphs: New Directions in Topological Imbalance</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xueqi</forename><surname>Cheng</surname></persName>
+							<email>xueqi.cheng@vanderbilt.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Wang</surname></persName>
+							<email>yuwang@uoregon.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yunchao</forename><surname>Liu</surname></persName>
+							<email>yunchao.liu@vanderbilt.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yuying</forename><surname>Zhao</surname></persName>
+							<email>yuying.zhao@vanderbilt.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Charu</forename><forename type="middle">C</forename><surname>Aggarwal</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tyler</forename><surname>Derr</surname></persName>
+							<email>tyler.derr@vanderbilt.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Vanderbilt University Nashville</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Oregon Eugene</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Vanderbilt University Nashville</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Vanderbilt University Nashville</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">IBM T. J. Watson Research Center Yorktown Heights</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Vanderbilt University Nashville</orgName>
+								<address>
+									<settlement>Hannover New York</settlement>
+									<region>NY</region>
+									<country>USA Germany. ACM USA, 9 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Edge Classification on Graphs: New Directions in Topological Imbalance</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8739CBC4564474138B84D01D45FD21D9</idno>
+					<idno type="DOI">10.1145/3701551.3703518</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:32+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Edge classification</term>
+					<term>topological imbalance</term>
+					<term>graph neural network</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Recent years have witnessed the remarkable success of applying Graph Machine Learning (GML) to node/graph classification and link prediction. However, edge classification task that enjoys numerous real-world applications such as social network analysis and cybersecurity, has not seen significant advancement with the progress of GML. To address this gap, our study pioneers a comprehensive approach to edge classification. We identify a novel &apos;Topological Imbalance Issue, &apos; which arises from the skewed distribution of edges across different classes, affecting the local subgraph of each edge and harming the performance of edge classifications. Inspired by recent node-level studies observing performance discrepancies with varying local structural patterns, we aim to investigate if the topological imbalanced edge classification tasks can also be mitigated by characterizing the local class distribution variance. Thus, we introduce Topological Entropy (TE), a novel topologicalbased metric that measures the topological imbalance for each edge. Our empirical studies confirm that TE effectively measures local class distribution variance, and indicate that prioritizing edges with high TE values can help address the issue of topological imbalance. Inspired by this observation, we develop two strategies-Topological Reweighting and TE Wedge-based Mixup-to adaptively focus training on (synthetic) edges based on their TEs. While topological reweighting directly manipulates training edge weights according to TE, our wedge-based mixup interpolates synthetic edges between high TE wedges. To further enhance performance, we integrate these strategies into a novel topological imbalance strategy for edge classification: TopoEdge. Extensive experiments on real-world datasets demonstrate the efficacy of our proposed strategies 1. Additionally, our curated datasets and designed experimental settings establish a new benchmark for future edge classification research, particularly in addressing imbalance issues.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Efficient Decoding Methods for Language Models on Encrypted Data</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Matan</forename><surname>Avitan</surname></persName>
+							<idno type="ORCID">0009-0001-0762-9616</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Ilan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mora</forename><surname>Baruch</surname></persName>
+							<idno type="ORCID">0000-0003-0615-6164</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nir</forename><surname>Druck</surname></persName>
+							<idno type="ORCID">0000-0002-7273-4797</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Itamar</forename><surname>Zimerman</surname></persName>
+							<idno type="ORCID">0000-0001-8321-0609</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yoav</forename><surname>Goldberg</surname></persName>
+							<idno type="ORCID">0000-0002-6497-829X</idno>
+							<affiliation key="aff1">
+								<orgName type="institution">Ilan University</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Allen Institute for Artificial Intelligence</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Efficient Decoding Methods for Language Models on Encrypted Data</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">13F3DD9CF63CDCC9D29AC82E411B4DB5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) power modern AI applications, but processing sensitive data on untrusted servers raises privacy concerns. Homomorphic encryption (HE) enables computation on encrypted data for secure inference. However, neural text generation requires decoding methods like argmax and sampling, which are non-polynomial and thus computationally expensive under encryption, creating a significant performance bottleneck. We introduce CutMax, an HE-friendly argmax algorithm that reduces ciphertext operations compared to prior methods, enabling practical greedy decoding under encryption. We also propose the first HE-compatible nucleus (topp) sampling method, leveraging CutMax for efficient stochastic decoding with provable privacy guarantees. Both techniques are polynomial, supporting efficient inference in privacypreserving settings. Moreover, their differentiability facilitates gradient-based sequencelevel optimization as a polynomial alternative to straight-through estimators. We further provide strong theoretical guarantees for CutMax, proving its convergence via exponential amplification of the gap ratio between the maximum and runner-up elements. Evaluations on realistic LLM outputs show latency reductions of 24×-35× over baselines, advancing secure text generation.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

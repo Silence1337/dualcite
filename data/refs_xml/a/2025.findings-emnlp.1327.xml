@@ -1,0 +1,1334 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">TaskDiff: A Similarity Metric for Task-Oriented Conversations</title>
+		<author>
+			<persName><forename type="first">Josh</forename><surname>Achiam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sandhini</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lama</forename><surname>Ahmad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilge</forename><surname>Akkaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Florencia</forename><surname>Leoni Aleman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diogo</forename><surname>Almeida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Janko</forename><surname>Altenschmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sam</forename><surname>Altman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shyamal</forename><surname>Anadkat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Red</forename><surname>Avila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Igor</forename><surname>Babuschkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Suchir</forename><surname>Balaji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Valerie</forename><surname>Balcom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Baltescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haiming</forename><surname>Bao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Bavarian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeff</forename><surname>Belgum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Irwan</forename><surname>Bello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jake</forename><surname>Berdine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriel</forename><surname>Bernadett-Shapiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Berner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lenny</forename><surname>Bogdonoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oleg</forename><surname>Boiko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Madelaine</forename><surname>Boyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anna-Luisa</forename><surname>Brakman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Brockman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Brooks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Miles</forename><surname>Brundage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Button</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Trevor</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rosie</forename><surname>Campbell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Cann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brittany</forename><surname>Carey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chelsea</forename><surname>Carlson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rory</forename><surname>Carmichael</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brooke</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vatche</forename><surname>Isahagian</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2023.emnlp-main.1009</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2023 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Conversation level syntax similarity metric</title>
+		<author>
+			<persName><forename type="first">Reihane</forename><surname>Boghrati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joe</forename><surname>Hoover</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kate</forename><forename type="middle">M</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justin</forename><surname>Garten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Morteza</forename><surname>Dehghani</surname></persName>
+		</author>
+		<idno type="DOI">10.3758/s13428-017-0926-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Behavior Research Methods</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1055" to="1073" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Developing persuasive systems for marketing: the interplay of persuasion techniques, customer traits and persuasive message design</title>
+		<author>
+			<persName><forename type="first">Annye</forename><surname>Braca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierpaolo</forename><surname>Dondio</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s43039-023-00077-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Italian Journal of Marketing</title>
+		<imprint>
+			<biblScope unit="volume">2023</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="369" to="412" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">ConvoKit: A Toolkit for the Analysis of Conversations</title>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caleb</forename><surname>Chiam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liye</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justine</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.sigdial-1.8</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of SIG-DIAL</title>
+		<meeting>SIG-DIAL</meeting>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Trouble on the Horizon: Forecasting the Derailment of Online Conversations as they Develop</title>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D19-1481</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of EMNLP-IJCNLP</title>
+		<meeting>EMNLP-IJCNLP</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Character Identification on Multiparty Conversation: Identifying Mentions of Characters in TV Shows</title>
+		<author>
+			<persName><forename type="first">Yu-Hsin</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jinho</forename><forename type="middle">D</forename><surname>Choi</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W16-3612</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 17th Annual Meeting of the Special Interest Group on Discourse and Dialogue</title>
+		<meeting>the 17th Annual Meeting of the Special Interest Group on Discourse and Dialogue</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Frustrated, Polite, or Formal: Quantifying Feelings and Tone in Email</title>
+		<author>
+			<persName><forename type="first">Niyati</forename><surname>Chhaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kushal</forename><surname>Chawla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tanya</forename><surname>Goyal</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W18-1111</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Second Workshop on Computational Modeling of People&apos;s Opinions, Personality, and Emotions in Social Media</title>
+		<meeting>the Second Workshop on Computational Modeling of People&apos;s Opinions, Personality, and Emotions in Social Media</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note>Projjal Chanda, and Jaya Singh</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Echoes of power: Language effects and power differences in social interaction</title>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lillian</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jon</forename><surname>Kleinberg</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.1112.3670</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of WWW</title>
+		<meeting>WWW</meeting>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">A Computational Approach to Politeness with Application to Social Factors</title>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Moritz</forename><surname>Sudhof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Jurafsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jure</forename><surname>Leskovec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Potts</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ACL</title>
+		<meeting>ACL</meeting>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<author>
+			<persName><forename type="first">Priya</forename><surname>Ronald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D'</forename><surname>Costa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Evan</forename><surname>Rowbotham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinlan</forename><forename type="middle">Emily</forename><surname>Hu</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2409.09338</idno>
+		<title level="m">What you say or how you say it? Predicting Conflict Outcomes in Real and LLM-Generated Conversations</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">An Analysis of Dialogue Act Sequence Similarity Across Multiple Domains</title>
+		<author>
+			<persName><forename type="first">Ayesha</forename><surname>Enayet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gita</forename><surname>Sukthankar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirteenth Language Resources and Evaluation Conference</title>
+		<meeting>the Thirteenth Language Resources and Evaluation Conference</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Personality Differences Drive Conversational Dynamics: A High-Dimensional NLP Approach</title>
+		<author>
+			<persName><forename type="first">Julia</forename><forename type="middle">R</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nilam</forename><surname>Ram</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.sicon-1.3</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Second Workshop on Social Influence in Conversations</title>
+		<meeting>the Second Workshop on Social Influence in Conversations</meeting>
+		<imprint>
+			<date type="published" when="2024">2024. SICon 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Investigating Conversational Dynamics: Interactive Alignment, Interpersonal Synergy, and Collective Task Performance</title>
+		<author>
+			<persName><forename type="first">Riccardo</forename><surname>Fusaroli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristian</forename><surname>Tylén</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/cogs.12251</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cognitive Science</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="145" to="171" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The Role of Conversation Context for Sarcasm Detection in Online Interactions</title>
+		<author>
+			<persName><forename type="first">Debanjan</forename><surname>Ghosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Richard Fabbri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Smaranda</forename><surname>Muresan</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/W17-5523</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of SIGDIAL</title>
+		<meeting>SIGDIAL</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">How did we get here? Summarizing conversation dynamics</title>
+		<author>
+			<persName><forename type="first">Yilun</forename><surname>Hua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><surname>Chernogor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuzhe</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seoyeon</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Miranda</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.naacl-long.414</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<publisher>Long Papers</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">WikiConv: A Corpus of the Complete Conversational History of a Large Online Collaborative Community</title>
+		<author>
+			<persName><forename type="first">Yiqing</forename><surname>Hua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dario</forename><surname>Taraborelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nithum</forename><surname>Thain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffery</forename><surname>Sorensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucas</forename><surname>Dixon</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D18-1305</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2018 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Dynamic Forecasting of Conversation Derailment</title>
+		<author>
+			<persName><forename type="first">Yova</forename><surname>Kementchedjhieva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anders</forename><surname>Søgaard</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.emnlp-main.624</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of EMNLP</title>
+		<meeting>EMNLP</meeting>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Inbal Ronen, and Ateret Anaby Tavor. 2021. We&apos;ve had this conversation before: A Novel Approach to Measuring Dialog Similarity</title>
+		<author>
+			<persName><forename type="first">Ofer</forename><surname>Lavi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ella</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Segev</forename><surname>Shlomov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Boaz</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.emnlp-main.89</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2021 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Conversational dynamics of joint attention and shared emotion predict outcomes in interpersonal influence situations: an interaction ritual perspective</title>
+		<author>
+			<persName><forename type="first">Wang</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jung</forename><surname>Yoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingwen</forename><surname>Oh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Feng</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/joc/jqad003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Communication</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="342" to="355" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Personality-aware Student Simulation for Conversational Intelligent Tutoring Systems</title>
+		<author>
+			<persName><forename type="first">Zhengyuan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stella</forename><surname>Xin Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Geyu</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nancy</forename><forename type="middle">F</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.emnlp-main.37</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2024 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Roleplay-doh: Enabling Domain-Experts to Create LLM-simulated Patients via Eliciting and Adhering to Principles</title>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Louie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ananjan</forename><surname>Nandi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cheng</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emma</forename><surname>Brunskill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Diyi</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.emnlp-main.591</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2024 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Unveiling the Power of Argument Arrangement in Online Persuasive Discussions</title>
+		<author>
+			<persName><forename type="first">Nailia</forename><surname>Mirzakhmedova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Johannes</forename><surname>Kiesel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Khalid</forename><surname>Al-Khatib</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benno</forename><surname>Stein</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2023.findings-emnlp.1048</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of the Association for Computational Linguistics: EMNLP 2023</title>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Words: Lexical Feature Selection and Evaluation for Identifying the Content of Political Conflict</title>
+		<author>
+			<persName><forename type="first">Burt</forename><surname>Monroe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Colaresi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Quinn</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Fightin</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/pan/mpn018</idno>
+		<imprint>
+			<publisher>SPM-PMSAPSA</publisher>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="372" to="403" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">The language of opinion change on social media under the lens of communicative action</title>
+		<author>
+			<persName><forename type="first">Corrado</forename><surname>Monti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Luca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gianmarco</forename><surname>Aiello</surname></persName>
+		</author>
+		<author>
+			<persName><surname>De Francisci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Francesco</forename><surname>Morales</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bonchi</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-022-21720-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Reports</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">17920</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Revealing and Predicting Online Persuasion Strategy with Elementary Units</title>
+		<author>
+			<persName><forename type="first">Gaku</forename><surname>Morio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryo</forename><surname>Egawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Katsuhide</forename><surname>Fujita</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D19-1653</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the EMNLP-IJCNLP</title>
+		<meeting>the EMNLP-IJCNLP</meeting>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Are you serious?: Rhetorical Questions and Sarcasm in Social Media Dialog</title>
+		<author>
+			<persName><forename type="first">Shereen</forename><surname>Oraby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vrindavan</forename><surname>Harrison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amita</forename><surname>Misra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ellen</forename><surname>Riloff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marilyn</forename><surname>Walker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of SIGDIAL</title>
+		<meeting>SIGDIAL</meeting>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Verbal persuasion in marketing: A multimethod meta-analysis of analytical and narrative processing</title>
+		<author>
+			<persName><forename type="first">Davide</forename><forename type="middle">C</forename><surname>Orazi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anne</forename><surname>Hamby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dennis</forename><surname>Herhausen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Van Laer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephan</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chahna</forename><surname>Gonsalves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dhruv</forename><surname>Grewal</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11747-025-01095-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Academy of Marketing Science</title>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Power of confidence: How poll scores impact topic dynamics in political debates</title>
+		<author>
+			<persName><forename type="first">Ashima</forename><surname>Vinodkumar Prabhakaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Owen</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rambow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the ACL 2014 Workshop on Language Technologies and Computational Social Science</title>
+		<meeting>the ACL 2014 Workshop on Language Technologies and Computational Social Science</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Attitude Change on Reddit&apos;s Change My View</title>
+		<author>
+			<persName><forename type="first">J</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hunter</forename><surname>Priniski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zachary</forename><surname>Horne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Annual Meeting of the Cognitive Science Society</title>
+		<meeting>the Annual Meeting of the Cognitive Science Society</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">40</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks</title>
+		<author>
+			<persName><forename type="first">Nils</forename><surname>Reimers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iryna</forename><surname>Gurevych</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/D19-1410</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the EMNLP-IJCNLP 2019</title>
+		<meeting>the EMNLP-IJCNLP 2019</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">A Simplest Systematics for the Organization of Turn-Taking for Conversation</title>
+		<author>
+			<persName><forename type="first">Harvey</forename><surname>Sacks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emanuel</forename><forename type="middle">A</forename><surname>Schegloff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gail</forename><surname>Jefferson</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/412243</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Language</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<date type="published" when="1974">1974</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter</title>
+		<author>
+			<persName><forename type="first">Victor</forename><surname>Sanh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lysandre</forename><surname>Debut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julien</forename><surname>Chaumond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Wolf</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.1910.01108</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 5th Workshop on Energy Efficient Machine Learning and Cognitive Computing NeurIPS</title>
+		<meeting>the 5th Workshop on Energy Efficient Machine Learning and Cognitive Computing NeurIPS</meeting>
+		<imprint>
+			<date type="published" when="2019">2020. 2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">FaceNet: A Unified Embedding for Face Recognition and Clustering</title>
+		<author>
+			<persName><forename type="first">Florian</forename><surname>Schroff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dmitry</forename><surname>Kalenichenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Philbin</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/CVPR.2015.7298682</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Zooming Out on Bargaining Tables: Exploring Which Conversation Dynamics Predict Negotiation Outcomes</title>
+		<author>
+			<persName><forename type="first">Matteo</forename><surname>Stasi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emma</forename><surname>Templeton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jordi</forename><surname>Quoidbach</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2872427.2883081</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Chenhao Tan, Vlad Niculae, Cristian Danescu-Niculescu, and Lillian Lee</title>
+		<imprint>
+			<date type="published" when="2016">2023. 2016</date>
+			<biblScope unit="volume">109</biblScope>
+		</imprint>
+	</monogr>
+	<note>Winning Arguments: Interaction Dynamics and Persuasion Strategies in Good-faith Online Discussions Proceedings of WWW</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Large Language Models for Data Annotation and Synthesis: A Survey</title>
+		<author>
+			<persName><forename type="first">Zhen</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dawei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Song</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alimohammad</forename><surname>Beigi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bohan</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amrita</forename><surname>Bhattacharjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mansooreh</forename><surname>Karami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jundong</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Huan</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.emnlp-main.54</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2024 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Conversational style : analyzing talk among friends</title>
+		<author>
+			<persName><forename type="first">Deborah</forename><surname>Tannen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<publisher>Oxford University Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">A Piece of My Mind: A Sentiment Analysis Approach for Online Dispute Detection</title>
+		<author>
+			<persName><forename type="first">Lu</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Claire</forename><surname>Cardie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ACL</title>
+		<meeting>ACL</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">PATIENT-Ψ: Using Large Language Models to Simulate Patients for Training Mental Health Professionals</title>
+		<author>
+			<persName><forename type="first">Ruiyi</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephanie</forename><surname>Milani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jamie</forename><forename type="middle">C</forename><surname>Chiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiayin</forename><surname>Zhi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shaun</forename><forename type="middle">M</forename><surname>Eack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Travis</forename><surname>Labrum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Samuel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nev</forename><surname>Murphy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kate</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hong</forename><surname>Hardy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fei</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiyu</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chen</forename><surname>Zoey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2024 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Is This Post Persuasive? Ranking Argumentative Comments in Online Forum</title>
+		<author>
+			<persName><forename type="first">Zhongyu</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yi</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/P16-2032</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 54th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+	<note>Short Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Welch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Verónica</forename><surname>Pérez-Rosas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">K</forename><surname>Kummerfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rada</forename><surname>Mihalcea</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-031-24340-0_36</idno>
+		<title level="m">Look Who&apos;s Talking: Inferring Speaker Attributes from Personal Longitudinal Dialog</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Clustering-Based Summarization of Transactional Chatbot Logs</title>
+		<author>
+			<persName><forename type="first">Luxun</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vagelis</forename><surname>Hristidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">T</forename><surname>Nhat</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Le</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/HCC46620.2019.00017</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE</title>
+		<imprint>
+			<date type="published" when="2019">2019. 2019</date>
+			<publisher>Humanized Computing and Communication (HCC)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Conversations Gone Awry: Detecting Early Signs of Conversational Failure</title>
+		<author>
+			<persName><forename type="first">Justine</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">P</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lucas</forename><surname>Dixon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nithum</forename><surname>Thain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yiqing</forename><surname>Hua</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dario</forename><surname>Taraborelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ACL</title>
+		<meeting>ACL</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Quantifying the Causal Effects of Conversational Tendencies</title>
+		<author>
+			<persName><forename type="first">Justine</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sendhil</forename><surname>Mullainathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3415202</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of CSCW</title>
+		<meeting>CSCW</meeting>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat Conversations</title>
+		<author>
+			<persName><forename type="first">Kaixiang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Justine</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cristian</forename><surname>Danescu-Niculescu-Mizil</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3757511</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of CSCW 2025</title>
+		<meeting>CSCW 2025</meeting>
+		<imprint>
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">BERTScore: Evaluating Text Generation with BERT</title>
+		<author>
+			<persName><forename type="first">Tianyi</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Varsha</forename><surname>Kishore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Felix</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kilian</forename><forename type="middle">Q</forename><surname>Weinberger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoav</forename><surname>Artzi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of ICLR</title>
+		<meeting>ICLR</meeting>
+		<imprint>
+			<date type="published" when="2020">2020. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">FlowEval: A Consensus-Based Dialogue Evaluation Framework Using Segment Act Flows</title>
+		<author>
+			<persName><forename type="first">Jianqiao</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanyang</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wanyu</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yangfeng</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dong</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Lyu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liwei</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2022.emnlp-main.715</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing</title>
+		<meeting>the 2022 Conference on Empirical Methods in Natural Language Processing</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

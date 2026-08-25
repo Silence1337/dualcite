@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Masks Can be Learned as an Alternative to Experts</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Peiyu</forename><surname>Liu</surname></persName>
+							<email>liupeiyustu@163.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Business and Economics</orgName>
+								<orgName type="institution">University of International</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianwen</forename><surname>Wei</surname></persName>
+							<email>tianwen.wei@kunlun-inc.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Zhu</surname></persName>
+							<email>zhubo@singularity-ai.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wayne</forename><forename type="middle">Xin</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Renmin University of China</orgName>
+								<address>
+									<addrLine>3 Skywork AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuicheng</forename><surname>Yan</surname></persName>
+							<email>shuicheng.yan@gmail.com</email>
+							<affiliation key="aff2">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Masks Can be Learned as an Alternative to Experts</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F8BAA82CCF3915558ABDE0EA6365A9A2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In this work, we investigate how to sparsify a pre-trained dense large language model into a mixture-of-experts (MoE) architecture for faster inference. Our approach applies mask matrix to the activations for each expert, constrained by L 0 regularization to minimize the number of activated parameters. To ensure minimal performance loss under this constraint, we initialize the model with all parameters active and progressively sparsify it during training. This approach proves more efficient than oneshot sparsification techniques, which typically require significant resources for performance recovery. Moreover, our approach automatically identifies shared, token-specific, and inactive experts, allowing for more efficient allocation of computational resources. Through extensive experiments, we achieve up to 97% performance retention on downstream tasks with only 50% of the feed-forward parameters activated in dense models. Beyond improving inference efficiency, this strategy of sharing computational units among experts provides a principled foundation for building more scalable and generalizable MoE architectures, paving the way for future expert-based model designs. Our code is available at https:// github.com/lpyhdzx/Mixture-of-Masks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Nexus: Adaptive Upcycling to Efficiently Pretrain Mixture of Experts</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nikolas</forename><surname>Gritsch</surname></persName>
+							<email>nikolasgritsch@cohere.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qizhen</forename><surname>Zhang</surname></persName>
+							<email>qizhen.zhang@eng.ox.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Acyr</forename><surname>Locatelli</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sara</forename><surname>Hooker</surname></persName>
+							<email>sarahooker@cohere.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ahmet</forename><surname>Üstün</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cohere</forename><surname>Labs</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Cohere</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Nexus: Adaptive Upcycling to Efficiently Pretrain Mixture of Experts</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F4089654375D212CAA9145D8BF58356D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Frontier language models are increasingly based on the Mixture of Experts (MoE) architecture, boosting the efficiency of training and inference by sparsely activating parameters. Nevertheless, training from scratch on trillions of tokens remains so expensive that many users can only finetune these models. In this work, we combine parameter reuse of dense models for the MoE layers (&quot;upcycling&quot;) with a novel, adaptive Nexus router that can integrate new experts into an existing trained model without hurting the performance on previous domains. Our router leverages the knowledge of each expert&apos;s training data distribution via domain embeddings to initialize the router, improving specialization and allowing it to adapt faster to new domains than a standard MoE router. Nexus overturns the strict sequential separation between training and finetuning in classical approaches, allowing more powerful improvements to existing models at a later stage through long token-horizon trainings on new pretraining data. Our experiments show that Nexus achieves a relative gain of up to 2.1% over the baseline for initial upcycling, and an 18.8% relative gain for extending the MoE to a new domain with a new expert by using limited finetuning data. This flexibility of Nexus can power an open-source ecosystem where every user continuously assembles their own MoE-mix from a multitude of dense models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

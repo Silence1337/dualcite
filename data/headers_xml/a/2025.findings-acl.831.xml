@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DPGA-TextSyn: Differentially Private Genetic Algorithm for Synthetic Text Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhonghao</forename><surname>Sun</surname></persName>
+							<email>sunzhonghao@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiliang</forename><surname>Tian</surname></persName>
+							<email>tianzhiliang@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiping</forename><surname>Song</surname></persName>
+							<email>songyiping@nudt.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">College of Science</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuyi</forename><surname>Si</surname></persName>
+							<email>siyuyi@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Juhua</forename><surname>Zhang</surname></persName>
+							<email>zhangjuhua23@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minlie</forename><surname>Huang</surname></persName>
+							<email>aihuang@tsinghua.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Lu</surname></persName>
+							<email>kailu@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zeyu</forename><surname>Xiong</surname></persName>
+							<email>xiongzeyu08@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinwang</forename><surname>Liu</surname></persName>
+							<email>xinwangliu@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongsheng</forename><surname>Li</surname></persName>
+							<email>dsli@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DPGA-TextSyn: Differentially Private Genetic Algorithm for Synthetic Text Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DD300D19D67BE46BC6EF7DC10FCB05BB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Using large language models (LLMs) has a potential risk of privacy leakage since the data with sensitive information may be used for finetuning the LLMs. Differential privacy (DP) provides theoretical guarantees of privacy protection, but its practical application in LLMs still has the problem of privacy-utility tradeoff. Researchers synthesized data with strong generation capabilities of closed-source LLMs (i.e., GPT-4) under DP to alleviate this problem, but this method is not so flexible in fitting the given privacy distributions without finetuning. Besides, such methods can hardly balance the diversity of synthetic data and its relevance to target privacy data without accessing so much private data. To this end, this paper proposes DPGA-TextSyn, combining general LLMs with genetic algorithm (GA) to produce relevant and diverse synthetic text under DP constraints. First, we integrate the privacy &quot;gene&quot; (i.e. metadata) to generate better initial samples. Then, to achieve survival of the fittest and avoid homogeneous, we use privacy nearest neighbor voting and similarity suppression to select elite samples. In addition, we expand elite samples via genetic strategies such as mutation, crossover, and generation to expand the search scope of GA. Experiments show that this method significantly improves the performance of the model in downstream tasks while ensuring privacy.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

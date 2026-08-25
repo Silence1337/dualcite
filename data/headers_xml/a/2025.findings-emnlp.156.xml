@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TS-SQL: Test-driven Self-refinement for Text-to-SQL</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenbo</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">https://github.com/prosperhitfz/TS-SQL</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haifeng</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">https://github.com/prosperhitfz/TS-SQL</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Yan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Inspur Cloud Information Technology Co</orgName>
+								<address>
+									<settlement>Ltd</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">https://github.com/prosperhitfz/TS-SQL</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chuanyi</forename><surname>Liu</surname></persName>
+							<email>liuchuanyi@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Peng Cheng Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">https://github.com/prosperhitfz/TS-SQL</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peiyi</forename><surname>Han</surname></persName>
+							<email>han-peiyi@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Peng Cheng Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">https://github.com/prosperhitfz/TS-SQL</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shaoming</forename><surname>Duan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Peng Cheng Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jeff</forename><forename type="middle">Z</forename><surname>Pan</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Edinburgh</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TS-SQL: Test-driven Self-refinement for Text-to-SQL</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B901A3115EE868541C346C8EDB140E5D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Model (LLM)-based selfrefinement has advanced Text-to-SQL, but it struggles with SQL semantic errors, such as omitted conditions and misinterpreted requirements. This is because self-refinement depends on LLMs&apos; semantic understanding of questions, a process prone to hallucination-induced biases, leading to uncorrectable errors. To solve this problem, we propose Test-driven Selfrefinement for Text-to-SQL (TS-SQL). It leverages a collaborative LLM agent framework to automatically synthesize high-quality test cases, including test data and test code. The test cases are further employed to provide execution feedback for LLM self-refinement towards SQL semantic errors. Rigorous evaluation shows the superiority of TS-SQL: for BIRD-dev, TS-SQL improves at least 6% over existing SQL self-refinement methods; for Spider-dev, TS-SQL identifies and corrects 131 gold SQL errors, exposing system flaws in benchmark rigor. For reproducibility, we release the modified Spider-dev benchmark to foster further research. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

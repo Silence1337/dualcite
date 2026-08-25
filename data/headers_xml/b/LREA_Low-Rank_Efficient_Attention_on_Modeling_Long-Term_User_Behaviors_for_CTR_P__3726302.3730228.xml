@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LREA: Low-Rank Efficient Attention on Modeling Long-Term User Behaviors for CTR Prediction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Song</surname></persName>
+							<email>songxin.song@alibaba-inc.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaochen</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jinxin</forename><surname>Hu</surname></persName>
+							<email>jinxin.hjx@alibaba-inc.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hong</forename><surname>Wen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zulong</forename><surname>Chen</surname></persName>
+							<email>zulong.czl@alibaba-inc.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyi</forename><surname>Zeng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jing</forename><surname>Zhang</surname></persName>
+							<email>jingzhang.cv@gmail.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Alibaba International Digital Commerce Group Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba International Digital Commerce Group Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Alibaba International Digital Commerce Group Beijing</orgName>
+								<orgName type="laboratory">Alibaba Group Beijing</orgName>
+								<address>
+									<settlement>Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Alibaba International Digital Commerce Group Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Alibaba International Digital Commerce Group Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Wuhan University Wuhan</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LREA: Low-Rank Efficient Attention on Modeling Long-Term User Behaviors for CTR Prediction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">05920A95E0A06519A07D98F46180B2B0</idno>
+					<idno type="DOI">10.1145/3726302.3730228</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Click-Through Rate Prediction</term>
+					<term>Long-term User Behavior Modeling</term>
+					<term>Low-rank Compression</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>With the rapid growth of user historical behavior data, user interest modeling has become a prominent aspect in Click-Through Rate (CTR) prediction, focusing on learning user intent representations. However, this complexity poses computational challenges, requiring a balance between model performance and acceptable response times for online services. Traditional methods often utilize filtering techniques. These techniques can lead to the loss of significant information by prioritizing top K items based on item attributes or employing low-precision attention mechanisms. In this study, we introduce LREA, a novel attention mechanism that overcomes the limitations of existing approaches while ensuring computational efficiency. LREA leverages low-rank matrix decomposition to optimize runtime performance and incorporates a specially designed loss function to maintain attention capabilities while preserving information integrity. During the inference phase, matrix absorption and pre-storage strategies are employed to effectively meet runtime constraints. The results of extensive offline and online experiments demonstrate that our method outperforms state-ofthe-art approaches. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

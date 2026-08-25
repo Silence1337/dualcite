@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MAC-SQL: A Multi-Agent Collaborative Framework for Text-to-SQL</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bing</forename><surname>Wang</surname></persName>
+							<email>bingwang@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Changyu</forename><surname>Ren</surname></persName>
+							<email>cyren@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jian</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinnian</forename><surname>Liang</surname></persName>
+							<email>xnliang@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaqi</forename><surname>Bai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linzheng</forename><surname>Chai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhao</forename><surname>Yan</surname></persName>
+							<email>zhaoyan@tencent.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tencent Youtu Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qian-Wen</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tencent Youtu Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Di</forename><surname>Yin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tencent Youtu Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xing</forename><surname>Sun</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tencent Youtu Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhoujun</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MAC-SQL: A Multi-Agent Collaborative Framework for Text-to-SQL</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BB13FD7FD80BC5FFF4681FB697E6B2BD</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent LLM-based Text-to-SQL methods usually suffer from significant performance degradation on &quot;huge&quot; databases and complex user questions that require multi-step reasoning. Moreover, most existing methods neglect the crucial importance of LLMs using external tools and model collaboration. To address these challenges, we introduce MAC-SQL, a novel LLM-based multi-agent collaborative framework. Our framework comprises a core decomposer agent for Text-to-SQL generation with few-shot chain-of-thought reasoning, accompanied by two auxiliary agents that utilize external tools or models to acquire smaller subdatabases and refine erroneous SQL queries. The decomposer agent collaborates with auxiliary agents, which are activated as needed and can be expanded to accommodate new features or tools for effective Text-to-SQL parsing. In our framework, we initially leverage GPT-4 as the strong backbone LLM for all agent tasks to determine the upper bound of our framework. We then fine-tune an open source instructionfollowed model, SQL-Llama, by leveraging Code Llama 7B, to accomplish all tasks as GPT-4 does. Experiments show that SQL-Llama achieves a comparable execution accuracy of 43.94, compared to the baseline accuracy of 46.35 for vanilla GPT-4. At the time of writing, MAC-SQL+GPT-4 achieves an execution accuracy of 59.59 when evaluated on the BIRD benchmark, establishing a new state-of-the-art (SOTA) in its holdout test set. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

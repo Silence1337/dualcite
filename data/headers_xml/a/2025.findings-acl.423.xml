@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">BENCH: Benchmarking Uncertainty in Large Language Models with Multiple Choice Questions</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xunzhi</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Tianjin Key Laboratory of Software Experience and Human Computer Interaction xunzhi</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhuowei</forename><surname>Zhang</surname></persName>
+							<email>zhuoweizhang@mail.nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Tianjin Key Laboratory of Software Experience and Human Computer Interaction xunzhi</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gaonan</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiongyu</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bitong</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhixin</forename><surname>Han</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Haotian</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyu</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Institute for Advanced Algorithms Research (Shanghai)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hang</forename><surname>Gao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">College of Artificial Intelligence</orgName>
+								<orgName type="institution">Tianjin University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mengting</forename><surname>Hu</surname></persName>
+							<email>mthu@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Software</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Tianjin Key Laboratory of Software Experience and Human Computer Interaction xunzhi</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">BENCH: Benchmarking Uncertainty in Large Language Models with Multiple Choice Questions</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">468C9043F0A630E9DA59D90DB478F209</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Despite recent progress in systematic evaluation frameworks, benchmarking the uncertainty of large language models (LLMs) remains a highly challenging task. Existing methods for benchmarking the uncertainty of LLMs face three key challenges: the need for internal model access, additional training, or high computational costs. This is particularly unfavorable for closed-source models. To this end, we introduce UBENCH, a new benchmark for evaluating the uncertainty of LLMs. Unlike other benchmarks, UBENCH is based on confidence intervals. It encompasses 11,978 multiple-choice questions spanning knowledge, language, understanding, and reasoning capabilities. Based on this, we conduct extensive experiments. This includes comparisons with other advanced uncertainty estimation methods, the assessment of the uncertainty of 20 LLMs, and an exploration of the effects of Chain-of-Thought (CoT) prompts, role-playing (RP) prompts, and temperature on model uncertainty. Our analysis reveals several crucial insights: 1) Our confidence interval-based methods are highly effective for uncertainty quantification; 2) Regarding uncertainty, outstanding open-source models show competitive performance versus closed-source models; 3) CoT and RP prompts present potential ways to improve model reliability, while the influence of temperature changes follows no universal rule. Our implementation is available at https://github.com/Cyno2232/UBENCH.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

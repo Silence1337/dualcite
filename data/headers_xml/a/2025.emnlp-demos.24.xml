@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MedTutor: A Retrieval-Augmented LLM System for Case-Based Medical Education</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dongsuk</forename><surname>Jang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Interdisciplinary Program for Bioengineering</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ziyao</forename><surname>Shangguan</surname></persName>
+							<email>ziyao.shangguan@yale.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kyle</forename><surname>Tegtmeyer</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Radiology and Biomedical Imaging</orgName>
+								<orgName type="institution">Yale School of Medicine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anurag</forename><surname>Gupta</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Radiology and Biomedical Imaging</orgName>
+								<orgName type="institution">Yale School of Medicine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jan</forename><surname>Czerminski</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Radiology and Biomedical Imaging</orgName>
+								<orgName type="institution">Yale School of Medicine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sophie</forename><surname>Chheang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Radiology and Biomedical Imaging</orgName>
+								<orgName type="institution">Yale School of Medicine</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Arman</forename><surname>Cohan</surname></persName>
+							<email>arman.cohan@yale.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MedTutor: A Retrieval-Augmented LLM System for Case-Based Medical Education</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3D2B791E8D919B25B2AFCDF494918D3E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The learning process for medical residents presents significant challenges, demanding both the ability to interpret complex case reports and the rapid acquisition of accurate medical knowledge from reliable sources. Residents typically study case reports and engage in discussions with peers and mentors, but finding relevant educational materials and evidence to support their learning from these cases is often time-consuming and challenging. To address this, we introduce MedTutor, a novel system designed to augment resident training by automatically generating evidence-based educational content and multiple-choice questions from clinical case reports. MedTutor leverages a Retrieval-Augmented Generation (RAG) pipeline that takes clinical case reports as input and produces targeted educational materials. The system&apos;s architecture features a hybrid retrieval mechanism that synergistically queries a local knowledge base of medical textbooks and academic literature (using PubMed, Semantic Scholar APIs) for the latest related research, ensuring the generated content is both foundationally sound and current. The retrieved evidence is filtered and ordered using a state-of-the-art reranking model and then an LLM generates the final long-form output describing the main educational content regarding the case-report. We conduct a rigorous evaluation of the system. First, three radiologists assessed the quality of outputs, finding them to be of high clinical and educational value. Second, we perform a largescale evaluation using an LLM-as-a Judge to understand if LLMs can be used to evaluate the output of the system. Our analysis using correlation between LLMs outputs and human expert judgments reveals a moderate alignment and highlights the continued necessity of expert oversight.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Why is Normalization Necessary for Linear Recommenders?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Seongmin</forename><surname>Park</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mincheol</forename><surname>Yoon</surname></persName>
+							<email>yoon56@skku.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hye-Young</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jongwuk</forename><surname>Lee</surname></persName>
+							<email>jongwuklee@skku.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Sungkyunkwan University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Sungkyunkwan University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Sungkyunkwan University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Sungkyunkwan University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Why is Normalization Necessary for Linear Recommenders?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0F5B2045C06C6B34CE96DCCE4E40BB41</idno>
+					<idno type="DOI">10.1145/3726302.3730116</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Collaborative Filtering</term>
+					<term>Linear Autoencoders</term>
+					<term>Normalization</term>
+					<term>Popularity Bias</term>
+					<term>Neighborhood Bias</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Despite their simplicity, linear autoencoder (LAE)-based models have shown comparable or even better performance with faster inference speed than neural recommender models. However, LAEs face two critical challenges: (i) popularity bias, which tends to recommend popular items, and (ii) neighborhood bias, which overly focuses on capturing local item correlations. To address these issues, this paper first analyzes the effects of two existing normalization methods for LAEs, i.e., random-walk and symmetric normalization. Our theoretical analysis reveals that normalization highly affects the degree of popularity and neighborhood biases among items. Inspired by this analysis, we propose a versatile normalization solution, called Data-Adaptive Normalization (DAN), which flexibly controls the popularity and neighborhood biases by adjusting itemand user-side normalization to align with unique dataset characteristics. Owing to its model-agnostic property, DAN can be easily applied to various LAE-based models. Experimental results show that DAN-equipped LAEs consistently improve existing LAE-based models across six benchmark datasets, with significant gains of up to 128.57% and 12.36% for long-tail items and unbiased evaluations, respectively. Refer to our code in https://github.com/psm1206/DAN. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

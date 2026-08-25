@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Conan-Embedding-v2: Training an LLM from Scratch for Text Embeddings</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shiyu</forename><surname>Li</surname></persName>
+							<email>shyuli@tencent.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Basic Algorithm Center</orgName>
+								<orgName type="institution">PCG</orgName>
+								<address>
+									<region>Tencent</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Tang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Basic Algorithm Center</orgName>
+								<orgName type="institution">PCG</orgName>
+								<address>
+									<region>Tencent</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruijie</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Basic Algorithm Center</orgName>
+								<orgName type="institution">PCG</orgName>
+								<address>
+									<region>Tencent</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shi-Zhe</forename><surname>Chen</surname></persName>
+							<email>shizhechen@tencent.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Basic Algorithm Center</orgName>
+								<orgName type="institution">PCG</orgName>
+								<address>
+									<region>Tencent</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xi</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Basic Algorithm Center</orgName>
+								<orgName type="institution">PCG</orgName>
+								<address>
+									<region>Tencent</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Conan-Embedding-v2: Training an LLM from Scratch for Text Embeddings</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DB6FEF1702D4999288E54F69FBDC621F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have recently demonstrated excellent performance in text embedding tasks. Previous work usually use LoRA to fine-tune existing LLMs, which are limited by the data and training gap between LLMs and embedding models. In this work, we introduce Conan-embedding-v2, a new 1.4Bparameter LLM trained from scratch and finetuned as a text embedder. First, we add news data and multilingual pairs for LLM pretraining to bridge the data gap. Based on this, we propose a cross-lingual retrieval dataset that enables the LLM to better integrate embeddings across different languages. Second, whereas LLMs use a causal mask with token-level loss, embedding models use a bidirectional mask with sentence-level loss. This training gap makes full fine-tuning less effective than LoRA. We introduce a soft-masking mechanism to gradually transition between these two types of masks, enabling the model to learn more comprehensive representations. Based on this, we propose a dynamic hard negative mining method that exposes the model to more difficult negative examples throughout the training process. Being intuitive and effective, with only approximately 1.4B parameters, Conanembedding-v2 achieves SOTA performance on both the Massive Text Embedding Benchmark (MTEB) and Chinese MTEB (May 19, 2025).</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

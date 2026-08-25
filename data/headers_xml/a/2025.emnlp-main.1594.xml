@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LoRACoE: Improving Large Language Models via Composition-based LoRA Expert</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Guanyu</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiheng</forename><surname>Xi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhihao</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Boyang</forename><surname>Hong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tao</forename><surname>Gui</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Xuanjing</forename><surname>Huang</surname></persName>
+							<email>xjhuang@fudan.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Artificial Intelligence</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LoRACoE: Improving Large Language Models via Composition-based LoRA Expert</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BEE6BD575EAC4268987D2AE785E6C207</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The Mixture of Experts (MoE) architecture improves large language models (LLMs) by utilizing sparsely activated expert sub-networks with a routing module, yet it typically demands high training cost. Previous work introduces parameter-efficient fine-tuning (PEFT) modules, e.g., LoRA, to achieve a lightweight MoE for efficiency. However, they construct static experts by manually splitting the LoRA parameters into fixed groups, which limits flexibility and dynamism. Furthermore, this manual partitioning also hinders the effective utilization of well-initialized LoRA modules. To tackl the challenges, we first delve into the parameter patterns in LoRA modules, revealing that there exists task-relevant parameters that are concentrated along the rank dimension. Based on this, we redesign the construction of experts and propose the LoRACoE (LoRA Composition of Experts) method. Specifically, when confronted with a task, it dynamically builds experts based on rank-level parameter composition, i.e., experts can flexibly combine rank-level parameters in LoRA module. Extensive experiments demonstrate that compared to other LoRA-based MoE methods, our method achieves better task performance across a broader range of tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

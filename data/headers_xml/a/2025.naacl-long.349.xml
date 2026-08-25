@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Evaluating and Mitigating Object Hallucination in Large Vision-Language Models: Can They Still See Removed Objects?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yixiao</forename><surname>He</surname></persName>
+							<email>heyixiao@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haifeng</forename><surname>Sun</surname></persName>
+							<email>hfsun@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pengfei</forename><surname>Ren</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingyu</forename><surname>Wang</surname></persName>
+							<email>wangjingyu@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huazheng</forename><surname>Wang</surname></persName>
+							<email>wanghz@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Qi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zirui</forename><surname>Zhuang</surname></persName>
+							<email>zhuangzirui@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">State Key Laboratory of Networking and Switching Technology</orgName>
+								<orgName type="institution">Beijing University of Posts and Telecommunications</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Evaluating and Mitigating Object Hallucination in Large Vision-Language Models: Can They Still See Removed Objects?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F426C6CB5D879E7174BA8F35103D2F8B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Vision-Language Models (LVLMs) have a significant issue with object hallucinations, where researchers have noted that LVLMs often mistakenly determine objects as present in images where they do not actually exist. Some recent studies evaluate the occurrence of object hallucinations by asking LVLMs whether they see objects that do not exist in input images. However, we observe that these evaluation methods have some limitations, such as the objects being questioned potentially having little relevance to the image. In this paper, we introduce a more challenging benchmark for evaluating object hallucinations by removing objects from images and then asking the model whether it can still see the removed objects. Our evaluation result reveals that LVLMs suffer from severe hallucinations, as they often still claim to see the removed objects. Through our analysis, we find that biases in training result in LVLMs lacking guidance on learning about the absence of objects, which in turn leads to a lack of ability to determine that objects do not exist in images. To address this issue, we further propose oDPO, a direct preference optimization objective based on visual objects. By guiding LVLMs to learn to determine the existence of objects, oDPO effectively alleviates object hallucinations. It achieves more competitive results than other hallucination mitigation approaches across multiple object hallucination benchmarks and enhances the performance of LVLMs in various vision-language tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

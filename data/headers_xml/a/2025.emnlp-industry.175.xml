@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Beyond Dynamic Quantization: An Efficient Static Hierarchical Mix-precision Framework for Near-Lossless LLM Compression</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Zhang</surname></persName>
+							<email>zhangyi121@hikvision.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Hikvision Research Institute</orgName>
+								<address>
+									<settlement>Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Zhang</surname></persName>
+							<email>zhangkai23@hikvision.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">East China Normal University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zheyang</forename><surname>Li</surname></persName>
+							<email>lizheyang@hikvision.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Hikvision Research Institute</orgName>
+								<address>
+									<settlement>Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenming</forename><surname>Tan</surname></persName>
+							<email>tanwenming@hikvision.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Hikvision Research Institute</orgName>
+								<address>
+									<settlement>Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ye</forename><surname>Ren</surname></persName>
+							<email>renye@hikvision.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Hikvision Research Institute</orgName>
+								<address>
+									<settlement>Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jilin</forename><surname>Hu</surname></persName>
+							<email>jlhu@dase.ecnu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Hikvision Research Institute</orgName>
+								<address>
+									<settlement>Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">East China Normal University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Beyond Dynamic Quantization: An Efficient Static Hierarchical Mix-precision Framework for Near-Lossless LLM Compression</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3B0E08EAC3E70C33CA2A0719051DFBAF</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have achieved overwhelming success but require massive storage and computational resources to support the generative inference. Post-training quantization (PTQ) is a promising approach to reduce memory usage, latency and energy consumption of the deployment of LLMs. However, the presence of outliers makes most existing PTQ methods dedicated to dynamic quantization, which turns out hardware-unfriendly and often leads to large quantization errors in static scenarios. To address the above limitations, we introduce a Static Hierarchical Mix-precision Quantization method (SHMQ), which enables near-lossless and hardware-friendly compression of LLMs. Theoretically, our proposed SHMQ quantifies both inter-layer and intralayer sensitivity through unified derivations involving Hessian. Specifically, SHMQ conducts a systematic precision allocation strategy, which seamlessly integrates coarse-grained inter-layer and fine-grained intra-layer static mix-precision quantization. Furthermore, the permutation procedure, which reorders sensitive channels and insensitive channels that share similar distribution, is leveraged to mitigate static quantization error. Our proposed SHMQ achieves 75.58% on zero-shot reasoning tasks in W4.8A8 Qwen2.5-7B-Instruct, narrowing the accuracy gap to merely 0.13% while yielding averaged 2.86× practical speedup.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

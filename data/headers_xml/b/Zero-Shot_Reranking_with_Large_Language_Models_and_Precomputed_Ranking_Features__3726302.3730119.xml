@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Zero-Shot Reranking with Large Language Models and Precomputed Ranking Features: Opportunities and Limitations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Maria</forename><surname>Movin</surname></persName>
+							<email>mariamovin@spotify.com</email>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Also with Department of Computer and Systems Sciences</orgName>
+								<orgName type="department" key="dep2">SIGIR &apos;25</orgName>
+								<orgName type="institution">Stockholm University</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Claudia</forename><surname>Hauff</surname></persName>
+							<email>claudiah@spotify.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Spotify AB Stockholm</orgName>
+								<address>
+									<country key="SE">Sweden</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Spotify AB Delft</orgName>
+								<address>
+									<country key="NL">Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Zero-Shot Reranking with Large Language Models and Precomputed Ranking Features: Opportunities and Limitations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">86FB19E6247E0325F6D3C4197FF3F9AE</idno>
+					<idno type="DOI">10.1145/3726302.3730119</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:58+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Zero-Shot Ranking</term>
+					<term>Large Language Models</term>
+					<term>Learning to Rank</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>LLMs have been explored for their use in IR as end-to-end rankers, rerankers and assessors. Recently, the exploration of the promptand-predict paradigm for reranking in combination with highly performant LLMs have drawn the attention of researchers. Instead of training or fine-tuning a reranker, LLMs are prompted in a zeroshot manner to produce relevance scores, pairwise preferences, or reranked lists. Existing research, though, has been confined to unstructured text corpora, leaving a gap in our understanding: to what extent do the findings of zero-shot LLM rerankers established on plain text corpora hold for datasets containing predominantly precomputed ranking features as is common in industrial settings? We explore this question via an empirical study on one public learning-to-rank dataset (MSLR-WEB10K) and two datasets collected from an audio streaming platform&apos;s search logs. Our results paint a differentiated picture: On average, there remains a significant performance gap: prompting the high-capacity LLM GPT-4 results in up to 16% lower NDCG@10 compared to the traditional supervised learning-to-rank (LTR) approach LambdaMART on the public MSLR-WEB10K dataset. However, when focusing only on a subset of hard queries-i.e. queries where the LTR approach ranks a non-relevant document at the top-the zero-shot LLM reranking outperforms the LTR baseline. We confirm the same trends on two proprietary audio search datasets. We also provide insights into prompt design choices and their impact on LLM reranking. We show that LLMs remain brittle, with the same strategies sometimes helping or hurting depending on the model size and dataset. CCS Concepts • Information systems → Learning to rank; Language models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

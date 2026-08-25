@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">UniLR: Unleashing the Power of LLMs on Multiple Legal Tasks with a Unified Legal Retriever</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ang</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">Zhejiang Unirersity</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiquan</forename><surname>Wu</surname></persName>
+							<email>wuyiquan@zju.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">Guanghua Law School</orgName>
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yifei</forename><surname>Liu</surname></persName>
+							<email>liuyifei@zju.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="department">College of Software Technology</orgName>
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ming</forename><surname>Cai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">Zhejiang Unirersity</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lizhi</forename><surname>Qing</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Shihang</forename><surname>Wang</surname></persName>
+							<email>wangshihang.wsh@alibaba-inc.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yangyang</forename><surname>Kang</surname></persName>
+							<email>yangyangkang@zju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">Zhejiang Unirersity</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Polytechnic Institute</orgName>
+								<orgName type="institution" key="instit2">Zhejiang University</orgName>
+								<address>
+									<addrLine>5 Alibaba Group</addrLine>
+									<settlement>Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengyuan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">Zhejiang Unirersity</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Wu</surname></persName>
+							<email>wufei@zju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">Zhejiang Unirersity</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kun</forename><surname>Kuang</surname></persName>
+							<email>kunkuang@zju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science and Technology</orgName>
+								<orgName type="institution">Zhejiang Unirersity</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">UniLR: Unleashing the Power of LLMs on Multiple Legal Tasks with a Unified Legal Retriever</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9C448B867D50F5D1CE1E84E0819EA068</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Despite the impressive capabilities of LLMs, they often generate content with factual inaccuracies in LegalAI, which may lead to serious legal consequences. Retrieval-Augmented Generation (RAG), a promising approach, can conveniently integrate specialized knowledge into LLMs. In practice, there are diverse legal knowledge retrieval demands (e.g. law articles and similar cases). However, existing retrieval methods are either designed for general domains, struggling with legal knowledge, or tailored for specific legal tasks, unable to handle diverse legal knowledge types. Therefore, we propose a novel Unified Legal Retriever (UniLR) capable of performing multiple legal retrieval tasks for LLMs. Specifically, we introduce attention supervision to guide the retriever in focusing on key elements during knowledge encoding. Next, we design a graphbased method to integrate meta information through a heterogeneous graph, further enriching the knowledge representation. These two components work together to enable UniLR to capture the essence of knowledge hidden beneath formats. Extensive experiments on multiple datasets of common legal tasks demonstrate that UniLR achieves the best retrieval performance and can significantly enhance the performance of LLM.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

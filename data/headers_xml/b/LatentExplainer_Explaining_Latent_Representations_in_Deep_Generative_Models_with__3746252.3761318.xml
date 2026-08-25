@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LatentExplainer: Explaining Latent Representations in Deep Generative Models with Multimodal Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mengdan</forename><surname>Zhu</surname></persName>
+							<email>mengdan.zhu@emory.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Raasikh</forename><surname>Kanjiani</surname></persName>
+							<email>raasikh.kanjiani@emory.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jiahui</forename><surname>Lu</surname></persName>
+							<email>jiahui.lu.24@ucl.ac.uk</email>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Choi</surname></persName>
+							<email>andrew.jaemin.choi@emory.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qirui</forename><surname>Ye</surname></persName>
+							<email>qirui.ye@emory.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Zhao</surname></persName>
+							<email>liang.zhao@emory.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Emory University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Emory University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Computer Science London</orgName>
+								<orgName type="institution">University College London</orgName>
+								<address>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Emory University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Emory University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Emory University</orgName>
+								<address>
+									<settlement>Atlanta</settlement>
+									<region>GA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LatentExplainer: Explaining Latent Representations in Deep Generative Models with Multimodal Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0391C059D418273DAA2ADA7B804FDC7E</idno>
+					<idno type="DOI">10.1145/3746252.3761318</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Explainable AI</term>
+					<term>Multimodal Large Language Models</term>
+					<term>Deep Generative Models</term>
+					<term>Latent Representations</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Deep generative models like VAEs and diffusion models have advanced various generation tasks by leveraging latent variables to learn data distributions and generate high-quality samples. Despite the field of explainable AI making strides in interpreting machine learning models, understanding latent variables in generative models remains challenging. This paper introduces LatentExplainer 1 , a framework for automatically generating semantically meaningful explanations of latent variables in deep generative models. Latent-Explainer tackles three main challenges: inferring the meaning of latent variables, aligning explanations with inductive biases, and handling varying degrees of explainability. Our approach perturbs latent variables, interprets changes in generated data, and uses multimodal large language models (MLLMs) to produce humanunderstandable explanations. We evaluate our proposed method on several real-world and synthetic datasets, and the results demonstrate superior performance in generating high-quality explanations for latent variables. The results highlight the effectiveness of incorporating inductive biases and uncertainty quantification, significantly enhancing model interpretability. CCS Concepts • Computing methodologies → Artificial intelligence.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

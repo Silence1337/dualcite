@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Retracing the Past: LLMs Emit Training Data When They Get Lost</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Myeongseob</forename><surname>Ko</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Virginia Tech</orgName>
+								<orgName type="institution" key="instit2">Virginia Tech</orgName>
+								<orgName type="institution" key="instit3">Virginia Tech</orgName>
+								<orgName type="institution" key="instit4">Cisco Research</orgName>
+								<orgName type="institution" key="instit5">Virginia Tech</orgName>
+								<orgName type="institution" key="instit6">Virginia Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nikhil</forename><surname>Reddy Billa</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Virginia Tech</orgName>
+								<orgName type="institution" key="instit2">Virginia Tech</orgName>
+								<orgName type="institution" key="instit3">Virginia Tech</orgName>
+								<orgName type="institution" key="instit4">Cisco Research</orgName>
+								<orgName type="institution" key="instit5">Virginia Tech</orgName>
+								<orgName type="institution" key="instit6">Virginia Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Adam</forename><surname>Nguyen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Virginia Tech</orgName>
+								<orgName type="institution" key="instit2">Virginia Tech</orgName>
+								<orgName type="institution" key="instit3">Virginia Tech</orgName>
+								<orgName type="institution" key="instit4">Cisco Research</orgName>
+								<orgName type="institution" key="instit5">Virginia Tech</orgName>
+								<orgName type="institution" key="instit6">Virginia Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Charles</forename><surname>Fleming</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Virginia Tech</orgName>
+								<orgName type="institution" key="instit2">Virginia Tech</orgName>
+								<orgName type="institution" key="instit3">Virginia Tech</orgName>
+								<orgName type="institution" key="instit4">Cisco Research</orgName>
+								<orgName type="institution" key="instit5">Virginia Tech</orgName>
+								<orgName type="institution" key="instit6">Virginia Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ming</forename><surname>Jin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Virginia Tech</orgName>
+								<orgName type="institution" key="instit2">Virginia Tech</orgName>
+								<orgName type="institution" key="instit3">Virginia Tech</orgName>
+								<orgName type="institution" key="instit4">Cisco Research</orgName>
+								<orgName type="institution" key="instit5">Virginia Tech</orgName>
+								<orgName type="institution" key="instit6">Virginia Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruoxi</forename><surname>Jia</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Virginia Tech</orgName>
+								<orgName type="institution" key="instit2">Virginia Tech</orgName>
+								<orgName type="institution" key="instit3">Virginia Tech</orgName>
+								<orgName type="institution" key="instit4">Cisco Research</orgName>
+								<orgName type="institution" key="instit5">Virginia Tech</orgName>
+								<orgName type="institution" key="instit6">Virginia Tech</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Retracing the Past: LLMs Emit Training Data When They Get Lost</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6B22A2AB591B33F6E237E0C889D2EBC1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The memorization of training data in large language models (LLMs) poses significant privacy and copyright concerns. Existing data extraction methods, particularly heuristic-based divergence attacks, often exhibit limited success and offer limited insight into the fundamental drivers of memorization leakage. This paper introduces Confusion-Inducing Attacks (CIA), a principled framework for extracting memorized data by systematically maximizing model uncertainty. We empirically demonstrate that the emission of memorized text during divergence is preceded by a sustained spike in token-level prediction entropy. CIA leverages this insight by optimizing input snippets to deliberately induce this consecutive highentropy state. For aligned LLMs, we further propose mismatched Supervised Fine-tuning (SFT) to simultaneously weaken their alignment and induce targeted confusion, thereby increasing susceptibility to our attacks. Experiments on various unaligned and aligned LLMs demonstrate that our proposed attacks outperform existing baselines in extracting verbatim and near-verbatim training data without requiring prior knowledge of the training data. Our findings highlight persistent memorization risks across various LLMs and offer a more systematic method for assessing these vulnerabilities.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

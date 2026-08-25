@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">11DUT at SemEval-2025 Task 8:Hierarchical Chain-of-Thought Reasoning and Multi-Model Deliberation for Robust TableQA</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiaqi</forename><surname>Yao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Erchen</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yicen</forename><surname>Tian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiyang</forename><surname>Kang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiayi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Control Science and Engineering</orgName>
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongfei</forename><surname>Lin</surname></persName>
+							<email>hflin@dlut.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linlin</forename><surname>Zong</surname></persName>
+							<email>llzong@dlut.edu.cn</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of Software</orgName>
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<addrLine>China {1741917591, yuerchen0809, yicentian, kiang0920</addrLine>
+									<postCode>2791570843}</postCode>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Xu</surname></persName>
+							<email>xubo@dlut.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">11DUT at SemEval-2025 Task 8:Hierarchical Chain-of-Thought Reasoning and Multi-Model Deliberation for Robust TableQA</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2808B85B1B342E73E9ECF3EDDD207551</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The proliferation of structured tabular data in domains like healthcare and finance has intensified the demand for precise table question answering, particularly for complex numerical reasoning and cross-domain generalization. Existing approaches struggle with implicit semantics and multi-step arithmetic operations. This paper presents our solution for SemEval-2025 task,including three synergistic components: (1) a Schema Profiler that extracts structural metadata via LLM-driven analysis and statistical validation, (2) a Hierarchical Chain-of-Thought module that decomposes questions into four stages-semantic anchoring, schema mapping, query synthesis, and selfcorrection-to ensure SQL validity, and (3) a Confidence-Accuracy Voting mechanism that resolves discrepancies across LLMs through weighted ensemble decisions. Our framework achieves scores of 81.23 on Databench and 81.99 on Databench_lite, ranking 6th and 5th respectively, demonstrating the effectiveness of structured metadata guidance and cross-model deliberation in complex TableQA scenarios.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

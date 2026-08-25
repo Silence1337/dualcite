@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards Generating Controllable and Solvable Geometry Problem by Leveraging Symbolic Deduction Engine</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhuoxuan</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Business School</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Tianyang</forename><surname>Zhang</surname></persName>
+							<email>tzhang@aggies.ncat.edu</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Learnable.ai</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peiyan</forename><surname>Peng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Learnable.ai</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jing</forename><surname>Chen</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Shanghai Jiaotong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yinong</forename><surname>Xun</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Learnable.ai</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haotian</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Learnable.ai</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lichi</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yong</forename><surname>Li</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Cisco Systems Inc</orgName>
+								<address>
+									<settlement>San Francisco</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Beijing Shangruitong Education Technology Co., Ltd. (TeacherClub.com)</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shaohua</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Business School</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards Generating Controllable and Solvable Geometry Problem by Leveraging Symbolic Deduction Engine</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E91504435E092B310E7A01F15DA3F516</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Generating high-quality geometry problems is both an important and challenging task in education. Compared to math word problems, geometry problems further emphasize multimodal formats and the translation between informal and formal languages. In this paper, we introduce a novel task for geometry problem generation and propose a new pipeline method: the Symbolic Deduction Engine-based Geometry Problem Generation framework (SDE-GPG). The framework leverages a symbolic deduction engine and contains four main steps: (1) searching a predefined mapping table from knowledge points to extended definitions, (2) sampling extended definitions and performing symbolic deduction, (3) filtering out unqualified problems, and (4) generating textual problems and diagrams. Specifically, our method supports to avoid inherent biases in translating natural language into formal language by designing the mapping table, and guarantees to control the generated problems in terms of knowledge points and difficulties by an elaborate checking function. With obtained formal problems, they are translated to natural language and the accompanying diagrams are automatically drew by rule-based methods. We conduct experiments using real-world combinations of knowledge points from two public datasets. The results demonstrate that the SDE-GPG can effectively generate readable, solvable and controllable geometry problems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

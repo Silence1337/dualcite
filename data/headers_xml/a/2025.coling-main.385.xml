@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Multilingual Knowledge Editing with Language-Agnostic Factual Neurons</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xue</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Beijing Key Lab of Traffic Data Analysis and Mining</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yunlong</forename><surname>Liang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<region>Tencent Inc</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fandong</forename><surname>Meng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<region>Tencent Inc</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Songming</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Beijing Key Lab of Traffic Data Analysis and Mining</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yufeng</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Beijing Key Lab of Traffic Data Analysis and Mining</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Jinan</forename><surname>Xu</surname></persName>
+							<email>jaxu@bjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Beijing Key Lab of Traffic Data Analysis and Mining</orgName>
+								<orgName type="institution">Beijing Jiaotong University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<region>Tencent Inc</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Pattern Recog- nition Center</orgName>
+								<orgName type="institution">Tencent Inc</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Multilingual Knowledge Editing with Language-Agnostic Factual Neurons</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1E2DC9A1F66A5F718DDEA608178D2A7D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Multilingual knowledge editing (MKE) aims to simultaneously update factual knowledge across multiple languages within large language models (LLMs). Previous research indicates that the same knowledge across different languages within LLMs exhibits a degree of shareability. However, most existing MKE methods overlook the connections of the same knowledge between different languages, resulting in knowledge conflicts and limited edit performance. To address this issue, we first investigate how LLMs process multilingual factual knowledge and discover that the same factual knowledge in different languages generally activates a shared set of neurons, which we call language-agnostic factual neurons (LAFNs). These neurons represent the same factual knowledge shared across languages and imply the semantic connections among multilingual knowledge. Inspired by this finding, we propose a new MKE method by Locating and Updating Language-Agnostic Factual Neurons (LU-LAFNs) to edit multilingual knowledge simultaneously, which avoids knowledge conflicts and thus improves edit performance. Experimental results on Bi-ZsRE and MzsRE benchmarks demonstrate that our method achieves the best edit performance, indicating the effectiveness and importance of modeling the semantic connections among multilingual knowledge.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

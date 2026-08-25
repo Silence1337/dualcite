@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Training Language Model to Critique for Better Refinement</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tianshu</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">China Telecom Research Institute</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">The Conversational Artificial Intelligence (CoAI) Group</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Xiang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">China Telecom Research Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mingchuan</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">China Telecom Research Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pei</forename><surname>Ke</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Electronic Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bosi</forename><surname>Wen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">The Conversational Artificial Intelligence (CoAI) Group</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cunxiang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="laboratory">The Knowledge Engineering Group (KEG)</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<address>
+									<settlement>Zhipu</settlement>
+									<region>AI</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiale</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">The Conversational Artificial Intelligence (CoAI) Group</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Li</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">China Telecom Research Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Mu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">China Telecom Research Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chuxiong</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">China Telecom Research Institute</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Minlie</forename><surname>Huang</surname></persName>
+							<email>aihuang@tsinghua.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">The Conversational Artificial Intelligence (CoAI) Group</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Training Language Model to Critique for Better Refinement</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AFE045ACD55019D256060911501EC70E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have demonstrated remarkable evaluation and critique capabilities, providing insightful feedback and identifying flaws in various tasks. However, limited research has explored which types of critiques are most effective for improving model responses or how to generate such critiques. To address this gap, we introduce Refinementoriented Critique Optimization (RCO), a novel framework designed to train critic models using refinement signals. RCO uses a feedback loop where critiques, generated by the critic model, guide the actor model in refining its responses. The critique utility (CU) quantifies the effectiveness of these refinements, serving as the reward signal for training the critic model. By focusing on critiques that lead to better refinements, RCO eliminates the need for direct critique preference assessment, ensuring that critiques driving meaningful improvements are rewarded. We evaluate RCO across five tasks, i.e., dialog generation, summarization, question answering, mathematical reasoning, and code generation, and show that it significantly outperforms traditional methods and open-source models in terms of critique quality and refinement outcomes. Our contributions include the introduction of RCO, a novel supervision scheme based on refined response preferences, and comprehensive experimental results that highlight the method&apos;s effectiveness in enhancing LLM critique-refinement loops. 1 * Equal contribution. † This work was conducted when Bosi Wen and Jiale Cheng were interning at Zhipu AI. ‡ Corresponding author. 1 We release the code and data at https://github.com/publicstaticvo/critique.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

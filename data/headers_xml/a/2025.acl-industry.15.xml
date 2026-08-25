@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Run LoRA Run: Faster and Lighter LoRA Implementations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Daria</forename><surname>Cherniuk</surname></persName>
+							<email>daria.cherniuk@skoltech.ru</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Artificial Intelligence Research Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexandr</forename><surname>Mikhalev</surname></persName>
+							<email>al.mikhalev@skoltech.ru</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Skolkovo Institute of Science and Technology</orgName>
+								<address>
+									<settlement>Moscow</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ivan</forename><surname>Oseledets</surname></persName>
+							<email>oseledets@airi.net</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Artificial Intelligence Research Institute</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Skolkovo Institute of Science and Technology</orgName>
+								<address>
+									<settlement>Moscow</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Run LoRA Run: Faster and Lighter LoRA Implementations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">30DD39DF8E478A86285855E29B1F1139</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LoRA is a technique that reduces the number of trainable parameters in a neural network by introducing low-rank adapters to linear layers. This technique is used for fine-tuning and even training large transformer models from scratch. This paper presents the RunLoRA framework for efficient implementations of LoRA, which significantly improves the speed of neural network training and fine-tuning with low-rank adapters. The proposed implementation optimizes the computation of LoRA operations based on the shape of the corresponding linear layer weights, the input dimensions, and the LoRA rank by selecting the best forward and backward computation graphs based on FLOPs and time estimations. This results in faster training without sacrificing accuracy. The experimental results show a speedup ranging from 10% to 28% on various transformer models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

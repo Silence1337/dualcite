@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Document Similarity Enhanced IPS Estimation for Unbiased Learning to Rank</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zeyan</forename><surname>Liang</surname></persName>
+							<email>z.liang.1@research.gla.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Glasgow Glasgow</orgName>
+								<address>
+									<country>Scotland UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Graham</forename><surname>Mcdonald</surname></persName>
+							<email>graham.mcdonald@glasgow.ac.uk</email>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Glasgow Glasgow</orgName>
+								<address>
+									<country>Scotland UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Iadh</forename><surname>Ounis</surname></persName>
+							<email>iadh.ounis@glasgow.ac.uk</email>
+							<affiliation key="aff2">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">University of Glasgow Glasgow</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>Scotland UK Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Document Similarity Enhanced IPS Estimation for Unbiased Learning to Rank</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E7A0379730ACDD4E2454DBFC4CC00C66</idno>
+					<idno type="DOI">10.1145/3726302.3730179</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Unbiased Learning to Rank</term>
+					<term>Inverse Propensity Score</term>
+					<term>Position Bias</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Learning to Rank (LTR) models learn from historical user interactions, such as user clicks. However, there is an inherent bias in the clicks of users due to position bias, i.e., users are more likely to click highly-ranked documents than low-ranked documents. To address this bias when training LTR models, many approaches from the literature re-weight the users&apos; click data using Inverse Propensity Scoring (IPS). IPS re-weights the user&apos;s clicks proportionately to the position in the historical ranking that a document was placed when it was clicked since low-ranked documents are less likely to be seen by a user. In this paper, we argue that low-ranked documents that are similar to highly-ranked relevant documents are also likely to be relevant. Moreover, accounting for the similarity of low-ranked documents to highly ranked relevant documents when calculating IPS can more effectively mitigate the effects of position bias. Therefore, we propose an extension to IPS, called IPSsim, that takes into consideration the similarity of documents when estimating IPS. We evaluate our IPSsim estimator using two large publicly available LTR datasets under a number of simulated user click settings, and with different numbers of training clicks. Our experiments show that our IPSsim estimator is more effective than the existing IPS estimators for learning an unbiased LTR model, particularly in top-n settings when n &gt;= 30. For example, when n = 50, our IPSsim estimator achieves a statistically significant ∼3% improvement (𝑝 &lt; 0.05) in terms of NDCG compared to the Doubly Robust estimator from the literature. CCS Concepts • Information systems → Retrieval models and ranking.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

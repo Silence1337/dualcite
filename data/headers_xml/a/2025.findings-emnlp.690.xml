@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SwiftPrune: Hessian-Free Weight Pruning for Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuhan</forename><surname>Kang</surname></persName>
+							<email>kangyuhan@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Shi</surname></persName>
+							<email>shiyang14@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mei</forename><surname>Wen</surname></persName>
+							<email>meiwen@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>He</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianchao</forename><surname>Yang</surname></persName>
+							<email>yangjianchao16@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zeyu</forename><surname>Xue</surname></persName>
+							<email>xuezeyu18@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jing</forename><surname>Feng</surname></persName>
+							<email>fengjing22@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinwang</forename><surname>Liu</surname></persName>
+							<email>xinwangliu@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SwiftPrune: Hessian-Free Weight Pruning for Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">29B0B3B75CD310AE323603CF5392F1B5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Post-training pruning, as one of the key techniques for compressing large language models (LLMs), plays a vital role in lightweight model deployment and model sparsity. However, current mainstream pruning methods dependent on the Hessian matrix face significant limitations in both pruning speed and practical effectiveness due to the computationally intensive nature of second-order derivative calculations. This paper presents SwiftPrune, a novel Hessian-free weight pruning method that achieves hardware-efficient model compression through two key innovations: 1) SwiftPrune eliminates the need for computationally intensive Hessian matrix calculations by introducing a contribution-based weight metric, which evaluates the importance of weights without relying on second-order derivatives. 2) we employ the Exponentially Weighted Moving Average (EWMA) technique to bypass weight sorting, enabling the selection of weights that contribute most to LLMs accuracy and further reducing time complexity. Our approach is extended to support structured sparsity pruning, facilitating efficient execution on modern hardware accelerators. We validate the SwiftPrune on three LLMs (namely LLaMA2, LLaMA3, and Pythia), demonstrating that it significantly enhances compression performance. The experimental findings reveal that SwiftPrune completes the pruning process within seconds, achieving an average speedup of 12.29× (up to 56.02×) over existing SOTA approaches.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

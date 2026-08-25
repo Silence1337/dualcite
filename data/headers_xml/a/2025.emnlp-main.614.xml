@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Gamma-Guard: Lightweight Residual Adapters for Robust Guardrails in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Lijia</forename><surname>Lv</surname></persName>
+							<email>lvlija@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cyber Security</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanshu</forename><surname>Zhao</surname></persName>
+							<email>zhaoyuanshu@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cyber Security</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guan</forename><surname>Wang</surname></persName>
+							<email>wangguan@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cyber Security</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuehai</forename><surname>Tang</surname></persName>
+							<email>tangxuehai@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cyber Security</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Wen</surname></persName>
+							<email>wenjie@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jizhong</forename><surname>Han</surname></persName>
+							<email>hanjizhong@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Songlin</forename><surname>Hu</surname></persName>
+							<email>husonglin@iie.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Information Engineering</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cyber Security</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Gamma-Guard: Lightweight Residual Adapters for Robust Guardrails in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">52E74BD52D561987628F9970CCDD1BFE</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:03+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Disclaimer: This paper contains potentially offensive and harmful text. Large language models (LLMs) are widely deployed as zero-shot evaluators for answer grading, content moderation, and document ranking. Yet studies show that guard models (Guards)-LLMs fine-tuned for safety-remain vulnerable to &quot;jailbreak&quot; attacks, jeopardising downstream chatbots. We confirm this weakness on three public benchmarks (BeaverTails, XSTest, AdvBench) and trace it to representation shifts that arise in the embedding layer and cascade through the Transformer stack. To counteract the effect, we introduce Gamma-Guard: lightweight residual adapters inserted after the embeddings and at sparse intervals in the model. The adapters start with zero-scaled gates, so they retain the original behaviour; a brief adversarial finetuning phase then teaches them to denoise embeddings and refocus attention. With fewer than 0.1 % extra parameters and only a 2 % latency increase, Gamma-Guard lifts adversarial accuracy from ≤ 5 % to ≈ 95 % a 90 percentage-point gain while reducing cleandata accuracy by just 8 percentage points. Extensive ablations further show that robustness improvements persist across different layer placements and model sizes. To our knowledge, this is the first approach that directly augments large Guards with trainable adapters, providing a practical path toward safer large-scale LLM deployments.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rethinking the Training Paradigm of Discrete Token-Based Multimodal LLMs: An Analysis of Text-Centric Bias</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wansik</forename><surname>Jo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jooyeong</forename><surname>Na</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Soyeon</forename><surname>Hong</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Seungtaek</forename><surname>Choi</surname></persName>
+							<email>seungtaek.choi@hufs.ac.kr</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hyunsouk</forename><surname>Cho</surname></persName>
+							<email>hyunsouk@ajou.ac.kr</email>
+							<idno type="ORCID">0000-0002-9134-1921</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Meritzfire Seoul</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Ajou University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Ajou University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Hankuk University of Foreign Studies Seoul</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Ajou University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rethinking the Training Paradigm of Discrete Token-Based Multimodal LLMs: An Analysis of Text-Centric Bias</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B3C3ED1897285723A9C3ABC1653BE62F</idno>
+					<idno type="DOI">10.1145/3746252.3761264</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>• Computing methodologies → Natural language processing</term>
+					<term>Computer vision</term>
+					<term>Learning paradigms Multimodal Large Language Models</term>
+					<term>Discrete Token-Based Models</term>
+					<term>Training Paradigm</term>
+					<term>Text-Centric Bias</term>
+					<term>Model Behavior Analysis</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Discrete token-based multimodal large language models (MLLMs), such as AnyGPT and MIO, integrate diverse modalities into an autoregressive framework by discretizing modality inputs into tokens compatible with language models. Unlike encoder-based approaches, such as LLaVA and Flamingo, which utilize pretrained modality-specific encoders, discrete token-based MLLMs simultaneously learn modality token representations and their alignment with the language, yet are exclusively trained on modality-text paired datasets without additional unimodal training. We identify a structural limitation inherent in this training paradigm, termed textcentric bias, defined as an over-reliance on the textual context that restricts intrinsic modality understanding. To systematically analyze the existence of this bias, we propose an analytical framework involving external perplexity-based and internal neuron-level analyses. Furthermore, to verify whether the bias originates from the paired-only training paradigm, we introduce an analytical methodology named Monotune, which is a simple unimodal training stage. Our analyses demonstrate that minimal exposure to unimodal data effectively mitigates text-centric bias, providing empirical evidence that the bias is fundamentally induced by the paired-only training strategy. Through comprehensive downstream task evaluations, we further reveal that this structural bias meaningfully affects realworld multimodal task performance, particularly under limited textual contexts. Our findings highlight a fundamental limitation in current discrete token-based MLLM training paradigms and suggest directions for future multimodal training strategies. Our code and experiments are available at https://github.com/41312432/Monotune</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Racing Thoughts: Explaining Contextualization Errors in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">A</forename><surname>Lepori</surname></persName>
+							<email>michael_lepori@brown.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Brown University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Google</forename><surname>Deepmind</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Brown University</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="institution">Brown University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">C</forename><surname>Mozer</surname></persName>
+							<email>mcmozer@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Brown University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Asma</forename><surname>Ghandeharioun</surname></persName>
+							<email>aghandeharioun@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Brown University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Racing Thoughts: Explaining Contextualization Errors in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">439438BB488393BE92EB67FEB1134086</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The profound success of transformer-based language models can largely be attributed to their ability to integrate relevant contextual information from an input sequence in order to generate a response or complete a task. However, we know very little about the algorithms that a model employs to implement this capability, nor do we understand their failure modes. For example, given the prompt John is going fishing, so he walks over to the bank. Can he make an ATM transaction?, a model may incorrectly respond Yes if it has not properly contextualized bank as a geographical feature, rather than a financial institution. We propose the LLM Race Conditions Hypothesis as an explanation of contextualization errors of this form. This hypothesis identifies dependencies between tokens (e.g., bank must be properly contextualized before the final token, ?, integrates information from bank) and claims that contextualization errors are a result of violating these dependencies. Using a variety of techniques from mechanistic intepretability, we provide correlational and causal evidence in support of the hypothesis and suggest inference-time interventions to address it.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

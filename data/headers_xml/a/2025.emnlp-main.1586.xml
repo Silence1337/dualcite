@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">NL2Lean: Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Fang</surname></persName>
+							<email>y.fang@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Key Laboratory of High Confidence Software Technologies (PKU)</orgName>
+								<orgName type="institution" key="instit2">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shaohan</forename><surname>Huang</surname></persName>
+							<email>shaohanh@microsoft.com</email>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Yu</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haizhen</forename><surname>Huang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zihan</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weiwei</forename><surname>Deng</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Furu</forename><surname>Wei</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Sun</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhi</forename><surname>Jin</surname></persName>
+							<email>zhijin@pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Key Laboratory of High Confidence Software Technologies (PKU)</orgName>
+								<orgName type="institution" key="instit2">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<address>
+									<settlement>Microsoft</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">NL2Lean: Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">25873269D9330095639679A901AC02C5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Translating natural language into formal language such as Lean 4 has gained attention for its potential to automate formal proof development. Automated methods provide a scalable and cost-effective alternative to manual formalization, driving increasing interest in this task. However, existing LLMs mainly rely on instruction tuning and lack fine-grained structural and semantic alignment, making it difficult to generate syntactically and logically sound formal proofs. To address this, we propose a reinforcement learning framework ReLean that enables LLMs to generate high-quality Lean 4 statements from natural language. We first finetune a LLaMA3-8B model on NL-Lean 4 data to obtain a base translator with basic translation ability. Then, we design a multi-aspect dense reward mechanism covering four key dimensions: semantic alignment, term-level alignment, global-level alignment, and compilechecking. Separate reward models are trained via preference modeling, and their normalized outputs are combined to guide optimization via PPO. Finally, a curriculum learning strategy based on multi-dimensional difficulty allows the model to learn progressively from simple to complex cases. Experiments on NL-to-Lean 4 tasks show that our method consistently outperforms baseline models. Further analysis on reward model and curriculum learning confirms their effectiveness in enhancing model performance.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

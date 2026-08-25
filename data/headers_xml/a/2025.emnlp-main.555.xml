@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">NeuroAda: Activating Each Neuron&apos;s Potential for Parameter-Efficient Fine-Tuning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">ILLC</orgName>
+								<orgName type="institution" key="instit2">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit3">PCS</orgName>
+								<orgName type="institution" key="instit4">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit5">ILLC</orgName>
+								<orgName type="institution" key="instit6">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit7">ILLC</orgName>
+								<orgName type="institution" key="instit8">University of Amsterdam</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yixian</forename><surname>Shen</surname></persName>
+							<email>y.shen@uva.nl</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">ILLC</orgName>
+								<orgName type="institution" key="instit2">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit3">PCS</orgName>
+								<orgName type="institution" key="instit4">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit5">ILLC</orgName>
+								<orgName type="institution" key="instit6">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit7">ILLC</orgName>
+								<orgName type="institution" key="instit8">University of Amsterdam</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Congfeng</forename><surname>Cao</surname></persName>
+							<email>c.cao@uva.nl</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">ILLC</orgName>
+								<orgName type="institution" key="instit2">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit3">PCS</orgName>
+								<orgName type="institution" key="instit4">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit5">ILLC</orgName>
+								<orgName type="institution" key="instit6">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit7">ILLC</orgName>
+								<orgName type="institution" key="instit8">University of Amsterdam</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ekaterina</forename><surname>Shutova</surname></persName>
+							<email>e.shutova@uva.nl</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">ILLC</orgName>
+								<orgName type="institution" key="instit2">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit3">PCS</orgName>
+								<orgName type="institution" key="instit4">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit5">ILLC</orgName>
+								<orgName type="institution" key="instit6">University of Amsterdam</orgName>
+								<orgName type="institution" key="instit7">ILLC</orgName>
+								<orgName type="institution" key="instit8">University of Amsterdam</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">NeuroAda: Activating Each Neuron&apos;s Potential for Parameter-Efficient Fine-Tuning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F8EB04CE1BFB2D8FB115C2BDA69397F1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Existing parameter-efficient fine-tuning (PEFT) methods primarily fall into two categories: addition-based and selective in-situ adaptation. The former, such as LoRA, introduce additional modules to adapt the model to downstream tasks, offering strong memory efficiency. However, their representational capacity is often limited, making them less suitable for fine-grained adaptation. In contrast, the latter directly finetunes a carefully chosen subset of the original model parameters, allowing for more precise and effective adaptation, but at the cost of significantly increased memory consumption. To reconcile this trade-off, we propose NeuroAda, a novel PEFT method that enables fine-grained model finetuning while maintaining high memory efficiency. Our approach first identifies important parameters (i.e., connections within the network) as in selective adaptation, and then introduces bypass connections for these selected parameters. During finetuning, only the bypass connections are updated, leaving the original model parameters frozen. Empirical results on 23+ tasks spanning both natural language generation and understanding demonstrate that NeuroAda achieves state-of-the-art performance with as little as ≤ 0.02% trainable parameters, while reducing CUDA memory usage by up to 60%. We release our code here: https://github.com/ FightingFighting/NeuroAda.git.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">REIC: RAG-Enhanced Intent Classification at Scale</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ziji</forename><surname>Zhang</surname></persName>
+							<email>czhangzi@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Yang</surname></persName>
+							<email>abyang@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyu</forename><surname>Chen</surname></persName>
+							<email>zhiyuche@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yingying</forename><surname>Zhuang</surname></persName>
+							<email>yyzhuang@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shu-Ting</forename><surname>Pi</surname></persName>
+							<email>shutingp@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qun</forename><surname>Liu</surname></persName>
+							<email>qunliu@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rajashekar</forename><surname>Maragoud</surname></persName>
+							<email>maragoud@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vy</forename><surname>Nguyen</surname></persName>
+							<email>nguynvy@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anurag</forename><surname>Beniwal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Amazon.com Inc</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">REIC: RAG-Enhanced Intent Classification at Scale</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B03A5C9B2CB7F617F57809A03CF11D91</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Accurate intent classification is critical for efficient routing in customer service, ensuring customers are connected with the most suitable agents while reducing handling times and operational costs. However, as companies expand their product lines, intent classification faces scalability challenges due to the increasing number of intents and variations in taxonomy across different verticals. In this paper, we introduce REIC, a Retrieval-augmented generation Enhanced Intent Classification approach, which addresses these challenges effectively. REIC leverages retrieval-augmented generation (RAG) to dynamically incorporate relevant knowledge, enabling precise classification without the need for frequent retraining. Through extensive experiments on realworld datasets, we demonstrate that REIC outperforms traditional fine-tuning, zero-shot, and few-shot methods in large-scale customer service settings. Our results highlight its effectiveness in both in-domain and out-of-domain scenarios, demonstrating its potential for realworld deployment in adaptive and large-scale intent classification systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

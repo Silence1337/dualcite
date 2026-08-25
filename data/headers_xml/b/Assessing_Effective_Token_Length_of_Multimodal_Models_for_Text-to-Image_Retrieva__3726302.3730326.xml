@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Assessing Effective Token Length of Multimodal Models for Text-to-Image Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Le</forename><surname>Nguyen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Preet</forename><surname>Jain</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>Md</roleName><forename type="first">Tanvirul</forename><surname>Alam</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Nidhi</forename><surname>Rastogi</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Rochester Institute of Technology Rochester</orgName>
+								<address>
+									<region>New York</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Rochester Institute of Technology Rochester</orgName>
+								<address>
+									<region>New York</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Rochester Institute of Technology Rochester</orgName>
+								<address>
+									<region>New York</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Rochester Institute of Technology Rochester</orgName>
+								<address>
+									<region>New York</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Rochester Institute of Technology Rochester</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<region>New York</region>
+									<country>USA Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Assessing Effective Token Length of Multimodal Models for Text-to-Image Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">76DB28FA4A2602D96BBB9EACAE5B1674</idno>
+					<idno type="DOI">10.1145/3726302.3730326</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Multimodal</term>
+					<term>Image Retrieval</term>
+					<term>Text-to-Image</term>
+					<term>Long Text</term>
+					<term>CLIP</term>
+					<term>Benchmarking</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Multimodal embedding models have been widely adopted in text-toimage retrieval, enabling direct comparison between text and image modalities. However, how well they handle long text is poorly understood. For instance, Long-CLIP found that OpenAI&apos;s CLIP model, despite having a 77-token input limit, maintains optimal performance for only 20 tokens-its effective token length. In this paper, we build on the Long-CLIP study, and extend the analysis to other widely used multimodal models and find their effective token length. Unlike Long-CLIP, we examine how domain-specific language influences changes in effective token length and explore its implications on different domains. Based on our findings, we create a comprehensive reference of various models&apos; effective token length across different domains; offering deeper insights into the true limitations of multimodal models used in text-to-image retrieval. Finally, we introduce a systematic benchmark that determines the effective token length of any multimodal model using a given dataset. Our results show that the effective token length is consistently lower than the input token limit for all models, meaning that these models cannot utilize all the text that can be given to them. We also find that the effective token length varies by dataset, with domain-specific language influencing how much text a model can use before retrieval performance plateaus. Our code is available for reproducibility at https://github.com/aiforsec/EffectiveTokenLength-MModels CCS Concepts • Information systems → Multimedia and multimodal retrieval; Information retrieval query processing; • Computing methodologies → Learning latent representations; Machine learning approaches; Computer vision tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

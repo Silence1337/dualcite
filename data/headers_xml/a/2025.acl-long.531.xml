@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MoQAE: Mixed-Precision Quantization for Long-Context LLM Inference via Mixture of Quantization-Aware Experts</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Tao ♠♡</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+								<address>
+									<addrLine>♡ Ping An Technology (Shenzhen) Co.</addrLine>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haocheng</forename><surname>Lu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+								<address>
+									<addrLine>♡ Ping An Technology (Shenzhen) Co.</addrLine>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">♠♡</forename><surname>Xiaoyang Qu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Xiaoyang Qu</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><roleName>Bin Zhang ♠♡</roleName><forename type="first">Kai</forename><surname>Lu</surname></persName>
+							<email>kailu@hust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+								<address>
+									<addrLine>♡ Ping An Technology (Shenzhen) Co.</addrLine>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Xiaoyang Qu</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wan</forename><forename type="middle">♠</forename><surname>Jiguang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+								<address>
+									<addrLine>♡ Ping An Technology (Shenzhen) Co.</addrLine>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianzong</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+								<address>
+									<addrLine>♡ Ping An Technology (Shenzhen) Co.</addrLine>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MoQAE: Mixed-Precision Quantization for Long-Context LLM Inference via Mixture of Quantization-Aware Experts</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">829372B65607ABB78293FC4275EDA9F9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>One of the primary challenges in optimizing large language models (LLMs) for long-context inference lies in the high memory consumption of the Key-Value (KV) cache. Existing approaches, such as quantization, have demonstrated promising results in reducing memory usage. However, current quantization methods cannot take both effectiveness and efficiency into account. In this paper, we propose MoQAE, a novel mixed-precision quantization method via mixture of quantizationaware experts. First, we view different quantization bit-width configurations as experts and use the traditional mixture of experts (MoE) method to select the optimal configuration. To avoid the inefficiency caused by inputting tokens one by one into the router in the traditional MoE method, we input the tokens into the router chunk by chunk. Second, we design a lightweight router-only fine-tuning process to train MoQAE with a comprehensive loss to learn the trade-off between model accuracy and memory usage. Finally, we introduce a routing freezing (RF) and a routing sharing (RS) mechanism to further reduce the inference overhead. Extensive experiments on multiple benchmark datasets demonstrate that our method outperforms state-of-the-art KV cache quantization approaches in both efficiency and effectiveness.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

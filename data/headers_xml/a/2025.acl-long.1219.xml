@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">500xCompressor: Generalized Prompt Compression for Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zongqian</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Cambridge</orgName>
+								<orgName type="institution" key="instit2">University of Cambridge</orgName>
+								<orgName type="institution" key="instit3">University of Cambridge</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yixuan</forename><surname>Su</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Cambridge</orgName>
+								<orgName type="institution" key="instit2">University of Cambridge</orgName>
+								<orgName type="institution" key="instit3">University of Cambridge</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nigel</forename><surname>Collier</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Cambridge</orgName>
+								<orgName type="institution" key="instit2">University of Cambridge</orgName>
+								<orgName type="institution" key="instit3">University of Cambridge</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">500xCompressor: Generalized Prompt Compression for Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D34C66B51B74A098E75160EB833304F2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Prompt compression is important for large language models (LLMs) to increase inference speed, reduce costs, and improve user experience. However, current methods face challenges such as low compression ratios and potential training-test overlap during evaluation. To address these issues, we propose 500xCompressor, a method that compresses natural language contexts into a minimum of one special token and demonstrates strong generalization ability. The 500xCompressor introduces approximately 0.3% additional parameters and achieves compression ratios ranging from 6x to 500x, achieving 27-90% reduction in calculations and 55-83% memory savings when generating 100-400 tokens for new and reused prompts at 500x compression, while retaining 70-74% (F1) and 77-84% (Exact Match) of the LLM capabilities compared to using non-compressed prompts. It is designed to compress any text, answer various types of questions, and can be utilized by the original LLM without requiring fine-tuning. Initially, 500xCompressor was pretrained on the Arx-ivCorpus, followed by fine-tuning on the Arx-ivQA dataset, and subsequently evaluated on strictly unseen and cross-domain question answering (QA) datasets. This study shows that KV values outperform embeddings in preserving information at high compression ratios. The highly compressive nature of natural language prompts, even for detailed information, suggests potential for future applications and the development of a new LLM language. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

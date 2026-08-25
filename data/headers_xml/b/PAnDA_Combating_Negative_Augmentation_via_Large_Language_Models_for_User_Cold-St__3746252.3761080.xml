@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">PAnDA: Combating Negative Augmentation via Large Language Models for User Cold-Start Recommendations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yantong</forename><surname>Du</surname></persName>
+							<email>duyantong94@hrbeu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Chen</surname></persName>
+							<email>ruichen@hrbeu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Zhao</surname></persName>
+							<email>xianzhao@cityu.edu.hk</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qilong</forename><surname>Han</surname></persName>
+							<email>hanqilong@hrbeu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Qin</surname></persName>
+							<email>kqin@swin.edu.au</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Engineering University Harbin</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Harbin Engineering University Harbin</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">City University of Hong Kong Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Harbin Engineering University Harbin</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Swinburne University of Technology Hawthorn</orgName>
+								<address>
+									<postCode>3122</postCode>
+									<region>Victoria</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">PAnDA: Combating Negative Augmentation via Large Language Models for User Cold-Start Recommendations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">180DEF492F560C48ACE7D4691CDA6075</idno>
+					<idno type="DOI">10.1145/3746252.3761080</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Personalization</term>
+					<term>Information extraction</term>
+					<term>• Computing methodologies → Machine learning Cold-start recommendations</term>
+					<term>large language models</term>
+					<term>data augmentation</term>
+					<term>meta-learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The cold-start problem remains a long-standing challenge in recommender systems. Recent advances in large language models (LLMs) have opened new avenues for addressing cold-start scenarios through data augmentation. However, existing cold-start augmentation methods often suffer from negative augmentation, manifesting as incomplete augmentation, where generated interactions fail to comprehensively reflect user preferences, and inaccurate augmentation, where they conflict with user intent. These issues largely stem from two limitations: (1) the inability to effectively incorporate collaborative signals, which are critical for preference alignment, and (2) the lack of awareness of the downstream model&apos;s learning dynamics during data augmentation. To the best of our knowledge, the latter has not been studied in the literature. Consequently, we propose a novel framework named PAnDA. To address the incomplete augmentation issue, we propose a modelagnostic preference-aligned augmentation module to iteratively extract and fuse textual information and collaborative information by user-user preference matching and user-item preference coherence, which together form a contextual cue to guide the augmentor to generate high-quality augmented data. To overcome the inaccurate augmentation issue, we propose a model-specific downstream-model-aware adaptation module to adaptively align the augmented data with the model&apos;s states during the training process, guided by gradient similarity. Extensive experiments on three public benchmark datasets demonstrate that PAnDA outperforms different groups of state-of-the-art cold-start recommendation methods in all scenarios. The source code is publicly available at https://github.com/YantongDU/PAnDA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

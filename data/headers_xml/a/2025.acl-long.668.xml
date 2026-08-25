@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Finite State Automata Inside Transformers with Chain-of-Thought: A Mechanistic Study on State Tracking</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yifan</forename><surname>Zhang</surname></persName>
+							<email>yifanzhang@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Key Laboratory of High Confidence Software Technology (PKU)</orgName>
+								<orgName type="institution" key="instit2">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenyu</forename><surname>Du</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongming</forename><surname>Jin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Key Laboratory of High Confidence Software Technology (PKU)</orgName>
+								<orgName type="institution" key="instit2">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Fu</surname></persName>
+							<email>fujie@pjlab.org.cn</email>
+							<affiliation key="aff3">
+								<orgName type="department">Shanghai AI Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhi</forename><surname>Jin</surname></persName>
+							<email>zhijin@pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Key Laboratory of High Confidence Software Technology (PKU)</orgName>
+								<orgName type="institution" key="instit2">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Finite State Automata Inside Transformers with Chain-of-Thought: A Mechanistic Study on State Tracking</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">02706BEB99D37ECCBE33B26C331739CB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Chain-of-Thought (CoT) significantly enhances the performance of large language models (LLMs) across a wide range of tasks, and prior research shows that CoT can theoretically increase expressiveness. However, there is limited mechanistic understanding of the algorithms that a Transformer with CoT (denoted as Transformer +CoT in this paper) can learn. Our key contributions are: (1) We evaluate the state tracking capabilities of Transformer +CoT and its variants, confirming the effectiveness of CoT. (2) Next, we identify the circuit (a subset of model components, responsible for tracking the world state), indicating that late-layer MLP neurons play a key role. We propose two metrics, compression and distinction, and show that the neuron sets for each state achieve nearly 100% accuracy, providing evidence of an implicit finite state automaton (FSA) embedded within the model. (3) Additionally, we explore three challenging settings: skipping intermediate steps, introducing data noises, and testing length generalization. Our results demonstrate that Transformer +CoT learns robust algorithms (FSAs), highlighting its resilience in challenging scenarios. Our code is available at https://github.com/IvanChangPKU/FSA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

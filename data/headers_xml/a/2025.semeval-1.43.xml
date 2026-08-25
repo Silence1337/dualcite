@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">tinaal at SemEval-2025 Task 11: Enhancing Perceived Emotion Intensity Prediction with Boosting Fine-Tuned Transformers</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ting</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Newcastle University</orgName>
+								<address>
+									<settlement>Newcastle Upon Tyne</settlement>
+									<country key="GB">England</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liting</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Newcastle University</orgName>
+								<address>
+									<settlement>Newcastle Upon Tyne</settlement>
+									<country key="GB">England</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Huizhi</forename><surname>Liang</surname></persName>
+							<email>huizhi.liang@newcastle.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Newcastle University</orgName>
+								<address>
+									<settlement>Newcastle Upon Tyne</settlement>
+									<country key="GB">England</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">tinaal at SemEval-2025 Task 11: Enhancing Perceived Emotion Intensity Prediction with Boosting Fine-Tuned Transformers</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9B1C0B82C83EBE69CC22DD146FF0691E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper presents a framework for perceived emotion intensity prediction, focusing on SemEval-2025 Task 11 Track B. The task involves predicting the intensity of five perceived emotions-anger, fear, joy, sadness, and surprise-on an ordinal scale from 0 (no emotion) to 3 (high emotion). Our approach builds upon our method introduced in the WASSA workshop and enhances it by integrating Mod-ernBERT in place of the traditional BERT model within a boosting-based ensemble framework. To address the difficulty in capturing fine-grained emotional distinctions, we incorporate class-preserving mixup data augmentation, a custom Pearson CombinLoss function, and fine-tuned transformer models, including ModernBERT, RoBERTa, and DeBERTa. Compared to individual fine-tuned transformer models (BERT, RoBERTa, DeBERTa and Mod-ernBERT) without augmentation or ensemble learning, our approach demonstrates significant improvements. The proposed system achieves an average Pearson correlation coefficient of 0.768 on the test set, outperforming the best individual baseline model. In particular, the model performs best for sadness (r = 0.808) and surprise (r = 0.770), highlighting its ability to capture subtle intensity variations in the text. Despite these improvements, challenges such as data imbalance, performance on lowresource emotions (e.g., anger and fear), and the need for refined data augmentation techniques remain open for future research.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

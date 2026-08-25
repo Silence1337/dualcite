@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">UNCOMP: Can Matrix Entropy Uncover Sparsity? -A Compressor Design from an Uncertainty-Aware Perspective</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Jing</forename><surname>Xiong</surname></persName>
+							<email>junexiong@connect.hku.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianghan</forename><surname>Shen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanjing University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fanghua</forename><surname>Ye</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University College London</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaofan</forename><surname>Tao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhongwei</forename><surname>Wan</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">The Ohio State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianqiao</forename><surname>Lu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xun</forename><surname>Wu</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chuanyang</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+								<address>
+									<addrLine>7 SIAT</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhijiang</forename><surname>Guo</surname></persName>
+							<affiliation key="aff7">
+								<orgName type="institution">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Lingpeng</forename><surname>Kong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ngai</forename><surname>Wong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">UNCOMP: Can Matrix Entropy Uncover Sparsity? -A Compressor Design from an Uncertainty-Aware Perspective</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B57DD5A8754490620C6633A348DA7C4F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Deploying large language models (LLMs) for long-context inference remains challenging due to their substantial memory and computational demands. While techniques such as Key-Value (KV) cache compression are designed to reduce memory usage, they often neglect the structured sparsity inherent in the relationship between hidden states and their corresponding KV cache. In this work, we explore the role of uncertainty as a potential indicator of sparsity within LLMs. We propose UNCOMP, an uncertainty-aware framework that leverages truncated matrix entropy to identify areas of low information content, thereby revealing sparsity patterns that can be used for adaptive compression. Unlike traditional methods that apply uniform compression, UNCOMP dynamically adjusts its approach to compression, guided by uncertainty measures that reflect the importance of various model components. Our analysis shows that sparsity patterns, when derived from uncertainty estimates, can be exploited to reveal special long-range dependencies, such as retrieval heads and retrieval layers. This perspective not only enhances our understanding of how compression can be optimized but also provides new insights into the inherent sparsity of LLMs during long-context inference. By focusing on uncertainty to analyze the sparsity pattern in detail, UNCOMP reduces the KV cache size to 4.74% of the original, achieves a 6% prefill speedup, and improves throughput by 6.4×-not only delivering strong lossless compression performance, but also validating the effectiveness of the underlying theoretical tool. We release the code at https://github.com/menik1126/UNComp.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

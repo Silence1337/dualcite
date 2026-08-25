@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A3-108 at BHASHA Task1: Asymmetric BPE configuration for Grammar Error Correction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Saumitra</forename><surname>Yadav</surname></persName>
+							<email>saumitra.yadav@research.iiit.ac.in</email>
+							<affiliation key="aff0">
+								<orgName type="department">International Institute of Information Technology</orgName>
+								<orgName type="institution" key="instit1">Language Technologies Research Center</orgName>
+								<orgName type="institution" key="instit2">KCIS</orgName>
+								<address>
+									<settlement>Hyderabad</settlement>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Manish</forename><surname>Shrivastava</surname></persName>
+							<email>m.shrivastava@iiit.ac.in</email>
+							<affiliation key="aff0">
+								<orgName type="department">International Institute of Information Technology</orgName>
+								<orgName type="institution" key="instit1">Language Technologies Research Center</orgName>
+								<orgName type="institution" key="instit2">KCIS</orgName>
+								<address>
+									<settlement>Hyderabad</settlement>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A3-108 at BHASHA Task1: Asymmetric BPE configuration for Grammar Error Correction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">23446E3DE16DAF06B3B524E3D02F9E53</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper presents our approach to Grammatical Error Correction (GEC) for five lowresource Indic languages, a task severely limited by a scarcity of annotated data. Our core methodology involves two stages: synthetic data generation and model optimization. First, we leverage the provided training data to build a Statistical Machine Translation (SMT) system, which is then used to generate large-scale synthetic noisy-to-clean parallel data from available monolingual text. This artificially corrupted data significantly enhances model robustness. Second, we train Transformer-based sequence-to-sequence models using an asymmetric and symmetric Byte Pair Encoding (BPE) configuration, where the number of merge operations differs between the source (erroneous) and target (corrected) sides to better capture language-specific characteristics. For instance, source BPE sizes 4000, 8000 and 16000, with target sizes at 500, 1000, 2000, 3000 and 4000. Our experiments demonstrated competitive performance across all five languages, with the best results achieving a GLUE score of 94.16 for Malayalam (Rank 4th) followed by Bangla at 92.44 (ranked 5th), Tamil at 85.52 (ranked 5th), Telugu at 81.9 (7th), and Hindi at 79.45(10th) in the shared task. These findings substantiate the effectiveness of combining SMT-based synthetic data generation with asymmetric BPE configurations for lowresource GEC.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

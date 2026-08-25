@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Confusion is the Final Barrier: Rethinking Jailbreak Evaluation and Investigating the Real Misuse Threat of LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Yan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Lab of Processors</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Sciences 3 People&apos;s Public Security</orgName>
+								<orgName type="institution" key="instit1">University of Chinese</orgName>
+								<orgName type="institution" key="instit2">University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sheng</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Lab of Processors</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhe</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yijun</forename><surname>Lin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zenghao</forename><surname>Duan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Lab of Processors</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Sciences 3 People&apos;s Public Security</orgName>
+								<orgName type="institution" key="instit1">University of Chinese</orgName>
+								<orgName type="institution" key="instit2">University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhifei</forename><surname>Zheng</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Min</forename><surname>Liu</surname></persName>
+							<email>liumin@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Lab of Processors</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Sciences 3 People&apos;s Public Security</orgName>
+								<orgName type="institution" key="instit1">University of Chinese</orgName>
+								<orgName type="institution" key="instit2">University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyi</forename><surname>Yin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Lab of Processors</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianping</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Confusion is the Final Barrier: Rethinking Jailbreak Evaluation and Investigating the Real Misuse Threat of LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8969EC1AF6D4EFBFEAA4B2EB37F2F396</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>With the development of Large Language Models (LLMs), numerous efforts have revealed their vulnerabilities to jailbreak attacks. Although these studies have driven the progress in LLMs&apos; safety alignment, it remains unclear whether LLMs have internalized authentic knowledge to deal with real-world crimes, or are merely forced to simulate toxic language patterns. This ambiguity raises concerns that jailbreak success is often attributable to a hallucination loop between jailbroken LLM and judger LLM. By decoupling the use of jailbreak techniques, we construct knowledge-intensive Q&amp;A to investigate the misuse threats of LLMs in terms of dangerous knowledge possession, harmful task planning utility, and harmfulness judgment robustness. Experiments reveal a mismatch between jailbreak success rates and harmful knowledge possession in LLMs, and existing LLM-as-a-judge frameworks tend to anchor harmfulness judgments on toxic language patterns. Our study reveals a gap between existing LLM safety assessments and real-world threat potential. Warning: This paper contains potentially harmful content.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LESA: Learnable LLM Layer Scaling-Up</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yifei</forename><surname>Yang</surname></persName>
+							<email>yifeiyang@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Shanghai Education Commission for Intelligent Interaction and Cognitive Engineering</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Shanghai Key Laboratory of Trusted Data Circulation and Governance in Web3</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zouying</forename><surname>Cao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Shanghai Education Commission for Intelligent Interaction and Cognitive Engineering</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Shanghai Key Laboratory of Trusted Data Circulation and Governance in Web3</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinbei</forename><surname>Ma</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Shanghai Education Commission for Intelligent Interaction and Cognitive Engineering</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Shanghai Key Laboratory of Trusted Data Circulation and Governance in Web3</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yao</forename><surname>Yao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Shanghai Education Commission for Intelligent Interaction and Cognitive Engineering</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Shanghai Key Laboratory of Trusted Data Circulation and Governance in Web3</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Libo</forename><surname>Qin</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Central South University</orgName>
+								<address>
+									<addrLine>5 ByteDance</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhi</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hai</forename><surname>Zhao</surname></persName>
+							<email>zhaohai@cs.sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Shanghai Education Commission for Intelligent Interaction and Cognitive Engineering</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Shanghai Key Laboratory of Trusted Data Circulation and Governance in Web3</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LESA: Learnable LLM Layer Scaling-Up</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D5E69C6830129ADDAD5ED2E2D2F0C91B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:14+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Training Large Language Models (LLMs) from scratch requires immense computational resources, making it prohibitively expensive. Model scaling-up offers a promising solution by leveraging the parameters of smaller models to create larger ones. However, existing depth scaling-up methods rely on empirical heuristic rules for layer duplication, which result in poorer initialization and slower convergence during continual pre-training. We propose LESA, a novel learnable method for depth scaling-up. By concatenating parameters from each layer and applying Singular Value Decomposition, we uncover latent patterns between layers, suggesting that inter-layer parameters can be learned. LESA uses a neural network to predict the parameters inserted between adjacent layers, enabling better initialization and faster training. Experiments show that LESA outperforms existing baselines, achieving superior performance with less than half the computational cost during continual pre-training. Extensive analyses demonstrate its effectiveness across different model sizes and tasks. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

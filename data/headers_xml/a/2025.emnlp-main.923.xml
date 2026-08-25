@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">THREAD: A Logic-Based Data Organization Paradigm for How-To Question Answering with Retrieval Augmented Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kaikai</forename><surname>An</surname></persName>
+							<email>ankaikai@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fangkai</forename><surname>Yang</surname></persName>
+							<email>fangkaiyang@microsoft.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liqun</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junting</forename><surname>Lu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sitao</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Nanjing University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuzheng</forename><surname>Si</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pu</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lele</forename><surname>Cao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qingwei</forename><surname>Lin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Saravan</forename><surname>Rajmohan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongmei</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Baobao</forename><surname>Chang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">THREAD: A Logic-Based Data Organization Paradigm for How-To Question Answering with Retrieval Augmented Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">145973FE3F77D84A82E23FF03C947FB3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advances in retrieval-augmented generation (RAG) have substantially improved question-answering systems, particularly for factoid &apos;5Ws&apos; questions. However, significant challenges remain when addressing &apos;1H&apos; questions, specifically how-to questions, which are integral for decision-making and require dynamic, step-by-step responses. The key limitation lies in the prevalent data organization paradigm, chunk, which commonly divides documents into fixed-size segments, and disrupts the logical coherence and connections within the context. To address this, we propose THREAD, a novel data organization paradigm enabling systems to handle how-to questions more effectively. Specifically, we introduce a new knowledge granularity, &apos;logic unit&apos; (LU), where large language models transform documents into more structured and loosely interconnected LUs. Extensive experiments across both open-domain and industrial settings show that THREAD outperforms existing paradigms significantly, improving the success rate of handling how-to questions by 21% to 33%. Additionally, THREAD demonstrates high adaptability across diverse document formats, reducing retrieval information by up to 75% compared to chunk, and also shows better generalizability to &apos;5Ws&apos; questions, such as multi-hop questions, outperforming other paradigms.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

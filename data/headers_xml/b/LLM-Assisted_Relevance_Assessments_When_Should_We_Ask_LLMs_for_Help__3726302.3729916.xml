@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LLM-Assisted Relevance Assessments: When Should We Ask LLMs for Help?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rikiya</forename><surname>Takehi</surname></persName>
+							<email>rikiya.takehi@fuji.waseda.jp</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Waseda University Tokyo</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ellen</forename><forename type="middle">M</forename><surname>Voorhees</surname></persName>
+							<email>ellen.voorhees@nist.gov</email>
+							<affiliation key="aff1">
+								<orgName type="institution">National Institute of Standards and Technology Gaithersburg</orgName>
+								<address>
+									<region>MD</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tetsuya</forename><surname>Sakai</surname></persName>
+							<email>tetsuyasakai@acm.org</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Waseda University Tokyo</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ian</forename><surname>Soboroff</surname></persName>
+							<email>ian.soboroff@nist.gov</email>
+							<affiliation key="aff3">
+								<orgName type="institution">National Institute of Standards and Technology Gaithersburg</orgName>
+								<address>
+									<region>MD</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LLM-Assisted Relevance Assessments: When Should We Ask LLMs for Help?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8CE2787465703E855A86B2F1368D9BE3</idno>
+					<idno type="DOI">10.1145/3726302.3729916</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>offline evaluation</term>
+					<term>relevance judgments</term>
+					<term>test collections</term>
+					<term>large language models</term>
+					<term>active learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Test collections are information retrieval tools that allow researchers to quickly and easily evaluate ranking algorithms. While test collections have become an integral part of IR research, the process of data creation involves significant manual annotation effort, which often makes it very expensive and time-consuming. Consequently, test collections could become too small when the budget is limited, which may lead to unstable evaluations. As a cheaper alternative, recent studies have proposed the use of large language models (LLMs) to completely replace human assessors. However, while LLMs seem to somewhat correlate with human judgments, their predictions are not perfect and often show bias. Thus, a complete replacement with LLMs is argued to be too risky and not fully reliable. In this paper, we propose LLM-Assisted Relevance Assessments (LARA) 1 , an effective method to balance manual annotations with LLM annotations, which helps to build a rich and reliable test collection even under a low budget. We use the LLM&apos;s predicted relevance probabilities to select the most profitable documents to manually annotate under a budget constraint. With theoretical reasoning, LARA effectively guides the human annotation process by actively learning to calibrate the LLM&apos;s predicted relevance probabilities. Then, using the calibration model learned from the limited manual annotations, LARA debiases the LLM predictions to annotate the remaining non-assessed data. Experiments on TREC-7 Ad Hoc, TREC-8 Ad Hoc, TREC Robust 2004, and TREC-COVID datasets show that LARA outperforms alternative solutions under almost any budget constraint. While the community debates humans vs. LLMs in relevance assessments, we contend that, given the same amount of human effort, it is reasonable to leverage LLMs. CCS Concepts • Information systems → Test collections; Relevance assessment; • Computing methodologies → Active learning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

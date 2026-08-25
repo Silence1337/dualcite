@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rethinking Data Selection at Scale: Random Selection is Almost All You Need</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tingyu</forename><surname>Xia</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<address>
+									<country>Jilin University</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">†</forename><surname>Bowen</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Group 3 Engineering Research Center of Knowledge-Driven Human-Machine Intelligence</orgName>
+								<orgName type="institution">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Dang</surname></persName>
+							<email>dangkai.dk@alibaba-inc.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Group 3 Engineering Research Center of Knowledge-Driven Human-Machine Intelligence</orgName>
+								<orgName type="institution">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">An</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Group 3 Engineering Research Center of Knowledge-Driven Human-Machine Intelligence</orgName>
+								<orgName type="institution">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuan</forename><surname>Wu</surname></persName>
+							<email>yuanwu@jlu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<address>
+									<country>Jilin University</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuan</forename><surname>Tian</surname></persName>
+							<email>yuantian@jlu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<address>
+									<country>Jilin University</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Chang</surname></persName>
+							<email>yichang@jlu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<address>
+									<country>Jilin University</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">International Center of Future Science</orgName>
+								<orgName type="institution">Jilin University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junyang</forename><surname>Lin</surname></persName>
+							<email>junyang.ljy@alibaba-inc.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Alibaba Group 3 Engineering Research Center of Knowledge-Driven Human-Machine Intelligence</orgName>
+								<orgName type="institution">MOE</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rethinking Data Selection at Scale: Random Selection is Almost All You Need</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1F130B5922C18653090C02C81489E463</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Supervised fine-tuning (SFT) is crucial for aligning Large Language Models (LLMs) with human instructions. The primary goal during SFT is to select a small yet representative subset of training data from the larger pool, such that fine-tuning with this subset achieves results comparable to or even exceeding those obtained using the entire dataset. However, most existing data selection techniques are designed for small-scale data pools, which fail to meet the demands of real-world SFT scenarios. In this paper, we replicated several self-scoring methods-those that do not rely on external model assistance-on two millionscale datasets, and found that nearly all methods struggled to significantly outperform random selection when dealing with such largescale data pools. Moreover, our comparisons suggest that, during SFT, diversity in data selection is more critical than simply focusing on high-quality data. We also analyzed the limitations of several current approaches, explaining why they perform poorly on largescale datasets and why they are unsuitable for such contexts. Finally, we found that filtering data by token length offers a stable and efficient method for improving results. This approach, particularly when training on longtext data, proves highly beneficial for relatively weaker base models, such as Llama3. The code is available at https://github.com/ xiatingyu/SFT-DataSelection-at-scale.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

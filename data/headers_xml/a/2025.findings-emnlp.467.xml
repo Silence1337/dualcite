@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Align Attention Heads Before Merging Them: An Effective Way for Converting MHA to GQA</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qingyun</forename><surname>Jin</surname></persName>
+							<email>jinqingyun@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Automation Science and Electrical Engineering</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">OPPO AI Center</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaohui</forename><surname>Song</surname></persName>
+							<email>songxiaohui@oppo.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">OPPO AI Center</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Zhou</surname></persName>
+							<email>zhoufeng1@oppo.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">OPPO AI Center</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zengchang</forename><surname>Qin</surname></persName>
+							<email>zcqin@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Automation Science and Electrical Engineering</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">College of Engineering and Computer Science</orgName>
+								<address>
+									<settlement>VinUniversity</settlement>
+									<region>Hanoi</region>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Align Attention Heads Before Merging Them: An Effective Way for Converting MHA to GQA</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">440D20D029EDC43B669F6773DFB4B174</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have demonstrated exceptional performance across diverse natural language processing tasks. However, as the model size and the input sequence&apos;s length increase, the linearly increasing keyvalue (KV) cache significantly degrades inference throughput. Therefore, grouped-query attention (GQA), as an alternative to multihead attention (MHA), has been widely introduced into LLMs. In this work, we propose a cost-effective method for converting MHA into GQA with any compression ratio of KV heads. The key point of our method lies in the application of Procrustes analysis to the attention heads, which enhances the similarity among attention heads while preserving computational invariance, thereby improving the model&apos;s post-training performance. Subsequently, we employ L 0 regularization to prune redundant parameters. The model after pruning can be adapted to the standard GQA framework. Experimental results show that our strategy can compress up to 87.5% KV heads of LLaMA2-7B model and 75% KV heads of Sheared-LLaMA-1.3B with acceptable performance degradation. Our code is released at https://github.com/fpcsong/mha2gqa.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

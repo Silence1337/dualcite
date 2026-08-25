@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">What Happened in LLM Layers when Trained for Fast vs. Slow Thinking: A Gradient Perspective</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ming</forename><surname>Li</surname></persName>
+							<email>minglii@umd.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Maryland</orgName>
+								<orgName type="institution" key="instit2">University of Chicago</orgName>
+								<orgName type="institution" key="instit3">University of Maryland</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanhong</forename><surname>Li</surname></persName>
+							<email>yanhongli@uchicago.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Maryland</orgName>
+								<orgName type="institution" key="instit2">University of Chicago</orgName>
+								<orgName type="institution" key="instit3">University of Maryland</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianyi</forename><surname>Zhou</surname></persName>
+							<email>tianyi.david.zhou@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Maryland</orgName>
+								<orgName type="institution" key="instit2">University of Chicago</orgName>
+								<orgName type="institution" key="instit3">University of Maryland</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">What Happened in LLM Layers when Trained for Fast vs. Slow Thinking: A Gradient Perspective</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F4EDE070D4ED1ABEB8234EF1CC88F39A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>What makes a difference in the post-training of LLMs? We investigate the training patterns of different layers in large language models (LLMs) through the lens of the gradient. We are specifically interested in how fast vs. slow thinking affects the layer-wise gradients, given the recent popularity of training LLMs on reasoning paths such as chain-of-thoughts (CoT) and process rewards. In our study, fast thinking without CoT leads to larger gradients and larger differences of gradients across layers than slow thinking (Detailed CoT), indicating the learning stability brought by the latter. Additionally, we study whether the gradient patterns can reflect the correctness of responses when training different LLMs using slow vs. fast thinking paths. The results show that the gradients of slow thinking can distinguish correct and irrelevant reasoning paths. As a comparison, we conduct similar gradient analyses on non-reasoning knowledge learning tasks, on which, however, trivially increasing the response length does not lead to similar behaviors of slow thinking. Our study strengthens fundamental understandings of LLM training and sheds novel insights on its efficiency and stability, which pave the way towards building a generalizable System-2 agent. Our code, data, and gradient statistics can be found in: https://github.com/MingLiiii/ Layer_Gradient.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

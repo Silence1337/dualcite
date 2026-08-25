@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Training LLMs to be Better Text Embedders through Bidirectional Reconstruction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chang</forename><surname>Su</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LUMIA Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dengliang</forename><surname>Shi</surname></persName>
+							<email>dengliang.sdl@antgroup.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tiansuan Lab, Ant Group Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Siyuan</forename><surname>Huang</surname></persName>
+							<email>siyuan_huang_sjtu@outlook.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LUMIA Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jintao</forename><surname>Du</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tiansuan Lab, Ant Group Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Changhua</forename><surname>Meng</surname></persName>
+							<email>changhua.mch@antgroup.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tiansuan Lab, Ant Group Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tiansuan Lab, Ant Group Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weiqiang</forename><surname>Wang</surname></persName>
+							<email>weiqiang.wwq@antgroup.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Tiansuan Lab, Ant Group Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhouhan</forename><surname>Lin</surname></persName>
+							<email>lin.zhouhan@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">LUMIA Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Corresponding Author</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Training LLMs to be Better Text Embedders through Bidirectional Reconstruction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3874E25AB81AC61DA523A402BB88294C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have increasingly been explored as powerful text embedders. Existing LLM-based text embedding approaches often leverage the embedding of the final token, typically a reserved special token such as [EOS]. However, these tokens have not been intentionally trained to capture the semantics of the whole context, limiting their capacity as text embeddings, especially for retrieval and re-ranking tasks. We propose to add a new training stage before contrastive learning to enrich the semantics of the final token embedding. This stage employs bidirectional generative reconstruction tasks, namely EBQ2D (Embedding-Based Query-to-Document) and EBD2Q (Embedding-Based Document-to-Query), which interleave to anchor the [EOS] embedding and reconstruct either side of Query-Document pairs. Experimental results demonstrate that our additional training stage significantly improves LLM performance on the Massive Text Embedding Benchmark (MTEB), achieving new state-ofthe-art results across different LLM base models and scales. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

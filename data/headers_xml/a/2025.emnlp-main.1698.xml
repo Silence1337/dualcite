@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CompassVerifier: A Unified and Robust Verifier for LLMs Evaluation and Outcome Reward</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shudong</forename><surname>Liu</surname></persName>
+							<email>nlp2ct.shudong@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">NLP 2 CT Lab</orgName>
+								<orgName type="institution">University of Macau</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongwei</forename><surname>Liu</surname></persName>
+							<email>liuhongwei@pjlab.org.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Junnan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linchen</forename><surname>Xiao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Songyang</forename><surname>Gao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengqi</forename><surname>Lyu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuzhe</forename><surname>Gu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenwei</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Derek</forename><forename type="middle">F</forename><surname>Wong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">NLP 2 CT Lab</orgName>
+								<orgName type="institution">University of Macau</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Songyang</forename><surname>Zhang</surname></persName>
+							<email>zhangsongyang@pjlab.org.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai AI Laboratory</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CompassVerifier: A Unified and Robust Verifier for LLMs Evaluation and Outcome Reward</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1565ADB7517E33373ACE24732C120D0E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:51+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Answer verification is crucial not only for evaluating large language models (LLMs) by matching their unstructured outputs against standard answers, but also serves as the reward model to guide LLM optimization. Most evaluation frameworks rely on regularized matching or employ general LLMs for answer verification, which demands extensive, repetitive customization for regex rules or evaluation prompts. Two fundamental limitations persist in current methodologies: 1) the absence of comprehensive benchmarks that systematically evaluate verification capabilities across different LLMs; and 2) the nascent stage of verifier development, where existing approaches lack both the robustness to handle complex edge cases and the generalizability across different domains. In this work, we develop CompassVerifier, an accurate and robust lightweight verifier model for evaluation and outcome reward. It demonstrates multi-domain competency spanning math, knowledge, and diverse reasoning tasks, with the capability to process various answer types, including multisubproblems, formulas, and sequence answers, while effectively identifying abnormal/invalid responses. We introduce VerifierBench benchmark comprising model outputs collected from multiple data sources, augmented through manual analysis of meta error patterns to enhance CompassVerifier. We anticipate that Com-passVerifier and VerifierBench will facilitate answer verification, evaluation protocols, and reinforcement learning research. Code and dataset are available at https://github.com/ open-compass/CompassVerifier.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

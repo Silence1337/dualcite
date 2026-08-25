@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CURRICULUM DEBIASING: Toward Robust Parameter-Efficient Fine-Tuning Against Dataset Biases</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mingyu</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Artificial Intelligence</orgName>
+								<orgName type="institution">Korea University</orgName>
+								<address>
+									<settlement>Seoul</settlement>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Yeachan</forename><surname>Kim</surname></persName>
+							<email>yeachan@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Artificial Intelligence</orgName>
+								<orgName type="institution">Korea University</orgName>
+								<address>
+									<settlement>Seoul</settlement>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wing-Lam</forename><surname>Mok</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Artificial Intelligence</orgName>
+								<orgName type="institution">Korea University</orgName>
+								<address>
+									<settlement>Seoul</settlement>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sangkeun</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Artificial Intelligence</orgName>
+								<orgName type="institution">Korea University</orgName>
+								<address>
+									<settlement>Seoul</settlement>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science and Engineering</orgName>
+								<orgName type="institution">Korea University</orgName>
+								<address>
+									<settlement>Seoul</settlement>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CURRICULUM DEBIASING: Toward Robust Parameter-Efficient Fine-Tuning Against Dataset Biases</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5B5FA6560A8BCB707EA72B056BC8D978</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Parameter-efficient fine-tuning (PEFT) addresses the memory footprint issue of full finetuning by modifying only a subset of model parameters. However, on datasets exhibiting spurious correlations, we observed that PEFT slows down the model&apos;s convergence on unbiased examples, while the convergence on biased examples remains fast. This leads to the model&apos;s overfitting on biased examples, causing significant performance degradation in outof-distribution (OOD) scenarios. Traditional debiasing methods mitigate this issue by emphasizing unbiased examples during training but often come at the cost of in-distribution (ID) performance drops. To address this trade-off issue, we propose a CURRICULUM DEBIASING framework that presents examples in a biasedto-unbiased order. Our framework initially limits the model&apos;s exposure to unbiased examples, which are more difficult to learn, allowing it to first establish a foundation on easy-to-converge biased examples. As training progresses, we gradually increase the proportion of unbiased examples in the training set, guiding the model away from reliance on spurious correlations. Compared to the original PEFT methods, our method accelerates convergence on unbiased examples by approximately twofold and improves ID and OOD performance by 1.2% and 8.0%, respectively. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

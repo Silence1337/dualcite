@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Understanding Token Probability Encoding in Output Embeddings</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hakaze</forename><surname>Cho</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Japan Advanced Institute of Science and Technology</orgName>
+								<address>
+									<addrLine>2 RIKEN</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yoshihiro</forename><surname>Sakai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Japan Advanced Institute of Science and Technology</orgName>
+								<address>
+									<addrLine>2 RIKEN</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kenshiro</forename><surname>Tanaka</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Japan Advanced Institute of Science and Technology</orgName>
+								<address>
+									<addrLine>2 RIKEN</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mariko</forename><surname>Kato</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Japan Advanced Institute of Science and Technology</orgName>
+								<address>
+									<addrLine>2 RIKEN</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Naoya</forename><surname>Inoue</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Japan Advanced Institute of Science and Technology</orgName>
+								<address>
+									<addrLine>2 RIKEN</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Understanding Token Probability Encoding in Output Embeddings</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">252844369E607A358C610D46C1E08394</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In this paper, we investigate the output token probability information in the output embedding of language models. We find an approximate common log-linear encoding of output token probabilities within the output embedding vectors and empirically demonstrate that it is accurate and sparse. As a causality examination, we steer the encoding in output embedding to modify the output probability distribution accurately. Moreover, the sparsity we find in output probability encoding suggests that a large number of dimensions in the output embedding do not contribute to causal language modeling. Therefore, we attempt to delete the outputunrelated dimensions and find more than 30% of the dimensions can be deleted without significant movement in output distribution and sequence generation. Additionally, in the pretraining dynamics of language models, we find that the output embeddings capture the corpus token frequency information in early steps, even before an obvious convergence of parameters starts.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

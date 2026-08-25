@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Characterizing Mamba&apos;s Selective Memory using Auto-Encoders</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tamanna</forename><surname>Hossain</surname></persName>
+							<email>tthossai@uci.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of California</orgName>
+								<orgName type="institution" key="instit2">Irvine ‡ Dataminr Inc</orgName>
+								<orgName type="institution" key="instit3">Dataminr Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Robert</forename><forename type="middle">L</forename><surname>Logan</surname></persName>
+							<email>rlogan@dataminr.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of California</orgName>
+								<orgName type="institution" key="instit2">Irvine ‡ Dataminr Inc</orgName>
+								<orgName type="institution" key="instit3">Dataminr Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ganesh</forename><surname>Jagadeesan</surname></persName>
+							<email>cjagadeesan@dataminr.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of California</orgName>
+								<orgName type="institution" key="instit2">Irvine ‡ Dataminr Inc</orgName>
+								<orgName type="institution" key="instit3">Dataminr Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sameer</forename><surname>Singh</surname></persName>
+							<email>sameer@uci.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of California</orgName>
+								<orgName type="institution" key="instit2">Irvine ‡ Dataminr Inc</orgName>
+								<orgName type="institution" key="instit3">Dataminr Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joel</forename><surname>Tetreault</surname></persName>
+							<email>jtetreault@dataminr.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of California</orgName>
+								<orgName type="institution" key="instit2">Irvine ‡ Dataminr Inc</orgName>
+								<orgName type="institution" key="instit3">Dataminr Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alejandro</forename><surname>Jaimes</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of California</orgName>
+								<orgName type="institution" key="instit2">Irvine ‡ Dataminr Inc</orgName>
+								<orgName type="institution" key="instit3">Dataminr Inc</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Characterizing Mamba&apos;s Selective Memory using Auto-Encoders</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D307EF06508B1DBC9545BBDD6617CAB8</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:27+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>State space models (SSMs) are a promising alternative to transformers for language modeling because they use fixed memory during inference. However, this fixed memory usage requires some information loss in the hidden state when processing long sequences. While prior work has studied the sequence length at which this information loss occurs, it does not characterize the types of information SSM language models (LMs) tend to forget. In this paper, we address this knowledge gap by identifying the types of tokens (e.g., parts of speech, named entities) and sequences (e.g., code, math problems) that are more frequently forgotten by SSM LMs. We achieve this by training an auto-encoder to reconstruct sequences from the SSM&apos;s hidden state, and measure information loss by comparing inputs with their reconstructions. We perform experiments using the Mamba family of SSM LMs (130M-1.4B) on sequences ranging from 4-256 tokens. Our results show significantly higher rates of information loss on math-related tokens (e.g., numbers, variables), mentions of organization entities, and alternative dialects to Standard American English. We then examine the frequency that these tokens appear in Mamba&apos;s pretraining data and find that less prevalent tokens tend to be the ones Mamba is most likely to forget. By identifying these patterns, our work provides clear direction for future research to develop methods that better control Mamba&apos;s ability to retain important information. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

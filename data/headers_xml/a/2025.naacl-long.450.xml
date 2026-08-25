@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Amphista: Bi-directional Multi-head Decoding for Accelerating LLM Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zeping</forename><surname>Li</surname></persName>
+							<email>zeping.li@amd.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinlong</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ziheng</forename><surname>Gao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ji</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guanchen</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhuang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dong</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinzhang</forename><surname>Peng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Tian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Emad</forename><surname>Barsoum</surname></persName>
+							<email>emad.barsoum@amd.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Advanced Micro Devices, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Peking University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Amphista: Bi-directional Multi-head Decoding for Accelerating LLM Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">00B3B350D3B4A045EA95F7704FE2E874</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:51+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) inherently use autoregressive decoding, which lacks parallelism in inference and results in significantly slow inference speed. While methods such as Medusa constructs parallelized heads, they lack adequate information interaction across different prediction positions. To overcome this limitation, we introduce Amphista, an enhanced speculative decoding framework that builds upon Medusa. Specifically, Amphista models an Auto-embedding Block capable of parallel inference, incorporating bi-directional attention to enable interaction between different drafting heads. Additionally, Amphista integrates Staged Adaptation Layers, which ensure a seamless transition of semantic information from the target model&apos;s autoregressive inference to the drafting heads&apos; non-autoregressive inference, effectively achieving paradigm shift and feature fusion. Experimental results on Vicuna models using MT-Bench and Spec-Bench demonstrate that Amphista achieves substantial acceleration while maintaining generation quality. On MT-Bench, Amphista delivers up to 2.75× speedup over vanilla autoregressive decoding and 1.40× over Medusa on Vicuna 33B in wall-clock time. * Equal contribution.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

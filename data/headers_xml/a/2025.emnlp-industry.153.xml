@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Tagging-Augmented Generation: Assisting Language Models in Finding Intricate Knowledge In Long Contexts</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Anwesan</forename><surname>Pal</surname></persName>
+							<email>anwesanp@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+								<address>
+									<addrLine>2 Amazon Web Services 3 Amazon OTS, 4 Amazon Catalog AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Karen</forename><surname>Hovsepian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+								<address>
+									<addrLine>2 Amazon Web Services 3 Amazon OTS, 4 Amazon Catalog AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tinghao</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+								<address>
+									<addrLine>2 Amazon Web Services 3 Amazon OTS, 4 Amazon Catalog AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mengnan</forename><surname>Zhao</surname></persName>
+							<email>mengnanz@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+								<address>
+									<addrLine>2 Amazon Web Services 3 Amazon OTS, 4 Amazon Catalog AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Somendra</forename><surname>Tripathi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+								<address>
+									<addrLine>2 Amazon Web Services 3 Amazon OTS, 4 Amazon Catalog AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nikos</forename><surname>Kanakaris</surname></persName>
+							<email>nikosk@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+								<address>
+									<addrLine>2 Amazon Web Services 3 Amazon OTS, 4 Amazon Catalog AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">George</forename><surname>Mihaila</surname></persName>
+							<email>georgemh@amazon.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+								<address>
+									<addrLine>2 Amazon Web Services 3 Amazon OTS, 4 Amazon Catalog AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sumit</forename><surname>Nigam</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+								<address>
+									<addrLine>2 Amazon Web Services 3 Amazon OTS, 4 Amazon Catalog AI</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Tagging-Augmented Generation: Assisting Language Models in Finding Intricate Knowledge In Long Contexts</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DEDEE43F1CE8E3E2FECDB8D41469A6C6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent investigations into effective context lengths of modern flagship large language models (LLMs) have revealed major limitations in effective question answering (QA) and reasoning over long and complex contexts for even the largest and most impressive cadre of models. While approaches like retrievalaugmented generation (RAG) and chunk-based re-ranking attempt to mitigate this issue, they are sensitive to chunking, embedding and retrieval strategies and models, and furthermore, rely on extensive pre-processing, knowledge acquisition and indexing steps. In this paper, we propose Tagging-Augmented Generation (TAG), a lightweight data augmentation strategy that boosts LLM performance in longcontext scenarios, without degrading and altering the integrity and composition of retrieved documents. We validate our hypothesis by augmenting two challenging and directly relevant question-answering benchmarks-No-LiMa and NovelQA-and show that tagging the context or even just adding tag definitions into QA prompts leads to consistent relative performance gains over the baseline-up to 17% for 32K token contexts 1 , and 2.9% in complex reasoning question-answering for multi-hop queries requiring knowledge across a wide span of text. Additional details are available at https://sites.google.com/ view/tag-emnlp.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

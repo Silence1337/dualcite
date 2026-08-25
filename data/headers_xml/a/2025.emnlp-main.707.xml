@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Teaching Your Models to Understand Code via Focal Preference Alignment</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoling</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Zhang ⋄⋆π</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yangyu</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianwen</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yizhen</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zuchao</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruihang</forename><surname>Chu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yujiu</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Scarlett</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tsinghua</forename><surname>University</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Microsoft</forename><surname>Research</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Casia</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Teaching Your Models to Understand Code via Focal Preference Alignment</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">396FE6BD792121BCADB03F62E6B940B2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:06+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Preference learning extends the performance of Code LLMs beyond traditional supervised fine-tuning by leveraging relative quality comparisons. In existing approaches, a set of n candidate solutions is evaluated based on test case success rates, with the candidate demonstrating a higher pass rate being labeled as positive and its counterpart with a lower pass rate as negative. However, because this approach aligns entire failing code blocks rather than pinpointing specific errors, it lacks the granularity necessary to capture meaningful error-correction relationships. As a result, the model is unable to learn more informative error-correction patterns. To address these issues, we propose Target-DPO, a new preference alignment framework that mimics human iterative debugging to refine Code LLMs. Target-DPO explicitly locates error regions and aligns the corresponding tokens via a tailored DPO algorithm. To facilitate it, we introduce the CodeFlow dataset, where samples are iteratively refined until passing tests, with modifications capturing error corrections. Extensive experiments show that a diverse suite of Code LLMs equipped with Target-DPO achieves significant performance gains in code generation and improves on challenging tasks like BigCodeBench. Indepth analysis reveals that Target-DPO yields fewer errors. Code, model and datasets are in: https://github.com/JieWu02/Target-DPO.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

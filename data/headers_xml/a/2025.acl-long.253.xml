@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Lost in Multilinguality: Dissecting Cross-lingual Factual Inconsistency in Transformer Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Mingyang</forename><surname>Wang</surname></persName>
+							<email>mingyang.wang2@de.bosch.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Bosch Center for Artificial Intelligence</orgName>
+								<address>
+									<settlement>Renningen</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">LMU Munich</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Munich Center for Machine Learning (MCML)</orgName>
+								<address>
+									<addrLine>4 Hochschule der Medien</addrLine>
+									<settlement>Stuttgart</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Heike</forename><surname>Adel</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Lukas</forename><surname>Lange</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Bosch Center for Artificial Intelligence</orgName>
+								<address>
+									<settlement>Renningen</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yihong</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">LMU Munich</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Munich Center for Machine Learning (MCML)</orgName>
+								<address>
+									<addrLine>4 Hochschule der Medien</addrLine>
+									<settlement>Stuttgart</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ercong</forename><surname>Nie</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">LMU Munich</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Munich Center for Machine Learning (MCML)</orgName>
+								<address>
+									<addrLine>4 Hochschule der Medien</addrLine>
+									<settlement>Stuttgart</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jannik</forename><surname>Strötgen</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Karlsruhe University of Applied Sciences</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hinrich</forename><surname>Schütze</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">LMU Munich</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Munich Center for Machine Learning (MCML)</orgName>
+								<address>
+									<addrLine>4 Hochschule der Medien</addrLine>
+									<settlement>Stuttgart</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Lost in Multilinguality: Dissecting Cross-lingual Factual Inconsistency in Transformer Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BB5AD8BEE0B2299B996CC56DBFDEB3CD</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Multilingual language models (MLMs) store factual knowledge across languages but often struggle to provide consistent responses to semantically equivalent prompts in different languages. While previous studies point out this cross-lingual inconsistency issue, the underlying causes remain unexplored. In this work, we use mechanistic interpretability methods to investigate cross-lingual inconsistencies in MLMs. We find that MLMs encode knowledge in a language-independent concept space through most layers, and only transition to language-specific spaces in the final layers. Failures during the language transition often result in incorrect predictions in the target language, even when the answers are correct in other languages. To mitigate this inconsistency issue, we propose a linear shortcut method that bypasses computations in the final layers, enhancing both prediction accuracy and crosslingual consistency. Our findings shed light on the internal mechanisms of MLMs and provide a lightweight, effective strategy for producing more consistent factual outputs.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

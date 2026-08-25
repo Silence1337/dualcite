@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">VersaTune: An Efficient Data Composition Framework for Training Multi-Capability LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Keer</forename><surname>Lu</surname></persName>
+							<email>keer.lu@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Data Science</orgName>
+								<orgName type="institution" key="instit1">Academy for Advanced Interdisciplinary Studies</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Keshi</forename><surname>Zhao</surname></persName>
+							<email>zhaoks@stu.pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Data Science</orgName>
+								<orgName type="institution" key="instit1">Academy for Advanced Interdisciplinary Studies</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhuoran</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of CS &amp; Key Lab of High Confidence Software Technologies</orgName>
+								<orgName type="institution">Peking University, § Baichuan Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zheng</forename><surname>Liang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of CS &amp; Key Lab of High Confidence Software Technologies</orgName>
+								<orgName type="institution">Peking University, § Baichuan Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Bin Cui ‡</roleName><forename type="first">Tengjiao</forename><surname>Wang</surname></persName>
+							<email>tjwang@pku.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of CS &amp; Key Lab of High Confidence Software Technologies</orgName>
+								<orgName type="institution">Peking University, § Baichuan Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wentao</forename><surname>Zhang</surname></persName>
+							<email>wentao.zhang@pku.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Data Science</orgName>
+								<orgName type="institution" key="instit1">Academy for Advanced Interdisciplinary Studies</orgName>
+								<orgName type="institution" key="instit2">Peking University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">VersaTune: An Efficient Data Composition Framework for Training Multi-Capability LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0B4CABC72830D2BE68777B9BA51D8A4E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>As demonstrated by the proprietary Large Language Models (LLMs) such as GPT and Claude series, LLMs have the potential to achieve remarkable proficiency across a wide range of domains, including law, medicine, finance, science, code, etc., all within a single model. These capabilities are further augmented during the Supervised Fine-Tuning (SFT) phase. Despite their potential, existing work mainly focuses on domain-specific enhancements during fine-tuning, the challenge of which lies in catastrophic forgetting of knowledge across other domains. In this study, we introduce VersaTune, a novel data composition framework designed for enhancing LLMs&apos; overall multi-domain capabilities during training. We begin with detecting the distribution of domain-specific knowledge within the base model, followed by the training data composition that aligns with the model&apos;s existing knowledge distribution. During the subsequent training process, domain weights are dynamically adjusted based on their learnable potential and forgetting degree. Experimental results indicate that VersaTune is effective in multi-domain fostering, with an improvement of 29.77% in the overall multiability performances compared to uniform domain weights. Furthermore, we find that Qwen-2.5-32B + VersaTune even surpasses frontier models, including GPT-4o, Claude3.5-Sonnet and DeepSeek-V3 by 0.86%, 4.76% and 4.60%. Additionally, in scenarios where flexible expansion of a specific domain is required, VersaTune reduces the performance degradation in other domains by 38.77%, while preserving the training efficacy of the target domain.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

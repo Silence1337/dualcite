@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">When Truthful Representations Flip Under Deceptive Instructions?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xianxuan</forename><surname>Long</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Case Western Reserve University</orgName>
+								<address>
+									<addrLine>2 Hangzhou Dianzi University {xxl1514,yxf484 rxl685,mxs2090</addrLine>
+									<postCode>hxy692</postCode>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yao</forename><surname>Fu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Case Western Reserve University</orgName>
+								<address>
+									<addrLine>2 Hangzhou Dianzi University {xxl1514,yxf484 rxl685,mxs2090</addrLine>
+									<postCode>hxy692</postCode>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Runchao</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Case Western Reserve University</orgName>
+								<address>
+									<addrLine>2 Hangzhou Dianzi University {xxl1514,yxf484 rxl685,mxs2090</addrLine>
+									<postCode>hxy692</postCode>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mu</forename><surname>Sheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Case Western Reserve University</orgName>
+								<address>
+									<addrLine>2 Hangzhou Dianzi University {xxl1514,yxf484 rxl685,mxs2090</addrLine>
+									<postCode>hxy692</postCode>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haotian</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Case Western Reserve University</orgName>
+								<address>
+									<addrLine>2 Hangzhou Dianzi University {xxl1514,yxf484 rxl685,mxs2090</addrLine>
+									<postCode>hxy692</postCode>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaotian</forename><surname>Han</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Case Western Reserve University</orgName>
+								<address>
+									<addrLine>2 Hangzhou Dianzi University {xxl1514,yxf484 rxl685,mxs2090</addrLine>
+									<postCode>hxy692</postCode>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Pan</forename><surname>Li</surname></persName>
+							<email>lipan@ieee.org</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Case Western Reserve University</orgName>
+								<address>
+									<addrLine>2 Hangzhou Dianzi University {xxl1514,yxf484 rxl685,mxs2090</addrLine>
+									<postCode>hxy692</postCode>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">When Truthful Representations Flip Under Deceptive Instructions?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5204CF58C49711A4BCE2137F7424E792</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) tend to follow maliciously crafted instructions to generate deceptive responses, posing safety challenges. How deceptive instructions alter the internal representations of LLM compared to truthful ones remains poorly understood beyond output analysis. To bridge this gap, we investigate when and how these representations &quot;flip&quot;, such as from truthful to deceptive, under deceptive versus truthful/neutral instructions. Analyzing the internal representations of Llama-3.1-8B-Instruct and Gemma-2-9B-Instruct on a factual verification task, we find the model&apos;s instructed True/False output is predictable via linear probes across all conditions based on the internal representation. Further, we use Sparse Autoencoders (SAEs) to show that the Deceptive instructions induce significant representational shifts compared to Truthful/Neutral representations (which are similar), concentrated in early-to-mid layers and detectable even on complex datasets. We also identify specific SAE features highly sensitive to deceptive instruction and use targeted visualizations to confirm distinct truthful/deceptive representational subspaces. Our findings expose featureand layer-level signatures of deception, offering new insights for detecting and mitigating instructed dishonesty in LLMs. The code is available at: https://github.com/ivyllll/truthfulrepresentation-flip.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

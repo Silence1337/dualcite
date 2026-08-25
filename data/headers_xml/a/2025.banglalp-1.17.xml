@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LP-FT-LORA : A Three-Stage PEFT Framework for Efficient Domain Adaptation in Bangla NLP Tasks</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tasnimul</forename><forename type="middle">Hossain</forename><surname>Tomal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Penta Global Limited</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Anam</forename><forename type="middle">Borhan</forename><surname>Uddin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Penta Global Limited</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Intesar</forename><surname>Tahmid</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Penta Global Limited</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mir</forename><forename type="middle">Sazzat</forename><surname>Hossain</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Penta Global Limited</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Center for Computational &amp; Data Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Md</forename><surname>Fahim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Penta Global Limited</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Center for Computational &amp; Data Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Md</roleName><forename type="first">Farhad</forename><surname>Alam</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Penta Global Limited</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LP-FT-LORA : A Three-Stage PEFT Framework for Efficient Domain Adaptation in Bangla NLP Tasks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C9A5893274C6F1013BAEC7DF3364E625</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Adapting large pre-trained language models (LLMs) to downstream tasks typically requires fine-tuning, but fully updating all parameters is computationally prohibitive. Parameter-Efficient Fine-Tuning (PEFT) methods like Low-Rank Adaptation (LoRA) reduce this cost by updating a small subset of parameters. However, the standard approach of jointly training LoRA adapters and a new classifier head from a cold start can lead to training instability, as the classifier chases shifting feature representations. To address this, we propose LP-FT-LORA , a novel three-stage training framework that decouples head alignment from representation learning to enhance stability and performance. Our framework first aligns the classifier head with the frozen LM backbone via linear probing, then trains only the LoRA adapters to learn task-specific features, and finally performs a brief joint refinement of the head and adapters. We conduct extensive experiments on five Bangla NLP benchmarks across four open-weight compact transformer models. The results demonstrate that LP-FT-LORA consistently outperforms standard LoRA fine-tuning and other baselines, achieving state-of-the-art average performance and showing improved generalization on out-of-distribution datasets. Code for this paper is available at https:// github.com/tomal66/lp-ft-lora.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

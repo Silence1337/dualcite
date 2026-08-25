@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GFlowNet with Gradient-based Optimization for Bayesian Network Structure Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhu</forename><surname>Yang</surname></persName>
+							<email>yangzhu@stu.ynu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kun</forename><surname>Yue</surname></persName>
+							<email>kyue@ynu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiwei</forename><surname>Qi</surname></persName>
+							<email>maryqizhiwei@ynu.edu.cn</email>
+							<idno type="ORCID">0000-0002-5968-8503</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Duan</surname></persName>
+							<email>duanl@ynu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianyu</forename><surname>Li</surname></persName>
+							<email>lijianyu@itc.ynu.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">School of Information Science and Engineering Yunnan Key Laboratory of Intelligent Systems and Computing Kunming</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Yunnan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Information Science and Engineering Yunnan Key Laboratory of Intelligent Systems and Computing Kunming</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Yunnan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Laboratory of Intelligent Systems and Computing School of Education Kunming</orgName>
+								<orgName type="institution">Yunnan University Yunnan Key</orgName>
+								<address>
+									<settlement>Yunnan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">School of Information Science and Engineering Yunnan Key Laboratory of Intelligent Systems and Computing Kunming</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Yunnan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">School of Information Science and Engineering Yunnan Key Laboratory of Intelligent Systems and Computing Kunming</orgName>
+								<orgName type="institution">Yunnan University</orgName>
+								<address>
+									<settlement>Yunnan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GFlowNet with Gradient-based Optimization for Bayesian Network Structure Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7C89FD4AB93079CBD6F7F6205E653478</idno>
+					<idno type="DOI">10.1145/3746252.3761333</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Bayesian network</term>
+					<term>Structure learning</term>
+					<term>Contrastive learning</term>
+					<term>Posterior approximation</term>
+					<term>Continuous optimization</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Bayesian network (BN) structure learning on the discrete observations is crucial for representing uncertainty in data. However, existing single-structure learning methods are commonly trapped in local optimum or yielding structures that may lead to poorly calibrated predictions. Although posterior approximation methods can quantify the epistemic uncertainty over the learned BN structures, they cannot reliably identify the optimal BN structures. To tackle these issues, we propose a GFlowNet with Gradient-based Optimization (GFlowOpt) for the BN structure learning method. Initially, we employ Bayesian Information Criterion (BIC) scores as the rewards of BN structures, and adopt a contrastive learning-based training technique on GFlowNet to efficiently generate much better DAG representations. Subsequently, we train a proxy model on the continuous DAG representations by adopting the gradient-ascentbased optimization method to search more high proxy-scoring discrete candidate DAGs. Finally, we adopt Hill Climbing (HC) on these candidate DAGs to search high-scoring DAGs as the ultimate BN structures. Extensive experiments conducted on benchmark datasets demonstrate that the superiority of our proposed method compared with other state-of-the-art methods. CCS Concepts • Computing methodologies → Artificial intelligence.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

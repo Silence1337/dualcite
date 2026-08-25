@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">PersonaX: A Recommendation Agent-Oriented User Modeling Framework for Long Behavior Sequence</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yunxiao</forename><surname>Shi</surname></persName>
+							<email>yunxiao.shi@student.uts.edu.au</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Technology Sydney</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wujiang</forename><surname>Xu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Rutgers University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zeqi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Technology Sydney</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xing</forename><surname>Zi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Technology Sydney</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiang</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Technology Sydney</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Xu</surname></persName>
+							<email>min.xu@uts.edu.au</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Technology Sydney</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">PersonaX: A Recommendation Agent-Oriented User Modeling Framework for Long Behavior Sequence</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7FB2C7620B711873748AF5C258058B5E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>User profile embedded in the prompt template of personalized recommendation agents play a crucial role in shaping their decision-making process. High-quality user profiles are essential for aligning agent behavior with real user interests. Typically, these profiles are constructed by leveraging LLMs for user profile modeling (LLM-UM). However, this process faces several challenges: (1) LLMs struggle with long user behaviors due to context length limitations and performance degradation. (2) Existing methods often extract only partial segments from full historical behavior sequence, inevitably discarding diverse user interests embedded in the omitted content, leading to incomplete modeling and suboptimal profiling. (3) User profiling is often tightly coupled with the inference context, requiring online processing, which introduces significant latency overhead. In this paper, we propose PersonaX, an agent-agnostic LLM-UM framework to address these challenges. It augments downstream recommendation agents to achieve better recommendation performance and inference efficiency. PersonaX (a) segments complete historical behaviors into clustered groups, (b) selects multiple sub-behavior sequences (SBS) with a balance of prototypicality and diversity to form a high-quality core set, (c) performs offline multi-persona profiling to capture diverse user interests and generate fine-grained, cached textual personas, and (d) decouples user profiling from online inference, enabling profile retrieval instead of real-time generation. Extensive experiments demonstrate its effectiveness: using only 30-50% of behavioral data (sequence length 480), Per-sonaX enhances AgentCF by 3-11% and Agent4Rec by 10-50%. As a scalable and model-agnostic LLM-UM solution, PersonaX sets a new benchmark in scalable user modeling. The code is available at URL 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

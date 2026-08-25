@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Retrieval Augmented Generation with Collaborative Filtering for Personalized Text Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Teng</forename><surname>Shi</surname></persName>
+							<email>shiteng@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Xu</surname></persName>
+							<email>junxu@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Zhang</surname></persName>
+							<email>zhangx89@ruc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoxue</forename><surname>Zang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Zheng</surname></persName>
+							<email>zhengk92@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Song</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Han</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Kuaishou Technology Co., Ltd. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Engineering Research Cen- ter of Next-Generation Intelligent Search and Recommendation</orgName>
+								<orgName type="institution">Kuaishou Technology Co., Ltd. Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department" key="dep1">Ministry of Education</orgName>
+								<orgName type="department" key="dep2">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Retrieval Augmented Generation with Collaborative Filtering for Personalized Text Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FBAC607F00A42700D74FFAC2E7584CCF</idno>
+					<idno type="DOI">10.1145/3726302.3730075</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Large language models; Retrieval augmented generation</keywords>
+			</textClass>
+			<abstract>
+				<p>Recently, the personalization of Large Language Models (LLMs) to generate content that aligns with individual user preferences has garnered widespread attention. Personalized Retrieval-Augmented Generation (RAG), which retrieves relevant documents from the user&apos;s history to reflect their preferences and enhance LLM generation, is one commonly used approach for personalization. However, existing personalized RAG methods do not consider that the histories of similar users can also assist in personalized generation for the current user, meaning that collaborative information between users can also benefit personalized generation. Inspired by the application of collaborative filtering in recommender systems, we propose a method called CFRAG, which adapts Collaborative Filtering to RAG for personalized text generation. However, this presents two challenges: (1) how to incorporate collaborative information without explicit user similarity labels? (2) how to retrieve documents that support personalized LLM generation? For Challenge 1, we use contrastive learning to train user embeddings to retrieve similar users and introduce collaborative information. For Challenge 2, we design a personalized retriever and reranker to retrieve the top-𝑘 documents from these users&apos; histories. We take into account the user&apos;s preference during retrieval and reranking. Then we leverage feedback from the LLM to fine-tune the personalized retriever and reranker, enabling them to retrieve documents that meet the personalized generation needs of the LLM. Experimental results on the Language Model Personalization (LaMP) benchmark validate the effectiveness of CFRAG. Further analysis confirms the importance of incorporating collaborative information.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

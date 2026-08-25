@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Improving Large Language Models Function Calling and Interpretability via Guided-Structured Templates</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Hy</forename><surname>Dang</surname></persName>
+							<email>hdang@nd.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Notre</orgName>
+								<address>
+									<settlement>Dame</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianyi</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhuofeng</forename><surname>Wu</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingfeng</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoming</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tao</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pei</forename><surname>Chen</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengyang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Helen</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huasheng</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bing</forename><surname>Yin</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Meng</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Notre</orgName>
+								<address>
+									<settlement>Dame</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Amazon</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Improving Large Language Models Function Calling and Interpretability via Guided-Structured Templates</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8BEBACB0BC8681EC566ACB1B2CEDE478</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have demonstrated strong reasoning and tool-use capabilities, yet they often fail in real-world toolinteractions due to incorrect parameterization, poor tool selection, or misinterpretation of user intent. These issues often stem from an incomplete understanding of user goals and inadequate comprehension of tool documentation. While Chain-of-Thought (CoT) prompting has proven effective for enhancing reasoning in general contexts, our analysis reveals that free-form CoT is insufficient and sometimes counterproductive for structured functioncalling tasks. To address this, we introduce a curriculum-inspired framework that leverages structured reasoning templates to guide LLMs through more deliberate step-by-step instructions for generating function callings. Experimental results show that our method reduces tool-use errors, achieving 3-12% relative improvements over strong baselines across diverse model series and approaches. Moreover, our framework enhances the robustness, interpretability, and transparency of tool-using agents, advancing the development of more reliable AI assistants for real-world applications.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

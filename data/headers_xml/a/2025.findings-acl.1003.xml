@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards Storage-Efficient Visual Document Retrieval: An Empirical Study on Reducing Patch-Level Embeddings</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yubo</forename><surname>Ma</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Nanyang Technological University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinsong</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhang</forename><surname>Zang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaobao</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Nanyang Technological University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyi</forename><surname>Dong</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pan</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuhang</forename><surname>Cao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haodong</forename><surname>Duan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaqi</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yixin</forename><surname>Cao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Trustworthy Embodied AI</orgName>
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aixin</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Nanyang Technological University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards Storage-Efficient Visual Document Retrieval: An Empirical Study on Reducing Patch-Level Embeddings</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7C9DFE1BBB9C9829EC54AC0BC5EC012A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:13+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Despite the strong performance of ColPali/-ColQwen2 in Visualized Document Retrieval (VDR), it encodes each page into multiple patch-level embeddings and leads to excessive memory usage. This empirical study investigates methods to reduce patch embeddings per page at minimum performance degradation. We evaluate two token-reduction strategies: token pruning and token merging. Regarding token pruning, we surprisingly observe that a simple random strategy outperforms other sophisticated pruning methods, though still far from satisfactory. Further analysis reveals that pruning is inherently unsuitable for VDR as it requires removing certain page embeddings without query-specific information. Turning to token merging (more suitable for VDR), we search for the optimal combinations of merging strategy across three dimensions and develop Light-ColPali/ColQwen2. It maintains 98.2% of retrieval performance with only 11.8% of original memory usage, and preserves 94.6% effectiveness at 2.8% memory footprint. We expect our empirical findings and resulting Light-ColPali/ColQwen2 offer valuable insights and establish a competitive baseline for future research towards efficient VDR.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

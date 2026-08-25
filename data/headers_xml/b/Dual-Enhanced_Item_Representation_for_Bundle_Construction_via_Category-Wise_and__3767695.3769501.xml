@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dual-Enhanced Item Representation for Bundle Construction via Category-Wise and Cross-Modality Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Long-Hai</forename><surname>Nguyen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Huy-Son</forename><surname>Nguyen</surname></persName>
+							<email>h.s.nguyen@tudelft.nl</email>
+						</author>
+						<author>
+							<persName><forename type="first">Cam-Van</forename><forename type="middle">Thi</forename><surname>Nguyen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Duc-Trong</forename><surname>Le</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Atsuhiro</forename><surname>Takasu</surname></persName>
+							<email>takasu@nii.ac.jp</email>
+							<idno type="ORCID">0000-0002-9061-7949</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Hoang-Quynh</forename><surname>Le</surname></persName>
+							<idno type="ORCID">0000-0002-1778-0600</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">VNU University of Engineering and Technology Hanoi</orgName>
+								<address>
+									<country key="VN">VietNam</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Delft University of Technology Delft</orgName>
+								<address>
+									<country key="NL">The Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">VNU University of Engineering and Technology Hanoi</orgName>
+								<address>
+									<country key="VN">VietNam</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">VNU University of Engineering and Technology Hanoi</orgName>
+								<address>
+									<country key="VN">VietNam</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">National Institute of Informatics Tokyo</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">VNU University of Engineering and Technology Hanoi</orgName>
+								<address>
+									<country key="VN">VietNam</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dual-Enhanced Item Representation for Bundle Construction via Category-Wise and Cross-Modality Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5AA59F36067B9BCB62E8298CB4ED5C15</idno>
+					<idno type="DOI">10.1145/3767695.3769501</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Bundle construction</term>
+					<term>Category-wise</term>
+					<term>Cross-attention</term>
+					<term>Multimodal recommendation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Bundle recommender systems merely learn from existing bundles, but obtaining large-scale, high-quality bundle datasets remains a challenge, especially for platforms newly adopting bundle services. Bundle construction is the task of automatically selecting a set of compatible items to form a coherent bundle, a vital step before making recommendations on bundle-aware platforms. Groundbreaking work on bundle construction, like CLHE, has been designed solely on user-item interaction and self-attention modules to learn item/bundle representations. These techniques fall short of the standards for coherent bundles in real-world applications, where the relation among the semantic information of items should be considered more thoroughly. To address these challenges, we explicitly leverage category-wise information and employ cross-modal fusion to enhance item representations. By doing so, we propose Caro: Dual-Enhanced Item Representation for Bundle Construction via Category-Wise and Cross-Modality Learning. Caro captures the inherent relationships between items within analogous categories, improving bundle coherence. It comprises three main components: (1) cross-modality enhanced item representation, (2) category-enhanced item representation, and (3) bundle contrastive learning. Extensive experiments and detailed analyzes using multiple real-world datasets demonstrate that our method outperforms existing state-of-the-art techniques and provides valuable insight into the bundle construction problem. Notably, Caro achieves a 5-8% higher 𝑅𝑒𝑐𝑎𝑙𝑙@20 than the strongest baseline, underscoring its performance gains through dual categorywise and cross-modal enhancements. Our repository is available at https://github.com/L2R-UET/CaRo.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

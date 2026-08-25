@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Are LLMs reliable? An exploration of the reliability of large language models in clinical note generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ann</forename><forename type="middle">M</forename><surname>Kristine</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jasper</forename><surname>Carandang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">P</forename><surname>Meynard</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ethan</forename><surname>Araña</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><surname>Robert</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christopher</forename><forename type="middle">P</forename><surname>Casin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Monterola</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Y</forename><surname>Stanley</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jesus</forename><surname>Tan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">B</forename><surname>Felix</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christian</forename><forename type="middle">M</forename><surname>Valenzuela</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Alis</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Analytics, Computing &amp; Complex Systems Laboratory Asian Institute of Management</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Are LLMs reliable? An exploration of the reliability of large language models in clinical note generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">15404634BC33903826721B05BF535649</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Due to the legal and ethical responsibilities of healthcare providers (HCPs) for accurate documentation and protection of patient data privacy, the natural variability in the responses of large language models (LLMs) presents challenges for incorporating clinical note generation (CNG) systems, driven by LLMs, into realworld clinical processes. The complexity is further amplified by the detailed nature of texts in CNG. To enhance the confidence of HCPs in tools powered by LLMs, this study evaluates the reliability of 12 open-weight and proprietary LLMs from Anthropic, Meta, Mistral, and OpenAI in CNG in terms of their ability to generate notes that are string equivalent (consistency rate), have the same meaning (semantic consistency) and are correct (semantic similarity), across several iterations using the same prompt. The results show that (1) LLMs from all model families are stable, such that their responses are semantically consistent despite being written in various ways, and (2) most of the LLMs generated notes close to the corresponding notes made by experts. Overall, Meta&apos;s Llama 70B was the most reliable, followed by Mistral&apos;s Small model. With these findings, we recommend the local deployment of these relatively smaller open-weight models for CNG to ensure compliance with data privacy regulations, as well as to improve the efficiency of HCPs in clinical documentation.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

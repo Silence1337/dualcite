@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Octopus: Towards Building the Arabic Speech LLM Suite</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sara</forename><surname>Althubaiti</surname></persName>
+							<email>salthubaiti@humain.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">HUMAIN</orgName>
+								<address>
+									<settlement>Riyadh</settlement>
+									<country key="SA">Saudi Arabia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vasista</forename><forename type="middle">Sai</forename><surname>Lodagala</surname></persName>
+							<email>vlodagala@humain.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">HUMAIN</orgName>
+								<address>
+									<settlement>Riyadh</settlement>
+									<country key="SA">Saudi Arabia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tjad</forename><surname>Clark</surname></persName>
+							<email>tclark@humain.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">HUMAIN</orgName>
+								<address>
+									<settlement>Riyadh</settlement>
+									<country key="SA">Saudi Arabia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yousseif</forename><surname>Alshahawy</surname></persName>
+							<email>yelshahwy@humain.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">HUMAIN</orgName>
+								<address>
+									<settlement>Riyadh</settlement>
+									<country key="SA">Saudi Arabia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Izham</surname></persName>
+							<email>mizham@humain.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">HUMAIN</orgName>
+								<address>
+									<settlement>Riyadh</settlement>
+									<country key="SA">Saudi Arabia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Abdullah</forename><surname>Alrajeh</surname></persName>
+							<email>arajeh@humain.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">HUMAIN</orgName>
+								<address>
+									<settlement>Riyadh</settlement>
+									<country key="SA">Saudi Arabia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aljawharah</forename><forename type="middle">Bin</forename><surname>Tamran</surname></persName>
+							<email>ajbintamran@humain.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">HUMAIN</orgName>
+								<address>
+									<settlement>Riyadh</settlement>
+									<country key="SA">Saudi Arabia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ahmed</forename><surname>Ali</surname></persName>
+							<email>ahmed.ali@humain.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">HUMAIN</orgName>
+								<address>
+									<settlement>Riyadh</settlement>
+									<country key="SA">Saudi Arabia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Octopus: Towards Building the Arabic Speech LLM Suite</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">06C6FC7FB42E1863E323336ECB869AA8</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We present Octopus, a first family of modular speech-language models designed for Arabic-English ASR, dialect identification, and speech translation. Built on Whisper-V3 and enhanced with large language models like AL-LaM, LLaMA, and DeepSeek, Octopus bridges speech and text through a lightweight projection layer and Q-Former. To broaden its scope beyond speech, Octopus integrates BEATs, a general-purpose audio encoder allowing it to understand both linguistic and acoustic events. Despite its simplicity, this dual-encoder design supports robust performance across multilingual and code-switched scenarios. We also introduce TinyOctopus, a distilled variant using smaller models (Distil-Whisper + LLaMA3-1B / DeepSeek-1.5B), achieving competitive results with just a fraction of the parameters. Fine-tuning on synthetic code-switched data further boosts its performance. Octopus demonstrates the power of compact, extensible architectures in Arabic-centric speech modeling and sets the stage for unified multilingual audiolanguage understanding. The Octopus family models, along with the complete codebase, is publicly available 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

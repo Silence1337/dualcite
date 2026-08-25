@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CARMO: Dynamic Criteria Generation for Context Aware Reward Modelling</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Taneesh</forename><surname>Gupta</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shivam</forename><surname>Shandilya</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuchao</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rahul</forename><surname>Madhavan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Supriyo</forename><surname>Ghosh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chetan</forename><surname>Bansal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huaxiu</forename><surname>Yao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Saravan</forename><surname>Rajmohan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Microsoft</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of North Carolina at Chapel Hill</orgName>
+								<address>
+									<addrLine>3 IISc</addrLine>
+									<settlement>Bangalore</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CARMO: Dynamic Criteria Generation for Context Aware Reward Modelling</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">670B03EF1E548E5F1E6376F22F386E23</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Reward modeling in large language models is known to be susceptible to reward hacking, causing models to latch onto superficial features such as the tendency to generate lists or unnecessarily long responses. In RLHF, and more generally during post-training, flawed reward signals often lead to outputs that optimize for these spurious correlates instead of genuine quality or correctness. We propose CARMO (Context-Aware Reward Modeling), a novel approach that first generates dynamic, context-relevant criteria to ground the reward model prior to producing reward scores. Unlike prior methods that use static rubrics, CARMO leverages powerful LLMs to adaptively create evaluation criteria-e.g., logical consistency, clarity, and depth-tailored to the user query. Our theoretical analysis shows that such criteria generation can mitigate reward hacking. We further demonstrate how CARMO can be distilled into smaller models, thereby lowering the computational cost of alignment. We establish a new state-of-the-art performance on zero shot setting for generative models, with a 2.1% improvement on Reward Bench. Furthermore, alignment performed on the CARMO-curated preference dataset achieves 22.5% and 21.1% LC-WR (%) and WR (%) on Mistral-Base (7B). We release our datasets at huggingface/-CARMO.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

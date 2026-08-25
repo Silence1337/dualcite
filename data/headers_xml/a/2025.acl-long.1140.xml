@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MobiLoRA: Accelerating LoRA-based LLM Inference on Mobile Devices via Context-aware KV Cache Optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Borui</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Southeast University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yitao</forename><surname>Wang</surname></persName>
+							<email>wangyitao@seu.edu</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Cyber Science and Engineering</orgName>
+								<orgName type="institution">Southeast University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoran</forename><surname>Ma</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Southeast University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ligeng</forename><surname>Chen</surname></persName>
+							<email>chenligeng0108@gmail.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Honor Device Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Xiao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Honor Device Co</orgName>
+								<address>
+									<region>Ltd</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuai</forename><surname>Wang</surname></persName>
+							<email>shuaiwang@seu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Southeast University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MobiLoRA: Accelerating LoRA-based LLM Inference on Mobile Devices via Context-aware KV Cache Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6A03741BDD8E1F8550F14FCB1890C5F8</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Deploying large language models (LLMs) with low-rank adaptation (LoRA) on mobile devices is promising due to their capability to complete diverse domain-specific tasks while ensuring privacy and accessibility. In this paper, we introduce MobiLoRA to accelerate LoRA-based LLM inference on mobile devices. MobiLoRA focuses on optimizing the key-value (KV) caches due to the limited computing and memory resources of mobile devices. The key insight of MobiLoRA lies in the utilization of two contexts for on-device LoRA serving: semantic-level contexts, such as prompts with shared prefixes, and systemlevel contexts, such as the application status (e.g., foreground or killed) of LLM requests. Specifically, for semantic-level contexts, Mo-biLoRA proposes similarity-aware delta encoding, which leverages token-wise similarity in KV caches across LoRA adapters for efficient storage and reuse. Furthermore, Mo-biLoRA advocates context-aware KV cache management to optimize cache eviction considering the system-level contexts. We implement MobiLoRA and compare it with state-of-theart LLM serving frameworks using real-world mobile device traces. Results show that Mo-biLoRA accelerates LoRA-based LLM inference by 18.1%~80.5% on mobile devices.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A General Framework to Enhance Fine-tuning-based LLM Unlearning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Ren</surname></persName>
+							<email>renjie3@msu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Michigan State University</orgName>
+								<address>
+									<addrLine>2 Amazon</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenwei</forename><surname>Dai</surname></persName>
+							<email>zwdai@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xianfeng</forename><surname>Tang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hui</forename><surname>Liu</surname></persName>
+							<email>liuhui7@msu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Michigan State University</orgName>
+								<address>
+									<addrLine>2 Amazon</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingying</forename><surname>Zeng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rahul</forename><surname>Goutam</surname></persName>
+							<email>rgoutam@amazon.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Suhang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Xing</surname></persName>
+							<email>xingyue1@msu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Michigan State University</orgName>
+								<address>
+									<addrLine>2 Amazon</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>He</surname></persName>
+						</author>
+						<title level="a" type="main">A General Framework to Enhance Fine-tuning-based LLM Unlearning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">38DEC921CF227985989DDEBD5A8E8BA9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Unlearning has been proposed to remove copyrighted and privacy-sensitive data from Large Language Models (LLMs). Existing approaches primarily rely on fine-tuning-based methods, which can be categorized into gradient ascent-based (GA-based) and suppressionbased methods. However, they often degrade model utility (the ability to respond to normal prompts). In this work, we aim to develop a general framework that enhances the utility of fine-tuning-based unlearning methods. To achieve this goal, we first investigate the common property between GA-based and suppression-based methods. We unveil that GA-based methods unlearn by distinguishing the target data (i.e., the data to be removed) and suppressing related generations-essentially the same strategy employed by suppressionbased methods. Inspired by this finding, we introduce Gated Representation UNlearning (GRUN) which has two components: a soft gate function for distinguishing target data and a suppression module using Representation Finetuning (ReFT) to adjust representations rather than model parameters. Experiments show that GRUN significantly improves the unlearning and utility. Meanwhile, it is general for finetuning-based methods, efficient and promising for sequential unlearning. Our code is available at github.com/renjie3/GRUN.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

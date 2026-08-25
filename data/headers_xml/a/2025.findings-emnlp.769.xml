@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">pFedRAG: A Personalized Federated Retrieval-Augmented Generation System with Depth-Adaptive Tiered Embedding Tuning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hangyu</forename><surname>He</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">University of Sydney</orgName>
+								<address>
+									<settlement>Sydney</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Yuan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Data61</orgName>
+								<orgName type="institution">CSIRO</orgName>
+								<address>
+									<region>Sydney</region>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">University of New South Wales</orgName>
+								<address>
+									<settlement>Sydney</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Wu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Global Big Data Technologies Centre &amp; School of Electrical and Data Engineering</orgName>
+								<orgName type="institution">University of Technology Sydney</orgName>
+								<address>
+									<settlement>Sydney</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ren</forename><forename type="middle">Ping</forename><surname>Liu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Global Big Data Technologies Centre &amp; School of Electrical and Data Engineering</orgName>
+								<orgName type="institution">University of Technology Sydney</orgName>
+								<address>
+									<settlement>Sydney</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Ni</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">School of Engineering</orgName>
+								<orgName type="institution">Edith Cowan University</orgName>
+								<address>
+									<settlement>Perth</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">University of New South Wales</orgName>
+								<address>
+									<settlement>Sydney</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">pFedRAG: A Personalized Federated Retrieval-Augmented Generation System with Depth-Adaptive Tiered Embedding Tuning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6766C979CFCA065E894FC06C69D0D661</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) can undergo hallucinations in specialized domains, and standard Retrieval-Augmented Generation (RAG) often falters due to general-purpose embeddings ill-suited for domain-specific terminology. Though domain-specific fine-tuning enhances retrieval, centralizing data introduces privacy risks. The use of federated learning (FL) can alleviate this to some extent, but faces challenges of data heterogeneity, poor personalization, and expensive training data generation. We propose pFedRAG, a novel Personalized Federated RAG framework, which enables efficient collaborative fine-tuning of embedding models to address these challenges. The key contribution is a new Depth-Adaptive Tiered Embedding (DATE) architecture, which comprises a Global Shared Layer, combined using FL to capture common knowledge, and a Personalized Layer with adjustable depth tailored for local data and training results of each client. The depth is locally controlled based on crafted metrics and scoring criteria. Also, pFedRAG incorporates a fully client-side pipeline leveraging local small LLMs and vector database filtering to construct high-quality query-document pairs. Experiments on diverse medical non-IID document datasets demonstrate that pFedRAG significantly reduces communication costs, handles data heterogeneity, and improves retrieval performance. Human evaluations confirm the enhanced response quality of pFedRAG.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

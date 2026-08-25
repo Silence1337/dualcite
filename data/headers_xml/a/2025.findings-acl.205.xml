@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Do Large Language Models Perform Latent Multi-Hop Reasoning without Exploiting Shortcuts?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sohee</forename><surname>Yang</surname></persName>
+							<email>soheeyang@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nora</forename><surname>Kassner</surname></persName>
+							<email>norakassner@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Elena</forename><surname>Gribovskaya</surname></persName>
+							<email>egribovskaya@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sebastian</forename><surname>Riedel</surname></persName>
+							<email>srriedel@google.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mor</forename><surname>Geva</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Google</forename><surname>Deepmind</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Ucl</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Google</forename><surname>Research</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Do Large Language Models Perform Latent Multi-Hop Reasoning without Exploiting Shortcuts?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">09311460734D9BA090F15C49C9180C49</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We evaluate how well Large Language Models (LLMs) latently recall and compose facts to answer multi-hop queries like &quot;In the year Scarlett Johansson was born, the Summer Olympics were hosted in the country of&quot;. One major challenge in such evaluation is that LLMs may have developed shortcuts by encountering the head entity &quot;Scarlett Johansson&quot; and the answer entity &quot;United States&quot; in the same training sequences or merely guess the answer based on frequency-based priors. To prevent shortcuts, we exclude test queries where the head and answer entities might have co-appeared during training. Through careful selection of relations and facts and systematic removal of cases where models might guess answers or exploit partial matches, we construct an evaluation dataset SOCRATES (SHORTCUT-FREE LATENT REASONING). We observe that LLMs demonstrate promising latent multi-hop reasoning abilities without exploiting shortcuts, but only for certain types of queries. For queries requiring latent recall of countries as the intermediate answer, the best models achieve 80% latent composability, but this drops to just 5% for the recall of years. Comparisons with Chainof-Thought highlight a significant gap between the ability of models to reason latently versus explicitly. Analysis reveals that latent representations of the intermediate answer are constructed more often in queries with higher latent composability, and shows the emergence of latent multi-hop reasoning during pretraining. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

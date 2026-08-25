@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">RetroLLM: Empowering Large Language Models to Retrieve Fine-grained Evidence within Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiaoxi</forename><surname>Li</surname></persName>
+							<email>xiaoxi_li@ruc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiajie</forename><surname>Jin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yujia</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yongkang</forename><surname>Wu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Huawei Poisson Lab 4 Beijing Key Laboratory of Research on Large Models and Intelligent Governance</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhonghua</forename><surname>Li</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Huawei Poisson Lab 4 Beijing Key Laboratory of Research on Large Models and Intelligent Governance</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Ye</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Huawei Poisson Lab 4 Beijing Key Laboratory of Research on Large Models and Intelligent Governance</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhicheng</forename><surname>Dou</surname></persName>
+							<email>dou@ruc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">RetroLLM: Empowering Large Language Models to Retrieve Fine-grained Evidence within Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C9578DC9CCC71A8989F96393B51B4E1F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) exhibit remarkable generative capabilities but often suffer from hallucinations. Retrieval-augmented generation (RAG) offers an effective solution by incorporating external knowledge, but existing methods still face several limitations: additional deployment costs of separate retrievers, redundant input tokens from retrieved text chunks, and the lack of joint optimization of retrieval and generation. To address these issues, we propose RetroLLM, a unified framework that integrates retrieval and generation into a single, auto-regressive process, enabling LLMs to directly generate fine-grained evidence from the corpus with constrained decoding. Moreover, to mitigate false pruning in the process of constrained evidence generation, we introduce (1) hierarchical FM-Index constraints, which generate corpus-constrained clues to identify a subset of relevant documents before evidence generation, reducing irrelevant decoding space; and (2) a forward-looking constrained decoding strategy, which considers the relevance of future sequences to improve evidence accuracy. Extensive experiments on five open-domain QA datasets demonstrate RetroLLM&apos;s superior performance across both in-domain and out-ofdomain tasks. The code is available at https: //github.com/sunnynexus/RetroLLM.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

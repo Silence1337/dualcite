@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DRAG: Distilling RAG for SLMs from LLMs to Transfer Knowledge and Mitigate Hallucination via Evidence and Graph-based Distillation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jennifer</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="laboratory">VILA Lab</orgName>
+								<orgName type="institution" key="instit1">University of AI</orgName>
+								<orgName type="institution" key="instit2">McGill University ♮ National University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aidar</forename><surname>Myrzakhan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="laboratory">VILA Lab</orgName>
+								<orgName type="institution" key="instit1">University of AI</orgName>
+								<orgName type="institution" key="instit2">McGill University ♮ National University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yaxin</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="laboratory">VILA Lab</orgName>
+								<orgName type="institution" key="instit1">University of AI</orgName>
+								<orgName type="institution" key="instit2">McGill University ♮ National University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hassaan</forename><forename type="middle">Muhammad</forename><surname>Khan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="laboratory">VILA Lab</orgName>
+								<orgName type="institution" key="instit1">University of AI</orgName>
+								<orgName type="institution" key="instit2">McGill University ♮ National University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">♮</forename><surname>Sondos</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="laboratory">VILA Lab</orgName>
+								<orgName type="institution" key="instit1">University of AI</orgName>
+								<orgName type="institution" key="instit2">McGill University ♮ National University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mahmoud</forename><surname>Bsharat</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="laboratory">VILA Lab</orgName>
+								<orgName type="institution" key="instit1">University of AI</orgName>
+								<orgName type="institution" key="instit2">McGill University ♮ National University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiqiang</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="laboratory">VILA Lab</orgName>
+								<orgName type="institution" key="instit1">University of AI</orgName>
+								<orgName type="institution" key="instit2">McGill University ♮ National University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DRAG: Distilling RAG for SLMs from LLMs to Transfer Knowledge and Mitigate Hallucination via Evidence and Graph-based Distillation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1295AFE029294A94066EBC5FDC5D61E5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-Augmented Generation (RAG) methods have proven highly effective for tasks requiring factual consistency and robust knowledge retrieval. However, large-scale RAG systems consume significant computational resources and are prone to generating &quot;hallucinated&quot; content from Humans 1. In this work, we introduce DRAG, a novel framework for distilling RAG knowledge from large-scale Language Models (LLMs) into small LMs (SLMs). Our approach leverages evidenceand knowledge graph-based distillation, ensuring that the distilled model retains critical factual knowledge while significantly reducing model size and computational cost. By aligning the smaller model&apos;s predictions with a structured knowledge graph and ranked evidence, DRAG effectively mitigates hallucinations and improves factual accuracy. We further present a case demonstrating how our framework mitigates user privacy risks and introduce a corresponding benchmark. Experimental evaluations on multiple benchmarks demonstrate that our method outperforms the prior competitive RAG methods like MiniRAG for SLMs by up to 27.7% using the same models, preserving high-level efficiency and reliability. With DRAG, we provide a practical and resource-efficient roadmap to deploying enhanced retrieval and generation capabilities in small-sized LLMs. Code is available at https://github.com/VILA-Lab/DRAG. * Equal contribution. Work done while Jennifer and Hassaan visiting VILA Lab at MBZUAI. § Corresponding author. 1 Human incorrect answers can pollute RAG&apos;s database.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

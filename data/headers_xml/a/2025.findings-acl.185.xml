@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CHARTEDIT: How Far Are MLLMs From Automating Chart Analysis? Evaluating MLLMs&apos; Capability via Chart Editing</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xuanle</forename><surname>Zhao</surname></persName>
+							<email>zhaoxuanle2022@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuexin</forename><surname>Liu</surname></persName>
+							<email>liuxuexin2022@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoyue</forename><surname>Yang</surname></persName>
+							<email>yanghaoyue2024@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xianzhen</forename><surname>Luo</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Harbin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fanhu</forename><surname>Zeng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianling</forename><surname>Li</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Tianjin University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Shi</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chi</forename><surname>Chen</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CHARTEDIT: How Far Are MLLMs From Automating Chart Analysis? Evaluating MLLMs&apos; Capability via Chart Editing</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">859EFDEAD6D1538C9EBDF78E4C94484A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Although multimodal large language models (MLLMs) show promise in generating chart rendering code, editing charts via code presents a greater challenge. This task demands MLLMs to integrate chart understanding and reasoning capacities, which are laborintensive. While many MLLMs claim such editing capabilities, current evaluations rely on limited case studies, highlighting the urgent need for a comprehensive evaluation framework. In this work, we propose CHARTE-DIT, a novel benchmark designed for chart editing tasks, featuring 1405 diverse editing instructions applied to 233 real-world charts, each manually annotated and validated for accuracy. Utilizing CHARTEDIT, we evaluate the performance of 10 mainstream MLLMs across two types of experiments at both the code and chart levels. The results suggest that large-scale models can generate code to produce images that partially match the reference images. However, their ability to generate accurate edits according to the instructions remains limited. The state-of-the-art (SOTA) model achieves a score of only 59.96, highlighting significant challenges in precise modification. In contrast, small-scale models, including chartdomain models, struggle both with following editing instructions and generating overall chart images, underscoring the need for further development in this area. Code is available at https://github.com/xxlllz/ChartEdit.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

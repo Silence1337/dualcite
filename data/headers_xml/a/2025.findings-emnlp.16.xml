@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DCMKC: A Dual Consistency Matching Approach for Multi-hop Question Answering in LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xinyi</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Yiping</forename><surname>Song</surname></persName>
+							<email>songyiping@nudt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tingjin</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Academy of Military Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zheng</forename><surname>Xie</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minlie</forename><surname>Huang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="laboratory">The CoAI Group</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DCMKC: A Dual Consistency Matching Approach for Multi-hop Question Answering in LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A15B67D12A21AE3E0E25262B0FB36EAA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:51+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Reasoning based on chains of thought (CoTs) enables large language models (LLMs) to solve problems by thinking step by step and becomes the mainstream solution for Question-Answering (QA) tasks. Knowledge graph (KG)-enhanced CoT technology helps correct factual errors or predict reasoning direction. Existing KG-enhanced methods find relevant information in KGs &quot;within&quot; each reasoning step of CoTs. However, in some cases, logical connections &quot;between&quot; reasoning steps may be missing or wrong, leading to broken reasoning chains and wrong reasoning direction. To solve the above problem, we argue that the errors between reasoning steps require collaborative verification and mining of multiple triplets and multiple paths in KG. So we propose the DCMKC (Dual Consistency Matching for KG and CoT) method, aiming to maintain semantic and structural consistency between KG and CoT. The main idea is to convert CoTs and KGs into two granularity-aligned graphs, transforming multi-hop reasoning and KG matching into iterative matching and modification of two graphs. In each iteration, DCMKC matches the KG reasoning chains with CoTs based on semantic similarity and judges the structural consistency between them. Then it modifies CoTs using the matched chains. After iterations, the CoTs and KG reasoning chains reach high semantic and structural consistency, which is theoretically and experimentally demonstrated by kernel and spectral methods. The two kinds of chains are then used to generate the final answers. Experimental results show that our method outperforms baselines on multiple datasets, especially on multianswer questions, with up to 5.1% improvement over the baseline. Our code is available at https://github.com/suyun417/DCMKC.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

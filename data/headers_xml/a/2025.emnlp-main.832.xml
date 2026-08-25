@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Linear-Time Demonstration Selection for In-Context Learning via Gradient Estimation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ziniu</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Northeastern University</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<orgName type="institution" key="instit3">Northeastern University</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">Northeastern University</orgName>
+								<orgName type="institution" key="instit6">Northeastern University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenshuo</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Northeastern University</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<orgName type="institution" key="instit3">Northeastern University</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">Northeastern University</orgName>
+								<orgName type="institution" key="instit6">Northeastern University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongyue</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Northeastern University</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<orgName type="institution" key="instit3">Northeastern University</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">Northeastern University</orgName>
+								<orgName type="institution" key="instit6">Northeastern University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Northeastern University</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<orgName type="institution" key="instit3">Northeastern University</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">Northeastern University</orgName>
+								<orgName type="institution" key="instit6">Northeastern University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jennifer</forename><surname>Dy</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Northeastern University</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<orgName type="institution" key="instit3">Northeastern University</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">Northeastern University</orgName>
+								<orgName type="institution" key="instit6">Northeastern University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongyang</forename><forename type="middle">R</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Northeastern University</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<orgName type="institution" key="instit3">Northeastern University</orgName>
+								<orgName type="institution" key="instit4">University of Michigan</orgName>
+								<orgName type="institution" key="instit5">Northeastern University</orgName>
+								<orgName type="institution" key="instit6">Northeastern University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Linear-Time Demonstration Selection for In-Context Learning via Gradient Estimation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B367EEA145B3086AD2A621105B502AA8</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:08+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper introduces an algorithm to select demonstration examples for in-context learning of a query set. Given a set of n examples, how can we quickly select k out of n to best serve as the conditioning for downstream inference? This problem has broad applications in prompt tuning and chain-of-thought reasoning. Since model weights remain fixed during in-context learning, previous work has sought to design methods based on the similarity of token embeddings. This work proposes a new approach based on gradients of the output taken in the input embedding space. Our approach estimates model outputs through a first-order approximation using the gradients. Then, we apply this estimation to multiple randomly sampled subsets. Finally, we aggregate the sampled subset outcomes to form an influence score for each demonstration, and select k most relevant examples. This procedure only requires precomputing model outputs and gradients once, resulting in a linear-time algorithm relative to model and training set sizes. Extensive experiments across various models and datasets validate the efficiency of our approach. We show that the gradient estimation procedure yields approximations of full inference with less than 1% error across six datasets. This allows us to scale up subset selection that would otherwise run full inference by up to 37.7× on models with up to 34 billion parameters, and outperform existing selection methods based on input embeddings by 11% on average.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

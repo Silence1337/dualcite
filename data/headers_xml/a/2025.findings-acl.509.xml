@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ziyi</forename><surname>Ni</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">University of Chinese Academy of Science 3 Baidu, Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yifan</forename><surname>Li</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Global Innovation Exchange Institution</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ning</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dou</forename><surname>Shen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Pin</forename><surname>Lv</surname></persName>
+							<email>pin.lv@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daxiang</forename><surname>Dong</surname></persName>
+							<email>dongdaxiang@baidu.com</email>
+						</author>
+						<title level="a" type="main">Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">16FD82C5B2BC82EEBDE77AF39FB6E50E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Solving complex reasoning tasks is a key realworld application of agents. Thanks to the pretraining of Large Language Models (LLMs) on code data, recent approaches like CodeAct successfully use code as LLM agents&apos; action, achieving good results. However, CodeAct greedily generates the next action&apos;s code block by relying on fragmented thoughts, resulting in inconsistency and accumulative hallucination. Moreover, CodeAct lacks action-related ground-truth (GT), making its supervision signals and termination conditions questionable in multi-turn interactions. To address these issues, we propose Tree-of-Code (ToC), a self-growing framework that generates nodes through selfsupervision, incorporating prompt and model exploration in a GT-free setting. Each node employs CodeProgram, an end-to-end code generation paradigm that aligns executable code logic with global reasoning. This approach uses task-level execution success as both node validity and stop-growing flags, bypassing process supervision to enable online applications. Experiments on two datasets with ten popular zero-shot LLMs show that ToC boosts accuracy by nearly 20% over CodeAct with fewer than 1/4 turns. To further investigate the trade-off between efficacy and efficiency, ablation studies on different ToC tree sizes and exploration mechanisms validate ToC&apos;s superiority.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

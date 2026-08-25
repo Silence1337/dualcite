@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ALERT: An LLM-powered Benchmark for Automatic Evaluation of Recommendation Explanations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yichuan</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Worcester Polytechnic Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyang</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenwei</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mao</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianyi</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pei</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yifan</forename><surname>Gao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kyumin</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Worcester Polytechnic Institute</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaize</forename><surname>Ding</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Northwestern University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengyang</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhihan</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Notre</orgName>
+								<address>
+									<settlement>Dame</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingbo</forename><surname>Shang</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<settlement>San Diego</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xian</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Trishul</forename><surname>Chilimbi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Amazon.com</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ALERT: An LLM-powered Benchmark for Automatic Evaluation of Recommendation Explanations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5BB9448DA3F27D83F6F0274264E8F3B4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recommendation explanation systems have become increasingly vital with the widespread adoption of recommender systems. However, existing recommendation explanation evaluation benchmarks suffer from limited item diversity, impractical user profiling requirements, and unreliable and unscalable evaluation protocols. We present ALERT, a model-agnostic recommendation explanation evaluation benchmark. The benchmark comprises three main contributions: 1) a diverse dataset encompassing 15 Amazon e-commerce categories with 2,761 user-item interactions, incorporating implicit preferences through purchase histories; 2) two novel LLM-powered automatic evaluators that enable scalable and human-preference aligned evaluation of explanations; and 3) a robust divide-and-aggregate approach that synthesizes multiple LLM judgments, achieving 70% concordance with expert human evaluation and substantially outperforming existing methods. ALERT facilitates comprehensive evaluation of recommendation explanations across diverse domains, advancing the development of more effective explanation systems. The implementation is available at https://github.com/ bigheiniu/ALERT-LLMRecomBenchmark.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

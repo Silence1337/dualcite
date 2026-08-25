@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Highly Efficient Disk-based Nearest Neighbor Search on Extended Neighborhood Graph</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Zhang</surname></persName>
+							<email>zhangcheng@stu.xmu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianzhi</forename><surname>Wang</surname></persName>
+							<email>jzwang@stu.xmu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wan-Lei</forename><surname>Zhao</surname></persName>
+							<email>wlzhao@xmu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shihai</forename><surname>Xiao</surname></persName>
+							<email>xiaoshihai@huawei.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shihai</forename><forename type="middle">Xiao 2025</forename><surname>Highly</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Xiamen University Xiamen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Xiamen University Xiamen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Xiamen University Xiamen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Huawei Technologies Ltd</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Highly Efficient Disk-based Nearest Neighbor Search on Extended Neighborhood Graph</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">70CFCA077855F3B13F9ADED29F2034D6</idno>
+					<idno type="DOI">10.1145/3726302.3729996</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>k-nearest neighbor search</term>
+					<term>vector similarity search</term>
+					<term>disk-based approximate nearest neighbor search</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Nearest neighbor search (NN search) plays a fundamental role in many disciplines. According to recent studies, graph-based search methods show superior performance over other types of methods. In order to accommodate the high dimensionality as well as the growing data-scale, the disk-based NN search in which the index graph and the full-precision vectors are kept in SSD has become a promising direction. This paper optimizes the disk-based NN search from three perspectives. Firstly, an eXtended Neighborhood Graph (XN-Graph) structure is proposed. In contrast to the existing index graphs, the out-edges of the graph neighborhood are collected from much wider coverage of the data space. It therefore reduces the number of hops during NN search, which in turn reduces the search latency. Additionally, a dataset partitioning method called Boundary-adaptive Balanced Partition is proposed to facilitate the graph construction in cases where the system cannot handle large datasets in a single round. Moreover, an efficient hybrid NN search method called In-Memory First Search is proposed. Compared to the existing methods, it considerably reduces the CPU idle times. With the support of XN-Graph, it shows 1.5-3 times lower search latency than SOTA methods. On billion-scale datasets, its QPS is still above 4000 when Recall@10 is as high as 0.9. CCS Concepts • Information systems → Top-k retrieval in databases.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

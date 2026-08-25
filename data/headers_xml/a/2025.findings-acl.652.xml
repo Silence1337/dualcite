@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CTRLA: Adaptive Retrieval-Augmented Generation via Inherent Control</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Huanshuo</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Noah&apos;s Ark Lab</orgName>
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<country>Ltd</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Hao</forename><surname>Zhang</surname></persName>
+							<email>hzhang26@outlook.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Noah&apos;s Ark Lab</orgName>
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<country>Ltd</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhijiang</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Noah&apos;s Ark Lab</orgName>
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<country>Ltd</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jing</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Independent Researcher</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kuicai</forename><surname>Dong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Noah&apos;s Ark Lab</orgName>
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<country>Ltd</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyang</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Noah&apos;s Ark Lab</orgName>
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<country>Ltd</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><forename type="middle">Quan</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Noah&apos;s Ark Lab</orgName>
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<country>Ltd</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cong</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Noah&apos;s Ark Lab</orgName>
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<country>Ltd</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yong</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Noah&apos;s Ark Lab</orgName>
+								<orgName type="institution">Huawei Technologies Co</orgName>
+								<address>
+									<country>Ltd</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CTRLA: Adaptive Retrieval-Augmented Generation via Inherent Control</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8866F2659D0D06EFA8289EBF27812407</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-augmented generation (RAG) has emerged as a promising solution for mitigating hallucinations of Large Language Models (LLMs) with retrieved external knowledge. Adaptive RAG enhances this approach by enabling dynamic retrieval during generation, activating retrieval only when the query exceeds LLM&apos;s internal knowledge. Existing methods primarily focus on detecting LLM&apos;s confidence via statistical uncertainty. Instead, we present the first attempts to solve adaptive RAG from a representation perspective and develop an inherent control-based framework, termed CTRLA. Specifically, we extract the features that represent the honesty and confidence directions of LLM and adopt them to control LLM behavior and guide retrieval timing decisions. We also design a simple yet effective query formulation strategy to support adaptive retrieval. Experiments show that CTRLA is superior to existing adaptive RAG methods on diverse tasks. Honesty steering can effectively make LLMs more honest, and confidence monitoring is a promising indicator of retrieval trigger. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

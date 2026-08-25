@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CT-Bench: Benchmarking Large Language Models on Chinese Text-to-Table Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Haoxiang</forename><surname>Shi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Inner Mongolia University of Technology</orgName>
+								<address>
+									<settlement>Ordos</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Waseda University</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country>Japan Jiaan Wang</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Cen Wang</orgName>
+								<orgName type="institution">Soochow University</orgName>
+								<address>
+									<settlement>Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Computer Science and Engineering</orgName>
+								<orgName type="institution">KDDI Research, Inc</orgName>
+								<address>
+									<settlement>Saitama</settlement>
+									<country>Japan Tetsuya Sakai</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Waseda University</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CT-Bench: Benchmarking Large Language Models on Chinese Text-to-Table Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1DBC903C11A7B7A27E4303135B9D67D9</idno>
+					<idno type="DOI">10.1145/3767695.3769492</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>large language models</term>
+					<term>text-to-table generation</term>
+					<term>hallucination evaluation</term>
+					<term>structured data extraction</term>
+					<term>information retrieval</term>
+					<term>benchmark dataset</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The Text-to-Table task aims to generate format-free tables that convey key information from unstructured text without designated headers. The challenge lies not only in extracting the key information but also in creating appropriate table headers and accurately populating the table with the extracted information. Meanwhile, large language models (LLMs) have shown great success as multilingual general task solvers, theoretically enabling text-totable capabilities in many languages. However, current text-to-table benchmarks are all English-centric, which limits the research in non-English languages. In this paper, we propose CT-Bench, a Chinese text-to-table dataset with 86.6K samples, to benchmark LLMs on this task. Our analysis of the current English text-to-table benchmarks highlights limitations in data diversity and data hallucination. Inspired by this, CT-Bench selects a popular Chinese multidisciplinary online encyclopedia as the source, covering 28 domains to ensure data diversity. To minimize data hallucination, we first train an LLM to filter out samples with hallucination, then employ human annotators to clean the validation and testing sets. Using CT-Bench, we evaluate the performance of open-source and closed-source LLMs. Our results reveal that zero-shot LLMs, including GPT-4 and DeepSeek families, still have a significant performance gap compared to human judgment. However, after fine-tuning on the training data of CT-Bench, open-source LLMs can significantly improve their text-to-table abilities, outperforming GPT-4 and DeepSeek families by a large margin. CCS Concepts • Information systems → Information retrieval; • Computing methodologies → Natural language processing.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

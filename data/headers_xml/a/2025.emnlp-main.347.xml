@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">BTS: Harmonizing Specialized Experts into a Generalist LLM</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qizhen</forename><surname>Zhang</surname></persName>
+							<email>qizhen.zhang@eng.ox.ac.uk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Prajjwal</forename><surname>Bhargava</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chloe</forename><surname>Bi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chris</forename><forename type="middle">X</forename><surname>Cai</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jakob</forename><surname>Foerster</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Oxford</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jeremy</forename><surname>Fu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">⋄</forename><surname>Punit</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Singh</forename><surname>Koura</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruan</forename><surname>Silva</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sheng</forename><surname>Shen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Emily</forename><surname>Dinan</surname></persName>
+							<email>edinan@meta.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Suchin</forename><surname>Gururangan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mike</forename><surname>Lewis</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Superintelligence Labs</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">BTS: Harmonizing Specialized Experts into a Generalist LLM</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D2563144D32A118F2DBA27B912FEDAD4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We present BRANCH-TRAIN-STITCH (BTS), an efficient and flexible training algorithm for combining independently trained large language model (LLM) experts into a single, capable generalist model. Following Li et al. [2022], we start with a single seed LLM which is branched into domain-specific (e.g., coding or math) experts with continual pretraining. BTS combines experts using lightweight stitch layers, which are inserted between frozen experts and the seed LLM, and trained on a small datamix of the expert domains. Stitch layers enable the seed LLM to integrate representations from any number of experts during the forward pass, allowing it to generalize to new domains, despite remaining frozen. Because BTS does not alter the constituent LLMs, BTS provides a modular and flexible approach: experts can be easily removed or added with only a small amount of training. Compared to alternative model merging or upcycling approaches, BTS yields the best generalist performance on a variety of downstream tasks, while retaining the specialized capabilities of each of the experts.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

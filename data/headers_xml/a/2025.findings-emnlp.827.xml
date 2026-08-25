@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Token-Level Metrics for Detecting Incorrect Gold Annotations in Named Entity Recognition</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Elena</forename><surname>Merdjanovska</surname></persName>
+							<email>elena.merdjanovska@hu-berlin.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Humboldt-Universität zu Berlin Science of Intelligence</orgName>
+								<orgName type="institution" key="instit2">Humboldt-Universität zu Berlin Science of Intelligence</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alan</forename><surname>Akbik</surname></persName>
+							<email>alan.akbik@hu-berlin.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Humboldt-Universität zu Berlin Science of Intelligence</orgName>
+								<orgName type="institution" key="instit2">Humboldt-Universität zu Berlin Science of Intelligence</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Token-Level Metrics for Detecting Incorrect Gold Annotations in Named Entity Recognition</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DD72F7FAE2938550F4A8A540B8541882</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:05+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Annotated datasets for supervised learning tasks often contain incorrect gold annotations, i.e. label noise. To address this issue, many noisy label learning approaches incorporate metrics to filter out unreliable samples, for example using heuristics such as high loss or low confidence. However, when these metrics are integrated into larger pipelines, it becomes difficult to compare their effectiveness, and understand their individual contribution to reducing label noise. This paper directly compares popular sample metrics for detecting incorrect annotations in named entity recognition (NER). NER is commonly approached as token classification, so the metrics are calculated for each training token and the incorrect ones are flagged by defining metrics thresholds. We compare the metrics based on (i) their accuracy in detecting the incorrect labels and (ii) the test scores when retraining a model using the cleaned dataset. We show that training dynamics metrics work the best overall. The best metrics effectively reduce the label noise across different noise types. The errors that the model has not yet memorized are more feasible to detect, and relabeling these tokens is a more effective strategy than excluding them from training. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

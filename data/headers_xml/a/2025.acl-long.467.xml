@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AdaDHP: Fine-Grained Fine-Tuning via Dual Hadamard Product and Adaptive Parameter Selection</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Han</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<settlement>Dalian</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Changya</forename><surname>Li</surname></persName>
+							<email>lichangya.dut@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<settlement>Dalian</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaotong</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<settlement>Dalian</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Peking University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fenglong</forename><surname>Ma</surname></persName>
+							<email>fenglong@psu.edu</email>
+							<affiliation key="aff2">
+								<orgName type="institution">The Pennsylvania State University</orgName>
+								<address>
+									<settlement>Pennsylvania</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Wang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Shenzhen MSU-BIT University</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hong</forename><surname>Yu</surname></persName>
+							<email>hongyu@dlut.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Dalian University of Technology</orgName>
+								<address>
+									<settlement>Dalian</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AdaDHP: Fine-Grained Fine-Tuning via Dual Hadamard Product and Adaptive Parameter Selection</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9E062E928CCDFA3123FAF391BF40C95B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>With the continuously expanding parameters, efficiently adapting large language models to downstream tasks is crucial in resource-limited conditions. Many parameter-efficient finetuning methods have emerged to address this challenge. However, they lack flexibility, like LoRA requires manually selecting trainable parameters and rank size, (IA) 3 can only scale the activations along columns, yielding inferior results due to less precise fine-tuning. To address these issues, we propose a novel method named AdaDHP with fewer parameters and finer granularity, which can adaptively select important parameters for each task. Specifically, we introduce two trainable vectors for each parameter and fine-tune the parameters through Hadamard product along both rows and columns. This significantly reduces the number of trainable parameters, with our parameter count capped at the lower limit of LoRA. Moreover, we design an adaptive parameter selection strategy to select important parameters for downstream tasks dynamically. This allows our method to flexibly remove unimportant parameters for downstream tasks. Finally, we demonstrate the superiority of our method on the T5-base model across 17 NLU tasks and on complex mathematical tasks with the Llama series models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Euntae</forename><surname>Choi</surname></persName>
+							<email>euntae.choi175@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sumin</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Woosang</forename><surname>Lim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sungjoo</forename><surname>Yoo</surname></persName>
+							<email>sungjoo.yoo@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">01AB568B2AC9CE262FD3E113641D9C2A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We propose Rotate, Clip, and Partition (RCP), a Quantization-Aware Training (QAT) approach that first realizes extreme compression of LLMs with W2A4KV4 (2-bit weight, 4-bit activation, and 4-bit KV-cache) configuration. RCP integrates recent rotation techniques with a novel non-uniform weight quantizer design by theoretically and empirically analyzing the impact of rotation on the non-uniformity of weight distribution. Our weight quantizer, Learnable Direct Partitioning (LDP), introduces learnable parameters to directly learn non-uniform intervals jointly with LLM weights. We also present a GPU kernel supporting GEMV on non-uniform W2A4 as proof of concept. Experiments show that RCP can compress LLaMA-2-7B to W2A4KV4 with a loss of only 2.84 WikiText2 PPL and 5.29 times reduced memory footprint. Furthermore, RCP can quantize challenging mobile-targeted LLaMA-3.2 models and domain-specific WizardCoder-7B and MetaMath-7B with no critical problems such as convergence failure and repetition. Code is available at https://github.com/ songsm921/RCP. * indicates equal contribution † indicates corresponding author 1 We call l-bit weight, m-bit activation, and n-bit KV-cache WlAmKVn like W2A4KV4.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Beyond the Surface: A Solution-Aware Retrieval Model for Competition-level Code Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shiwen</forename><surname>Zhang</surname></persName>
+							<email>zhangshiwen@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Beijing Advanced Innovation Center for Future Blockchain and Privacy Computing</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lingxiang</forename><surname>Wang</surname></persName>
+							<email>wanglingxiang@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Beijing Advanced Innovation Center for Future Blockchain and Privacy Computing</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hainan</forename><surname>Zhang</surname></persName>
+							<email>zhanghainan@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Beijing Advanced Innovation Center for Future Blockchain and Privacy Computing</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ziwei</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Beijing Advanced Innovation Center for Future Blockchain and Privacy Computing</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sijia</forename><surname>Wen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Beijing Advanced Innovation Center for Future Blockchain and Privacy Computing</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiming</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Beijing Advanced Innovation Center for Future Blockchain and Privacy Computing</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Artificial Intelligence</orgName>
+								<orgName type="institution">Beihang University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Beyond the Surface: A Solution-Aware Retrieval Model for Competition-level Code Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4C13250DE6958D96904BC4E1A8BECFDD</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In competitive programming task, problem statements are often embedded within elaborate narrative backgrounds, requiring deep understanding of the underlying solutions to successfully complete the tasks. Current code generation models primarily focus on tokenlevel semantic modeling, highly susceptible to distractions from irrelevant narrative statements. Inspired by RAG, retrieving reference code with similar solutions may help enhance model performance on difficult problems. However, existing retrieval models also emphasize surface-level semantic similarity, neglecting the deeper solution-level logical similarities that are critical in competitive programming. Therefore, designing ranking models capable of accurately identifying and retrieving problems and corresponding codes remains an urgent research problem in competitive code generation. In this paper, we propose SolveRank, a solution-aware ranking model empowered by synthetic data for competitive programming tasks. Specifically, we leverage the DeepSeek-R1 model to generate logically equivalent but differently phrased new problems, verified by GPT-4o for solution consistency. Then, we train SolveRank with these as positive samples and BM25/random-retrieved problems as negatives. During inference, SolveRank retrieves relevant problems and corresponding code from the corpus to assist a downstream code generator. Experiments on the xCodeEval dataset demonstrate that SolveRank outperforms SOTA ranking methods in precision and recall metrics, and boosts code generation performance for difficult problems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Communication-Efficient and Tensorized Federated Fine-Tuning of Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sajjad</forename><surname>Ghiasvand</surname></persName>
+							<email>sajjad@ucsb.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Electrical and Computer Engineering Department</orgName>
+								<orgName type="department" key="dep2">Computer Science Department</orgName>
+								<orgName type="institution">UC Santa Barbara</orgName>
+								<address>
+									<settlement>Santa Barbara 2</settlement>
+									<country>UC</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yifan</forename><surname>Yang</surname></persName>
+							<email>yifanyang@ucsb.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Electrical and Computer Engineering Department</orgName>
+								<orgName type="department" key="dep2">Computer Science Department</orgName>
+								<orgName type="institution">UC Santa Barbara</orgName>
+								<address>
+									<settlement>Santa Barbara 2</settlement>
+									<country>UC</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyu</forename><surname>Xue</surname></persName>
+							<email>zhiyuxue@ucsb.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Electrical and Computer Engineering Department</orgName>
+								<orgName type="department" key="dep2">Computer Science Department</orgName>
+								<orgName type="institution">UC Santa Barbara</orgName>
+								<address>
+									<settlement>Santa Barbara 2</settlement>
+									<country>UC</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mahnoosh</forename><surname>Alizadeh</surname></persName>
+							<email>alizadeh@ucsb.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Electrical and Computer Engineering Department</orgName>
+								<orgName type="department" key="dep2">Computer Science Department</orgName>
+								<orgName type="institution">UC Santa Barbara</orgName>
+								<address>
+									<settlement>Santa Barbara 2</settlement>
+									<country>UC</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zheng</forename><surname>Zhang</surname></persName>
+							<email>zhengzhang@ucsb.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Electrical and Computer Engineering Department</orgName>
+								<orgName type="department" key="dep2">Computer Science Department</orgName>
+								<orgName type="institution">UC Santa Barbara</orgName>
+								<address>
+									<settlement>Santa Barbara 2</settlement>
+									<country>UC</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ramtin</forename><surname>Pedarsani</surname></persName>
+							<email>ramtin@ucsb.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Electrical and Computer Engineering Department</orgName>
+								<orgName type="department" key="dep2">Computer Science Department</orgName>
+								<orgName type="institution">UC Santa Barbara</orgName>
+								<address>
+									<settlement>Santa Barbara 2</settlement>
+									<country>UC</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Communication-Efficient and Tensorized Federated Fine-Tuning of Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A46D5ED9D4039B5C67C3121EFA716C2D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:19+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Parameter-efficient fine-tuning (PEFT) methods typically assume that Large Language Models (LLMs) are trained on data from a single device or client. However, real-world scenarios often require fine-tuning these models on private data distributed across multiple devices. Federated Learning (FL) offers an appealing solution by preserving user privacy, as sensitive data remains on local devices during training. Nonetheless, integrating parameterefficient fine-tuning (PEFT) methods into FL introduces two main challenges: communication overhead and data heterogeneity. In this paper, we introduce FedTT and FedTT+, methods for adapting LLMs by integrating tensorized adapters into client-side models&apos; encoder/decoder blocks. FedTT is versatile and can be applied to both cross-silo FL and largescale cross-device FL. FedTT+, an extension of FedTT tailored for cross-silo FL, enhances robustness against data heterogeneity by adaptively freezing portions of tensor factors, further reducing the number of trainable parameters. Experiments on BERT and LLaMA family models demonstrate that our proposed methods successfully address data heterogeneity challenges and perform on par or even better than existing federated PEFT approaches while achieving up to 10× reduction in communication cost.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

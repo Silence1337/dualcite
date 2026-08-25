@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Unconstrained Monotonic Calibration of Predictions in Deep Ranking Systems</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yimeng</forename><surname>Bai</surname></persName>
+							<email>baiyimeng@mail.ustc.edu.cn</email>
+							<idno type="ORCID">0009-0008-8874-9409</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Shunyu</forename><surname>Zhang</surname></persName>
+							<email>zhangshunyu@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Zhang</surname></persName>
+							<idno type="ORCID">0000-0002-7863-5183</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Hu</forename><surname>Liu</surname></persName>
+							<idno type="ORCID">0000-0003-2225-7387</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Wentian</forename><surname>Bao</surname></persName>
+							<idno type="ORCID">0009-0001-2195-0553</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Enyun</forename><surname>Yu</surname></persName>
+							<email>yuenyun@126.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Fuli</forename><surname>Feng</surname></persName>
+							<email>fulifeng93@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wenwu</forename><forename type="middle">2025 Unconstrained</forename><surname>Ou</surname></persName>
+							<email>ouwenwu@gmail.com</email>
+							<idno type="ORCID">0009-0004-2437-6835</idno>
+						</author>
+						<author>
+							<persName><surname>Monotonic</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">National University of Singapore Singapore</orgName>
+								<address>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Columbia University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Northeasten University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Unconstrained Monotonic Calibration of Predictions in Deep Ranking Systems</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1D92D2DD8F988CB3A82728F6DED5964F</idno>
+					<idno type="DOI">10.1145/3726302.3730105</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Calibrator Modeling</term>
+					<term>Unconstrained Monotonic Neural Network</term>
+					<term>Ranking System</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Ranking models primarily focus on modeling the relative order of predictions while often neglecting the significance of the accuracy of their absolute values. However, accurate absolute values are essential for certain downstream tasks, necessitating the calibration of the original predictions. To address this, existing calibration approaches typically employ predefined transformation functions with order-preserving properties to adjust the original predictions. Unfortunately, these functions often adhere to fixed forms, such as piece-wise linear functions, which exhibit limited expressiveness and flexibility, thereby constraining their effectiveness in complex calibration scenarios. To mitigate this issue, we propose implementing a calibrator using an Unconstrained Monotonic Neural Network (UMNN), which can learn arbitrary monotonic functions with great modeling power. This approach significantly relaxes the constraints on the calibrator, improving its flexibility and expressiveness while avoiding excessively distorting the original predictions by requiring monotonicity. Furthermore, to optimize this highly flexible network for calibration, we introduce a novel additional loss function termed Smooth Calibration Loss (SCLoss), which aims to fulfill a necessary condition for achieving the ideal calibration state. Extensive offline experiments confirm the effectiveness of our method in achieving superior calibration performance. Moreover,</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

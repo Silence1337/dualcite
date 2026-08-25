@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SA-DETR:Span Aware Detection Transformer for Moment Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tianheng</forename><surname>Xiong</surname></persName>
+							<email>xiongtianheng52@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="laboratory">Cognitive Computing and Intelligent Information Processing (CCIIP) Laboratory</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Joint Laboratory of HUST and Pingan Property &amp; Casualty Research (HPL)</orgName>
+								<orgName type="institution">Casualty Insurance company of China, Ltd</orgName>
+								<address>
+									<addrLine>3 Ping An Property</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Wei</surname></persName>
+							<email>weiw@hust.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="laboratory">Cognitive Computing and Intelligent Information Processing (CCIIP) Laboratory</orgName>
+								<orgName type="institution">Huazhong University of Science and Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Joint Laboratory of HUST and Pingan Property &amp; Casualty Research (HPL)</orgName>
+								<orgName type="institution">Casualty Insurance company of China, Ltd</orgName>
+								<address>
+									<addrLine>3 Ping An Property</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaihe</forename><surname>Xu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Joint Laboratory of HUST and Pingan Property &amp; Casualty Research (HPL)</orgName>
+								<orgName type="institution">Casualty Insurance company of China, Ltd</orgName>
+								<address>
+									<addrLine>3 Ping An Property</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dangyang</forename><surname>Chen</surname></persName>
+							<email>chendangyang273@pingan.com.cn</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Joint Laboratory of HUST and Pingan Property &amp; Casualty Research (HPL)</orgName>
+								<orgName type="institution">Casualty Insurance company of China, Ltd</orgName>
+								<address>
+									<addrLine>3 Ping An Property</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SA-DETR:Span Aware Detection Transformer for Moment Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9B0755A5AFD2023EDA0DDEE2C006A5BA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:19+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Moment Retrieval aims to locate specific video segments related to the given text. Recently, DETR-based methods, originating from Object Detection, have emerged as effective solutions for Moment Retrieval. These approaches focus on multimodal feature fusion and refining Queries composed of span anchor and content embedding. Despite the success, they often overlook the video-text instance related information in Query Initialization and the crucial guidance role of span anchors in Query Refinement, leading to inaccurate predictions. To address this, we propose a novel Span Aware DEtection TRansformer (SA-DETR) that leverages the importance of instance related span anchors. To fully leverage the instance related information, we generate span anchors based on video-text pair rather than using learnable parameters, as is common in conventional DETR-based methods, and supervise them with GT labels. To effectively exploit the correspondence between span anchors and video clips, we enhance content embedding guided by textual features and generate Gaussian mask to modulate the interaction between content embedding and fusion features. Furthermore, we explore the feature alignment across various stages and granularities and apply denoise learning to boost the span awareness of the model. Extensive experiments on QVHighlights, Charades-STA, and TACoS demonstrate the effectiveness of our approach.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

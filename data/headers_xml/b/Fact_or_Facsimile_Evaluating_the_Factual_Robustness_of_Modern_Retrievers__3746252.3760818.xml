@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fact or Facsimile? Evaluating the Factual Robustness of Modern Retrievers</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Haoyu</forename><surname>Wu</surname></persName>
+							<idno type="ORCID">0009-0002-3097-7069</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Qingcheng</forename><surname>Zeng</surname></persName>
+							<email>qingchengzeng2027@u.northwestern.edu</email>
+							<idno type="ORCID">0000-0002-8697-2729</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Kaize</forename><surname>Ding</surname></persName>
+							<email>kaize.ding@northwestern.edu</email>
+							<idno type="ORCID">0000-0001-6684-6752</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Statistics and Data Science</orgName>
+								<orgName type="institution">Northwestern University Evanston</orgName>
+								<address>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Linguistics Northwestern University Evanston</orgName>
+								<address>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Statistics and Data Science</orgName>
+								<orgName type="institution">Northwestern University Evanston</orgName>
+								<address>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fact or Facsimile? Evaluating the Factual Robustness of Modern Retrievers</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D8F7CA3BC6C5D8F2B42CBF346CBE0AB4</idno>
+					<idno type="DOI">10.1145/3746252.3760818</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Informative Retrieval</term>
+					<term>Factuality</term>
+					<term>Retrieval-augmented Generation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Dense retrievers and rerankers are central to retrieval-augmented generation (RAG) pipelines, where accurately retrieving factual information is crucial for maintaining system trustworthiness and defending against RAG poisoning. However, little is known about how much factual competence these components inherit or lose from the large language models (LLMs) they are based on. We pair 12 publicly released embedding checkpoints with their original base LLMs and evaluate both sets on a factuality benchmark. Across every model evaluated, the embedding variants achieve markedly lower accuracy than their bases, with absolute drops ranging from 12 to 43 percentage points (median 28 pts) and typical retriever accuracies collapsing into the 25-35 % band versus the 60-70 % attained by the generative models. This degradation intensifies under a more demanding condition: when the candidate pool per question is expanded from four options to one thousand, the strongest retriever&apos;s top-1 accuracy falls from 33 % to 26 %, revealing acute sensitivity to distractor volume. Statistical tests further show that, for every embedding model, cosine-similarity scores between queries and correct completions are significantly higher than those for incorrect ones (𝑝 &lt; 0.01), indicating decisions driven largely by surface-level semantic proximity rather than factual reasoning. To probe this weakness, we employed GPT-4.1 to paraphrase each correct completion, creating a rewritten test set that preserved factual truth while masking lexical cues, and observed that over two-thirds of previously correct predictions flipped to wrong, reducing overall accuracy to roughly one-third of its original level. Taken together, these findings reveal a systematic trade-off introduced by contrastive learning for retrievers: gains in semantic retrieval are paid for with losses in parametric factual knowledge, and the resulting models remain highly vulnerable to adversarial or even benign rephrasings. Our study underscores the need for retrieval objectives that balance similarity with factual fidelity to safeguard next-generation RAG systems against both misinformation and targeted attacks. CCS Concepts • Information systems → Presentation of retrieval results.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

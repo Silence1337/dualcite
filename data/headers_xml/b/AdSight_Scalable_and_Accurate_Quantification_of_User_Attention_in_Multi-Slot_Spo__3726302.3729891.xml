@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">AdSight: Scalable and Accurate Quantification of User Attention in Multi-Slot Sponsored Search</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mario</forename><surname>Villaizán-Vallelado</surname></persName>
+							<idno type="ORCID">0009-0002-0754-1742</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">Universidad de Valladolid Telefónica Scientific Research Valladolid</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Ioannis Arapakis Telefónica Scientific Research Barcelona</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>Spain Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matteo</forename><surname>Salvatori</surname></persName>
+							<idno type="ORCID">0000-0003-1499-6024</idno>
+							<affiliation key="aff1">
+								<orgName type="institution">Telefónica Scientific Research Madrid</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Ioannis Arapakis Telefónica Scientific Research Barcelona</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>Spain Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kayhan</forename><surname>Latifzadeh</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Luxembourg Luxembourg</orgName>
+								<address>
+									<country key="LU">Luxembourg</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Ioannis Arapakis Telefónica Scientific Research Barcelona</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>Spain Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Antonio</forename><surname>Penta</surname></persName>
+							<idno type="ORCID">0000-0003-3796-8245</idno>
+							<affiliation key="aff3">
+								<orgName type="department">Fabra Barcelona School of Economics Barcelona</orgName>
+								<orgName type="institution">ICREA-Universitat Pompeu</orgName>
+								<address>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Luis</forename><forename type="middle">A</forename><surname>Leiva</surname></persName>
+							<idno type="ORCID">0000-0002-5011-1847</idno>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Luxembourg Luxembourg</orgName>
+								<address>
+									<country key="LU">Luxembourg</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">AdSight: Scalable and Accurate Quantification of User Attention in Multi-Slot Sponsored Search</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A1005FD0C7D4AB664C52072016E4BDF4</idno>
+					<idno type="DOI">10.1145/3726302.3729891</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>SERP</term>
+					<term>Sponsored search</term>
+					<term>Online advertising</term>
+					<term>Mouse cursor tracking</term>
+					<term>Multi-slot ads</term>
+					<term>Direct displays</term>
+					<term>User attention</term>
+					<term>Neural networks</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Modern Search Engine Results Pages (SERPs) present complex layouts where multiple elements compete for visibility. Attention modelling is crucial for optimising web design and computational advertising, whereas attention metrics can inform ad placement and revenue strategies. We introduce AdSight, a method leveraging mouse cursor trajectories to quantify in a scalable and accurate manner user attention in multi-slot environments like SERPs. Ad-Sight uses a novel Transformer-based sequence-to-sequence architecture where the encoder processes cursor trajectory embeddings, and the decoder incorporates slot-specific features, enabling robust attention prediction across various SERP layouts. We evaluate our approach on two Machine Learning tasks: (1) regression, to predict fixation times and counts; and (2) classification, to determine some slot types were noticed. Our findings demonstrate the model&apos;s ability to predict attention with unprecedented precision, offering actionable insights for researchers and practitioners. CCS Concepts • Information systems → Search interfaces; Sponsored search advertising; • Computing methodologies → Modeling and simulation.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

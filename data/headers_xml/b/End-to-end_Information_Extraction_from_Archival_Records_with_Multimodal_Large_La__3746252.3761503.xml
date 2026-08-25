@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">End-to-end Information Extraction from Archival Records with Multimodal Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mahsa</forename><surname>Vafaie</surname></persName>
+							<email>mahsa.vafaie@fiz-karlsruhe.de</email>
+							<idno type="ORCID">0000-0002-7706-8340</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Sven</forename><surname>Hertling</surname></persName>
+							<email>sven.hertling@fiz-karlsruhe.de</email>
+						</author>
+						<author>
+							<persName><forename type="first">Inger</forename><surname>Banse-Strobel</surname></persName>
+							<email>inger.banse-strobel@bundesarchiv.de</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kevin</forename><surname>Dubout</surname></persName>
+							<email>k.dubout@bundesarchiv.de</email>
+						</author>
+						<author>
+							<persName><forename type="first">Harald</forename><surname>Sack</surname></persName>
+							<email>harald.sack@fiz-karlsruhe.de</email>
+							<idno type="ORCID">0000-0001-7069-9804</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">FIZ Karlsruhe -Leibniz Institute for Information Infrastructure Eggenstein-Leopoldshafen</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Data and Web Science Group</orgName>
+								<orgName type="institution">Karlsruhe Institute of Technology</orgName>
+								<address>
+									<settlement>Karlsruhe</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Mannheim Mannheim</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">FIZ Karlsruhe -Leibniz Institute for Information Infrastructure Eggenstein-Leopoldshafen</orgName>
+								<address>
+									<settlement>Koblenz Bundesarchiv Koblenz</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">FIZ Karlsruhe -Leibniz Institute for Information Infrastructure Eggenstein-Leopoldshafen</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Karlsruhe Institute of Technology</orgName>
+								<address>
+									<settlement>Karlsruhe</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">End-to-end Information Extraction from Archival Records with Multimodal Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FC84A19311CDFC8E7018016DCCAEEEF0</idno>
+					<idno type="DOI">10.1145/3746252.3761503</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>• Information systems → Information extraction Multimodal Large Language Models</term>
+					<term>Document Understanding</term>
+					<term>Key Information Extraction</term>
+					<term>Digital Cultural Heritage</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Semi-structured Document Understanding presents a challenging research task due to the significant variations in layout, style, font, and content of documents. This complexity is further amplified when dealing with born-analogue historical documents, such as digitised archival records, which contain degraded print, handwritten annotations, stamps, marginalia and inconsistent formatting resulting from historical production and digitisation processes. Traditional approaches for extracting information from semi-structured documents rely on manual labour, making them costly and inefficient. This is partly due to the fact that within document collections, there are various layout types, each requiring customised optimisation to account for structural differences, which substantially increases the effort needed to achieve consistent quality. The emergence of Multimodal Large Language Models (MLLMs) has significantly advanced Document Understanding by enabling flexible, prompt-based understanding of document images, needless of OCR outputs or layout encodings. Moreover, the encoder-decoder architectures have overcome the limitations of encoder-only models, such as reliance on annotated datasets and fixed input lengths. However, there still remains a gap in effectively applying these models in real-world scenarios. To address this gap, we first introduce BZKOpen, a new annotated dataset designed for key information extraction from historical German index cards. Furthermore, we systematically assess the capabilities of several state-of-the-art MLLMs-including the open-source InternVL2.0 and InternVL2.5 series, and the commercial GPT-4o-minion the task of extracting Publication rights licensed to ACM. ACM acknowledges that this contribution was authored or co-authored by an employee, contractor or affiliate of a national government. As such, the Government retains a nonexclusive, royalty-free right to publish or reproduce this article, or to allow others to do so, for Government purposes only. Request permissions from owner/author(s). CIKM &apos;25, Seoul, Republic of Korea</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">APB: Accelerating Distributed Long-Context Inference by Passing Compressed Context Blocks across GPUs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuxiang</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DCST</orgName>
+								<orgName type="laboratory">NLP Group</orgName>
+								<orgName type="institution" key="instit1">IAI</orgName>
+								<orgName type="institution" key="instit2">BNRIST</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mingye</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of CS&amp;T</orgName>
+								<orgName type="institution">Central South University</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Xu</forename><surname>Han</surname></persName>
+							<email>han-xu@tsinghua.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">DCST</orgName>
+								<orgName type="laboratory">NLP Group</orgName>
+								<orgName type="institution" key="instit1">IAI</orgName>
+								<orgName type="institution" key="instit2">BNRIST</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaojun</forename><surname>Xiao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DCST</orgName>
+								<orgName type="laboratory">NLP Group</orgName>
+								<orgName type="institution" key="instit1">IAI</orgName>
+								<orgName type="institution" key="instit2">BNRIST</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weilin</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DCST</orgName>
+								<orgName type="laboratory">NLP Group</orgName>
+								<orgName type="institution" key="instit1">IAI</orgName>
+								<orgName type="institution" key="instit2">BNRIST</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ao</forename><surname>Sun</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">BUPT</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<region>Tencent Inc</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<region>Tencent Inc</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyuan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DCST</orgName>
+								<orgName type="laboratory">NLP Group</orgName>
+								<orgName type="institution" key="instit1">IAI</orgName>
+								<orgName type="institution" key="instit2">BNRIST</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Maosong</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">DCST</orgName>
+								<orgName type="laboratory">NLP Group</orgName>
+								<orgName type="institution" key="instit1">IAI</orgName>
+								<orgName type="institution" key="instit2">BNRIST</orgName>
+								<orgName type="institution" key="instit3">Tsinghua University</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">APB: Accelerating Distributed Long-Context Inference by Passing Compressed Context Blocks across GPUs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AE7620B80F3C75BD2B837FB6E7D3E7EF</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>While long-context inference is crucial for advancing large language model (LLM) applications, its prefill speed remains a significant bottleneck. Current approaches, including sequence parallelism strategies and compute reduction through approximate attention mechanisms, still fall short of delivering optimal inference efficiency. This hinders scaling the inputs to longer sequences and processing long-context queries in a timely manner. To address this, we introduce APB, an efficient long-context inference framework that leverages multi-host approximate attention to enhance prefill speed by reducing compute and enhancing parallelism simultaneously. APB introduces a communication mechanism for essential key-value pairs within a sequence parallelism framework, enabling a faster inference speed while maintaining task performance. We implement APB by incorporating a tailored FLASHATTN kernel alongside optimized distribution strategies, supporting diverse models and parallelism configurations. APB achieves speedups of up to 9.2×, 4.2×, and 1.6× compared with FLASHATTN, RINGATTN, and STARATTN, respectively, without any observable task performance degradation. We provide the implementation and experiment code of APB in https://github.com/thunlp/APB.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

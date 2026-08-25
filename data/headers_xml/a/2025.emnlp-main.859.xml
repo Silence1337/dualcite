@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Calibrating LLMs for Text-to-SQL Parsing by Leveraging Sub-clause Frequencies</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Terrance</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Carnegie Mellon University Shuyi Wang</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Preoţiuc</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Carnegie Mellon University Shuyi Wang</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pietro</forename><surname>Bloomberg</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Carnegie Mellon University Shuyi Wang</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yash</forename><surname>Chandarana</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Carnegie Mellon University Shuyi Wang</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bloomberg</forename><surname>Chirag</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Carnegie Mellon University Shuyi Wang</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gupta</forename><forename type="middle">†</forename><surname>Bloomberg</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Carnegie Mellon University Shuyi Wang</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Calibrating LLMs for Text-to-SQL Parsing by Leveraging Sub-clause Frequencies</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1317678FF379BD3346A27F9C87B6B62F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:09+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>While large language models (LLMs) achieve strong performance on text-to-SQL parsing, they sometimes exhibit unexpected failures in which they are confidently incorrect. Building trustworthy text-to-SQL systems thus requires eliciting reliable uncertainty measures from the LLM. In this paper, we study the problem of providing a calibrated confidence score that conveys the likelihood of an output query being correct. Our work is the first to establish a benchmark for post-hoc calibration of LLMbased text-to-SQL parsing. In particular, we show that Platt scaling, a canonical method for calibration, provides substantial improvements over directly using raw model output probabilities as confidence scores. Furthermore, we propose a method for text-to-SQL calibration that leverages the structured nature of SQL queries to provide more granular signals of correctness, named &quot;sub-clause frequency&quot; (SCF) scores. Using multivariate Platt scaling (MPS), our extension of the canonical Platt scaling technique, we combine individual SCF scores into an overall accurate and calibrated score. Empirical evaluation on two popular text-to-SQL datasets shows that our approach of combining MPS and SCF yields further improvements in calibration and the related task of error detection over traditional Platt scaling.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

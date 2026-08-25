@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Negative Exclusion Filtering: Optimizing Ad Delivery Efficiency for Large-Scale Social Media Platforms</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Zhang</surname></persName>
+							<email>minzhang@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dong</forename><surname>Liang</surname></persName>
+							<email>dliang@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianwei</forename><surname>Xiao</surname></persName>
+							<email>jianweixiao@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shengyu</forename><surname>Huang</surname></persName>
+							<email>syhuang@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lizhang</forename><surname>Qin</surname></persName>
+							<email>lizhangqin@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xi</forename><surname>Yan</surname></persName>
+							<email>xiyan@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Rong</forename><surname>Shi</surname></persName>
+							<email>rongshi@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiyuan</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jing</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhaojun</forename><surname>Zhang</surname></persName>
+							<email>zhaojun@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Gautam</forename><surname>Srinivasan</surname></persName>
+							<email>gsrinivasan@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Qianru</forename><surname>Li</surname></persName>
+							<email>qianruli@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Mahesh</forename><surname>Masale</surname></persName>
+							<email>masale@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengyu</forename><surname>Zhang</surname></persName>
+							<email>zhengyuzhang@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zeliang</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ellie</forename><surname>Wen</surname></persName>
+							<email>dwen@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Puneet</forename><surname>Sharma</surname></persName>
+							<email>puneets@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ganlin</forename><surname>Song</surname></persName>
+							<email>ganlin2019@meta.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Fang</forename><surname>Zhou</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhaojun</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ye</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengyu</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Nega</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff8">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff9">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff10">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff11">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<settlement>Ye Wang</settlement>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff12">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff13">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff14">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff15">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff16">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff17">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff18">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff19">
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff20">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Meta Platforms, Inc</orgName>
+								<address>
+									<addrLine>Menlo Park</addrLine>
+									<settlement>Padua</settlement>
+									<region>CA</region>
+									<country>USA Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff21">
+								<orgName type="department">tive Exclusion Filtering: Optimizing Ad Delivery Efficiency for Large-Scale Social Media Platforms. In</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Negative Exclusion Filtering: Optimizing Ad Delivery Efficiency for Large-Scale Social Media Platforms</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4B4E61FC4E3F8DA82C5570A7D17B21E9</idno>
+					<idno type="DOI">10.1145/3726302.3731940</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:45+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Recommender systems</term>
+					<term>ad filtering</term>
+					<term>personalization</term>
+					<term>online ads</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The volume of ads ranked impacts the performance of ad ranking systems. To enhance efficiency, multi-stage ranking systems are widely studied in academia and adopted across industry. However, as large-scale deep learning recommendation models gain prevalence, resource constraints-especially CPU and GPU limitationshave become a significant bottleneck. These constraints can hinder model iteration and lead to incomplete ranking, causing regressions in user experience and ad performance. To address these issues, we analyzed ad ranking metrics and found that ad rankings for individual users remain relatively stable over short periods. Based on this insight, we introduce Negative Exclusion Filtering, a framework that optimizes the balance between ranked ad volume and computing resources. By skipping re-ranking of consistently low-ranked ads for each user request, it reduces computing cost in large-scale social media environments.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

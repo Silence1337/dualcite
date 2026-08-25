@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Can GRPO Boost Complex Multimodal Table Understanding?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiaoqiang</forename><surname>Kang</surname></persName>
+							<email>xiaoqiang.kang23@student.xjtlu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Advanced Technology</orgName>
+								<orgName type="institution">Xi&apos;an Jiaotong-Liverpool University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of Liverpool</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shengen</forename><surname>Wu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Information Hub</orgName>
+								<orgName type="institution">Hong Kong University of Science and Technology (Guangzhou)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zimu</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Advanced Technology</orgName>
+								<orgName type="institution">Xi&apos;an Jiaotong-Liverpool University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of Liverpool</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yilin</forename><surname>Liu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Southern</orgName>
+								<address>
+									<addrLine>California 5 Duke</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaobo</forename><surname>Jin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Advanced Technology</orgName>
+								<orgName type="institution">Xi&apos;an Jiaotong-Liverpool University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaizhu</forename><surname>Huang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Advanced Technology</orgName>
+								<orgName type="institution">Xi&apos;an Jiaotong-Liverpool University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yutao</forename><surname>Yue</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Information Hub</orgName>
+								<orgName type="institution">Hong Kong University of Science and Technology (Guangzhou)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaowei</forename><surname>Huang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of Liverpool</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiufeng</forename><surname>Wang</surname></persName>
+							<email>qiufeng.wang@xjtlu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Advanced Technology</orgName>
+								<orgName type="institution">Xi&apos;an Jiaotong-Liverpool University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Kunshan University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Can GRPO Boost Complex Multimodal Table Understanding?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7A9F552FAEB77CE8891BCE43C04778C9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:04+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Existing table understanding methods face challenges due to complex table structures and intricate logical reasoning. While supervised finetuning (SFT) dominates existing research, reinforcement learning (RL), such as Group Relative Policy Optimization (GRPO), has shown promise but struggled with low initial policy accuracy and coarse rewards in tabular contexts. In this paper, we introduce Table-R1, a threestage RL framework that enhances multimodal table understanding through: (1) Warm-up that prompts initial perception and reasoning capabilities, (2) Perception Alignment GRPO (PA-GRPO), which employs continuous Tree-Edit-Distance Similarity (TEDS) rewards for recognizing table structures and contents, and (3) Hint-Completion GRPO (HC-GRPO), which utilizes fine-grained rewards of residual steps based on the hint-guided question. Extensive experiments demonstrate that Table-R1 can boost the model&apos;s table reasoning performance obviously on both held-in and held-out datasets, outperforming SFT and GRPO largely. Notably, Qwen2-VL-7B with Table-R1 surpasses larger specific table understanding models (e.g., Table-LLaVA 13B), even achieving comparable performance to the closed-source model GPT-4o on held-in datasets, demonstrating the efficacy of each stage of Table-R1 in overcoming initialization bottlenecks and reward sparsity, thereby advancing robust multimodal table understanding.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

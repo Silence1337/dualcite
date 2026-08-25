@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FiRE : Enhancing MLLMs with Fine-Grained Context Learning for Complex Image Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bohan</forename><surname>Hou</surname></persName>
+							<email>bohanhou@foxmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Haoqiang</forename><surname>Lin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xuemeng</forename><surname>Song</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Haokun</forename><surname>Wen</surname></persName>
+							<email>whenhaokun@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Meng</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yupeng</forename><surname>Hu</surname></persName>
+							<email>huyupeng@sdu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Zhao</surname></persName>
+							<email>xy.zhao@cityu.edu.hk</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Shandong University Qingdao</orgName>
+								<address>
+									<settlement>Shandong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Shandong University Qingdao</orgName>
+								<address>
+									<settlement>Shandong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">City University of Hong Kong Hong kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Harbin Institute of Technology Shenzhen) Shenzhen</orgName>
+								<address>
+									<settlement>Guangdong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Shandong Jianzhu University Jinan</orgName>
+								<address>
+									<settlement>Shandong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Shandong University Jinan</orgName>
+								<address>
+									<settlement>Shandong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">City University of Hong Kong Hong kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FiRE : Enhancing MLLMs with Fine-Grained Context Learning for Complex Image Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">805960A5AA92DB6D702E0C164DA6908B</idno>
+					<idno type="DOI">10.1145/3726302.3729979</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Image search Multimodal Large Language Model</term>
+					<term>Image Retrieval</term>
+					<term>Complex Image Retrieval</term>
+					<term>Fine-grained Context Modeling</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Due to their strong generalizable multimodal processing and reasoning capabilities, Multimodal Large Language Models (MLLMs) have demonstrated significant potential as universal image retrievers, effectively addressing diverse real-world image retrieval tasks. Nevertheless, pioneering studies, while promising, overlook the potential of fine-grained context modeling and disentangled fine-tuning objectives in enhancing MLLMs&apos; retrieval performance, particularly for complex tasks such as long-text-to-image retrieval, visual dialog retrieval, and composed image retrieval (CIR). Therefore, in this work, we propose an automated fine-grained multimodal quintuple dataset construction pipeline and a novel two-stage fine-grained multimodal fine-tuning strategy. The dataset generation pipeline produces a comprehensive CIR dataset with fine-grained image captions and modification text, facilitating fine-grained context modeling. Beyond the previously entangled fine-tuning paradigm, our approach separates the fine-tuning process into two distinct stages: (1) fine-grained context reasoning-oriented fine-tuning and (2) fine-grained retrieval-oriented fine-tuning. These stages aim to sequentially enhance the model&apos;s context understanding and query-target alignment capabilities, thereby improving retrieval performance. Extensive experiments across five datasets encompassing diverse and complex image retrieval tasks demonstrate the remarkable superiority of our method over existing approaches in *Xuemeng Song</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

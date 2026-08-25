@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rescorla-Wagner Steering of LLMs for Undesired Behaviors over Disproportionate Inappropriate Context</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Rushi</forename><surname>Wang</surname></persName>
+							<email>rushiw2@illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiateng</forename><surname>Liu</surname></persName>
+							<email>jiateng5@illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Qian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yifan</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanzhou</forename><surname>Pan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhaozhuo</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ahmed</forename><surname>Abbasi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ji</forename><forename type="middle">~</forename><surname>Heng</surname></persName>
+							<email>hengji@illinois.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Denghui</forename><surname>Zhang</surname></persName>
+							<email>dzhang42@stevens.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">~University of Illinois Urbana-Champaign | Google LLC. University of Notre Dame } Stevens Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rescorla-Wagner Steering of LLMs for Undesired Behaviors over Disproportionate Inappropriate Context</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A6851CF1609CB63A75BC8B3670D4A51E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Incorporating external context can significantly enhance the response quality of Large Language Models (LLMs). However, real-world contexts often mix relevant information with disproportionate inappropriate content, posing reliability risks. How do LLMs process and prioritize mixed context? To study this, we introduce the Poisoned Context Testbed, pairing queries with real-world contexts containing relevant and inappropriate content. Inspired by associative learning in animals, we adapt the Rescorla-Wagner (RW) model from neuroscience to quantify how competing contextual signals influence LLM outputs. Our adapted model reveals a consistent behavioral pattern: LLMs exhibit a strong tendency to incorporate information that is less prevalent in the context. This susceptibility is harmful in realworld settings, where small amounts of inappropriate content can substantially degrade response quality. Empirical evaluations on our testbed further confirm this vulnerability. To tackle this, we introduce RW-Steering, a twostage finetuning-based approach that enables the model to internally identify and ignore inappropriate signals. Unlike prior methods that rely on extensive supervision across diverse context mixtures, RW-Steering generalizes robustly across varying proportions of inappropriate content. Experiments show that our best fine-tuned model improves response quality by 39.8% and reverses the undesirable behavior curve, establishing RW-Steering as a robust, generalizable solution for improving LLM safety in real-world use.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

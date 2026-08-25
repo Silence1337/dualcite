@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Pre 3 : Enabling Deterministic Pushdown Automata for Faster Structured LLM Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Junyi</forename><surname>Chen</surname></persName>
+							<email>gchen@cs.sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shihao</forename><surname>Bai</surname></persName>
+							<email>baishihao@sensetime.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Sensetime Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zaijun</forename><surname>Wang</surname></persName>
+							<email>wangzaijun@sensetime.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">Sensetime Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Siyu</forename><surname>Wu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chuheng</forename><surname>Du</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hailong</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruihao</forename><surname>Gong</surname></persName>
+							<email>gongruihao@buaa.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Sensetime Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shengzhong</forename><surname>Liu</surname></persName>
+							<email>shengzhong@sjtu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fan</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guihai</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Pre 3 : Enabling Deterministic Pushdown Automata for Faster Structured LLM Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">21FDB2ADD9A7BB8AC2533FAE178BA903</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Extensive LLM applications demand efficient structured generations, particularly for LR(1) grammars, to produce outputs in specified formats (e.g., JSON). Existing methods primarily parse LR(1) grammars into a pushdown automaton (PDA), leading to runtime execution overhead for context-dependent token processing, especially inefficient under large inference batches. To address these issues, we propose Pre 3 that exploits deterministic pushdown automata (DPDA) to optimize the constrained LLM decoding efficiency. First, by precomputing prefix-conditioned edges during the preprocessing, Pre 3 enables aheadof-time edge analysis and thus makes parallel transition processing possible. Second, by leveraging the prefix-conditioned edges, Pre 3 introduces a novel approach that transforms LR(1) transition graphs into DPDA, eliminating the need for runtime path exploration and achieving edge transitions with minimal overhead. Pre 3 can be seamlessly integrated into standard LLM inference frameworks, reducing time per output token (TPOT) by up to 40% and increasing throughput by up to 36% in our experiments. Our code is available at https://github.com/ModelTC/lightllm.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

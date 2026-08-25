@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">tRAG: Term-Level Retrieval-Augmented Generation for Domain-Adaptive Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dohyeon</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Computer Science and Engineering</orgName>
+								<orgName type="department" key="dep2">Interdisciplinary Program in Artificial Intelligence</orgName>
+								<orgName type="institution" key="instit1">Seoul National University</orgName>
+								<orgName type="institution" key="instit2">Seoul National University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jongyoon</forename><surname>Kim</surname></persName>
+							<email>john.jongyoon.kim@snu.ac.kr</email>
+							<affiliation key="aff1">
+								<orgName type="department">LG AI Research 3</orgName>
+								<orgName type="laboratory">NAVER AI Lab 4</orgName>
+								<orgName type="institution">NAVER</orgName>
+								<address>
+									<addrLine>Cloud 5</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jihyuk</forename><surname>Kim</surname></persName>
+							<email>jihyuk.kim@lgresearch.ai</email>
+						</author>
+						<author>
+							<persName><forename type="first">Seung-Won</forename><surname>Hwang</surname></persName>
+							<email>seungwonh@snu.ac.kr</email>
+						</author>
+						<author>
+							<persName><forename type="first">Joonsuk</forename><surname>Park</surname></persName>
+							<email>park@joonsuk.org</email>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Richmond</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">tRAG: Term-Level Retrieval-Augmented Generation for Domain-Adaptive Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3AAB6B515B8B58A5D8B5E3ED78DA56A1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Neural retrieval models have emerged as an effective tool for information retrieval, but their performance suffers when there is a domain shift between training and test data distributions. Recent work aims to construct pseudotraining data for the target domain by generating domain-adapted pseudo-queries using large language models (LLMs). However, we identifies that LLMs exhibit a &quot;seen term bias&quot; where the generated pseudo-queries fail to include relevant &quot;unseen&quot; terms as expected for domain adaptation purposes. To address this limitation, we propose to improve the term recall of unseen query terms, by using term-level Retrieval-Augmented Generation (tRAG). Specifically, unlike existing document-level RAG, we propose to generate domain-specific keywords from all documents in the corpus, including those unseen in any individual document. To filter hallucination, generated keywords are retrieved and reranked, leveraging relevance feedback from both retrievers and LLMs. Experiments on the BEIR benchmark show tRAG significantly improves recall for unseen terms by 10.6% and outperforms LLM and retrievalaugmented generation baselines on overall retrieval performance.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">HookMoE: A learnable performance compensation strategy of Mixture-of-Experts for LLM inference acceleration</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Longkai</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="laboratory">Key Laboratory of Data and Intelligent System Security</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Along</forename><surname>He</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mulin</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">School of Artificial Intelligence</orgName>
+								<orgName type="institution">Shenzhen University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xueshuo</forename><surname>Xie</surname></persName>
+							<email>xueshuoxie@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Haihe Lab of ITAI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tao</forename><surname>Li</surname></persName>
+							<email>litao@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Haihe Lab of ITAI</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Ministry of Education</orgName>
+								<orgName type="laboratory">Key Laboratory of Data and Intelligent System Security</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">HookMoE: A learnable performance compensation strategy of Mixture-of-Experts for LLM inference acceleration</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BCAD3B87AD72428AFBE83B503057B0E6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Mixture of Experts (MoE) architectures have emerged as a promising paradigm for scaling model capacity through top-k routing mechanisms. Although reducing the number of activated experts inherently enables inference acceleration, this efficiency gain typically comes at the cost of significant performance degradation. To address this trade-off between efficiency and performance, we propose Hook-MoE, a plug-and-play single-layer compensation framework that effectively restores performance using only a small post-training calibration set. Our method strategically inserts a lightweight trainable Hook module immediately preceding selected transformer blocks. Comprehensive evaluations on four popular MoE models, with an average performance degradation of only 2.5% across various benchmarks, our method reduces the number of activated experts by more than 50% and achieves a 1.42× inference speed-up during the prefill stage. Through systematic analysis, we further reveal that the upper layers require fewer active experts, offering actionable insights for refining dynamic expert selection strategies and enhancing the overall efficiency of MoE models. We make our code available at https://github.com/KerwinKai/HookMoE.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

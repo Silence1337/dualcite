@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Not What the Doctor Ordered: Surveying LLM-based De-identification and Quantifying Clinical Information Loss</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Kiana</forename><surname>Aghakasiri</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computing Science</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Noopur</forename><surname>Zambare</surname></persName>
+							<email>zambare@ualberta.ca</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computing Science</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joann</forename><surname>Thai</surname></persName>
+							<email>jjthai@ualberta.ca</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Medicine</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carrie</forename><surname>Ye</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Medicine</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Arthritis Research</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mayur</forename><surname>Mehta</surname></persName>
+							<email>mayur1@ualberta.ca</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Medicine</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">J</forename><forename type="middle">Ross</forename><surname>Mitchell</surname></persName>
+							<email>jmitche2@ualberta.ca</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computing Science</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Medicine</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Alberta Machine Intelligence Institute (Amii)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohamed</forename><surname>Abdalla</surname></persName>
+							<email>mabdall2@ualberta.ca</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computing Science</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Medicine</orgName>
+								<orgName type="institution">University of Alberta</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Alberta Machine Intelligence Institute (Amii)</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Not What the Doctor Ordered: Surveying LLM-based De-identification and Quantifying Clinical Information Loss</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">77CBAB9EDAAFD3DDF42493150589D912</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>De-identification in the healthcare setting is an application of NLP where automated algorithms are used to remove personally identifying information of patients (and, sometimes, providers). With the recent rise of generative large language models (LLMs), there has been a corresponding rise in the number of papers that apply LLMs to de-identification. Although these approaches often report near-perfect results, significant challenges concerning reproducibility and utility of the research papers persist. This paper identifies three key limitations in the current literature: inconsistent reporting metrics hindering direct comparisons, the inadequacy of traditional classification metrics in capturing errors which LLMs may be more prone to (i.e., altering clinically relevant information), and lack of manual validation of automated metrics which aim to quantify these errors. To address these issues, we first present a survey of LLM-based de-identification research, highlighting the heterogeneity in reporting standards. Second, we evaluated a diverse set of models to quantify the extent of inappropriate removal of clinical information. Next, we conduct a manual validation of an existing evaluation metric to measure the removal of clinical information, employing clinical experts to assess their efficacy. We highlight poor performance and describe the inherent limitations of such metrics in identifying clinically significant changes. Lastly, we propose a novel methodology for the detection of clinically relevant information removal.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

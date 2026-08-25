@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Open-World Planning via Lifted Regression with LLM-Inferred Affordances for Embodied Agents</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiaotian</forename><surname>Liu</surname></persName>
+							<email>xiaotian.liu@mail.utoronto.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Toronto</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ali</forename><surname>Pesaranghader</surname></persName>
+							<email>ali.pesaranghader@lge.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">LG Electronics</orgName>
+								<orgName type="institution">Toronto AI Lab</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hanze</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Toronto</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Punyaphat</forename><surname>Sukcharoenchaikul</surname></persName>
+							<email>punyaphat.sukcharoenchaikul@mail.utoronto.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Toronto</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaehong</forename><surname>Kim</surname></persName>
+							<email>jaehong02.kim@lge.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">LG Electronics</orgName>
+								<address>
+									<settlement>Seoul</settlement>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tanmana</forename><surname>Sadhu</surname></persName>
+							<email>tanmana.sadhu@lge.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">LG Electronics</orgName>
+								<orgName type="institution">Toronto AI Lab</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyejeong</forename><surname>Jeon</surname></persName>
+							<email>hyejeong.jeon@lge.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">LG Electronics</orgName>
+								<address>
+									<settlement>Seoul</settlement>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Scott</forename><surname>Sanner</surname></persName>
+							<email>ssanner@mie.utoronto.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Toronto</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Vector Institute of Artificial Intelligence</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Open-World Planning via Lifted Regression with LLM-Inferred Affordances for Embodied Agents</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">275D916F739466831307087404824745</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Open-world planning with incomplete knowledge is crucial for real-world embodied AI tasks. Despite that, existing LLM-based planners struggle with long chains of sequential reasoning, while symbolic planners face combinatorial explosion of states and actions for complex domains due to reliance on grounding. To address these deficiencies, we introduce LLM-REGRESS, an open-world planning approach integrating lifted regression with LLMgenerated affordances. LLM-REGRESS generates sound and complete plans in a compact lifted form, avoiding exhaustive enumeration of irrelevant states and actions. Additionally, it makes efficient use of LLMs to infer goalrelated objects and affordances without the need to predefine all possible objects and affordances. We conduct extensive experiments on three benchmarks and show that LLM-REGRESS significantly outperforms state-ofthe-art LLM planners and a grounded planner using LLM-generated affordances. Our experimental results highlight the potential of LLM-REGRESS for sound and complete open-world planning for embodied AI tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

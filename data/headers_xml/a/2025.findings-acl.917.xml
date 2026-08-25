@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">C2KD: Cross-layer and Cross-head Knowledge Distillation for Small Language Model-based Recommendations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong Polytechnic University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Center for Artificial Intelligence and Robotics</orgName>
+								<orgName type="institution" key="instit1">HKISI-CAS ♣ Institute of Automation</orgName>
+								<orgName type="institution" key="instit2">CAS ♢ University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Changyi</forename><surname>Ma</surname></persName>
+							<email>changyi.ma@cair-cas.org.hk</email>
+							<affiliation key="aff1">
+								<orgName type="department">Center for Artificial Intelligence and Robotics</orgName>
+								<orgName type="institution" key="instit1">HKISI-CAS ♣ Institute of Automation</orgName>
+								<orgName type="institution" key="instit2">CAS ♢ University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenqi</forename><surname>Fan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong Polytechnic University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhaoxiang</forename><surname>Zhang ♣♢ †</surname></persName>
+							<email>zhaoxiang.zhang@ia.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qing</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong Polytechnic University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">C2KD: Cross-layer and Cross-head Knowledge Distillation for Small Language Model-based Recommendations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F1688CB7208A07C40BB8F705EED025AF</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Sequential recommenders predict users&apos; next interactions based on historical behavior and are essential in modern recommendation systems. While Large Language Models (LLMs) show promise, their size and high inference costs limit deployment on resource-constrained devices. Small Language Models (SLMs) provide a more efficient alternative for edge devices, but bridging the recommendation performance gap between LLMs and SLMs remains challenging. Typical approaches like supervised fine-tuning or vanilla knowledge distillation (KD) often lead to suboptimal performance or even negative transfer. Our motivational experiments reveal key issues with vanilla KD methods: feature imitation suffers from redundancy and uneven recommendation ability across layers, while prediction mimicking faces conflicts caused by differing weight distributions of prediction heads. To address these challenges, we propose a simple yet effective framework, C2KD, to transfer taskrelevant knowledge from two complementary dimensions. Specifically, our method incorporates: (1) cross-layer feature imitation, which uses a dynamic router to select the most relevant teacher layers and assimilate task-relevant knowledge from the teacher&apos;s late layers, allowing the student to concentrate on the teacher&apos;s specialized knowledge; and (2) cross-head logit distillation, which maps the intermediate features of the student to the teacher&apos;s output head, thereby minimizing prediction discrepancies between the teacher and the student. Extensive experiments across diverse model families demonstrate that our approach enables 1Bparameter SLMs to achieve competitive performance compared to LLMs (e.g., Llama3-8B), offering a practical solution for real-world ondevice sequential recommendations.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

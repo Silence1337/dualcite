@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Zero-Shot and Hybrid Strategies for Tetun Ad-Hoc Text Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Gabriel</forename><surname>De Jesus</surname></persName>
+							<email>gabriel.jesus@inesctec.pt</email>
+						</author>
+						<author>
+							<persName><forename type="first">Siddharth</forename><forename type="middle">Ak</forename><surname>Singh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sérgio</forename><surname>Nunes</surname></persName>
+							<email>sergio.nunes@fe.up.pt</email>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Yates</surname></persName>
+							<email>andrew.yates@jhu.edu</email>
+							<idno type="ORCID">0000-0002-5970-880X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Siddharth</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sérgio</forename><surname>Singh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><surname>Nunes</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Yates</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">INESC TEC</orgName>
+								<orgName type="institution" key="instit2">University of Porto Porto</orgName>
+								<address>
+									<country key="PT">Portugal</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">IRLab / University of Amsterdam Amsterdam</orgName>
+								<address>
+									<country key="NL">Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">INESC TEC</orgName>
+								<orgName type="institution" key="instit2">University of Porto Porto</orgName>
+								<address>
+									<country key="PT">Portugal</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="laboratory">2025. Zero-Shot and Hybrid Strategies for Tetun Ad-Hoc Text Retrieval. In</orgName>
+								<orgName type="institution">HLTCOE / Johns Hopkins University Baltimore</orgName>
+								<address>
+									<region>Maryland</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Zero-Shot and Hybrid Strategies for Tetun Ad-Hoc Text Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3407B7BA779D1974481EFA3888C7DA73</idno>
+					<idno type="DOI">10.1145/3731120.3744593</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:58+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Tetun</term>
+					<term>Ad-hoc text retrieval</term>
+					<term>Zero-shot dense retrieval</term>
+					<term>Hybrid approaches</term>
+					<term>Large language models</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Dense retrieval models are generally trained using supervised learning approaches for representation learning, which require a labeled dataset (i.e., query-document pairs). However, training such models from scratch is not feasible for most languages, particularly under-resourced ones, due to data scarcity and computational constraints. As an alternative, pretrained dense retrieval models can be fine-tuned for specific downstream tasks or applied directly in zero-shot settings. Given the lack of labeled data for Tetun and the fact that existing dense retrieval models do not currently support the language, this study investigates their application in zero-shot, out-of-distribution scenarios. We adapted these models to Tetun documents, producing zero-shot embeddings, to evaluate their performance across various document representations and retrieval strategies for the ad-hoc text retrieval task. The results show that most pretrained monolingual dense retrieval models outperformed their multilingual counterparts in various configurations. Given the lack of dense retrieval models specialized for Tetun, we combine Hiemstra LM with ColBERTv2 in a hybrid strategy, achieving a relative improvement of +2.01% in P@10, +4.24% in MAP@10, and +2.45% in NDCG@10 over the baseline, based on evaluations using 59 queries and up to 2,000 retrieved documents per query. We propose dual tuning parameters for the score fusion approach commonly used in hybrid retrieval and demonstrate that enriching document titles with summaries generated by a large language model (LLM) from the documents&apos; content significantly enhances the performance of hybrid retrieval strategies in Tetun. To support reproducibility, we publicly release the LLM-generated document summaries and run files. CCS Concepts • Information retrieval → Low-resource languages; Ranking.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

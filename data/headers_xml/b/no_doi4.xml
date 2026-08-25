@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Exploring Approaches for Detecting Memorization of Recommender System Data in Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Antonio</forename><surname>Colacicco</surname></persName>
+							<email>colacicco1@studenti.poliba.it</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Politecnico di Bari</orgName>
+								<address>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vito</forename><surname>Guida</surname></persName>
+							<email>v.guida@studenti.poliba.it</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Politecnico di Bari</orgName>
+								<address>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dario</forename><forename type="middle">Di</forename><surname>Palma</surname></persName>
+							<email>dario.dipalma@poliba.it</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Politecnico di Bari</orgName>
+								<address>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="institution">Politecnico di Bari</orgName>
+								<address>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fedelucio</forename><surname>Narducci</surname></persName>
+							<email>fedelucio.narducci@poliba.it</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Politecnico di Bari</orgName>
+								<address>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tommaso</forename><forename type="middle">Di</forename><surname>Noia</surname></persName>
+							<email>tommaso.dinoia@poliba.it</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Politecnico di Bari</orgName>
+								<address>
+									<settlement>Bari</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Exploring Approaches for Detecting Memorization of Recommender System Data in Large Language Models</title>
+					</analytic>
+					<monogr>
+						<idno type="ISSN">1613-0073</idno>
+					</monogr>
+					<idno type="MD5">195BB3E8C57D34D7B83E4A1431DE126C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:45+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Large Language Models (LLMs)</term>
+					<term>Dataset Memorization</term>
+					<term>Recommender Systems (RSs)</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large Language Models (LLMs) are increasingly applied in recommendation scenarios due to their strong natural language understanding and generation capabilities. However, they are trained on vast corpora whose contents are not publicly disclosed, raising concerns about data leakage. Recent work has shown that the MovieLens-1M dataset is memorized by both the LLaMA and OpenAI model families, but the extraction of such memorized data has so far relied exclusively on manual prompt engineering. In this paper, we pose three main questions: Is it possible to enhance manual prompting? Can LLM memorization be detected through methods beyond manual prompting? And can the detection of data leakage be automated? To address these questions, we evaluate three approaches: (i) jailbreak prompt engineering; (ii) unsupervised latent knowledge discovery, probing internal activations via Contrast-Consistent Search (CCS) and Cluster-Norm; and (iii) Automatic Prompt Engineering (APE), which frames prompt discovery as a meta-learning process that iteratively refines candidate instructions. Experiments on MovieLens-1M using LLaMA models show that jailbreak prompting does not improve the retrieval of memorized items and remains inconsistent; CCS reliably distinguishes genuine from fabricated movie titles but fails on numerical user and rating data; and APE retrieves item-level information with moderate success yet struggles to recover numerical interactions. These findings suggest that automatically optimizing prompts is the most promising strategy for extracting memorized samples.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

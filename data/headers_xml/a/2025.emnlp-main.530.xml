@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Calibrating LLM Confidence by Probing Perturbed Representation Stability</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Reza</forename><surname>Khanmohammadi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Michigan State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Erfan</forename><surname>Miahi</surname></persName>
+							<email>mhi.erfan1@gmail.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Independent AI Researcher</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mehrsa</forename><surname>Mardikoraem</surname></persName>
+							<email>mardikorm@gmail.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Independent AI Researcher</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Simerjot</forename><surname>Kaur</surname></persName>
+							<email>simerjot.kaur@jpmchase.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">JPMorgan AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ivan</forename><surname>Brugere</surname></persName>
+							<email>ivan.brugere@jpmchase.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">JPMorgan AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Charese</forename><forename type="middle">H</forename><surname>Smiley</surname></persName>
+							<email>charese.h.smiley@jpmchase.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">JPMorgan AI Research</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kundan</forename><surname>Thind</surname></persName>
+							<email>kthind1@hfhs.org</email>
+							<affiliation key="aff3">
+								<orgName type="institution">Henry Ford Health</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammad</forename><forename type="middle">M</forename><surname>Ghassemi</surname></persName>
+							<email>ghassem3@msu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Michigan State University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Calibrating LLM Confidence by Probing Perturbed Representation Stability</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1EACFA9D096571429D87A61A522BA3C4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Miscalibration in Large Language Models (LLMs) undermines their reliability, highlighting the need for accurate confidence estimation. We introduce CCPS (Calibrating LLM Confidence by Probing Perturbed Representation Stability), a novel method analyzing internal representational stability in LLMs. CCPS applies targeted adversarial perturbations to final hidden states, extracts features reflecting the model&apos;s response to these perturbations, and uses a lightweight classifier to predict answer correctness. CCPS was evaluated on LLMs from 8B to 32B parameters (covering Llama, Qwen, and Mistral architectures) using MMLU and MMLU-Pro benchmarks in both multiplechoice and open-ended formats. Our results show that CCPS significantly outperforms current approaches. Across four LLMs and three MMLU variants, CCPS reduces Expected Calibration Error by approximately 55% and Brier score by 21%, while increasing accuracy by 5 percentage points, Area Under the Precision-Recall Curve by 4 percentage points, and Area Under the Receiver Operating Characteristic Curve by 6 percentage points, all relative to the strongest prior method. CCPS delivers an efficient, broadly applicable, and more accurate solution for estimating LLM confidence, thereby improving their trustworthiness.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

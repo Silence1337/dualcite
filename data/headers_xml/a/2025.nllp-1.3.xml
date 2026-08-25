@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards Reliable Retrieval in RAG Systems for Large Legal Datasets</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Markus</forename><surname>Reuter</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Technical University of Darmstadt</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tobias</forename><surname>Lingenberg</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Technical University of Darmstadt</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ūta</forename><surname>Liepin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of Florence</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Francesca</forename><surname>Lagioia</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">ALMA-AI</orgName>
+								<orgName type="department" key="dep2">Faculty of Law</orgName>
+								<orgName type="institution">University of Bologna</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Law</orgName>
+								<orgName type="institution">European University Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marco</forename><surname>Lippi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">University of Florence</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Giovanni</forename><surname>Sartor</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">ALMA-AI</orgName>
+								<orgName type="department" key="dep2">Faculty of Law</orgName>
+								<orgName type="institution">University of Bologna</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Law</orgName>
+								<orgName type="institution">European University Institute</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Andrea</forename><surname>Passerini</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">DISI</orgName>
+								<orgName type="institution" key="instit2">University of Trento</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Burcu</forename><surname>Sayin</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">DISI</orgName>
+								<orgName type="institution" key="instit2">University of Trento</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards Reliable Retrieval in RAG Systems for Large Legal Datasets</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7FDD131950A92343DB902C1452222806</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-Augmented Generation (RAG) is a promising approach to mitigate hallucinations in Large Language Models (LLMs) for legal applications, but its reliability is critically dependent on the accuracy of the retrieval step. This is particularly challenging in the legal domain, where large databases of structurally similar documents often cause retrieval systems to fail. In this paper, we address this challenge by first identifying and quantifying a critical failure mode we term Document-Level Retrieval Mismatch (DRM), where the retriever selects information from entirely incorrect source documents. To mitigate DRM, we investigate a simple and computationally efficient technique which we refer to as Summary-Augmented Chunking (SAC). This method enhances each text chunk with a document-level synthetic summary, thereby injecting crucial global context that would otherwise be lost during a standard chunking process. Our experiments on a diverse set of legal information retrieval tasks show that SAC greatly reduces DRM and, consequently, also improves text-level retrieval precision and recall. Interestingly, we find that a generic summarization strategy outperforms an approach that incorporates legal expert domain knowledge to target specific legal elements. Our work provides evidence that this practical, scalable, and easily integrable technique enhances the reliability of RAG systems when applied to large-scale legal document datasets. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

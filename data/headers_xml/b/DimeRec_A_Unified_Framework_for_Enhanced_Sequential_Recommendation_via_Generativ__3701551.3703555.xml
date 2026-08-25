@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DimeRec: A Unified Framework for Enhanced Sequential Recommendation via Generative Diffusion Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-08-22">22 Aug 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wuchao</forename><surname>Li</surname></persName>
+							<email>liwuchao@mail.ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Huang</surname></persName>
+							<email>huangrui06@kuaishou.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haijun</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chi</forename><surname>Liu</surname></persName>
+							<email>liuchi05@kuaishou.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Zheng</surname></persName>
+							<email>zhengkai@kuaishou.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Na</forename><surname>Mou</surname></persName>
+							<email>mouna@kuaishou.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guorui</forename><surname>Zhou</surname></persName>
+							<email>zhouguorui@kuaishou.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Defu</forename><surname>Lian</surname></persName>
+							<email>liandefu@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wentian</forename><surname>Bao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enyun</forename><surname>Yu</surname></persName>
+							<email>yuenyun@126.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenwu</forename><surname>Ou</surname></persName>
+							<email>ouwenwu@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit2">Sen University</orgName>
+								<orgName type="institution" key="instit3">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit4">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit5">Kuaishou Inc</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DimeRec: A Unified Framework for Enhanced Sequential Recommendation via Generative Diffusion Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2024-08-22">22 Aug 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7BE4B5A9DC24178FC94625D03939B236</idno>
+					<idno type="arXiv">arXiv:2408.12153v1[cs.IR]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Sequential Recommendation (SR) plays a pivotal role in recommender systems by tailoring recommendations to user preferences based on their non-stationary historical interactions. Achieving high-quality performance in SR requires attention to both item representation and diversity. However, designing an SR method that simultaneously optimizes these merits remains a long-standing challenge. In this study, we address this issue by integrating recent generative Diffusion Models (DM) into SR. DM has demonstrated utility in representation learning and diverse image generation [3]. Nevertheless, a straightforward combination of SR and DM leads to sub-optimal performance due to discrepancies in learning objectives (recommendation vs. noise reconstruction) and the respective learning spaces (non-stationary vs. stationary). To overcome this, we propose a novel framework called DimeRec (Diffusion with multi-interest enhanced Recommender). DimeRec synergistically combines a guidance extraction module (GEM) and a generative diffusion aggregation module (DAM). The GEM extracts crucial stationary guidance signals from the user&apos;s non-stationary interaction history, while the DAM employs a generative diffusion process conditioned on GEM&apos;s outputs to reconstruct and generate consistent recommendations. Our numerical experiments demonstrate that DimeRec significantly outperforms established baseline methods across three publicly available datasets. Furthermore, we have successfully deployed DimeRec on a large-scale short video recommendation platform, serving hundreds of millions of users. Live A/B testing confirms that our method improves both users&apos; time spent and result diversification.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dynamic Evil Score-Guided Decoding: An Efficient Decoding Framework For Red-Team Model</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Cong</forename><surname>Gao</surname></persName>
+							<email>gaocong@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bo</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Rocket Force University of Engineering</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linkang</forename><surname>Yang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Xi&apos;an Jiaotong University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minghao</forename><surname>Hu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Center of Information Research</orgName>
+								<orgName type="institution">AMS</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhunchen</forename><surname>Luo</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Center of Information Research</orgName>
+								<orgName type="institution">AMS</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoying</forename><surname>Bai</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Center of Information Research</orgName>
+								<orgName type="institution">AMS</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guotong</forename><surname>Geng</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Center of Information Research</orgName>
+								<orgName type="institution">AMS</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Center of Information Research</orgName>
+								<orgName type="institution">AMS</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Defense Innovation Institute</orgName>
+								<orgName type="institution">Chinese Academy of Military Science</orgName>
+								<address>
+									<postCode>100071</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yunhua</forename><surname>Xue</surname></persName>
+							<email>xueyunhua@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dynamic Evil Score-Guided Decoding: An Efficient Decoding Framework For Red-Team Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F070742BE57903B967CDFE3A6EBAF249</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have achieved significant advances, but can potentially generate harmful content such as social biases, extremism, and misinformation. Red teaming is a promising approach to enhance model safety by generating adversarial prompts to test and improve model robustness. However, existing red-teaming methods often require expensive fine-tuning, especially for large LLMs. We propose the Dynamic Evil Score-Guided Decoding framework (DESGD), an efficient red-teaming method that does not increase computational cost with the target model size. DESGD framework introduces the concept of an &apos;evil score,&apos; which can dynamically evaluate the potential of tokens to contribute to harmful outputs in decoding phrases. We fine-tune a small model using an adversarial dataset and calculate the evil score based on the difference in logits vector before and after fine-tuning. Then, we adjust the logits of the large target model according to the evil score. The results of the experiment show that our method achieves an ASR of 92. 83% on the Llama-3.2-3B-Instruct model, compared to 83.48% with adversarial fine-tuning while using lower computational resources. Similarly, on the Qwen2.5-3B-Instruct model, DESGD reaches an ASR of 88.62%, outperforming adversarial fine-tuning (77.56%).</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

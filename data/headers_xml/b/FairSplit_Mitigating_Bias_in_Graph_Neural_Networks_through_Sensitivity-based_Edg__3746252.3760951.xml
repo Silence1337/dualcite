@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FairSplit: Mitigating Bias in Graph Neural Networks through Sensitivity-based Edge Partitioning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Indranil</forename><surname>Ojha</surname></persName>
+							<email>ojhaindranil@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Indian Statistical Institute Kolkata</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kushal</forename><surname>Bose</surname></persName>
+							<email>kushalbose92@gmail.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Indian Statistical Institute Kolkata</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Swagatam</forename><surname>Das</surname></persName>
+							<email>swagatamdas19@yahoo.co.in</email>
+							<affiliation key="aff2">
+								<orgName type="institution">Indian Statistical Institute Kolkata</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FairSplit: Mitigating Bias in Graph Neural Networks through Sensitivity-based Edge Partitioning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9DCE0E3A10FE539DDC08DACC81797F41</idno>
+					<idno type="DOI">10.1145/3746252.3760951</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Fairness</term>
+					<term>Edge splitting</term>
+					<term>s-homophily</term>
+					<term>GNN</term>
+					<term>Aggregation</term>
+					<term>Sensitivity attributes</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Fairness in machine learning has become increasingly crucial, particularly in graph-based models where biased representations can reinforce societal inequalities. Traditional fairness-aware learning methods on graphs focus on graph rewiring, debiasing node embeddings, adversarial learning, and additional fairness constraints. However, these approaches often struggle to balance fairness and task performance. We propose a novel edge partitioning strategy that creates two distinct subgraphs, maintaining a balance between bias and diversity. We categorize edges as homophilic or heterophilic depending on the sensitive attribute of the corresponding node pairs. An edge is s-homophilic if it joins two nodes with the same sensitivity value, otherwise s-heterophilic. The partition splits the input graph into two subgraphs, both containing all nodes, one with only s-homophilic edges and the other with s-heterophilic ones. Using a Graph Neural Network (GNN), we obtain independent node representations from both graphs, which are then aggregated into a unified node embedding. To enforce fairness, we jointly optimize a primary task loss and a fairness loss, ensuring predictive accuracy and bias mitigation. We evaluate our approach on three benchmark datasets and find that it achieves improved fairness metrics while maintaining accuracy comparable to that of existing state-of-the-art methods. CCS Concepts • Computing methodologies → Machine learning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Language Model Probabilities are Not Calibrated in Numeric Contexts</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Charles</forename><forename type="middle">J</forename><surname>Lovering</surname></persName>
+							<email>charles.lovering@kensho.com</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Krumdick</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Viet</forename><surname>Dac</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Varshini</forename><surname>Reddy</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seth</forename><surname>Ebner</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nilesh</forename><surname>Kumar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rik</forename><surname>Koncel-Kedziorski</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chris</forename><surname>Tanner</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kensho</forename><surname>Technologies</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">♠</forename><surname>Adobe</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rit</forename><forename type="middle">♢</forename><surname>Apple</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Previously at Kensho Technologies</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Language Model Probabilities are Not Calibrated in Numeric Contexts</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">62C47E2DC0C6754267C2736764D6ECE4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Some statements have one well-defined continuation (e.g., &quot;the Eiffel Tower is in [Paris]&quot;), whereas others have a natural distribution over multiple options (e.g., &quot;the weighted coin flip was [Heads/Tails].&quot;) We argue that language model (LM) outputs should capture these natural distributions. Our work specifically tests whether LM output probabilities are calibrated to numeric information within their textual contexts. For example, if the context (the prompt) concerns two equally likely options (e.g., heads or tails for a fair coin), the LM output probabilities should also be equal. Likewise, in a context with nonuniformly likely events (e.g., rolling a pair with two dice) an LM should output proportionate probabilities. However, we find that even in simple settings, the best LMs (1) are poorly calibrated and (2) have systematic biases: artifacts like word identity, word order, and word frequency all impact calibration. For example, gpt-4o-mini often picks the first of two options presented in the prompt regardless of the options&apos; implied likelihoods, whereas Llama-3.1-8B picks the second. Models do not allocate probability mass among valid options in a calibrated manner.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

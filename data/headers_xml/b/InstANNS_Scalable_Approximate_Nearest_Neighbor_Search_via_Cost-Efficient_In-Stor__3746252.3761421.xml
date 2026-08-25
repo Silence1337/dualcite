@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">InstANNS: Scalable Approximate Nearest Neighbor Search via Cost-Efficient In-Storage Processing</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Bonggeun</forename><surname>Sim</surname></persName>
+							<email>bg.sim@snu.ac.kr</email>
+							<idno type="ORCID">0009-0000-0882-407X</idno>
+							<affiliation key="aff0">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yushin</forename><surname>Kim</surname></persName>
+							<idno type="ORCID">0009-0005-5244-5866</idno>
+							<affiliation key="aff1">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minseo</forename><surname>Kim</surname></persName>
+							<idno type="ORCID">0009-0006-3487-5253</idno>
+							<affiliation key="aff2">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yeonhong</forename><surname>Park</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jae</forename><forename type="middle">W</forename><surname>Lee</surname></persName>
+							<email>jaewlee@snu.ac.kr</email>
+							<idno type="ORCID">0000-0002-4266-4919</idno>
+							<affiliation key="aff4">
+								<orgName type="institution">Seoul National University Seoul</orgName>
+								<address>
+									<country key="KR">South Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">InstANNS: Scalable Approximate Nearest Neighbor Search via Cost-Efficient In-Storage Processing</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5179C41A79BB319C1728924A6F8157E6</idno>
+					<idno type="DOI">10.1145/3746252.3761421</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Retrieval efficiency</term>
+					<term>Storage architectures</term>
+					<term>Query optimization Information Retrieval, Approximate Nearest-Neighbor Search, In Storage Processing, Billion Scale Search, High Dimensional Vector</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Billion-scale approximate nearest neighbor search (ANNS) increasingly relies on disk-based indexes due to the rapid growth of modern datasets. Existing disk-augmented indexing systems, such as SPANN, often face performance bottlenecks due to limited host interface bandwidth, typically constrained by PCIe. To address this bottleneck, we introduce InstANNS, a storage-centric ANNS architecture that improves throughput and reduces data transfer by performing query-aware PQ filtering inside SSDs, without relying on GPUs. By offloading distance computations to the SSD controller and utilizing abundant internal bandwidth, our design transfers only highly relevant candidates to the host, significantly reducing PCIe traffic. To further optimize performance, we propose co-occurrence-aware PQ code placement, which co-locates frequently co-accessed candidates, and conditional PQ bypass, which reduces NAND reads by skipping low-utility filtering. We prototype In-stANNS by extending SPANN and evaluate it using a device-level SSD simulator, meticulously calibrated against measurements from an actual SSD controller SoC (System-on-Chip) to ensure accurate performance evaluation. Experimental results show that InstANNS improves QPS by 2.15× over SPANN and QPS-per-dollar by 1.7× over FusionANNS at 90% Recall@10, while maintaining accuracy.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

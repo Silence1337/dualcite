@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Causality-aware Graph Aggregation Weight Estimator for Popularity Debiasing in Top-K Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Que</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Zhao</surname></persName>
+							<email>xianzhao@cityu.edu.hk</email>
+							<idno type="ORCID">0000-0003-2926-4416</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Ma</surname></persName>
+							<email>chenma@cityu.edu.hk</email>
+							<idno type="ORCID">0000-0001-7933-9813</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Yingyi Zhang</orgName>
+								<orgName type="institution">City University of Hong Kong Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">City University of Hong Kong Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Dalian University of Technology Dalian</orgName>
+								<address>
+									<settlement>Liaoning</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">City University of Hong Kong Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">City University of Hong Kong Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Causality-aware Graph Aggregation Weight Estimator for Popularity Debiasing in Top-K Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3D2013972C46F19AFB56EBB7F5CCBEA2</idno>
+					<idno type="DOI">10.1145/3746252.3761155</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:27+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Graph-based recommender systems leverage neighborhood aggregation to generate node representations, which is highly sensitive to popularity bias, resulting in an echo effect during information propagation. Existing graph-based debiasing solutions refine the aggregation process with attempts such as edge reconstruction or weight adjustment. However, these methods remain inadequate in fully alleviating popularity bias. Specifically, this is because 1) they provide no insights into graph aggregation rationality, thus lacking an optimality guarantee; 2) they fail to well balance the training and debiasing process, which undermines the effectiveness. In this paper, we propose a novel approach to mitigate popularity bias through rational modeling of the graph aggregation process. We reveal that graph aggregation is a special form of backdoor adjustment in causal inference, where the aggregation weight corresponds to the historical interaction likelihood distribution. Based on this insight, we devise an encoder-decoder architecture, namely Causality-aware Graph Aggregation Weight Estimator for Debiasing (CAGED), to approximate the unbiased aggregation weight by optimizing the evidence lower bound of the interaction likelihood. In order to enhance the debiasing effectiveness during early training stages, we further design a momentum update strategy that incrementally refines the aggregation weight matrix. Extensive experiments on three datasets demonstrate that CAGED outperforms existing graph-based debiasing methods. Our implementation is available at https://github.com/QueYork/CAGED. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

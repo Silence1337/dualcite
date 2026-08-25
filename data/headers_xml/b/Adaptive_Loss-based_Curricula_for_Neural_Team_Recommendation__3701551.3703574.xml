@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Adaptive Loss-based Curricula for Neural Team Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Reza</forename><surname>Barzegar</surname></persName>
+							<email>barzegar@uwindsor.ca</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">University of Windsor</orgName>
+								<address>
+									<region>ON</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Marco</forename><surname>Nikola Kurepa</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">Vincent Massey Secondary School Windsor</orgName>
+								<address>
+									<region>ON</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hossein</forename><surname>Fani</surname></persName>
+							<email>hfani@uwindsor.ca</email>
+							<idno type="ORCID">0000-0002-6033-6564</idno>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Windsor</orgName>
+								<address>
+									<region>ON</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Adaptive Loss-based Curricula for Neural Team Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">616B4589293C76FB2124406C49D7F959</idno>
+					<idno type="DOI">10.1145/3701551.3703574</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Neural Team Recommendation</term>
+					<term>Curriculum Learning</term>
+					<term>Social IR</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Neural team recommendation models have excelled at recommending collaborative teams of experts who, more likely than not, can solve complex tasks. Yet, they suffer from popularity bias due to the disproportionate distribution of popular experts over many teams and the sparse long-tailed distribution of non-popular ones in training datasets, overlooking the difficulty of recommending hard nonpopular vs. easy popular experts. To bridge the gap, we propose three curriculum-based learning strategies to empower neural team recommenders sifting through easy popular and hard non-popular experts and to mitigate popularity bias and improve upon them. We propose (1) a parametric curriculum that assigns a learnable parameter to each expert enabling the model to learn an expert&apos;s levels of difficulty (or conversely, levels of popularity) during training, (2) a parameter-free (non-parametric) curriculum that presumes the worst-case difficulty for each expert based on the model&apos;s loss, and (3) a static curriculum to provide a minimum base for comparison amongst curriculum-based learning strategies and lack thereof. Our experiments on two benchmark datasets with distinct distributions of teams over skills showed that our parameter-free curriculum improved the performance of non-variational models across different domains, outperforming its parametric counterpart, and the static curriculum was the poorest. Moreover, among neural models, variational models obtain little to no gain from our proposed curricula, urging further research on more effective curricula for them. The code to reproduce our experiments is publically available at https://github.com/fani-lab/OpeNTF/tree/cl-wsdm25. CCS Concepts • Information systems → Recommender systems; • Humancentered computing → Social recommendation; • Computing methodologies → Neural networks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

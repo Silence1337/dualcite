@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rethinking the Role of Prompting Strategies in LLM Test-Time Scaling: A Perspective of Probability Theory</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yexiang</forename><surname>Liu</surname></persName>
+							<email>liuyexiang2023@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution" key="instit1">MAIS</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zekun</forename><surname>Li</surname></persName>
+							<email>zekunli@cs.ucsb.edu</email>
+							<affiliation key="aff2">
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<addrLine>Santa Barbara 4 Beijing Wenge Technology Co.</addrLine>
+									<settlement>Ltd</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhi</forename><surname>Fang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution" key="instit1">MAIS</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nan</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution" key="instit1">MAIS</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ran</forename><surname>He</surname></persName>
+							<email>ran.he@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution" key="instit1">MAIS</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tieniu</forename><surname>Tan</surname></persName>
+							<email>tieniu.tan@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="institution" key="instit1">MAIS</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Nanjing University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rethinking the Role of Prompting Strategies in LLM Test-Time Scaling: A Perspective of Probability Theory</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2E5CFB76BBBE3E920370F94CE2FD85E3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:20+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recently, scaling test-time compute on Large Language Models (LLM) has garnered wide attention. However, there has been limited investigation of how various reasoning prompting strategies perform as scaling. In this paper, we focus on a standard and realistic scaling setting: majority voting. We systematically conduct experiments on 6 LLMs × 8 prompting strategies × 6 benchmarks. Experiment results consistently show that as the sampling time and computational overhead increase, complicated prompting strategies with superior initial performance gradually fall behind simple Chain-of-Thought. We analyze this phenomenon and provide theoretical proofs. Additionally, we propose a probabilistic method to efficiently predict scaling performance and identify the best prompting strategy under large sampling times, eliminating the need for resource-intensive inference processes in practical applications. Furthermore, we introduce two ways derived from our theoretical analysis to significantly improve the scaling performance. We hope that our research can promote to reexamine the role of complicated prompting, unleash the potential of simple prompting strategies, and provide new insights for enhancing test-time scaling performance. Code is available at https://github.com/MraDonk ey/rethinking_prompting.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

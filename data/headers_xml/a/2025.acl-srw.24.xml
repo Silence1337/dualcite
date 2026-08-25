@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Efficient Corpus and Graph-Based Adaptation of Small Multilingual Language Models for Low-Resource Languages</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Daniil</forename><surname>Gurgurov</surname></persName>
+							<email>daniil.gurgurov@dfki.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Saarland University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">German Research Center for Artificial Intelligence (DFKI)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ivan</forename><surname>Vykopal</surname></persName>
+							<email>ivan.vykopal@kinit.sk</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Brno University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Kempelen Institute of Intelligent Technologies (KInIT)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Josef</forename><surname>Van Genabith</surname></persName>
+							<email>josef.van_genabith@dfki.de</email>
+							<affiliation key="aff2">
+								<orgName type="department">German Research Center for Artificial Intelligence (DFKI)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Simon</forename><surname>Ostermann</surname></persName>
+							<email>simon.ostermann@dfki.de</email>
+							<affiliation key="aff2">
+								<orgName type="department">German Research Center for Artificial Intelligence (DFKI)</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Efficient Corpus and Graph-Based Adaptation of Small Multilingual Language Models for Low-Resource Languages</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0DBBE5825CB2113026900B19BDD7F579</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Low-resource languages (LRLs) face significant challenges in natural language processing (NLP) due to limited data. While current state-of-the-art large language models (LLMs) still struggle with LRLs, smaller multilingual models (mLMs) such as mBERT and XLM-R offer greater promise due to a better fit of their capacity to low training data sizes. This study systematically investigates parameter-efficient adapter-based methods for adapting mLMs to LRLs, evaluating three architectures: Sequential Bottleneck, Invertible Bottleneck, and Low-Rank Adaptation. Using unstructured text from GlotCC and structured knowledge from ConceptNet, we show that small adaptation datasets (e.g., up to 1 GB of free-text or a few MB of knowledge graph data) yield gains in intrinsic (masked language modeling) and extrinsic tasks (topic classification, sentiment analysis, and named entity recognition). We find that Sequential Bottleneck adapters excel in language modeling, while Invertible Bottleneck adapters slightly outperform other methods on downstream tasks due to better embedding alignment and larger parameter counts. Adapter-based methods match or outperform full fine-tuning while using far fewer parameters, and smaller mLMs prove more effective for LRLs than massive LLMs like LLaMA-3, GPT-4, and DeepSeek-R1-based distilled models. While adaptation improves performance, pre-training data size remains the dominant factor, especially for languages with extensive pre-training coverage. The code for our experiments is available at https://github.com/d-gurgurov/ Knowledge-Driven-Adaptation-LLMs.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

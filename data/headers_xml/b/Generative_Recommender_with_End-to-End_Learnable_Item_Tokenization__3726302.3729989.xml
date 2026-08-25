@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Generative Recommender with End-to-End Learnable Item Tokenization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Enze</forename><surname>Liu</surname></persName>
+							<email>enzeliu@ruc.edu.cn</email>
+							<idno type="ORCID">0009-0007-8344-4780</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Bowen</forename><surname>Zheng</surname></persName>
+							<idno type="ORCID">0009-0002-3010-7899</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Ling</surname></persName>
+							<email>lingcheng@kuaishou.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lantao</forename><surname>Hu</surname></persName>
+							<email>hulantao@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Han</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wayne</forename><forename type="middle">Xin</forename><surname>Zhao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wayne</forename><surname>Xin</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Gaoling School of Artificial Intelligence</orgName>
+								<orgName type="institution">Kuaishou Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Renmin University of China Beijing</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Padua New York</settlement>
+									<region>Italy. ACM NY</region>
+									<country>China USA, 11 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Generative Recommender with End-to-End Learnable Item Tokenization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">287FCE6CF5CA22E489A25598D2A43DDB</idno>
+					<idno type="DOI">10.1145/3726302.3729989</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>• Information systems → Recommender systems</term>
+					<term>Collaborative filtering Generative Recommendation</term>
+					<term>Item Tokenization</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Generative recommender systems have gained increasing attention as an innovative approach that directly generates item identifiers for recommendation tasks. Despite their potential, a major challenge is the effective construction of item identifiers that align well with recommender systems. Current approaches often treat item tokenization and generative recommendation training as separate processes, which can lead to suboptimal performance. To overcome this issue, we introduce ETEGRec, a novel End-To-End Generative Recommender that unifies item tokenization and generative recommendation into a cohesive framework. Built on a dual encoder-decoder architecture, ETEGRec consists of an item tokenizer and a generative recommender. To enable synergistic interaction between these components, we propose a recommendation-oriented alignment strategy, which includes two key optimization objectives: sequence-item alignment and preference-semantic alignment. These objectives tightly couple the learning processes of the item tokenizer and the generative recommender, fostering mutual enhancement. Additionally, we develop an alternating optimization technique to ensure stable and efficient end-to-end training of the entire framework. Extensive experiments demonstrate the superior performance of our approach compared to traditional sequential recommendation models and existing generative recommendation baselines. Our code is available at https://github.com/RUCAIBox/ETEGRec.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

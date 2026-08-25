@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">BSFA: Leveraging the Subspace Dichotomy to Accelerate Neural Network Training</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenjie</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Bohan</forename><surname>Wang</surname></persName>
+							<email>bhwangfy@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xueqi</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Chinese Academy of Sciences</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">BSFA: Leveraging the Subspace Dichotomy to Accelerate Neural Network Training</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">70940D46B484758D69B579C46EBD9C3C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent studies (Gur-Ari et al., 2018; Song et al., 2024; Wen et al., 2024) highlight a fundamental dichotomy in deep learning optimization: Although parameter updates along the top eigendirections of the loss Hessian (Domspace) capture most of the update magnitude, they often contribute minimally to loss reduction. In contrast, updates in the orthogonal component (Bulk-space) have smaller magnitudes but drive most learning progress. In this work, we further advance the understanding of this phenomenon and introduce the Bulk-Space-Filtration-Accelerator (BSFA), a novel plugand-play framework. BSFA accelerates training by differentially scaling update components projected onto these distinct subspaces, simultaneously enhancing stability by moderating updates in the dominant subspace and boosting convergence speed by amplifying those in the bulk-space. To ensure BSFA is both practical and scalable for contemporary large models, we introduce two key innovations: an efficient estimator using Principal Component Analysis (PCA) on historical updates for fast subspace estimation, and a block-wise strategy that applies this estimation on a per-parameter-block basis. These designs make BSFA computationally tractable and highly effective. We demonstrate BSFA&apos;s acceleration across various tasks, notably achieving approximately 2× speedup when pre-training LLaMA-72M on WikiText-103 and LLaMA-134M on OpenWebText compared to vanilla AdamW.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

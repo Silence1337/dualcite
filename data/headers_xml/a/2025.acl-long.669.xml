@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TeamLoRA: Boosting Low-Rank Adaptation with Expert Collaboration and Competition</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tianwei</forename><surname>Lin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiang</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenqiao</forename><surname>Zhang</surname></persName>
+							<email>wenqiaozhang@zju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Dai</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoyuan</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhelun</forename><surname>Yu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wanggui</forename><surname>He</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Juncheng</forename><surname>Li</surname></persName>
+							<email>junchengli@zju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiannan</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Alibaba Group</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Siliang</forename><surname>Tang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yueting</forename><surname>Zhuang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TeamLoRA: Boosting Low-Rank Adaptation with Expert Collaboration and Competition</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A894C5B19BCB2437DD38C382CD349813</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>While Parameter-Efficient Fine-Tuning (PEFT) methods like Low-Rank Adaptation (LoRA) effectively address resource constraints during fine-tuning, their performance often falls short, especially in multidimensional task scenarios. To address this issue, one straightforward solution is to introduce task-specific LoRA as domain experts, leveraging the modeling of multiple capabilities of experts and thus enhancing the general capability of multi-task learning. Although promising, these additional components often add complexity to the training and inference process, contravening the efficiency that PEFT is designed to deliver. Considering this, we introduce an innovative PEFT method, TeamLoRA, consisting of a collaboration and competition module for LoRA experts, thus achieving the right balance of effectiveness and efficiency: (i) For collaboration, we introduce a novel knowledge sharing and organization mechanism designed to optimize hierarchical learning while enhancing the efficiency of model training and inference. (ii) For competition, we propose leveraging a gametheoretic interaction mechanism for experts, encouraging experts to transfer their domainspecific knowledge while facing diverse downstream tasks, thus enhancing the performance. By doing so, TeamLoRA elegantly connects the experts as a &quot;Team&quot; with internal collaboration and competition, enabling a faster and more accurate PEFT paradigm. Meanwhile, we curate a Comprehensive Multi-Task Evaluation (CME) benchmark to thoroughly assess the capability of multi-task learning. Experiments conducted on our CME and other benchmarks indicate the effectiveness and efficiency of TeamLoRA. Our project is available at https://github.com/DCDmllm/TeamLoRA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

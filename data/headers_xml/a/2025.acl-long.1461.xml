@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">IRIS: Interpretable Retrieval-Augmented Classification for Long Interspersed Document Sequences</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fengnan</forename><surname>Li</surname></persName>
+							<email>fengnan.li@duke.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Duke University / Durham</orgName>
+								<address>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Elliot</forename><forename type="middle">D</forename><surname>Hill</surname></persName>
+							<email>elliot.d.hill@duke.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Duke University / Durham</orgName>
+								<address>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shu</forename><surname>Jiang</surname></persName>
+							<email>jiang.shu@duke.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Duke University / Durham</orgName>
+								<address>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaxin</forename><surname>Gao</surname></persName>
+							<email>jiaxin.gao@duke.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Duke University / Durham</orgName>
+								<address>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Matthew</forename><forename type="middle">M</forename><surname>Engelhard</surname></persName>
+							<email>m.engelhard@duke.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Duke University / Durham</orgName>
+								<address>
+									<region>NC</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">IRIS: Interpretable Retrieval-Augmented Classification for Long Interspersed Document Sequences</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">88AAB2A94B2CA0F79E140F99892EDFAD</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:22+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Transformer-based models have achieved stateof-the-art performance in document classification but struggle with long-text processing due to the quadratic computational complexity in the self-attention module. Existing solutions, such as sparse attention, hierarchical models, and key sentence extraction, partially address the issue but still fall short when the input sequence is exceptionally lengthy. To address this challenge, we propose IRIS (Interpretable Retrieval-Augmented Classification for long Interspersed Document Sequences), a novel, lightweight framework that utilizes retrieval to efficiently classify long documents while enhancing interpretability. IRIS segments documents into chunks, stores their embeddings in a vector database, and retrieves those most relevant to a given task using learnable query vectors. A linear attention mechanism then aggregates the retrieved embeddings for classification, allowing the model to process arbitrarily long documents without increasing computational cost and remaining trainable on a single GPU. Our experiments across six datasets show that IRIS achieves comparable performance to baseline models on standard benchmarks, and excels in three clinical note disease risk prediction tasks where documents are extremely long and key information is sparse. Furthermore, IRIS provides global interpretability by revealing a clear summary of key risk factors identified by the model. These findings highlight the potential of IRIS as an efficient and interpretable solution for long-document classification, particularly in healthcare applications where both performance and explainability are crucial. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SLIM: Let LLM Learn More and Forget Less with Soft LoRA and Identity Mixture</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiayi</forename><surname>Han</surname></persName>
+							<email>hanjiayi@inspur.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Lab of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Du</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Interactive Entertainment Group</orgName>
+								<address>
+									<region>Tencent Inc</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongwei</forename><surname>Du</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Lab of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangguo</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Lab of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiwen</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Lab of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanfang</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Nanjing University of Information Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weibo</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Inspur Genersoft Co. Ltd</orgName>
+								<orgName type="institution" key="instit2">Inspur Group Co. Ltd</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Shandong Key Lab of Automated Complex Network Software Construction</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Donghong</forename><surname>Han</surname></persName>
+							<email>handonghong@cse.neu.edu.cn</email>
+							<affiliation key="aff4">
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SLIM: Let LLM Learn More and Forget Less with Soft LoRA and Identity Mixture</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">48BA014081FA1A23347686D31529F2F7</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Despite the recent efforts from the NLP community, balancing the training budget, downstream performance, and general capabilities of large language models (LLM) remains a challenge in many applications. Training the entire model for downstream tasks is expensive, and could easily result in catastrophic forgetting. Parameter-efficient fine-tuning (PEFT) could reduce the training cost, but it still suffers from forgetting, and limits the learning on the downstream tasks. To address the aforementioned issues, we propose a novel mixture of experts (MoE) framework based on Soft LoRA and Identity Mixture (SLIM). SLIM allows dynamic routing between LoRA adapters and identity layers, thus enabling the bypass of LoRA adapters to suppress forgetting of general capacity. We adopt weight yielding with sliding clustering for better out-of-domain distinguish to enhance the routing. We also convert the mixture of LoRA adapters to the model merging formulation and introduce dynamic merging with its fast implementation for LoRA adapters to keep the general capabilities. Extensive experiments demonstrate that the proposed SLIM is comparable to the stateof-the-art PEFT approaches on the downstream tasks while achieving the leading performance in mitigating catastrophic forgetting.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

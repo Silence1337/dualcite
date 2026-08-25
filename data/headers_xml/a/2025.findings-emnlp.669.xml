@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LSRL: Process-Supervised GRPO on Latent Recurrent States Improves Mathematical Reasoning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Hangliang</forename><surname>Ren</surname></persName>
+							<email>ren.hang@northeastern.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Khoury College of Computer Sciences Northeastern University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LSRL: Process-Supervised GRPO on Latent Recurrent States Improves Mathematical Reasoning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EFBBA7DAA2B66DE5800A06F712F5A4E3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Latent-recurrent language models solve tasks by iteratively refining hidden states rather than emitting chain-of-thought tokens, yet the opacity of those hidden trajectories hinders credit assignment and limits mathematical reasoning accuracy. We propose Latent-State Supervised Reinforcement Learning (LSRL), a processsupervised variant of Guided Reward Policy Optimization (GRPO) that delivers dense rewards at every latent step. We decode each recurrent depth of a 3.5-billion-parameter Huginn model and score the partial solutions with a GPT-4.1-nano grader aligned to final-answer correctness. Using LoRA adapters, we update the policy on a single NVIDIA L40S GPU with only 500 GSM-8K training problems. Relative to the depth-8 supervised Huginn baseline, LSRL improves absolute accuracy by +4.27 points on GSM-8K and +2.06 points on MathQA. These results demonstrate that rewarding latent steps provides an efficient route to stronger mathematical reasoning in latentrecurrent language models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

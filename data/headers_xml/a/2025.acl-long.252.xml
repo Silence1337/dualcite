@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qiyuan</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">City University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Yufei</forename><surname>Wang</surname></persName>
+							<email>wang.yufei1@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuxin</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The Hong Kong University of Science and Technology (Guangzhou)</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liangyou</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chuhan</forename><surname>Wu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yasheng</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lifeng</forename><surname>Shang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruiming</forename><surname>Tang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fuyuan</forename><surname>Lyu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">McGill University &amp; Mila</orgName>
+								<address>
+									<region>Quebec</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Ma</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">City University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">AI Institute</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Crowd Comparative Reasoning: Unlocking Comprehensive Evaluations for LLM-as-a-Judge</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">08B282E5E160B1B73BAEF7B047F791D4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLM-as-a-Judge, which generates chain-ofthought (CoT) judgments, has become a widely adopted auto-evaluation method. However, its reliability is compromised by the CoT reasoning&apos;s inability to capture comprehensive and deeper details, often leading to incomplete outcomes. Existing methods mainly rely on majority voting or criteria expansion, which is insufficient to address the limitation in CoT. We propose Crowd-based Comparative Evaluation, which introduces additional crowd responses to compare with the candidate responses, thereby exposing deeper and more comprehensive details within the candidate responses. This process effectively guides LLM-as-a-Judge to provide a more detailed CoT judgment. Extensive experiments demonstrate that our approach enhances evaluation reliability, achieving an average accuracy gain of 6.7% across five benchmarks. Moreover, our method produces higher-quality CoTs that facilitate judge distillation and exhibit superior performance in rejection sampling for supervised fine-tuning (SFT), referred to as crowd rejection sampling, thereby enabling more efficient SFT. Our analysis confirms that CoTs generated by ours are more comprehensive and of higher quality, and evaluation accuracy improves as test-time computation scales. Our code is available at https://github.com/Don-Joey/CCE.git.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

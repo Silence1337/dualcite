@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">G2S: A General-to-Specific Learning Framework for Temporal Knowledge Graph Forecasting with Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Long</forename><surname>Bai</surname></persName>
+							<email>bailong@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zixuan</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaolong</forename><surname>Jin</surname></persName>
+							<email>jinxiaolong@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiafeng</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xueqi</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Key Laboratory of Network Data Science and Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">State Key Laboratory of AI Safety</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tat-Seng</forename><surname>Chua</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">National University of Singapore</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">G2S: A General-to-Specific Learning Framework for Temporal Knowledge Graph Forecasting with Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7238E010FEFEA39E9D043FF557C42C37</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Forecasting over Temporal Knowledge Graphs (TKGs) which predicts future facts based on historical ones has received much attention. Recent studies have introduced Large Language Models (LLMs) for this task to enhance the models&apos; generalization abilities. However, these models perform forecasting via simultaneously learning two kinds of entangled knowledge in the TKG: (1) general patterns, i.e., invariant temporal structures shared across different scenarios; and (2) scenario information, i.e., factual knowledge engaged in specific scenario, such as entities and relations. As a result, the learning processes of these two kinds of knowledge may interfere with each other, which potentially impact the generalization abilities of the models. To enhance the generalization ability of LLMs on this task, in this paper, we propose a General-to-Specific learning framework (G2S) that disentangles the learning processes of the above two kinds of knowledge. In the general learning stage, we mask the scenario information in different TKGs and convert it into anonymous temporal structures. After training on these structures, the model is able to capture the general patterns across different TKGs. In the specific learning stage, we inject the scenario information into the structures via either in-context learning or fine-tuning modes. Experimental results show that G2S effectively improves the generalization abilities of LLMs.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

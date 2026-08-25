@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Theorem-Proving-Based Evaluation of Neural Semantic Parsing</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Hayate</forename><surname>Funakura</surname></persName>
+							<email>funakura.hayate.28p@st.kyoto-u.ac.jp</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Kyoto University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Keio University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Kikagaku Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyunsoo</forename><surname>Kim</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Keio University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Koji</forename><surname>Mineshima</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Keio University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Theorem-Proving-Based Evaluation of Neural Semantic Parsing</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">44181E8EB216A2FFF52B608F89F5DDC9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Graph-matching metrics such as Smatch are the de facto standard for evaluating neural semantic parsers, yet they capture surface overlap rather than logical equivalence. We reassess evaluation by pairing graph-matching with automated theorem proving. We compare two approaches to building parsers: supervised fine-tuning (T5-Small/Base) and fewshot in-context learning (GPT-4o/4.1/5), under normalized and unnormalized targets. We evaluate outputs using graph-matching, bidirectional entailment between source and target formulas with a first-order logic theorem prover, and well-formedness. Across settings, we find that models performing well on graph-matching often fail to produce logically equivalent formulas. Normalization reduces incidental target variability, improves well-formedness, and strengthens logical adequacy. Error analysis shows performance degrades with increasing formula complexity and with coordination, prepositional phrases, and passive voice; the dominant failures involve variable binding and indexing, and predicate naming. These findings highlight limits of graph-based metrics for reasoning-oriented applications and motivate logic-sensitive evaluation and training objectives together with simplified, normalized target representations. All code and data for our experiments are publicly available. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

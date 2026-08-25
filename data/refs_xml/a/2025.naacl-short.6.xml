@@ -1,0 +1,1686 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Learning to play No-press Diplomacy with best response policy iteration</title>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Anthony</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Eccles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrea</forename><surname>Tacchetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">János</forename><surname>Kramár</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ian</forename><surname>Gemp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">C</forename><surname>Hudson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicolas</forename><surname>Porcel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marc</forename><surname>Lanctot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julien</forename><surname>Pérolat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Everett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roman</forename><surname>Werpachowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Satinder</forename><surname>Singh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 34th International Conference on Neural Information Processing Systems, NIPS &apos;20</title>
+		<meeting>the 34th International Conference on Neural Information Processing Systems, NIPS &apos;20<address><addrLine>Red Hook, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Curran Associates Inc</publisher>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note>Thore Graepel, and Yoram Bachrach</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Humanlevel play in the game of Diplomacy by combining language models with strategic reasoning</title>
+		<author>
+			<persName><forename type="first">Anton</forename><surname>Bakhtin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noam</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emily</forename><surname>Dinan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriele</forename><surname>Farina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Colin</forename><surname>Flaherty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Fried</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Goff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hengyuan</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Athul</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><surname>Jacob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mojtaba</forename><surname>Komeili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karthik</forename><surname>Konath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minae</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Lerer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">H</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sasha</forename><surname>Mitts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adithya</forename><surname>Renduchintala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stephen</forename><surname>Roller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dirk</forename><surname>Rowe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weiyan</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joe</forename><surname>Spisak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hugh</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Markus</forename><surname>Zijlstra</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.ade9097</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">378</biblScope>
+			<biblScope unit="issue">6624</biblScope>
+			<biblScope unit="page" from="1067" to="1074" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">No-press Diplomacy from scratch</title>
+		<author>
+			<persName><forename type="first">Anton</forename><surname>Bakhtin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Lerer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noam</forename><surname>Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Abstract Meaning Representation for Sembanking</title>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 7th Linguistic Annotation Workshop and Interoperability with Discourse</title>
+		<editor>
+			<persName><forename type="first">Laura</forename><surname>Banarescu</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Claire</forename><surname>Bonial</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Shu</forename><surname>Cai</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Madalina</forename><surname>Georgescu</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Kira</forename><surname>Griffitt</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Ulf</forename><surname>Hermjakob</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Kevin</forename><surname>Knight</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Philipp</forename><surname>Koehn</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Martha</forename><surname>Palmer</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Nathan</forename><surname>Schneider</surname></persName>
+		</editor>
+		<meeting>the 7th Linguistic Annotation Workshop and Interoperability with Discourse</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Beyond accuracy: The role of mental models in human-AI team performance</title>
+		<author>
+			<persName><forename type="first">Gagan</forename><surname>Bansal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Besmira</forename><surname>Nushi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Walter</forename><forename type="middle">S</forename><surname>Lasecki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><forename type="middle">S</forename><surname>Weld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Horvitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">AAAI Conference on Human Computation &amp; Crowdsourcing</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Does the whole exceed its parts? The effect of AI explanations on complementary team performance</title>
+		<author>
+			<persName><forename type="first">Gagan</forename><surname>Bansal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tongshuang</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joyce</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Raymond</forename><surname>Fok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Besmira</forename><surname>Nushi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ece</forename><surname>Kamar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Tulio Ribeiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Weld</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3411764.3445717</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems, CHI &apos;21</title>
+		<meeting>the 2021 CHI Conference on Human Factors in Computing Systems, CHI &apos;21<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Berner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Greg</forename><surname>Brockman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brooke</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vicki</forename><surname>Cheung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Przemysław</forename><surname>Dębiak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christy</forename><surname>Dennison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Farhi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Quirin</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shariq</forename><surname>Hashme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Hesse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafal</forename><surname>Józefowicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Catherine</forename><surname>Olsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jakub</forename><surname>Pachocki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Petrov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D O</forename><surname>Henrique</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Pinto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tim</forename><surname>Raiman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeremy</forename><surname>Salimans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonas</forename><surname>Schlatter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Szymon</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ilya</forename><surname>Sidor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jie</forename><surname>Sutskever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Filip</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Susan</forename><surname>Wolski</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dota</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note>with large scale deep reinforcement learning</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Proxy tasks and subjective measures can be misleading in evaluating explainable AI systems</title>
+		<author>
+			<persName><forename type="first">Zana</forename><surname>Buçinca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Phoebe</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krzysztof</forename><forename type="middle">Z</forename><surname>Gajos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elena</forename><forename type="middle">L</forename><surname>Glassman</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3377325.3377498</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 25th International Conference on Intelligent User Interfaces, IUI &apos;20</title>
+		<meeting>the 25th International Conference on Intelligent User Interfaces, IUI &apos;20<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="454" to="464" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">To trust or to think: Cognitive forcing functions can reduce overreliance on AI in AIassisted decision-making</title>
+		<author>
+			<persName><forename type="first">Zana</forename><surname>Buçinca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maja</forename><surname>Barbara Malaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Krzysztof</forename><forename type="middle">Z</forename><surname>Gajos</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3449287</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human Computer Interaction</title>
+		<imprint>
+			<biblScope unit="issue">5</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<author>
+			<persName><forename type="first">Josh</forename><surname>Burton</surname></persName>
+		</author>
+		<ptr target="https://diplom.org/Zine/F2007R/Burton/statistician3.htm" />
+		<title level="m">The statistician: Solo victories</title>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page" from="2024" to="2034" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Smatch: an evaluation metric for semantic feature structures</title>
+		<author>
+			<persName><forename type="first">Shu</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Knight</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 51st Annual Meeting of the Association for Computational Linguistics<address><addrLine>Sofia, Bulgaria</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="748" to="752" />
+		</imprint>
+	</monogr>
+	<note>Short Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<author>
+			<persName><forename type="first">Murray</forename><surname>Campbell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Joseph</forename><surname>Hoane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Feng Hsiung</forename><surname>Hsu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0004-3702(01)00129-1</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Deep blue</title>
+		<imprint>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="volume">134</biblScope>
+			<biblScope unit="page" from="57" to="83" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Understanding the role of human intuition on reliance in human-AI decisionmaking with explanations</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Valerie Chen</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Vera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><forename type="middle">Wortman</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gagan</forename><surname>Vaughan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bansal</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3610219</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human Computer Interaction</title>
+		<imprint>
+			<biblScope unit="issue">7</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">When do humans heed AI agents&apos; advice? When should they?</title>
+		<author>
+			<persName><forename type="first">Richard</forename><forename type="middle">E</forename><surname>Dunning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Baruch</forename><surname>Fischhoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alex</forename><forename type="middle">L</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/00187208231190459</idno>
+		<idno type="PMID">37553098</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Human Factors</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1914" to="1927" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Strategic negotiation and trust in Diplomacythe Dipblue approach</title>
+		<author>
+			<persName><forename type="first">Henrique</forename><surname>Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luís</forename><surname>Lopes Cardoso</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Reis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">In Transactions on Computational Collective Intelligence</title>
+		<imprint>
+			<biblScope unit="volume">XX</biblScope>
+			<biblScope unit="page" from="179" to="200" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Human-level performance in no-press Diplomacy via equilibrium search</title>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Lerer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anton</forename><surname>Bakhtin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noam</forename><surname>Brown</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Learning Representations</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Putting education in &quot;educational&quot; apps: Lessons from the science of learning</title>
+		<author>
+			<persName><forename type="first">Kathy</forename><surname>Hirsh-Pasek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><forename type="middle">M</forename><surname>Zosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roberta</forename><forename type="middle">Michnick</forename><surname>Golinkoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">H</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">B</forename><surname>Robb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jordy</forename><surname>Kaufman</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/1529100615569721</idno>
+		<idno type="PMID">25985468</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Science in the Public Interest</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="3" to="34" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Modeling strong and human-like gameplay with KL-regularized search</title>
+		<author>
+			<persName><forename type="first">Athul</forename><surname>Paul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabriele</forename><surname>Farina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Lerer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hengyuan</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anton</forename><surname>Bakhtin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jacob</forename><surname>Andreas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Noam</forename><surname>Brown</surname></persName>
+		</author>
+		<idno>PMLR</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 39th International Conference on Machine Learning</title>
+		<meeting>the 39th International Conference on Machine Learning</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page" from="9695" to="9728" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Pedagogical agents: Back to the future</title>
+		<author>
+			<persName><forename type="first">W</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lewis</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">C</forename><surname>Lester</surname></persName>
+		</author>
+		<idno type="DOI">10.1609/aimag.v39i2.2793</idno>
+	</analytic>
+	<monogr>
+		<title level="j">AI Magazine</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="33" to="44" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">2022a. Colorbo: Envisioned mandala coloringthrough human-AI collaboration</title>
+		<author>
+			<persName><forename type="first">Eunseo</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeongmin</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hyuna</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Minsam</forename><surname>Ko</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3490099.3511135</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 27th International Conference on Intelligent User Interfaces, IUI &apos;22</title>
+		<meeting>the 27th International Conference on Intelligent User Interfaces, IUI &apos;22<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<biblScope unit="page" from="15" to="26" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Sunnie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicole</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Meister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vikram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ruth</forename><surname>Ramaswamy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Olga</forename><surname>Fong</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Russakovsky</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2112.03184</idno>
+		<title level="m">Evaluating the human interpretability of visual explanations</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">A socialcognitive framework for pedagogical agents as learning companions</title>
+		<author>
+			<persName><forename type="first">Yanghee</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amy</forename><surname>Baylor</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11423-006-0637-3</idno>
+		<imprint>
+			<date type="published" when="2006">2006</date>
+			<publisher>ITLS Faculty Publications</publisher>
+			<biblScope unit="page">54</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">On human predictions with explanations and predictions of machine learning models: A case study on deception detection</title>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3287560.3287590</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Conference on Fairness, Accountability, and Transparency, FAT* &apos;19</title>
+		<meeting>the Conference on Fairness, Accountability, and Transparency, FAT* &apos;19<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="29" to="38" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">CoAuthor: Designing a Human-AI Collaborative Writing Dataset for Exploring Language Model Capabilities</title>
+		<author>
+			<persName><forename type="first">Mina</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Percy</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qian</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3491102.3502030</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems, CHI &apos;22</title>
+		<meeting>the 2022 CHI Conference on Human Factors in Computing Systems, CHI &apos;22<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note>Association for Computing Machinery</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Understanding the effect of out-of-distribution examples and interactive explanations on human-AI decision making</title>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vivian</forename><surname>Lai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chenhao</forename><surname>Tan</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3479552</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Real-time team-mate AI in games: a definition, survey, &amp; critique</title>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Mcgee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aswin</forename><surname>Thomas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abraham</forename></persName>
+		</author>
+		<idno type="DOI">10.1145/1822348.1822365</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Fifth International Conference on the Foundations of Digital Games, FDG &apos;10</title>
+		<meeting>the Fifth International Conference on the Foundations of Digital Games, FDG &apos;10<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="124" to="131" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Engaging students in active learning: The case for personalized multimedia messages</title>
+		<author>
+			<persName><forename type="first">Roxana</forename><surname>Moreno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Mayer</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0022-0663.92.4.724</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Educational Psychology</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="724" to="733" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Personalized messages that promote science learning in virtual environments</title>
+		<author>
+			<persName><forename type="first">Roxana</forename><surname>Moreno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Mayer</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0022-0663.96.1.165</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Educational Psychology</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="165" to="173" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">No-Press Diplomacy: Modeling multi-agent gameplay</title>
+		<author>
+			<persName><forename type="first">Philip</forename><surname>Paquette</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuchen</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seton</forename><surname>Steven Bocco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O.-G</forename><surname>Satya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">K</forename><surname>Kummerfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joelle</forename><surname>Pineau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Satinder</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><forename type="middle">C</forename><surname>Courville</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<publisher>Curran Associates, Inc</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">32</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Developing intelligent bots for the Diplomacy game</title>
+		<author>
+			<persName><forename type="first">Sylwia</forename><surname>Polberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marcin</forename><surname>Paprzycki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>Ganzha</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2011 Federated Conference on Computer Science and Information Systems (FedCSIS)</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="589" to="596" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Manipulating and measuring model interpretability</title>
+		<author>
+			<persName><forename type="first">Forough</forename><surname>Poursabzi-Sangdeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jake</forename><forename type="middle">M</forename><surname>Daniel G Goldstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><surname>Hofman</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wortman Wortman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanna</forename><surname>Vaughan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Wallach</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3411764.3445315</idno>
+		<ptr target="http://daide.org.uk/index.html" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems, CHI &apos;21</title>
+		<editor>
+			<persName><forename type="first">Andrew</forename><surname>Rose</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">David</forename><surname>Norman</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Hamish</forename><surname>Williams</surname></persName>
+		</editor>
+		<meeting>the 2021 CHI Conference on Human Factors in Computing Systems, CHI &apos;21<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2007">2021. 2007</date>
+			<biblScope unit="page" from="2024" to="2034" />
+		</imprint>
+	</monogr>
+	<note>Diplomacy artificial intelligence development environment</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Supporting children&apos;s math learning with feedback-augmented narrative technology</title>
+		<author>
+			<persName><forename type="first">Jiayu</forename><surname>Sherry Ruan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rui</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Ying</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dunia</forename><surname>Burkle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anna</forename><surname>Hakim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yufeng</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lily</forename><surname>Yin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Qianyao</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Abdallah</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Griffin</forename><surname>Abuhashem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elizabeth</forename><forename type="middle">L</forename><surname>Dietz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Emma</forename><surname>Murnane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">A</forename><surname>Brunskill</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Landay</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3392063.3394400</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Interaction Design and Children Conference, IDC &apos;20</title>
+		<meeting>the Interaction Design and Children Conference, IDC &apos;20<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="567" to="580" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Schemmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Hemmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niklas</forename><surname>Kühl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carina</forename><surname>Benz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gerhard</forename><surname>Satzger</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2204.06916</idno>
+		<title level="m">Should I follow AI-based advice? Measuring appropriate reliance in human-AI decision-making</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Appropriate reliance on AI advice: Conceptualization and the effect of explanations</title>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Schemmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niklas</forename><surname>Kuehl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carina</forename><surname>Benz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrea</forename><surname>Bartos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gerhard</forename><surname>Satzger</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3581641.3584066</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 28th International Conference on Intelligent User Interfaces, IUI &apos;23</title>
+		<meeting>the 28th International Conference on Intelligent User Interfaces, IUI &apos;23<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="410" to="422" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Explanations, fairness, and appropriate reliance in human-AI decision-making</title>
+		<author>
+			<persName><forename type="first">Jakob</forename><surname>Schoeffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><surname>De-Arteaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Niklas</forename><surname>Kühl</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3613904.3642621</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems, CHI &apos;24</title>
+		<meeting>the 2024 CHI Conference on Human Factors in Computing Systems, CHI &apos;24<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Large language models help humans verify truthfulness -except when they are convincingly wrong</title>
+		<author>
+			<persName><forename type="first">Chenglei</forename><surname>Si</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Navita</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sherry</forename><forename type="middle">Tongshuang</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chen</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shi</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hal</forename><surname>Daumé</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Iii</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jordan</forename><surname>Boyd-Graber</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.12558</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Mastering the game of Go with deep neural networks and tree search</title>
+		<author>
+			<persName><forename type="first">David</forename><surname>Silver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aja</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><forename type="middle">J</forename><surname>Maddison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arthur</forename><surname>Guez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Laurent</forename><surname>Sifre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><surname>Van Den</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julian</forename><surname>Driessche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ioannis</forename><surname>Schrittwieser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Veda</forename><surname>Antonoglou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marc</forename><surname>Panneershelvam</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lanctot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">nature</title>
+		<imprint>
+			<biblScope unit="volume">529</biblScope>
+			<biblScope unit="issue">7587</biblScope>
+			<biblScope unit="page" from="484" to="489" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Fairness perceptions of algorithmic decision-making: A systematic review of the empirical literature</title>
+		<author>
+			<persName><forename type="first">Christopher</forename><surname>Starke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Janine</forename><surname>Baleis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Birte</forename><surname>Keller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frank</forename><surname>Marcinkowski</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2103.12016</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Adaptive companions in FPS games</title>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Tremblay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Clark</forename><surname>Verbrugge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Conference on Foundations of Digital Games</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Jason</forename><surname>Van</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hal</forename></persName>
+		</author>
+		<ptr target="https://sites.google.com/site/diplomacyai/albert" />
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="2024" to="2034" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Explanations can reduce overreliance on AI systems during decisionmaking</title>
+		<author>
+			<persName><forename type="first">Helena</forename><surname>Vasconcelos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Jörke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Madeleine</forename><surname>Grunde-Mclaughlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tobias</forename><surname>Gerstenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">S</forename><surname>Bernstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ranjay</forename><surname>Krishna</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3579605</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human Computer Interaction</title>
+		<imprint>
+			<biblScope unit="issue">7</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">How to evaluate trust in AIassisted decision making? A survey of empirical methodologies</title>
+		<author>
+			<persName><forename type="first">Oleksandra</forename><surname>Vereschak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gilles</forename><surname>Bailly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Baptiste</forename><surname>Caramiaux</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3476068</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the ACM on Human Computer Interaction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Grandmaster level in StarCraft II using multi-agent reinforcement learning</title>
+		<author>
+			<persName><forename type="first">Oriol</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Igor</forename><surname>Babuschkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wojciech</forename><forename type="middle">M</forename><surname>Czarnecki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michaël</forename><surname>Mathieu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Dudzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junyoung</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><surname>Powell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timo</forename><surname>Ewalds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Petko</forename><surname>Georgiev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Junhyuk</forename><surname>Oh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Horgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Manuel</forename><surname>Kroiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ivo</forename><surname>Danihelka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aja</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Sifre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Trevor</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">P</forename><surname>Agapiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Max</forename><surname>Jaderberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sasha</forename><surname>Alexander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rémi</forename><surname>Vezhnevets</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tobias</forename><surname>Leblond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Valentin</forename><surname>Pohlen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Dalibard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yury</forename><surname>Budden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><surname>Sulsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><forename type="middle">Le</forename><surname>Molloy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Caglar</forename><surname>Paine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ziyun</forename><surname>Gulcehre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tobias</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuhuai</forename><surname>Pfaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roman</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dani</forename><surname>Ring</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dario</forename><surname>Yogatama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Katrina</forename><surname>Wünsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Oliver</forename><surname>Mckinney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothy</forename><forename type="middle">P</forename><surname>Schaul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Koray</forename><surname>Lillicrap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Demis</forename><surname>Kavukcuoglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Hassabis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Apps</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Silver</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">575</biblScope>
+			<biblScope unit="page" from="350" to="354" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Are explanations helpful? A comparative study of the effects of explanations in AI-assisted decision-making</title>
+		<author>
+			<persName><forename type="first">Xinru</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ming</forename><surname>Yin</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3397481.3450650</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 26th International Conference on Intelligent User Interfaces, IUI &apos;21</title>
+		<meeting>the 26th International Conference on Intelligent User Interfaces, IUI &apos;21<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="318" to="328" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Can chess survive artificial intelligence?</title>
+		<author>
+			<persName><forename type="first">Yoni</forename><surname>Wilkenfeld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The New Atlantis</title>
+		<imprint>
+			<biblScope unit="issue">58</biblScope>
+			<biblScope unit="page" from="37" to="45" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">More victories, less cooperation: Assessing Cicero&apos;s Diplomacy play</title>
+		<author>
+			<persName><forename type="first">Wichayaporn</forename><surname>Wongkamjan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Feng</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yanze</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ulf</forename><surname>Hermjakob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>May</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brandon</forename><surname>Stewart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><forename type="middle">K</forename><surname>Kummerfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Denis</forename><surname>Peskoff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jordan</forename><surname>Boyd-Graber</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2024.acl-long.672</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 62nd Annual Meeting of the Association for Computational Linguistics<address><addrLine>Bangkok, Thailand</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="12423" to="12441" />
+		</imprint>
+	</monogr>
+	<note>Long Papers)</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Effect of confidence and explanation on accuracy and trust calibration in AI-assisted decision making</title>
+		<author>
+			<persName><forename type="first">Yunfeng</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Vera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rachel</forename><forename type="middle">K E</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Bellamy</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3351095.3372852</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency, FAT* &apos;20</title>
+		<meeting>the 2020 Conference on Fairness, Accountability, and Transparency, FAT* &apos;20<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="295" to="305" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<author>
+			<persName><forename type="first">Kaitlyn</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jena</forename><forename type="middle">D</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nouha</forename><surname>Dziri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Jurafsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maarten</forename><surname>Sap</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2407.07950</idno>
+		<title level="m">REL-A.I.: An interaction-centered approach to measuring human-LM reliance</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">An AI dungeon master&apos;s guide: Learning to converse and guide with intents and theory-of-mind in Dungeons and Dragons</title>
+		<author>
+			<persName><forename type="first">Pei</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jennifer</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jay</forename><surname>Pujara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Callison-Burch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yejin</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Prithviraj</forename><surname>Ammanabrolu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the The 61st Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the The 61st Annual Meeting of the Association for Computational Linguistics<address><addrLine>Toronto, Canada</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

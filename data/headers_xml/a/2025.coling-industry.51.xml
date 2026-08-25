@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">UR 2 N: Unified Retriever and ReraNker</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Riyaz</forename><forename type="middle">Ahmed</forename><surname>Bhat</surname></persName>
+							<email>riyaz.bhat@ibm.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaydeep</forename><surname>Sen'</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rudra</forename><surname>Murthy'</surname></persName>
+							<email>rmurthyv&apos;@in.ibm.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">UR 2 N: Unified Retriever and ReraNker</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CFB6A3FD4109156D17DED37C5371F832</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The two-stage retrieval paradigm has gained popularity, where a neural model serves as a re-ranker atop a non-neural first-stage retriever. We argue that this approach, involving two disparate models without interaction, represents a suboptimal choice. To address this, we propose a unified encoder-decoder architecture with a novel training regimen which enables the encoder representation to be used for retrieval and the decoder for re-ranking within a single unified model, facilitating end-to-end retrieval. We incorporate XTR-style retrieval on top of the trained Mono-T5 reranker to specifically concentrate on addressing practical constraints to create a lightweight model. Results on the BIER benchmark demonstrate the effectiveness of our unified architecture, featuring a highly optimized index and parameters. It outperforms ColBERT, XTR, and even serves as a superior re-ranker compared to the Mono-T5 reranker. The performance gains of our proposed system in reranking become increasingly evident as model capacity grows, particularly when compared to rerankers operating over traditional first-stage retrievers like BM25. This is encouraging, as it suggests that we can integrate more advanced retrievers to further enhance final reranking performance. In contrast, BM25&apos;s static nature limits its potential for such improvements.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

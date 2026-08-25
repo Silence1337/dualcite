@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ECHO-LLaMA: Efficient Caching for High-Performance LLaMA Training</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Maryam</forename><surname>Dialameh</surname></persName>
+							<email>maryam.dialameh@uwaterloo.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Waterloo</orgName>
+								<address>
+									<settlement>Waterloo</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Technologies</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rezaul</forename><surname>Karim</surname></persName>
+							<email>rezaul.karim3@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Technologies</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hossein</forename><surname>Rajabzadeh</surname></persName>
+							<email>hossein.rajabzadeh@uwaterloo.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Waterloo</orgName>
+								<address>
+									<settlement>Waterloo</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Technologies</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Omar</forename><forename type="middle">Mohamed</forename><surname>Awad</surname></persName>
+							<email>omar.mo.awad@outlook.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Technologies</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Boxing</forename><surname>Chen</surname></persName>
+							<email>boxing.chen@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Technologies</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Walid</forename><surname>Ahmed</surname></persName>
+							<email>walid.ahmed1@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Technologies</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Liu</surname></persName>
+							<email>yang.liu8@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Huawei Technologies</orgName>
+								<address>
+									<settlement>Toronto</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyock</forename><forename type="middle">Ju</forename><surname>Kwon</surname></persName>
+							<email>hjkwon@uwaterloo.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Waterloo</orgName>
+								<address>
+									<settlement>Waterloo</settlement>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ECHO-LLaMA: Efficient Caching for High-Performance LLaMA Training</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6D6B4A7684169686731783787A11F4EA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper introduces ECHO-LLaMA, an efficient LLaMA architecture designed to improve both the training speed and inference throughput of LLaMA architectures while maintaining its learning capacity. ECHO-LLaMA transforms LLaMA models into shared KV caching across certain layers, significantly reducing KV computational complexity while maintaining or improving language performance. Experimental results demonstrate that ECHO-LLaMA achieves up to 77% higher token-persecond throughput during training, up to 16% higher Model FLOPs Utilization (MFU), and up to 14% lower loss when trained on an equal number of tokens. Furthermore, on the 1.1B model, ECHO-LLaMA delivers approximately 7% higher test-time throughput compared to the baseline. By introducing a computationally efficient adaptation mechanism, ECHO-LLaMA offers a scalable and cost-effective solution for pretraining and finetuning large language models, enabling faster and more resource-efficient training without compromising performance.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Non-Determinism of &quot;Deterministic&quot; LLM System Settings in Hosted Environments</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Berk</forename><surname>Atil</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Penn State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sarp</forename><surname>Aykent</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexa</forename><surname>Chittams</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lisheng</forename><surname>Fu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rebecca</forename><forename type="middle">J</forename><surname>Passonneau</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Penn State University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Evan</forename><surname>Radcliffe</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guru</forename><forename type="middle">Rajan</forename><surname>Rajagopal</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Adam</forename><surname>Sloan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tomasz</forename><surname>Tudrej</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ferhan</forename><surname>Ture</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhe</forename><surname>Wu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lixinyu</forename><surname>Xu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Breck</forename><surname>Baldwin</surname></persName>
+							<email>breckbaldwin@gmail.com</email>
+							<affiliation key="aff1">
+								<orgName type="department">Comcast AI Technologies</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Non-Determinism of &quot;Deterministic&quot; LLM System Settings in Hosted Environments</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2D122D7CA7E81E53CC85213989E821DA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLM (large language model) users of hosted providers commonly notice that outputs can vary for the same inputs under settings expected to be deterministic. While it is difficult to get exact statistics, recent reports on specialty news sites and discussion boards suggest that among users in all communities, the majority of LLM usage today is through cloud-based APIs. Yet the questions of how pervasive nondeterminism is, and how much it affects performance results, have not to our knowledge been systematically investigated. We apply five APIbased LLMs configured to be deterministic to eight diverse tasks across 10 runs. Experiments reveal accuracy variations of up to 15% across runs, with a gap of up to 70% between best possible performance and worst possible performance. No LLM consistently delivers the same outputs or accuracies, regardless of task. We speculate about the sources of non-determinism such as input buffer packing across multiple jobs. To better quantify our observations, we introduce metrics focused on quantifying determinism, TARr@N for the total agreement rate at N runs over raw output, and TARa@N for total agreement rate of parsed-out answers. Our code and data will be publicly available at https://github.com/breckbaldwin/llm-stability.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

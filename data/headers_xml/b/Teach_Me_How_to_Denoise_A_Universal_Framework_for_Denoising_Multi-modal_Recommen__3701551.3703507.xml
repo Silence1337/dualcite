@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Teach Me How to Denoise: A Universal Framework for Denoising Multi-modal Recommender Systems via Guided Calibration</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hongji</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hanwen</forename><surname>Du</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Youhua</forename><surname>Li</surname></persName>
+							<email>liyouhua97@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Junchen</forename><surname>Fu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chunxiao</forename><surname>Li</surname></persName>
+							<email>chunxiao.li@ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ziyi</forename><surname>Zhuang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jiakang</forename><surname>Li</surname></persName>
+							<email>jiakang.li@rutgers.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yongxin</forename><surname>Ni</surname></persName>
+							<email>niyongxin@u.nus.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Lanzhou University Lanzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">The Ohio State University Columbus</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">City University of Hong Kong Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Glasgow Glasgow</orgName>
+								<address>
+									<country key="GB">UK</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Shanghai Jiao Tong University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Rutgers University New Brunswick</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">National University of Singapore Singapore</orgName>
+								<address>
+									<country key="SG">Singapore</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Teach Me How to Denoise: A Universal Framework for Denoising Multi-modal Recommender Systems via Guided Calibration</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FBB5737C57FF758C42E1B107A404959E</idno>
+					<idno type="DOI">10.1145/3701551.3703507</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Recommender System</term>
+					<term>Multi-modal Learning</term>
+					<term>Data Denoising</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The surge in multimedia content has led to the development of Multi-Modal Recommender Systems (MMRecs), which use diverse modalities-like text, images, videos, and audio-for more personalized recommendations. However, MMRecs struggle with the challenge of noisy data from the misalignment among modal content and the difference between modal and recommendation semantics, while traditional denoising methods fall short in addressing these issues due to the complexity of multi-modal data. To overcome this, we propose a universal guided in-sync distillation denoising framework for multi-modal recommndation (GUIDER), aimed at improving MMRecs by denoising user feedbacks. Specifically, GUIDER employs a re-calibration strategy to identify clean and noisy interactions from modal content. Furthermore, it incorporates a Denoising Bayesian Personalized Ranking (DBPR) loss function to denoise implicit user feedback. Finally, it utilizes a denoising knowledge distillation objective based on Optimal Transport (OT) distance to guide the mapping from modality representations to recommendation semantics spaces. GUIDER can be seamlessly integrated into existing MMRecs methods as a plug-and-play solution for recommendation denoising. Experiment results on four public datasets show its effectiveness and universality across various MMRecs. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

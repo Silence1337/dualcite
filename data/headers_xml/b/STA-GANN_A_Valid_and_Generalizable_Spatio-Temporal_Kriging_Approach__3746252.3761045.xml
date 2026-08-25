@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">STA-GANN: A Valid and Generalizable Spatio-Temporal Kriging Approach</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yujie</forename><surname>Li</surname></persName>
+							<email>liyujie23s@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zezhi</forename><surname>Shao</surname></persName>
+							<email>shaozezhi@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chengqing</forename><surname>Yu</surname></persName>
+							<email>yuchengqing22b@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tangwen</forename><surname>Qian</surname></persName>
+							<email>qiantangwen@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhao</forename><surname>Zhang</surname></persName>
+							<email>zhangzhao2021@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yifan</forename><surname>Du</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shaoming</forename><surname>He</surname></persName>
+							<email>shaoming.he@bit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Wang</surname></persName>
+							<email>wangfei@ict.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yongjun</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep2">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep3">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep4">Institute of Computing Technology</orgName>
+								<orgName type="department" key="dep5">School of Aerospace Engineering</orgName>
+								<orgName type="department" key="dep6">Institute of Computing Technology</orgName>
+								<orgName type="laboratory" key="lab1">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab2">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab3">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab4">State Key Laboratory of AI Safety</orgName>
+								<orgName type="laboratory" key="lab5">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution" key="instit1">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit2">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit3">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit4">Chinese Academy of Sciences</orgName>
+								<orgName type="institution" key="instit5">Beijing Institute of Technology</orgName>
+								<orgName type="institution" key="instit6">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">STA-GANN: A Valid and Generalizable Spatio-Temporal Kriging Approach</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AF0C0A8BAAB70C1F115AD3ADA1F55AFC</idno>
+					<idno type="DOI">10.1145/3746252.3761045</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>spatio-temporal kriging</term>
+					<term>graph neural networks</term>
+					<term>transfer learning</term>
+					<term>graph representation learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Spatio-temporal tasks often encounter incomplete data arising from missing or inaccessible sensors, making spatio-temporal kriging crucial for inferring the completely missing temporal information. However, current models struggle with ensuring the validity and generalizability of inferred spatio-temporal patterns, especially in capturing dynamic spatial dependencies and temporal shifts, and optimizing the generalizability of unknown sensors. To overcome these limitations, we propose Spatio-Temporal Aware Graph Adversarial Neural Network (STA-GANN) , a novel GNN-based kriging framework that improves spatio-temporal pattern validity and generalization. STA-GANN integrates (i) Decoupled Phase Module that senses and adjusts for timestamp shifts. (ii) Dynamic Data-Driven Metadata Graph Modeling to update spatial relationships using temporal data and metadata; (iii) An adversarial transfer learning strategy to ensure generalizability. Extensive validation across nine datasets from four fields and theoretical evidence both demonstrate the superior performance of STA-GANN. CCS Concepts • Information systems → Data mining.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

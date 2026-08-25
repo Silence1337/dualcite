@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">TOOLFLOW: Boosting LLM Tool-Calling Through Natural and Coherent Dialogue Synthesis</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zezhong</forename><surname>Wang</surname></persName>
+							<email>zzwang@se.cuhk.edu.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xingshan</forename><surname>Zeng</surname></persName>
+							<email>zeng.xingshan@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weiwen</forename><surname>Liu</surname></persName>
+							<email>liuweiwen8@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liangyou</forename><surname>Li</surname></persName>
+							<email>liliangyou@huawei.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yasheng</forename><surname>Wang</surname></persName>
+							<email>wangyasheng@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lifeng</forename><surname>Shang</surname></persName>
+							<email>shang.lifeng@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Jiang</surname></persName>
+							<email>jiang.xin@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qun</forename><surname>Liu</surname></persName>
+							<email>qun.liu@huawei.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kam-Fai</forename><surname>Wong</surname></persName>
+							<email>kfwong@se.cuhk.edu.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Huawei Noah&apos;s Ark Lab</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">TOOLFLOW: Boosting LLM Tool-Calling Through Natural and Coherent Dialogue Synthesis</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3184C9532419193018D741BBDA0AC8F6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Supervised fine-tuning (SFT) is a common method to enhance the tool calling capabilities of Large Language Models (LLMs), with the training data often being synthesized. The current data synthesis process generally involves sampling a set of tools, formulating a requirement based on these tools, and generating the call statements. However, tools sampled randomly lack relevance, making them difficult to combine and thus reducing the diversity of the data. Additionally, current work overlooks the coherence between turns of dialogues, leading to a gap between the synthesized data and realworld scenarios. To address these issues, we propose a Graph-based Sampling strategy to sample more relevant tool combinations, and a Planned-generation strategy to create plans that guide the synthesis of coherent dialogues. We integrate these two strategies and enable multiple agents to synthesize the dialogue data interactively, resulting in our tool-calling data synthesis pipeline TOOLFLOW. Data quality assessments demonstrate improvements in the naturalness and coherence of our synthesized dialogues. Finally, we apply SFT on LLaMA-3.1-8B using 8,000 synthetic dialogues generated with TOOLFLOW. Results show that the model achieves tool-calling performance comparable to or even surpassing GPT-4, while maintaining strong general capabilities.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

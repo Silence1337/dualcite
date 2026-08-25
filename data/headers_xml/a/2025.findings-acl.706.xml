@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Dynamic Steering With Episodic Memory For Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Van</forename><forename type="middle">Dai</forename><surname>Do</surname></persName>
+							<email>v.do@deakin.edu.au</email>
+							<affiliation key="aff0">
+								<orgName type="department">Applied AI Initiative</orgName>
+								<orgName type="institution">Deakin University</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Quan</forename><forename type="middle">Hung</forename><surname>Tran</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Meta</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Svetha</forename><surname>Venkatesh</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Applied AI Initiative</orgName>
+								<orgName type="institution">Deakin University</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hung</forename><surname>Le</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Applied AI Initiative</orgName>
+								<orgName type="institution">Deakin University</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Dynamic Steering With Episodic Memory For Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">129D57F331112793BF3B670C79FB9AD9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) exhibit emergent in-context learning (ICL) capabilities, allowing them to adapt to unseen tasks based on example demonstrations. Traditional ICL embeds examples within the prompt, while activation steering, uses a vector derived from examples to guide the latent states of LLMs toward desired behaviors. However, traditional ICL is difficult to control quantitatively and consumes valuable context space. Existing activation steering methods apply a single sentence-level steering vector uniformly across all tokens, ignoring LLMs&apos; token-wise, auto-regressive nature. This coarse control can lead to inconsistencies and suboptimal adjustments during generation. To address this problem, we introduce Dynamic Steering with Episodic Memory (DSEM), a novel training-free framework that aligns LLMs to given demonstrations by steering at the token level conditioned on the input query. DSEM employs a key-value memory to store associations between generated tokens and steering vectors. During inference, it uses a nearest-neighbor mechanism to dynamically compute steering vectors for each token chunk, enabling more precise and adaptive guidance. Our method surpasses strong baselines across diverse alignment tasks-including safety, style transfer, and role-playing-demonstrating improved alignment as demonstration size scales.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

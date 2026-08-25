@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">RECAST: Retrieval-Augmented Contextual ASR via Decoder-State Keyword Spotting</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ashish</forename><surname>Mittal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">IBM Research</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">IIT Bombay</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sunita</forename><surname>Sarawagi</surname></persName>
+							<email>sunita@cse.iitb.ac.in</email>
+							<affiliation key="aff1">
+								<orgName type="department">IIT Bombay</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Preethi</forename><surname>Jyothi</surname></persName>
+							<email>pjyothi@cse.iitb.ac.in</email>
+							<affiliation key="aff1">
+								<orgName type="department">IIT Bombay</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">RECAST: Retrieval-Augmented Contextual ASR via Decoder-State Keyword Spotting</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A39CBFB01390C2A585547A9043883E46</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Contextual biasing in ASR systems is critical for recognizing rare, domain-specific terms but becomes impractical with large keyword dictionaries due to prompt size and latency constraints. We present RECAST-a lightweight retrieval-augmented approach that repurposes decoder states of a pretrained ASR model to retrieve relevant keywords without requiring audio exemplars. RECAST introduces a contrastively trained retriever that aligns decoderstate embeddings with textual keyword representations, enabling fast token-level retrieval over large dictionaries. Retrieved keywords are ranked and formatted into a prompt to guide a downstream speech language model. Trained solely on LibriSpeech and evaluated on out-ofdomain benchmarks covering up to 4,000 keywords across diverse domains, RECAST consistently outperforms full-list prompt biasing and strong phonetic/text baselines. It achieves up to 54.3% relative reduction in entity WER and 41.3% overall WER improvement over the baseline, along with up to 2.5× higher recall in challenging settings. Furthermore, RECAST remains effective for diverse languages such as Hindi, demonstrating its scalability, languageagnostic design, and practicality for real-world contextual ASR.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

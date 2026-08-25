@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MSOFormer: Multi-scale Transformer with Orthogonal Embedding and Frequency Modeling for Multivariate Time Series Forecasting</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qin</forename><surname>Shi</surname></persName>
+							<email>shiqin@cmss.chinamobile.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Chu</forename><surname>Xu</surname></persName>
+							<email>xuchu@cmss.chinamobile.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zongtang</forename><surname>Hu</surname></persName>
+							<email>huzongtang@cmss.chinamobile.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dong</forename><surname>Shen</surname></persName>
+							<email>shendong@cmss.chinamobile.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Dapeng</forename><surname>Sun</surname></persName>
+							<email>sundapeng@cmss.chinamobile.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lijun</forename><surname>Quan</surname></persName>
+							<email>ljquan@suda.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">China Mobile (Suzhou)</orgName>
+								<address>
+									<addrLine>Software Technology Co.</addrLine>
+									<settlement>Ltd Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">China Mobile (Suzhou)</orgName>
+								<address>
+									<addrLine>Software Technology Co.</addrLine>
+									<settlement>Ltd Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">China Mobile (Suzhou)</orgName>
+								<address>
+									<addrLine>Software Technology Co.</addrLine>
+									<settlement>Ltd Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">China Mobile (Suzhou)</orgName>
+								<address>
+									<addrLine>Software Technology Co.</addrLine>
+									<settlement>Ltd Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">China Mobile (Suzhou)</orgName>
+								<orgName type="institution">Soochow University Suzhou</orgName>
+								<address>
+									<addrLine>Software Technology Co.</addrLine>
+									<settlement>Ltd Suzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MSOFormer: Multi-scale Transformer with Orthogonal Embedding and Frequency Modeling for Multivariate Time Series Forecasting</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F5740DD8FFE80F94144F60744A55E919</idno>
+					<idno type="DOI">10.1145/3746252.3761143</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Multivariate time series forecasting</term>
+					<term>Frequency domain learning</term>
+					<term>Orthogonal Embedding</term>
+					<term>Multi-scale modeling</term>
+					<term>Cloud Kafka cluster datasets</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Multivariate Time Series Forecasting (MTSF) plays a critical role in diverse practical applications. Although Transformer-based models have recently achieved impressive results in this field, their performance is still hindered by three core challenges: complex temporal dependencies, diverse inter-variable correlations, and patterns that span multiple time scales. To address these issues, we propose MSOFormer-a Multi-scale Transformer with Orthogonal Embedding and Frequency Modeling. Specifically, the Dynamic Frequency Filter adaptively weights frequency components across variables based on input characteristics, enabling full-spectrum modeling and precise extraction of key frequency patterns. To improve intervariable representation, we introduce Orthogonal Embedding, a novel projection strategy for queries and keys that enhances feature diversity in channel-wise self-attention. In addition, Multi-scale Patch Embedding captures temporal features across different scales, providing a comprehensive time series representation. To evaluate MTSF in cloud-native environments, we construct the first three Cloud Kafka cluster datasets, specifically curated for elastic message queue scaling scenarios. Extensive experiments across eleven realworld benchmark datasets demonstrate that MSOFormer consistently outperforms existing state-of-the-art methods, highlighting its effectiveness and broad applicability. CCS Concepts • Applied computing → Forecasting; • Computing methodologies → Neural networks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

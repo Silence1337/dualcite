@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Reward-Weighted Sampling: Enhancing Non-Autoregressive Characteristics in Masked Diffusion LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Daehoon</forename><surname>Gwak</surname></persName>
+							<email>daehoon.gwak@kaist.ac</email>
+							<affiliation key="aff0">
+								<orgName type="institution">KAIST AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minseo</forename><surname>Jung</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Applied Artificial Intelligence</orgName>
+								<orgName type="institution">Sungkyunkwan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junwoo</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">KAIST AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minho</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">KAIST AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaehun</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">KAIST AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junha</forename><surname>Hyung</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">KAIST AI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaegul</forename><surname>Choo</surname></persName>
+							<email>jchoo@kaist.ac</email>
+							<affiliation key="aff0">
+								<orgName type="institution">KAIST AI</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Reward-Weighted Sampling: Enhancing Non-Autoregressive Characteristics in Masked Diffusion LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3515429583D7FB5769ABD0B5781D1DDF</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Masked diffusion models (MDMs) offer a promising non-autoregressive alternative for large language modeling. Standard decoding methods for MDMs, such as confidence-based sampling, select tokens independently based on individual token confidences at each diffusion step. However, we observe that this independent token selection often results in generation orders resembling sequential autoregressive processes, limiting the advantages of non-autoregressive modeling. To mitigate this pheonomenon, we propose Reward-Weighted Sampling (RWS), a novel decoding strategy that leverages an external reward model to provide a principled global signal during the iterative diffusion process. Specifically, at each diffusion step, RWS evaluates the quality of the entire intermediate sequence and scales token logits accordingly, guiding token selection by integrating global sequence-level coherence. This method selectively increases the confidence of tokens that initially have lower scores, thereby promoting a more non-autoregressive generation order. Furthermore, we provide theoretical justification showing that rewardweighted logit scaling induces beneficial rank reversals in token selection and consistently improves expected reward. Experiments demonstrate that RWS significantly promotes nonautoregressive generation orders, leading to improvements across multiple evaluation metrics. These results highlight the effectiveness of integrating global signals in enhancing both the non-autoregressive properties and overall performance of MDMs.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

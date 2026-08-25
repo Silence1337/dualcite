@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Class Activation Values: Lucid and Faithful Visual Interpretations for CLIP-based Text-Image Retrievals</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Pengxu</forename><surname>Chen</surname></persName>
+							<email>chenpx@hainanu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Huazhong</forename><surname>Liu</surname></persName>
+							<email>hzliu@hainanu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jihong</forename><surname>Ding</surname></persName>
+							<email>jhding@hainanu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xinghao</forename><surname>Huang</surname></persName>
+							<email>huangxh@hainanu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shaojun</forename><surname>Zou</surname></persName>
+							<email>sjzou@hainanu.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Laurence</forename><forename type="middle">Tianruo</forename><surname>Yang</surname></persName>
+							<email>ltyang@ieee.org</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Hainan University Haikou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Hainan University Haikou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Hainan University Haikou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Hainan University Haikou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Hainan University Haikou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">St</orgName>
+								<orgName type="institution">Zhengzhou University Zhengzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Francis Xavier University Antigonish</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>Canada Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Class Activation Values: Lucid and Faithful Visual Interpretations for CLIP-based Text-Image Retrievals</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8B1A6C3933AB04106FD856D787485FB7</idno>
+					<idno type="DOI">10.1145/3726302.3729923</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Contrastive Language-Image Pre-training</term>
+					<term>Visual Interpretation</term>
+					<term>Multi-scale Fusion</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Transformer-based text-image matching model, known as CLIP, has garnered significant attention owing to its exceptional performance in text-image retrieval tasks and downstream applications. However, the interpret-ability of CLIP remains underexplored. Existing interpretation methods for Transformers often struggle with incomplete and unreliable attributions within the image and text modalities, respectively. In this paper, we propose a fine-grained interpretation method, termed Class Activation Values (CAV), to provide lucid and faithful visual explanations for CLIP-based textimage retrievals. Specifically, we systematically perform multi-scale accumulation and fusion of class-specific gradients and activation value features to generate high-definition explanations for the image encoder. Furthermore, we present element-wise gradient-based weights to attribute fine-grained relevance between value features and output similarity within the text encoder. The proposed CAV is capable of simultaneously rendering detailed and credible explanations due to its precise feature attribution. Extensive qualitative and quantitative experiments are conducted on the ImageNet-1k and MS COCO datasets, and the experimental results demonstrate that CAV outperforms state-of-the-art interpretation methods in both faithfulness and localization assessments across image and text modalities. CCS Concepts • Computing methodologies → Knowledge representation and reasoning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

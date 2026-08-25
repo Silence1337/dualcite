@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Question-Answer Extraction from Scientific Articles Using Knowledge Graphs and Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hosein</forename><surname>Azarbonyad</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Padua</settlement>
+									<country>The Netherlands Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zi</forename><forename type="middle">Long</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Padua</settlement>
+									<country>The Netherlands Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Georgios</forename><surname>Cheirmpos</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Padua</settlement>
+									<country>The Netherlands Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zubair</forename><surname>Afzal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Padua</settlement>
+									<country>The Netherlands Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Vikrant</forename><surname>Yadav</surname></persName>
+							<email>vikrant4.k@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Padua</settlement>
+									<country>The Netherlands Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Georgios</forename><surname>Tsatsaronis</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<address>
+									<settlement>Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Elsevier Amsterdam Padua</settlement>
+									<country>The Netherlands Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Question-Answer Extraction from Scientific Articles Using Knowledge Graphs and Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">DC420C2D61BE9AAE7872D13F24923724</idno>
+					<idno type="DOI">10.1145/3726302.3730068</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Information systems → Summarization; Document representation Scientific Document Processing</term>
+					<term>Knowledge Graphs</term>
+					<term>Question-Answer Generation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>When deciding to read an article or incorporate it into their research, scholars often seek to quickly identify and understand its main ideas. In this paper, we aim to extract these key concepts and contributions from scientific articles in the form of Question and Answer (QA) pairs. We propose two distinct approaches for generating QAs. The first approach involves selecting salient paragraphs, using a Large Language Model (LLM) to generate questions, ranking these questions by the likelihood of obtaining meaningful answers, and subsequently generating answers. This method relies exclusively on the content of the articles. However, assessing an article&apos;s novelty typically requires comparison with the existing literature. Therefore, our second approach leverages a Knowledge Graph (KG) for QA generation. We construct a KG by fine-tuning an Entity Relationship (ER) extraction model on scientific articles and using it to build the graph. We then employ a salient triplet extraction method to select the most pertinent ERs per article, utilizing metrics such as the centrality of entities based on a triplet TF-IDF-like measure. This measure assesses the saliency of a triplet based on its importance within the article compared to its prevalence in the literature. For evaluation, we generate QAs using both approaches and have them assessed by Subject Matter Experts (SMEs) through a set of predefined metrics to evaluate the quality of both questions and answers. Our evaluations demonstrate that the KG-based approach effectively captures the main ideas discussed in the articles. Furthermore, our findings indicate that fine-tuning the ER extraction model on our scientific corpus is crucial for extracting high-quality triplets from such documents.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

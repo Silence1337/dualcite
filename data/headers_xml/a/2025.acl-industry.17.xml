@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">NEKO: Cross-Modality Post-Recognition Error Correction with Tasks-Guided Mixture-of-Experts Language Model</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yen-Ting</forename><surname>Lin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhehuai</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Piotr</forename><surname>Zelasko</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhen</forename><surname>Wan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xuesong</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zih-Ching</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Krishna</forename><forename type="middle">C</forename><surname>Puvvada</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Szu-Wei</forename><surname>Fu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ke</forename><surname>Hu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><forename type="middle">Wei</forename><surname>Chiu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jagadeesh</forename><surname>Balam</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Boris</forename><surname>Ginsburg</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yu-Chiang</forename><surname>Frank</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wang</forename><surname>Chao-Han</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Huck</forename><surname>Yang</surname></persName>
+							<email>hucky@nvidia.com</email>
+						</author>
+						<title level="a" type="main">NEKO: Cross-Modality Post-Recognition Error Correction with Tasks-Guided Mixture-of-Experts Language Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7361B6F4434C3722C534C41ADFFFD4F7</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Construction of a general-purpose postrecognition error corrector poses a crucial question: how can we most effectively train a model on a large mixture of domain datasets? The answer would lie in learning dataset-specific features and digesting their knowledge in a single model. Previous methods achieve this by having separate correction language models, resulting in a significant increase in parameters. In this work, we present Mixture-of-Experts as a solution, highlighting that MoEs are much more than a scalability tool. We propose a Multi-Task Correction MoE, where we train the experts to become an &quot;expert&quot; of speech-to-text, language-to-text and vision-to-text datasets by learning to route each dataset&apos;s tokens to its mapped expert. Experiments on the Open ASR Leaderboard show that we explore a new stateof-the-art performance by achieving an average relative 5.0% WER reduction and substantial improvements in BLEU scores for speech and translation tasks. On zero-shot evaluation, NeKo outperforms GPT-3.5 and Claude-3.5 Sonnet with 15.5% to 27.6% relative WER reduction in the Hyporadise benchmark. NeKo performs competitively on grammar and post-OCR correction as a multi-task model.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

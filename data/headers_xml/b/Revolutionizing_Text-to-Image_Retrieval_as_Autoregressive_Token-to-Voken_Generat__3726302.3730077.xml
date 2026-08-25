@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Revolutionizing Text-to-Image Retrieval as Autoregressive Token-to-Voken Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yongqi</forename><surname>Li</surname></persName>
+							<email>liyongqi0@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hongru</forename><surname>Cai</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wenjie</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wenjie</forename><surname>Wang</surname></persName>
+							<email>wenjiewang96@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Leigang</forename><surname>Qu</surname></persName>
+							<email>leigangqu@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yinwei</forename><surname>Wei</surname></persName>
+							<email>weiyinwei@hotmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Liqiang</forename><surname>Nie</surname></persName>
+							<email>nieliqiang@gmail.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong Polytechnic University Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Leigang Qu</orgName>
+								<orgName type="institution" key="instit1">National University of Singapore Singapore Wenjie Wang</orgName>
+								<orgName type="institution" key="instit2">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution" key="instit1">National University of Singapore Singapore Yinwei Wei</orgName>
+								<orgName type="institution" key="instit2">Shandong University Shandong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Liqiang Nie</orgName>
+								<orgName type="institution">The Hong Kong Polytechnic University Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Tat-Seng Chua</orgName>
+								<orgName type="institution">Harbin Institute of Technology Shenzhen</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">National University of Singapore Singapore</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Revolutionizing Text-to-Image Retrieval as Autoregressive Token-to-Voken Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CDC19F121AC504E4939D653108FEC73C</idno>
+					<idno type="DOI">10.1145/3726302.3730077</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:50+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Image-Text Matching</term>
+					<term>Cross-Modal Retrieval</term>
+					<term>Generative Retrieval</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Text-to-image retrieval is a fundamental task in multimedia retrieval. Traditional studies have typically approached this task as a discriminative problem, matching the text and image via the cross-attention mechanism (one-tower framework) or in a common embedding space (two-tower framework). The one-tower framework excels in effectiveness but falls short in efficiency, whereas the two-tower framework is efficient but struggles to maintain competitive effectiveness. In this study, we aim to enhance both effectiveness and efficiency by transforming the text-to-image retrieval task into a token-to-voken generation problem, where fine-grained interactions are incorporated to improve effectiveness while maintaining high efficiency. Despite its potential advantages, this paradigm shift presents significant challenges: 1) misalignment with high-level semantics and 2) learning gap towards the retrieval target. To address the challenges, we propose AVG, which discretizes images into vokens while aligning with both the visual information and high-level semantics. Additionally, to bridge the learning gap between generative training and the retrieval target, AVG incorporates discriminative training to modify the learning direction during token-to-voken training. Experiments demonstrate that the benefits of paradigm innovation are realized: compared with the classical two-tower method, CLIP, AVG achieves the 7.53% relative effectiveness improvement and also 4× efficiency improvement. We release code at the GitHub repository.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

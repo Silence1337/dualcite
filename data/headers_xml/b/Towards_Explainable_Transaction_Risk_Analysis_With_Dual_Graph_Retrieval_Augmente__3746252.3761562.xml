@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards Explainable Transaction Risk Analysis With Dual Graph Retrieval Augmented Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Su</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mingyang</forename><surname>Zhang</surname></persName>
+							<email>zhangmingyang.zmy@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kangxiang</forename><surname>Jia</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yun</forename><surname>Xiong</surname></persName>
+							<email>yunx@fudan.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xixi</forename><surname>Wu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyu</forename><surname>Gao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yongrui</forename><surname>Fu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jiawei</forename><surname>Zhang</surname></persName>
+							<email>jiwzhang@ucdavis.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Tengfei</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Weiqiang</forename><surname>Wang</surname></persName>
+							<email>weiqiang.wwq@antgroup.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<settlement>Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Tengfei Liu</orgName>
+								<address>
+									<addrLine>Weiqiang Wang AntGroup Hangzhou</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Davis Davis</orgName>
+								<orgName type="institution">University of California</orgName>
+								<address>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards Explainable Transaction Risk Analysis With Dual Graph Retrieval Augmented Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">14723E3DF68587670FE31E74BF8849AB</idno>
+					<idno type="DOI">10.1145/3746252.3761562</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Retrieval augmented Generation</term>
+					<term>Explainable financial risk analysis</term>
+					<term>Large language model</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Explainable transaction risk analysis is a challenge for traditional deep learning models, which only predict suspicious transactions without explanations. Current explainable methods rely on handcrafted rules and lack the ability to automatically generate languagebased explanations. Large Language Models (LLMs) offer promise due to their reasoning and text generation abilities but struggle with domain knowledge and hallucinations, making risk analysis difficult. Specifically, LLMs face: (1) insufficient adaptation to transaction data analysis, and (2) ineffective knowledge retrieval methods that ignore the rich graph structure of transaction data. To address these issues, we propose the Dual Graph Retrieval-Augmented Generation (Dual-gRAG) framework, which utilizes dual retrieval: expert knowledge and reasoning case retrieval. Expert knowledge compensates for domain gaps, while reasoning case retrieval provides step-wise analysis guidance. We incorporate both graph-structured features and semantic features into the retrieval process to enhance the effectiveness of the retrieval. Extensive experiments show that Dual-gRAG improves LLMs&apos; risk analysis capabilities, achieving a 15% increase in different metrics. CCS Concepts • Information systems → Structured text search; Novelty in information retrieval.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

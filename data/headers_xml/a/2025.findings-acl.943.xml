@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FPE2M2: Approaching Lossless and Efficient Quantization with Native Floating Point</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ke</forename><surname>Yi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jianwei</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiying</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xinlong</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Zhou</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Minmin</forename><surname>Sun</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zengke</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Junyang</forename><surname>Lin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jingren</forename><surname>Zhou</surname></persName>
+						</author>
+						<title level="a" type="main">FPE2M2: Approaching Lossless and Efficient Quantization with Native Floating Point</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">805612D4A90476D0E7AE1F40AB5BBAC5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Auto-regressive decoding is a memory-bound job, meaning decoding inference performance is limited by the bandwidth rather than the computational capabilities of the GPU. Weight-only quantization is a promising method to address the memory-bound limitations. Previous studies have followed one of two approaches. Some have exclusively studied integer quantization while ignoring the Gaussian distribution nature of LLMs&apos; weights. Others have proposed nonuniform quantization, but incurred additional memory overhead due to lookup tables. In this work, we extend the floating-point standard to the ExMy quantization schema, which allocates x bits for the exponent and y bits for the mantissa to represent a number. In terms of runtime efficiency, we demonstrate that the conversion from ExMy to FP16 can be realized through register-level operations, which can get almost the same performance as INT5. In terms of quantization loss, we analyze that of different ExMy settings, where the E2M2 schema achieves an optimal balance, offering the highest efficiency with lossless accuracy. We further propose the FPE2M2 framework that supports lossless weight-only quantization inference and validate the FPE2M2 framework on Qwen and LLaMA Models across various modalities, such as text, image, and audio tasks, which achieves a faster inference speed while maintaining nearly lossless accuracy. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

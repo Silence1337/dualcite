@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DistillCaps: Enhancing Audio-Language Alignment in Captioning via Retrieval-Augmented Knowledge Distillation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Thinh</forename><surname>Pham</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Nghiem</forename><surname>Diep</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Lizi</forename><surname>Liao</surname></persName>
+							<email>lzliao@smu.edu.sg</email>
+						</author>
+						<author>
+							<persName><forename type="first">Binh</forename><forename type="middle">T</forename><surname>Nguyen</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Distill</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">University of Science</orgName>
+								<orgName type="institution" key="instit2">Vietnam National University Ho Chi Minh City</orgName>
+								<address>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computing and Information Systems</orgName>
+								<orgName type="institution" key="instit1">University of Science</orgName>
+								<orgName type="institution" key="instit2">Vietnam National University Ho Chi Minh City</orgName>
+								<address>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="laboratory">AISIA Lab</orgName>
+								<orgName type="institution" key="instit1">Singapore Management University Singapore</orgName>
+								<orgName type="institution" key="instit2">University of Science</orgName>
+								<orgName type="institution" key="instit3">Vietnam National University Ho Chi Minh City</orgName>
+								<address>
+									<country key="VN">Vietnam</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DistillCaps: Enhancing Audio-Language Alignment in Captioning via Retrieval-Augmented Knowledge Distillation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F0615E418C6D50ECB7968094C88217AF</idno>
+					<idno type="DOI">10.1145/3746252.3761269</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Computing methodologies → Natural language generation</term>
+					<term>• Information systems → Retrieval models and ranking Audio Captioning</term>
+					<term>Knowledge Distillation</term>
+					<term>RAG</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Automated audio captioning (AAC) benefits from incorporating external context to interpret complex sounds, but doing so with retrieval-augmented generation (RAG) at inference is sometimes infeasible due to data availability or incurs significant latency and complexity. We propose DistillCaps, a novel training-time framework that leverages RAG to guide knowledge distillation for improved audio-language alignment, while lessening the reliance on retrieval during inference. In our framework, a RAG-equipped teacher model retrieves relevant textual information (e.g., similar captions) for each audio clip and uses it for training to generate context-enriched captions. Simultaneously, a student model is trained to imitate this teacher, learning to produce high-quality captions from audio alone. We further introduce a Fast Fourier Transform (FFT) adapter in the audio encoder to inject frequencydomain features, enhancing the quality of audio representations before feeding them into the language model. The result is an efficient captioning model that retains RAG&apos;s contextual benefits without its deployment overhead. On standard AAC benchmarks (AudioCaps and Clotho), DistillCaps achieves performance competitive with or exceeding prior RAG-based systems despite using no retrieval at test time. Notably, our distilled model matches stateof-the-art captioning results under real-time settings, and when optionally allowing retrieval, it even outperforms previous models by up to 4% on the Clotho benchmark on the in-distribution setting, demonstrating the effectiveness of RAG-guided distillation for audio-language alignment. Code and dataset are available here 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">How Much Knowledge Can You Pack into a LoRA Adapter without Harming LLM?</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sergey</forename><surname>Pletenev</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">AIRI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Maria</forename><surname>Marina</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">AIRI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniil</forename><surname>Moskovskiy</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">AIRI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vasily</forename><surname>Konovalov</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">AIRI</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Moscow Institute of Physics and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pavel</forename><surname>Braslavski</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Nazarbayev University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alexander</forename><surname>Panchenko</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">AIRI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mikhail</forename><surname>Salnikov</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">AIRI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">{s</forename><surname>Pletenev</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mikhail</forename><surname>Salnikov}</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Skol</forename><surname>Tech</surname></persName>
+						</author>
+						<title level="a" type="main">How Much Knowledge Can You Pack into a LoRA Adapter without Harming LLM?</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">257BB2AAF88156D8B7F0295B9786D9DA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The performance of Large Language Models (LLMs) on many tasks is greatly limited by the knowledge learned during pre-training and stored in the model&apos;s parameters. Lowrank adaptation (LoRA) is a popular and efficient training technique for updating or domainspecific adaptation of LLMs. In this study, we investigate how new facts can be incorporated into the LLM using LoRA without compromising the previously learned knowledge. We fine-tuned Llama-3.1-8B-instruct using LoRA with varying amounts of new knowledge. Our experiments have shown that the best results are obtained when the training data contains a mixture of known and new facts. However, this approach is still potentially harmful because the model&apos;s performance on external question-answering benchmarks declines after such fine-tuning. When the training data is biased towards certain entities, the model tends to regress to few overrepresented answers. In addition, we found that the model becomes more confident and refuses to provide an answer in only few cases. These findings highlight the potential pitfalls of LoRA-based LLM updates and underscore the importance of training data composition and tuning parameters to balance new knowledge integration and general model capabilities.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

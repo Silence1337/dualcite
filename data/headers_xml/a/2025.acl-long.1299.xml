@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Self-Denoising Model for Robust Few-Shot Relation Extraction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Zhang</surname></persName>
+							<email>lzhang@stu.xmu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Key Laboratory of Digital Protection and Intelligent Processing of Intangible</orgName>
+								<orgName type="department" key="dep2">Ministry of Culture and Tourism</orgName>
+								<orgName type="institution">Cultural Heritage of Fujian and Taiwan (Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ziyao</forename><surname>Lu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<orgName type="institution">Tencent Inc</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fandong</forename><surname>Meng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<orgName type="institution">Tencent Inc</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Pattern Recognition Center</orgName>
+								<orgName type="institution">Tencent Inc</orgName>
+								<address>
+									<addrLine>WeChat AI</addrLine>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinsong</forename><surname>Su</surname></persName>
+							<email>jssu@xmu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Key Laboratory of Digital Protection and Intelligent Processing of Intangible</orgName>
+								<orgName type="department" key="dep2">Ministry of Culture and Tourism</orgName>
+								<orgName type="institution">Cultural Heritage of Fujian and Taiwan (Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Self-Denoising Model for Robust Few-Shot Relation Extraction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9AE10BA655CB4AFC36864B42C07B1213</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:19+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The few-shot relation extraction (FSRE) aims at enhancing the model&apos;s generalization to new relations with a few labeled instances. Existing studies usually adopt prototype networks (Pro-toNets) for FSRE and assume that the support set, adapting the model to new relations, only contains accurately labeled support instances. However, this assumption is often unrealistic, as even carefully-annotated datasets commonly contain mislabeled instances. In this paper, we first conduct a preliminary study that reveals the high sensitivity of ProtoNets to noisy labels in the support set. Moreover, we find that fully leveraging mislabeled support instances is crucial for enhancing the FSRE model robustness. Thus, we propose a self-denoising model for FSRE, designed to improve model robustness by automatically correcting mislabeled support instances. It comprises two core components: 1) a label correction module (LCM), used to correct noisy labels of support instances based on the distances between them in the embedding space, and 2) a relation classification module (RCM), aimed to achieve more accurate predictions for new relations based on the corrected labels produced by LCM. Moreover, we propose a feedback-based training strategy, which focuses on training LCM and RCM to synergistically handle noisy labels in support set. Experimental results on two public datasets confirm the robustness of our model. Particularly, even in scenarios without noisy labels, our model significantly outperforms all baselines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">META-LORA: Memory-Efficient Sample Reweighting for Fine-Tuning Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Weicheng</forename><surname>Li</surname></persName>
+							<email>liweicheng@whu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+								<address>
+									<settlement>Wuhan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lixin</forename><surname>Zou</surname></persName>
+							<email>zoulixin@whu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+								<address>
+									<settlement>Wuhan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Tang</surname></persName>
+							<email>min.tang@monash.edu</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Monash University</orgName>
+								<address>
+									<settlement>Melbourne</settlement>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qing</forename><surname>Yu</surname></persName>
+							<email>yu_qing@whu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+								<address>
+									<settlement>Wuhan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wanli</forename><surname>Li</surname></persName>
+							<email>liwanli@mail.hzau.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Chenliang</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Wuhan University</orgName>
+								<address>
+									<settlement>Wuhan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Huazhong Agricultural University</orgName>
+								<address>
+									<settlement>Wuhan</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">META-LORA: Memory-Efficient Sample Reweighting for Fine-Tuning Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">52A3ED8D5849203935D1DB81CC2A94AB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Supervised fine-tuning (SFT) is widely adopted for tailoring large language models (LLMs) to specific downstream tasks. However, the substantial computational demands of LLMs hinder iterative exploration of fine-tuning datasets and accurate evaluation of individual sample importance. To address this challenge, we introduce META-LORA, a memory-efficient method for automatic sample reweighting. META-LORA learns to reweight fine-tuning samples by minimizing the loss on a small, high-quality validation set through an end-toend bi-level optimization framework based on meta-learning. To reduce memory usage associated with computing second derivatives, we approximate the bi-level optimization using gradient similarity between training and validation datasets, replacing bi-dimensional gradient similarity with the product of onedimensional activation states and their corresponding gradients. Further memory optimization is achieved by refining gradient computations, selectively applying them to the low-rank layers of LoRA, which results in as little as 4% additional memory usage. Comprehensive evaluations across benchmark datasets in mathematics, coding, and medical domains demonstrate META-LORA&apos;s superior efficacy and efficiency. The source code is available at https: //github.com/liweicheng-ai/meta-lora.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

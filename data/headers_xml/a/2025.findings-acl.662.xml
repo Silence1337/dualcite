@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Knowing Before Saying: LLM Representations Encode Information About Chain-of-Thought Success Before Completion</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Anum</forename><surname>Afzal</surname></persName>
+							<email>anum.afzal@tum.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Technical University of Munich</orgName>
+								<orgName type="institution" key="instit2">Technical University of Munich</orgName>
+								<orgName type="institution" key="instit3">Nvidia Research &amp; Bar-Ilan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Florian</forename><surname>Matthes</surname></persName>
+							<email>matthes@tum.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Technical University of Munich</orgName>
+								<orgName type="institution" key="instit2">Technical University of Munich</orgName>
+								<orgName type="institution" key="instit3">Nvidia Research &amp; Bar-Ilan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gal</forename><surname>Chechik</surname></persName>
+							<email>gchechik@nvidia.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Technical University of Munich</orgName>
+								<orgName type="institution" key="instit2">Technical University of Munich</orgName>
+								<orgName type="institution" key="instit3">Nvidia Research &amp; Bar-Ilan University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Knowing Before Saying: LLM Representations Encode Information About Chain-of-Thought Success Before Completion</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C9C7F102BF5B8963BDACAA52E5BFB191</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We investigate whether the success of a zeroshot Chain-of-Thought (CoT) process can be predicted before completion. We discover that a probing classifier, based on LLM representations, performs well even before a single token is generated, suggesting that crucial information about the reasoning process is already present in the initial steps representations. In contrast, a strong BERT-based baseline, which relies solely on the generated tokens, performs worse-likely because it depends on shallow linguistic cues rather than deeper reasoning dynamics. Surprisingly, using later reasoning steps does not always improve classification. When additional context is unhelpful, earlier representations resemble later ones more, suggesting LLMs encode key information early. This implies reasoning can often stop early without loss. To test this, we conduct early stopping experiments, showing that truncating CoT reasoning still improves performance over not using CoT at all, though a gap remains compared to full reasoning. However, approaches like supervised learning or reinforcement learning designed to shorten CoT chains could leverage our classifier&apos;s guidance to identify when early stopping is effective. Our findings provide insights that may support such methods, helping to optimize CoT&apos;s efficiency while preserving its benefits. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

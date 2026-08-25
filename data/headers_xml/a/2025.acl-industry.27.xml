@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Perspective on LLM Data Generation with Few-shot Examples: from Intent to Kubernetes Manifest</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Antonino</forename><surname>Angi</surname></persName>
+							<email>antonino.angi@polito.it</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Control and Computer Engineering</orgName>
+								<orgName type="institution">Politecnico di Torino</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">IBM Research</orgName>
+								<address>
+									<settlement>Dublin</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liubov</forename><surname>Nedoshivina</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">IBM Research</orgName>
+								<address>
+									<settlement>Dublin</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alessio</forename><surname>Sacco</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Control and Computer Engineering</orgName>
+								<orgName type="institution">Politecnico di Torino</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Stefano</forename><surname>Braghin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">IBM Research</orgName>
+								<address>
+									<settlement>Dublin</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mark</forename><surname>Purcell</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">IBM Research</orgName>
+								<address>
+									<settlement>Dublin</settlement>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Perspective on LLM Data Generation with Few-shot Examples: from Intent to Kubernetes Manifest</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9D909AE33C7C6FD1E680BA7481F597F5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The advent of Large Language Models (LLMs) has transformed how complex tasks across various domains can be automated. One of the industry trends today is Agentic AI, which leverages LLMs to operate multiple tools and provide automatic configuration. In the domain of cloud computing, Agentic AI might be used, for example, with the generation of Kubernetes manifests-structured configuration files that define containerized environments. However, effectively applying LLMs to domain-specific tasks often reveals knowledge gaps that impact the accuracy and reliability of the generated output. To address these challenges, we propose KGen, a pipeline for generating K8s manifests directly from user-described intents expressed in natural language using LLMs. Our approach leverages an extensive n-shot learning analysis to choose the appropriate number of examples that can better guide the adopted models in generating the manuscripts while also looking at the computational cost. Our results validate the use of LLM in this task and show that (as expected) increasing the number of n-shot examples can improve the quality of the generated configurations when adopting more specialized models, such as Mixtral-8x7B (which uses the Mixture of Experts approach) and Prometheus-8x7B-v2.0, but (surprisingly) for more general-purpose models like Llama3-8B and Llama3-70B, it can lead to smaller number of valid K8s manifests. These results underscore the complexities of adapting LLMs for domain-specific structured generation and emphasize the need for an in-depth analysis to determine the most effective setup, also suggesting that smaller models sometimes outperform their larger counterparts for each domain-specific task.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Intent-aware Diffusion with Contrastive Learning for Sequential Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuanpeng</forename><surname>Qu</surname></persName>
+							<email>qu@cmu.iit.tsukuba.ac.jp</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hajime</forename><surname>Nobuhara</surname></persName>
+							<email>nobuhara@iit.tsukuba.ac.jp</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Tsukuba Tsukuba</orgName>
+								<address>
+									<settlement>Ibaraki</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">University of Tsukuba Tsukuba</orgName>
+								<address>
+									<settlement>Ibaraki Padua</settlement>
+									<country>Japan Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Intent-aware Diffusion with Contrastive Learning for Sequential Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">41DBD758931A1388CB1B04121504F69A</idno>
+					<idno type="DOI">10.1145/3726302.3730010</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Sequential Recommendation</term>
+					<term>Contrastive Learning</term>
+					<term>Diffusion Model</term>
+					<term>Intent Representation Learning</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Contrastive learning has proven effective in training sequential recommendation models by incorporating self-supervised signals from augmented views. Most existing methods generate multiple views from the same interaction sequence through stochastic data augmentation, aiming to align their representations in the embedding space. However, users typically have specific intents when purchasing items (e.g., buying clothes as gifts or cosmetics for beauty). Random data augmentation used in existing methods may introduce noise, disrupting the latent intent information implicit in the original interaction sequence. Moreover, using noisy augmented sequences in contrastive learning may mislead the model to focus on irrelevant features, distorting the embedding space and failing to capture users&apos; true behavior patterns and intents. To address these issues, we propose Intent-aware Diffusion with contrastive learning for sequential Recommendation (InDiRec). The core idea is to generate item sequences aligned with users&apos; purchasing intents, thus providing more reliable augmented views for contrastive learning. Specifically, InDiRec first performs intent clustering on sequence representations using K-means to build intent-guided signals. Next, it retrieves the intent representation of the target interaction sequence to guide a conditional diffusion model, generating positive views that share the same underlying intent. Finally, contrastive learning is applied to maximize representation consistency between these intent-aligned views and the original sequence. Extensive experiments on five public datasets demonstrate that InDiRec achieves superior performance compared to existing baselines, learning more robust representations even under noisy and sparse data conditions. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

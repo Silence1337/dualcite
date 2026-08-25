@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Token-level Proximal Policy Optimization for Query Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yichen</forename><surname>Ouyang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fangkai</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Pu</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenghua</forename><surname>Huang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">Fudan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianfeng</forename><surname>Liu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bochen</forename><surname>Pang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yaming</forename><surname>Yang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuefeng</forename><surname>Zhan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Sun</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qingwei</forename><surname>Lin</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Saravan</forename><surname>Rajmohan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weiwei</forename><surname>Deng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongmei</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Sun</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Microsoft</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Token-level Proximal Policy Optimization for Query Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FA88C4E8B26D592D8ADE3618F40CE00B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Query generation is a critical task for web search engines (e.g. Google, Bing) and recommendation systems. Recently, state-of-the-art query generation methods leverage Large Language Models (LLMs) for their strong capabilities in context understanding and text generation. However, they still face challenges in generating high-quality queries in terms of inferring user intent based on their web search interaction history. In this paper, we propose Tokenlevel Proximal Policy Optimization (TPPO), a noval approach designed to empower LLMs perform better in query generation through finetuning. TPPO is based on the Reinforcement Learning from AI Feedback (RLAIF) paradigm, consisting of a token-level reward model and a token-level proximal policy optimization module to address the sparse reward challenge in traditional RLAIF frameworks. We conducted experiments on both open-source dataset and an industrial dataset that was collected from a globally-used search engine, demonstrating that TPPO significantly improves the performance of query generation for LLMs and outperforms its existing competitors. The code for TPPO is available at https://anonymous. 4open.science/r/TPPO-D6C6.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

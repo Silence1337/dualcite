@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">From Selection to Generation: A Survey of LLM-based Active Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Xia</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Subhojyoti</forename><surname>Mukherjee</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Wisconsin Madison</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhouhang</forename><surname>Xie</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junda</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xintong</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ryan</forename><surname>Aponte</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Carnegie Mellon University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hanjia</forename><surname>Lyu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Rochester</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joe</forename><surname>Barrow</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongjie</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Franck</forename><surname>Dernoncourt</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Branislav</forename><surname>Kveton</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Yu</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruiyi</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiuxiang</forename><surname>Gu</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nesreen</forename><forename type="middle">K</forename><surname>Ahmed</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Wang</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">University of Oregon</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiang</forename><surname>Chen</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hanieh</forename><surname>Deilamsalehy</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sungchul</forename><surname>Kim</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhengmian</forename><surname>Hu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="institution">University of Southern California</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nedim</forename><surname>Lipka</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seunghyun</forename><surname>Yoon</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ting-Hao</forename><forename type="middle">'</forename><surname>Kenneth' Huang</surname></persName>
+							<affiliation key="aff7">
+								<orgName type="institution">Pennsylvania State University</orgName>
+								<address>
+									<addrLine>11</addrLine>
+									<settlement>Dartmouth College</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zichao</forename><surname>Wang</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Soumyabrata</forename><surname>Pal</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Koyel</forename><surname>Mukherjee</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhehao</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Thien</roleName><forename type="first">Namyong</forename><surname>Park</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Huu</forename><surname>Nguyen</surname></persName>
+							<affiliation key="aff5">
+								<orgName type="institution">University of Oregon</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiebo</forename><surname>Luo</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Rochester</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ryan</forename><forename type="middle">A</forename><surname>Rossi</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Adobe Research</orgName>
+								<address>
+									<addrLine>6 Dolby Labs, 7</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Julian</forename><surname>Mcauley</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of California</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">San</forename><surname>Diego</surname></persName>
+						</author>
+						<title level="a" type="main">From Selection to Generation: A Survey of LLM-based Active Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9A6AC6F3454B3CCB2F79AE261B75C76F</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Active Learning (AL) has been a powerful paradigm for improving model efficiency and performance by selecting the most informative data points for labeling and training. In recent active learning frameworks, Large Language Models (LLMs) have been employed not only for selection but also for generating entirely new data instances and providing more cost-effective annotations. Motivated by the increasing importance of high-quality data and efficient model training in the era of LLMs, we present a comprehensive survey on LLM-based Active Learning. We introduce an intuitive taxonomy that categorizes these techniques and discuss the transformative roles LLMs can play in the active learning loop. We further examine the impact of AL on LLM learning paradigms and its applications across various domains. Finally, we identify open challenges and propose future research directions. This survey aims to serve as an up-to-date resource for researchers and practitioners seeking to gain an intuitive understanding of LLM-based AL techniques and deploy them to new applications.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

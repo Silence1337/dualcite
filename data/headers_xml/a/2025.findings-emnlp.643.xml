@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Curr-ReFT: Overcoming Training Bottlenecks in Small-scale Vision-Language Models via Curriculum Reinforcement Finetuning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Huilin</forename><surname>Deng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Information Science and Technology</orgName>
+								<orgName type="institution">University of Science and Technology of China</orgName>
+								<address>
+									<settlement>Hefei Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Intelligent System Department</orgName>
+								<orgName type="institution">Zhongxing Telecom Equipment (ZTE)</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<region>Hunan</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ding</forename><surname>Zou</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Intelligent System Department</orgName>
+								<orgName type="institution">Zhongxing Telecom Equipment (ZTE)</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<region>Hunan</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinghao</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Intelligent System Department</orgName>
+								<orgName type="institution">Zhongxing Telecom Equipment (ZTE)</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<region>Hunan</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Ma</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Intelligent System Department</orgName>
+								<orgName type="institution">Zhongxing Telecom Equipment (ZTE)</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<region>Hunan</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanming</forename><surname>Guo</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">College of Systems Engineering</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<region>Hunan</region>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Cao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Information Science and Technology</orgName>
+								<orgName type="institution">University of Science and Technology of China</orgName>
+								<address>
+									<settlement>Hefei Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Kang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Information Science and Technology</orgName>
+								<orgName type="institution">University of Science and Technology of China</orgName>
+								<address>
+									<settlement>Hefei Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Curr-ReFT: Overcoming Training Bottlenecks in Small-scale Vision-Language Models via Curriculum Reinforcement Finetuning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1F8E44E2A207F30081F8140B0BA7B35D</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:01+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>State-of-the-art vision-language models (VLMs) require massive scaling that limits practical deployment. Small-scale VLMs offer a practical alternative but face out-of-domain (OOD) collapse when trained with traditional supervised fine-tuning (SFT). Through GeneralPoints experiments, we identify that OOD collapse is due to SFT&apos;s tendency to induce visual hallucinations under distribution shifts. Although RL-based post-training effectively mitigates OOD degradation, it faces a critical dilemma with sparse rewards in complex visual reasoning tasks. To this end, we propose Curriculum Reinforcement Finetuning (Curr-ReFT), comprising two sequential stages: (1) Structured Curriculum Reinforcement Learning, which progressively evolves task formats and reward functions to match models&apos; growing capabilities; and (2) Rejected Sampling-based Self-improvement, which maintains the fundamental capabilities of VLMs through selective learning from high-quality examples. Extensive experiments demonstrate that Curr-ReFT achieves state-ofthe-art performance across various visual tasks in both in-and out-of-domain settings and benchmarks. Code and data are available at https://github.com/ding523/Curr_REFT.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

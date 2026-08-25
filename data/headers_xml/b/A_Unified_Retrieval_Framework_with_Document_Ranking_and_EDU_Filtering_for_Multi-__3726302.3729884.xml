@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Unified Retrieval Framework with Document Ranking and EDU Filtering for Multi-document Summarization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2025-04-23">23 Apr 2025</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shiyin</forename><surname>Tan</surname></persName>
+							<email>tanshiyin1107@gmail.com</email>
+							<idno type="ORCID">0000-0001-8316-2838</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jaeeon</forename><surname>Park</surname></persName>
+							<email>jaeeon@lr.pi.titech.ac.jp</email>
+							<idno type="ORCID">0000-0002-0410-6457</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Dongyuan</forename><surname>Li</surname></persName>
+							<idno type="ORCID">0000-0002-4462-3563</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Renhe</forename><surname>Jiang</surname></persName>
+							<email>jiangrh@csis.u-tokyo.ac.jp</email>
+						</author>
+						<author>
+							<persName><forename type="first">Manabu</forename><surname>Okumura</surname></persName>
+							<idno type="ORCID">0009-0001-7730-1536</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Institute of Science Tokyo Tokyo</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Institute of Science Tokyo Tokyo</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Center for Spatial Information Science Tokyo</orgName>
+								<orgName type="institution" key="instit1">The University of Tokyo</orgName>
+								<orgName type="institution" key="instit2">Japan Institute of Science Tokyo Tokyo</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Center for Spatial Information Science Tokyo</orgName>
+								<orgName type="institution">The University of Tokyo</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Institute of Science Tokyo Tokyo</orgName>
+								<address>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Unified Retrieval Framework with Document Ranking and EDU Filtering for Multi-document Summarization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2025-04-23">23 Apr 2025</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">28CACBF4A7DF89C78BCA97D6C6F20F6C</idno>
+					<idno type="DOI">10.1145/3726302.3729884</idno>
+					<idno type="arXiv">arXiv:2504.16711v1[cs.LG]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Multi-document Summarization</term>
+					<term>Retrieval Framework</term>
+					<term>Document Ranking</term>
+					<term>Elementary Discourse Units</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>In the field of multi-document summarization (MDS), transformerbased models have demonstrated remarkable success, yet they suffer an input length limitation. Current methods apply truncation after the retrieval process to fit the context length; however, they heavily depend on manually well-crafted queries, which are impractical to create for each document set for MDS. Additionally, these methods retrieve information at a coarse granularity, leading to the inclusion of irrelevant content. To address these issues, we propose a novel retrieval-based framework that integrates query selection and document ranking and shortening into a unified process. Our approach identifies the most salient elementary discourse units (EDUs) from input documents and utilizes them as latent queries. These queries guide the document ranking by calculating relevance scores. Instead of traditional truncation, our approach filters out irrelevant EDUs to fit the context length, ensuring that only critical information is preserved for summarization. We evaluate our framework on multiple MDS datasets, demonstrating consistent improvements in ROUGE metrics while confirming its scalability and flexibility across diverse model architectures. Additionally, we validate its effectiveness through an in-depth analysis, emphasizing its ability to dynamically select appropriate queries and accurately rank documents based on their relevance scores. These results demonstrate that our framework effectively addresses context-length constraints, establishing it as a robust and reliable solution for MDS. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mixture of Weight-shared Heterogeneous Group Attention Experts for Dynamic Token-wise KV Optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Guanghui</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shenzhen Institutes of Advanced Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongping</forename><surname>Liao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Lab of IOTSC</orgName>
+								<orgName type="institution">University of Macau</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiren</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Imperial College London</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kejiang</forename><surname>Ye</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Shenzhen Institutes of Advanced Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Shenzhen University of Advanced Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng-Zhong</forename><surname>Xu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">State Key Lab of IOTSC</orgName>
+								<orgName type="institution">University of Macau</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Xitong</forename><surname>Gao</surname></persName>
+							<email>xt.gao@siat.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Shenzhen Institutes of Advanced Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Shenzhen University of Advanced Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mixture of Weight-shared Heterogeneous Group Attention Experts for Dynamic Token-wise KV Optimization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">803D541B989B942634ED3D6F3504AFD6</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Transformer models face scalability challenges in causal language modeling (CLM) due to inefficient memory allocation for growing keyvalue (KV) caches, which strains compute and storage resources. Existing methods like Grouped Query Attention (GQA) and tokenlevel KV optimization improve efficiency but rely on rigid resource allocation, often discarding &quot;low-priority&quot; tokens or statically grouping them, failing to address the dynamic spectrum of token importance. We propose mixSGA, a novel mixture-of-expert (MoE) approach that dynamically optimizes token-wise computation and memory allocation. Unlike prior approaches, mixSGA retains all tokens while adaptively routing them to specialized experts with varying KV group sizes, balancing granularity and efficiency. Our key novelties include: (1) a token-wise expert-choice routing mechanism guided by learned importance scores, enabling proportional resource allocation without token discard; (2) weight-sharing across grouped attention projections to minimize parameter overhead; and (3) an auxiliary loss to ensure one-hot routing decisions for training-inference consistency in CLMs. Extensive evaluations across Llama3, TinyLlama, OPT, and Gemma2 model families show mixSGA&apos;s superiority over static baselines. On instruction-following and continued pretraining tasks, mixSGA achieves higher ROUGE-L and lower perplexity under the same KV budgets.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

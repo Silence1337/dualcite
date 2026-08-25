@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">UniGLM: Training One Unified Language Model for Text-Attributed Graph Embedding</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Fang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dongzhe</forename><surname>Fan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ninghao</forename><surname>Liu</surname></persName>
+							<email>ninghao.liu@uga.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qiaoyu</forename><surname>Tan</surname></persName>
+							<email>qiaoyu.tan@nyu.edu</email>
+							<idno type="ORCID">0000-0001-8999-968X</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">SFSC of AI and DL New</orgName>
+								<orgName type="institution">York University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">SFSC of AI and DL New</orgName>
+								<orgName type="institution">York University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">School of Computing</orgName>
+								<orgName type="department" key="dep2">SFSC of AI and DL New</orgName>
+								<orgName type="institution" key="instit1">Sirui Ding Bakar Computational Health Sciences Institute University of California San Francisco</orgName>
+								<orgName type="institution" key="instit2">University of Georgia</orgName>
+								<orgName type="institution" key="instit3">York University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">UniGLM: Training One Unified Language Model for Text-Attributed Graph Embedding</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B835C3ACB3852A6DBDE91544B909406A</idno>
+					<idno type="DOI">10.1145/3701551.3703586</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Graph embedding</term>
+					<term>Language model</term>
+					<term>Text-attributed graph</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Representation learning on text-attributed graphs (TAGs), where nodes are associated with textual descriptions, is crucial for textual and relational knowledge systems, such as social media and recommendation scenarios. However, state-of-the-art embedding methods for TAGs primarily focus on fine-tuning pre-trained language models (PLMs) using structure-aware training objectives. While effective, these methods are tailored for individual TAG and cannot generalize across various graph scenarios. Given the shared textual space, leveraging multiple TAGs for joint fine-tuning, aligning text and graph structure from different aspects, would be more beneficial. Therefore, we propose the Unified Graph Language Model (UniGLM), a novel foundation model pretrained over multiple TAGs from a variety of domains, which can generalize well to both in-domain and cross-domain graph scenarios. Specifically, UniGLM fine-tunes well-established PLMs (e.g., Sentence-BERT) using a domain-aware contrastive learning objective that unifies structure heterogeneity and node statistics across various domains with an adaptive and learnable positive sample selection scheme. Additionally, a lazy updating module is introduced to speed up training by reducing repetitive encoding of positive samples. Extensive datasets across multiple domains, downstream tasks (node classification and link prediction), and a spectrum of graph backbones (supervised and self-supervised graph models) are conducted to compare UniGLM with state-of-the-art baselines. Our empirical observations suggest that UniGLM can generate informative representations for cross-domain graphs observed in the training. More importantly, UniGLM also exhibits competitive transfer ability in encoding unseen TAGs that are not used for training. This study provides deep insights into how to adapt PLMs to graph data and * Corresponding author.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

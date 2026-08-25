@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">USDC: A Dataset of User Stance and Dogmatism in Long Conversations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mounika</forename><surname>Marreddy</surname></persName>
+							<email>mounika0559@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Bonn-Aachen International Center for Information Technology</orgName>
+								<orgName type="institution">University of Bonn</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute for ML and AI</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Subba</forename><surname>Reddy Oota</surname></persName>
+							<email>subba.reddy.oota@tu-berlin.de</email>
+						</author>
+						<author>
+							<persName><forename type="first">Venkata</forename><forename type="middle">Charan</forename><surname>Chinni</surname></persName>
+							<email>venkatacharan635@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Manish</forename><surname>Gupta</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Lucie</forename><surname>Flek</surname></persName>
+							<email>flek@bit.uni-bonn.de</email>
+							<affiliation key="aff0">
+								<orgName type="department">Bonn-Aachen International Center for Information Technology</orgName>
+								<orgName type="institution">University of Bonn</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Lamarr Institute for ML and AI</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Germany</roleName><forename type="first">T</forename><forename type="middle">U</forename><surname>Berlin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Couture</forename><surname>Ai</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Microsoft</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">India</forename><surname>Hyderabad</surname></persName>
+						</author>
+						<title level="a" type="main">USDC: A Dataset of User Stance and Dogmatism in Long Conversations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A4FDC045D9373D6D1E0435E629806DF2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:18+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Analyzing user opinion changes in long conversation threads is extremely critical for applications like enhanced personalization, market research, political campaigns, customer service, targeted advertising, and content moderation. Unfortunately, previous studies on stance and dogmatism in user conversations have focused on training models using datasets annotated at the post level, treating each post as independent and randomly sampling posts from conversation threads. Hence, first, we build a dataset for studying user opinion fluctuations in 764 long multiuser Reddit conversation threads, called USDC. USDC contains annotations for 2 tasks: i) User Stance classification, which involves labeling a user&apos;s stance in a post within a conversation on a five-point scale; ii) User Dogmatism classification, which involves labeling a user&apos;s overall opinion in the conversation on a fourpoint scale. Besides being time-consuming and costly, manual annotations for USDC are challenging because: 1) Conversation threads could be very long, increasing the chances of noisy annotations; and 2) Interpreting instances where a user changes their opinion within a conversation is difficult because often such transitions are subtle and not expressed explicitly. Hence, we leverage majority voting on zeroshot, one-shot, and few-shot annotations from Mistral Large and GPT-4 to automate the annotation process. Human annotations on 200 test conversations achieved inter-annotator agreement scores of 0.49 for stance and 0.50 for dogmatism with these LLM annotations, indicating a reasonable level of consistency between human and LLM annotations. USDC is then used to finetune and instruction-tune multiple deployable small language models like LLaMA, Falcon and Vicuna for the stance and dogmatism classification tasks. We make the code and dataset publicly available 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">DynamicKV: Task-Aware Adaptive KV Cache Compression for Long Context LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiabin</forename><surname>Zhou</surname></persName>
+							<email>xiabinzhou0625@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Jiangsu University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenbin</forename><surname>Wang</surname></persName>
+							<email>wangwenbin97@whu.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minyan</forename><surname>Zeng</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Wuhan University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaxian</forename><surname>Guo</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuebo</forename><surname>Liu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Li</forename><surname>Shen</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Shenzhen Campus of Sun</orgName>
+								<address>
+									<addrLine>Yat-sen University 6 The</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liang</forename><surname>Ding</surname></persName>
+							<email>liangding.liam@gmail.com</email>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">University of Sydney</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">DynamicKV: Task-Aware Adaptive KV Cache Compression for Long Context LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3D990D70FDCCFC7019B688C1EC2E7FDB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Efficient KV cache management in LLMs is crucial for long-context tasks like RAG and summarization. Existing KV cache compression methods enforce a fixed pattern, neglecting task-specific characteristics and reducing the retention of essential information. However, we observe distinct activation patterns across layers in various tasks, highlighting the need for adaptive strategies tailored to each task&apos;s unique demands. Based on this insight, we propose DynamicKV, a method that dynamically optimizes token retention by adjusting the number of tokens retained at each layer to adapt to the specific task. DynamicKV establishes global and per-layer maximum KV cache budgets, temporarily retaining the maximum budget for the current layer, and periodically updating the KV cache sizes of all preceding layers during inference. Our method retains only 1.7% of the KV cache size while achieving ∼ 90% of the Full KV cache performance on LongBench. Notably, even under extreme compression (0.9%), DynamicKV surpasses state-of-the-art (SOTA) methods by 11% in the Needle-in-a-Haystack test using Mistral-7B-Instruct-v0.2. The code is available at repository https://github.com/DreamMr/ DynamicKV.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

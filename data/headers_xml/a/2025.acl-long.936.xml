@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">When GPT Spills the Tea: Comprehensive Assessment of Knowledge File Leakage in GPTs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xinyue</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">CISPA Helmholtz Center for Information Security</orgName>
+								<address>
+									<addrLine>2 Flexera</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yun</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">CISPA Helmholtz Center for Information Security</orgName>
+								<address>
+									<addrLine>2 Flexera</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Backes</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">CISPA Helmholtz Center for Information Security</orgName>
+								<address>
+									<addrLine>2 Flexera</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">CISPA Helmholtz Center for Information Security</orgName>
+								<address>
+									<addrLine>2 Flexera</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department">CISPA Helmholtz Center for Information Security</orgName>
+								<address>
+									<addrLine>2 Flexera</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">When GPT Spills the Tea: Comprehensive Assessment of Knowledge File Leakage in GPTs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">248595111B15BEF0603C6EC0DF779ACC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Knowledge files have been widely used in large language model (LLM) agents, such as GPTs, to improve response quality. However, concerns about the potential leakage of knowledge files have grown significantly. Existing studies demonstrate that adversarial prompts can induce GPTs to leak knowledge file content. Yet, it remains uncertain whether additional leakage vectors exist, particularly given the complex data flows across clients, servers, and databases in GPTs. In this paper, we present a comprehensive risk assessment of knowledge file leakage, leveraging a novel workflow inspired by Data Security Posture Management (DSPM). Through the analysis of 651,022 GPT metadata, 11,820 flows, and 1,466 responses, we identify five leakage vectors: metadata, GPT initialization, retrieval, sandboxed execution environments, and prompts. These vectors enable adversaries to extract sensitive knowledge file data such as titles, content, types, and sizes. Notably, the activation of the built-in tool Code Interpreter leads to a privilege escalation vulnerability, enabling adversaries to directly download original knowledge files with a 95.95% success rate. Further analysis reveals that 28.80% of leaked files are copyrighted, including digital copies from major publishers and internal materials from a listed company. In the end, we provide actionable solutions for GPT builders and platform providers to secure the GPT data supply chain.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

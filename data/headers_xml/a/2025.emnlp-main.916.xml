@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Exploring Response Uncertainty in MLLMs: An Empirical Evaluation under Misleading Scenarios</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yunkai</forename><surname>Dang</surname></persName>
+							<email>yunkaidang1@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mengxi</forename><surname>Gao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yibo</forename><surname>Yan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xin</forename><surname>Zou</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanggan</forename><surname>Gu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jungang</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingyu</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peijie</forename><surname>Jiang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Aiwei</forename><surname>Liu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jia</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xuming</forename><surname>Hu</surname></persName>
+							<email>xuminghu@hkust-gz.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+								<address>
+									<country>Guangzhou</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">The Hong Kong University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Exploring Response Uncertainty in MLLMs: An Empirical Evaluation under Misleading Scenarios</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EC89EBAB684265F27F05BDB75FED6977</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Multimodal large language models (MLLMs) have recently achieved state-of-the-art performance on tasks ranging from visual question answering to video understanding. However, existing studies have concentrated mainly on visual-textual misalignment, leaving largely unexplored the MLLMs&apos; ability to preserve an originally correct answer when confronted with misleading information. We reveal a response uncertainty phenomenon: across nine standard datasets, twelve state-of-the-art opensource MLLMs overturn a previously correct answer in 65% of cases after receiving a single deceptive cue. To systematically quantify this vulnerability, we propose a two-stage evaluation pipeline: (1) elicit each model&apos;s original response on unperturbed inputs; (2) inject explicit (false-answer hints) and implicit (contextual contradictions) misleading instructions, and compute the misleading rate-the fraction of correct-to-incorrect flips. Leveraging the most susceptible examples, we curate the Multimodal Uncertainty Benchmark (MUB), a collection of image-question pairs stratified into low, medium, and high difficulty based on how many of twelve state-of-the-art MLLMs they mislead. Extensive evaluation on twelve opensource and five closed-source models reveals a high uncertainty: average misleading rates exceed 86%, with explicit cues over 67.19% and implicit cues over 80.67%. To reduce the misleading rate, we then fine-tune all open-source MLLMs on a compact 2 000-sample mixedinstruction dataset, reducing misleading rates to 6.97% (explicit) and 32.77% (implicit), boosting consistency by nearly 29.37% on highly deceptive inputs, and slightly improving accuracy on standard benchmarks. Our code is available at: https://github.com/Yunkaidang/uncertainty.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

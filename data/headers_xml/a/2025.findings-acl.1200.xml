@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">LegoMT2: Selective Asynchronous Sharded Data Parallel Training for Massive Neural Machine Translation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Yuan</surname></persName>
+							<email>yuanfei@pjlab.org.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yinquan</forename><surname>Lu</surname></persName>
+							<email>luyinquan@pjlab.org.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lei</forename><surname>Li</surname></persName>
+							<email>leili@cs.cmu.edu</email>
+							<affiliation key="aff1">
+								<orgName type="institution">Carnegie Mellon University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jingjing</forename><surname>Xu</surname></persName>
+							<email>jingjingxupku.02@gmail.com</email>
+							<affiliation key="aff0">
+								<orgName type="department">Shanghai Artificial Intelligence Laboratory</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">LegoMT2: Selective Asynchronous Sharded Data Parallel Training for Massive Neural Machine Translation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">35B08874F5C9F305418850ADFD8E0CE3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:18+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>It is a critical challenge to learn a single model for massive languages. Prior methods focus on increasing the model size and training data size. However, large models are difficult to optimize efficiently even with distributed parallel training and translation capacity can interfere among languages. To address the challenge, we propose LegoMT2, an efficient training approach with an asymmetric multi-way model architecture for massive multilingual neural machine translation. LegoMT2 shards 435 languages into 8 language-centric groups and attributes one local encoder for each group&apos;s languages and a mix encoder-decoder for all languages. LegoMT2 trains the model through local data parallel and asynchronous distributed updating of parameters. LegoMT2 is 16.2× faster than the distributed training method 1 for M2M-100-12B (which only for 100 languages) while improving the translation performance by an average of 2.2 BLEU on Flores-101, especially performing better for low-resource languages 2 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

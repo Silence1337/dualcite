@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Parse-LLM: A Prior-Free LLM Parser for Unknown System Logs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chengyu</forename><surname>Song</surname></persName>
+							<email>songchengyu@alumni.nudt.edu.cn</email>
+							<idno type="ORCID">0000-0001-7020-7603</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Lin</forename><surname>Yang</surname></persName>
+							<email>yanglin61s@126.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jianming</forename><surname>Zheng</surname></persName>
+							<email>zhengjianming12@nudt.edu.cn</email>
+							<idno type="ORCID">0000-0002-5594-256X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jinzhi</forename><surname>Liao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Cai</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Systems Engineering Institute</orgName>
+								<orgName type="institution">Academy of Military Sciences Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Systems Engineering Institute</orgName>
+								<orgName type="institution">Academy of Military Sciences Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Laboratory for Advanced Computing and Intelligent Engineering Wuxi</orgName>
+								<orgName type="laboratory">Laboratory for Big Data and Decision</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Systems Engineering Institute</orgName>
+								<orgName type="institution">Academy of Military Sciences Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Linru Ma Systems Engineering Institute</orgName>
+								<orgName type="institution">Academy of Military Sciences Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">National Key Laboratory of Information Systems Engineering</orgName>
+								<orgName type="institution">National University of Defense Technology</orgName>
+								<address>
+									<settlement>Changsha</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Parse-LLM: A Prior-Free LLM Parser for Unknown System Logs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F121CC5F6AA38554E72B7656D6629571</idno>
+					<idno type="DOI">10.1145/3746252.3761363</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Log parsing</term>
+					<term>Log analysis</term>
+					<term>Large language models</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Log parsing extracts structured information from unstructured logs and serves as a fundamental pre-processing step for various log-based analytics and monitoring tasks. Recent advances have leveraged Large Language Models (LLMs) to handle log format complexities and enhance parsing performance. However, these methods heavily rely on labeled data, which is often scarce in rapidly evolving industrial systems, limiting their applicability in real-world scenarios. Moreover, the sheer volume of logs results in slow parsing and high computational costs, further hindering the deployment of LLM-based log parsing systems. To address these issues, we propose Parse-LLM, an unsupervised end-to-end log parsing framework based on LLMs. Specifically, we first developed a Log Decomposer Agent that leverages Chain-of-Thought (CoT) reasoning and callable tools, enabling the LLM to autonomously separate log headers from content. Next, we introduce the Hybrid Log Partition module, which segments logs by balancing commonalities and differences. Finally, we developed a novel Variation-aware Log Parsing module that allows the LLM to harness additional supervisory signals through comparative analysis of similar logs. Comprehensive experiments conducted on large-scale public datasets show</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

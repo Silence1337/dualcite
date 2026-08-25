@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">mOSCAR: A Large-scale Multilingual and Multimodal Document-level Corpus</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Matthieu</forename><surname>Futeral</surname></persName>
+							<email>matthieu.futeral@inria.fr</email>
+							<affiliation key="aff0">
+								<address>
+									<country>Inria</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Département d&apos;informatique de l&apos;ENS</orgName>
+								<orgName type="institution" key="instit1">CNRS</orgName>
+								<orgName type="institution" key="instit2">PSL Research University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Armel</forename><surname>Zebaze</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<country>Inria</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="institution">Sorbonne Université</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pedro</forename><surname>Ortiz Suarez</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="department">Common Crawl Foundation</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Julien</forename><surname>Abadji</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<country>Inria</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rémi</forename><surname>Lacroix</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Institut du développement et des ressources en informatique scientifique</orgName>
+								<orgName type="institution">CNRS</orgName>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="institution">Université Paris-Saclay</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cordelia</forename><surname>Schmid</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<country>Inria</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Département d&apos;informatique de l&apos;ENS</orgName>
+								<orgName type="institution" key="instit1">CNRS</orgName>
+								<orgName type="institution" key="instit2">PSL Research University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rachel</forename><surname>Bawden</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<country>Inria</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benoît</forename><surname>Sagot</surname></persName>
+							<affiliation key="aff0">
+								<address>
+									<country>Inria</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">mOSCAR: A Large-scale Multilingual and Multimodal Document-level Corpus</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">97729690B61F48B3E9963267C25CFEAC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:23+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Multimodal Large Language Models (mLLMs) are trained on a large amount of text-image data. While most mLLMs are trained on captionlike data only, Alayrac et al. (2022) showed that additionally training them on interleaved sequences of text and images can lead to the emergence of in-context learning capabilities. However, the dataset they used, M3W, is not public and is only in English. There have been attempts to reproduce their results but the released datasets are English-only. In contrast, current multilingual and multimodal datasets are either composed of caption-like only or medium-scale or fully private data. This limits mLLM research for the 7,000 other languages spoken in the world. We therefore introduce mOSCAR, to the best of our knowledge the first large-scale multilingual and multimodal document corpus crawled from the web. It covers 163 languages, 303M documents, 200B tokens and 1.15B images. We carefully conduct a set of filtering and evaluation steps to make sure mOSCAR is sufficiently safe, diverse and of good quality. We additionally train two types of multilingual model to prove the benefits of mOSCAR: (1) a model trained on a subset of mOSCAR and captioning data and (2) a model trained on captioning data only. The model additionally trained on mOSCAR shows a strong boost in few-shot learning performance across various multilingual imagetext tasks and benchmarks, confirming previous findings for English-only mLLMs. The dataset is released under the Creative Commons CC BY 4.0 license and can be accessed here. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Graph Neural Network Enhanced Retrieval for Question Answering of Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zijian</forename><surname>Li</surname></persName>
+							<email>zijian.li@connect.ust.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qingyan</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiawei</forename><surname>Shao</surname></persName>
+							<email>jiawei.shao@connect.ust.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lei</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiang</forename><surname>Bian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Zhang</surname></persName>
+							<email>eejzhang@ust.hk</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rui</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Microsoft</forename><surname>Research</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Tsinghua University</orgName>
+								<orgName type="institution" key="instit2">Microsoft Research Asia</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Graph Neural Network Enhanced Retrieval for Question Answering of Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0AEBEE949CF5B9CE0791CEDFAEFB8A8E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval augmented generation has revolutionized large language model (LLM) outputs by providing factual supports. Nevertheless, it struggles to capture all the necessary knowledge for complex reasoning questions. Existing retrieval methods typically divide reference documents into passages, treating them in isolation. These passages, however, are often interrelated, such as passages that are contiguous or share the same keywords. Therefore, it is crucial to recognize such relatedness for enhancing the retrieval process. In this paper, we propose a novel retrieval method, called GNN-Ret, which leverages graph neural networks (GNNs) to enhance retrieval by exploiting the relatedness between passages. Specifically, we first construct a graph of passages by connecting passages that are structure-related or keyword-related. A graph neural network (GNN) is then leveraged to exploit the relationships between passages and improve the retrieval of supporting passages. Furthermore, we extend our method to handle multi-hop reasoning questions using a recurrent graph neural network (RGNN), named RGNN-Ret. At each step, RGNN-Ret integrates the graphs of passages from previous steps, thereby enhancing the retrieval of supporting passages. Extensive experiments on benchmark datasets demonstrate that GNN-Ret achieves higher accuracy for question answering with a single query of LLMs than strong baselines that require multiple queries, and RGNN-Ret further improves accuracy and achieves state-of-theart performance, with up to 10.4% accuracy improvement on the 2WikiMQA dataset. The code is publicly available at https://github. com/zli999/GNN_Ret.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

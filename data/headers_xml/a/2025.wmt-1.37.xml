@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">From SALAMANDRA to SALAMANDRATA: BSC Submission for WMT25 General Machine Translation Shared Task</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Javier</forename><forename type="middle">Garcia</forename><surname>Gilabert</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xixian</forename><surname>Liao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Severino</forename><surname>Da Dalt</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ella</forename><surname>Bohman</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Audrey</forename><surname>Mash</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Francesca</forename><surname>De Luca Fornaciari</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Irene</forename><surname>Baucells</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joan</forename><surname>Llop</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Miguel</forename><forename type="middle">Claramunt</forename><surname>Argote</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Carlos</forename><surname>Escolano</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Maite</forename><surname>Melero</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Barcelona</forename><forename type="middle">Supercomputing</forename><surname>Center</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Universitat Politècnica de Catalunya</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">From SALAMANDRA to SALAMANDRATA: BSC Submission for WMT25 General Machine Translation Shared Task</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">03A2817CA2ED9C8A5C0C7A08B31A51A8</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:19+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In this paper, we present the SALAMANDRATA family of models, an improved iteration of SALAMANDRA LLMs (Gonzalez-Agirre et al., 2025) specifically trained to achieve strong performance in translation-related tasks for 38 European languages. SALAMANDRATA comes in two scales: 2B and 7B parameters. For both versions, we applied the same training recipe with a first step of continual pre-training on parallel data, and a second step of supervised fine-tuning on high-quality instructions. The BSC submission to the WMT25 General Machine Translation shared task is based on the 7B variant of SALAMANDRATA. We first adapted the model vocabulary to support the additional non-European languages included in the task. This was followed by a second phase of continual pre-training and supervised fine-tuning, carefully designed to optimize performance across all translation directions for this year&apos;s shared task. For decoding, we employed two quality-aware strategies: Minimum Bayes Risk Decoding and Tuned Re-ranking using COMET and COMET-KIWI respectively. We publicly release both the 2B and 7B versions of SALAMANDRATA, along with the newer SALAMANDRATA-V2 model, on Hugging Face 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

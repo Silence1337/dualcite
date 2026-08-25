@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Squeezed Attention: Accelerating Long Context Length LLM Inference</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Coleman</forename><surname>Hooper</surname></persName>
+							<email>chooper@berkeley.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sehoon</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hiva</forename><surname>Mohammadzadeh</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Monishwaran</forename><surname>Maheswaran</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sebastian</forename><surname>Zhao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">June</forename><surname>Paik</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">W</forename><surname>Mahoney</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kurt</forename><surname>Keutzer</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Amir</forename><surname>Gholami</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">U</forename><forename type="middle">C</forename><surname>Berkeley</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Furiosaai</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Icsi</surname></persName>
+						</author>
+						<title level="a" type="main">Squeezed Attention: Accelerating Long Context Length LLM Inference</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">402E2EB1CC548E616B7FB40CA6FEE9E4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Emerging Large Language Model (LLM) applications require long input context in order to perform complex tasks like document analysis and code generation. For these long context length applications, the length of the input prompt poses a significant challenge in terms of inference efficiency since the inference costs increase linearly with sequence length. However, for many of these applications, much of the context in the prompt is fixed across different user inputs, thereby providing the opportunity to perform offline optimizations in order to process user inputs quickly, as they are received. We propose Squeezed Attention to accelerate LLM applications where a large portion of the input context is fixed. We first leverage K-means clustering offline to group the keys for the fixed context based on semantic similarity and represent each cluster with a single centroid value. During inference, we compare query tokens from the user input with the centroids to predict which keys from the fixed context are semantically relevant, and then compute exact attention using only the important keys, thereby reducing bandwidth and computational costs. We also present a hierarchical version of our algorithm which can reduce the complexity of attention from linear to logarithmic with respect to the fixed context length. We evaluate our method on various long-context benchmarks including LongBench, where it achieves a 3.1× reduction in KV budget with no noticeable accuracy loss and up to an 8× reduction with only a 0.5 point accuracy gap for the LLaMA-2-7B-32K, LWM-Text-Chat-1M, and Longchat-7B-v1.5-32K models. Futhermore, we implement kernels for centroid comparison and sparse FlashAttention with important keys, achieving more than 4× speedups during both the prefill and generation phases for long-context inference. Our code is available at https://github.com/ SqueezeAILab/SqueezedAttention. * Equal contribution Le ve l 2 Cl us te rs Le ve l 1 Cl us te rs Ke ys Query Key</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

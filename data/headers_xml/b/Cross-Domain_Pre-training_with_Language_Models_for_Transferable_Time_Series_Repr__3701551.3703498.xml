@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Cross-Domain Pre-training with Language Models for Transferable Time Series Representations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mingyue</forename><surname>Cheng</surname></persName>
+							<email>mycheng@ustc.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoyu</forename><surname>Tao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Zhang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yiheng</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Defu</forename><surname>Lian</surname></persName>
+							<email>liandefu@ustc.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui Province</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui Province</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui Province</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui Province</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui Province</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">State Key Laboratory of Cognitive Intelligence</orgName>
+								<orgName type="institution">University of Science and Technology of China Hefei</orgName>
+								<address>
+									<settlement>Anhui Province</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Cross-Domain Pre-training with Language Models for Transferable Time Series Representations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C9874F3677836F2D724C765A24EEBB64</idno>
+					<idno type="DOI">10.1145/3701551.3703498</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:29+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Cross Domain Transferring</term>
+					<term>Self-supervised Pretraining</term>
+					<term>Time Series Analysis</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Pre-training universal models across multiple domains to enhance downstream tasks is a prevalent learning paradigm. However, there has been minimal progress in pre-training transferable models across domains for time series representation. This dilemma is incurred by two key factors: the limited availability of training set within each domain and the substantial differences in data characteristics between domains. To address these challenges, we present a novel framework, namely CrossTimeNet, designed to perform cross-domain self-supervised pre-training to benefit target tasks. Specifically, to address the issue of data scarcity, we utilize a pretrained language model as the backbone network to effectively capture the sequence dependencies of the input time series. Meanwhile, we adopt the recovery of corrupted region inputs as a selfsupervised optimization objective, taking into account the locality of the time series. To address discrepancies in data characteristics, we introduce a novel tokenization module that converts continuous time series inputs into discrete token sequences using vector quantization techniques. This approach facilitates the learning of transferable time series models across different domains. Extensive experimental results on diverse time series tasks, including classification and forecasting, demonstrate the effectiveness of our approach. Our codes are publicly available 1. CCS Concepts • Mathematics of computing → Time series analysis; • Computing methodologies → Artificial intelligence.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

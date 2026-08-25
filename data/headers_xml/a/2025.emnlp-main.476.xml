@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">On LLM-Based Scientific Inductive Reasoning Beyond Equations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Brian</forename><forename type="middle">S</forename><surname>Lin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Dept. of Comp. Sci. &amp; Tech</orgName>
+								<orgName type="department" key="dep2">Institute for AI</orgName>
+								<orgName type="department" key="dep3">BNRist Center</orgName>
+								<orgName type="department" key="dep4">Innovation Center for Language Ability</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University Jiangsu Collaborative</orgName>
+								<orgName type="institution" key="instit2">Jiangsu Normal University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiaxin</forename><surname>Yuan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Beijing Language and Culture University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zihan</forename><surname>Zhou</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Xiamen University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shouli</forename><surname>Wang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuo</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Dept. of Comp. Sci. &amp; Tech</orgName>
+								<orgName type="department" key="dep2">Institute for AI</orgName>
+								<orgName type="department" key="dep3">BNRist Center</orgName>
+								<orgName type="department" key="dep4">Innovation Center for Language Ability</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University Jiangsu Collaborative</orgName>
+								<orgName type="institution" key="instit2">Jiangsu Normal University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cunliang</forename><surname>Kong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Dept. of Comp. Sci. &amp; Tech</orgName>
+								<orgName type="department" key="dep2">Institute for AI</orgName>
+								<orgName type="department" key="dep3">BNRist Center</orgName>
+								<orgName type="department" key="dep4">Innovation Center for Language Ability</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University Jiangsu Collaborative</orgName>
+								<orgName type="institution" key="instit2">Jiangsu Normal University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qi</forename><surname>Shi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Dept. of Comp. Sci. &amp; Tech</orgName>
+								<orgName type="department" key="dep2">Institute for AI</orgName>
+								<orgName type="department" key="dep3">BNRist Center</orgName>
+								<orgName type="department" key="dep4">Innovation Center for Language Ability</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University Jiangsu Collaborative</orgName>
+								<orgName type="institution" key="instit2">Jiangsu Normal University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuxuan</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Liner</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Dept. of Comp. Sci. &amp; Tech</orgName>
+								<orgName type="department" key="dep2">Institute for AI</orgName>
+								<orgName type="department" key="dep3">BNRist Center</orgName>
+								<orgName type="department" key="dep4">Innovation Center for Language Ability</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University Jiangsu Collaborative</orgName>
+								<orgName type="institution" key="instit2">Jiangsu Normal University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Beijing Language and Culture University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiyuan</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Dept. of Comp. Sci. &amp; Tech</orgName>
+								<orgName type="department" key="dep2">Institute for AI</orgName>
+								<orgName type="department" key="dep3">BNRist Center</orgName>
+								<orgName type="department" key="dep4">Innovation Center for Language Ability</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University Jiangsu Collaborative</orgName>
+								<orgName type="institution" key="instit2">Jiangsu Normal University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Maosong</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Dept. of Comp. Sci. &amp; Tech</orgName>
+								<orgName type="department" key="dep2">Institute for AI</orgName>
+								<orgName type="department" key="dep3">BNRist Center</orgName>
+								<orgName type="department" key="dep4">Innovation Center for Language Ability</orgName>
+								<orgName type="institution" key="instit1">Tsinghua University Jiangsu Collaborative</orgName>
+								<orgName type="institution" key="instit2">Jiangsu Normal University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">On LLM-Based Scientific Inductive Reasoning Beyond Equations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3C1908F2D286E6625DE442D55BB1ABE3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>As large language models (LLMs) increasingly exhibit human-like capabilities, a fundamental question emerges: How can we enable LLMs to learn the underlying patterns from limited examples in entirely novel environments and apply them effectively? This question is central to the ability of LLMs in inductive reasoning. Existing research on LLM-based inductive reasoning can be broadly categorized based on whether the underlying rules are expressible via explicit mathematical equations. However, many recent studies in the beyond-equations category have emphasized rule design without grounding them in specific scenarios. Inspired by the parallels between inductive reasoning and human scientific discovery, we propose the task of LLM-Based Scientific Inductive Reasoning Beyond Equations and introduce a new benchmark, SIRBench-V1, to evaluate the inductive reasoning abilities of LLMs in scientific settings. Our experimental results show that current LLMs still struggle with this task, underscoring its difficulty and the need for further advancement in this area. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

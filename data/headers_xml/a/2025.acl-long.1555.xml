@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Low-Bit Quantization Favors Undertrained LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xu</forename><surname>Ouyang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab Seattle</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tao</forename><surname>Ge</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab Seattle</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thomas</forename><surname>Hartvigsen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Virginia</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhisong</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab Seattle</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haitao</forename><surname>Mi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab Seattle</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dong</forename><surname>Yu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab Seattle</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Low-Bit Quantization Favors Undertrained LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">79C1A8F8AB42AD323AA6CCB9BAC31162</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Low-bit quantization improves machine learning model efficiency but surprisingly favors undertrained large language models (LLMs). Larger models or those trained on fewer tokens exhibit less quantization-induced degradation (QiD), while smaller, well-trained models face significant performance losses. To gain deeper insights into this trend, we study over 1500+ quantized LLM checkpoints of various sizes and at different training levels (undertrained or fully trained) in a controlled setting, deriving scaling laws for understanding the relationship between QiD and factors: the number of training tokens, model size and bit width. With our derived scaling laws, we propose a novel perspective that we can use QiD to measure an LLM&apos;s training levels and determine the number of training tokens required for fully training LLMs of various sizes. Moreover, we use the scaling laws to predict the quantization performance of different-sized LLMs trained with 100 trillion tokens. Our projection shows that the low-bit quantization performance of future models, which are expected to be trained with over 100 trillion tokens, may NOT be desirable. This poses a potential challenge for low-bit quantization in the future and highlights the need for awareness of a model&apos;s training level when evaluating lowbit quantization research. To facilitate future research on this problem, we release all the 1500+ quantized checkpoints used in this work at https://huggingface.co/Xu-Ouyang.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

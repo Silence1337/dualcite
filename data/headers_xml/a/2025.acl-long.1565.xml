@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">BFS-Prover: Scalable Best-First Tree Search for LLM-based Automatic Theorem Proving</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ran</forename><surname>Xin</surname></persName>
+							<email>ran.xin@bytedance.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Seed</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenguang</forename><surname>Xi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Seed</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">ByteDance Applied Machine Learning</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Feng</forename><surname>Chen</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">Stanford University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hang</forename><surname>Wu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">ByteDance Applied Machine Learning</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xia</forename><surname>Xiao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Seed</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yifan</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Seed</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shen</forename><surname>Zheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Seed</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Shen</surname></persName>
+							<email>shen.kai@bytedance.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">ByteDance Seed</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">BFS-Prover: Scalable Best-First Tree Search for LLM-based Automatic Theorem Proving</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">50CD3E0D4A158226373E0F479CC802B2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advancements in large language models (LLMs) have spurred growing interest in automatic theorem proving using Lean4, where effective tree search methods are crucial for navigating the underlying large proof search spaces. While the existing approaches primarily rely on value functions and/or Monte Carlo Tree Search (MCTS), the potential of simpler methods like Best-First Tree Search (BFS) remains underexplored. In this paper, we investigate whether BFS can achieve competitive performance in large-scale theorem proving tasks. We present BFS-Prover, a scalable expert iteration framework, featuring three key innovations. First, we implement strategic data filtering at each expert iteration round, excluding problems solvable via beam search node expansion to focus on harder cases. Second, we improve the sample efficiency of BFS through Direct Preference Optimization (DPO) applied to state-tactic pairs automatically annotated with compiler error feedback, refining the LLM&apos;s policy to prioritize productive expansions. Third, we employ length normalization in BFS to encourage exploration of deeper proof paths. BFS-Prover achieves a state-of-the-art score of 72.95% on the MiniF2F test set and therefore challenges the perceived necessity of complex tree search methods, demonstrating that BFS can achieve competitive performance when properly scaled.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

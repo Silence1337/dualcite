@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Beyond Similarity: A Gradient-based Graph Method for Instruction Tuning Data Selection</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yang</forename><surname>Zhao</surname></persName>
+							<email>yangzhao@ir.hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Li</forename><surname>Du</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Beijing Academy of Artificial Intelligence</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao</forename><surname>Ding</surname></persName>
+							<email>xding@ir.hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yangou</forename><surname>Ouyang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hepeng</forename><surname>Wang</surname></persName>
+							<email>hpwang@ir.hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Xiong</surname></persName>
+							<email>kxiong@ir.hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinglong</forename><surname>Gao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhouhao</forename><surname>Sun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongliang</forename><surname>Xu</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Du Xiaoman Technology (Beijing) Co</orgName>
+								<address>
+									<settlement>Ltd</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qing</forename><surname>Yang</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Du Xiaoman Technology (Beijing) Co</orgName>
+								<address>
+									<settlement>Ltd</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dongchen</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Bing</forename><surname>Qin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Du Xiaoman Technology (Beijing) Co</orgName>
+								<address>
+									<settlement>Ltd</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ting</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Research Center for Social Computing and Interactive Robotics</orgName>
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Beyond Similarity: A Gradient-based Graph Method for Instruction Tuning Data Selection</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CEE910CCB86A2E741D4C2BDCE0AA46B0</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:16+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) have shown great potential across various industries due to their remarkable ability to generalize through instruction tuning. However, the limited availability of domain-specific data significantly hampers their performance on specialized tasks. While existing methods primarily focus on selecting training data from general datasets that are similar to the target domain, they often fail to consider the joint distribution of instructions, resulting in inefficient learning and suboptimal knowledge transfer. To address these challenges, we introduce G2IS (Gradient-based Graph Instruction Selection), a novel method that constructs a mixed gradient-based instruction graph to capture the joint distribution and interdependencies between instructions. By accounting for the relationships between instructions, G2IS improves domain adaptation efficiency. Additionally, we propose a gradient walk algorithm to refine the data selection process, enhancing both training effectiveness and efficiency. Our experiments demonstrate that G2IS outperforms traditional methods across various domain adaptation tasks, yielding significant performance gains, particularly in complex, data-scarce scenarios. These results underscore the potential of G2IS in advancing the development of large, domain-specific models.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Knowledge Decoupling via Orthogonal Projection for Lifelong Editing of Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Haoyu</forename><surname>Xu</surname></persName>
+							<email>haoyuxu@stumail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Pengxiang</forename><surname>Lan</surname></persName>
+							<email>pengxianglan@stumail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enneng</forename><surname>Yang</surname></persName>
+							<email>ennengyang@stumail.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guibing</forename><surname>Guo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianzhe</forename><surname>Zhao</surname></persName>
+							<email>zhaojz@swc.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linying</forename><surname>Jiang</surname></persName>
+							<email>jiangly@swc.neu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Software College</orgName>
+								<orgName type="institution" key="instit2">Northeastern University</orgName>
+								<address>
+									<settlement>China</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xingwei</forename><surname>Wang</surname></persName>
+							<email>wangxw@mail.neu.edu.cn</email>
+							<affiliation key="aff1">
+								<orgName type="department">School of Computer Science and Engineering</orgName>
+								<orgName type="institution">Northeastern University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Knowledge Decoupling via Orthogonal Projection for Lifelong Editing of Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E468288C0D36A4DAAD3516C9E7A81C05</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:37+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>As large language models (LLMs) require continuous knowledge updates and the mitigation of hallucination issues in generated content, lifelong model editing has become a prominent research area. A mainstream knowledge editing method usually freezes LLM&apos;s original parameters and adds extra trainable modules for new knowledge management, reducing interference with old knowledge. Although these approaches have achieved some success, our experiments show that, after extensive editing, the model&apos;s knowledge understanding and memory capacity significantly degrade, particularly concerning early edited knowledge. The root cause is that subsequent edits interfere with the previously edited knowledge, and we refer to this phenomenon as knowledge coupling. To address this issue, we propose the Knowledge Decoupling Editing (KDE) method. Specifically, KDE stores the basis vectors of the representation space of past edits in a knowledge cache. It projects the gradient of the current edit onto a space orthogonal to previous knowledge for updating. This method effectively alleviates the coupling between different pieces of knowledge. We also propose a two-stage training strategy to better balance the model&apos;s ability to edit new knowledge and distinguish whether a query is related to previous edits. This strategy gradually reduces the interference between new knowledge editing and query distinction, maintaining stable performance during longterm editing. We compared KDE with nine state-of-the-art editing methods across multiple mainstream LLMs. The results demonstrate that, regarding question-answering ability and hallucination mitigation, KDE achieves average improvements of 14% and 61%.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Curriculum Guided Personalized Subgraph Federated Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Minku</forename><surname>Kang</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Hogun</forename><surname>Park</surname></persName>
+							<email>hogunpark@skku.edu</email>
+							<idno type="ORCID">0000-0003-0576-5806</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Sungkyunkwan University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Sungkyunkwan University Suwon</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Curriculum Guided Personalized Subgraph Federated Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">30A800A2C0BDF37F9A9501FB56D7508A</idno>
+					<idno type="DOI">10.1145/3746252.3761128</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:30+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Personalized Federated Learning, Graph Neural Networks</keywords>
+			</textClass>
+			<abstract>
+				<p>Subgraph Federated Learning (FL) aims to train Graph Neural Networks (GNNs) across distributed private subgraphs, but it suffers from severe data heterogeneity. To mitigate data heterogeneity, weighted model aggregation methods personalize each local GNN by assigning larger weights to parameters from clients with similar subgraph characteristics inferred from their current model states. However, the sparse and biased subgraphs often trigger rapid overfitting, causing the estimated client similarity matrix to stagnate or even collapse. As a result, the aggregation loses effectiveness as clients reinforce their own biases instead of exploiting diverse knowledge otherwise available. To this end, we propose a novel personalized subgraph FL framework called Curriculum guided personalized sUbgraph Federated Learning (CUFL). On the client side, CUFL adopts Curriculum Learning (CL) that adaptively selects edges for training according to their reconstruction scores, exposing each GNN first to easier, generic cross-client substructures and only later to harder, client-specific ones. This paced exposure prevents early overfitting to biased patterns and enables gradual personalization. By regulating personalization, the curriculum also reshapes server aggregation from exchanging generic knowledge to propagating client-specific knowledge. Further, CUFL improves weighted model aggregation by estimating client similarity using fine-grained structural indicators reconstructed on a random reference graph. Extensive experiments on six benchmark datasets confirm that CUFL achieves superior performance compared to relevant baselines. Code is available at https://github.com/Kang-Min-Ku/CUFL.git. CCS Concepts • Information systems → Data mining; • Computing methodologies → Distributed artificial intelligence.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

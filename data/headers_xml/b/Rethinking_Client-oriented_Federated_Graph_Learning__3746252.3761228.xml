@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rethinking Client-oriented Federated Graph Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zekai</forename><surname>Chen</surname></persName>
+							<idno type="ORCID">0009-0005-4591-9488</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Xunkai Li</orgName>
+								<orgName type="institution">Beijing Institute of Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Yinlin Zhu</orgName>
+								<orgName type="institution">Beijing Institute of Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Rong-Hua Li</orgName>
+								<orgName type="institution">Sun Yat-sen University Guangzhou</orgName>
+								<address>
+									<settlement>Guangdong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Guoren Wang</orgName>
+								<orgName type="institution">Beijing Institute of Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Beijing Institute of Technology Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rethinking Client-oriented Federated Graph Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7BD86ACFE06D455ECA9472F0251B0C6E</idno>
+					<idno type="DOI">10.1145/3746252.3761228</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Graph Neural Network</term>
+					<term>Federated Learning</term>
+					<term>Dataset Condensation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>As a new distributed graph learning paradigm, Federated Graph Learning (FGL) facilitates collaborative model training across local systems while preserving data privacy. We review existing FGL approaches and categorize their optimization mechanisms into: (1) Server-Client (S-C), where clients upload local model parameters for server-side aggregation and global updates; (2) Client-Client (C-C), which allows direct exchange of information between clients and customizing their local training process. We reveal that CC shows superior potential due to its refined communication structure. However, existing CC methods broadcast redundant node representations, incurring high communication costs and privacy risks at the node level. To this end, we propose FedC4, which combines graph Condensation with CC Collaboration optimization. Specifically, FedC4 employs graph condensation technique to refine the knowledge of each client&apos;s graph into a few synthetic embeddings instead of transmitting node-level knowledge. Moreover, FedC4 introduces three novel modules that allow the source client to send distinct node representations tailored to the target client&apos;s graph properties. Experiments on eight public real-world datasets show that FedC4 outperforms state-of-the-art baselines in both task performance and communication cost. Our code is now available on https://github.com/Ereshkigal1/FedC4. CCS Concepts • Computing methodologies → Artificial intelligence.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Improving Automatic Evaluation of Large Language Models (LLMs) in Biomedical Relation Extraction via LLMs-as-the-Judge</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Md</forename><surname>Tahmid</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">York University</orgName>
+								<orgName type="institution" key="instit2">§ Vector Institute Toronto</orgName>
+								<address>
+									<region>Ontario</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rahman</forename><surname>Laskar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">York University</orgName>
+								<orgName type="institution" key="instit2">§ Vector Institute Toronto</orgName>
+								<address>
+									<region>Ontario</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Israt</forename><surname>Jahan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">York University</orgName>
+								<orgName type="institution" key="instit2">§ Vector Institute Toronto</orgName>
+								<address>
+									<region>Ontario</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Elham</forename><surname>Dolatabadi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">York University</orgName>
+								<orgName type="institution" key="instit2">§ Vector Institute Toronto</orgName>
+								<address>
+									<region>Ontario</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chun</forename><surname>Peng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">York University</orgName>
+								<orgName type="institution" key="instit2">§ Vector Institute Toronto</orgName>
+								<address>
+									<region>Ontario</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enamul</forename><surname>Hoque</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">York University</orgName>
+								<orgName type="institution" key="instit2">§ Vector Institute Toronto</orgName>
+								<address>
+									<region>Ontario</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jimmy</forename><forename type="middle">Xiangji</forename><surname>Huang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">York University</orgName>
+								<orgName type="institution" key="instit2">§ Vector Institute Toronto</orgName>
+								<address>
+									<region>Ontario</region>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Improving Automatic Evaluation of Large Language Models (LLMs) in Biomedical Relation Extraction via LLMs-as-the-Judge</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">B75CFEA398696693ECB7104DF3DE985A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large Language Models (LLMs) have demonstrated impressive performance in biomedical relation extraction, even in zero-shot scenarios. However, evaluating LLMs in this task remains challenging due to their ability to generate human-like text, often producing synonyms or abbreviations of gold-standard answers, making traditional automatic evaluation metrics unreliable. On the other hand, while human evaluation is more reliable, it is costly and time-consuming, making it impractical for real-world applications. This paper investigates the use of LLMs-as-the-Judge as an alternative evaluation method for biomedical relation extraction. We benchmark 8 LLMs as judges to evaluate the responses generated by 5 other LLMs across 3 biomedical relation extraction datasets. Unlike other text-generation tasks, we observe that LLM-based judges perform quite poorly (usually below 50% accuracy) in the biomedical relation extraction task. Our findings reveal that it happens mainly because relations extracted by LLMs do not adhere to any standard format. To address this, we propose structured output formatting for LLM-generated responses that helps LLM-Judges to improve their performance by about 15% (on average). We also introduce a domain adaptation technique to further enhance LLM-Judge performance by effectively transferring knowledge between datasets. We release both our human-annotated and LLMannotated judgment data (36k samples in total) here: https://github.com/tahmedge/llm_ judge_biomedical_re.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

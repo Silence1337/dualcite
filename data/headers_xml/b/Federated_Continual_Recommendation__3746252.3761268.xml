@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Federated Continual Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jaehyung</forename><surname>Lim</surname></persName>
+							<email>jaehyunglim@postech.ac.kr</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wonbin</forename><surname>Kweon</surname></persName>
+							<email>wonbin@illinois.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Woojoo</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Junyoung</forename><surname>Kim</surname></persName>
+							<email>junyoungkim@postech.ac.kr</email>
+						</author>
+						<author>
+							<persName><forename type="first">Seongjin</forename><surname>Choi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dongha</forename><surname>Kim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hwanjo</forename><surname>Yu</surname></persName>
+							<email>hwanjoyu@postech.ac.kr</email>
+						</author>
+						<author>
+							<persName><roleName>Continual Recommendation.</roleName><surname>Federated</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Pohang University of Science and Technology Pohang</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Illinois Urbana-Champaign Champaign</orgName>
+								<address>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Pohang University of Science and Technology Pohang</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Pohang University of Science and Technology Pohang</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Pohang University of Science and Technology Pohang</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Pohang University of Science and Technology Pohang</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Pohang University of Science and Technology Pohang</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Federated Continual Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0AEBEE36ABFD16CD5907E31F15D2568B</idno>
+					<idno type="DOI">10.1145/3746252.3761268</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Federated Learning</term>
+					<term>Continual Learning</term>
+					<term>Recommender Systems</term>
+					<term>Federated Continual Recommender Systems</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The increasing emphasis on privacy in recommendation systems has led to the adoption of Federated Learning (FL) as a privacypreserving solution, enabling collaborative training without sharing user data. While Federated Recommendation (FedRec) effectively protects privacy, existing methods struggle with non-stationary data streams, failing to maintain consistent recommendation quality over time. On the other hand, Continual Learning Recommendation (CLRec) methods address evolving user preferences but typically assume centralized data access, making them incompatible with FL constraints. To bridge this gap, we introduce Federated Continual Recommendation (FCRec), a novel task that integrates FedRec and CLRec, requiring models to learn from streaming data while preserving privacy. As a solution, we propose F 3 CRec, a framework designed to balance knowledge retention and adaptation under the strict constraints of FCRec. F 3 CRec introduces two key components: Adaptive Replay Memory on the client side, which selectively retains past preferences based on user-specific shifts, and Item-wise Temporal Mean on the server side, which integrates new knowledge while preserving prior information. Extensive experiments demonstrate that F 3 CRec outperforms existing approaches in maintaining recommendation quality over time in a federated environment. Our code is available at https://github.com/Jaehyung-Lim/F3CRec-CIKM-25. CCS Concepts • Information systems → Retrieval models and ranking; Recommender systems; • Computing methodologies → Distributed artificial intelligence.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

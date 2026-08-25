@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FGDGNN: Fine-Grained Dynamic Graph Neural Network for Rumor Detection on Social Media</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mei</forename><surname>Guo</surname></persName>
+							<email>guomei@mail.nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">MoE Key</orgName>
+								<orgName type="laboratory">Lab of DISSec</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><surname>Chen</surname></persName>
+							<email>nkchenchen@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">MoE Key</orgName>
+								<orgName type="laboratory">Lab of DISSec</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chunyan</forename><surname>Hou</surname></persName>
+							<email>chunyanhou@163.com</email>
+							<affiliation key="aff2">
+								<orgName type="department">School of CSE</orgName>
+								<orgName type="institution">Tianjin University of Technology</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yike</forename><surname>Wu</surname></persName>
+							<email>wuyike@nankai.edu.cn</email>
+							<affiliation key="aff3">
+								<orgName type="department">School of Journalism and Communication</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaojie</forename><surname>Yuan</surname></persName>
+							<email>yuanxj@nankai.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">MoE Key</orgName>
+								<orgName type="laboratory">Lab of DISSec</orgName>
+								<orgName type="institution">Nankai University</orgName>
+								<address>
+									<settlement>Tianjin</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FGDGNN: Fine-Grained Dynamic Graph Neural Network for Rumor Detection on Social Media</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7B21965BADF58B52D259AB628261BEF5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Detecting rumors on social media has become a crucial issue. Propagation structure-based methods have recently attracted increasing attention. When the propagation structure is represented by the dynamic graph, temporal information is considered. However, existing rumor detection models using dynamic graph typically focus only on coarse-grained temporal information and ignore the fine-grained temporal dynamics within individual snapshots and across snapshots. In this paper, we propose a novel Fine-Grained Dynamic Graph Neural Network (FGDGNN) model, which can incorporate the fine-grained temporal information of dynamic propagation graph in the intra-snapshot and dynamic embedding update mechanism in the inter-snapshots into a unified framework for rumor detection. Specifically, we first construct the edge-weighted propagation graph and the edge-aware graph isomorphism network is proposed. To obtain finegrained temporal representations across snapshots, we propose an embedding transformation layer to update node embeddings. Finally, we integrate the temporal information in the inter-snapshots at the graph level to enhance the effectiveness of the proposed model. Extensive experiments conducted on three public realworld datasets demonstrate that our FGDGNN model achieves significant improvements compared with the state-of-the-art baselines.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

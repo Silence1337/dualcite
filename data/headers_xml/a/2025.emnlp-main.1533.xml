@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Split-Merge: Scalable and Memory-Efficient Merging of Expert LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sruthi</forename><surname>Gorantla</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Amazon AGI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aditya</forename><surname>Rawal</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Amazon AGI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Devamanyu</forename><surname>Hazarika</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Amazon AGI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaixiang</forename><surname>Lin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Amazon AGI</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mingyi</forename><surname>Hong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Amazon AGI</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Minnesota</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mahdi</forename><surname>Namazifar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Amazon AGI</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Split-Merge: Scalable and Memory-Efficient Merging of Expert LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9A3DF81467777F54AEB38118EE789962</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:48+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>We introduce a zero-shot merging framework for large language models (LLMs) that consolidates specialized domain experts into a single model without any further training. Our core contribution lies in leveraging relative task vectors-difference representations encoding each expert&apos;s unique traits with respect to a shared base model-to guide a principled and efficient merging process. By dissecting parameters into common dimensions (averaged across experts) and complementary dimensions (unique to each expert), we strike an optimal balance between generalization and specialization. We further devise a compression mechanism for the complementary parameters, retaining only principal components and scalar multipliers per expert, thereby minimizing overhead. A dynamic router then selects the most relevant domain at inference, ensuring that domain-specific precision is preserved. Experiments on code generation, mathematical reasoning, medical question answering, and instruction-following benchmarks confirm the versatility and effectiveness of our approach. Altogether, this framework enables truly adaptive and scalable LLMs that seamlessly integrate specialized knowledge for improved zero-shot performance.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

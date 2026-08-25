@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">COPR: Continual Human Preference Learning via Optimal Policy Regularization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Han</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Peng Cheng Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lin</forename><surname>Gui</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">King&apos;s College London</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Lei</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Peng Cheng Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuanzhao</forename><surname>Zhai</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">National University of Defense Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yehong</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Peng Cheng Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhuo</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yulan</forename><surname>He</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Peng Cheng Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">King&apos;s College London</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hui</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Peng Cheng Laboratory</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yue</forename><surname>Yu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kam-Fai</forename><surname>Wong</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Peng Cheng Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bin</forename><surname>Liang</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">The Chinese University of Hong Kong</orgName>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Ruifeng</forename><surname>Xu</surname></persName>
+							<email>xuruifeng@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Harbin Institute of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Peng Cheng Laboratory</orgName>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Guangdong Provincial Key Laboratory of Novel Security Intelligence Technologies</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">COPR: Continual Human Preference Learning via Optimal Policy Regularization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">66FAABE6652FB1C573F424DABE85328C</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:25+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>The growing integration of Large Language Models (LLMs) into real-world applications underscores the critical need for continual alignment with evolving human preferences. Reinforcement Learning from Human Feedback (RLHF) has shown success in improving the alignment of LLMs, but its rigid, multi-stage process presents significant limitations for continual learning (CL) scenarios, where models need to adapt incrementally without catastrophic forgetting. Existing methods, such as Direct Preference Optimization (DPO), offer potential for offline preference learning but exhibit challenges like increased preference gap amplification and reduced model diversity, which can lead to preference collapse. In practical settings, LLMs continuously interact with diverse user feedback across tasks and domains. The inability of current approaches to efficiently incorporate incremental human preferences without retraining or significant computational overhead limits their scalability and adaptability. Addressing these gaps, our study introduces a novel framework, Continual Optimal Policy Regularization (COPR), that ensures robust and flexible continual alignment while preserving historical knowledge and optimizing performance in new preference tasks.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">KIEPrompter: Leveraging Lightweight Models&apos; Predictions for Cost-Effective Key Information Extraction using Vision LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Lorenzo</forename><surname>Vaiani</surname></persName>
+							<email>lorenzo.vaiani@polito.it</email>
+							<idno type="ORCID">0000-0002-3605-1577</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Paolo</forename><surname>Garza</surname></persName>
+							<email>paolo.garza@polito.it</email>
+							<idno type="ORCID">0000-0002-1263-7522</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Josiah</forename><surname>Poon</surname></persName>
+							<email>josiah.poon@sydney.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Caren</forename><surname>Soyeon</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Han</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Politecnico di Torino Torino</orgName>
+								<address>
+									<country>Italy Yihao Ding</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">The University of Western Australia Perth</orgName>
+								<address>
+									<country>Australia Luca Cagliero</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Politecnico di Torino Torino</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Jean Lee</orgName>
+								<orgName type="institution" key="instit2">The University of Melbourne Melbourne</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Politecnico di Torino Torino</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">The University of Sydney Sydney</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">The University of Melbourne Melbourne</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">KIEPrompter: Leveraging Lightweight Models&apos; Predictions for Cost-Effective Key Information Extraction using Vision LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">23CDD9CFA5F8A95AFC9FE0AB60EEDA7C</idno>
+					<idno type="DOI">10.1145/3746252.3761416</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Key Information Extraction</term>
+					<term>Visually Rich Document Understanding</term>
+					<term>Vision Large Language Models</term>
+					<term>Document Layouts</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Key information extraction (KIE) from visually rich documents, such as receipts and forms, involves a deep understanding of textual, visual, and layout feature information. Transformers fine-tuned for KIE achieve state-of-the-art performance but lack generality and portability across different domains. In contrast, vision large language models (VLLMs) offer higher flexibility and zero-shot capability but fall short with domain-specific layout relations unless performing a resource-demanding supervised fine-tuning. To reach the best compromise solution between lightweight models and VLLMs, we propose KIEPrompter, a cost-effective LLM-based KIE approach that leverages the predictions of lightweight models as external knowledge injected into VLLM prompts. By incorporating these auxiliary predictions, VLLMs are guided to attend relevant multimodal content without ad hoc training. The accuracy results achieved by KIEPrompter in three benchmark document collections are superior to those of VLLMs in both zero-shot and layoutsensitive scenarios. We compare various strategies for incorporating lightweight model predictions, ranging from coarse-grained predictions without explicit confidence scores to fine-grained per-element network logits. We also demonstrate that our approach is robust to the absence of specific classes in trained lightweight models, as the VLLMs&apos; pre-training compensates for the limited generality of lightweight models. The project code is publicly available to allow reproducibility 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

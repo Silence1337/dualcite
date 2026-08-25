@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">UCS-SQL: Uniting Content and Structure for Enhanced Semantic Bridging In Text-to-SQL</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhenhe</forename><surname>Wu</surname></persName>
+							<email>wuzhenhe@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">TeleAI</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhongqiu</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">TeleAI</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">TeleAI</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhongjiang</forename><surname>He</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jian</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">TeleAI</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Zhao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">TeleAI</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ruiyu</forename><surname>Fang</surname></persName>
+							<email>fangry@chinatelecom.cn</email>
+							<affiliation key="aff1">
+								<orgName type="institution">TeleAI</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bing</forename><surname>Wang</surname></persName>
+							<email>bingwang@buaa.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongyan</forename><surname>Xie</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuangyong</forename><surname>Song</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">TeleAI</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhoujun</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Beihang University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Telecom Corp Ltd</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">UCS-SQL: Uniting Content and Structure for Enhanced Semantic Bridging In Text-to-SQL</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D75FC4AB3D52884C0E183C08DA406C47</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:28+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>With the rapid advancement of large language models (LLMs), recent researchers have increasingly focused on the superior capabilities of LLMs in text/code understanding and generation to tackle text-to-SQL tasks. Traditional approaches adopt schema linking to first eliminate redundant tables and columns and prompt LLMs for SQL generation. However, they often struggle with accurately identifying corresponding tables and columns, due to discrepancies in naming conventions between natural language questions (NL) and database schemas. Besides, existing methods overlook the challenge of effectively transforming structure information from NL into SQL. To address these limitations, we introduce UCS-SQL, a novel text-to-SQL framework, uniting both content and structure pipes to bridge the gap between NL and SQL. Specifically, the content pipe focuses on identifying key content within the original content, while the structure pipe is dedicated to transforming the linguistic structure from NL to SQL. Additionally, we strategically selects few-shot examples by considering both the SQL Skeleton and Question Expression (SS-QE selection method), thus providing targeted examples for SQL generation. Experimental results on BIRD and Spider demonstrate the effectiveness of our UCS-SQL framework.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

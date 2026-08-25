@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SparseKmeans: Efficient K-means Clustering For Sparse Data</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Khoi</forename><surname>Nguyen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Pham</forename><surname>Dang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">He-Zhe</forename><surname>Lin</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Chih-Jen</forename><surname>Lin</surname></persName>
+							<email>cjlin@csie.ntu.edu.tw</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="institution">University of Artificial Intelligence Abu Dhabi</orgName>
+								<address>
+									<country key="AE">UAE</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Mohamed bin Zayed</orgName>
+								<orgName type="institution">National Taiwan University Taipei</orgName>
+								<address>
+									<country key="TW">Taiwan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Artificial Intelligence Abu Dhabi</orgName>
+								<address>
+									<country key="AE">UAE</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SparseKmeans: Efficient K-means Clustering For Sparse Data</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3F7393C6B2DE134884863C63C6257208</idno>
+					<idno type="DOI">10.1145/3746252.3761646</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>K-means algorithm</term>
+					<term>Elkan&apos;s method</term>
+					<term>Lloyd&apos;s method</term>
+					<term>unsupervised learning</term>
+					<term>clustering</term>
+					<term>sparse matrix operations</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>We introduce SparseKmeans, the first Python package for fast Kmeans clustering on high-dimensional sparse data. Most existing K-means implementations, such as scikit-learn, are only optimized for dense data and do not run efficiently on sparse inputs. In this work, we thoroughly investigate how to accelerate widely used K-means algorithms on sparse data via matrix operations. In particular, we propose a new design of Elkan&apos;s method that aggregates distance computations and reduces fragmented memory access. By analyzing the structure of key matrices and leveraging highly optimized sparse matrix libraries, SparseKmeans achieves up to 9x speedup over scikit-learn. The package is available at https://github.com/cjlin1/sparsekmeans. CCS Concepts • Computing methodologies → Unsupervised learning.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

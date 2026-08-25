@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">EfficientQAT: Efficient Quantization-Aware Training for Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mengzhao</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Shanghai AI Laboratory</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenqi</forename><surname>Shao</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Shanghai AI Laboratory</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Shanghai AI Laboratory</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiahao</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Shanghai AI Laboratory</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Gao</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Shanghai AI Laboratory</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaipeng</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff1">
+								<address>
+									<settlement>Shanghai AI Laboratory</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ping</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">EfficientQAT: Efficient Quantization-Aware Training for Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0C01BF420D5CF326846C31425463CF6A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) are crucial in modern natural language processing and artificial intelligence. However, they face challenges in managing their significant memory requirements. Although quantization-aware training (QAT) offers a solution by reducing memory consumption through low-bit representations with minimal accuracy loss, it is impractical due to substantial training resources. To address this, we propose Efficient Quantization-Aware Training (EfficientQAT), a more feasible QAT algorithm. EfficientQAT involves two consecutive phases: Block-wise training of all parameters (Block-AP) and end-to-end training of quantization parameters (E2E-QP). To the best of our knowledge, Block-AP is the first method to enable direct training of all parameters in a block-wise manner, reducing accuracy loss in low-bit scenarios by enhancing the solution space during optimization. E2E-QP then trains only the quantization parameters (step sizes) end-to-end, further improving the performance of quantized models by considering interactions among all sub-modules. Extensive experiments demonstrate that EfficientQAT outperforms previous quantization methods across a range of models, including base LLMs, instruction-tuned LLMs, and multimodal LLMs, with scales from 7B to 70B parameters at various quantization bits. For instance, EfficientQAT obtains a 2-bit Llama-2-70B model on a single A100-80GB GPU in 41 hours, with less than 3 points accuracy degradation compared to the full precision (69.48 vs. 72.41). Code is available at https: //github.com/OpenGVLab/EfficientQAT.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

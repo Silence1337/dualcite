@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">How to Make LLMs Forget: On Reversing In-Context Knowledge Edits</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Paul</forename><surname>Youssef</surname></persName>
+							<email>paul.youssef@uni-marburg.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Marburg University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhixue</forename><surname>Zhao</surname></persName>
+							<email>zhixue.zhao@sheffield.ac.uk</email>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Sheffield</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jörg</forename><surname>Schlötterer</surname></persName>
+							<email>joerg.schloetterer@uni-marburg.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Marburg University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Mannheim</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Christin</forename><surname>Seifert</surname></persName>
+							<email>christin.seifert@uni-marburg.de</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Marburg University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">How to Make LLMs Forget: On Reversing In-Context Knowledge Edits</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F8DDC063903B61170CB7D31BFEFF30D7</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In-context knowledge editing (IKE) enables efficient modification of large language model (LLM) outputs without parameter changes and at zero-cost. However, it can be misused to manipulate responses opaquely, e.g., insert misinformation or offensive content. Such malicious interventions could be incorporated into high-level wrapped APIs where the final input prompt is not shown to end-users. To address this issue, we investigate the detection and reversal of IKE-edits. First, we demonstrate that IKE-edits can be detected with high accuracy (F1 &gt; 80%) using only the top-10 output probabilities of the next token, even in a black-box setting, e.g. proprietary LLMs with limited output information. Further, we introduce the novel task of reversing IKE-edits using specially tuned reversal tokens. We explore using both continuous 1 and discrete reversal tokens, achieving over 80% accuracy in recovering original, unedited outputs across multiple LLMs. Our continuous reversal tokens prove particularly effective, with minimal impact on unedited prompts. Through analysis of output distributions, attention patterns, and token rankings, we provide insights into IKE&apos;s effects on LLMs and how reversal tokens mitigate them. This work represents a significant step towards enhancing LLM resilience against potential misuse of in-context editing, improving their transparency and trustworthiness.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

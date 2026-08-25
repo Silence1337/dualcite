@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">C2T-ID: Converting Semantic Codebooks to Textual Document Identifiers for Generative Search</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yingchen</forename><surname>Zhang</surname></persName>
+							<email>zhangyingchen23s@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Ruqing</forename><surname>Zhang</surname></persName>
+							<email>zhangruqin@ict.ac.cn</email>
+							<idno type="ORCID">0000-0003-4294-2541</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jiafeng</forename><surname>Guo</surname></persName>
+							<email>guojiafeng@ict.ac.cn</email>
+							<idno type="ORCID">0000-0002-9509-8674</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Wenjun</forename><surname>Peng</surname></persName>
+							<email>pengwj@mail.ustc.edu.cn</email>
+							<idno type="ORCID">0000-0002-2124-953X</idno>
+						</author>
+						<author>
+							<persName><roleName>Fuyu</roleName><forename type="first">Sen</forename><surname>Li</surname></persName>
+							<idno type="ORCID">0000-0002-2124-953X</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Fuyu</forename><surname>Lv</surname></persName>
+							<email>fuyu.lfy@alibaba-inc.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xueqi</forename><surname>Cheng</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing Hangzhou Hangzhou</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="laboratory">State Key Laboratory of AI Safety</orgName>
+								<orgName type="institution">Chinese Academy of Sciences University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing New York</settlement>
+									<region>NY</region>
+									<country>China USA, 6 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">C2T-ID: Converting Semantic Codebooks to Textual Document Identifiers for Generative Search</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7D4913D8C1D6841392B7C87B7F1E76B7</idno>
+					<idno type="DOI">10.1145/3767695.3769498</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:27+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Neural Retrieval</term>
+					<term>Generative Retrieval</term>
+					<term>Document Identifier Design</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Designing document identifiers (docids) that carry rich semantic information while maintaining tractable search spaces is a important challenge in generative retrieval (GR). Popular codebook methods address this by building a hierarchical semantic tree and constraining generation to its child nodes, yet their numeric identifiers cannot leverage the large language model&apos;s pretrained natural language understanding. Conversely, using text as docid provides more semantic expressivity but inflates the decoding space, making the system brittle to early-step errors. To resolve this trade-off, we propose C2T-ID:(i) first construct semantic numerical docid via hierarchical clustering; (ii) then extract high-frequency metadata keywords and iteratively replace each numeric label with its cluster&apos;s top-𝐾 keywords; and (iii) an optional two-level semantic smoothing step further enhances the fluency of C2T-ID. Experiments on Natural Questions and Taobao&apos;s product search demonstrate that C2T-ID significantly outperforms atomic, semantic codebook, and puretext docid baselines, demonstrating its effectiveness in balancing semantic expressiveness with search space constraints. CCS Concepts • Information systems → Retrieval models and ranking.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Learning from Negative Samples in Biomedical Generative Entity Linking</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chanhwi</forename><surname>Kim</surname></persName>
+							<email>chanhwi_kim@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hyunjae</forename><surname>Kim</surname></persName>
+							<email>hyunjae-kim@korea.ac.kr</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sihyeon</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiwoo</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mujeen</forename><surname>Sung</surname></persName>
+							<email>mujeensung@khu.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Kyung Hee University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jaewoo</forename><surname>Kang</surname></persName>
+							<email>kangj@korea.ac.kr</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Korea University</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">AIGEN Sciences</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Learning from Negative Samples in Biomedical Generative Entity Linking</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2E0EE77B80EA064CB90F50E858DAE312</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:31+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Generative models have become widely used in biomedical entity linking (BioEL) due to their excellent performance and efficient memory usage. However, these models are usually trained only with positive samples, i.e., entities that match the input mention&apos;s identifier, and do not explicitly learn from hard negative samples, which are entities that look similar but have different meanings. To address this limitation, we introduce ANGEL (Learning from Negative Samples in Biomedical Generative Entity Linking), the first framework that trains generative BioEL models using negative samples. Specifically, a generative model is initially trained to generate positive entity names from the knowledge base for given input entities. Subsequently, both correct and incorrect outputs are gathered from the model&apos;s top-k predictions. Finally, the model is updated to prioritize the correct predictions through preference optimization. Our models outperform the previous best baseline models by up to an average top-1 accuracy of 1.4% on five benchmarks. When incorporating our framework into pre-training, the performance improvement increases further to 1.7%, demonstrating its effectiveness in both the pre-training and fine-tuning stages. The code and model weights are available at https://github.com/dmis-lab/ANGEL.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

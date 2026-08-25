@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">StreamingRT: Stream KNN Join with Ray Tracing Core</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shixi</forename><surname>Yang</surname></persName>
+							<email>sxyang22@m.fudan.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kai</forename><surname>Zhang</surname></persName>
+							<email>zhangk@fudan.edu.cn</email>
+							<affiliation key="aff7">
+								<orgName type="department">Corresponding Author</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhigang</forename><surname>Zhao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chunxiao</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Zhenying</forename><surname>He</surname></persName>
+							<email>zhenying@fudan.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Zhigang Zhao</orgName>
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Shandong Computer Science Center (National Supercomputing Center in Jinan) Jinan</orgName>
+								<address>
+									<settlement>Shandong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department" key="dep1">Chunxiao Wang</orgName>
+								<orgName type="department" key="dep2">Shandong Computer Science Center (National Supercomputing Center in Jinan) Jinan</orgName>
+								<address>
+									<settlement>Shandong</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Zhenying He</orgName>
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Yinan Jing</orgName>
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">X. Sean Wang</orgName>
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">StreamingRT: Stream KNN Join with Ray Tracing Core</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7A39481F4748DE378C0EC80DCA541D81</idno>
+					<idno type="DOI">10.1145/3746252.3761409</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>stream data processing</term>
+					<term>kNN join</term>
+					<term>ray tracing</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Efficient processing of k-nearest neighbor (kNN) join operations on streaming data is critical for applications in location-aware services, recommendation systems, and spatial analytics. To serve users in real time, these applications generally require a high-performance kNN join on continuously changing streaming data. This paper introduces StreamingRT, a framework that leverages ray tracing (RT) cores in GPUs to accelerate stream kNN joins in 3D space. By modeling stream data into large primitives and transferring queries into short rays, StreamingRT transforms the kNN join problem into an efficient ray tracing task. To address the ray tracing index updating overhead on stream data, we propose two key techniques, i.e., boundary-extended point partitioning and query-driven BVH lazy updating. Moreover, we also adopt multi-BVH coprocessing and CPU-GPU pipelining to improve performance. These techniques enable efficient stream kNN join on ray tracing cores, delivering unprecedented performance improvement. Experimental evaluations show that StreamingRT can achieve up to 2.2× and 5.8× speedup over the state-of-the-art approach on RT cores and CUDA cores, respectively. CCS Concepts • Computing methodologies → Vector / streaming algorithms; Ray tracing; • Information systems → Join algorithms.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SARA: Salience-Aware Reinforced Adaptive Decoding for Large Language Models in Abstractive Summarization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nayu</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="laboratory">Tianjin Laboratory Autonomous Intelligence Technology and Systems</orgName>
+								<orgName type="institution">Tiangong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Junnan</forename><surname>Zhu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">State Key Laboratory of Multimodal Artificial Intelligence Systems</orgName>
+								<address>
+									<country>CAS</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yiming</forename><surname>Ma</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Data Science &amp; Artificial Intelligence</orgName>
+								<orgName type="institution">The Hong Kong Polytechnic University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhicong</forename><surname>Lu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenlei</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="laboratory">Tianjin Laboratory Autonomous Intelligence Technology and Systems</orgName>
+								<orgName type="institution">Tiangong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yong</forename><surname>Yang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="laboratory">Tianjin Laboratory Autonomous Intelligence Technology and Systems</orgName>
+								<orgName type="institution">Tiangong University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiang</forename><surname>Zhong</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Chongqing University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaiwen</forename><surname>Wei</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="department">College of Computer Science</orgName>
+								<orgName type="institution">Chongqing University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SARA: Salience-Aware Reinforced Adaptive Decoding for Large Language Models in Abstractive Summarization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">553C4255F0291F4BB6353E68CCA20BEF</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLMs have improved the fluency and informativeness of abstractive summarization but remain prone to hallucinations, where generated content deviates from the source document. Recent PMI decoding strategies mitigate over-reliance on prior knowledge by comparing output probabilities with and without source documents, effectively enhancing contextual utilization and improving faithfulness. However, existing strategies often neglect the explicit use of salient contextual information and rely on static hyperparameters to fix the balance between contextual and prior knowledge, limiting their flexibility. In this work, we propose Salience-Aware Reinforced Adaptive decoding (SARA), which incorporates salient information and allows the model to adaptively determine reliance on the source document&apos;s context, salient context, and the model&apos;s prior knowledge based on pointwise mutual information. Moreover, a tokenwise adaptive decoding mechanism via reinforcement learning is proposed in SARA to dynamically adjust the contributions of context and prior knowledge at each decoding timestep. Experiments on CNN/DM, WikiHow, and NYT50 datasets show that SARA consistently improves the quality and faithfulness of summaries across various LLM backbones without modifying their weights.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

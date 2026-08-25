@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Uncertainty-Aware Contrastive Decoding</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hakyung</forename><surname>Lee</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yonsei University</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Subeen</forename><surname>Park</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yonsei University</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joowang</forename><surname>Kim</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">LG CNS</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sungjun</forename><surname>Lim</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yonsei University</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kyungwoo</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yonsei University</orgName>
+								<address>
+									<country key="KR">Republic of Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Uncertainty-Aware Contrastive Decoding</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">E52B78A978E50F292854EED7D89B82ED</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models excel in a wide range of natural language processing tasks, but generating factually accurate and consistent outputs remains a challenge. To improve text reliability, Contrastive Decoding (CD) refines token selection by leveraging differences between an expert and base model, penalizing low-quality token choices. However, CD employs static weighting between models, making it sensitive to variations in model architecture and input characteristics, often resulting in suboptimal token selection and error propagation throughout generation. We propose Uncertainty-Aware Contrastive Decoding (UCD), a method that dynamically adjusts model contributions at each decoding step based on uncertainty. We introduce a cumulative energy function, where uncertainty is quantified as the negative log-sumexp over logits, and decomposed into entropy and expected logit components. This energy serves as a dynamic confidence signal, guiding adaptive model weighting during generation. We demonstrate through extensive experiments that UCD significantly improves factual accuracy and reliability over existing decoding methods. Finally, we provide a theoretical analysis showing that our energy function serves as a well-defined uncertainty metric capturing model confidence. Our code is available at https://github.com/MLAI-Yonsei/UCD.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

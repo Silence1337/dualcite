@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">R-BPE: Improving BPE-Tokenizers with Token Reuse</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nancy</forename><surname>Hamdan</surname></persName>
+							<email>nhamdan@dohainstitute.edu.qa</email>
+							<affiliation key="aff0">
+								<orgName type="department">Arab Center for Research and Policy Studies</orgName>
+								<address>
+									<country>Doha</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Osama</forename><surname>Rakan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Al</forename><surname>Mraikhat</surname></persName>
+							<email>oalmraikhat@dohainstitute.edu.qa</email>
+							<affiliation key="aff0">
+								<orgName type="department">Arab Center for Research and Policy Studies</orgName>
+								<address>
+									<country>Doha</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Fadi</forename><forename type="middle">A</forename><surname>Zaraket</surname></persName>
+							<email>fzaraket@dohainstitute.edu.qa</email>
+							<affiliation key="aff0">
+								<orgName type="department">Arab Center for Research and Policy Studies</orgName>
+								<address>
+									<country>Doha</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">American University of Beirut</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">R-BPE: Improving BPE-Tokenizers with Token Reuse</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">796CF6802343859871020940DB2CAC80</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>This paper presents R-BPE, a lightweight framework for adapting existing Byte-Pair Encoding (BPE) tokenizers to better support a specified target language. It reuses tokens from user-excluded languages and creates ID-based maps to resolve the new tokens of the chosen language. We evaluate R-BPE on Arabic as a target language. R-BPE reduced subword fertility by an average of 24.4% across the LLaMA 3.1 8B, Command R 35B, and Qwen 3 8B models. Applied to LLaMA 3.1 8B in continued pretraining mode, R-BPE yields a 7.33% reduction in training time. On the ArabicMMLU benchmark, the resulting model improved by 5.09 points on five in-domain topics and matched the original model&apos;s overall performance. It also preserved performance on EnglishMMLU. R-BPE effectively leverages existing models&apos; tokenizers, embedding layers, and performance to better support target languages without incurring model size changes. We release an R-BPE implementation that is compatible with HuggingFace interfaces and thereby readily applicable to a wide range of existing models at https://acr.ps/1L9GPmL.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FROG: Fair Removal on Graph</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ziheng</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jiali</forename><surname>Cheng</surname></persName>
+							<email>jiali_cheng@uml.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hadi</forename><surname>Amiri</surname></persName>
+							<email>hadi_amiri@uml.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Lin</surname></persName>
+							<email>lulin@psu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sijia</forename><surname>Liu</surname></persName>
+							<email>liusiji5@msu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Gabriele</forename><surname>Tolomei</surname></persName>
+							<email>tolomei@di.uniroma1.it</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kaushiki</forename><surname>Nag</surname></persName>
+							<email>kaushiki.nag@walmart.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Walmart Global Tech Sunnyvale</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Massachusetts Lowell Lowell</orgName>
+								<address>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Massachusetts Lowell Lowell</orgName>
+								<address>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Walmart Global Tech Sunnyvale</orgName>
+								<address>
+									<region>CA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Pennsylvania State University University Park</orgName>
+								<address>
+									<region>PA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Michigan State University East Lansing</orgName>
+								<address>
+									<region>MI</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Sapienza University of Rome Rome</orgName>
+								<address>
+									<country>Italy Xiangguo Sun</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">The Chinese University of Hong Kong Hong Kong</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FROG: Fair Removal on Graph</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9C07E100FCD720CBADB4267E054836C9</idno>
+					<idno type="DOI">10.1145/3746252.3761341</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:36+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Machine Unlearning</term>
+					<term>Graph Neural Networks</term>
+					<term>Fairness</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>With growing emphasis on privacy regulations, machine unlearning has become increasingly critical in real-world applications such as social networks and recommender systems, many of which are naturally represented as graphs. However, existing graph unlearning methods often modify nodes or edges indiscriminately, overlooking their impact on fairness. For instance, forgetting links between users of different genders may inadvertently exacerbate group disparities. To address this issue, we propose a novel framework that jointly optimizes both the graph structure and the model to achieve fair unlearning. Our method rewires the graph by removing redundant edges that hinder forgetting while preserving fairness through targeted edge augmentation. We further introduce a worst-case evaluation mechanism to assess robustness under challenging scenarios. Experiments on real-world datasets show that our approach achieves more effective and fair unlearning than existing baselines. CCS Concepts • Computing methodologies → Learning paradigms; Learning settings; Neural networks; • Security and privacy → Social network security and privacy.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

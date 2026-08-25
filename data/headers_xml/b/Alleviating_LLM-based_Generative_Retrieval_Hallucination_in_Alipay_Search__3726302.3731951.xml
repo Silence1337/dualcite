@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Alleviating LLM-based Generative Retrieval Hallucination in Alipay Search</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yedan</forename><surname>Shen</surname></persName>
+							<email>shenyedan.syd@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kaixin</forename><surname>Wu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jia</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Linjian</forename><surname>Mo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yuechen</forename><surname>Ding</surname></persName>
+							<email>dingyuechen.dyc@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jingyuan</forename><surname>Wen</surname></persName>
+							<email>wenjingyuan.wjy@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hong</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Mingjie</forename><surname>Zhong</surname></persName>
+							<email>mingjie.zmj@antgroup.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhouhan</forename><surname>Lin</surname></persName>
+							<email>lin.zhouhan@gmail.com</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Yuechen Ding Jingyuan Wen</orgName>
+								<orgName type="laboratory">Ant Group Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Ant Group Hangzhou</orgName>
+								<address>
+									<addrLine>China Hong Liu Mingjie Zhong</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Zhouhan Lin</orgName>
+								<orgName type="laboratory">Ant Group Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="laboratory">LUMIA Lab</orgName>
+								<orgName type="institution">Shanghai Jiao Tong University</orgName>
+								<address>
+									<settlement>Shanghai</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="laboratory">Ant Group Hangzhou</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Alleviating LLM-based Generative Retrieval Hallucination in Alipay Search</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C4AE96D3EB5A54413839E8BD6B9625AC</idno>
+					<idno type="DOI">10.1145/3726302.3731951</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>search system</term>
+					<term>generative retrieval</term>
+					<term>large language models</term>
+					<term>hallucination</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Generative retrieval (GR) has revolutionized document retrieval with the advent of large language models (LLMs), and LLM-based GR is gradually being adopted by the industry. Despite its remarkable advantages and potential, LLM-based GR suffers from hallucination and generates documents that are irrelevant to the query in some instances, severely challenging its credibility in practical applications. We thereby propose an optimized GR framework designed to alleviate retrieval hallucination, which integrates knowledge distillation reasoning in model training and incorporate decision agent to further improve retrieval precision. Specifically, we employ LLMs to assess and reason GR retrieved query-document (q-d) pairs, and then distill the reasoning data as transferred knowledge to the GR model. Moreover, we utilize a decision agent as post-processing to extend the GR retrieved documents through retrieval model and select the most relevant ones from multi perspectives as the final generative retrieval result. Extensive offline experiments on realworld datasets and online A/B tests on Fund Search and Insurance Search in Alipay demonstrate our framework&apos;s superiority and effectiveness in improving search quality and conversion gains. CCS Concepts • Information systems → Novelty in information retrieval; Retrieval models;.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

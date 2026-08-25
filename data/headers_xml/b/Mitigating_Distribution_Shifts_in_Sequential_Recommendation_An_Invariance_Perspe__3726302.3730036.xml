@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mitigating Distribution Shifts in Sequential Recommendation: An Invariance Perspective</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yuxin</forename><surname>Liao</surname></persName>
+							<email>yuxinliao314@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yonghui</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Hou</surname></persName>
+							<email>hmhoumin@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Le</forename><surname>Wu</surname></persName>
+							<idno type="ORCID">0000-0003-4556-0581</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Hefei</forename><surname>Xu</surname></persName>
+							<email>hefeixu604@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Liu</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Knowledge Engineering with Big Data</orgName>
+								<orgName type="institution">Hefei University of Technology Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Key Laboratory of Knowledge Engineering with Big Data</orgName>
+								<orgName type="institution">Hefei University of Technology Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Key Laboratory of Knowledge Engineering with Big Data</orgName>
+								<orgName type="institution">Hefei University of Technology Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Key Laboratory of Knowledge Engineering with Big Data</orgName>
+								<orgName type="institution">Hefei University of Technology Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Institute of Dataspace</orgName>
+								<orgName type="institution">Hefei Comprehensive National Science Center Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Key Laboratory of Knowledge Engineering with Big Data</orgName>
+								<orgName type="institution">Hefei University of Technology Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">Key Laboratory of Knowledge Engineering with Big Data</orgName>
+								<orgName type="institution">Hefei University of Technology Hefei</orgName>
+								<address>
+									<settlement>Anhui</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mitigating Distribution Shifts in Sequential Recommendation: An Invariance Perspective</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">5C7670366A5690893A4689CC8D11337D</idno>
+					<idno type="DOI">10.1145/3726302.3730036</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:43+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Sequential recommendation aims to learn users&apos; dynamic preferences from their historical interactions and predict the next item they are most likely to engage with. In real-world scenarios, timevarying factors (e.g., product promotions, seasonal changes) induce distribution shifts in user interactions. Despite the demonstrated success of existing models, their generalization capability remains limited under such dynamic conditions. Current methods tackle this challenge by leveraging distributionally robust optimization (DRO) to optimize the &quot;worst-case&quot; loss or by employing manually designed data augmentation to enrich the training distribution. Despite their effectiveness, DRO-based approaches are inherently constrained by the sparsity of training data, limiting the range of distributions they can model, while manually designed augmentations risk introducing noise or irrelevant information that could distort user preference learning. Furthermore, these methods often overlook the sensitivity of user interactions to distribution shifts, which is essential for capturing the stable factors in the evolution of user preferences in real-world settings. In this work, we tackle the distribution shifting problem from the perspective of invariant learning. We propose a novel framework called Invariant Learning for Distribution Shifts in SEquential</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

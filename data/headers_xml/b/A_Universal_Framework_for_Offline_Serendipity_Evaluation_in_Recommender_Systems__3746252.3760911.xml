@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Universal Framework for Offline Serendipity Evaluation in Recommender Systems via Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Tokutake</surname></persName>
+							<email>tokutakeyuu@uec.ac.jp</email>
+							<idno type="ORCID">0009-0007-1399-1631</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Kazushi</forename><surname>Okamoto</surname></persName>
+							<email>kazushi@uec.ac.jp</email>
+							<idno type="ORCID">0000-0002-9571-8909</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Kei</forename><surname>Harada</surname></persName>
+							<email>harada@uec.ac.jp</email>
+							<idno type="ORCID">0009-0009-5453-6699</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Atsushi</forename><surname>Shibata</surname></persName>
+							<email>shibata-atsushi@aiit.ac.jp</email>
+							<idno type="ORCID">0000-0003-1794-8562</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Koki</forename><forename type="middle">2025</forename><surname>Karube</surname></persName>
+							<email>karubekoki@uec.ac.jp</email>
+							<idno type="ORCID">0009-0005-2699-1193</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Electro-Communications Chofu</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">The University of Electro-Communications Chofu</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">The University of Electro-Communications Chofu</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Advanced Institute of Industrial Technology</orgName>
+								<address>
+									<addrLine>Shinagawa-ku</addrLine>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">The University of Electro-Communications Chofu</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Universal Framework for Offline Serendipity Evaluation</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Universal Framework for Offline Serendipity Evaluation in Recommender Systems via Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">EB01BB901A5103BB8B102B124F986BB8</idno>
+					<idno type="DOI">10.1145/3746252.3760911</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Serendipity</term>
+					<term>Recommender Systems</term>
+					<term>Large Language Models</term>
+					<term>Evaluation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Serendipity in recommender systems (RSs) has attracted increasing attention as a concept that enhances user satisfaction by presenting unexpected and useful items. However, evaluating serendipitous performance remains challenging because its ground truth is generally unobservable. The existing offline metrics often depend on ambiguous definitions or are tailored to specific datasets and RSs, thereby limiting their generalizability. To address this issue, we propose a universally applicable evaluation framework that leverages large language models (LLMs) known for their extensive knowledge and reasoning capabilities, as evaluators. First, to improve the evaluation performance of the proposed framework, we assessed the serendipity prediction accuracy of LLMs using four different prompt strategies on a dataset containing user-annotated serendipitous ground truth and found that the chain-of-thought prompt achieved the highest accuracy. Next, we re-evaluated the serendipitous performance of both serendipity-oriented and general RSs using the proposed framework on three commonly used real-world datasets, without the ground truth. The results indicated that there was no serendipity-oriented RS that consistently outperformed across all datasets, and even a general RS sometimes achieved higher performance than the serendipity-oriented RS. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

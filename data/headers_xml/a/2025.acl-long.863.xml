@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ChatSOP: An SOP-Guided MCTS Planning Framework for Controllable LLM Dialogue Agents</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zhigen</forename><surname>Li</surname></persName>
+							<email>zhigenli@tju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="laboratory">TJUNLP Lab</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ping An Technology</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">https://github.com/tjunlp-lab</orgName>
+								<address>
+									<country>ChatSOP</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianxiang</forename><surname>Peng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="laboratory">TJUNLP Lab</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">https://github.com/tjunlp-lab</orgName>
+								<address>
+									<country>ChatSOP</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yanmeng</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Ping An Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yong</forename><surname>Cao</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Tübingen AI Center</orgName>
+								<orgName type="institution">University of Tübingen</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tianhao</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="laboratory">TJUNLP Lab</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">https://github.com/tjunlp-lab</orgName>
+								<address>
+									<country>ChatSOP</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Minghui</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="laboratory">TJUNLP Lab</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">https://github.com/tjunlp-lab</orgName>
+								<address>
+									<country>ChatSOP</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linxi</forename><surname>Su</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="laboratory">TJUNLP Lab</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">https://github.com/tjunlp-lab</orgName>
+								<address>
+									<country>ChatSOP</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shang</forename><surname>Wu</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Kunming University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yihang</forename><surname>Wu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="laboratory">TJUNLP Lab</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">https://github.com/tjunlp-lab</orgName>
+								<address>
+									<country>ChatSOP</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuqian</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="laboratory">TJUNLP Lab</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">https://github.com/tjunlp-lab</orgName>
+								<address>
+									<country>ChatSOP</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ye</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Ping An Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Hu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Ping An Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jianfeng</forename><surname>Li</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Ping An Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shaojun</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jing</forename><surname>Xiao</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Ping An Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Deyi</forename><surname>Xiong</surname></persName>
+							<email>dyxiong@tju.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">College of Intelligence and Computing</orgName>
+								<orgName type="laboratory">TJUNLP Lab</orgName>
+								<orgName type="institution">Tianjin University</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Ping An Technology</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="laboratory">https://github.com/tjunlp-lab</orgName>
+								<address>
+									<country>ChatSOP</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ChatSOP: An SOP-Guided MCTS Planning Framework for Controllable LLM Dialogue Agents</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CD07CF4BB46D78A5CBA47B032860ACE3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:42+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Dialogue agents powered by Large Language Models (LLMs) show superior performance in various tasks. Despite the better user understanding and human-like responses, their lack of controllability remains a key challenge, often leading to unfocused conversations or task failure. To address this, we introduce Standard Operating Procedure (SOP) to regulate dialogue flow. Specifically, we propose ChatSOP, a novel SOP-guided Monte Carlo Tree Search (MCTS) planning framework designed to enhance the controllability of LLMdriven dialogue agents. To enable this, we curate a dataset comprising SOP-annotated multiscenario dialogues, generated using a semiautomated role-playing system with GPT-4o and validated through strict manual quality control. Additionally, we propose a novel method that integrates Chain of Thought reasoning with supervised fine-tuning for SOP prediction and utilizes SOP-guided Monte Carlo Tree Search for optimal action planning during dialogues. Experimental results demonstrate the effectiveness of our method, such as achieving a 27.95% improvement in action accuracy compared to baseline models based on GPT-3.5 and also showing notable gains for open-source models. Dataset and codes are publicly available. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

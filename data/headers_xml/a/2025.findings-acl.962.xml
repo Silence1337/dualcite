@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">METASYNTH: Meta-Prompting-Driven Agentic Scaffolds for Diverse Synthetic Data Generation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Haris</forename><surname>Riaz</surname></persName>
+							<email>hriaz@arizona.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Arizona</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sourav</forename><surname>Bhabesh</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vinayak</forename><surname>Arannil</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Miguel</forename><surname>Ballesteros</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Graham</forename><surname>Horwood</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">METASYNTH: Meta-Prompting-Driven Agentic Scaffolds for Diverse Synthetic Data Generation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">251622B0E7FA20D7DF1EADB8B71F6BB3</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent smaller language models such Phi-3.5 and Phi-4 rely on synthetic data generated using larger Language models. Questions remain about leveraging synthetic data for other use cases, such as adapting LLMs to specific domains. A key limitation of synthetic data is low diversity, which negatively impacts its downstream applicability for improving other models. To address this, we propose METASYNTH, a method for generating synthetic data that enhances diversity through meta-prompting, where a language model orchestrates multiple &quot;expert&quot; LLM agents to collaboratively generate data. Using only 25 million tokens of synthetic data generated with METASYNTH, we successfully adapt a well-trained LLM (Mistral-7B-v0.3) to two specialized domains-Finance and Biomedicine-without compromising the capabilities of the resulting model in general tasks. In addition, we evaluate the diversity of our synthetic data using seven automated metrics, and find that it approaches the diversity of LLM pre-training corpora. Continually pre-training Mistral-7B-v0.3 with METASYNTH notably outperforms the base LLM, showing improvements of up to 4.08% in Finance and 13.75% in Biomedicine. The same model shows degraded performance when trained on data generated using a template prompt, even when the template includes prior generations and varying In-Context exemplars of real data. Our findings suggest that a few million tokens of diverse synthetic data without mixing any real data, is sufficient for effective domain adaptation when using MetaSynth.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

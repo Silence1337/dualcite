@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">MICE for CATs: Model-Internal Confidence Estimation for Calibrating Agents with Tools</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nishant</forename><surname>Subramani</surname></persName>
+							<email>nishant2@cs.cmu.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">CMU LTI 3 Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jason</forename><surname>Eisner</surname></persName>
+							<email>jason.eisner@microsoft.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">CMU LTI 3 Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Justin</forename><surname>Svegliato</surname></persName>
+							<email>jsvegliato@microsoft.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">CMU LTI 3 Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benjamin</forename><surname>Van Durme</surname></persName>
+							<email>ben.vandurme@microsoft.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">CMU LTI 3 Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yu</forename><surname>Su</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">CMU LTI 3 Microsoft</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sam</forename><surname>Thomson</surname></persName>
+							<email>samuel.thomson@microsoft.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">CMU LTI 3 Microsoft</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">MICE for CATs: Model-Internal Confidence Estimation for Calibrating Agents with Tools</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">445BB660EA1C4D206BE8578AFA7218BD</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:55+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Tool-using agents that act in the world need to be both useful and safe. Well-calibrated model confidences can be used to weigh the risk versus reward of potential actions, but prior work shows that many models are poorly calibrated. Inspired by interpretability literature exploring the internals of models, we propose a novel class of model-internal confidence estimators (MICE) to better assess confidence when calling tools. MICE first decodes from each intermediate layer of the language model using logit lens (nostalgebraist, 2020) and then computes similarity scores between each layer&apos;s generation and the final output. These features are fed into a learned probabilistic classifier to assess confidence in the decoded output. On the simulated trial and error (STE) tool-calling dataset using Llama3 models, we find that MICE beats or matches the baselines on smoothed expected calibration error. Using MICE confidences to determine whether to call a tool significantly improves over strong baselines on a new metric, expected tool-calling utility. Further experiments show that MICE is sample-efficient, can generalize zero-shot to unseen APIs, and results in higher tool-calling utility in scenarios with varying risk levels. Our code is open source, available at https: //github.com/microsoft/mice_for_cats.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

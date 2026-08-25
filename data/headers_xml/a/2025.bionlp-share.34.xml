@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">VeReaFine: Iterative Verification Reasoning Refinement RAG for Hallucination-Resistant on Open-Ended Clinical QA</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Pakawat</forename><surname>Phasook</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">KMUTT</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rapepong</forename><surname>Pitijaroonpong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">KMUTT</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiramet</forename><surname>Kinchagawat</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">PreceptorAI Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Amrest</forename><surname>Chinkamol</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">PreceptorAI Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kiartnarin</forename><surname>Udomlapsakul</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">PreceptorAI Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tossaporn</forename><surname>Saengja</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">PreceptorAI Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jitkapat</forename><surname>Sawatphol</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">PreceptorAI Tech</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Piyalitt</forename><surname>Ittichaiwong</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">PreceptorAI Tech</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">VeReaFine: Iterative Verification Reasoning Refinement RAG for Hallucination-Resistant on Open-Ended Clinical QA</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">BF47B455D60D4CAC6EA6837D47857341</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:02+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Large language models (LLMs) can generate medical responses, but they often &quot;hallucinate&quot; unsupported or incorrect clinical assertions, risking patient safety and trust. We introduce VeReaFine, a &quot;Verifier-RAG&quot; pipeline, an iterative fact-checking-retrieval process: (1) Given a medical query, we fetch the topk passages from a large biomedical corpus (e.g., PubMed, StatPearls) using a two-stage dense retriever and reranker, (2) employ a small LLM verifier to extract a concise &quot;ground-truth&quot; context from the retrieved data, (3) dynamically issue up to three targeted retrieval queries whenever evidence is lacking, (4) draft an answer with a 7-B generator grounded solely in groundtruth context, and (5) re-verify and refine the Generator LLM response to purge any remaining hallucinations. By iteratively fetching only the missing facts, VeReaFine ensures that every generated response is grounded, yielding performance uplifts with minimal extra cost. On the BioNLP 2025 ClinIQLink &quot;LLM Lie-Detector&quot; challenge, our 7-B generator augmented with VeReaFine rivals or surpasses a 32-B medical model on openended reasoning, reduces multi-hop inverse step-identification errors by 26%. These results demonstrate that moderate-size LLMs and our proposed pipeline can improve the result in open-ended Question Answering in clinical QA.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

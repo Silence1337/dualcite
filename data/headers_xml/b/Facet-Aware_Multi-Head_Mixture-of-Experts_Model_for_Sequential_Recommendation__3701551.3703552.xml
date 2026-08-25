@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Facet-Aware Multi-Head Mixture-of-Experts Model for Sequential Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mingrui</forename><surname>Liu</surname></persName>
+							<email>mingrui001@e.ntu.edu.sg</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit2">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit3">Nanyang Technological University Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sixiao</forename><surname>Zhang</surname></persName>
+							<email>sixiao001@e.ntu.edu.sg</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit2">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit3">Nanyang Technological University Singapore</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cheng</forename><surname>Long</surname></persName>
+							<email>c.long@ntu.edu.sg</email>
+							<affiliation key="aff0">
+								<orgName type="institution" key="instit1">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit2">Nanyang Technological University Singapore</orgName>
+								<orgName type="institution" key="instit3">Nanyang Technological University Singapore</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Facet-Aware Multi-Head Mixture-of-Experts Model for Sequential Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">30933B44B03D221D90986CCE2B5E7BD2</idno>
+					<idno type="DOI">10.1145/3701551.3703552</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Recommender System; Sequential Recommendation</keywords>
+			</textClass>
+			<abstract>
+				<p>Sequential recommendation (SR) systems excel at capturing users&apos; dynamic preferences by leveraging their interaction histories. Most existing SR systems assign a single embedding vector to each item to represent its features, and various types of models are adopted to combine these item embeddings into a sequence representation vector to capture the user intent. However, we argue that this representation alone is insufficient to capture an item&apos;s multi-faceted nature (e.g., movie genres, starring actors). Besides, users often exhibit complex and varied preferences within these facets (e.g., liking both action and musical films in the facet of genre), which are challenging to fully represent. To address the issues above, we propose a novel structure called Facet-Aware Multi-Head Mixture-of-Experts Model for Sequential Recommendation (FAME). We leverage subembeddings from each head in the last multi-head attention layer to predict the next item separately. A gating mechanism integrates recommendations from each head and dynamically determines their importance. Furthermore, we introduce a Mixture-of-Experts (MoE) network in each attention head to disentangle various user preferences within each facet. Each expert within the MoE focuses on a specific preference. A learnable router network is adopted to compute the importance weight for each expert and aggregate them. We conduct extensive experiments on four public sequential recommendation datasets and the results demonstrate the effectiveness of our method over existing baseline models. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

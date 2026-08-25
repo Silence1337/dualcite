@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Aligning to Constraints for Data-Efficient Language Model Customization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chao</forename><surname>Shang</surname></persName>
+							<email>chshang@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shuai</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Sarthak</forename><surname>Jain</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qiang</forename><surname>Ning</surname></persName>
+							<email>qning@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Bonan</forename><surname>Min</surname></persName>
+							<email>bonanmin@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vittorio</forename><surname>Castelli</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yassine</forename><surname>Benajiba</surname></persName>
+							<email>benajiy@amazon.com</email>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dan</forename><surname>Roth</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">AWS AI Labs</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Southern</orgName>
+								<address>
+									<country>California</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Aligning to Constraints for Data-Efficient Language Model Customization</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FF62EC1C1573E22CE821D9203EFE9BE1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:17+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>General-purpose language models (LMs) are aligned to diverse user intents, but fall short when it comes to specific applications. While finetuning is the default method for customized alignment, human annotations are often unavailable in various customization scenarios. Based on the observation that one of the main issues of LM customization is constraint adherence, we investigate the feasibility of using constraints as a bridge from general LMs to customized ones. We investigate common constraints in NLP tasks, categorize them into three classes based on the types of their arguments, and propose a unified and efficient framework, ACT (Aligning to ConsTraints), for customizing LMs without human annotation. Specifically, ACT uses automatic constraint verifiers, which are typically easy to implement in practice, to compute constraint satisfaction rate (CSR) of each response. It samples multiple responses for each prompt and collects preference labels based on their CSR. Subsequently, ACT adapts the LM to the target task through a ranking-based learning process. Experiments on fine-grained entity typing, abstractive summarization, and temporal question answering demonstrate that ACT is capable of enhancing LMs&apos; ability to adhere to different classes of constraints, thereby improving task performance comparable to or approaching that of finetuning with labeled data.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

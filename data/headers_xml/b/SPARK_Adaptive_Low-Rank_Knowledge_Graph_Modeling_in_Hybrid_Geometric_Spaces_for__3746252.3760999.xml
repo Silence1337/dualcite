@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SPARK: Adaptive Low-Rank Knowledge Graph Modeling in Hybrid Geometric Spaces for Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Binhao</forename><surname>Wang</surname></persName>
+							<email>binhawang2-c@my.cityu.edu.hk</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yutian</forename><surname>Xiao</surname></persName>
+							<idno type="ORCID">0000-0002-8276-7920</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Maolin</forename><surname>Wang</surname></persName>
+							<email>morinwang@foxmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Zhiqi</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tianshuo</forename><surname>Wei</surname></persName>
+							<idno type="ORCID">0009-0008-2470-6688</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ruocheng</forename><surname>Guo</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Zhao</surname></persName>
+							<email>xianzhao@cityu.edu.hk</email>
+							<idno type="ORCID">0000-0003-2926-4416</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">City University of Hong Kong Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Beihang University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">City University of Hong Kong Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">City University of Hong Kong Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">City University of Hong Kong Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Independent Researcher Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">City University of Hong Kong Hong Kong SAR</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SPARK: Adaptive Low-Rank Knowledge Graph Modeling in Hybrid Geometric Spaces for Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">34E2AA7903F75CB7343AFBB98761F28D</idno>
+					<idno type="DOI">10.1145/3746252.3760999</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Hyperbolic Spaces</term>
+					<term>Knowledge Graph</term>
+					<term>Recommendation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Knowledge Graphs (KGs) enhance recommender systems but face challenges from inherent noise, sparsity, and Euclidean geometry&apos;s inadequacy for complex relational structures, critically impairing representation learning, especially for long-tail entities. Existing methods also often lack adaptive multi-source signal fusion tailored to item popularity. This paper introduces SPARK, a novel multistage framework systematically tackling these issues. SPARK first employs Tucker low-rank decomposition to denoise KGs and generate robust entity representations. Subsequently, an SVD-initialized hybrid geometric GNN concurrently learns representations in Euclidean and Hyperbolic spaces; the latter is strategically leveraged for its aptitude in modeling hierarchical structures, effectively capturing semantic features of sparse, long-tail items. A core contribution is an item popularity-aware adaptive fusion strategy that dynamically weights signals from collaborative filtering, refined KG embeddings, and diverse geometric spaces for precise modeling of both mainstream and long-tail items. Finally, contrastive learning aligns these multi-source representations. Extensive experiments demonstrate SPARK&apos;s significant superiority over state-of-the-art methods, particularly in improving long-tail item recommendation, offering a robust, principled approach to knowledge-enhanced recommendation. Implementation code is anonymously online 1. CCS Concepts • Information systems → Recommender systems.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

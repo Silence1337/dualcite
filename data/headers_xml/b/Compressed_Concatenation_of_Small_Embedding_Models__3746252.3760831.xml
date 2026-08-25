@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Compressed Concatenation of Small Embedding Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ben</forename><surname>Ayad</surname></persName>
+							<email>benaya01@ads.uni-passau.de</email>
+						</author>
+						<author>
+							<persName><forename type="first">Mohamed</forename><surname>Ayoub</surname></persName>
+							<idno type="ORCID">0009-0009-0774-5412</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Dinzinger</surname></persName>
+							<email>michael.dinzinger@uni-passau.de</email>
+						</author>
+						<author>
+							<persName><forename type="first">Kanishka</forename><surname>Ghosh Dastidar</surname></persName>
+							<email>kanishka.ghoshdastidar@uni-passau.de</email>
+							<idno type="ORCID">0000-0003-4171-0597</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jelena</forename><surname>Mitrović</surname></persName>
+							<email>jelena.mitrovic@uni-passau.de</email>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Granitzer</surname></persName>
+							<email>michael.granitzer@uni-passau.de</email>
+							<idno type="ORCID">0000-0003-3566-5507</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ghosh</forename><surname>Kanishka</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jelena</forename><surname>Dastidar</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><surname>Mitrović</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="middle">2025 Compressed</forename><surname>Granitzer</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Concatenation</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Passau Passau</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Passau Passau</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Passau Passau</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Passau Passau</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">University of Passau Passau</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Compressed Concatenation of Small Embedding Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6BC4E683F271563F970C205EBBFED44E</idno>
+					<idno type="DOI">10.1145/3746252.3760831</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:29+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Dense retrieval</term>
+					<term>Representation Learning</term>
+					<term>Embedding Models</term>
+					<term>Quantization</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Embedding models are central to dense retrieval, semantic search, and recommendation systems, but their size often makes them impractical to deploy in resource-constrained environments such as browsers or edge devices. While smaller embedding models offer practical advantages, they typically underperform compared to their larger counterparts. To bridge this gap, we demonstrate that concatenating the raw embedding vectors of multiple small models can outperform a single larger baseline on standard retrieval benchmarks. To overcome the resulting high dimensionality of naive concatenation, we introduce a lightweight unified decoder trained with a Matryoshka Representation Learning (MRL) loss. This decoder maps the high-dimensional joint representation to a low-dimensional space, preserving most of the original performance without fine-tuning the base models. We also show that while concatenating more base models yields diminishing gains, the robustness of the decoder&apos;s representation under compression and quantization improves. Our experiments show that, on a subset of MTEB retrieval tasks, our concat-encode-quantize pipeline recovers 89% of the original performance with a 48× compression factor when the pipeline is applied to a concatenation of four small embedding models. CCS Concepts • Information systems → Retrieval models and ranking.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

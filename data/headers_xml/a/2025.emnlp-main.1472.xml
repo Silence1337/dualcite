@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">From Charts to Fair Narratives: Uncovering and Mitigating Geo-Economic Biases in Chart-to-Text</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ridwan</forename><surname>Mahbub</surname></persName>
+							<email>rmahbub@yorku.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohammed</forename><surname>Saidul</surname></persName>
+							<email>saidulis@yorku.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mir</forename><surname>Tafseer</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Nayeem</forename><forename type="middle">♦</forename><surname>Md</surname></persName>
+							<email>mnayeem@ualberta.ca</email>
+							<affiliation key="aff1">
+								<orgName type="institution">University of Alberta</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tahmid</forename><surname>Rahman</surname></persName>
+							<email>tahmid20@yorku.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Dialpad Inc</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mizanur</forename><surname>Rahman</surname></persName>
+							<email>mizanurr@yorku.ca</email>
+							<affiliation key="aff3">
+								<orgName type="laboratory">RBC</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shafiq</forename><surname>Joty</surname></persName>
+							<email>sjoty@salesforce.com</email>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="institution">Nanyang Technological University</orgName>
+								<address>
+									<settlement>Singapore</settlement>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<address>
+									<settlement>Salesforce</settlement>
+									<region>AI</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Enamul</forename><surname>Hoque</surname></persName>
+							<email>enamulh@yorku.ca</email>
+							<affiliation key="aff0">
+								<orgName type="institution">York University</orgName>
+								<address>
+									<country key="CA">Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">From Charts to Fair Narratives: Uncovering and Mitigating Geo-Economic Biases in Chart-to-Text</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6FE8949A4583D3FA304DDE11C934FEF9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:46+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Charts are very common for exploring data and communicating insights, but extracting key takeaways from charts and articulating them in natural language can be challenging. The chartto-text task aims to automate this process by generating textual summaries of charts. While with the rapid advancement of large Vision-Language Models (VLMs), we have witnessed great progress in this domain, little to no attention has been given to potential biases in their outputs. This paper investigates how VLMs can amplify geo-economic biases when generating chart summaries, potentially causing societal harm. Specifically, we conduct a large-scale evaluation of geo-economic biases in VLMgenerated chart summaries across 6,000 chartcountry pairs from six widely used proprietary and open-source models to understand how a country&apos;s economic status influences the sentiment of generated summaries. Our analysis reveals that existing VLMs tend to produce more positive descriptions for high-income countries compared to middle-or low-income countries, even when country attribution is the only variable changed. We also find that models such as GPT-4o-mini, Gemini-1.5-Flash, and Phi-3.5 exhibit varying degrees of bias. We further explore inference-time prompt-based debiasing techniques using positive distractors but find them only partially effective, underscoring the complexity of the issue and the need for more robust debiasing strategies. Our code and dataset are publicly available at Vis-NLP repository 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

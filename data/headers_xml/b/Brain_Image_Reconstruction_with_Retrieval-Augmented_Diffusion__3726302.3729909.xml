@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Brain Image Reconstruction with Retrieval-Augmented Diffusion</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shuqi</forename><surname>Zhu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ziyi</forename><surname>Ye</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Zhong</surname></persName>
+							<email>zhong-y22@mails.tsinghua.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Qingyao</forename><surname>Ai</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yujia</forename><surname>Zhou</surname></persName>
+							<email>zhouyujia@mail.tsinghua.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yiqun</forename><surname>Liu</surname></persName>
+							<email>yiqunliu@tsinghua.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Zhongguancun Laboratory Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Computer Science and Technology</orgName>
+								<orgName type="institution">Tsinghua University Zhongguancun Laboratory Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">2025. Brain Image Reconstruction with Retrieval-Augmented Diffusion. In</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Brain Image Reconstruction with Retrieval-Augmented Diffusion</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">44A78ED5E5209B47B27E7AAD232BA03B</idno>
+					<idno type="DOI">10.1145/3726302.3729909</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:27+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Human-centered computing → Human computer interaction (HCI)</term>
+					<term>• Information systems → Information retrieval</term>
+					<term>• Computing methodologies → Neural networks</term>
+					<term>Reconstruction BCI, Multimodal, Brain Image Reconstruction, Diffusion Model, Retrieval-Augmented Generation</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Reconstructing visual images from brain signals is a rapidly evolving research with promising applications in brain-computer interfaces, cognitive neuroscience, and assistive technologies. While visual reconstruction based on functional Magnetic Resonance Imaging (fMRI) has previously achieved notable success, this paper explores cost-effective brain signals, i.e., electroencephalography (EEG) and magnetoencephalography (MEG). These signals are less precise than fMRI, which presents greater challenges for reconstruction. To address this problem, we propose BReAD (Brain Image Reconstruction with Retrieval-Augmented Diffusion), a novel framework that combines EEG/MEG signals with retrievalaugmented diffusion models to improve image reconstruction quality. BReAD utilizes the semantics decoded from brain signals for (1) retrieving semantic priors from a large-scale image database and (2) serving as a conditional constraint during the diffusion process. Extensive experiments demonstrate that BReAD significantly outperforms existing approaches in both qualitative and quantitative evaluations, paving the way for more robust and practical brain-to-image reconstruction systems. Our codes are available at https://github.com/Promise-Z5Q2SQ/BReAD.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

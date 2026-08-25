@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">The Warmup Dilemma: How Learning Rate Strategies Impact Speech-to-Text Model Convergence</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Marco</forename><surname>Gaido</surname></persName>
+							<email>mgaido@fbk.eu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sara</forename><surname>Papi</surname></persName>
+							<email>spapi@fbk.eu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Luisa</forename><surname>Bentivogli</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Alessio</forename><surname>Brutti</surname></persName>
+							<email>brutti@fbk.eu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Mauro</forename><surname>Cettolo</surname></persName>
+							<email>cettolo@fbk.eu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Roberto</forename><surname>Gretter</surname></persName>
+							<email>gretter@fbk.eu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Marco</forename><surname>Matassoni</surname></persName>
+							<email>matasso@fbk.eu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Mohamed</forename><surname>Nabih</surname></persName>
+							<email>mnabih@fbk.eu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Matteo</forename><forename type="middle">Negri</forename><surname>Fondazione</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>Italy</roleName><forename type="first">Bruno</forename><surname>Kessler</surname></persName>
+						</author>
+						<title level="a" type="main">The Warmup Dilemma: How Learning Rate Strategies Impact Speech-to-Text Model Convergence</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">AEF9D6115BC70548E8F1EEF018C208D1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Training large-scale models presents challenges not only in terms of resource requirements but also in terms of their convergence. For this reason, the learning rate (LR) is often decreased when the size of a model is increased. Such a simple solution is not enough in the case of speech-to-text (S2T) trainings, where evolved and more complex variants of the Transformer architecture-e.g., Conformer or Branchformer-are used in light of their better performance. As a workaround, OWSM designed a double linear warmup of the LR, increasing it to a very small value in the first phase before updating it to a higher value in the second phase. While this solution worked well in practice, it was not compared with alternative solutions, nor was the impact on the final performance of different LR warmup schedules studied. This paper fills this gap, revealing that i) large-scale S2T trainings demand a subexponential LR warmup, and ii) a higher LR in the warmup phase accelerates initial convergence, but it does not boost final performance.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Upsample or Upweight? Balanced Training on Heavily Imbalanced Datasets</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Tianjian</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Language and Speech Processing</orgName>
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haoran</forename><surname>Xu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Language and Speech Processing</orgName>
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Weiting</forename><surname>Tan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Language and Speech Processing</orgName>
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kenton</forename><surname>Murray</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Language and Speech Processing</orgName>
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Khashabi</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Center for Language and Speech Processing</orgName>
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Upsample or Upweight? Balanced Training on Heavily Imbalanced Datasets</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">183AF3002752A8A8ED8A0E11EC720EDC</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:45+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Data abundance across different domains exhibits a long-tailed distribution: few domains have abundant data, while most face data scarcity. Our work focuses on a multilingual setting, where available data is heavily skewed towards high-resource languages. Two common strategies to address this disparity are upsampling low-resource data (Temperature Sampling) and upweighting low-resource loss (Scalarization). These methods are often assumed to be equivalent, but this equivalence has not been rigorously established, prompting our investigation. Through theoretical and empirical analysis, we identify when these two methods are equivalent and when they diverge. We prove that they are equivalent under full gradient descent but differ under stochastic gradient descent due to differences in gradient variance. Specifically, Temperature Sampling exhibits lower variance in gradient estimation compared to Scalarization, leading to faster convergence but a higher risk of overfitting. Based on these insights, we propose COOLDOWN, a strategy that starts by heavily upsampling low-resource languages to accelerate convergence and gradually reduces the upsampling to prevent overfitting-achieving the best of both worlds. Our method competes effectively with existing data re-weighting techniques while offering computational efficiency.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

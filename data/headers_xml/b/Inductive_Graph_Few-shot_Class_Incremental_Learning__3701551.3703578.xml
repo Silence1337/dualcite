@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Inductive Graph Few-shot Class Incremental Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yayong</forename><surname>Li</surname></persName>
+							<email>yayong.li@uq.edu.au</email>
+						</author>
+						<author>
+							<persName><forename type="first">Can</forename><surname>Peng</surname></persName>
+							<email>can.peng@eng.ox.ac.uk</email>
+						</author>
+						<author>
+							<persName><forename type="first">Piotr</forename><surname>Koniusz</surname></persName>
+							<email>piotr.koniusz@csiro.au</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Peyman Moghadam</orgName>
+								<orgName type="institution">The University of Queensland Brisbane</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Commonwealth Scientific and Industrial Research Organisation Brisbane</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">University of Oxford Oxford</orgName>
+								<address>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution" key="instit1">Nan Ye</orgName>
+								<orgName type="institution" key="instit2">The University of Queensland Brisbane</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Commonwealth Scientific and Industrial Research Organisation Canberra</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Inductive Graph Few-shot Class Incremental Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">36218BBC338FD0136D9C767E5F1F69F3</idno>
+					<idno type="DOI">10.1145/3701551.3703578</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:39+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Graph Neural Networks</term>
+					<term>Inductive Few-shot Class Incremental Learning</term>
+					<term>class augmentation</term>
+					<term>prototype calibration</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Node classification with Graph Neural Networks (GNN) under a fixed set of labels is well studied, while Graph Few-Shot Class Incremental Learning (GFSCIL), which involves learning a GNN classifier as graph nodes and classes growing over time sporadically, has received much less attention despite its importance. We introduce inductive GFSCIL that continually learns novel classes with newly emerging nodes while maintaining performance on old classes without accessing previous data. This addresses the practical concern of transductive GFSCIL, which requires storing the entire graph with historical data 1. Compared to the transductive GFSCIL, the inductive setting exacerbates catastrophic forgetting due to inaccessible previous data during incremental training, in addition to the overfitting issue caused by label sparsity. Thus, we propose a novel method, called Topology-based class Augmentation and Prototype calibration (TAP). To be specific, it first performs a topology-based class augmentation method, helping replicate the setting of disjoint subgraphs with nodes of novel classes received in incremental sessions, to enhance backbone versatility. In incremental learning, given the limited number of novel class samples, we propose an iterative prototype calibration to improve the separation of class prototypes. Furthermore, as backbone fine-tuning poses the feature distribution drift, prototypes of old classes start failing over time, we propose the prototype shift method for old classes to compensate for the drift. We showcase the proposed method on four datasets. CCS Concepts • Theory of computation → Dynamic graph algorithms. * Most work done at CSIRO. † Corresponding author. 1 A well-established research on incremental learning in computer vision [21, 29] does not permit access to the whole of the past training data due to privacy preservation and memory limitation issues. By analogy, graph incremental learning should not store the subgraphs of past sessions, making such a setting an inductive GFSCIL setting.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Learning to Ask: When LLM Agents Meet Unclear Instruction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Wenxuan</forename><surname>Wang</surname></persName>
+							<email>wangwenxuan@ruc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="institution">Renmin University of China</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Juluan</forename><surname>Shi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">The Chinese</orgName>
+								<orgName type="institution">University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zixuan</forename><surname>Ling</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">The Chinese</orgName>
+								<orgName type="institution">University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuk-Kit</forename><surname>Chan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">The Chinese</orgName>
+								<orgName type="institution">University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaozheng</forename><surname>Wang</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">The Chinese</orgName>
+								<orgName type="institution">University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cheryl</forename><surname>Lee</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">The Chinese</orgName>
+								<orgName type="institution">University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Youliang</forename><surname>Yuan</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">The Chinese</orgName>
+								<orgName type="institution">University of Hong Kong</orgName>
+								<address>
+									<settlement>Shenzhen</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jen-Tse</forename><surname>Huang</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">Johns Hopkins University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenxiang</forename><surname>Jiao</surname></persName>
+							<email>wenxiangjiaonju@gmail.com</email>
+							<affiliation key="aff4">
+								<orgName type="institution">Xiaohongshu Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">R</forename><surname>Lyu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">The Chinese</orgName>
+								<orgName type="institution">University of Hong</orgName>
+								<address>
+									<country>Kong</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Learning to Ask: When LLM Agents Meet Unclear Instruction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1E1F69FFF96055A74C79D632515C84DA</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Equipped with the capability to call functions, modern LLM agents can leverage external tools for addressing a range of tasks unattainable through language skills alone. However, the effective execution of these tools relies heavily not just on the advanced capabilities of LLM agents but also on precise user instructions, which often cannot be ensured in the real world. To evaluate the performance of LLM agents tool-use under imperfect instructions, we meticulously examine the real-world instructions queried from users, analyze the error patterns, and build a challenging tool-use benchmark called Noisy ToolBench (Noisy-ToolBench). We find that due to the next-token prediction training objective, LLM agents tend to arbitrarily generate the missed argument, which may lead to hallucinations and risks. To address this issue, we propose a novel framework, Ask-when-Needed (AwN), which prompts LLM agents to ask questions to users whenever they encounter obstacles due to unclear instructions. Moreover, to reduce the manual labor involved in user-LLM interaction and assess LLM agents&apos; performance in tool utilization from both accuracy and efficiency perspectives, we design an automated evaluation tool named ToolEvaluator. Our experiments demonstrate that the AwN significantly outperforms existing frameworks for tool learning in the NoisyToolBench. We release all related code and datasets to support future research 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

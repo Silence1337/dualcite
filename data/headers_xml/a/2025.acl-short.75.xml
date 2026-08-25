@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Inconsistent Tokenizations Cause Language Models to be Perplexed by Japanese Grammar</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Andrew</forename><surname>Gambardella</surname></persName>
+							<email>atgambardella@weblab.t.u-tokyo.ac.jp</email>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Takeshi</forename><surname>Kojima</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yusuke</forename><surname>Iwasawa</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yutaka</forename><surname>Matsuo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">The University of Tokyo</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Inconsistent Tokenizations Cause Language Models to be Perplexed by Japanese Grammar</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FEA342E711AC1BAD5A70303D81053645</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:47+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Typical methods for evaluating the performance of language models evaluate their ability to answer questions accurately. These evaluation metrics are acceptable for determining the extent to which language models can understand and reason about text in a general sense, but fail to capture nuanced capabilities, such as the ability of language models to recognize and obey rare grammar points, particularly in languages other than English. We measure the perplexity of language models when confronted with the &quot;first person psych predicate restriction&quot; grammar point in Japanese. Weblab is the only tested open source model in the 7-10B parameter range which consistently assigns higher perplexity to ungrammatical psych predicate sentences than grammatical ones. We give evidence that Weblab&apos;s uniformly bad tokenization is a possible root cause for its good performance, and show that Llama 3&apos;s perplexity on grammatical psych predicate sentences can be reduced by orders of magnitude (28x difference) by restricting test sentences to those with uniformly well-behaved tokenizations. We show in further experiments on machine translation tasks that language models will use alternative grammar patterns in order to produce grammatical sentences when tokenization issues prevent the most natural sentence from being output.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

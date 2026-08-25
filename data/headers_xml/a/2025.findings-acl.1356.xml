@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiabei</forename><surname>Chen</surname></persName>
+							<email>chenjiabei2024@ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Artificial Intelligence Laboratory</orgName>
+								<orgName type="institution">Beijing Academy of Artificial Intelligence</orgName>
+								<address>
+									<addrLine>4 Shanghai</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guang</forename><surname>Liu</surname></persName>
+							<email>liuguang@baai.ac.cn</email>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Artificial Intelligence Laboratory</orgName>
+								<orgName type="institution">Beijing Academy of Artificial Intelligence</orgName>
+								<address>
+									<addrLine>4 Shanghai</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shizhu</forename><surname>He</surname></persName>
+							<email>shizhu.he@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kun</forename><surname>Luo</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Artificial Intelligence Laboratory</orgName>
+								<orgName type="institution">Beijing Academy of Artificial Intelligence</orgName>
+								<address>
+									<addrLine>4 Shanghai</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yao</forename><surname>Xu</surname></persName>
+							<email>yao.xu@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Artificial Intelligence Laboratory</orgName>
+								<orgName type="institution">Beijing Academy of Artificial Intelligence</orgName>
+								<address>
+									<addrLine>4 Shanghai</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Zhao</surname></persName>
+							<email>jzhao@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kang</forename><surname>Liu</surname></persName>
+							<email>kliu@nlpr.ia.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Automation</orgName>
+								<orgName type="laboratory">The Key Laboratory of Cognition and Decision Intelligence for Complex Systems</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department" key="dep1">School of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">Academy of Sciences</orgName>
+								<orgName type="institution">University of Chinese</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A2875B2E422F38EA3774750A74BA697A</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:21+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advancements in large language models (LLMs) have demonstrated remarkable capabilities in complex reasoning tasks, such as math problem-solving and code generation. However, multi-hop question answering (MHQA) over long contexts, which demands both robust knowledge-intensive reasoning and efficient processing of lengthy documents, remains a significant challenge. Existing approaches often struggle to balance these requirements, either neglecting explicit reasoning or incurring expensive computational costs due to fullattention mechanisms over long contexts. To address this, we propose Search-in-Context (SIC), a novel framework that integrates Monte Carlo Tree Search (MCTS) with dynamic keyvalue (KV) retrieval to enable iterative, contextaware reasoning. SIC dynamically retrieves critical KV pairs (e.g., 4K tokens) at each step, prioritizing relevant evidence while mitigating the &quot;lost in the middle&quot; problem. Furthermore, the paper introduces a Process-Reward Model (PRM) trained on auto-labeled data to guide the MCTS process with stepwise rewards, promoting high-quality reasoning trajectories without manual annotation. Experiments on three long-context MHQA benchmarks (HotpotQA, 2WikiMultihopQA, MuSiQue) and a counterfactual multi-hop dataset demonstrate SIC&apos;s superiority, achieving state-of-the-art performance while significantly reducing computational overhead.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

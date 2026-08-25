@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">SpecialtyScribe: Enhancing SOAP note Scribing for Medical Specialties using LLMs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Eti</forename><surname>Rastogi</surname></persName>
+							<email>eti_rastogi@yahoo.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Sagar</forename><surname>Goyal</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Fen</forename><surname>Zhao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dong</forename><surname>Yuan</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">DeepScribe Inc</orgName>
+								<address>
+									<addrLine>San Francisco</addrLine>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">DeepScribe Inc</orgName>
+								<address>
+									<addrLine>San Francisco</addrLine>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">DeepScribe Inc</orgName>
+								<address>
+									<addrLine>San Francisco</addrLine>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">DeepScribe Inc</orgName>
+								<address>
+									<addrLine>San Francisco</addrLine>
+									<region>California</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">SpecialtyScribe: Enhancing SOAP note Scribing for Medical Specialties using LLMs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">13D7C715F5C0779F085F25D0C93FFB21</idno>
+					<idno type="DOI">10.1145/3701551.3706131</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:52+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>CCS Concepts</term>
+					<term>Computing methodologies → Natural language processing Large language models</term>
+					<term>medical note writing</term>
+					<term>EHR</term>
+					<term>healthcare</term>
+					<term>domain-specific LLM</term>
+					<term>hallucination detection</term>
+					<term>medical domain</term>
+					<term>finetuning</term>
+					<term>human-expert evaluation</term>
+					<term>oncology</term>
+					<term>medical specialties</term>
+					<term>long context LLM</term>
+					<term>RAG</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>The healthcare industry has accumulated vast amounts of unstructured clinical data, including medical records, patient communications, and visit notes. Clinician-patient conversations are central to medical records, with the clinician&apos;s final summary (the medical note) serving as the key reference for future interactions and treatments. Creating a concise and accurate medical SOAP note is crucial for quality patient care and is especially challenging for specialty care, which requires added focus on relevance to the specialty, clarity, absence of hallucinations, and adherence to doctor preferences. This makes it very challenging for a general-purpose LLM to create satisfactory notes. Some recent LLMs, like GPT-4, have shown promise in medical note generation; however, the high cost, size, latency, and privacy concerns associated with closed models make them impractical for many healthcare facilities. In this talk, we will present our method &quot;SpecialtyScribe&quot;, which is a modular pipeline for generating specialty-specific medical notes. It consists of three main components: an Information Extractor module that captures relevant specialty data, a Context Retriever module that retrieves and verifies the relevant context from the transcript, and a Note Writer module that generates medically acceptable notes based on the extracted information. Our framework outperforms any naively prompt-engineered model by more than 32% on expert scoring, and our in-house models surpass similarly sized open-source models by more than 100% on ROUGE based metrics. The in-house models also match the overall performance of the best closed-source LLMs while being less than 1% the estimated size of them. We&apos;ll showcase multiple ablations across our pipeline, mitigation of hallucinations, the role of retrievers, and the importance of scalable pipelines for multiple specialties. We&apos;ll also discuss the design of our human-expert scoring mechanism for various language model use cases Eti Rastogi and Sagar Goyal contributed equally to this work. Eti Rastogi and Dong Yuan did this work while at DeepScribe Inc.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

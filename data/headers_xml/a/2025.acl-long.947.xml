@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Segment-Based Attention Masking for GPTs</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Shahar</forename><surname>Katz</surname></persName>
+							<email>shaharkatz3@mail</email>
+							<affiliation key="aff0">
+								<orgName type="department">Blavatnik School of Computer Science</orgName>
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Liran</forename><surname>Ringel</surname></persName>
+							<email>liranringel@cs.</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Technion -Israel Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yaniv</forename><surname>Romano</surname></persName>
+							<email>yromano@technion.ac.il</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer Science</orgName>
+								<orgName type="institution">Technion -Israel Institute of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">Technion -Israel Institute of Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lior</forename><surname>Wolf</surname></persName>
+							<email>wolf@cs.tau.ac.il</email>
+							<affiliation key="aff0">
+								<orgName type="department">Blavatnik School of Computer Science</orgName>
+								<orgName type="institution">Tel Aviv University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Segment-Based Attention Masking for GPTs</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FA8BAAD0E898378B67CC45AA854F1926</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Causal masking is a fundamental component in Generative Pre-Trained Transformer (GPT) models, playing a crucial role during training. Although GPTs can process the entire user prompt at once, the causal masking is applied to all input tokens step-by-step, mimicking the generation process. This imposes an unnecessary constraint during the initial &quot;prefill&quot; phase when the model processes the input prompt and generates the internal representations before producing any output tokens. In this work, attention is masked based on the known block structure at the prefill phase, followed by the conventional token-by-token autoregressive process after that. For example, in a typical chat prompt, the system prompt is treated as one block, and the user prompt as the next one. Each of these is treated as a unit for the purpose of masking, such that the first tokens in each block can access the subsequent tokens in a non-causal manner. Then, the model answer is generated in the conventional causal manner. The Segment-by-Segment scheme entails no additional computational overhead. When integrated using a lightweight fine-tuning into already trained models such as Llama and Qwen, MAS quickly increases models&apos; performances. Our code will be available at: https://github.com/shacharKZ/ MAS-Segment-Based-Attention-Masking .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

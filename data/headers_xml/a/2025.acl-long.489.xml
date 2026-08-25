@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CADReview: Automatically Reviewing CAD Programs with Error Detection and Correction</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jiali</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Big Data and Intelligent Robot Ministry of Education</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xusen</forename><surname>Hei</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Big Data and Intelligent Robot Ministry of Education</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Equal Contribution</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hongfei</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Big Data and Intelligent Robot Ministry of Education</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yuancheng</forename><surname>Wei</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Big Data and Intelligent Robot Ministry of Education</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zikun</forename><surname>Deng</surname></persName>
+							<email>zkdeng@scut.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Big Data and Intelligent Robot Ministry of Education</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jiayuan</forename><surname>Xie</surname></persName>
+							<email>jiayuan.xie@polyu.edu.hk</email>
+							<affiliation key="aff2">
+								<orgName type="institution">The Hong Kong Polytechnic University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yi</forename><surname>Cai</surname></persName>
+							<email>ycai@scut.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">School of Software Engineering</orgName>
+								<orgName type="institution">South China University of Technology</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Key Laboratory of Big Data and Intelligent Robot Ministry of Education</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qing</forename><surname>Li</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">The Hong Kong Polytechnic University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CADReview: Automatically Reviewing CAD Programs with Error Detection and Correction</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">22D96620B8A8F1363DD80C8BDF20AAAB</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:33+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Computer-aided design (CAD) is crucial in prototyping 3D objects through geometric instructions (i.e., CAD programs). In practical design workflows, designers often engage in time-consuming reviews and refinements of these prototypes by comparing them with reference images. To bridge this gap, we introduce the CAD review task to automatically detect and correct potential errors, ensuring consistency between the constructed 3D objects and reference images. However, recent advanced multimodal large language models (MLLMs) struggle to recognize multiple geometric components and perform spatial geometric operations within the CAD program, leading to inaccurate reviews. In this paper, we propose the CAD program repairer (ReCAD) framework to effectively detect program errors and provide helpful feedback on error correction. Additionally, we create a dataset, CADReview, consisting of over 20K program-image pairs, with diverse errors for the CAD review task. Extensive experiments demonstrate that our ReCAD significantly outperforms existing MLLMs, which shows great potential in design applications 1 .</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

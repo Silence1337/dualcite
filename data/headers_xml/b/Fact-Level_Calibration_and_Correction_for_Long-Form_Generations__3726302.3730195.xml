@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fact-Level Calibration and Correction for Long-Form Generations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Yige</forename><surname>Yuan</surname></persName>
+							<email>yuanyige20z@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Bingbing</forename><surname>Xu</surname></persName>
+							<email>xubingbing@ict.ac.cn</email>
+							<idno type="ORCID">0000-0002-0147-2590</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Hexiang</forename><surname>Tan</surname></persName>
+							<email>tanhexiang21s@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Fei</forename><surname>Sun</surname></persName>
+							<email>sunfei@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Teng</forename><surname>Xiao</surname></persName>
+							<email>tengxiao01@gmail.com</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Huawei</forename><surname>Shen</surname></persName>
+							<email>shenhuawei@ict.ac.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Xueqi</forename><surname>Cheng</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="institution">University of Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="institution">Independent Researcher State College</orgName>
+								<address>
+									<region>PA</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Institute of Computing Technology</orgName>
+								<orgName type="institution">Chinese Academy of Sciences Beijing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Chinese Academy of Sciences</orgName>
+								<address>
+									<settlement>Beijing Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fact-Level Calibration and Correction for Long-Form Generations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C66B0B6252A32A2EAA9879FF7B270184</idno>
+					<idno type="DOI">10.1145/3726302.3730007</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:34+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Large Language Model</term>
+					<term>Confidence Calibration</term>
+					<term>Self-Correction</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Large language models (LLMs) have achieved remarkable progress across various domains, yet their tendency to generate hallucinations remains a critical barrier to their practical reliability. Confidence calibration addresses this challenge by aligning a model&apos;s confidence with its actual accuracy, improving self-evaluation and trustworthiness. However, traditional confidence calibration, operating at response level, are inadequate for long-form generation, which involve complex outputs composed of multiple atomic facts, each with varying confidence, correctness, and relevance to the query. To overcome this limitation, we propose a fact-level confidence calibration framework that evaluates and adjusts confidence at the granularity of individual facts, incorporating both relevance and correctness. This framework identifies finer-grained calibration discrepancies, reduces overconfidence, and reveals confidence variance. Based on this framework, we introduce CARE (Confidence-Aware Fact Correction), a method that leverages high-confidence facts to iteratively refine and correct low-confidence ones. Experimental results demonstrate that our CARE effectively improves the quality of generated content. Our code is available at this link. CCS Concepts • Computing methodologies → Natural language generation.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

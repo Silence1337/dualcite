@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">EMO: Embedding Model Distillation via Intra-Model Relation and Optimal Transport Alignments</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Minh-Phuc</forename><surname>Truong</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Hanoi University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hai</forename><forename type="middle">An</forename><surname>Vu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Hanoi University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tu</forename><surname>Vu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">ByteDance Inc</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><roleName>Diep</roleName><forename type="first">Thi-Ngoc</forename><surname>Nguyen</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="institution">VNU University of Engineering and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linh</forename><surname>Ngo Van</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Hanoi University of Science and Technology</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Thien</forename><forename type="middle">Huu</forename><surname>Nguyen</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Oregon</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Trung</forename><surname>Le</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="institution">Monash University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">EMO: Embedding Model Distillation via Intra-Model Relation and Optimal Transport Alignments</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F788B857A232DE3F369D3D265F0D495E</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T08:58+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Knowledge distillation (KD) is crucial for compressing large text embedding models, but faces challenges when teacher and student models use different tokenizers (Cross-Tokenizer KD-CTKD). Vocabulary mismatches impede the transfer of relational knowledge encoded in deep representations, such as hidden states and attention matrices, which are vital for producing high-quality embeddings. Existing CTKD methods often focus on direct output alignment, neglecting this crucial structural information. We propose a novel framework tailored for CTKD embedding model distillation. We first map tokens one-to-one via Minimum Edit Distance (MinED). Then, we distill intra-model relational knowledge by aligning attention matrix patterns using Centered Kernel Alignment, focusing on the top-m most important tokens of the directly mapped tokens. Simultaneously, we align final hidden states via Optimal Transport with Importance-Scored Mass Assignment, which emphasizes semantically important token representations, based on importance scores derived from attention weights. We evaluate distillation from state-of-the-art embedding models (e.g., LLM2Vec, BGE) to a Bert-base-uncased model on embedding-reliant tasks such as text classification, sentence pair classification, and semantic textual similarity. Our proposed framework significantly outperforms existing CTKD baselines. By preserving attention structure and prioritizing key representations, our approach yields smaller, highfidelity embedding models despite tokenizer differences.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

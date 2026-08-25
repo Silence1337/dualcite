@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ADACAD: Adaptively Decoding to Balance Conflicts between Contextual and Parametric Knowledge</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Han</forename><surname>Wang</surname></persName>
+							<email>hwang@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Archiki</forename><surname>Prasad</surname></persName>
+							<email>archiki@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Elias</forename><surname>Stengel-Eskin</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mohit</forename><surname>Bansal</surname></persName>
+							<email>mbansal@cs.unc.edu</email>
+							<affiliation key="aff0">
+								<orgName type="institution">UNC Chapel Hill</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ADACAD: Adaptively Decoding to Balance Conflicts between Contextual and Parametric Knowledge</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">CAB9B0FACCA81595AC535DDB935552E5</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:54+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Knowledge conflict arises from discrepancies between information in the context of a large language model (LLM) and the knowledge stored in its parameters. This can hurt performance when using standard decoding techniques, which tend to ignore the context. Existing test-time contrastive methods seek to address this by comparing the LLM&apos;s output distribution with and without the context and adjust the model according to the contrast between them. However, we find that these methods frequently misjudge the degree of conflict and struggle to handle instances that vary in their amount of conflict, with static methods over-adjusting when conflict is absent. We propose a fine-grained, instance-level approach called ADACAD, which dynamically infers the weight of adjustment based on the degree of conflict, as measured by the Jensen-Shannon divergence between distributions representing contextual and parametric knowledge. Across four LLMs, six question-answering (QA) and three summarization datasets, we demonstrate that ADACAD consistently outperforms other decoding baselines with average QA accuracy gains of 14.21% (absolute) over a static contrastive baseline, and improves the factuality of summaries by 6.19 (AlignScore). Lastly, we show that while contrastive baselines hurt performance when conflict is absent, ADACAD mitigates these losses, making it more applicable to real-world datasets in which some examples have conflict and others do not. 1</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

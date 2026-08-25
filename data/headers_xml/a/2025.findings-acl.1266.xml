@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Tool learning via Inference-time Scaling and Cycle Verifier</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiaobo</forename><surname>Liang</surname></persName>
+							<email>xbliang@suda.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Data Intelligence and Advanced Computing</orgName>
+								<orgName type="institution" key="instit1">Harbin Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wenjing</forename><surname>Xie</surname></persName>
+							<email>wjxie@stu.suda.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Data Intelligence and Advanced Computing</orgName>
+								<orgName type="institution" key="instit1">Harbin Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Juntao</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Data Intelligence and Advanced Computing</orgName>
+								<orgName type="institution" key="instit1">Harbin Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Wanfu</forename><surname>Wang</surname></persName>
+							<email>wfwang@stu.suda.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Data Intelligence and Advanced Computing</orgName>
+								<orgName type="institution" key="instit1">Harbin Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><forename type="middle">♦</forename><surname>Kehai</surname></persName>
+							<email>chenkehai@hit.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Data Intelligence and Advanced Computing</orgName>
+								<orgName type="institution" key="instit1">Harbin Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Min</forename><surname>Zhang</surname></persName>
+							<email>minzhang@suda.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Data Intelligence and Advanced Computing</orgName>
+								<orgName type="institution" key="instit1">Harbin Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Soochow</forename><surname>University</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Data Intelligence and Advanced Computing</orgName>
+								<orgName type="institution" key="instit1">Harbin Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Huawei</forename><surname>Technologies</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Key Laboratory of Data Intelligence and Advanced Computing</orgName>
+								<orgName type="institution" key="instit1">Harbin Institute of Technology</orgName>
+								<orgName type="institution" key="instit2">Soochow University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Tool learning via Inference-time Scaling and Cycle Verifier</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0E58900D1CA543412B34B317E6786335</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:19+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In inference-time scaling, Chain-of-Thought (CoT) plays a crucial role in enabling large language models (LLMs) to exhibit reasoning capabilities. However, in many scenarios, high-quality CoT data is scarce or even unavailable. In such cases, STaR-like methods can help LLMs synthesize CoT based on user queries and response, but they inevitably suffer from the risk of compounding errors. In this work, we tackle an even more challenging scenario: tool learning in the absence of user queries. We design a data scaling method using back-translation, which establishes an inference cycle to synthesize both user queries and CoT data. To reudce the compounding error of inference time, we introduce two rule-based verifiers to assess the validity of the synthesized CoT data. In particular, the Cycle Verifier facilitates performance improvement by continuously accumulating new data over multiple iterations. Our approach achieves a 75.4% pass rate and a 79.6% win rate using small models (7B) in StableToolBench. Notably, these results are obtained exclusively from self-synthesized high-quality data, without relying on external supervision or expert trajectories for warm-up.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

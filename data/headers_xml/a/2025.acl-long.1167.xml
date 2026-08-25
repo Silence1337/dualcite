@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Don&apos;t Get Lost in the Trees: Streamlining LLM Reasoning by Overcoming Tree Search Exploration Pitfalls</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Ante</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Key Laboratory of Digital Protection and Intelligent Processing of Intangible</orgName>
+								<orgName type="department" key="dep2">Ministry of Culture and Tourism</orgName>
+								<orgName type="institution">Cultural Heritage of Fujian and Taiwan (Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Linfeng</forename><surname>Song</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Ye</forename><surname>Tian</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dian</forename><surname>Yu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Haitao</forename><surname>Mi</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Duan</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">School of Computer Science and Technology</orgName>
+								<orgName type="institution">Soochow University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhaopeng</forename><surname>Tu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jinsong</forename><surname>Su</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">School of Informatics</orgName>
+								<orgName type="institution">Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="laboratory">Shanghai Artificial Intelligence Laboratory</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Key Laboratory of Digital Protection and Intelligent Processing of Intangible</orgName>
+								<orgName type="department" key="dep2">Ministry of Culture and Tourism</orgName>
+								<orgName type="institution">Cultural Heritage of Fujian and Taiwan (Xiamen University</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Dong</forename><surname>Yu</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Tencent AI Lab</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Don&apos;t Get Lost in the Trees: Streamlining LLM Reasoning by Overcoming Tree Search Exploration Pitfalls</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3379F639956380DD4B46522D424E62D1</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T07:15+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Recent advancements in tree search algorithms guided by verifiers have significantly enhanced the reasoning capabilities of large language models (LLMs), but at the cost of increased computational resources. In this work, we identify two key challenges contributing to this inefficiency: over-exploration due to redundant states with semantically equivalent content, and under-exploration caused by high variance in verifier scoring leading to frequent trajectory switching. To address these issues, we propose FETCH-an efficient tree search framework, which is a flexible, plug-and-play system compatible with various tree search algorithms. Our framework mitigates overexploration by merging semantically similar states using agglomerative clustering of text embeddings obtained from a fine-tuned Sim-CSE model. To tackle under-exploration, we enhance verifiers by incorporating temporal difference learning with adjusted λ-returns during training to reduce variance, and employing a verifier ensemble to aggregate scores during inference. Experiments on GSM8K, GSM-Plus, and MATH datasets demonstrate that our methods significantly improve reasoning accuracy and computational efficiency across four different tree search algorithms, paving the way for more practical applications of LLM-based reasoning. The code is available at https: //github.com/DeepLearnXMU/Fetch.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Large Models are Good Annotators for Zero-Shot Learning</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Qingzhi</forename><surname>He</surname></persName>
+							<email>qingzhihe@nuaa.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yizhen</forename><surname>Jia</surname></persName>
+							<email>yz.jia@nuaa.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Wentong</forename><surname>Li</surname></persName>
+							<email>wentong_li@nuaa.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Shengcai</forename><surname>Liao</surname></persName>
+							<email>scliao@uaeu.ac.ae</email>
+						</author>
+						<author>
+							<persName><forename type="first">Rong</forename><surname>Quan</surname></persName>
+							<email>quanrong21@nuaa.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Tong</forename><surname>Cui</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jie</forename><surname>Qin</surname></persName>
+							<email>jie.qin@nuaa.edu.cn</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Nanjing University of Aeronautics and Astronautics Nanjing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Nanjing University of Aeronautics and Astronautics Nanjing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Nanjing University of Aeronautics and Astronautics Nanjing</orgName>
+								<address>
+									<country>China United Arab</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Emirates University</orgName>
+								<address>
+									<addrLine>Al Ain</addrLine>
+									<country key="AE">United Arab Emirates</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Nanjing University of Aeronautics and Astronautics Nanjing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Nanjing University of Industrial Technology Nanjing</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="department">SIGIR &apos;25</orgName>
+								<orgName type="institution">Nanjing University of Aeronautics and Astronautics Nanjing</orgName>
+								<address>
+									<settlement>Padua</settlement>
+									<country>China Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Large Models are Good Annotators for Zero-Shot Learning</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">F9E28A1FF9A8814377A57338A0A618E8</idno>
+					<idno type="DOI">10.1145/3726302.3730219</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:41+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Zero-Shot Learning</term>
+					<term>Pre-trained Large Models</term>
+					<term>Efficient Labeling</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Human-annotated attributes serve as effective semantic label embeddings for zero-shot learning (ZSL); however, their annotation is labor-intensive and difficult to scale. Recent studies have explored weakly supervised semantic label embeddings to reduce human effort, but these methods often fail to capture visual similarity and underperform compared to human-annotated semantics. In this work, we propose a minimally supervised yet effective approach: GPTand CLIP-powered attributes (GCAtt). Specifically, we introduce a three-step interaction process with ChatGPT-comprising preliminary design, hierarchical refinement, and specific value determination-to generate attributes that are both category-shared and discriminative for classification. Additionally, we develop a method that encodes attributes and their values as potential text pairings, leveraging CLIP&apos;s retrieval capabilities for annotation. Experimental results on four widely used benchmarks demonstrate that GCAtt consistently outperforms human-annotated semantics. Code and data are available at https://github.com/RowenaHe/GCAtt. CCS Concepts • Information systems → Learning to rank.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

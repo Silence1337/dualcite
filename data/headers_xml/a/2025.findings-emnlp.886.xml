@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">GRIL: Knowledge Graph Retrieval-Integrated Learning with Large Language Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Jialin</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Houyu</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Seongjun</forename><surname>Yun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Alejandro</forename><surname>Mottini</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rex</forename><surname>Ying</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiang</forename><surname>Song</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Vassilis</forename><forename type="middle">N</forename><surname>Ioannidis</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zheng</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Qingjun</forename><surname>Cui</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Yale University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">GRIL: Knowledge Graph Retrieval-Integrated Learning with Large Language Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">7B3FE2CAFBDC6AC64E35B8A032828D16</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T10:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>Retrieval-Augmented Generation (RAG) has significantly mitigated the hallucinations of Large Language Models (LLMs) by grounding the generation with external knowledge. Recent extensions of RAG to graph-based retrieval offer a promising direction, leveraging the structural knowledge for multi-hop reasoning. However, existing graph RAG typically decouples retrieval and reasoning processes, which prevents the retriever from adapting to the reasoning needs of the LLM. They also struggle with scalability when performing multi-hop expansion over large-scale graphs, or depend heavily on annotated ground-truth entities, which are often unavailable in opendomain settings. To address these challenges, we propose a novel graph retriever trained endto-end with LLM, which features an attentionbased growing and pruning mechanism, adaptively navigating multi-hop relevant entities while filtering out noise. Within the extracted subgraph, structural knowledge and semantic features are encoded via soft tokens and the verbalized graph, respectively, which are infused into the LLM together, thereby enhancing its reasoning capability and facilitating interactive joint training of the graph retriever and the LLM reasoner. Experimental results across three QA benchmarks show that our approach consistently achieves state-of-the-art performance, validating the strength of joint graph-LLM optimization for complex reasoning tasks. Notably, our framework eliminates the need for predefined ground-truth entities by directly optimizing the retriever using LLM logits as implicit feedback, making it especially effective in open-domain settings.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">FedCIA: Federated Collaborative Information Aggregation for Privacy-Preserving Recommendation</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mingzhe</forename><surname>Han</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dongsheng</forename><surname>Li</surname></persName>
+							<email>dongshengli@fudan.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jiafeng</forename><surname>Xia</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jiahao</forename><surname>Liu</surname></persName>
+							<email>jiahaoliu21@m.fudan.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Hansu</forename><surname>Gu</surname></persName>
+							<email>hansug@acm.org</email>
+						</author>
+						<author>
+							<persName><forename type="first">Peng</forename><surname>Zhang</surname></persName>
+							<email>zhangpeng_@fudan.edu.cn</email>
+							<idno type="ORCID">0000-0002-9109-4625</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Ning</forename><surname>Gu</surname></persName>
+							<email>ninggu@fudan.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Tun</forename><surname>Lu</surname></persName>
+							<email>lutun@fudan.edu.cn</email>
+							<idno type="ORCID">0000-0002-6633-4826</idno>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Microsoft Research Asia Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<settlement>Seattle</settlement>
+									<country>China United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Fudan University Shanghai</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">FedCIA: Federated Collaborative Information Aggregation for Privacy-Preserving Recommendation</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D9E7E3BC5EB8F0A050F83A3FD6A623D0</idno>
+					<idno type="DOI">10.1145/3726302.3729977</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T11:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>recommendation</term>
+					<term>federated learning</term>
+					<term>collaborative information</term>
+				</keywords>
+			</textClass>
+			<abstract>
+				<p>Recommendation algorithms rely on user historical interactions to deliver personalized suggestions, which raises significant privacy concerns. Federated recommendation algorithms tackle this issue by combining local model training with server-side model aggregation, where most existing algorithms use a uniform weighted summation to aggregate item embeddings from different client models. This approach has three major limitations: 1) information loss during aggregation, 2) failure to retain personalized local features, and 3) incompatibility with parameter-free recommendation algorithms. To address these limitations, we first review the development of recommendation algorithms and recognize that their core function is to share collaborative information, specifically the global relationship between users and items. With this understanding, we propose a novel aggregation paradigm named collaborative information aggregation, which focuses on sharing collaborative information rather than item parameters. Based on this new paradigm, we introduce the federated collaborative information aggregation (FedCIA) method for privacy-preserving recommendation. This method requires each client to upload item similarity matrices for aggregation, which allows clients to align their local models without constraining embeddings to a unified vector space. As a result, it mitigates information loss caused by direct summation, preserves the personalized embedding distributions of individual clients, and supports the aggregation of parameter-free models. Theoretical analysis and experimental results on real-world datasets * Corresponding author.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

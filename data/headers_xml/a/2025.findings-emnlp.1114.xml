@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Model Calibration for Emotion Detection</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mihaela</forename><surname>Petre-Vlad</surname></persName>
+							<email>mihaela.petre-vlad@my.fmi.unibuc.ro</email>
+							<affiliation key="aff0">
+								<orgName type="department">Computer Science</orgName>
+								<orgName type="institution">University of Bucharest</orgName>
+								<address>
+									<country key="RO">Romania</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Cornelia</forename><surname>Caragea</surname></persName>
+							<email>cornelia@uic.edu</email>
+							<affiliation key="aff1">
+								<orgName type="department">Computer Science</orgName>
+								<orgName type="institution">University of Illinois</orgName>
+								<address>
+									<settlement>Chicago</settlement>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Florentina</forename><surname>Hristea</surname></persName>
+							<email>fhristea@fmi.unibuc.ro</email>
+							<affiliation key="aff0">
+								<orgName type="department">Computer Science</orgName>
+								<orgName type="institution">University of Bucharest</orgName>
+								<address>
+									<country key="RO">Romania</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Model Calibration for Emotion Detection</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">38D09AC1FD10E4A22FED9FFB2F519EB2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:44+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>In this paper, we propose a unified approach to model calibration for emotion detection that exploits the complementary strengths of knowledge distillation and the MixUp data augmentation technique to enhance the trustworthiness of emotion detection models. Specifically, we use a MixUp method informed by training dynamics that generates augmented data by interpolating easy-to-learn with ambiguous samples based on their similarity and dissimilarity provided by saliency maps. We use this MixUp method to calibrate the teacher model in the first generation of the knowledge distillation process. To further calibrate the teacher models in each generation, we employ dynamic temperature scaling to update the temperature used for scaling the teacher predictions. We find that calibrating the teachers with our method also improves the calibration of the student models. We test our proposed method both indistribution (ID) and out-of-distribution (OOD). To obtain better OOD performance, we further fine-tune our models with a simple MixUp method that interpolates a small number of OOD samples with ambiguous ID samples.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

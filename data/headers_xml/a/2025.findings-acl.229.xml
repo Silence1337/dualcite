@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">System Prompt Hijacking via Permutation Triggers in LLM Supply Chains</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Yan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Purdue University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Siyuan</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Purdue University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xuan</forename><surname>Chen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Purdue University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Kaiyuan</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Purdue University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Guangyu</forename><surname>Shen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Purdue University</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xiangyu</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Purdue University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">System Prompt Hijacking via Permutation Triggers in LLM Supply Chains</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A85B0FBAD794ED3CC628E3C60D716699</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-07-15T09:24+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+				<p>LLMs are increasingly developed through distributed supply chains, where model providers create base models that deployers customize with system prompts for task-specific applications and safety alignment. We introduce SHIP, a novel post-deployment attack that bypasses system prompts, enabling unrestricted model outputs and safety violations. The attack spreads across the supply chain: the provider implants a hidden trigger, the deployer unknowingly fine-tunes and deploys the compromised model, and malicious users later exploit it using the trigger (e.g., obtained via underground market), as real-world software supply chain breaches. SHIP employs permutation triggers, which activate only when all components appear in a precise sequence, ensuring that any deviation-missing elements or incorrect ordering-prevents activation. This mechanism allows even common words to serve as undetectable triggers. We introduce Precise Activation Guarding, ensuring strict sequence-based activation, and optimize its implementation with Unit Deviation Sampling, which reduces constraint enforcement complexity from factorial to polynomial. Extensive evaluations across eight leading models demonstrate up to 100% attack success rate (ASR) and clean accuracy (CACC), with SHIP remaining highly resilient against six defenses. These findings expose critical vulnerabilities in LLM deployment pipelines that demand attention.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>
