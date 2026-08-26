@@ -36,7 +36,7 @@ except ImportError:
     pycountry = None   # geo features degrade gracefully
 
 TEI = "{http://www.tei-c.org/ns/1.0}"
-INDEX_VERSION = 6
+INDEX_VERSION = 9
 
 # ============================== title normalization ==============================
 
@@ -150,12 +150,41 @@ COUNTRY_ALIASES = {
 }
 
 
-def normalize_country(raw: str) -> str | None:
+# Two-letter ISO codes that are far more often non-country abbreviations in
+# free-text academic affiliations than the actual (tiny) country. Bare
+# occurrences of these in free text are NOT treated as countries. This is only
+# applied to free text — a GROBID <country key="..."> attribute is authoritative
+# and bypasses this check (see from_key below).
+AMBIGUOUS_CC = {
+    "AI",  # Anguilla vs "Artificial Intelligence"
+    "ML",  # Mali vs "Machine Learning"
+    "IS",  # Iceland vs the word "is" / "Information Systems"
+    "AS",  # American Samoa vs "as"
+    "OR",  # Oregon-ish / "or"  (not a country anyway)
+    "SO",  # Somalia vs "so"
+    "TO",  # Tonga vs "to"
+    "AM",  # Armenia vs "am"
+    "ME",  # Montenegro vs "me"
+    "AL",  # Albania vs "AL" (Alabama, et al.)
+    "LA",  # Laos vs "LA" (Los Angeles, Louisiana)
+    "AD",  # Andorra vs "ad"
+    "BA",  # Bosnia vs "BA" (degree)
+    "MS",  # Montserrat vs "MS" (degree, Microsoft)
+    "MD",  # Moldova vs "MD" (Maryland, doctor)
+    "MT",  # Malta vs "MT" (Montana, mount)
+    "MO",  # Macao — keep? "MO" = Missouri. Macao resolves via alias.
+}
+
+
+def normalize_country(raw: str, from_key: bool = False) -> str | None:
     if not raw or pycountry is None:
         return None
     raw = raw.strip()
     if len(raw) == 2 and raw.isalpha():
         code = raw.upper()
+        # skip ambiguous codes when they come from free text (not a key attr)
+        if not from_key and code in AMBIGUOUS_CC:
+            return None
         if pycountry.countries.get(alpha_2=code):
             return code
     lower = raw.lower().strip(" .,;")
@@ -495,6 +524,62 @@ def _country_from_institution(name: str) -> str | None:
     return None
 
 
+def _clean_institution(name: str) -> str:
+    """
+    Strip a trailing city that GROBID appended to an institution name, so
+    "Tsinghua University Beijing" and "Tsinghua University" don't count as two
+    separate institutions.
+
+    Conservative: only strips trailing tokens that are clearly appended
+    location, never touches the core name. Handles:
+      "University of Amsterdam Amsterdam"  -> "University of Amsterdam"
+      "Tsinghua University Beijing"        -> "Tsinghua University"
+      "City University of Hong Kong Hong Kong" -> "City University of Hong Kong"
+    """
+    if not name:
+        return name
+    tokens = name.split()
+    if len(tokens) < 3:
+        return name
+
+    # Known multi-word cities to strip from the end (longest first).
+    MULTI_CITY = ["hong kong", "new york", "san diego", "san francisco",
+                  "los angeles", "cape town", "abu dhabi", "tel aviv"]
+    low = name.lower()
+    for city in MULTI_CITY:
+        suffix = " " + city
+        if low.endswith(suffix):
+            # strip it, unless the name IS just the city
+            cut = name[: len(name) - len(suffix)].strip()
+            if len(cut.split()) >= 2:
+                return cut
+
+    # Single trailing token: strip if it's a known city OR repeats the previous
+    # token (GROBID's "Amsterdam Amsterdam" duplication).
+    INST_TAIL = {"university", "institute", "college", "school", "academy",
+                 "laboratory", "lab", "technology", "sciences", "science",
+                 "group", "corporation", "corp", "center", "centre", "china",
+                 "singapore"}  # words a real name legitimately ends on
+    last = tokens[-1].lower().strip(",.")
+    prev = tokens[-2].lower().strip(",.")
+
+    # exact duplication is always safe to strip ("... Amsterdam Amsterdam")
+    if last == prev:
+        cut = " ".join(tokens[:-1]).strip()
+        if len(cut.split()) >= 2:
+            return cut
+
+    # strip a trailing city ONLY if the token before it is an institutional
+    # word — i.e. the name already looks complete and the city is tacked on
+    # ("Tsinghua University | Beijing"). This protects names that legitimately
+    # END in a place ("National University of | Singapore").
+    if last in CITY_COUNTRY and prev in INST_TAIL:
+        cut = " ".join(tokens[:-1]).strip()
+        if len(cut.split()) >= 2:
+            return cut
+    return name
+
+
 def parse_header(xml_path: Path) -> tuple[list[str], list[str]]:
     """Return (countries, institutions) from a processHeaderDocument XML."""
     if not xml_path.exists():
@@ -513,15 +598,16 @@ def parse_header(xml_path: Path) -> tuple[list[str], list[str]]:
                 continue
             otype = (org.get("type") or "").lower()
             if otype == "institution":
-                institutions.add(txt)
-                aff_insts.append(txt)
+                clean = _clean_institution(txt)
+                institutions.add(clean)
+                aff_insts.append(clean)
             aff_all_org.append(txt)
 
         aff_country_found = False
         for addr in aff.findall(f"{TEI}address"):
             cel = addr.find(f"{TEI}country")
             if cel is not None:
-                code = normalize_country(cel.get("key", "")) or \
+                code = normalize_country(cel.get("key", ""), from_key=True) or \
                        _extract_country((cel.text or "").strip())
                 if code:
                     countries.add(code)
@@ -539,7 +625,7 @@ def parse_header(xml_path: Path) -> tuple[list[str], list[str]]:
                             aff_country_found = True
                             break
         for cel in aff.findall(f"{TEI}country"):
-            code = normalize_country(cel.get("key", "")) or \
+            code = normalize_country(cel.get("key", ""), from_key=True) or \
                    _extract_country((cel.text or "").strip())
             if code:
                 countries.add(code)
@@ -732,9 +818,14 @@ def build_index(cfg: Config, force: bool = False, quiet: bool = False) -> dict:
 
     # --- resolve citations ---
     citations = {}
+    total_refs = {}   # per paper: total unique references made (incl. outside corpus)
     for pid, refs in all_refs.items():
         cited = set()
+        unique = set()
         for t, d in refs:
+            # count unique references (dedup by DOI or normalized title)
+            key = d if d else (norm_title(t) or f"_anon_{len(unique)}")
+            unique.add(key)
             tgt = None
             if d and d in doi_to_id:
                 tgt = doi_to_id[d]
@@ -745,6 +836,7 @@ def build_index(cfg: Config, force: bool = False, quiet: bool = False) -> dict:
             if tgt and tgt != pid:
                 cited.add(tgt)
         citations[pid] = sorted(cited)
+        total_refs[pid] = len(unique)
 
     n_edges = sum(len(v) for v in citations.values())
     log(f"  {n_edges} intra-corpus citations")
@@ -776,6 +868,7 @@ def build_index(cfg: Config, force: bool = False, quiet: bool = False) -> dict:
         "version": INDEX_VERSION,
         "papers": papers,
         "citations": citations,
+        "total_refs": total_refs,
         "affiliations": affiliations,
         "flows": flows,
     }

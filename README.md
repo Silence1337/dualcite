@@ -136,6 +136,38 @@ To rebuild the index after changing data or config, delete
 `data/.precomputed/index.json` (or it rebuilds automatically when the config
 version changes).
 
+## Exporting a text summary
+
+Besides the interactive app, you can dump all the aggregate results — citation
+flows, per-venue and cross-community counts, top countries and institutions,
+co-authoring pairs, most-cited papers — to a single Markdown file:
+
+```bash
+python export_summary.py
+```
+
+This writes `results_summary.md`. It's a compact, readable digest of what the
+dataset shows, useful for writing up findings or feeding to another tool for
+analysis. A pre-generated summary for the bundled 2025 CL vs IR data is included
+at [`examples/results_summary.md`](examples/results_summary.md).
+
+### Adding the "all years" breakdown (optional)
+
+By default the summary counts citation links *within* the 2025 corpus. If you
+also have all-years reference lists for each community, pass them and the
+summary gains an internal / external / other breakdown — how the 2025 papers
+cite each community across **all years**, not just the 2025 slice:
+
+```bash
+python export_summary.py --cl-refs acl_all_papers_full.json \
+                         --ir-refs ir_all_years_works.json
+```
+
+Without these flags the script runs exactly as above. The reference lists are
+large and dataset-specific, so they aren't bundled — build them with the
+`data-collection/` collectors (e.g. `collect_all_acl_articles.py`) or supply
+your own. See `reference-lists/README.md`.
+
 ---
 
 ## How it works
@@ -222,6 +254,7 @@ force a rebuild.
 ```
 dualcite/
 ├── config.yaml            # everything venue-specific lives here
+├── export_summary.py      # dump aggregate results to results_summary.md
 ├── dualcite/              # the tool
 │   ├── app.py             # unified app with tabs
 │   ├── config.py          # config loading/validation
@@ -236,7 +269,10 @@ dualcite/
 │   └── headers_xml/{a,b}/ #   headers per cluster
 ├── pdfs/{a,b}/            # put your own PDFs here (empty by default)
 ├── data-collection/       # research scripts used to build that data
-├── examples/screenshots/  # screenshots shown in this README
+├── reference-lists/        # all-years lists for the optional breakdown (git-ignored)
+├── examples/
+│   ├── screenshots/       # screenshots shown in this README
+│   └── results_summary.md # pre-generated summary for the bundled data
 └── requirements.txt
 ```
 
