@@ -76,9 +76,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large Reasoning Models (LRMs) are often bottlenecked by the high cost of output tokens. We show that a significant portion of these tokens are useless self-repetitions-what we call &quot;word salad&quot;-that exhaust the decoding budget without adding value. Interestingly, we observe that LRMs are self-aware when trapped in these loops: the hidden states of &lt;\n\n&gt; tokens trailing each reasoning chunk exhibit patterns that allow us to detect word salad behavior onthe-fly via a single-layer linear classifier. Once detected, a simple chop appended by a straightforward regeneration prompt yields substantial length savings with minimal quality loss. Our work offers WordSaladChopper (WSC)-a lightweight, turnkey component for LRM that is minimally invasive to its reasoning trajectory by only removing semantically redundant tokens. Given its low overhead, strong savings, and the lack of semantic value of word salad tokens, we believe it is not too far-fetched to argue that WSC-or a similar component-is a must-have for all LRM applications with user experience in mind. Our code is publicly available at https://github.com/ wenyaxie023/WordSaladChopper.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -70,9 +70,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Transformer attention scales quadratically with sequence length O(n 2), limiting long-context use. We propose Adaptive Retention, a probabilistic, layer-wise token selection mechanism that learns which representations to keep under a strict global budget M. Retention is modeled with Bernoulli gates trained via a Hard-Concrete/variational relaxation and enforced with a simple top-M rule at inference, making the method differentiable and dropin for standard encoders. Across classification, extractive QA, and long-document summarization, keeping only 30-50% of tokens preserves ≥ 95% of full-model performance while cutting peak memory by ∼ 35-45% and improving throughput by up to ∼ 1.8×. This architecture-agnostic approach delivers practical long-context efficiency without modifying base attention or task heads.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

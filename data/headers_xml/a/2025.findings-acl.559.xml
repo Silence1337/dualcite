@@ -55,9 +55,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Vision-language models (VLMs) achieve impressive zero-shot performance on multimodal reasoning tasks. Oftentimes, best reported performance is achieved with a zero-or a fewshot prompt. Asking the model solving the same task using a different approach, such as through code generation, can hurt performance. In addition, training sets are typically no longer useful for improving model performance through few-shot learning, due to their use in training. Indeed, we observe that autoprompting techniques such as DSPy (Khattab et al., 2023), when applied on training sets, do not produce few-shot examples that significantly improve validation performance. Further, when used in conjunction with programof-thought prompting, performance becomes even worse. Our work overcomes these limitations by introducing a novel self-play programming interface which leverages the ability of VLMs to first generate code to decompose a complex visual reasoning task in sub-tasks, then use itself, or other models, as a tool to solve decomposed tasks. Our approach enables DSPy to not suffer from performance drops, when applied iteratively on training sets. Furthermore, it outperforms zero-shot baselines on difficult chart reasoning benchmarks. We report the performance of our approach on ChartQA, PlotQA and ChartFC. This enables large models, such as Gemini or GPT to autonomously learn how to use themselves as tools and iteratively improve without the need for additional data.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

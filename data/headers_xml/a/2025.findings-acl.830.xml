@@ -63,9 +63,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>This paper poses two critical issues in evaluating base models (without post-training): (1) Unstable evaluation during training: in the early stages of pre-training, the models lack the capability to answer questions as required, leading to unstable evaluation results. This instability makes it difficult to provide solid conclusions to guide the training, especially for key experiments such as data ablation and scaling law. (2) Inconsistency between base and instruct models: base models generally exhibit poorer evaluation performance compared to corresponding instruct models. This gap poses a challenge for assessing whether a base model with better evaluation can truly lead to a better instruct model. To address these issues, we propose Base model Oriented Systematic Evaluation (BOSE), a method specifically designed to optimize the evaluation of base models. Specifically, BOSE introduces two key innovations: In-Context Light-instruction Prompt (ICLiP) for open-ended tasks and Blank-ppl for multichoice tasks with candidate options, which transforms the standard perplexity (ppl) metric into a fill-in-the-blank format to mitigate early-stage evaluation fluctuations. Furthermore, we are the first to propose Kendall&apos;s rank correlation to quantitatively measure the evaluation stability and consistency. Experimental results demonstrate that BOSE significantly enhances both the stability of evaluations during pre-training and the consistency between base and instruct models, thereby providing more reliable guidance for the LLMs&apos; training.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

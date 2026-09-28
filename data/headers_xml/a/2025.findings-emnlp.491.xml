@@ -77,9 +77,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Metrics like FACTSCORE and VERISCORE that evaluate long-form factuality operate by decomposing an input response into atomic claims and then individually verifying each claim. While effective and interpretable, these methods incur numerous LLM calls and can take upwards of 100 seconds to evaluate a single response, limiting their practicality in large-scale evaluation and training scenarios. To address this, we propose VERIFASTSCORE, which leverages synthetic data to fine-tune Llama3.1 8B for simultaneously extracting and verifying all verifiable claims within a given text based on evidence from Google Search. We show that this task cannot be solved via few-shot prompting with closed LLMs due to its complexity: the model receives ∼4K tokens of evidence on average and needs to concurrently decompose claims, judge their verifiability, and verify them against noisy evidence. However, our fine-tuned VER-IFASTSCORE model demonstrates strong correlation with the original VERISCORE pipeline at both the example level (r = 0.80) and system level (r = 0.94) while achieving an overall speedup of 6.6× (9.9× excluding evidence retrieval) over VERISCORE. To facilitate future factuality research, we publicly release our VERIFASTSCORE model and synthetic datasets. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

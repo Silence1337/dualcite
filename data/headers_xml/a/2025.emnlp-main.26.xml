@@ -98,9 +98,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Instruction tuning (IT) improves large language models (LLMs) by aligning their outputs with human instructions, but its success depends critically on training data quality, and datasets such as Alpaca often contain noisy or suboptimal examples that undermine fine-tuning. Prior selection strategies score samples using general-purpose LLMs (e.g., GPT), leveraging their strong language understanding yet introducing inherent biases that misalign with the target model&apos;s behavior and yield unstable downstream performance. Influence-based methods address this by estimating each example&apos;s marginal contribution to overall performance, but they typically assume additive contributions and therefore overlook higher-order interactions among samples. To overcome these limitations, we propose JI 2 S, a novel framework that jointly models both marginal and combinatorial influences within sample groups. Applying JI 2 S to select the top 1,000 most influential examples from Alpaca, we fine-tune LLaMA2-7B, Mistral-7B, and LLaMA2-13B and evaluate them on Open LLM Benchmarks, MT-Bench, and GPT-4-judged pairwise comparisons. Our experiments show that JI 2 S consistently outperforms full-dataset training and strong baselines, highlighting the value of capturing joint influence for high-quality instruction fine-tuning. We provide our code in this GitHub repository.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

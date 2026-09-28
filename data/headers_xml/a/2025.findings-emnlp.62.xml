@@ -110,9 +110,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models (LLMs) excel in many tasks, but their safety guarantees vary by languages, e.g., responses in English tend to be safer than those in low-resource languages. This inconsistency creates a vulnerability, since an attacker can circumvent safety measures by using a less-supported language as an intermediary, even without fluency in that language. Traditional solutions rely on multilingual safety alignment, which demands vast, per-language datasets and introduces significant trade-offs between usefulness and safety (the so-called &quot;alignment tax&quot;). To overcome these limitations, we introduce English as Defense Proxy (E-Proxy), a unified approach that leverages English, usually the advantage language of LLMs, as a universal safety anchor. During multilingual training, E-Proxy uses English jailbreak prompts to extract the model&apos;s existing safety knowledge, then applies simple language-mapping prompts (e.g., &quot;Please answer in {target language}&quot;) to transfer that knowledge across languages. Our analysis shows that formulating prompts in a highresource language preserves the model&apos;s utility, while enforcing responses in the target language significantly enhances safety. We evaluate E-Proxy on extensive benchmarks of both attack resistance and task performance. On the MultiJail benchmark, E-Proxy blocks over 99 % of jailbreak attempts while retaining 95 % of average task performance, all with a carefully constructed multilingual alignment data.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

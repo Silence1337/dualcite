@@ -93,9 +93,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The Mixture of Experts (MoE) architecture improves large language models (LLMs) by utilizing sparsely activated expert sub-networks with a routing module, yet it typically demands high training cost. Previous work introduces parameter-efficient fine-tuning (PEFT) modules, e.g., LoRA, to achieve a lightweight MoE for efficiency. However, they construct static experts by manually splitting the LoRA parameters into fixed groups, which limits flexibility and dynamism. Furthermore, this manual partitioning also hinders the effective utilization of well-initialized LoRA modules. To tackl the challenges, we first delve into the parameter patterns in LoRA modules, revealing that there exists task-relevant parameters that are concentrated along the rank dimension. Based on this, we redesign the construction of experts and propose the LoRACoE (LoRA Composition of Experts) method. Specifically, when confronted with a task, it dynamically builds experts based on rank-level parameter composition, i.e., experts can flexibly combine rank-level parameters in LoRA module. Extensive experiments demonstrate that compared to other LoRA-based MoE methods, our method achieves better task performance across a broader range of tasks.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -82,9 +82,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Routing networks in sparsely activated mixtureof-experts (MoE) dynamically allocate input tokens to top-k experts through differentiable sparse transformations, enabling scalable model capacity while preserving computational efficiency. Traditional MoE networks impose an expert capacity constraint to ensure GPU-friendly computation. However, this leads to token dropping when capacity is saturated and results in low hardware efficiency due to padding in underutilized experts. Removing the capacity constraint, in turn, compromises load balancing and computational efficiency. To address these issues, we propose Maximum Score Routing (MaxScore), a novel MoE routing paradigm that models routing as a minimum-cost maximum-flow problem and integrates a SoftTopk operator. MaxScore resolves the fundamental limitations of iterative rerouting and optimal transport formulations, achieving lower training losses and higher evaluation scores at equivalent FLOPs compared to both constrained and unconstrained baselines. Implementation details and experimental configurations can be obtained from https: //github.com/dongbw18/MaxScore.git.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

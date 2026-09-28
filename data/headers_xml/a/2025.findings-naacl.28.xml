@@ -64,9 +64,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Currently, large language models (LLMs) have achieved impressive performance in natural language processing tasks. However, LLMs still exhibit many hallucinations when analyzing system logs, which is due to the implicit knowledge and rules in logs that LLMs cannot capture. Based on this, we propose LogRules, a lightweight log analysis framework that generates and utilizes rules through LLMs. Lo-gRules consists of three stages: an induction stage, an alignment stage, and a reasoning stage. Firstly, in the induction stage, an strong LLM (e.g., GPT-4o-mini) is tasked with generating a series of rules related to logs, which are then validated on the training set. When the rules are confirmed to produce correct reasoning results, they are added to a rule repository. Secondly, considering that the LLMs with small size (≈8B parameters) still face challenges in utilizing rules, we design an alignment method based on rule-case contrastive preference optimization (CPO) to effectively enhance the rule reasoning capabilities of these LLMs. Finally, in the reasoning stage, the LLM constructs prompt using the rule repository and performs log analysis on the test set. Experiments show that LogRules outperforms LLM-based methods in log parsing and anomaly detection tasks, and achieves better performance compared to case-based methods. * Equal contribution.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

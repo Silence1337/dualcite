@@ -98,9 +98,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models (LLMs) have demonstrated exceptional performance across diverse natural language processing tasks. However, as the model size and the input sequence&apos;s length increase, the linearly increasing keyvalue (KV) cache significantly degrades inference throughput. Therefore, grouped-query attention (GQA), as an alternative to multihead attention (MHA), has been widely introduced into LLMs. In this work, we propose a cost-effective method for converting MHA into GQA with any compression ratio of KV heads. The key point of our method lies in the application of Procrustes analysis to the attention heads, which enhances the similarity among attention heads while preserving computational invariance, thereby improving the model&apos;s post-training performance. Subsequently, we employ L 0 regularization to prune redundant parameters. The model after pruning can be adapted to the standard GQA framework. Experimental results show that our strategy can compress up to 87.5% KV heads of LLaMA2-7B model and 75% KV heads of Sheared-LLaMA-1.3B with acceptable performance degradation. Our code is released at https://github.com/fpcsong/mha2gqa.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -81,9 +81,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models (LLMs) have shown strong potential in enhancing text clustering when combined with traditional embedding models. However, existing methods predominantly treat LLMs as static pseudo-oracles, i.e., unidirectionally querying them for similarity assessment or data augmentation, while never seeking feedback from embedding models to improve them. In this work, we propose a training framework that enables bidirectional refinement between LLMs and embedding models. We first design task-aware prompts to guide the LLM in generating interpretations for the input texts. These interpretations are projected into the embedding space, in which interpretations that are preferred by the embedding model are selected based on their distribution densities. The selected interpretations are then used to fine-tune the LLM via preference optimization to prioritize the generation of helpful interpretations. Meanwhile, we enhance the embedding model via contrastive learning on the generated interpretations and perform clustering on the output embeddings, leading to iterative cotraining between the LLM and the embedding model. Experiments on 14 benchmark datasets across 5 tasks demonstrate the effectiveness of our method.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

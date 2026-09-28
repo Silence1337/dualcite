@@ -53,9 +53,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Annotated datasets for supervised learning tasks often contain incorrect gold annotations, i.e. label noise. To address this issue, many noisy label learning approaches incorporate metrics to filter out unreliable samples, for example using heuristics such as high loss or low confidence. However, when these metrics are integrated into larger pipelines, it becomes difficult to compare their effectiveness, and understand their individual contribution to reducing label noise. This paper directly compares popular sample metrics for detecting incorrect annotations in named entity recognition (NER). NER is commonly approached as token classification, so the metrics are calculated for each training token and the incorrect ones are flagged by defining metrics thresholds. We compare the metrics based on (i) their accuracy in detecting the incorrect labels and (ii) the test scores when retraining a model using the cleaned dataset. We show that training dynamics metrics work the best overall. The best metrics effectively reduce the label noise across different noise types. The errors that the model has not yet memorized are more feasible to detect, and relabeling these tokens is a more effective strategy than excluding them from training. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

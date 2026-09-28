@@ -112,9 +112,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large Language Models (LLMs) are often quantized to lower precision to reduce the memory cost and latency in inference. However, quantization often degrades model performance, thus fine-tuning is required for various downstream tasks. Traditional finetuning methods such as stochastic gradient descent and Adam optimization require backpropagation, which are error-prone in the lowprecision settings. To overcome these limitations, we propose the Quantized Zeroth-Order (QuZO) framework, specifically designed for fine-tuning LLMs through low-precision (e.g., 4-or 8-bit) forward passes. Our method avoids the low-precision straight-through estimator, which requires backward computation, and instead utilizes optimized stochastic rounding to mitigate increased bias. QuZO simplifies the training process, while achieving results comparable to first-order methods in FP8 and superior accuracy in INT8 and INT4 training. Experiments demonstrate that QuZO achieves competitive performance on classification, multi-choice, and generation tasks under low-bit training, including zero-shot reasoning tasks. Notably, QuZO incurs minimal overhead and reduces memory consumption by 2.94×-5.47× compared to quantized first-order methods during LLaMA-7B finetuning ‡ .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

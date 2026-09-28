@@ -55,9 +55,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The quality of supervised fine-tuning (SFT) data is crucial for the performance of large multimodal models (LMMs), yet current data enhancement methods often suffer from factual errors and hallucinations due to inadequate visual perception. To address this challenge, we propose VERITAS, a pipeline that systematically integrates vision priors and multiple state-of-the-art LMMs with statistical methods to enhance SFT data quality. VERITAS leverages visual recognition models (RAM++) and OCR systems (PP-OCRv4) to extract structured vision priors, which are combined with images, questions, and answers. Three LMMs (GPT-4o, Gemini-2.5-Pro, Doubao-1.5-pro) evaluate the original answers, providing critique rationales and scores that are statistically fused into a high-confidence consensus score serving as ground truth. Using this consensus, we train a lightweight critic model via Group Relative Policy Optimization (GRPO), enhancing reasoning capabilities efficiently. Each LMM then refines the original answers based on the critiques, generating new candidate answers; we select the highest-scoring one as the final refined answer. Experiments across six multimodal benchmarks demonstrate that models fine-tuned with data processed by VERITAS consistently outperform those using raw data, particularly in text-rich and fine-grained reasoning tasks. Our critic model exhibits enhanced capability comparable to state-of-theart LMMs while being significantly more efficient. We release our pipeline, datasets, and model checkpoints to advance research in multimodal data optimization.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

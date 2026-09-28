@@ -97,9 +97,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Long-context language models (LCLMs) can process long context, but still exhibit position bias, also known as &quot;lost in the middle&quot;, which indicates placing key information in the middle of the context will significantly affect performance. To mitigating this, we first explore the micro-level manifestations of position bias, concluding that attention weights are a microlevel expression of position bias. Then we identify that, in addition to position embeddings, positional information in hidden states also contributes to position bias, and it manifests itself in specific channels of hidden states, called positional hidden states. Based on these, we propose a method to mitigate position bias by scaling positional hidden states. Experiments on NaturalQuestions Multi-document QA, KV retrieval and LongBench, using various models including RoPE models, context windowextended models, and Alibi models, demonstrate the effectiveness and generalizability of our approach. Our method can improve performance by up to 15.2% in &quot;lost in the middle&quot; benchmark by modifying just one channel of hidden states. Our code is available at https://aka.ms/PositionalHidden.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

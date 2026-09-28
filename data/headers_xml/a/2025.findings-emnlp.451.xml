@@ -53,9 +53,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Knowledge distillation (KD) enables the compression of large language models (LLMs) by transferring knowledge from a high-capacity teacher model to a resource-efficient student model, maintaining competitive performance for tasks such as instruction following. However, conventional white-box KD methods often suffer from training-inference mismatches and suboptimal performance due to the asymmetric nature of Kullback-Leibler divergence (KLD) and reliance on computationally expensive student-generated outputs. To address these challenges, we propose Least-to-Most Prompting Knowledge Distillation (L2M-KD), a novel white-box KD method grounded in curriculum learning (CL) and adaptive loss design. L2M-KD employs a two-pronged approach: (1) a CL strategy that ranks training samples by difficulty using Rouge-L scores, partitioning them into easy-to-hard subsets across multiple stages, and (2) an adaptive KD loss that transitions from KLD to skew KLD, dynamically adjusting teacher guidance to mitigate mode-averaging and over-smoothing. Extensive experiments on instruction-following tasks demonstrate that L2M-KD outperforms existing white-box KD methods, achieving superior student model performance with reduced computational overhead by leveraging ground-truth outputs exclusively. Our findings underscore the efficacy of difficultyaware training and adaptive teacher guidance, offering a computationally efficient and robust approach to LLM compression. The code for our method is publicly available at https://github.com/liuliuyuan6/L2M-KD.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

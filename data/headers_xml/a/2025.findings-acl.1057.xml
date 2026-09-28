@@ -78,9 +78,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Direct Preference Optimization (DPO) have proposed offline alternatives to Reinforcement Learning from Human Feedback (RLHF). In DPO, each preference pair, which serves as the foundation for learning, is typically constructed by first generating multiple responses to the same instruction and then annotating them to indicate the preferred choice. However, when the responses are highly similar, the weak preference signal can introduce annotation noise, which may hinder model optimization. Additionally, DPO suffers from the drawback of over-optimizing for verbose generation. A potential reason is the presence of length bias in preference datasets, which can lead to length exploitation. To address these issues, we propose a DPO-based multi-weight preference strength and length optimization (MWPO) method. Specifically, we propose to reweight preference pairs based on implicit reward margins and response length margins, unifying them through a geometric mixture to generate synthetic weights for optimization. This method allows preference pairs with stronger preference signals or more favorable length feature to have a more pronounced impact on model parameters. Moreover, our method does not require additional annotators. We validate our method on models of four different scales across multiple benchmarks. Our method surpasses state-of-the-art (SOTA) baselines, outperforming DPO by up to 8.7% on AlpacaEval 2 while reducing generation length by 9.4% in the Mistral setting 1 .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

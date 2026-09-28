@@ -81,9 +81,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models (LLMs) power modern AI applications, but processing sensitive data on untrusted servers raises privacy concerns. Homomorphic encryption (HE) enables computation on encrypted data for secure inference. However, neural text generation requires decoding methods like argmax and sampling, which are non-polynomial and thus computationally expensive under encryption, creating a significant performance bottleneck. We introduce CutMax, an HE-friendly argmax algorithm that reduces ciphertext operations compared to prior methods, enabling practical greedy decoding under encryption. We also propose the first HE-compatible nucleus (topp) sampling method, leveraging CutMax for efficient stochastic decoding with provable privacy guarantees. Both techniques are polynomial, supporting efficient inference in privacypreserving settings. Moreover, their differentiability facilitates gradient-based sequencelevel optimization as a polynomial alternative to straight-through estimators. We further provide strong theoretical guarantees for CutMax, proving its convergence via exponential amplification of the gap ratio between the maximum and runner-up elements. Evaluations on realistic LLM outputs show latency reductions of 24×-35× over baselines, advancing secure text generation.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

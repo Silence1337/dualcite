@@ -69,9 +69,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Parameter-efficient fine-tuning (PEFT) large language models (LLMs) have shown impressive performance in various downstream tasks. However, in many real-world scenarios, the collected training data inevitably contains noisy labels. To learn from noisy labels, most solutions select samples with small losses for model training. However, the selected samples, in turn, impact the loss computation in the next iteration. An inaccurate initial selection can create a vicious cycle, leading to suboptimal performance. To break this cycle, we propose Delora, a novel framework that decouples the sample selection from model training. For sample selection, Delora establishes a noisy label detector by introducing clean and noisy LoRA. Benefiting from the memory effect, the clean LoRA is encouraged to memorize clean data, while the noisy LoRA is constrained to memorize mislabeled data, which serves as a learnable threshold for selecting clean and noisy samples. For model training, Delora can use carefully selected samples to fine-tune language models seamlessly. Experimental results on synthetic and real-world noisy datasets demonstrate the effectiveness of Delora in noisy label detection and text classification.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

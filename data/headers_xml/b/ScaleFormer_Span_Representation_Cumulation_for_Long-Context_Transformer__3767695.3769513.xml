@@ -81,9 +81,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 					<term>Long-context transformers, Pre-trained language models, Overlapping segmentation, Sliding window attention</term>
 				</keywords>
 			</textClass>
-			<abstract>
-				<p>The quadratic complexity of standard self-attention severely limits the application of Transformer-based models to long-context tasks. While efficient Transformer variants exist, they often require architectural changes and costly pre-training from scratch. To circumvent this, we propose ScaleFormer (Span Representation Cumulation for Long-Context Transformer)-a simple and effective plug-and-play framework that adapts off-the-shelf pre-trained encoder-decoder models to process long sequences without requiring architectural modifications. Our approach segments long inputs into overlapping chunks and generates a compressed, contextaware representation for the decoder. The core of our method is a novel, parameter-free fusion mechanism that endows each chunk&apos;s representation with structural awareness of its position within the document. It achieves this by enriching each chunk&apos;s boundary representations with cumulative context vectors from all preceding and succeeding chunks. This strategy provides the model with a strong signal of the document&apos;s narrative flow, achieves linear complexity, and enables pre-trained models to reason effectively over long-form text. Experiments on long-document summarization show that our method is highly competitive with and often outperforms state-of-the-art approaches without requiring architectural modifications or external retrieval mechanisms.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

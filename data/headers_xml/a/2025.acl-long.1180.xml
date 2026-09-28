@@ -59,9 +59,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Stochastically sampling word segmentations from a subword tokeniser, also called subword regularisation, is a known way to increase robustness of language models to outof-distribution inputs, such as text containing spelling errors. Recent work has observed that usual augmentations that make popular deterministic subword tokenisers stochastic still cause only a handful of all possible segmentations to be sampled. It has been proposed to uniformly sample across these instead, through rejection sampling of paths in an unweighted segmentation graph. In this paper, we argue that uniformly random segmentation in turn skews the distributions of certain segmentational properties (e.g. token lengths and amount of tokens produced) away from uniformity, which still ends up hiding meaningfully diverse tokenisations. We propose an alternative uniform sampler using the same segmentation graph, but weighted by counting the paths through it. Our sampling algorithm, GRaMPa, provides hyperparameters allowing sampled tokenisations to skew towards fewer, longer tokens. Furthermore, GRaMPa is single-pass, guaranteeing significantly better computational complexity than previous approaches relying on rejection sampling. We show experimentally that language models trained with GRaMPa outperform existing regularising tokenisers in a data-scarce setting on token-level tasks such as dependency parsing, especially with spelling errors present.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -73,9 +73,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Sequential recommenders predict users&apos; next interactions based on historical behavior and are essential in modern recommendation systems. While Large Language Models (LLMs) show promise, their size and high inference costs limit deployment on resource-constrained devices. Small Language Models (SLMs) provide a more efficient alternative for edge devices, but bridging the recommendation performance gap between LLMs and SLMs remains challenging. Typical approaches like supervised fine-tuning or vanilla knowledge distillation (KD) often lead to suboptimal performance or even negative transfer. Our motivational experiments reveal key issues with vanilla KD methods: feature imitation suffers from redundancy and uneven recommendation ability across layers, while prediction mimicking faces conflicts caused by differing weight distributions of prediction heads. To address these challenges, we propose a simple yet effective framework, C2KD, to transfer taskrelevant knowledge from two complementary dimensions. Specifically, our method incorporates: (1) cross-layer feature imitation, which uses a dynamic router to select the most relevant teacher layers and assimilate task-relevant knowledge from the teacher&apos;s late layers, allowing the student to concentrate on the teacher&apos;s specialized knowledge; and (2) cross-head logit distillation, which maps the intermediate features of the student to the teacher&apos;s output head, thereby minimizing prediction discrepancies between the teacher and the student. Extensive experiments across diverse model families demonstrate that our approach enables 1Bparameter SLMs to achieve competitive performance compared to LLMs (e.g., Llama3-8B), offering a practical solution for real-world ondevice sequential recommendations.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

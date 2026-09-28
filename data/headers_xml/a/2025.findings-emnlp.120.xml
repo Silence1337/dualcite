@@ -118,9 +118,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The auto-regressive decoding of Large Language Models (LLMs) results in significant overheads in their hardware performance. While recent research has explored various speculative decoding techniques for multitoken generation, these methods introduce high memory costs from the additional weights and KV cache of separate draft models, limiting efficiency in edge and long-context scenarios. To overcome these limitations in edge-scale LLMs, we propose a novel parallel prompt decoding that requires only 0.0004% runtime memory overhead by employing a unified single model for both speculation and verification. Inspired by the human natural language generation process, PPD approximates outputs generated at future timesteps in parallel by using multiple prompt tokens. Furthermore, we present a hardware-aware two-stage tree pruning algorithm that adaptively optimizes this decoding scheme to fully leverage the computational capacities on different GPUs. Through extensive experiments across LLMs ranging from Mo-bileLlama to Vicuna-13B on a wide range of benchmarks, our approach demonstrates up to 2.49× speedup. Moreover, our parallel prompt decoding can serve as an orthogonal optimization for synergistic integration with existing speculative decoding, showing up to 1.22× further speed improvement. To support future development, we have included our code implementation with this submission.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

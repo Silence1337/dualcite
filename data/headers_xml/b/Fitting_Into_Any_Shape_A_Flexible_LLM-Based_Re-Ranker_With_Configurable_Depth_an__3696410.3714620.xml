@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fitting Into Any Shape: A Flexible LLM-Based Re-Ranker With Configurable Depth and Width</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Zheng</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaofan</forename><surname>Li</surname></persName>
+							<email>cfli@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shitao</forename><surname>Xiao</surname></persName>
+							<email>stxiao@baai.ac.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaozhuo</forename><surname>Li</surname></persName>
+							<email>lichaozhuo@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chen</forename><forename type="middle">Jason</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Liao</surname></persName>
+							<email>haoliao@szu.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Defu</forename><surname>Lian</surname></persName>
+							<email>lian.defu@ustc.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yingxia</forename><surname>Shao</surname></persName>
+							<email>shaoyx@bupt.edu.cn</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaofan</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chaozhuo</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jason</forename><surname>Chen</surname></persName>
+							<email>jason-c.zhang@polyu.edu.hk</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Defu</forename><surname>Liao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yingxia</forename><surname>Lian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Shao</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Beijing Academy of Artificial Intelligence</orgName>
+								<orgName type="department" key="dep2">CSSE</orgName>
+								<orgName type="institution" key="instit1">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit2">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit3">Beijing University of Posts and Telecommunications</orgName>
+								<orgName type="institution" key="instit4">The Hong Kong Polytechnic University</orgName>
+								<orgName type="institution" key="instit5">Shenzhen University</orgName>
+								<orgName type="institution" key="instit6">University of Science and Technology of China</orgName>
+								<orgName type="institution" key="instit7">Beijing University of Posts and Telecommunications</orgName>
+								<address>
+									<postCode>2025</postCode>
+									<settlement>Sydney New York</settlement>
+									<region>NSW Australia. ACM NY</region>
+									<country>USA, 10 pages</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fitting Into Any Shape: A Flexible LLM-Based Re-Ranker With Configurable Depth and Width</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C95EFBD67CD4C5874A23B3BEAD4177CC</idno>
+					<idno type="DOI">10.1145/3696410.3714620</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-09-26T09:26+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Text Retrieval</term>
+					<term>LLM-based Re-rankers</term>
+					<term>Lightweighting</term>
+					<term>Flexibility</term>
+				</keywords>
+			</textClass>
+			
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

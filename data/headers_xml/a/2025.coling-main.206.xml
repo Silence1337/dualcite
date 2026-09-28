@@ -58,9 +58,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Active learning (AL) techniques reduce labeling costs for training neural machine translation (NMT) models by selecting smaller representative subsets from unlabeled data for annotation. Diversity sampling techniques select heterogeneous instances, while uncertainty sampling methods select instances with the highest model uncertainty. Both approaches have limitations-diversity methods may extract varied but trivial examples, while uncertainty sampling can yield repetitive, uninformative instances. To bridge this gap, we propose Hybrid Uncertainty and Diversity Sampling (HUDS), an AL strategy for domain adaptation in NMT that combines uncertainty and diversity for sentence selection. HUDS computes uncertainty scores for unlabeled sentences and subsequently stratifies them. It then clusters sentence embeddings within each stratum and computes diversity scores by distance to the centroid. A weighted hybrid score that combines uncertainty and diversity is then used to select the top instances for annotation in each AL iteration. Experiments on multi-domain German-English and French-English datasets demonstrate the better performance of HUDS over other strong AL baselines. We analyze the sentence selection with HUDS and show that it prioritizes diverse instances having high model uncertainty for annotation in early AL iterations.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

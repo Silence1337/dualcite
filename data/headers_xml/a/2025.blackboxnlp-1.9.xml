@@ -61,9 +61,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Parameter-efficient methods like LoRA have revolutionised large language model (LLM) fine-tuning. ReLoRA extends this idea to pretraining by repeatedly merging and reinitialising low-rank adapters, increasing cumulative rank while keeping updates cheap. This aligns well with observations that high-capacity models learn through locally low-rank trajectories that expand over time. By contrast, recent work suggests that small language models (SLMs) exhibit rank deficiencies and under-utilise their available dimensionality. This raises a natural question: can ReLoRA&apos;s rank-expanding update rule steer SLMs toward healthier learning dynamics, mitigating rank bottlenecks in a capacity-constrained regime? We argue SLMs are an ideal testbed: they train quickly, enable controlled ablations, and make rank phenomena more measurable. We present the first systematic study of ReLoRA in SLMs (11M-66M parameters), evaluating both performance and learning dynamics. Across loss, Paloma perplexity, and BLiMP, we find that ReLoRA underperforms full-rank training, with gaps widening at larger scales. Analysis of proportional effective rank and condition numbers shows that ReLoRA amplifies existing rank deficiencies and induces ill-conditioned updates early in training. Our results suggest that while ReLoRA&apos;s merge-and-restart strategy can expand ranks in larger models, it does not straightforwardly translate to capacity-limited SLMs, motivating adaptive-rank or hybrid-rank approaches for low-compute pretraining. yuvalw/pico-relora Yu-val-weiss/pico-relora</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

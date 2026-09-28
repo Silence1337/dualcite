@@ -115,9 +115,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Topic modeling aims to discover the distribution of topics within a corpus. The advanced comprehension and generative capabilities of large language models (LLMs) have introduced new avenues for topic modeling, particularly by prompting LLMs to generate topics and refine them by merging similar ones. However, this approach necessitates that LLMs generate topics with consistent granularity, thus relying on the exceptional instruction-following capabilities of closed-source LLMs (such as GPT-4) or requiring additional training. Moreover, merging based only on topic words and neglecting the fine-grained semantics within documents might fail to fully uncover the underlying topic structure. In this work, we propose a semi-supervised topic modeling method, LiSA, that combines LLMs with clustering to improve topic generation and distribution. Specifically, we begin with prompting LLMs to generate a candidate topic word for each document, thereby constructing a topic-level semantic space. To further utilize the mutual complementarity between them, we first cluster documents and candidate topic words, and then establish a mapping from document to topic in the LLM-guided assignment stage. Subsequently, we introduce a collaborative enhancement strategy to align the two semantic spaces and establish a better topic distribution. Experimental results demonstrate that LiSA outperforms state-of-the-art methods that utilize GPT-4 on topic alignment, and exhibits competitive performance compared to Neural Topic Models on topic quality. The codes are available at https://github.com/ljh986/LiSA.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

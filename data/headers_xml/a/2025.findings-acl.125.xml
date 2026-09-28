@@ -96,9 +96,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Generative Error Correction (GEC) has emerged as a powerful post-processing method to boost the performance of Automatic Speech Recognition (ASR) systems. In this paper, we first show that GEC models struggle to generalize beyond the specific types of errors encountered during training, limiting their ability to correct new, unseen errors at test time, particularly in out-of-domain (OOD) scenarios. This phenomenon amplifies with named entities (NEs), where, in addition to insufficient contextual information or knowledge about the NEs, novel NEs keep emerging. To address these issues, we propose DARAG (Data-and Retrieval-Augmented Generative Error Correction), a novel approach designed to improve GEC for ASR in in-domain (ID) and OOD scenarios. First, we augment the GEC training dataset with synthetic data generated using foundational generative models, thereby simulating additional errors from which the model can learn from. For out-of-domain scenarios, we simulate test-time errors from new domains similarly and in an unsupervised fashion. Additionally, to better handle NEs, we introduce retrieval-augmented correction wherein we augment the model input with entities retrieved from a datastore of NEs. Our approach is simple, scalable, and both domain-and languageagnostic. We experiment on multiple datasets and settings, showing that DARAG outperforms all our baselines, achieving 8%-30% relative WER improvements in ID and 10%-33% improvements in OOD settings. 1 * Work done during an internship at Microsoft, USA † Work done while at Microsoft 1 For implementation details, please reach out to the author.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

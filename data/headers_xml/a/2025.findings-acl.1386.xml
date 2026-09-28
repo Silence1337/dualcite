@@ -115,9 +115,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The Mixture of Experts (MoE) architecture enables efficient model scaling through conditional computation, where only subset of parameters are activated per input. However, this distributed architecture poses unprecedented challenges for model compression, as conventional quantization methods optimized for dense networks prove inadequate. This paper introduces a specialized quantization framework for MoE architectures, motivated by our discovery that weight matrices across expert networks exhibit distinctive channel-wise outlier distributions, necessitating a more nuanced compression approach. Through theoretical analysis incorporating Fisher Information matrices and condition number characteristics, we establish a fundamental relationship between layer functionality and quantization sensitivity, demonstrating that downprojection layers inherently demand higher precision compared to up-projection layers. Leveraging these insights, we develop an automated channel-wise quantization framework that dynamically determines optimal bit-width allocations while maintaining minimal computational overhead through efficient statistical approximations. When evaluated on the Mixtral-8x7b-v0.1 architecture, our methodology demonstrates a 3.96% improvement over existing state-of-the-art approaches across natural language understanding benchmarks, while achieving superior compression ratios. Code is available at: https://github.com/cei1ing4/Fine-Grained-MoE-Quantization</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

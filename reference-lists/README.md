@@ -1,31 +1,22 @@
-# Reference lists (all years)
+# Historical publication lists
 
-This folder is for the **all-years reference lists** used by the optional
-internal/external/other breakdown in `export_summary.py`:
+These lists contain the papers of each community in all years. `export_summary.py`
+uses them for the reference-list measurement: every reference of a 2025 paper is
+classified as internal, external, or other by matching it against the two lists
+(DOI and exact normalized title).
 
-```bash
-python export_summary.py --cl-refs reference-lists/acl_all_papers_full.json \
-                         --ir-refs reference-lists/ir_all_years_works.json
-```
+| File | Entries | Content | Used by |
+|---|---:|---|---|
+| `acl_all_papers_full.json.gz` | 121,685 | The whole ACL Anthology, 1952 onward, including workshops and journals | `config.yaml` (CL) |
+| `ir_all_years_works.json.gz` | 36,588 | ECIR, CIKM, WWW and the other ACM-published IR conferences, 1993 onward | `config.yaml` (IR) |
+| `acl_main_all_years.json.gz` | 13,466 | Main ACL conference only, 1979 onward | `config_acl_sigir.yaml` |
+| `sigir_main_all_years.json.gz` | 7,993 | Main SIGIR conference, all years available in the ACM Digital Library | `config_acl_sigir.yaml` |
 
-Each file is a JSON list of objects with at least a `title` field (a `doi` field
-is used too when present) — one entry per paper published at that community's
-venues, across all years.
+The files are stored compressed. `export_summary.py` reads the `.json.gz` file
+automatically when it is given the `.json` name, so the commands in the main
+README work without unpacking anything.
 
-## Why they aren't in the repository
-
-These lists are large (the ACL Anthology list is ~90 MB) and are intermediate
-data, not code or results. They are git-ignored. Generate them yourself, or
-drop your own here.
-
-## How to build them
-
-Use the collectors in `../data-collection/`:
-
-- `collect_all_acl_articles.py` → the full ACL Anthology list (cluster A)
-- `collect_all_CIKM.py`, `collect_all_ecir.py`, etc. + `merge_ir_sources.py`
-  → the IR list (cluster B)
-
-The exact venues and sources are specific to our corpus; adapt as needed.
-Without these files, `export_summary.py` still runs — it just omits the
-all-years section.
+Each file is a JSON list of records with at least a `title` field; a `doi` field
+is used when present. How each list was built is described in
+`../data-collection/README.md`. Without these files, `export_summary.py` still
+runs and only omits the reference-list section.

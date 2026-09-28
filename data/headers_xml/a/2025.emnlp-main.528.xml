@@ -104,9 +104,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Bit-flip errors (BFEs) are hardware faults where individual bits in memory or processing units are unintentionally flipped. These errors pose a significant threat to neural network reliability because even small changes in model parameters can lead to large output shifts. Large language models (LLMs) are particularly vulnerable to resource-constrained or outdated hardware. Such hardware often lacks errorcorrection mechanisms and faces aging issues, leading to instability under the vast parameter counts and heavy computational loads of LLMs. While the impact of BFEs on traditional networks like CNNs is relatively wellstudied, their effect on the complex architecture of transformers remains largely unexplored. Firstly, this paper presents a comprehensive systematic analysis of BFE vulnerabilities in key LLM components, revealing distinct sensitivities across parameters, activations, and gradients during fine-tuning and inference. Secondly, based on our findings, we introduce a novel defense strategy FlipGuard: (i) exponent bit protection, and (ii) a self-correction based fine-tuning mechanism, to address BFE consequences. FlipGuard minimizes performance degradation while significantly enhancing robustness against BFEs. Experiments demonstrate an average 9.27% reduction in accuracy drop under 1% BFEs on the SST-2 dataset using BERT, and an average 36.35-point improvement in perplexity on the Wikitext-103 dataset using GPT-2, compared to unprotected models. These results show the potential of our approach in enabling reliable LLM deployment on diverse and less reliable hardware platforms.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -52,9 +52,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>In this reproduction study, we revisit recent claims that self-attention implements kernel principal component analysis (KPCA) (Teo and Nguyen, 2024), positing that (i) value vectors V capture the eigenvectors of the Gram matrix of the keys, and (ii) that self-attention projects queries onto the principal component axes of the key matrix K in a feature space. Our analysis reveals three critical inconsistencies: (1) No alignment exists between learned self-attention value vectors and what is proposed in the KPCA perspective, with average similarity metrics (optimal cosine similarity ≤ 0.32, linear CKA (Centered Kernel Alignment) ≤ 0.11, kernel CKA ≤ 0.32) indicating negligible correspondence; (2) Reported decreases in reconstruction loss J proj , arguably justifying the claim that the self-attention minimizes the projection error of KPCA, are misinterpreted, as the quantities involved differ by orders of magnitude (∼ 10 3); (3) Gram matrix eigenvalue statistics, introduced to justify that V captures the eigenvector of the gram matrix, are irreproducible without undocumented implementation-specific adjustments. Across 10 transformer architectures, we conclude that the KPCA interpretation of self-attention lacks empirical support.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

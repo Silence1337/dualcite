@@ -66,9 +66,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Implicit assumptions and priors are often necessary in text-to-image generation tasks, especially when textual prompts lack sufficient context. However, these assumptions can sometimes reflect societal biases (e.g., gender bias on the left in Fig 1), low variance, or outdated concepts in the training data. We present Embedding-only Editing (EMBEDIT), a method designed to efficiently edit implicit assumptions and priors in the text-to-image model without affecting unrelated objects or degrading overall performance. Given a &quot;source&quot; prompt (e.g., &quot;nurse&quot;) that elicits an assumption (e.g., a female nurse) and a &quot;destination&quot; prompt or distribution (e.g. equal gender chance), EMBEDIT only fine-tunes the word token embedding (WTE) of the target object (i.e. token &quot;nurse&quot;&apos;s WTE). Our method prevents unintended effects on other objects in the model&apos;s knowledge base, as the WTEs for unrelated objects and the model weights remain unchanged. Further, our method can be applied to any text-to-image model with a text encoder. It is highly efficient, modifying only 768, 2048, and 4864 parameters for Stable Diffusion 1.4, Stable Diffusion XL, and FLUX, respectively, matching each model&apos;s WTE dimension. Additionally, changes could be easily reversed by restoring the original WTE layers. The results show that EMBE-DIT outperforms previous methods in various models, tasks, and editing scenarios (both single and sequential multiple edits), achieving at least a 6.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

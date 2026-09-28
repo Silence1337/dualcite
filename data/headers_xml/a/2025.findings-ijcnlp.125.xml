@@ -47,9 +47,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>We introduce PHLoRA 1 (Post-hoc LoRA), a simple yet powerful method to extract lowrank adapters from full-rank fine-tuned models without requiring access to training data or gradients. By computing the low-rank decomposition of weight differences between a base model and its fine-tuned counterpart, our method reconstructs adapter modules that can be merged, dynamically routed at inference time via S-LoRA, or served in scalable industry settings using platforms like NVIDIA NIM. This approach amortizes latency overhead across requests and yields substantial cost savings. Unlike prior work that trains each adapter explicitly, our approach decouples fine-tuning from adapter generation, allowing adapter extraction from existing full-rank models or third-party checkpoints. Experiments on text, image, and video benchmarks using the Amazon Nova model family demonstrate that extracted adapters preserve high energy from the full weight delta, can be pruned safely, and yield negligible degradation in downstream task performance when re-merged. Overall, PHLoRA provides a practical path for making all existing full-rank checkpoints adapter-ready, democratizing scalable inference for all models.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

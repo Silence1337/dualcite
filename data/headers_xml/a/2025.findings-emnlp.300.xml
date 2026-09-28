@@ -60,9 +60,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Direct Preference Optimization (DPO) is a widely used offline preference optimization algorithm that enhances the simplicity and training stability of reinforcement learning through reward function reparameterization from PPO. Recently, SimPO (Simple Preference Optimization) and CPO (Contrastive Preference Optimization) have proposed reference-free preference optimization methods to simplify DPO&apos;s training process. We observe that these reference-free methods exhibit higher training efficiency but are prone to overoptimization, leading to performance degradation. To address these issues, we propose Self Preference Optimization (SPO). SPO employs the SiLU function to replace the conventional logsigmoid loss function. The SiLU function attains its minimum at a finite value, preventing the model from excessively amplifying the chosenrejected sample probability ratio and thereby mitigating overoptimization problem. We theoretically demonstrate that the SPO loss is an upper bound of the DPO loss, implying that optimizing the SPO objective implicitly optimizes the DPO objective. We evaluate SPO&apos;s effectiveness across multiple benchmarks including AlpacaEval 2 and MT-Bench. Experimental results show that SPO achieves a 7% improvement over SimPO in length-controlled win rate on AlpacaEval 2, while demonstrating superior performance on MT-Bench.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

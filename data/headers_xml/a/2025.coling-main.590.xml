@@ -82,9 +82,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Some encoder inputs such as conversation histories are frequently extended with short additional inputs like new responses. However, to obtain the real-time encoding of the extended input, existing Transformer-based encoders like BERT have to encode the whole extended input again without utilizing the existing encoding of the original input, which may be prohibitively slow for real-time applications. In this paper, we introduce Incremental Transformer, an efficient encoder dedicated for faster encoding of incremented input. It takes only added input as input but attends to cached representations of original input in lower layers for better performance. By treating questions as additional inputs of a passage, Incremental Transformer can also be applied to accelerate MRC tasks. Experimental results show tiny decline in effectiveness but significant speedup against traditional full encoder across various MRC and multiturn conversational question answering tasks. With the help from simple distillation-like auxiliary losses, Incremental Transformer achieves a speedup of 6.2x, with a mere 2.2 point accuracy reduction in comparison to RoBERTa-Large on SQuADV1.1. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -61,9 +61,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The Transformer architecture has become the standard LLM architecture due to its powerful self-attention mechanism. However, it suffers from quadratic computational complexity and linear memory complexity. RNN-based LLMs have been proposed as alternatives. Yet, RNN models struggle in long-context scenarios, making it challenging to replace self-attention with RNNs. We identify the state size as a critical bottleneck, which is significantly smaller than that of Transformers with a basic context length of 2k. However, simply increasing the state size significantly raises the number of parameters and lowers training efficiency. In this paper, we propose an efficient scaling method to scale the state size of RNN models to match the 2k context length of Transformers, with small parameters overhead. Experimental results demonstrate that scaling the state size significantly enhances long-context understanding. Retrieval performance scales almost linearly with state size, with a 454M model featuring an expanded state achieving performance comparable to a 1.47B model on FDA, a recallintensive task. These findings highlight state scaling as a promising approach for advancing RNN-based LLMs.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

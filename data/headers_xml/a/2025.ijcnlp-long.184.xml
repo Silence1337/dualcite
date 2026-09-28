@@ -61,9 +61,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Pretraining on massive corpora has given rise to large language models (LLMs) with multitask capabilities. However, real-world applications often require more specialized training, as is the case of NL2Code. We approach this specialization through the lens of data selection, i.e., identifying a subset of a large corpus that aligns with a desired target distribution-a challenge that remains underexplored within NL2Code. Existing methods are typically designed for selecting instructiontuning data, and might not easily scale to large-scale code repositories; while methods for NL2Code do exist, they primarily rely on coarse heuristics-such as repo stars-for filtering. To bridge this gap, we propose FINDR, an efficient data selection method that extends logistic regression with feature-wise importance reweighting-marking it, to our knowledge, the first fine-grained solution to NL2Code pretraining. Our method uses hashed n-grams and code-aware features to capture code-specific patterns, and then apply informative priors to reweight feature importance when computing influence scores. Extensive experiments on NL2Python and NL2SQL, with two model families, show that FINDR consistently outperforms strong baselines in both execution accuracy and token efficiency. Notably, pretraining on only 2% of FINDR-selected data boosts Gemma by over 29% in both domains, even surpassing CodeGemma (pretrained on 300x more examples) by 10% in Python. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

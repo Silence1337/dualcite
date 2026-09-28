@@ -94,8 +94,27 @@ schema:
 # Citation matching parameters.
 # ---------------------------------------------------------------------------
 matching:
-  fuzzy_threshold: 85      # rapidfuzz ratio cutoff for title matching
+  fuzzy_threshold: 90      # rapidfuzz ratio cutoff for title matching; chosen from the
+                           # manual validation (precision per score band, see validation/)
   min_words_for_fuzzy: 4   # skip fuzzy matching for very short titles
+  fuzzy_candidate_floor: 80 # lower-scoring candidates are logged for the sensitivity analysis only
+  max_year_gap: 1          # a title match is rejected if the cited reference is older than
+                           # the target paper's year minus this gap (DOI matches are not checked)
+
+# Records whose venue or source field contains one of these strings are skipped,
+# e.g. the SIGIR Forum newsletter, which is not a conference venue.
+exclude_source_patterns:
+  - "sigir forum"
+
+# Records describing a whole proceedings volume (front matter with the table of
+# contents) rather than a paper. GROBID reads their table of contents as a
+# reference list, which would create false citations to every paper of the volume.
+exclude_title_prefixes:
+  - "proceedings of"
+  - "findings of the association for computational linguistics"
+  - "companion proceedings of"
+exclude_id_suffixes:
+  - ".0"                   # ACL Anthology: paper 0 of a volume is its front matter
 
 # ---------------------------------------------------------------------------
 # Server.

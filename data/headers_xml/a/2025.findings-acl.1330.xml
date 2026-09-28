@@ -53,9 +53,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Prompt-based text embedding models, which generate task-specific embeddings upon receiving tailored prompts, have recently demonstrated remarkable performance. However, their resulting embeddings often have thousands of dimensions, leading to high storage costs and increased computational costs of embedding-based operations. In this paper, we investigate how post-hoc dimensionality reduction applied to the embeddings affects the performance of various tasks that leverage these embeddings, specifically classification, clustering, retrieval, and semantic textual similarity (STS) tasks. Our experiments show that even a naive dimensionality reduction, which keeps only the first 25% of the dimensions of the embeddings, results in a very slight performance degradation, indicating that these embeddings are highly redundant. Notably, for classification and clustering, even when embeddings are reduced to less than 0.5% of the original dimensionality the performance degradation is very small. To quantitatively analyze this redundancy, we perform an analysis based on the intrinsic dimensionality and isotropy of the embeddings. Our analysis reveals that embeddings for classification and clustering, which are considered to have very high dimensional redundancy, exhibit lower intrinsic dimensionality and less isotropy compared with those for retrieval and STS.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

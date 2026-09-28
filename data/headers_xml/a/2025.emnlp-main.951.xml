@@ -83,9 +83,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Low-rank adaptation (LoRA) efficiently adapts LLMs to downstream tasks by decomposing LLMs&apos; weight update into trainable low-rank matrices for fine-tuning. However, the random low-rank matrices may introduce massive taskirrelevant information, while their recomposed form suffers from limited representation spaces under low-rank operations. Such dense and choked adaptation in LoRA impairs the adaptation performance of LLMs on downstream tasks. To address these challenges, this paper proposes OHoRA, an orthogonal high-rank adaptation for parameter-efficient fine-tuning on LLMs. According to the information bottleneck theory, OHoRA decomposes LLMs&apos; pre-trained weight matrices into orthogonal basis vectors via QR decomposition and splits them into two low-redundancy high-rank components to suppress task-irrelevant information. It then performs dynamic rank-elevated recomposition through Kronecker product to generate expansive task-tailored representation spaces, enabling precise LLM adaptation and enhanced generalization. OHoRA effectively operationalizes the information bottleneck theory to decompose LLMs&apos; weight matrices into low-redundancy high-rank components and recompose them in rank-elevated manner for more task-tailored representation spaces and precise LLM adaptation. Empirical evaluation shows OHoRA&apos;s effectiveness by outperforming LoRA and its variants and achieving comparable performance to full fine-tuning with only 0.0371% trainable parameters.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

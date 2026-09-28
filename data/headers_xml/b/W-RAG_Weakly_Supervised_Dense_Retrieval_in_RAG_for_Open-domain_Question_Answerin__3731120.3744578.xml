@@ -84,9 +84,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>In knowledge-intensive tasks such as open-domain question answering (OpenQA), large language models (LLMs) often struggle to generate factual answers, relying solely on their internal (parametric) knowledge. To address this limitation, Retrieval-Augmented Generation (RAG) systems enhance LLMs by retrieving relevant information from external sources, thereby positioning the retriever as a pivotal component. Although dense retrieval demonstrates state-of-the-art performance, its training poses challenges due to the scarcity of ground-truth evidence, largely attributed to the high costs of human annotation. In this paper, we propose W-RAG, a method that draws weak training signals from the downstream task (such as OpenQA) of an LLM, and fine-tunes the retriever to prioritize passages that most benefit the task. Specifically, we rerank the top-𝑘 passages retrieved via BM25 by assessing the probability that the LLM will generate the correct answer for a question given each passage. The highest-ranking passages are then used as positive fine-tuning examples for dense retrieval. We conduct comprehensive experiments across four publicly available OpenQA datasets to demonstrate that our approach enhances both retrieval and OpenQA performance compared to baseline models, achieving results comparable to models fine-tuned with human-labeled data. Source code is published 1 .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

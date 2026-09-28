@@ -113,9 +113,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>As large language models (LLMs) require continuous knowledge updates and the mitigation of hallucination issues in generated content, lifelong model editing has become a prominent research area. A mainstream knowledge editing method usually freezes LLM&apos;s original parameters and adds extra trainable modules for new knowledge management, reducing interference with old knowledge. Although these approaches have achieved some success, our experiments show that, after extensive editing, the model&apos;s knowledge understanding and memory capacity significantly degrade, particularly concerning early edited knowledge. The root cause is that subsequent edits interfere with the previously edited knowledge, and we refer to this phenomenon as knowledge coupling. To address this issue, we propose the Knowledge Decoupling Editing (KDE) method. Specifically, KDE stores the basis vectors of the representation space of past edits in a knowledge cache. It projects the gradient of the current edit onto a space orthogonal to previous knowledge for updating. This method effectively alleviates the coupling between different pieces of knowledge. We also propose a two-stage training strategy to better balance the model&apos;s ability to edit new knowledge and distinguish whether a query is related to previous edits. This strategy gradually reduces the interference between new knowledge editing and query distinction, maintaining stable performance during longterm editing. We compared KDE with nine state-of-the-art editing methods across multiple mainstream LLMs. The results demonstrate that, regarding question-answering ability and hallucination mitigation, KDE achieves average improvements of 14% and 61%.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -72,9 +72,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Data abundance across different domains exhibits a long-tailed distribution: few domains have abundant data, while most face data scarcity. Our work focuses on a multilingual setting, where available data is heavily skewed towards high-resource languages. Two common strategies to address this disparity are upsampling low-resource data (Temperature Sampling) and upweighting low-resource loss (Scalarization). These methods are often assumed to be equivalent, but this equivalence has not been rigorously established, prompting our investigation. Through theoretical and empirical analysis, we identify when these two methods are equivalent and when they diverge. We prove that they are equivalent under full gradient descent but differ under stochastic gradient descent due to differences in gradient variance. Specifically, Temperature Sampling exhibits lower variance in gradient estimation compared to Scalarization, leading to faster convergence but a higher risk of overfitting. Based on these insights, we propose COOLDOWN, a strategy that starts by heavily upsampling low-resource languages to accelerate convergence and gradually reduces the upsampling to prevent overfitting-achieving the best of both worlds. Our method competes effectively with existing data re-weighting techniques while offering computational efficiency.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

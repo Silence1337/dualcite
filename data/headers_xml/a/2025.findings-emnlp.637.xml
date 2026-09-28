@@ -71,9 +71,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Temporal question answering is an established method for evaluating temporal reasoning in large language models. Expected answers are often numeric (e.g., dates or durations), yet model responses are evaluated like regular text with exact match (EM), unable to distinguish small from large errors. In this investigative work, we frame temporal question answering as a numerical estimation task to assess the shortcomings of EM. We introduce TempAn-swerQA, a benchmark distilled from Test of Time and TempTabQA, where all questions require a numerical, temporal answer, allowing us to evaluate models beyond EM. We use the forecasting metrics symmetric mean absolute percentage error (sMAPE) and mean absolute scaled error (MASE). With sMAPE, we find that error size and EM are decoupled. Models with low EM still have low sMAPE (both 20%), and some models have high sMAPE despite high EM. Scaling errors by the deviation of the ground truth data with MASE reshuffles model rankings compared to EM, revealing gaps in models&apos; understanding of temporal domain knowledge, especially when trained with synthetic data. Lastly, the models&apos; most frequent error is to deviate by only ±1 from the ground truth. sMAPE and MASE, unlike EM, adequately weight these errors. Our findings 1 underscore the need for specialised metrics for temporal QA tasks.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

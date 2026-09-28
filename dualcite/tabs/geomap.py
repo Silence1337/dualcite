@@ -1,5 +1,5 @@
 """
-tabs/geomap.py — Geo Map tab.
+tabs/geomap.py: Geo Map tab.
 
 World choropleth of author affiliations. Countries are coloured by how many
 papers (in the selected venues) have at least one author affiliated there.
@@ -9,14 +9,14 @@ co-authoring countries, top papers).
 Exposes:
   geomap_layout(cfg) -> Dash component tree for the tab body
   register_geomap_callbacks(app, cfg, index, stats) -> wires the callbacks
-  build_geo_aux(index) -> precomputed per-country aggregates (called once)
+  build_geo_aux(index, stats) -> per-country aggregates, computed once at start-up
 """
 from __future__ import annotations
 
 import math
 from collections import Counter, defaultdict
 
-from dash import Input, Output, State, ctx, dcc, html
+from dash import Input, Output, State, dcc, html
 import plotly.graph_objects as go
 
 try:
@@ -64,9 +64,24 @@ def _a2_a3(code):
     return a3
 
 
+def _colorbar(scale, vmode, z):
+    """Colour bar; on the logarithmic scale the ticks show the real values."""
+    bar = dict(thickness=14, len=0.6, x=0.98)
+    if scale != "log" or not z:
+        return bar
+    top = 10 ** max(z) - 1
+    steps = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000]
+    if vmode == "pct":
+        steps = [0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100]
+    vals = [v for v in steps if v <= top * 1.001] or [steps[0]]
+    bar["tickvals"] = [math.log10(v + 1) for v in vals]
+    bar["ticktext"] = [(f"{v:g}%" if vmode == "pct" else f"{v:,}") for v in vals]
+    return bar
+
+
 def _all_a3():
     """All ISO alpha-3 codes, so every country can be clicked."""
-    global _ALL_A3, NAME_OVERRIDE_A3
+    global _ALL_A3
     if _ALL_A3 is None:
         if pycountry:
             _ALL_A3 = [c.alpha_3 for c in pycountry.countries]
@@ -119,6 +134,7 @@ def build_geo_aux(index, stats):
     country_venue_papers = defaultdict(lambda: defaultdict(list))
     country_venue_inst = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
     country_pairs = defaultdict(int)
+    venue_country_pairs = defaultdict(lambda: defaultdict(int))   # venue -> "a2|a2" -> count
 
     for pid, p in papers.items():
         v = p["venue"]
@@ -128,11 +144,14 @@ def build_geo_aux(index, stats):
             venue_country[v][c] += 1
             country_venue_count[c][v] += 1
             country_venue_papers[c][v].append(pid)
-            for inst in aff.get("institutions", []):
-                country_venue_inst[c][v][inst] += 1
+        # an institution counts only for the countries of its own affiliation
+        pairs = {(inst, c) for inst, codes in aff.get("inst_country", []) for c in codes}
+        for inst, c in pairs:
+            country_venue_inst[c][v][inst] += 1
         for i in range(len(cs)):
             for j in range(i + 1, len(cs)):
                 country_pairs[f"{cs[i]}|{cs[j]}"] += 1
+                venue_country_pairs[v][f"{cs[i]}|{cs[j]}"] += 1
 
     # sort each paper list by citations desc, cap 100
     cit_total = {pid: stats.get(pid, {}).get("ii", 0) + stats.get(pid, {}).get("ie", 0)
@@ -153,6 +172,7 @@ def build_geo_aux(index, stats):
         "country_venue_papers": undef(country_venue_papers),
         "country_venue_inst": undef(country_venue_inst),
         "country_pairs": dict(country_pairs),
+        "venue_country_pairs": undef(venue_country_pairs),
         "cit_total": cit_total,
     }
 
@@ -323,11 +343,11 @@ def register_geomap_callbacks(app, cfg, index, stats, geo_aux):
             locations=locations, z=z, text=text,
             hovertemplate="%{text}<extra></extra>", colorscale=palette,
             marker_line_color="#000000", marker_line_width=0.5,
-            colorbar=dict(thickness=14, len=0.6, x=0.98)))
+            colorbar=_colorbar(scale, vmode, z)))
         fig.update_layout(**_geo_layout_dict(proj))
 
         top = sorted(counts.items(), key=lambda kv: -kv[1])[:3]
-        top_str = ", ".join(f"{_cname(c)} ({n})" for c, n in top) or "—"
+        top_str = ", ".join(f"{_cname(c)} ({n})" for c, n in top) or "-"
         cov = with_country / total_papers * 100 if total_papers else 0
         stats_div = html.Div([
             html.Div(f"Papers in selection: {total_papers}"),
@@ -388,8 +408,11 @@ def register_geomap_callbacks(app, cfg, index, stats, geo_aux):
                 for name, n in insts.items():
                     inst[name] += n
 
+        pair_counts = Counter()
+        for v in selected:
+            pair_counts.update(_GEO["venue_country_pairs"].get(v, {}))
         coauth = []
-        for key, n in _GEO["country_pairs"].items():
+        for key, n in pair_counts.items():
             parts = key.split("|")
             if a2 in parts:
                 other = parts[0] if parts[1] == a2 else parts[1]

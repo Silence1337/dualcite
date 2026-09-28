@@ -75,9 +75,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Retrieval-Augmented Language Modeling (RALM) by integrating large language models (LLM) with relevant documents from an external corpus is a proven methodology for enabling the LLM to generate information beyond the scope of its pre-training corpus. Previous work by retrieving a set of tokens iteratively with retrieved content prepending to the input poses a high run-time issue, which degrades the inference efficiency of the LLMs because they fail to use the Key-Value (KV) cache efficiently. We propose FLASHBACK, a modular RALM designed to improve the inference efficiency of RALM with the appending context pattern while maintaining decent performance after fine-tuning by Low-Rank Adaption. FLASHBACK appends retrieved documents at the end of the context to efficiently utilize the KV cache. We also introduce the Marking Token as two special prompt tokens for marking the appending context during fine-tuning. Our experiments show that FLASHBACK can improve language modeling performance in the perplexity metric. We proved that the Marking Token is a usable add-on when fine-tuning models on specific context patterns. By bypassing unnecessary recomputation, FLASHBACK achieves fast inference speed with long context input. The inference speed is up to 4× faster than the prepending counterpart on a 7B LLM (Llama 2) in the runtime test.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

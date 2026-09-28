@@ -77,9 +77,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Constrained decoding with lookahead heuristics (CDLH) is a highly effective method for aligning LLM generations to human preferences. However, the extensive lookahead rollout operations for each generated token makes CDLH prohibitively expensive, resulting in low adoption in practice. In contrast, common decoding strategies such as greedy decoding are extremely efficient, but achieve very low constraint satisfaction. We propose constrained decoding with speculative lookaheads (CDSL), a technique that significantly improves upon the inference efficiency of CDLH without experiencing the drastic performance reduction seen with greedy decoding. CDSL is motivated by the recently proposed idea of speculative decoding that uses a much smaller draft LLM for generation and a larger target LLM for verification. In CDSL, the draft model is used to generate lookaheads which is verified by a combination of target LLM and task-specific reward functions. This process accelerates decoding by reducing the computational burden while maintaining strong performance. We evaluate CDSL in two constraint decoding tasks with three LLM families and achieve 2.2× to 12.15× speedup over CDLH without significant performance reduction.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

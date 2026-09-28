@@ -120,9 +120,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>As large language models (LLMs) process increasing context windows, the memory usage of KV cache has become a critical bottleneck during inference. The mainstream KV compression methods, including KV pruning and KV quantization, primarily focus on either token or precision dimensions separately. However, these works have left the trade-off between these two orthogonal dimensions largely unexplored. In this paper, we leverage the Information Bottleneck principle to formulate KV cache compression within a unified theoretical framework. We demonstrate that a carefully managed token-precision trade-off can achieve an optimal point within the Information Bottleneck compared to standalone KV pruning or KV quantization. Experiments reveal that storing more tokens in the KV cache at lower precision-a strategy we term quantized pruning-can significantly enhance the long-context performance of LLMs. An in-depth analysis of this token-precision trade-off across key aspects shows that quantized pruning achieves substantial improvements in retrieval-related tasks and consistently performs well across varying input lengths. Furthermore, quantized pruning exhibits notable stability and effectiveness across different KV pruning methods, quantization strategies, and model scales. These findings offer valuable insights into optimizing KV cache compression through balanced token-precision trade-off strategies. Our code is available at https://github.com/zhzihao/QPruningKV.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

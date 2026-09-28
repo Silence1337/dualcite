@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rankformer: A Graph Transformer for Recommendation based on Ranking Objective</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Sirui</forename><surname>Chen</surname></persName>
+							<email>chenc@zju.edu.cn</email>
+							<idno type="ORCID">0009-0006-5652-7970</idno>
+							<affiliation key="aff8">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">State Key Laboratory of Blockchain and Data Security</orgName>
+								<orgName type="institution" key="instit1">Zhejiang University. ‡ College of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit2">Zhejiang University. § Hangzhou High</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Shen</forename><surname>Han</surname></persName>
+							<idno type="ORCID">0000-0001-6714-5237</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jiawei</forename><surname>Chen</surname></persName>
+							<idno type="ORCID">0000-0002-4752-2629</idno>
+							<affiliation key="aff8">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">State Key Laboratory of Blockchain and Data Security</orgName>
+								<orgName type="institution" key="instit1">Zhejiang University. ‡ College of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit2">Zhejiang University. § Hangzhou High</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Binbin</forename><surname>Hu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sheng</forename><surname>Zhou</surname></persName>
+							<email>zhousheng_zju@zju.edu.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Gang</forename><surname>Wang</surname></persName>
+							<email>wanggang@bsfit.com.cn</email>
+						</author>
+						<author>
+							<persName><forename type="first">Yan</forename><surname>Feng</surname></persName>
+							<email>fengyan@zju.edu.cn</email>
+							<idno type="ORCID">0000-0002-3605-5404</idno>
+							<affiliation key="aff8">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">State Key Laboratory of Blockchain and Data Security</orgName>
+								<orgName type="institution" key="instit1">Zhejiang University. ‡ College of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit2">Zhejiang University. § Hangzhou High</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chun</forename><surname>Chen</surname></persName>
+							<idno type="ORCID">0000-0002-6198-7481</idno>
+							<affiliation key="aff8">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">State Key Laboratory of Blockchain and Data Security</orgName>
+								<orgName type="institution" key="instit1">Zhejiang University. ‡ College of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit2">Zhejiang University. § Hangzhou High</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Can</forename><surname>Wang</surname></persName>
+							<idno type="ORCID">0000-0002-5890-4307</idno>
+							<affiliation key="aff8">
+								<orgName type="department">Tech Zone (Binjiang) Institute of Blockchain and Data Security</orgName>
+								<orgName type="laboratory">State Key Laboratory of Blockchain and Data Security</orgName>
+								<orgName type="institution" key="instit1">Zhejiang University. ‡ College of Computer Science and Technology</orgName>
+								<orgName type="institution" key="instit2">Zhejiang University. § Hangzhou High</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><surname>Rankformer</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">Zhejiang University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Zhejiang University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Ant Group Hangzhou</orgName>
+								<orgName type="institution">Zhejiang University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Zhejiang University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="institution">Bangsun Technology Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="institution">Zhejiang University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Zhejiang University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution">Zhejiang University Hangzhou</orgName>
+								<address>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rankformer: A Graph Transformer for Recommendation based on Ranking Objective</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4627E56CE64A83EB6BB7503C6467AC94</idno>
+					<idno type="DOI">10.1145/3696410.3714547</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-09-26T09:35+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=0, endPage=2, consolidateCitations=0, consolidateHeader=0, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=null, sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Recommendation</term>
+					<term>Transformer</term>
+					<term>Personalized Ranking</term>
+				</keywords>
+			</textClass>
+			
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+	</text>
+</TEI>

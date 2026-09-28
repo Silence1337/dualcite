@@ -51,9 +51,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Semantic parsing of long documents remains challenging due to quadratic growth in pairwise composition and memory requirements. We introduce Hierarchical Segment-Graph Memory (HSGM), a novel framework that decomposes an input of length N into M meaningful segments, constructs Local Semantic Graphs on each segment, and extracts compact summary nodes to form a Global Graph Memory. HSGM supports incremental updates-only newly arrived segments incur local graph construction and summary-node integration-while Hierarchical Query Processing locates relevant segments via top-K retrieval over summary nodes and then performs fine-grained reasoning within their local graphs. Theoretically, HSGM reduces worst-case complexity from O(N 2) to O N k+(N/k) 2 , with segment size k ≪ N , and we derive Frobenius-norm bounds on the approximation error introduced by node summarization and sparsification thresholds. Empirically, on three benchmarks-long-document AMR parsing, segment-level semantic role labeling (OntoNotes), and legal event extraction-HSGM achieves 2-4× inference speedup, &gt;60% reduction in peak memory, and ≥ 95% of baseline accuracy. Our approach unlocks scalable, accurate semantic modeling for ultra-long texts, enabling real-time and resource-constrained NLP applications.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

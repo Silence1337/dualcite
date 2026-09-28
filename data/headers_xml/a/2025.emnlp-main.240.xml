@@ -69,9 +69,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Quantization is widely adopted to accelerate inference and reduce memory consumption in large language models (LLMs). While activation-weight joint quantization enables efficient low-precision decoding, it suffers from substantial performance degradation on multistep reasoning tasks. We propose QSPEC, a novel quantization paradigm that decouples efficiency from quality by integrating two complementary schemes via speculative decoding: low-precision joint quantization for fast drafting and high-precision weight-only quantization for accurate verification. QSPEC reuses both weights and KV cache across stages, enabling near-zero-cost switching without retraining or auxiliary models. Compared to highprecision baselines, QSPEC achieves up to 1.64× speedup without quality degradation, and outperforms state-of-the-art speculative decoding methods by up to 1.55× in batched settings. Furthermore, QSPEC supports plug-andplay deployment and generalizes well across model scales, quantization methods, and workloads. These properties make QSPEC a practical and scalable solution for high-fidelity quantized LLM serving under memory-constrained scenarios. Our code is available at https: //github.com/hku-netexplo-lab/QSpec.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -82,9 +82,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>We present FAHMNI, a unified system for Arabic mental-health question answering developed for the AraHealthQA 2025 MentalQA Shared Task (Track 1). FAHMNI evaluates large language models (LLMs) on all subtasks: (1) multi-label classification of question types and (2) answer strategies, and (3) grounded answer generation. For Subtasks 1-2, we systematically compare Arabic-capable LLM families (Qwen3, SILMA) under zero-shot and few-shot prompting, few-shot learning with a frozen backbone, parameter-efficient finetuning (PEFT), and instruction tuning. To support Subtask 3, we implement a multi-agent, retrieval-augmented generation pipeline that routes queries between curated domain sources and controlled web search; an answer-style controller predicts the required strategy (Information, Direct Guidance, Emotional Support) and conditions the generator accordingly. Our best LLM configurations reach 0.507/0.404 (weighted-F1/Jaccard) on Subtask 1 with Qwen3+PEFT and 0.750/0.600 on Subtask 2 with SILMA+PEFT, while a strong finetuned MARBERT baseline remains competitive at 0.541/0.494 (Subtask 1) and 0.805/0.727 (Subtask 2). For Subtask 3, our multi-agent RAG system with SILMA attains an 0.652 BERTScore F1 and yields a 0.06 hallucination rate under our manual audit. These findings highlight both the viability and current limits of Arabic-capable LLMs for mental-health QA, and they motivate grounded, style-aware generation as a practical path for safe deployment.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

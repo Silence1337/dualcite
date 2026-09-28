@@ -1,5 +1,5 @@
 """
-tabs/graph.py — Citation Graph tab.
+tabs/graph.py: Citation Graph tab.
 
 Interactive Cytoscape graph of the citation network. Nodes are papers (sized by
 in-corpus citations), edges are coloured by flow direction (a→a, b→b, a→b, b→a).
@@ -16,10 +16,9 @@ import json
 import math
 import time as _time
 from collections import defaultdict
-from pathlib import Path
 
 import networkx as nx
-from dash import Input, Output, State, ctx, dcc, html
+from dash import Input, Output, State, dcc, html
 
 # ---- module-scope handles set by register_graph_callbacks ----
 _CFG = None
@@ -107,7 +106,7 @@ def _layout_key(nodes, edges, topo):
     for n in sorted(nodes):
         h.update(b"\x00")
         h.update(str(n).encode())
-    # sorted edges (as sorted tuples) — layout depends on connectivity
+    # sorted edges (as sorted tuples), layout depends on connectivity
     h.update(b"\xff")
     for s, t in sorted((min(a, b), max(a, b)) for a, b in edges):
         h.update(str(s).encode())
@@ -121,7 +120,7 @@ def _compute_pos(nodes, edges, papers, topo, W=2000, H=1600):
     """Cached wrapper around _compute_pos_raw.
 
     Node positions depend only on the node set, the edges among them, and the
-    topology — none of which change between identical filter selections. So we
+    topology, none of which change between identical filter selections. So we
     hash those, cache the result on disk, and skip the expensive spring_layout
     on repeat selections.
     """
@@ -136,7 +135,7 @@ def _compute_pos(nodes, edges, papers, topo, W=2000, H=1600):
         try:
             return json.loads(cache_file.read_text("utf-8"))
         except Exception:
-            pass  # corrupt cache — recompute
+            pass  # corrupt cache, recompute
 
     pos = _compute_pos_raw(nodes, edges, papers, topo, W, H)
     try:
@@ -218,7 +217,6 @@ def _legend(cfg, na, nb, ecnt):
 
 def graph_layout(cfg):
     import dash_cytoscape as cyto
-    a, b = cfg.clusters["a"], cfg.clusters["b"]
     return html.Div(style={"position": "relative", "height": "100%",
                            "background": "#fafafa"}, children=[
         cyto.Cytoscape(
@@ -275,7 +273,7 @@ def graph_layout(cfg):
                  "padding": "6px 12px", "borderRadius": "6px",
                  "border": "1px solid #e5e5e5", "fontSize": "11px",
                  "color": "#888", "zIndex": 20}),
-        # loading overlay — shown instantly (clientside) on any filter change,
+        # loading overlay, shown instantly (clientside) on any filter change,
         # hidden when the server returns the rebuilt graph
         html.Div(id="g-overlay", style={
             "position": "absolute", "top": 0, "left": 0, "right": 0,
@@ -367,12 +365,17 @@ def register_graph_callbacks(app, cfg, index, stats):
         edges = [(s, t) for s, t in ea
                  if sub[s]["cluster"] != sub[t]["cluster"]] if xo else ea
 
-        if mcit and mcit > 0 and not xo:
+        # min in-citations: keep only the papers cited at least mcit times (by
+        # the links currently shown, so with cross-cluster only by the other
+        # group) and the links between them
+        filtered = bool(mcit and mcit > 0)
+        popular = set()
+        if filtered:
             ideg = defaultdict(int)
             for s, t in edges:
                 ideg[t] += 1
-            keep = {n for n in sub if ideg.get(n, 0) >= mcit}
-            edges = [(s, t) for s, t in edges if s in keep and t in keep]
+            popular = {n for n in sub if ideg.get(n, 0) >= mcit}
+            edges = [(s, t) for s, t in edges if s in popular and t in popular]
 
         ind = defaultdict(int)
         od = defaultdict(int)
@@ -381,7 +384,10 @@ def register_graph_callbacks(app, cfg, index, stats):
             od[s] += 1
 
         connected = {x for e in edges for x in e}
-        nodes = set(sub) if use_iso else set(connected)
+        # "show isolated" adds the papers without links: all papers, or with the
+        # citation filter all papers that pass it
+        pool = popular if filtered else set(sub)
+        nodes = set(pool) if use_iso else set(connected)
 
         if not use_all and len(nodes) > mnodes:
             sc = {n: ind.get(n, 0) * 2 + od.get(n, 0) for n in nodes}
@@ -455,7 +461,7 @@ def register_graph_callbacks(app, cfg, index, stats):
         legend = _legend(cfg, na, nb, ecnt)
 
         dt = _time.monotonic() - t0
-        status = f"✓ {nn} nodes, {len(edges)} edges — {dt:.1f}s"
+        status = f"✓ {nn} nodes, {len(edges)} edges, {dt:.1f}s"
         return (els, {"name": "preset", "fit": True, "padding": 30}, style,
                 status, hide_overlay, legend)
 

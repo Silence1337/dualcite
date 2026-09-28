@@ -69,9 +69,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Domain adaptation in Neural Machine Translation (NMT) is commonly achieved through finetuning, but this approach becomes inefficient as the number of domains increases. Knowledge distillation (KD) provides a scalable alternative by training a compact model on distilled data from a larger model. However, we hypothesize that vanilla sequence-level KD primarily distills the decoder while neglecting encoder knowledge, leading to suboptimal knowledge transfer and limiting its effectiveness in lowresource settings, where both data and computational resources are constrained. To address this, we propose an improved sequencelevel KD method that enhances encoder knowledge transfer through a cosine-based alignment loss. Our approach first trains a large model on a mixed-domain dataset and generates a Distilled Mixed Dataset (DMD). A small model is then trained on this dataset via sequence-level KD with encoder alignment. Experiments in a low-resource setting validate our hypothesis, demonstrating that our approach outperforms vanilla sequence-level KD, improves generalization to out-of-domain data, and facilitates efficient domain adaptation while reducing model size and computational cost.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

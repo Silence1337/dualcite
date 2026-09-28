@@ -50,9 +50,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Standard Byte-Pair Encoding (BPE) tokenization compresses text by pairing a learned token vocabulary with a detailed merge list. Recent work has shown that this merge list exposes a potential attack surface for extracting information about language model&apos;s training data. In this paper, we explore the downstream impact of BPE inference algorithms that do not rely on this merge list at all, and hence differ from the encoding process during BPE training. To address this question, we investigate two broad classes of BPE inference schemes that differ from BPE application during training: a) targeted deviation from merge-lists including random merge orders, and various corruptions of merge list involving deletion/truncation, and b) non-targeted BPE inference algorithms that do not depend on the merge list but focus on compressing the text either greedily or exactly. Extensive experiments across diverse language modeling tasks like accuracy-based QA benchmarks, machine translation, and open-ended generation reveal that while targeted deviation from the merge lists exhibits significant degradation in language model performance, the nontargeted merge-list-free inference algorithms result in minimal impact on downstream performance that is often much smaller than expected. These findings pave way for simpler and potentially more privacy-preserving tokenization schemes that do not catastrophically compromise model performance.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

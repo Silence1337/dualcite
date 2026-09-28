@@ -105,9 +105,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>LLMs with in-context learning (ICL) obtain remarkable performance but are sensitive to the quality of ICL examples. Prior works on ICL example selection explored unsupervised heuristic methods and supervised LLM-based methods, but they typically focus on the selection of individual examples and ignore correlations among examples. Researchers use the determinantal point process (DPP) to model negative correlations among examples to select diverse examples. However, the DPP fails to model positive correlations among examples, while ICL still requires the positive correlations of examples to ensure the consistency of examples, which provides a clear instruction for LLMs. In this paper, we propose an ICL example selection method based on the nonsymmetric determinantal point process (NDPP) to capture positive and negative correlations, considering both the diversity and the relevance among ICL examples. Specifically, we optimize NDPP via kernel decompositionbased MLE to fit a constructed pseudo-labeled dataset, where we also propose a low-rank decomposition to reduce the computational cost. Further, we perform query-aware kernel adaptation on our NDPP to customize the input query, and we select examples via a MAP inference based on the adapted NDPP. Experimental results show our model outperforms strong baselines in ICL example selection.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

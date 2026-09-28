@@ -48,9 +48,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>We introduce RAVQA-VLM, a Retrieval-Augmented Generation (RAG) architecture with Vision Language Model for the SciVQA challenge, which targets closed-ended visual and non-visual questions over scientific figures drawn from ACL Anthology and arXiv papers. Our system first encodes each input figure and its accompanying metadata (caption, figure ID, type) into dense embeddings, then retrieves context passages from the full PDF of the source paper via a Dense Passage Retriever. The extracted contexts are concatenated with the question and passed to a vision-capable generative backbone (e.g., Qwen-2.5, Pixtral-12B, Mistral-24B-small, InterVL-3-14B) finetuned on the 15.1K SciVQA training examples. We jointly optimize retrieval and generation end-to-end to minimize answer loss and mitigate hallucinations. On the SciVQA test set, RAVQA-VLM achieves significant improvements over parametric only baselines, with relative gains of +5% ROUGE1 and +5% ROUGE-L, demonstrating the efficacy of RAG for multimodal scientific QA. In this shared task, our RAVQA-VLM approach secured the top rank in the leaderboard with an F1 score of 0.8049 (ROUGE-1), 0.8043 (ROUGE-L), and 0.9849 (BERTScore).</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

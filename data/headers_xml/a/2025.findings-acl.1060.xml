@@ -62,9 +62,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>This paper presents elaborate testing of various LLMs on their generalization capacities. We finetune six encoder models that have been pretrained with very different data (varying in size, language, and period) on a challenging event detection task in Early Modern Dutch archival texts. Each model is finetuned with 5 seeds on 15 different data splits, resulting in 450 finetuned models. We also pre-train a domain-specific Language Model on the target domain and fine-tune and evaluate it in the same way to provide an upper bound. Our experimental setup allows us to look at underresearched aspects of generalizability, namely i) shifts at multiple places in a modeling pipeline, ii) temporal and crosslingual shifts and iii) generalization over different initializations. The results show that none of the models reaches domain-specific model performance, demonstrating their incapacity to generalize. mBERT reaches highest F1 performance, and is relatively stable over different seeds and datasplits, contrary to XLM-R. We find that contemporary Dutch models do not generalize well to Early Modern Dutch as they underperform compared to crosslingual as well as historical models. We conclude that encoder LLMs lack temporal generalization capacities and that bigger models are not better, since even a model pre-trained with five hundred GPUs on 2.5 terabytes of training data (Conneau, 2019) underperforms considerably compared to our domain-specific model, pre-trained on one GPU and 6 GB of data. All our code, data, and the domainspecific model are openly available. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

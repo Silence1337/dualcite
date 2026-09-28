@@ -85,9 +85,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Knowledge distillation (KD) compresses large language models (LLMs), known as teacher models, into lightweight versions called student models, enabling efficient inference and downstream applications. However, prevailing approaches accomplish this by predominantly focusing on matching the final output distributions of student/teacher models. Drawing on the perspective that transformers can be viewed as discretizing ordinary differential equation (ODEs) on integer time steps (corresponding to layer indices), where intermediate features evolve across layers, we argue that effective KD requires aligning the entire feature dynamics between teacher and student models, which we call feature dynamics distillation (FDD). This alignment involves matching both the feature trajectory and its first-order derivative, rather than just the final states. Our approach extends the original KD objective with two additional loss terms: layer-wise feature KD, which matches discretized feature trajectory, and layer feature delta KD, which matches first-order changes in features across adjacent layers. Extensive experiments on various tasks validate the effectiveness of our distillation method.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

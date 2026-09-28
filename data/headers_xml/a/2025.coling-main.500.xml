@@ -102,9 +102,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Event Relation Extraction (ERE) aims to extract various types of relations between different events within texts. Although Large Language Models (LLMs) have demonstrated impressive capabilities in many natural language processing tasks, existing ERE methods based on LLMs still face three key challenges: (1) Time Inefficiency: The existing pairwise method of combining events and determining their relations is time-consuming for LLMs. (2) Low Coverage: When dealing with numerous events in a document, the limited generation length of fine-tuned LLMs restricts the coverage of their extraction results. (3) Lack of Rationale: Essential rationales concerning the results that could enhance the reasoning ability of the model are overlooked. To address these challenges, we propose LLMERE, an LLM-based approach with rationales for the ERE task. LLMERE transforms ERE into a question-and-answer task that may have multiple answers. By extracting all events related to a specified event at once, LLMERE reduces time complexity from O(n 2) to O(n), compared to the pairwise method. Subsequently, LLMERE enhances the coverage of extraction results by employing a partitioning strategy that highlights only a portion of the events in the document at a time. In addition to the extracted results, LLMERE is also required to generate corresponding rationales/reasons behind them, in terms of event coreference information or transitive chains of event relations. Experimental results on three widely used datasets show that LLMERE achieves significant improvements over baseline methods 1 .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -111,9 +111,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>We present BRANCH-TRAIN-STITCH (BTS), an efficient and flexible training algorithm for combining independently trained large language model (LLM) experts into a single, capable generalist model. Following Li et al. [2022], we start with a single seed LLM which is branched into domain-specific (e.g., coding or math) experts with continual pretraining. BTS combines experts using lightweight stitch layers, which are inserted between frozen experts and the seed LLM, and trained on a small datamix of the expert domains. Stitch layers enable the seed LLM to integrate representations from any number of experts during the forward pass, allowing it to generalize to new domains, despite remaining frozen. Because BTS does not alter the constituent LLMs, BTS provides a modular and flexible approach: experts can be easily removed or added with only a small amount of training. Compared to alternative model merging or upcycling approaches, BTS yields the best generalist performance on a variety of downstream tasks, while retaining the specialized capabilities of each of the experts.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

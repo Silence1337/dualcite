@@ -44,9 +44,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Mixture-of-Experts (MoE) layers scale transformers by routing tokens to a sparse subset of feed-forward experts. Token-level routing, however, assigns an entire semantic spectrum to each expert, creating capacity bottlenecks, load-balancing pathologies, and limited specialisation. We introduce SliceMoE, an architecture that routes contiguous slices of a token&apos;s hidden vector. A d-dimensional embedding is partitioned into S slices, and for each slice, a lightweight shared router predicts the top-k experts. Experts operate on their assigned slices independently, and outputs are reassembled , maintaining per-token FLOP efficiency. Because slices from different tokens interleave within an expert, utilisation is naturally smoother. We propose a slice-level capacity loss, cross-slice dropout, and efficient fused batched-GEMM kernels. Experiments on WikiText-103 language modelling, WMT En-De translation, and three text-classification datasets show SliceMoE attains up to 1.7× faster inference than dense baselines, 12-18% lower perplexity than parameter-matched token-MoE, and improved expert balance, with interpretable expertise over syntactic versus semantic sub-spaces.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

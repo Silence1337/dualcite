@@ -73,9 +73,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language model (LLM) reasoning can be improved by scaling test-time compute with aggregation, i.e., generating multiple samples and aggregating over them. While improving performance, this strategy often reaches a saturation point beyond which additional compute provides no return. Refinement offers an alternative by using model-generated feedback to improve answer quality. However, refinement faces three key challenges: (1) Excessive refinement: Uniformly refining all instances can cause over-correction and reduce overall performance. (2) Inability to localize and address errors: LLMs struggle to identify and correct their own mistakes. (3) Insufficient refinement: Stopping refinement too soon could leave errors unaddressed. To tackle these issues, we propose MAGICORE, a framework for Multi-Agent Iteration for Coarse-to-fine Refinement. MAGICORE mitigates excessive refinement by categorizing problems as easy or hard, solving easy problems with coarsegrained aggregation, and solving the hard ones with fine-grained multi-agent refinement. To better localize errors, we incorporate external step-wise reward model scores, and to ensure sufficient refinement, we iteratively refine the solutions using a multi-agent setup. We evaluate MAGICORE on Llama-3-8B and GPT-3.5 and show its effectiveness across seven reasoning datasets. One iteration of MAGI-CORE beats Self-Consistency by 3.4%, Bestof-k by 3.2%, and Self-Refine by 4.0% even when these baselines use k = 120, and MAGI-CORE uses less than 50% of the compute. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

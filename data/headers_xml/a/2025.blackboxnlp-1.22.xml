@@ -59,9 +59,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large Language Models (LLMs) are widely used by software engineers for programming tasks. However, research shows that LLMs often lack a deep understanding of program semantics. Even minor changes to syntax, such as renaming variables, can significantly degrade performance across various tasks. In this work, we examine the task of type prediction: given a partially typed program, can a model predict a missing type annotations such that the resulting program is more typed? We construct a dataset of adversarial examples where models initially predict the correct types, but begin to fail after semantically irrelevant edits. This is problematic, as models should ideally generalize across different syntactic forms of semantically equivalent code. This lack of robustness suggests that models may have a shallow understanding of code semantics. Despite this, we provide evidence that LLMs do, in fact, learn robust mechanisms for type prediction-though these mechanisms often fail to activate in adversarial scenarios. By using activation steering, a method that manipulates a model&apos;s internal activations to guide it toward using latent knowledge, we restore accurate predictions on adversarial inputs. We show that steering successfully activates a type prediction mechanism that is shared by both Python and TypeScript, and is more effective than prompting with in-context examples. Across five different models, our comprehensive evaluation demonstrates that LLMs can learn generalizable representations of code semantics that transfer across programming languages.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

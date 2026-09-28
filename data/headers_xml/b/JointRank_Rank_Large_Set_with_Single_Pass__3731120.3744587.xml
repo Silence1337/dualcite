@@ -53,9 +53,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			<textClass>
 				<keywords>Large Language Models for Zero-Shot Ranking, Block design</keywords>
 			</textClass>
-			<abstract>
-				<p>Efficiently ranking relevant items from large candidate pools is a cornerstone of modern information retrieval systems-such as web search, recommendation, and retrieval-augmented generation. Listwise rerankers, which improve relevance by jointly considering multiple candidates, are often limited in practice: either by model input size constraints, or by degraded quality when processing large sets. We propose a model-agnostic method for fast reranking large sets that exceed a model input limits. The method first partitions candidate items into overlapping blocks, each of which is ranked independently in parallel. Implicit pairwise comparisons are then derived from these local rankings. Finally, these comparisons are aggregated to construct a global ranking using algorithms such as Winrate or PageRank. Experiments on TREC DL-2019 show that our method achieves an nDCG@10 of 70.88 compared to the 57.68 for full-context listwise approach using gpt-4.1-mini as long-context model, while reducing latency from 21 to 8 seconds. The implementation of the algorithm and the experiments is available in the repository: https://github.com/V3RGANz/jointrank CCS Concepts • Information systems → Retrieval models and ranking; Rank aggregation; Language models.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

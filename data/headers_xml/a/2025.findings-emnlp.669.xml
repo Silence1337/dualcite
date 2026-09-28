@@ -44,9 +44,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Latent-recurrent language models solve tasks by iteratively refining hidden states rather than emitting chain-of-thought tokens, yet the opacity of those hidden trajectories hinders credit assignment and limits mathematical reasoning accuracy. We propose Latent-State Supervised Reinforcement Learning (LSRL), a processsupervised variant of Guided Reward Policy Optimization (GRPO) that delivers dense rewards at every latent step. We decode each recurrent depth of a 3.5-billion-parameter Huginn model and score the partial solutions with a GPT-4.1-nano grader aligned to final-answer correctness. Using LoRA adapters, we update the policy on a single NVIDIA L40S GPU with only 500 GSM-8K training problems. Relative to the depth-8 supervised Huginn baseline, LSRL improves absolute accuracy by +4.27 points on GSM-8K and +2.06 points on MathQA. These results demonstrate that rewarding latent steps provides an efficient route to stronger mathematical reasoning in latentrecurrent language models.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

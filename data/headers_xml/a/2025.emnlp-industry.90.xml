@@ -106,9 +106,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Natural language interfaces (NLIs) democratize data analytics by enabling non-technical users to query relational databases via Textto-SQL systems. While large language models (LLMs) have achieved state-of-the-art accuracy on benchmarks like Spider and BIRD, two critical challenges persist for real-time deployment: (1) inference latency due to sequential autoregressive decoding (e.g., average inference latency on BIRD (Minidev) is 14.3 seconds per query for Qwen2.5-Coder-32B and 22.86 seconds for Llama-70B.), and (2) schema hallucinations (e.g., invalid column references like customer_ids instead of cust_id). (2) schema hallucinations (e.g., Qwen2.5-Coder-32B Instruct generated ... COUNT(users.UserId) ... = users.Id ..., using users.Id correctly in JOIN but hallucinating users.UserId in COUNT). To address these, we propose Tree-Guided Token Decoding (TTD-SQL), a lightweight framework that integrates SQL grammar and database schema constraints into the decoding process without modifying the underlying LLM. TTD precomputes token-level decision trees over SQL keywords, table names, and column identifiers, enabling deterministic &quot;auto-fill&quot; transitions for uniquely determined tokens (e.g., &quot;Song_&quot; → &quot;ID&quot;) while retaining flexibility for unconstrained reasoning. Across five LLMs (CodeLlama, Phi-4, Qwen2.5, Granite, Llama-70B), TTD achieves up to 19.96% token-rate speedups by eliminating redundant forward passes (e.g., CodeLlama: 8.97→10.76 tokens/s on Spider) and reduces schema hallucinations by +17.7% in executable-SQL rates (e.g., CodeLlama on BIRD). By bridging rigid parserbased methods and flexible LLM generation, TTD offers a practical path toward reliable, high-performance SQL generation in both public benchmarks and enterprise settings.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

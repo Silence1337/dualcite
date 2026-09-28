@@ -84,9 +84,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Fill-in-the-Middle (FIM), or infilling, has become integral to code language models, enabling generation of missing code given both left and right contexts. However, the current FIM training paradigm which performs next-token prediction (NTP) over reordered sequence often leads to models struggling to generate content that aligns well with the surrounding context. We hypothesize that NTP alone is insufficient for models to learn effective planning conditioned on the distant right context, a critical factor for successful code infilling. To overcome this, we propose Horizon-Length Prediction (HLP), a novel training objective that teaches models to predict the number of remaining middle tokens at each step. HLP advances FIM with lookahead planning, enabling models to inherently learn infilling boundaries for arbitrary left and right contexts without relying on dataset-specific post-processing. Our evaluation across different model families and sizes shows that HLP significantly improves FIM performance by up to 24% relatively on diverse benchmarks, across file-level and repository-level. Furthermore, the enhanced planning capability gained through HLP boosts model performance on code reasoning. Importantly, HLP incurs negligible training overhead and no additional inference cost, ensuring its practicality for real-world scenarios.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

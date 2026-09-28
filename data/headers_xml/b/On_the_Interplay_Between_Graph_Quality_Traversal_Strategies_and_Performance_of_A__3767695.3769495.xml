@@ -85,9 +85,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 					<term>Heuristic Search</term>
 				</keywords>
 			</textClass>
-			<abstract>
-				<p>State-of-the-art approximate nearest neighbor (ANN) methods like HNSW and LADR use document-document proximity graphs (also known as corpus graphs) to identify relevant documents efficiently. Complete graph construction latency (though built offline) has a quadratic time complexity of the number of documents, which is a major hurdle when scaling these methods. Graph approximations are popular ways to reduce the computational cost of building such corpus graphs. However, approximations come with a cost, namely, a lower quality of corpus graphs. Hence, there is a practical need to understand the tradeoffs between a corpus graph&apos;s quality and its effectiveness when used with various ANN methods; in other words, how &apos;approximate&apos; can a corpus graph be while maintaining strong retrieval effectiveness? We construct approximate (i.e. poorer quality) corpus graphs using various methods and present extensive experiments that analyze the robustness and performance of popular ANN methods on these graphs. Our analysis is performed on multiple datasets, with different parameters and various poor graph simulation strategies. We also analyze different graph traversal approaches for robust and efficient retrieval across graphs of poor quality. We conclude by addressing the utility of these approaches at the billion-scale, practical scenarios by optimizing graph construction and graph traversal stages. We show that robust ANN methods like Adaptive LADR show statistically equivalent performance on poor quality graphs while saving 33% graph construction time. CCS Concepts • Information systems → Information retrieval.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

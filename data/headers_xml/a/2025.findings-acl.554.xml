@@ -83,9 +83,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Delta compression methods focus on efficiently serving multiple uniquely fine-tuned models, each tailored to specific tasks and user requirements. These approaches decompose a finetuned LLM into a base model and corresponding delta weights, which are compressed using low-rank or low-bit representations to reduce storage costs. However, their effectiveness is highly sensitive to the magnitude of the model deltas-a factor directly influenced by the scale of the training data. We propose the Residual Quantization Tree (RQT), a hierarchical quantization framework that automatically shares low-bit integer weights across similar fine-tuned models. The RQT construction employs a two-phase greedy algorithm: a bottom-up aggregation of models based on weight matrix similarity and top-down residual quantization, in which each node optimizes the quantization parameters and then delegates residual errors to child nodes. We evaluate RQT on fine-tuned models across mathematics, coding, chatbot, and Chinese LLMs. The results show that RQT achieves an average accuracy degradation of approximately 3% (comparable to previous 4-bit post-training quantization) while maintaining an effective bitwidth of around 2 bits.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

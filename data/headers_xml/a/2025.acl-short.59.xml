@@ -79,9 +79,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Video Large Language Models (Video-LLMs) suffer from high inference latency in long video processing due to their auto-regressive decoding mechanism, posing challenges for the efficient processing of video sequences that are usually very long. We observe that attention scores in Video-LLMs during decoding exhibit pronounced sparsity, with computational focus concentrated on a small subset of critical tokens. Motivated by this insight, we introduce Sparse-to-Dense (STD), a novel decoding strategy that integrates two distinct modules: a sparse module that rapidly generates speculative tokens using efficient top-K attention, and a dense module that verifies these tokens in parallel via full self-attention. This collaborative approach accelerates Video-LLMs losslessly, effectively offering a free lunch for video understanding. STD is a plug-and-play solution requiring no fine-tuning or architectural changes and achieves up to a 1.94× wall time speedup while preserving model performance. It enables a seamless conversion of standard Video-LLMs into sparse counterparts, unlocking efficient long-video processing without sacrificing accuracy.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

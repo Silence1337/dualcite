@@ -77,9 +77,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Subword tokenization, where text is represented in an intermediate form between full words and characters, is ubiquitous in modern NLP due to its ability to represent any input sentence with a small vocabulary. However for Korean, where there are 11,172 base characters (syllables) in its alphabet, it is difficult to have a vocabulary large enough to succinctly encode text while fitting within parameter-budget constraints. This motivates us to explore an alternative representation for Korean which relies on the decompositional nature of Korean syllables, each of which can be uniquely decomposed into a sequence of two or three subcharacters (jamo), of which there are only 68. Using jamo as the basis for subword tokenization (e.g., byte-pair encoding) leads to shorter tokenized sequences with fewer vocabulary parameters, exposes the model to sub-syllable-level morphological information, and increases the amount of augmentation gained from subword regularization. We evaluate jamo-level subword tokenization on several Korean translation tasks and find that jamolevel subword models consistently outperform syllable-and byte-level models in low-resource and restricted-vocabulary settings 1 .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -82,9 +82,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models excel in a wide range of natural language processing tasks, but generating factually accurate and consistent outputs remains a challenge. To improve text reliability, Contrastive Decoding (CD) refines token selection by leveraging differences between an expert and base model, penalizing low-quality token choices. However, CD employs static weighting between models, making it sensitive to variations in model architecture and input characteristics, often resulting in suboptimal token selection and error propagation throughout generation. We propose Uncertainty-Aware Contrastive Decoding (UCD), a method that dynamically adjusts model contributions at each decoding step based on uncertainty. We introduce a cumulative energy function, where uncertainty is quantified as the negative log-sumexp over logits, and decomposed into entropy and expected logit components. This energy serves as a dynamic confidence signal, guiding adaptive model weighting during generation. We demonstrate through extensive experiments that UCD significantly improves factual accuracy and reliability over existing decoding methods. Finally, we provide a theoretical analysis showing that our energy function serves as a well-defined uncertainty metric capturing model confidence. Our code is available at https://github.com/MLAI-Yonsei/UCD.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -63,9 +63,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Speculative decoding is a prominent technique for accelerating LLM inference by leveraging an auxiliary draft model, but its effectiveness is limited by the autoregressive nature of draft generation, where acceptance rates depend on the draft model&apos;s size. Scaling the draft model improves acceptance but also increases speculation latency, limiting overall speedup. Furthermore, fine-tuning both the draft and target models is often necessary to achieve high acceptance rates, adding complexity to inference systems as the number of downstream tasks grows. Single-model approaches like Medusa generate speculative tokens non-autoregressively but lack token dependencies, limiting effectiveness. Alternatives like Hydra and Eagle incorporate token dependencies but rely on dedicated heads, making speculation independent of the base model and limiting the extent to which stronger base models can improve speculation.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

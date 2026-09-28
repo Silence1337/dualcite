@@ -48,9 +48,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Arithmetic offers a compact test of whether large language models compute or memorize. We study multi-digit addition in LLaMA-3-8B-Instruct using linear probes and the Logit Lens, and find a consistent four-stage, layer-wise ordering of probe-decodable signal types across depth: (1) early layers encode formula structure (operand/operator layout) while the gold next token is still far from top-1; (2) mid layers expose digit-wise sums and carry indicators; (3) deeper layers express result-level numerical abstractions that support near-perfect digit decoding from hidden states; and (4) near the output, representations align with final sequence generation, with the correct next token reliably ranked first. Across experiments, each signal family becomes linearly decodable with high accuracy (stage-wise peaks typically ≥95% on in-domain multi-digit addition, and up to 99%). Taken together, these observations-in our setting-are consistent with a hierarchical, computation-first account rather than rote pattern matching, and help explain why Logit Lens inspection is most informative mainly in later layers. Code and data are available at https://github.com/YaoToolChest/ addition-in-four-movements.git.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -64,9 +64,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Text summarization systems face significant adaptation costs when deployed across diverse domains, requiring expensive few-shot learning or manual prompt engineering. We propose a cost-effective domain adaptation framework that generates reusable summarization guidelines using only two reference summaries and three LLM inferences. Our approach works by having the model compare its own generated summaries against domain specific reference summaries in a one time preparation step that derives concise natural language guidelines that capture the summarization patterns of the target domain. These guidelines are then appended to the summarization prompt to adapt the LLM to the target domain at a minimal cost. We evaluate our method across diverse model sizes on three distinct summarization domains: Lawsuits, ArXiv papers, and Patents. Automatic metrics show that guideline-based adaptation achieves comparable or superior performance compared to in-context learning and zero-shot baselines. An LLM preference evaluation using the latest models shows that summaries generated using such guidelines are superior to the zero-shot or in-context learning summarization prompts. Our method enables efficient domain adaptation of text summarizer LLMs with a minimal resource overhead, making specialized summarization particularly accessible for agentic systems that require to process heterogeneous texts in enterprise environments.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

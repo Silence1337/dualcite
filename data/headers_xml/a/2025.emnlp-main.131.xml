@@ -77,9 +77,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Modern LLMs face a major obstacle: each new pre-trained model version requires expensive and repetitive alignment. We propose a method that transfers fine-tuning updates across model versions. The key idea is to extract the diff vector, which is the difference in parameters induced by fine-tuning, from a source model version and apply it to the base of a different target version. We show that transferring diff vectors significantly improves the target base model, often achieving performance comparable to its fine-tuned counterpart. For example, applying the fine-tuning updates from Llama 3.0 8B to Llama 3.1 8B increases accuracy by 46.9% on IFEval and 15.7% on Live-CodeBench without further training, surpassing Llama 3.1 8B Instruct. In multilingual settings, we also observe accuracy gains relative to Llama 3.1 8B Instruct, including 4.7% for Malagasy and 15.5% for Turkish on Global MMLU. Our controlled experiments reveal that fine-tuning transfer works best when source and target models are linearly connected in parameter space. We also show that this transfer provides a stronger and more efficient starting point for subsequent fine-tuning. Finally, we propose an iterative recycling-then-finetuning approach for continuous model development, which improves both efficiency and effectiveness. Our findings suggest that fine-tuning transfer is a viable strategy to reduce training costs while maintaining model performance. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

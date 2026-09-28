@@ -90,9 +90,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Multimodal Retrieval-Augmented Generation (MM-RAG) has emerged as a promising approach for enhancing the reliability and factuality of large vision-language models (LVLMs). While end-to-end optimization is infeasible due to non-differentiable operations across each component during the forward process, current methods primarily focus on component-level optimizations, necessitate extensive component-specific training datasets, and suffer from a gap between local and global optimization objectives. In this paper, we propose a new paradigm that ensures end-to-end optimization, referred to as MM-RewardRAG. It backpropagates global rewards instead of losses from the system output to each component, and then transforms these rewards into specific local losses, enabling each component to perform gradient descent and thus perform end-to-end optimization. Specifically, we first insert two lightweight multimodal components, a query translator and an adaptive reranker, to address the heterogeneity of multimodal knowledge and the varying knowledge demands for different questions, and then tune only these inserted components, relying exclusively on an external verifiable reward signal. Our method achieves state-of-the-art performance on multiple knowledge-intensive multimodal benchmarks with high training efficiency, using only 4k training data samples. Ablation study results show the performance evolution of each component during the training process, revealing that each component learns how to generate outputs that contribute to better final answers, demonstrating the potential of this paradigm as a promising direction for MM-RAG research. The code is available at https:// github.com/toward-agi/MM-Reward-RAG.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

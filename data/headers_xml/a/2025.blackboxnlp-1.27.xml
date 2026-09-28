@@ -74,9 +74,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>It is a longstanding challenge to understand how neural models perform mathematical reasoning. Recent mechanistic interpretability work indicates that large language models (LLMs) use a &quot;bag of heuristics&quot; in middle to late-layer MLP neurons for arithmetic, where each heuristic promotes logits for specific numerical patterns. Building on this, we aim for fine-grained manipulation of these heuristic neurons to causally steer model predictions towards specific arithmetic outcomes, moving beyond simply disrupting accuracy. This paper presents a methodology that enables the systematic identification and causal manipulation of heuristic neurons, which is applied to the addition task in this study. We train a linear classifier to predict heuristics based on activation values, achieving over 90% classification accuracy. The trained classifier also allows us to rank neurons by their importance to a given heuristic. By targeting a small set of topranked neurons (K=50), we demonstrate high success rates-over 80% for the ones place and nearly 70% for the tens place-in controlling addition outcomes. This manipulation is achieved by transforming the activation of identified neurons into specific target heuristics by zeroing out source-heuristic neurons and adjusting target-heuristic neurons towards their class activation centroids. We explain these results by hypothesizing that high-ranking neurons possess &apos;cleaner channels&apos; for their heuristics, supported by Signal-to-Noise Ratio (SNR) analysis where these neurons show higher SNR scores. Our work offers a robust approach to dissect, causally test, and precisely influence LLM arithmetic, advancing understanding of their internal mechanisms.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

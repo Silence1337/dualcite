@@ -106,9 +106,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models (LLMs) have achieved remarkable progress in multilingual machine translation (MT), demonstrating strong performance even with limited parallel data. However, effectively fine-tuning LLMs for MT is challenging due to parameter interference, which arises from the conflicting demands of different language pairs and the risk of overwriting pre-trained knowledge. To address this issue, we propose MLAS-LoRA, a novel multiple language-aware LoRA knowledge transfer framework. MLAS-LoRA efficiently adapts LLMs to MT by selectively transferring knowledge from a large teacher to a small student model. Our approach first evaluates the awareness of neurons and extracts linguistic knowledge in the teacher model to both the general MT task and specific language pairs. We then propose a multiple language-specific LoRA architecture to inject the extracted knowledge into the student model. During fine-tuning, only the parameters of the relevant languagegeneral and language-specific LoRA modules are updated. Experimental results on diverse multilingual language pairs demonstrate that MLAS-LoRA significantly outperforms strong baselines by +1.7 BLEU on average, including standard fine-tuning and other parameterefficient methods.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

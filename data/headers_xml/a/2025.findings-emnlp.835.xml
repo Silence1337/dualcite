@@ -67,9 +67,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Fine-grained control is essential for precise and customizable text generation, yet existing benchmarks evaluate models on only a few attributes, typically fewer than five. We introduce ULTRABENCH, a new benchmark for extremely fine-grained controllable generation (EFCG), which evaluates large language models (LLMs) under dense, multi-attribute constraints. Each sample includes approximately 70 attributes, combining LLM-extracted soft constraints (e.g., style and tone) with programmatically enforced hard constraints (e.g., word count). Using ULTRABENCH, we conduct a comprehensive evaluation of state-of-the-art LLMs and prompting strategies. Models such as GPT-4.1 and Qwen3-8B perform well on individual constraints, achieving instructionlevel accuracy above 70%, but consistently fail to satisfy all constraints simultaneously. To understand this limitation, we analyze model behavior across different dimensions. First, we observe a clear position bias: models tend to prioritize constraints presented later in the prompt while neglecting those that appear earlier. Second, we find that structural-related constraints are significantly more difficult to satisfy than content-or style-based ones, suggesting that current models struggle to coordinate global structure with token-level control. Finally, our error analysis reveals distinct failure modes: GPT-4.1 often attempts to follow constraints but falls short in precision, whereas LLaMA frequently omits constraints, particularly in multi-turn settings. These findings highlight fundamental limitations in EFCG and underscore the need for new methods that support dense, instruction-sensitive generation 1 .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

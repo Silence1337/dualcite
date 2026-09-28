@@ -104,9 +104,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Some statements have one well-defined continuation (e.g., &quot;the Eiffel Tower is in [Paris]&quot;), whereas others have a natural distribution over multiple options (e.g., &quot;the weighted coin flip was [Heads/Tails].&quot;) We argue that language model (LM) outputs should capture these natural distributions. Our work specifically tests whether LM output probabilities are calibrated to numeric information within their textual contexts. For example, if the context (the prompt) concerns two equally likely options (e.g., heads or tails for a fair coin), the LM output probabilities should also be equal. Likewise, in a context with nonuniformly likely events (e.g., rolling a pair with two dice) an LM should output proportionate probabilities. However, we find that even in simple settings, the best LMs (1) are poorly calibrated and (2) have systematic biases: artifacts like word identity, word order, and word frequency all impact calibration. For example, gpt-4o-mini often picks the first of two options presented in the prompt regardless of the options&apos; implied likelihoods, whereas Llama-3.1-8B picks the second. Models do not allocate probability mass among valid options in a calibrated manner.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

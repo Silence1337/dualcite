@@ -76,9 +76,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Auto-regressive Large Language Models (LLMs) demonstrate remarkable performance across different domains such as vision and language tasks. However, due to sequential processing through multiple transformer layers, autoregressive decoding faces significant computational challenges, particularly in resourceconstrained environments like mobile and edge devices. Existing approaches in literature that aim to improve latency via skipping layers have two distinct flavors: (1) early exit, and (2) input-agnostic heuristics where tokens exit at predetermined layers irrespective of input sequence. Both the above strategies have limitations, the former cannot be applied in the presence of KV caching, which is essential for speed-ups in modern inference frameworks, and the latter fails to capture variation in layer importance across tasks or, more generally, across input sequences. To address these limitations, we propose FIRST, a model-agnostic framework that reduces inference latency by using layer-specific routers to adaptively skip transformer layers during decoding, based on routing decisions made from the input prompt in the prefill stage. FIRST remains fully compatible with KV caching, enabling faster decoding while maintaining quality. Our method reveals that input adaptivity is essential: Different tasks rely on different subsets of layers to evolve meaningful representations. Extensive experiments show that FIRST significantly reduces latency while outperforming existing layer selection strategies in quality. It retains performance comparable to the base model without skipping. FIRST is thus a promising and efficient solution for LLM deployment in low-resource environments.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

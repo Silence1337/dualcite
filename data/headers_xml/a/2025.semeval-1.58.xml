@@ -65,9 +65,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The SemEval-2025 Task 10 Subtask 2 presents a multi-class multi-label text classification challenge(Piskorski et al., 2025). The task requires systems to classify documents simultaneously across three categories: Climate Change (CC), Ukraine-Russia War (URW), and Others. Several challenges were identified, including the distinct characteristics of climate change and warfare topics, category imbalance, insufficient training samples, and distributional differences across development and test sets. To address these challenges, we implemented two approaches. The first approach applies a Contrastive learning augmented Cascaded UNet model (CCU), which employs a cascaded architecture to explicitly model the label taxonomy. This model incorporates a UNet-style architecture to classify embeddings extracted by the base text encoder, with specialized pathways for different categories. We addressed data insufficiency through contrastive learning and mitigated data imbalance using an asymmetric loss function. The second approach implemented a Bi-Sequential Trees with Embeddings, Sentiment and Topics (BST-EST). In this approach, transformer encoder models were applied to extract word embeddings, then we applied classical machine learning based classifiers such as Random Forest and XGBoost. In the experiments, the CCU model achieves a higher F1 (samples) score (0.345) on the test set.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

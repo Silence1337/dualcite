@@ -158,9 +158,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>LLMs face privacy risks when handling sensitive data. To ensure privacy, researchers use differential privacy (DP) to provide protection by adding noise during LLM training. However, users may be hesitant to share complete data with LLMs. Researchers follow local DP to sanitize the text on the user side and feed non-sensitive text to LLMs. The sanitization usually uses a fixed non-sensitive token list or a fixed noise distribution, which induces the risk of being attacked or semantic distortion. We argue that the token&apos;s protection level should be adaptively adjusted according to its semanticbased information to balance the privacy-utility trade-off. In this paper, we propose DYNTEXT, an LDP-based Dynamic Text sanitization for privacy-preserving LLM inference, which dynamically constructs semantic-aware adjacency lists of sensitive tokens to sample non-sensitive tokens for perturbation. Specifically, DYN-TEXT first develops a semantic-based density modeling under DP to extract each token&apos;s density information. We propose token-level smoothing sensitivity by combining the idea of global sensitivity (GS) and local sensitivity (LS), which dynamically adjusts the noise scale to avoid excessive noise in GS and privacy leakage in LS. Then, we dynamically construct an adjacency list for each sensitive token based on its semantic density information. Finally, we apply the replacement mechanism to sample non-sensitive, semantically similar tokens from the adjacency list to replace sensitive tokens. Experiments show that DYNTEXT excels strong baselines on three datasets.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

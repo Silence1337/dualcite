@@ -79,9 +79,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Mixture-of-experts (MoEs) have been adopted to reduce inference costs by sparsely activating experts in large language models (LLMs). Despite these reductions, the massive number of parameters in MoEs still makes them expensive to serve. Conventionally, unstructured or structured pruning has been considered to reduce the number of parameters. Our key contribution is exploring the interpolation between structured and unstructured pruning, to propose a novel structured-then-unstructured (STUN) approach outperforming both structured and unstructured pruning, especially for MoEs. In the first stage, we show a scalable expert pruning with O(1) forward pass, unlike existing work requiring O(k n √ n) forward passes for n experts that cannot scale for recent MoEs with hundreds of experts. We then show our expert-pruned MoEs are robust to unstructured pruning to follow. Experiments on Snowflake Arctic and Mixtral show that our proposal is highly effective-For Snowflake Arctic, a 480B-sized MoE with 128 experts, our method needs only one H100 and two hours to achieve nearly no loss in performance with 40% sparsity, even in generative tasks such as GSM8K, where state-of-the-art structured or unstructured pruning methods fail. The code is publicly available. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

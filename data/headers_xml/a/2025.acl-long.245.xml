@@ -64,9 +64,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The rapid advancement of large language models (LLMs) has brought about increased concerns regarding their safety, especially as adversaries develop jailbreak techniques to bypass LLMs&apos; safety mechanism. Although recent work on safety training with modules such as low-rank adaptation (LoRA) to resist jailbreaks shows promise, these approaches can inadvertently degrade a model&apos;s general utility. In this paper, we propose a novel plugand-play method that mitigates the impact of safety training on model utility by explicitly locating and leveraging safety-critical singular vectors, which only contribute to safety, within the model&apos;s parameter space. We quantify the safety-criticality of each singular vector as the difference of their importance for safety and utility measured by a corresponding low-rank projection. The top scored singular vectors are located as safety-critical and are used to initialize the LoRA modules within existing safety training methods in a plug-and-play manner, thereby constraining the training updates within safety-critical parameters. Additionally, we propose a dynamic rank number determination strategy to further reduce parameter overhead. Experiments on HarmBench with multiple jailbreak methods validate the effectiveness of our approach in safety training, while evaluations on several utility benchmarks demonstrate that our method successfully mitigates the adverse impact of safety training on model utility, enhancing the utility performance of the evaluated safety training baselines.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

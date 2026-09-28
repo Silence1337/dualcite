@@ -77,9 +77,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Many positional encodings (PEs) are designed to exhibit long-term decay, based on an entrenched and long-standing inductive opinion: tokens farther away from the current position carry less relevant information. We argue that long-term decay is outdated in the era of LLMs, as LLMs are now applied to tasks demanding precise retrieval of in-context information from arbitrary positions. Firstly, we present empirical analyses on various PEs, demonstrating that models inherently learn attention with only a local-decay pattern while forming a U-shape pattern globally, contradicting the principle of long-term decay. Furthermore, we conduct a detailed analysis of rotary position encoding (RoPE, a prevalent relative positional encoding in LLMs), and found that the U-shape attention is caused by some learned components, which are also the key factor limiting RoPE&apos;s expressiveness and extrapolation. Inspired by these insights, we propose High-frequency rotary Position Encoding (HoPE). HoPE replaces the specific components in RoPE with position-independent ones, retaining only highfrequency signals, which also breaks the principle of long-term decay in theory. HoPE achieves two major advantages: (1) Without constraints imposed by long-term decay, contradictory factors that limit attention optimization are removed. Thus, the model&apos;s context awareness is enhanced. (2) HoPE exhibits greater robustness to the out-of-distribution behavior in attention patterns during extrapolation. The effectiveness of HoPE is validated through extensive experiments and with a large language model of up to 3 billion parameters.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

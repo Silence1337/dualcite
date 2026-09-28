@@ -61,9 +61,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Reranking, or scoring a list of prediction candidates from a machine translation system with an external scoring model and returning the highest-scoring candidate, remains a simple and effective method for improving prediction quality. However, reranking with high quality scoring models can add substantial computational cost to the translation pipeline, which we address in this work by framing list reranking as a Bayesian optimization (BayesOpt) problem over the candidate list, where unknown scores are modeled with a Gaussian process. This algorithm scores candidates iteratively, choosing next candidates by balancing between exploration, choosing to score those that differ from candidates already scored, and exploitation, choosing to score those that resemble high-scoring candidates. This procedure finds high-scoring candidates while scoring only a fraction of the candidates list; given candidate lists of 200 random samples (before deduplication), our method achieves the same CometKiwi score using only 70 scoring evaluations on average compared to scoring a random subset of 180 candidates. We also propose multi-fidelity BayesOpt for list reranking, where scores obtained from a noisier but cheaper proxy scoring model are incorporated into the search process. We show that welltrained distilled proxy scorers can further improve the performance of BayesOpt.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

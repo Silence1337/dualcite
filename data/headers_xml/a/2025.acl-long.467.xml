@@ -110,9 +110,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>With the continuously expanding parameters, efficiently adapting large language models to downstream tasks is crucial in resource-limited conditions. Many parameter-efficient finetuning methods have emerged to address this challenge. However, they lack flexibility, like LoRA requires manually selecting trainable parameters and rank size, (IA) 3 can only scale the activations along columns, yielding inferior results due to less precise fine-tuning. To address these issues, we propose a novel method named AdaDHP with fewer parameters and finer granularity, which can adaptively select important parameters for each task. Specifically, we introduce two trainable vectors for each parameter and fine-tune the parameters through Hadamard product along both rows and columns. This significantly reduces the number of trainable parameters, with our parameter count capped at the lower limit of LoRA. Moreover, we design an adaptive parameter selection strategy to select important parameters for downstream tasks dynamically. This allows our method to flexibly remove unimportant parameters for downstream tasks. Finally, we demonstrate the superiority of our method on the T5-base model across 17 NLU tasks and on complex mathematical tasks with the Llama series models.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

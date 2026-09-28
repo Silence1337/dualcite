@@ -62,9 +62,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 					<term>Interpretability</term>
 				</keywords>
 			</textClass>
-			<abstract>
-				<p>Generative Information Retrieval (GenIR) is a novel paradigm in which a transformer encoder-decoder model predicts document rankings based on a query in an end-to-end fashion. These GenIR models have received significant attention due to their simple retrieval architecture while maintaining high retrieval effectiveness. However, in contrast to established retrieval architectures like crossencoders or bi-encoders, their internal computations remain largely unknown. In this work, we investigate this retrieval mechanism and uncover the roles played by different model components (selfattention, cross-attention, MLPs) and their interaction to generate the document identifier. First, we show that the pre-trained encoder, which was not fine-tuned for retrieval, is sufficient for the retrieval process. Then, we find that the pass through the decoder can be divided into three stages: (I) the priming stage in which no component contributes query-specific information, (II) the bridging stage where cross-attention transfers query information from the encoder to the decoder, and (III) the interaction stage where MLPs process this transferred information to predict the document identifier in the last layer. Our results indicate that document-specific information is only stored in a few components in the final stage of the retrieval process. We hope that our findings will motivate the development of more effective GenIR models and facilitate their improvements. 1 CCS Concepts • Information systems → Language models; Retrieval models and ranking.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

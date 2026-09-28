@@ -146,9 +146,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Execution Accuracy and Exact Set Match are two predominant metrics for evaluating the functional correctness of SQL queries in modern Text-to-SQL tasks. However, both metrics have notable limitations: Exact Set Match fails when SQL queries are functionally equivalent but syntactically different, while Execution Accuracy is prone to false positives due to inadequately prepared test databases, which can be costly to create, particularly in large-scale industrial applications. To overcome these challenges, we propose a novel graph-based metric, FuncEvalGMN, that effectively overcomes the deficiencies of the aforementioned metric designs. Our method utilizes a relational operator tree (ROT), referred to as RelNode, to extract rich semantic information from the logical execution plan of SQL queries, and embed it into a graph. We then train a graph neural network (GNN) to perform graph matching on pairs of SQL queries through graph contrastive learning. FuncEvalGMN offers two highly desired advantages: (i) it requires only the database schema to derive logical execution plans, eliminating the need for extensive test database preparation, and (ii) it demonstrates strong generalization capabilities on unseen datasets. These properties highlight FuncE-valGMN&apos;s robustness as a reliable metric for assessing functional correctness across a wide range of Text-to-SQL applications. The source code can be found at https://github.com/Leon0-0/FuncEvalGMN.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

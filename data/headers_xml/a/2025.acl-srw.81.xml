@@ -55,9 +55,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models often suffer from language confusion, a phenomenon in which responses are partially or entirely generated in unintended languages. This critically degrades the user experience, especially in low-resource settings. We hypothesize that this issue stems from limitations in conventional fine-tuning objectives, such as supervised learning, which optimize the likelihood of correct tokens without explicitly penalizing undesired outputs such as cross-lingual mixing. Analysis of loss trajectories during pretraining further reveals that models fail to distinguish between monolingual and language-mixed texts, highlighting the absence of inherent pressure to avoid such confusion. In this work, we apply ORPO, which adds penalties for unwanted output styles to standard SFT, effectively suppressing languageconfused generations. ORPO maintains strong language consistency, even under high decoding temperatures, while preserving general QA performance. Our findings suggest that incorporating appropriate penalty terms can effectively mitigate language confusion in multilingual models, particularly in low-resource scenarios.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

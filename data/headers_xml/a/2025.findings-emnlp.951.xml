@@ -94,9 +94,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Generating high-quality long-text remains challenging for Large Language Models (LLMs), as conventional supervised fine-tuning fails to ensure overall quality due to its teacherforcing nature. Kahneman-Tversky Optimization (KTO), as a model alignment method that can holistically optimize generation quality, overcomes the need for paired preference data required by previous methods. However, it still suffers from binary supervision that inadequately reflects varying quality degrees. To address this, we propose GRACE-KTO, a semionline framework that transforms KTO&apos;s binary signals into dynamically calibrated intra-group rewards. Specifically, GRACE-KTO aggregates responses to identical queries into groups, computes rank-sum scores across multiple linguistic quality dimensions, and applies groupwise and global normalization to adaptively redistribute sample importance. We adopt a semionline training strategy to reduce costly online sampling while outperforming offline variants. By leveraging query generation with seed data, we minimize labeled data dependency, using the model&apos;s own knowledge to enhance its longtext generation capabilities. Additionally, we extend the context window to 32k tokens using YaRN during inference, enabling the model to generate longer texts while maintaining perplexities. Experiments demonstrate GRACE-KTO&apos;s superiority over vanilla KTO on both automatic metrics and LLM-as-a-Judge evaluations, advancing long-text generation through group-wise adaptive calibration.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

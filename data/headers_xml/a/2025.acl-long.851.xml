@@ -108,9 +108,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>LLMs demonstrate remarkable utility but remain vulnerable to jailbreak attacks that aim to elicit harmful responses. Existing defenses, including post-training alignment and prompt engineering, rely on training on safety-annotated datasets and safe prompt templates, struggling with adaptability to out-of-distribution (OOD) attacks. Steering internal representations of LLMs provides real-time adjustments to defend against OOD attacks. However, it struggles with maintaining model utility, since modifying the representation disrupts the forward pass of inference. It barely considers the competitive objectives of helpfulness and harmlessness in LLMs. We argue that adversarial game-based approaches promise a solution for conflicts between the two objectives. In this paper, we propose Adversarial Game Defense (AGD), an adversarial game-based defense method that dynamically adjusts LLMs&apos; internal representations to achieve a balanced trade-off between helpfulness and harmlessness. AGD first proposes an interquartile range (IQR) method to detect abnormal attention weights and correct the abnormal weights via adversarial training. AGD adopts a bi-level optimization to play a two-player variable-sum game to approach Nash Equilibrium (NE), where the two players adversarially refine head activations for helpfulness and harmlessness respectively. Furthermore, AGD applies an expert model to nexttoken sampling to generate safer responses. Experiments show that AGD significantly improves LLMs&apos; safety over all baselines.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

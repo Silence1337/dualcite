@@ -136,9 +136,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models (LLMs) have achieved significant advances, but can potentially generate harmful content such as social biases, extremism, and misinformation. Red teaming is a promising approach to enhance model safety by generating adversarial prompts to test and improve model robustness. However, existing red-teaming methods often require expensive fine-tuning, especially for large LLMs. We propose the Dynamic Evil Score-Guided Decoding framework (DESGD), an efficient red-teaming method that does not increase computational cost with the target model size. DESGD framework introduces the concept of an &apos;evil score,&apos; which can dynamically evaluate the potential of tokens to contribute to harmful outputs in decoding phrases. We fine-tune a small model using an adversarial dataset and calculate the evil score based on the difference in logits vector before and after fine-tuning. Then, we adjust the logits of the large target model according to the evil score. The results of the experiment show that our method achieves an ASR of 92. 83% on the Llama-3.2-3B-Instruct model, compared to 83.48% with adversarial fine-tuning while using lower computational resources. Similarly, on the Qwen2.5-3B-Instruct model, DESGD reaches an ASR of 88.62%, outperforming adversarial fine-tuning (77.56%).</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

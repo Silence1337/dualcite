@@ -68,9 +68,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Training effective text rerankers is crucial for information retrieval. Two strategies are widely used: contrastive learning (optimizing directly on ground-truth labels) and knowledge distillation (transferring knowledge from a larger reranker). While both have been studied extensively, a clear comparison of their effectiveness for training cross-encoder rerankers under practical conditions is needed. This paper empirically compares these strategies by training rerankers of different sizes (0.5B, 1.5B, 3B, 7B) and architectures (Transformer, Recurrent) using both methods on the same data, with a strong contrastive learning model acting as the distillation teacher. Our results show that knowledge distillation generally yields better in-domain and out-of-domain ranking performance than contrastive learning when distilling from a more performant teacher model. This finding is consistent across student model sizes and architectures. However, distilling from a teacher of the same capacity does not provide the same advantage, particularly for out-of-domain tasks. These findings offer practical guidance for choosing a training strategy based on available teacher models. We recommend using knowledge distillation to train smaller rerankers if a larger, more performant teacher is accessible; in its absence, contrastive learning remains a robust baseline. Our code implementation is made available to facilitate reproducbility. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

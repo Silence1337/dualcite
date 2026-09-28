@@ -73,9 +73,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Causal masking is a fundamental component in Generative Pre-Trained Transformer (GPT) models, playing a crucial role during training. Although GPTs can process the entire user prompt at once, the causal masking is applied to all input tokens step-by-step, mimicking the generation process. This imposes an unnecessary constraint during the initial &quot;prefill&quot; phase when the model processes the input prompt and generates the internal representations before producing any output tokens. In this work, attention is masked based on the known block structure at the prefill phase, followed by the conventional token-by-token autoregressive process after that. For example, in a typical chat prompt, the system prompt is treated as one block, and the user prompt as the next one. Each of these is treated as a unit for the purpose of masking, such that the first tokens in each block can access the subsequent tokens in a non-causal manner. Then, the model answer is generated in the conventional causal manner. The Segment-by-Segment scheme entails no additional computational overhead. When integrated using a lightweight fine-tuning into already trained models such as Llama and Qwen, MAS quickly increases models&apos; performances. Our code will be available at: https://github.com/shacharKZ/ MAS-Segment-Based-Attention-Masking .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

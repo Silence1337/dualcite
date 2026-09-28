@@ -80,9 +80,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The quality of training data plays a critical role in the performance of large language models (LLMs). This is especially true for low-resource languages where high-quality content is relatively scarce. Inspired by the success of FineWeb-Edu (Lozhkov et al., 2024) for English, we construct a native Arabic educational-quality dataset using similar methodological principles. We begin by sampling 1 million Arabic web documents from Common Crawl and labeling them into six quality classes (0-5) with Qwen-2.5-72B-Instruct model using a classification prompt adapted from FineWeb-Edu. These labeled examples are used to train a robust classifier capable of distinguishing educational content from general web text. We train a classification head on top of a multilingual 300M encoder model, then use this classifier to filter a large Arabic web corpus, discarding documents with low educational value. To evaluate the impact of this curation, we pretrain from scratch two bilingual English-Arabic 7B LLMs on 800 billion tokens using the filtered and unfiltered data and compare their performance across a suite of benchmarks. Our results show a significant improvement when using the filtered educational dataset, validating the effectiveness of quality filtering as a component in a balanced data mixture for Arabic LLM development. This work addresses the scarcity of high-quality Arabic training data and offers a scalable methodology for curating educational quality content in low-resource languages.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

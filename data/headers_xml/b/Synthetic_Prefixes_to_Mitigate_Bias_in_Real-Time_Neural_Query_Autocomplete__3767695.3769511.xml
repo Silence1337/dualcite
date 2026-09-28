@@ -95,9 +95,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 					<term>neural ranking</term>
 				</keywords>
 			</textClass>
-			<abstract>
-				<p>We introduce a data-centric approach for mitigating presentation bias in real-time neural query autocomplete systems through the use of synthetic prefixes. These prefixes are generated from complete user queries collected during regular search sessions where autocomplete was not active. This allows us to enrich the training data for learning to rank models with more diverse and less biased examples. This method addresses the inherent bias in engagement signals collected from live query autocomplete interactions, where model suggestions influence user behavior. Our neural ranker is optimized for real-time deployment under strict latency constraints and incorporates a rich set of features, including query popularity, seasonality, fuzzy match scores, and contextual signals such as department affinity, device type, and vertical alignment with previous user queries. To support efficient training, we introduce a taskspecific simplification of the listwise loss, reducing computational complexity from O(n2) to O(n) by leveraging the query autocomplete structure of having only one ground-truth selection per prefix. Deployed in a large-scale e-commerce setting, our system demonstrates statistically significant improvements in user engagement, as measured by mean reciprocal rank and related metrics. Our findings show that synthetic prefixes not only improve generalization but also provide a scalable path toward bias mitigation in other low-latency ranking tasks, including related searches and query recommendations. CCS Concepts • Information systems → Learning to rank.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

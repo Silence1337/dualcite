@@ -67,9 +67,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Auto-regressive decoding is a memory-bound job, meaning decoding inference performance is limited by the bandwidth rather than the computational capabilities of the GPU. Weight-only quantization is a promising method to address the memory-bound limitations. Previous studies have followed one of two approaches. Some have exclusively studied integer quantization while ignoring the Gaussian distribution nature of LLMs&apos; weights. Others have proposed nonuniform quantization, but incurred additional memory overhead due to lookup tables. In this work, we extend the floating-point standard to the ExMy quantization schema, which allocates x bits for the exponent and y bits for the mantissa to represent a number. In terms of runtime efficiency, we demonstrate that the conversion from ExMy to FP16 can be realized through register-level operations, which can get almost the same performance as INT5. In terms of quantization loss, we analyze that of different ExMy settings, where the E2M2 schema achieves an optimal balance, offering the highest efficiency with lossless accuracy. We further propose the FPE2M2 framework that supports lossless weight-only quantization inference and validate the FPE2M2 framework on Qwen and LLaMA Models across various modalities, such as text, image, and audio tasks, which achieves a faster inference speed while maintaining nearly lossless accuracy. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

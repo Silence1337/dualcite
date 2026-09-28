@@ -92,9 +92,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The softmax function is crucial in Transformer attention, which normalizes each row of the attention scores with summation to one. Usually, tokens with larger attention scores are important for the final prediction. However, the softmax function can face a gradient vanishing issue for such important tokens (e.g., probabilities close to one), leading to optimization difficulties for the important tokens so that the performance may not be better. In this paper, we propose Self-Adjusting Softmax (SA-Softmax) to address this issue by modifying sof tmax(z) to z • sof tmax(z) and its normalized variant (z-min(zmin,0)) max(0,zmax)-min(zmin,0) • sof tmax(z). We theoretically show that SA-Softmax provides enhanced gradient properties compared to the vanilla softmax function. Moreover, SA-Softmax Attention can be seamlessly integrated into existing Transformer models to their attention mechanisms with minor adjustments. We conducted experiments to evaluate the empirical performance of Transformer models using SA-Softmax compared to the vanilla softmax function. These experiments, involving models with up to 2.7 billion parameters, are conducted across diverse datasets, language tasks, and positional encoding methods.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

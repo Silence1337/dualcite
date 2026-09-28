@@ -56,9 +56,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>We study automatic post-editing for patent translation, where accuracy and traceability are critical, and propose a two-step pipeline that combines a multilingual encoder for tokenlevel error detection with an LLM for targeted correction. As no word-level annotations exist for Japanese-English patents, we create supervised data by injecting synthetic errors into parallel patent sentences and fine-tune mBERT, XLM-RoBERTa, and mDeBERTa as detectors. In the second stage, GPT-4o is prompted to revise translations either freely or under a restricted policy that allows edits only on detector-marked spans. For error detection, evaluation on synthetic errors shows that encoder-based detectors outperform LLMs in both F1 and MCC. For error correction, tests on synthetic, repetition, and omission datasets demonstrate statistically significant BLEU gains over LLM methods for synthetic and repetition errors, while omission errors remain challenging. Overall, pairing compact encoders with an LLM enables more accurate and controllable post-editing for key patent error types, reducing unnecessary rewrites via restricted edits. Future work will focus on strengthening omission modeling to better detect and correct missing content.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

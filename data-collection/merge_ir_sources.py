@@ -1,44 +1,51 @@
+"""
+merge_ir_sources.py: merge the ACM, ECIR, and CIKM lists into the historical IR list.
+
+Inputs: acm_ir_all_years.json, ecir_all_years_works.json, cikm_all_years_works.json
+Output: ir_all_years_works.json (reference-lists/), later extended with WWW by
+collect_ir_crossref.py www-history --merge ...
+"""
 import json
 from pathlib import Path
 
-# Загрузка ACM статей
+# ACM papers
 acm_file = Path("acm_ir_all_years.json")
 if not acm_file.exists():
-    print(f"Файл {acm_file} не найден.")
+    print(f"{acm_file} not found.")
     exit()
 with open(acm_file, 'r', encoding='utf-8') as f:
     acm_articles = json.load(f)
-print(f"Загружено ACM статей: {len(acm_articles)}")
+print(f"ACM papers: {len(acm_articles)}")
 
-# Загрузка ECIR статей
+# ECIR papers
 ecir_file = Path("ecir_all_years_works.json")
 if not ecir_file.exists():
-    print(f"Файл {ecir_file} не найден.")
+    print(f"{ecir_file} not found.")
     exit()
 with open(ecir_file, 'r', encoding='utf-8') as f:
     ecir_articles = json.load(f)
-print(f"Загружено ECIR статей: {len(ecir_articles)}")
+print(f"ECIR papers: {len(ecir_articles)}")
 
-# Загрузка CIKM статей
+# CIKM papers
 cikm_file = Path("cikm_all_years_works.json")
 if not cikm_file.exists():
-    print(f"Файл {cikm_file} не найден. Сначала запустите сбор CIKM.")
+    print(f"{cikm_file} not found. Run collect_cikm_all_years.py first.")
     exit()
 with open(cikm_file, 'r', encoding='utf-8') as f:
     cikm_articles = json.load(f)
-print(f"Загружено CIKM статей: {len(cikm_articles)}")
+print(f"CIKM papers: {len(cikm_articles)}")
 
-# Объединение
+# merge
 all_ir = acm_articles + ecir_articles + cikm_articles
-print(f"Всего IR статей после объединения: {len(all_ir)}")
+print(f"IR papers after merging: {len(all_ir)}")
 
-# Сохранение результата
+# save
 output_file = "ir_all_years_works.json"
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(all_ir, f, indent=2, ensure_ascii=False)
-print(f"Объединённый файл сохранён: {output_file}")
+print(f"Saved to {output_file}")
 
-# Простая проверка дубликатов по DOI (если есть)
+# report duplicate DOIs
 dois = set()
 duplicates = []
 for article in all_ir:
@@ -49,6 +56,6 @@ for article in all_ir:
         else:
             dois.add(doi)
 if duplicates:
-    print(f"Найдено дубликатов DOI: {len(duplicates)}. Примеры: {duplicates[:5]}")
+    print(f"Duplicate DOIs: {len(duplicates)}, e.g. {duplicates[:5]}")
 else:
-    print("Дубликатов DOI не обнаружено.")
+    print("No duplicate DOIs.")

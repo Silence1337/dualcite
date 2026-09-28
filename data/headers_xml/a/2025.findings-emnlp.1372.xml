@@ -66,9 +66,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Fine-tuning large language models (LLMs) is computationally expensive because it requires updating all model parameters. Low-Rank Adaptation (LoRA) reduces this cost by modifying a subset of weights, but selecting the appropriate rank introduces a trade-off: lower ranks improve efficiency at the expense of expressivity, while higher ranks enhance performance but increase computational burden. Existing adaptive LoRA methods lack a theoretical foundation to guide this trade-off optimally. We propose Geometric Low-Rank Adaptation (GeLoRA), a principled approach that estimates the intrinsic dimensionality of hidden data representations to adaptively select LoRA ranks. We show theoretically and empirically that the intrinsic dimension serves as a lower bound for the optimal rank of LoRA matrices, enabling a balance between efficiency and expressivity. Extensive experiments on GLUE, SQuAD (with DeBERTa), and MT-Bench (with LLaMA) demonstrate that GeLoRA consistently outperforms recent adaptive LoRA methods by up to +1.0%, while simultaneously reducing computational time by 13.5% to 64.2%, depending on the baseline, under the same parameter budget.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

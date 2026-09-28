@@ -45,9 +45,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Dominant sequence models like the Transformer represent structure implicitly through dense attention weights, incurring quadratic complexity. We propose RewriteNets, a novel neural architecture built on an alternative paradigm: explicit, parallel string rewriting. Each layer in a RewriteNet contains a set of learnable rules. For each position in an input sequence, the layer performs four operations: (1) fuzzy matching of rule patterns, (2) conflict resolution via a differentiable assignment operator to select non-overlapping rewrites, (3) application of the chosen rules to replace input segments with output segments of potentially different lengths, and (4) propagation of untouched tokens. While the discrete assignment of rules is non-differentiable, we employ a straight-through Gumbel-Sinkhorn estimator, enabling stable end-to-end training. We evaluate RewriteNets on algorithmic, compositional, and string manipulation tasks, comparing them against strong LSTM and Transformer baselines. Results show that RewriteNets excel at tasks requiring systematic generalization (achieving 98.7% accuracy on the SCAN benchmark&apos;s length split) and are computationally more efficient than Transformers. We also provide an analysis of learned rules and an extensive ablation study, demonstrating that this architecture presents a promising direction for sequence modeling with explicit structural inductive biases.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

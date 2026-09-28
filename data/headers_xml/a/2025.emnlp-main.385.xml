@@ -79,9 +79,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Knowledge distillation (KD) is crucial for compressing large text embedding models, but faces challenges when teacher and student models use different tokenizers (Cross-Tokenizer KD-CTKD). Vocabulary mismatches impede the transfer of relational knowledge encoded in deep representations, such as hidden states and attention matrices, which are vital for producing high-quality embeddings. Existing CTKD methods often focus on direct output alignment, neglecting this crucial structural information. We propose a novel framework tailored for CTKD embedding model distillation. We first map tokens one-to-one via Minimum Edit Distance (MinED). Then, we distill intra-model relational knowledge by aligning attention matrix patterns using Centered Kernel Alignment, focusing on the top-m most important tokens of the directly mapped tokens. Simultaneously, we align final hidden states via Optimal Transport with Importance-Scored Mass Assignment, which emphasizes semantically important token representations, based on importance scores derived from attention weights. We evaluate distillation from state-of-the-art embedding models (e.g., LLM2Vec, BGE) to a Bert-base-uncased model on embedding-reliant tasks such as text classification, sentence pair classification, and semantic textual similarity. Our proposed framework significantly outperforms existing CTKD baselines. By preserving attention structure and prioritizing key representations, our approach yields smaller, highfidelity embedding models despite tokenizer differences.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

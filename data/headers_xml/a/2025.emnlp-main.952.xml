@@ -74,9 +74,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Recent studies (Gur-Ari et al., 2018; Song et al., 2024; Wen et al., 2024) highlight a fundamental dichotomy in deep learning optimization: Although parameter updates along the top eigendirections of the loss Hessian (Domspace) capture most of the update magnitude, they often contribute minimally to loss reduction. In contrast, updates in the orthogonal component (Bulk-space) have smaller magnitudes but drive most learning progress. In this work, we further advance the understanding of this phenomenon and introduce the Bulk-Space-Filtration-Accelerator (BSFA), a novel plugand-play framework. BSFA accelerates training by differentially scaling update components projected onto these distinct subspaces, simultaneously enhancing stability by moderating updates in the dominant subspace and boosting convergence speed by amplifying those in the bulk-space. To ensure BSFA is both practical and scalable for contemporary large models, we introduce two key innovations: an efficient estimator using Principal Component Analysis (PCA) on historical updates for fast subspace estimation, and a block-wise strategy that applies this estimation on a per-parameter-block basis. These designs make BSFA computationally tractable and highly effective. We demonstrate BSFA&apos;s acceleration across various tasks, notably achieving approximately 2× speedup when pre-training LLaMA-72M on WikiText-103 and LLaMA-134M on OpenWebText compared to vanilla AdamW.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

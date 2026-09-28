@@ -1,5 +1,5 @@
 """
-grobid_runner.py — run PDFs through a local GROBID server.
+grobid_runner.py: run PDFs through a local GROBID server.
 
 Produces the two XML sets DualCite needs:
   - references (processReferences)  -> refs_xml/
@@ -7,7 +7,7 @@ Produces the two XML sets DualCite needs:
 
 GROBID must be running locally. The easiest way:
 
-    docker run --rm -p 8070:8070 lfoppiano/grobid:0.8.1
+    docker run --rm -p 8070:8070 grobid/grobid:0.8.2-crf
 
 Usage:
     python -m dualcite.grobid_runner ./my_pdfs --config config.yaml
@@ -54,29 +54,37 @@ def _process(pdf_dir: Path, out_dir: Path, endpoint: str, url: str,
     print(f"[{label}] {len(pdfs)} PDFs, {len(done)} done, "
           f"{len(todo)} to process", file=sys.stderr)
 
-    errors = 0
+    failed = []
     full = f"{url}{endpoint}"
     for i, pdf in enumerate(todo):
         if i % 50 == 0:
             print(f"  {label}: {i}/{len(todo)}\r", file=sys.stderr, end="")
-        try:
-            with open(pdf, "rb") as f:
-                resp = requests.post(
-                    full,
-                    files={"input": (pdf.name, f, "application/pdf")},
-                    headers={"Accept": "application/xml"},  # force TEI, not BibTeX
-                    timeout=60)
-            if resp.status_code == 200 and resp.content.lstrip()[:1] == b"<":
-                (out_dir / f"{pdf.stem}.xml").write_bytes(resp.content)
-            elif resp.status_code == 503:
-                time.sleep(5)  # server busy
-                errors += 1
-            else:
-                errors += 1
-        except Exception:
-            errors += 1
+        ok = False
+        for attempt in range(3):          # retry when the server is busy or slow
+            try:
+                with open(pdf, "rb") as f:
+                    resp = requests.post(
+                        full,
+                        files={"input": (pdf.name, f, "application/pdf")},
+                        headers={"Accept": "application/xml"},  # force TEI, not BibTeX
+                        timeout=120)
+                if resp.status_code == 200 and resp.content.lstrip()[:1] == b"<":
+                    (out_dir / f"{pdf.stem}.xml").write_bytes(resp.content)
+                    ok = True
+                    break
+                if resp.status_code != 503:
+                    break                   # a real error: retrying will not help
+            except requests.RequestException:
+                pass
+            time.sleep(5 * (attempt + 1))
+        if not ok:
+            failed.append(pdf.name)
         time.sleep(delay)
-    print(f"  {label}: done ({errors} errors)          ", file=sys.stderr)
+    print(f"  {label}: done ({len(failed)} errors)          ", file=sys.stderr)
+    if failed:
+        report = Path(f"grobid_failed_{out_dir.parent.name}_{out_dir.name}.txt")
+        report.write_text("\n".join(failed) + "\n", "utf-8")
+        print(f"  files that failed are listed in {report}", file=sys.stderr)
 
 
 def main():
@@ -100,7 +108,7 @@ def main():
     if not _check_alive(args.grobid_url):
         sys.exit(f"GROBID not reachable at {args.grobid_url}\n"
                  f"Start it with:\n"
-                 f"  docker run --rm -p 8070:8070 lfoppiano/grobid:0.8.1")
+                 f"  docker run --rm -p 8070:8070 grobid/grobid:0.8.2-crf")
 
     ck = args.cluster
     if not args.headers_only:

@@ -85,9 +85,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>This work introduces Castle, the first framework for schema-only cascade update generation using large language models (LLMs). Despite recent advances in LLMs for Text2SQL code generation, existing approaches focus primarily on SELECT queries, neglecting the challenges of SQL update operations and their ripple effects. Traditional CASCADE UPDATE constraints are static and unsuitable for modern, denormalized databases, which demand dynamic, context-aware updates. Castle enables natural language instructions to trigger multicolumn, causally consistent SQL UPDATE statements, without revealing table content to the model. By framing UPDATE SQL generation as a divide-and-conquer task with LLMs&apos; reasoning capacity, Castle can determine not only which columns must be directly updated, but also how those updates propagate through the schema, causing cascading updates-all via nested queries and substructures that ensure data confidentiality. We evaluate it on realworld causal update scenarios, demonstrating its ability to produce accurate SQL updates, and thereby highlighting the reasoning ability of LLMs in automated DBMS.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

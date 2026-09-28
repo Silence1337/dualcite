@@ -72,9 +72,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Many applications that modern large language models (LLMs) are deployed on are retrieval tasks: the answer can be recovered from context and success is a matter of learning generalizable features from data. However, this is easier said than done. Overparametrized models trained on cross-entropy loss can overfit on noise. We argue that such overfitting is prone to happen when the model can identify mechanisms that rapidly drive down the loss of certain tokens early on in training. Fitting some tokens early reduce gradient signals in later iterations, as such, remaining tokens are more vulnerable to noise overfitting. We dub this phenomenon unequal learning and show that LLMs with longer contexts or larger embedding sizes are prone to this failure mode. In this work, we argue that learning training samples at an equal rate helps counter such biases. We highlight two mechanisms that promote equal learning: (i) loss functions that regularize uniform margins across training samples, (ii) small learning rates (e.g. by warming up) at the start of training. We demonstrate these approaches on various synthetic and natural language datasets.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

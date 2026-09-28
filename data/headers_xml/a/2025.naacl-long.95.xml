@@ -81,9 +81,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Multiple-Choice Question Answering (MCQA) is a widely used task in the evaluation of Large Language Models (LLMs). In this work, we reveal that current LLMs&apos; performance in MCQA could be heavily influenced by the choice of option symbol sets, due to the option symbol bias. That is, when altering only the option symbols (e.g., A/B/C/D→ i/ii/iii/iv), the results could vary sharply, leading to a margin of approximately 10% in accuracy. To uncover the mechanisms behind this, we investigate the internal components of LLMs from a causal perspective. By measuring the causal effects, we identify a small subset of attention heads responsible for the symbol bias. Subsequently, we interpret these key components in a human-understandable way, showing that attention heads with higher causal effects are more likely to focus on only option symbols, while those with lower causal effects tend to distribute their attention across the content of questions and options. It also motivates us to pursue debiasing based on the causal effects. Specifically, to mitigate such bias, we propose a tuning-free, causal effect driven debiasing method which intervenes the activations of identified components according to their causal effects, with stronger interventions corresponding to higher causal effects. Experimental results demonstrate that the proposed method not only alleviates aforementioned bias, but also improves the MCQA performance of LLMs 1 .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

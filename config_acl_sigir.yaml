@@ -1,0 +1,137 @@
+# config_acl_sigir.yaml: flagship-venue comparison used in Section 6.5.5 of the
+# thesis. Same data and settings as config.yaml, but only the main ACL and SIGIR
+# conferences, and a separate index cache so that the main index is not replaced.
+
+# DualCite configuration
+# ======================
+# Everything venue- and dataset-specific lives here. Point the tool at a
+# different config to compare a different pair of venue groups, a different
+# year, or an entirely different pair of fields.
+
+# ---------------------------------------------------------------------------
+# The two groups of venues to compare. Keys `a` and `b` are fixed; everything
+# inside them is yours to change.
+# ---------------------------------------------------------------------------
+clusters:
+  a:
+    name: "Computational Linguistics"
+    short: "CL"
+    color: "#7F77DD"
+    venues: [acl]
+  b:
+    name: "Information Retrieval"
+    short: "IR"
+    color: "#1D9E75"
+    venues: [sigir]
+
+# Colours for the four citation-flow directions (a→a, b→b, a→b, b→a).
+edge_colors:
+  intra_a: "#7F77DD"   # within cluster A
+  intra_b: "#1D9E75"   # within cluster B
+  a_to_b:  "#E8913C"   # A cites B
+  b_to_a:  "#3C8CE8"   # B cites A
+
+# ---------------------------------------------------------------------------
+# How to recognise a venue from a free-text source string (used both when
+# assigning papers to venues and when matching citation targets). Lower-cased
+# substring match; first hit wins.
+# ---------------------------------------------------------------------------
+venue_patterns:
+  acl:    ["annual meeting of the association for computational linguistics",
+           "findings of the association for computational linguistics",
+           "acl-long", "acl-short", "acl-srw"]
+  emnlp:  ["empirical methods in natural language processing", "emnlp"]
+  naacl:  ["north american chapter of the association for computational linguistics", "naacl"]
+  coling: ["international conference on computational linguistics", "coling"]
+  eacl:   ["european chapter of the association for computational linguistics", "eacl"]
+  lrec:   ["language resources and evaluation conference", "lrec-coling", "lrec"]
+  ijcnlp: ["international joint conference on natural language processing", "ijcnlp"]
+  # More specific venues first: a CHIIR proceedings title can contain the
+  # substring "sigir" (e.g. "ACM SIGIR Conference on Human Information
+  # Interaction and Retrieval"), so chiir/wsdm/ecir must be tried before the
+  # bare "sigir" substring, otherwise they'd be misclassified as sigir.
+  chiir:  ["conference on human information interaction and retrieval", "chiir"]
+  wsdm:   ["web search and data mining", "wsdm"]
+  ecir:   ["european conference on information retrieval", "ecir"]
+  cikm:   ["conference on information and knowledge management", "cikm"]
+  www:    ["world wide web conference", "the web conference",
+           "www '", "international world wide web", "www"]
+  sigir:  ["sigir", "special interest group on information retrieval",
+           "research and development in information retrieval"]
+
+# ---------------------------------------------------------------------------
+# Data locations.
+# ---------------------------------------------------------------------------
+data:
+  papers_a: data/papers/cluster_a.json
+  papers_b: data/papers/cluster_b.json
+  refs_xml: data/refs_xml           # GROBID processReferences output
+  headers_xml: data/headers_xml     # GROBID processHeaderDocument output
+  # XML for each cluster lives in a per-cluster subfolder, e.g.
+  #   data/refs_xml/a/ , data/refs_xml/b/
+  #   data/headers_xml/a/ , data/headers_xml/b/
+  precomputed: data/.precomputed_acl_sigir    # index cache (auto-generated)
+
+# ---------------------------------------------------------------------------
+# How to read each cluster's paper JSON. Different sources use different field
+# names, so map them here.
+#   id       : field holding the paper id (null → id is the XML filename stem)
+#   venue    : field holding the venue directly (an exact key from `venues`)
+#   venue_from: field holding a free-text source string to resolve via
+#               venue_patterns (use this OR `venue`, not both)
+#   title/doi: fields for title and DOI
+# ---------------------------------------------------------------------------
+schema:
+  a:
+    id: anthology_id
+    venue: venue
+    title: title
+    doi: doi
+  b:
+    id: null
+    venue: venue          # short venue name (e.g. "CIKM"), used if it's a known venue
+    venue_from: source    # else fall back to a free-text proceedings string
+    title: title
+    doi: doi
+
+# ---------------------------------------------------------------------------
+# Citation matching parameters.
+# ---------------------------------------------------------------------------
+matching:
+  fuzzy_threshold: 90      # rapidfuzz ratio cutoff for title matching; chosen from the
+                           # manual validation (precision per score band, see validation/)
+  min_words_for_fuzzy: 4   # skip fuzzy matching for very short titles
+  fuzzy_candidate_floor: 80 # lower-scoring candidates are logged for the sensitivity analysis only
+  max_year_gap: 1          # a title match is rejected if the cited reference is older than
+                           # the target paper's year minus this gap (DOI matches are not checked)
+
+# Records whose venue or source field contains one of these strings are skipped,
+# e.g. the SIGIR Forum newsletter, which is not a conference venue.
+exclude_source_patterns:
+  - "sigir forum"
+  - "asia pacific"            # SIGIR-AP
+  - "sigir-ap"
+  - "innovative concepts"     # ICTIR
+  - "ictir"
+
+# Records describing a whole proceedings volume (front matter with the table of
+# contents) rather than a paper. GROBID reads their table of contents as a
+# reference list, which would create false citations to every paper of the volume.
+exclude_title_prefixes:
+  - "proceedings of"
+  - "findings of the association for computational linguistics"
+  - "companion proceedings of"
+# Main ACL conference only: its volumes are 2025.acl-long, -short, -demo,
+# -industry, -srw, ...; Findings (2025.findings-acl) and workshops are left out.
+include_id_prefixes:
+  - "2025.acl-"
+
+exclude_id_suffixes:
+  - ".0"                   # ACL Anthology: paper 0 of a volume is its front matter
+
+# ---------------------------------------------------------------------------
+# Server.
+# ---------------------------------------------------------------------------
+server:
+  port: 8050
+  open_browser: true

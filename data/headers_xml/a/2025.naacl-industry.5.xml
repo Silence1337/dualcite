@@ -111,9 +111,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Text2Sql is a task that converts natural language questions into SQL queries. In previous research on LLM fine-tuning, researchers typically input both the entire database schema and the natural language question into the model. This approach has two issues: 1) the model&apos;s context is limited when dealing with a large number of database tables; 2) the question is often related to only a few tables, leading to excessive irrelevant information that distracts the model. To address these issues, we employed pure fine-tuning strategy to reduce redundancy. The model fine-tuned with pure prompts, using prompts that are only 53% of the baseline length, outperforms the baseline (fine-tuned with all tables in the prompt) by 8.2% and 8.6% in Test-suite accuracy (TS) and exact-set-match accuracy (EM), respectively, on the Spider dev set. Using the most refined set of prompts for the Spider dev dataset, the model achieves TS and EM scores of 73.5% and 75.4%, respectively, approaching state-of-the-art (SOTA) levels. To leverage the capabilities of the model with pure prompts, we applied pure knowledge distillation strategy to transfer its abilities. The distilled student model achieved a 1.9% improvement in TS, while the teacher model&apos;s prompt length was only 23% of that of the student model.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

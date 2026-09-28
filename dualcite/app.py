@@ -1,5 +1,5 @@
 """
-app.py — unified DualCite application.
+app.py: unified DualCite application.
 
 One Dash app, one port, two tabs (Citation Graph | Geo Map) sharing a single
 sidebar for venue selection and a single precomputed index. The selected venues
@@ -131,7 +131,7 @@ def build_app(config_path="config.yaml"):
         ])
         return selected, summary
 
-    # tab switching — toggle container visibility (keeps both mounted so
+    # tab switching, toggle container visibility (keeps both mounted so
     # state and computed figures persist)
     @app.callback(Output("graph-container", "style"),
                   Output("geo-container", "style"),
@@ -177,7 +177,7 @@ _TAB_SEL = {"padding": "12px", "fontSize": "13px", "fontWeight": "600",
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="DualCite — citation & geo viz")
+    parser = argparse.ArgumentParser(description="DualCite: citation and affiliation views")
     parser.add_argument("--config", default="config.yaml")
     parser.add_argument("--port", type=int, default=None)
     parser.add_argument("--no-browser", action="store_true")

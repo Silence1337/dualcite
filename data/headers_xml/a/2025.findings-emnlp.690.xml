@@ -92,9 +92,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Post-training pruning, as one of the key techniques for compressing large language models (LLMs), plays a vital role in lightweight model deployment and model sparsity. However, current mainstream pruning methods dependent on the Hessian matrix face significant limitations in both pruning speed and practical effectiveness due to the computationally intensive nature of second-order derivative calculations. This paper presents SwiftPrune, a novel Hessian-free weight pruning method that achieves hardware-efficient model compression through two key innovations: 1) SwiftPrune eliminates the need for computationally intensive Hessian matrix calculations by introducing a contribution-based weight metric, which evaluates the importance of weights without relying on second-order derivatives. 2) we employ the Exponentially Weighted Moving Average (EWMA) technique to bypass weight sorting, enabling the selection of weights that contribute most to LLMs accuracy and further reducing time complexity. Our approach is extended to support structured sparsity pruning, facilitating efficient execution on modern hardware accelerators. We validate the SwiftPrune on three LLMs (namely LLaMA2, LLaMA3, and Pythia), demonstrating that it significantly enhances compression performance. The experimental findings reveal that SwiftPrune completes the pruning process within seconds, achieving an average speedup of 12.29× (up to 56.02×) over existing SOTA approaches.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

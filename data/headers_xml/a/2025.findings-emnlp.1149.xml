@@ -157,9 +157,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Long-context extension seeks to expand the contextual window in pre-trained large language models (LLMs), allowing them to handle several multiples of their original training context lengths. The primary method for extending the window length involves expanding the initial positional encodings, such as interpolating and extrapolation new positions based on Rotary Position Embedding (RoPE). This expansion inevitably disrupts the positional encodings learned during pre-training, thereby affecting the attention allotment and introducing unseen positional encoding distributions. To address this issue, we propose a new extension strategy based on RoPE, namely Periodic Extrapolation Positional Encodings (PEPE). This strategy expands pre-trained highdimensional components of positional encodings by replicating them in a periodic manner, thereby neither altering the learned positional encoding spaces nor introducing new positional encoding distributions. Experiments demonstrate that PEPE-based approaches can significantly improve long-context extension capabilities using just one-fourth the fine-tuning steps required by state-of-the-art methods. In addition, we analyze the characteristics of PEPEbased methods and the key parameters that contribute to their effectiveness. The code is publicly available 1 .</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

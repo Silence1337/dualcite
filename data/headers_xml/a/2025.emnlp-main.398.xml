@@ -92,9 +92,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Vision-Language Models (VLMs) generate discourse-level, multi-sentence visual descriptions, challenging text scene graph parsers built for single-sentence caption-to-graph mapping. Current approaches typically merge sentencelevel parsing outputs for discourse input, often missing phenomena like cross-sentence coreference, resulting in fragmented graphs and degraded downstream VLM task performance. We introduce a new task, Discourse-level text Scene Graph parsing (DiscoSG), and release DiscoSG-DS, a dataset of 400 expert-annotated and 8,430 synthesised multi-sentence captiongraph pairs. Each caption averages 9 sentences, and each graph contains at least 3× more triples than those in existing datasets. Fine-tuning GPT-4o on DiscoSG-DS yields over 40% higher SPICE metric than the best sentence-merging baseline. However, its high inference cost and licensing restrict opensource use. Smaller fine-tuned open-source models (e.g., Flan-T5) perform well on simpler graphs yet degrade on denser, more complex graphs. To bridge this gap, we introduce DiscoSG-Refiner, a lightweight open-source parser that drafts a seed graph and iteratively refines it with a novel learned graph-editing model, achieving 30% higher SPICE than the baseline while delivering 86× faster inference than GPT-4o. It generalises from simple to dense graphs, thereby consistently improving downstream VLM tasks, including discourselevel caption evaluation and hallucination detection, outperforming alternative open-source parsers. Code and data are available at https: //github.com/ShaoqLin/DiscoSG.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

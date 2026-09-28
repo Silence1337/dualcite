@@ -92,9 +92,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 					<term>Geometric Deep Learning</term>
 				</keywords>
 			</textClass>
-			<abstract>
-				<p>Graph Transformers (GTs) excel at long-range reasoning on graphs but often rely on costly positional encodings or auxiliary virtual nodes to perceive geometry. We present the RadialFocus Graph Transformer (RadialFocus), a geometry-aware GT that learns to modulate attention with a lightweight, distance-selective kernel. Each head is equipped with a differentiable radial basis function whose centre 𝜇 and width 𝜎 are trained end-to-end, boosting attention between nodes that lie inside its adaptive &quot;focus&quot; while gently suppressing others. Injecting the logarithm of this kernel into the pre-softmax logits preserves the stability and permutation invariance of standard self-attention, incurs negligible memory overhead, and removes the need for hand-crafted 3-D encodings or virtual nodes. On 3-D molecular benchmarks RadialFocus attains a validation MAE of 46.3 meV on PCQM4Mv2 with only 13 M parameters, surpassing models an order of magnitude larger. It also sets a new best average ROC-AUC (79.1 %) on MoleculeNet and reaches 0.957 MAE on PDBBind2020, a new high-water mark for bindingaffinity prediction. The same architecture transfers to 2-D graphs, achieving 97.8 % accuracy on MNIST-Superpixel. Ablation studies indicate that the learned (𝜇, 𝜎) capture task-relevant distance scales and that log-space fusion stabilises gradients. These findings suggest that a simple, learned distance modulation suffices to equip Transformers with strong geometric priors, enabling accurate and parameter-efficient reasoning across diverse graph domains. CCS Concepts • Computing methodologies → Artificial intelligence; Spatial and physical reasoning.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

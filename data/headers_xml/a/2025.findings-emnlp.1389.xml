@@ -93,9 +93,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Direct alignment algorithms have proven an effective step for aligning language models to human-desired behaviors. Current variants of the Direct Preference Optimization objective have focused on a strict setting where all tokens are contributing signals of KL divergence and rewards to the loss function. However, human preference is not affected equally by each word in a sequence but is often dependent on specific words or phrases, e.g. existence of toxic terms leads to non-preferred responses. Based on this observation, we argue that not all tokens should be weighted equally during PO and propose a flexible objective termed SparsePO, that aims to automatically learn to weight the KL divergence and reward corresponding to each token during PO training. We propose two different variants of weight-masks that can either be derived from the reference model itself or learned on the fly. Notably, our method induces sparsity in the learned masks, allowing the model to learn how to best balance reward and KL divergence contributions at the token level, learning an optimal level of mask sparsity. Extensive experiments illustrate the effectiveness of our approach at aligning to preference proxies, including sentiment control, helpfulness and harmlessness, and summary quality. Our method obtains +10% and +3% win rate points in summarization and dialogue scenarios, respectively, without compromising model reasoning or the relevancy and faithfulness of the summary response.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

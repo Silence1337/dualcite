@@ -88,9 +88,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The self-attention mechanism is key to the success of transformers in recent large language models (LLMs). However, the quadratic computational cost, O(n 2), with respect to the input sequence length n poses a significant obstacle to further improvement and scalability in longer contexts. In this work, we leverage the convolution-like structure of attention matrices to develop an efficient approximation method for attention computation using convolution matrices. We propose a conv basis system, analogous to the rank basis, and show that any lower triangular matrix can be decomposed as a sum of structured convolution matrices in this basis. We then design a fast algorithm to approximate the attention matrix using a sum of k convolution matrices. This enables us to compute attention during inference via Fast Fourier Transforms (FFT) in O(knd log n) time, where d is the hidden dimension, achieving nearly linear time complexity, n 1+o(1) , in practical scenarios where kd = n o(1). Furthermore, both training forward and backward gradient computations can be performed in n 1+o(1) time as well. We provide theoretical guarantees on runtime and approximation error and conduct preliminary experiments to evaluate the effectiveness of our approach. We hope this new paradigm for accelerating attention computation in transformer models facilitates their application to longer contexts.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

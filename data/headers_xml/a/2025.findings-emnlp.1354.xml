@@ -65,9 +65,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Extracting entities and relations from scientific text is challenging due to long sentences with densely packed entities. Pipeline approaches address this by first extracting entities and then predicting relations between all possible entity pairs. Since the relation extraction phase operates over this exhaustive set, the inclusion of candidate pairs that may be semantically related but lack syntactic proximity introduces precision errors, ultimately reducing Rel+ F1 metric. We propose a simple yet effective syntactic filtering method based on dependency parsing to prune unlikely entity pairs before relation prediction. By leveraging syntactic proximity in the dependency parse tree, our approach retains structurally plausible pairs and reduces false positives in downstream relation classification. Our method is grounded in consistent statistical patterns observed across all evaluated datasets, reinforcing its generalizability and effectiveness. We integrate this filtering step into architectures such as PL-Marker and HGERE, and evaluate its impact across multiple datasets. Our method improves Rel+ F1 scores significantly by an absolute increase of 3.5-10.3% on SciERC, SciER, and ACE05 datasets. These results highlight the importance of syntactic cues for accurate relation extraction in complex domains like scientific literature. Our code is available at https://github.com/basiralab/DP-ERE.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

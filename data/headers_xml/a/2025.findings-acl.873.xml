@@ -59,9 +59,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>LLM providers typically offer multiple LLM tiers, varying in performance and price. As NLP tasks become more complex and modularized, selecting the suitable LLM tier for each subtask is a key challenge to balance cost and performance. To address the problem, we introduce the LLM Automatic Transmission (LLM-AT) framework that automatically selects LLM tiers without training. LLM-AT consists of Starter, Generator, and Judge. The starter selects the initial LLM tier expected to solve the question, the generator produces a response using the LLM of the selected tier, and the judge evaluates its validity. If the response is invalid, LLM-AT iteratively upgrades to a highertier model, generates a new response, and reevaluates until a valid response is obtained. Additionally, we propose accuracy estimator, allowing the selection of a suitable initial tier without training. Given an input, accuracy estimator estimates the expected accuracy of each LLM tier by computing the valid response rate for top-k similar queries from past inference records. Experiments demonstrate that LLM-AT achieves superior performance while reducing costs, making it a practical solution for realworld applications. Our code is available at https://github.com/hyudsl/LLM-AT.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

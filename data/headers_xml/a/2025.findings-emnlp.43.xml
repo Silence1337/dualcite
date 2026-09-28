@@ -73,9 +73,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Mixture-of-Experts (MoE) has emerged as a promising approach for scaling large language models efficiently. However, how to design a desired MoE architecture given performance, efficiency, or safety goals remains absent. Existing benchmarks often focus on isolated aspects (e.g., reasoning, efficiency, safety), and there is a lack of consensus on optimal design choices, such as the number and size of experts, the type of routers, and the regularization during pre-training, or strategies like freezing, learning rate adjustments, and limiting expert collaboration during fine-tuning, with prior works often yielding conflicting conclusions. Motivated by this research gap, we introduce MoE-Bench, the first comprehensive assessment of MoE designs across the three dimensions of reasoning ability, efficiency, and safety. Our benchmark systematically evaluates optimal architectural choices during both pre-training and fine-tuning phases. We evaluate two popular MoE backbones across four dimensions of design choices on over eight metrics. Our empirical findings uncover hidden underlying correlations among MoE design choices. Specifically, we observe that (1) tokenlevel routing and z-loss regularization improve reasoning performance; (2) shared experts enhance training stability but reduce specialization; and (3) collaboration-constrained routing and freezing strategies significantly influence load balance, specialization, and safety alignment. Furthermore, we propose three &quot;sweet point&quot; combinations of optimal strategies tailored to different scenarios. We hope this study provides actionable insights for building more robust, efficient, and secure MoE models. Code, checkpoints, and raw data will be released upon acceptance of the paper.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

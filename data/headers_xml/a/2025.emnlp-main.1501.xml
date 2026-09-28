@@ -67,9 +67,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Safety fine-tuning algorithms reduce harmful outputs in language models, yet their mechanisms remain under-explored. Direct Preference Optimization (DPO) is a popular choice of algorithm, but prior explanations, attributing its effects solely to dampened toxic neurons in the MLP layers, are incomplete. In this study, we analyse four language models (Llama-3.1-8B, Gemma-2-2B, Mistral-7B, GPT-2-Medium) and show that toxic neurons only account for 2.5% to 24% of DPO&apos;s effects across models. Instead, DPO balances distributed activation shifts across a majority of MLP neurons to create a net toxicity reduction. We attribute this reduction to four neuron groups, two aligned with reducing toxicity and two promoting anti-toxicity, whose combined effects replicate DPO across models. To further validate this understanding, we develop an activation editing method mimicking DPO through distributed shifts along a toxicity representation in both probe-based and probe-free settings. This method outperforms DPO in reducing toxicity while preserving perplexity across models, without requiring any weight updates. Our work provides a mechanistic understanding of DPO and introduces an efficient, tuning-free alternative for safety fine-tuning. Our code is available on dpo-toxic-neurons.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

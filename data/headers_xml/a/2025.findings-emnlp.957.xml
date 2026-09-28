@@ -94,9 +94,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large language models are reshaping internet services. Serving these models is often costly, as it requires multiple high-end GPUs. Consumer-grade GPUs offer cheaper computational power, providing an opportunity for more cost-efficient LLM serving. Prior efforts have explored distributed serving at scale, primarily focusing on model deployment strategies. However, communication efficiency has emerged as a challenge due to the imbalance in data transfer volumes between the two phases of inference: prefill and decode. Prefill requests can involve transmitting up to 1000 times more data than decode requests, leading to decode requests being delayed. Consequently, servers are underutilized while waiting for decode requests. In this paper, we present MoLink, an efficient distributed LLM serving system. It splits the prolonged transmission volume of prefill requests into smaller chunks and carefully scheduling their transmission. It consists of two parts: (i) a transmission scheduling algorithm that fairly determines whether to transmit prefill or decode requests, and (ii) a chunking determination algorithm that determines the transmit volume for prefill requests just-in-time. Our evaluation demonstrates that MoLink reduces TTFT, TPOT, and latency compared to the state-ofthe-art distributed LLM serving system, with a maximum reduction of up to 46%.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

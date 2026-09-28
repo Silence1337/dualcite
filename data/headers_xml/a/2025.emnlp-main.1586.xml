@@ -140,9 +140,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Translating natural language into formal language such as Lean 4 has gained attention for its potential to automate formal proof development. Automated methods provide a scalable and cost-effective alternative to manual formalization, driving increasing interest in this task. However, existing LLMs mainly rely on instruction tuning and lack fine-grained structural and semantic alignment, making it difficult to generate syntactically and logically sound formal proofs. To address this, we propose a reinforcement learning framework ReLean that enables LLMs to generate high-quality Lean 4 statements from natural language. We first finetune a LLaMA3-8B model on NL-Lean 4 data to obtain a base translator with basic translation ability. Then, we design a multi-aspect dense reward mechanism covering four key dimensions: semantic alignment, term-level alignment, global-level alignment, and compilechecking. Separate reward models are trained via preference modeling, and their normalized outputs are combined to guide optimization via PPO. Finally, a curriculum learning strategy based on multi-dimensional difficulty allows the model to learn progressively from simple to complex cases. Experiments on NL-to-Lean 4 tasks show that our method consistently outperforms baseline models. Further analysis on reward model and curriculum learning confirms their effectiveness in enhancing model performance.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

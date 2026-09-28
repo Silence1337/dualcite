@@ -91,9 +91,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Although synthetic data has changed various aspects of information retrieval (IR) pipelines, the main training paradigm remains: contrastive learning with binary relevance labels, where one positive document is compared against several negatives using the InfoNCE loss. This objective treats all documents that are not explicitly annotated as relevant on an equally negative footing, regardless of their actual degree of relevance, thus missing subtle nuances useful for ranking. To overcome this limitation, in this work, we forgo real documents and annotations and use large language models to directly generate synthetic documents that answer the MS MARCO queries according to several different levels of relevance. We also propose using Wasserstein distance as a more effective loss function for training transformerbased retrievers with graduated relevance labels. Our experiments on MS MARCO and BEIR benchmark show that our proposed approach outperforms conventional training with InfoNCE by a large margin. Without using any real documents, our method significantly improves self-supervised retrievers and is more robust to distribution shift compared to contrastive learning using real data. Our method also successfully integrates existing real data into the synthetic ranking context, further boosting the performance. Overall, we show that generating multi-level ranking contexts is a better approach to synthetic data generation for IR than just generating the standard positive and negative documents.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

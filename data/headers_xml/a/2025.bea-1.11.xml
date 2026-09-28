@@ -57,9 +57,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>In this work, we assess the potential of using synthetic data to train models for content scoring. We generate a parallel corpus of LLMgenerated data for the SRA dataset. In our experiments, we train three different kinds of models (Logistic Regression, BERT, SBERT) with this data, examining their respective ability to bridge between generated training data and student-authored test data. We also explore the effects of generating larger volumes of training data than what is available in the original dataset. Overall, we find that training models from LLM-generated data outperforms zero-shot scoring of the test data with an LLM. Still, the fine-tuned models perform much worse than models trained on the original data, largely because the LLM-generated answers often do not to conform to the desired labels. However, once the data is manually relabeled, competitive models can be trained from it. With a similarity-based scoring approach, the relabeled (larger) amount of synthetic answers consistently yields a model that surpasses performance of training on the (limited) amount of answers available in the original dataset.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

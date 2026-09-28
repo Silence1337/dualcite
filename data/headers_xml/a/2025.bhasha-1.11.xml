@@ -57,9 +57,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The Rigveda, among the oldest Indian texts in Vedic Sanskrit, employs a distinctive pitchaccent system : udātta, anudātta, svarita whose marks encode melodic and interpretive cues but are often absent from modern e-texts. This work develops a parallel corpus of accented-unaccented ślokas and conducts a controlled comparison of three strategies for automatic accent placement in Rigvedic verse: (i) full fine-tuning of ByT5, a byte-level Transformer that operates directly on Unicode combining marks, (ii) a fromscratch BiLSTM-CRF sequence-labeling baseline, and (iii) LoRA-based parameter-efficient fine-tuning atop ByT5. Evaluation uses Word Error Rate (WER) and Character Error Rate (CER) for orthographic fidelity, plus a task-specific Diacritic Error Rate (DER) that isolates accent edits. Full ByT5 fine-tuning attains the lowest error across all metrics; LoRA offers strong efficiencyaccuracy trade-offs, and BiLSTM-CRF serves as a transparent baseline. The study underscores practical requirements for accent restoration-Unicode-safe preprocessing, mark-aware tokenization, and evaluation that separates grapheme from accent errors-and positions heritage-language technology as an emerging NLP area connecting computational modeling with philological and pedagogical aims. Results establish reproducible baselines for Rigvedic accent restoration and provide guidance for downstream tasks such as accentaware OCR, ASR/chant synthesis, and digital scholarship.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

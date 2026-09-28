@@ -94,9 +94,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Dense Passage Retrieval (DPR) typically relies on Euclidean or cosine distance to measure query-passage relevance in embedding space, which is effective when embeddings lie on a linear manifold. However, our experiments across DPR benchmarks suggest that embeddings often lie on lower-dimensional, non-linear manifolds, especially in out-of-distribution (OOD) settings, where cosine and Euclidean distance fail to capture semantic similarity. To address this limitation, we propose a manifold-aware distance metric for DPR (MA-DPR) that models the intrinsic manifold structure of passages using a nearest neighbor graph and measures query-passage distance based on their shortest path in this graph. We show that MA-DPR outperforms Euclidean and cosine distances by up to 26% on OOD passage retrieval with comparable in-distribution performance across various embedding models while incurring a minimal increase in query inference time. Empirical evidence suggests that manifold-aware distance allows DPR to leverage context from related neighboring passages, making it effective even in the absence of direct semantic overlap. MA-DPR can be applied to a wide range of dense embedding and retrieval tasks, offering potential benefits across a wide spectrum of domains.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

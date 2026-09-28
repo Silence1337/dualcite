@@ -114,9 +114,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Training data plays a crucial role in Large Language Models (LLM) scaling, yet high quality data is of limited supply. Synthetic data techniques offer a potential path toward sidestepping these limitations.We conduct a large-scale empirical investigation (&gt;1000 LLMs with &gt;100k GPU hours) using a unified protocol and scaling laws, comparing natural web data, diverse synthetic types (rephrased text, generated textbooks), and mixtures of natural and synthetic data. Specifically, we found pre-training on rephrased synthetic data alone is not faster than pre-training on natural web texts; while pre-training on 1/3 rephrased synthetic data mixed with 2/3 natural web texts can speed up 5-10x (to reach the same validation loss) at larger data budgets. Pre-training on textbookstyle synthetic data alone results in notably higher loss on many downstream domains especially at small data budgets. &quot;Good&quot; ratios of synthetic data in training data mixtures depend on the model size and data budget, empirically converging to ∼30% for rephrased synthetic data. Larger generator models do not necessarily yield better pre-training data than ∼8Bparam models. These results contribute mixed evidence on &quot;model collapse&quot; during largescale single-round (n=1) model training on synthetic data-training on rephrased synthetic data shows no degradation in performance in foreseeable scales whereas training on mixtures of textbook-style pure-generated synthetic data shows patterns predicted by &quot;model collapse&quot;. Our work demystifies synthetic data in pretraining, validates its conditional benefits, and offers practical guidance.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

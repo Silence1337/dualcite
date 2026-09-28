@@ -67,9 +67,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Encoder models offer efficiency for specific tasks, but their performance depend on data availability. While Large Language Models (LLMs) excel at few-shot learning, their direct application in real-world scenarios is often hindered by their high computational cost. To address this challenge, we propose a simple yet effective approach that uses LLMs for data generation and scoring to improve encoder only model performance. We evaluate this framework on few-shot Multiple Choice Question Answering (MCQA), an important task where acquiring labeled data is costly. Our approach utilizes LLMs to create MCQA questions and choices (exploring both direct JSON and decomposed generation methods) and assigns probability scores to these choices. This generated data and the LLM scores are then used to fine-tune smaller and more efficient DeBERTa-v3-base using distillation loss. Extensive experiments on the MMLU benchmark demonstrate that our method improves accuracy from 28.9% to 39.3%, representing a gain of over 10% compared to a baseline finetuned directly on 5-shot examples. This shows the effectiveness of LLM-driven data generation and knowledge distillation for few-shot MCQA.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

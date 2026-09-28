@@ -73,9 +73,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Fine-tuning pre-trained Large Language Models (LLMs) for specialized tasks incurs substantial computational and data costs. While model merging offers a training-free solution to integrate multiple task-specific models, existing methods suffer from safety-utility conflicts where enhanced general capabilities degrade safety safeguards. We identify two root causes: neuron misidentification due to simplistic parameter magnitude-based selection, and crosstask neuron interference during merging. To address these challenges, we propose LED-Merging, a three-stage framework that Locates task-specific neurons via gradient-based attribution, dynamically Elects critical neurons through multi-model importance fusion, and Disjoints conflicting updates through parameter isolation. Extensive experiments on Llama-3-8B, Mistral-7B, and Llama2-13B demonstrate that LED-Merging effectively reduces harmful response rates, showing a 31.4% decrease on Llama-3-8B-Instruct on HarmBench, while simultaneously preserving 95% of utility performance, such as achieving 52.39% accuracy on GSM8K. LED-Merging resolves safety-utility conflicts and provides a lightweight, trainingfree paradigm for constructing reliable multitask LLMs.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

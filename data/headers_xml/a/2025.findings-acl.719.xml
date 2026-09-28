@@ -84,9 +84,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Machine Unlearning (MU) has emerged as a promising solution for removing the influence of data that an owner wishes to unlearn from Large Language Models (LLMs). However, existing MU methods, which require tuning the entire model parameters on the unlearned data with random labels or perturbed gradients, significantly degrade model utility, especially given the difficulty of accessing the original training data. This presents a key challenge: how can we achieve MU using only the unlearned data while preserving model utility? In this paper, we propose NeuMuter, a simple but effective MU method that eliminates the influence of unlearned data from LLMs by modulating the outputs of merely 1% of the neurons in the feed-forward network (FFN) modules within the Transformer blocks, minimizing disruption to the model&apos;s performance. We design a trainable masking scheme that decouples the memorization of different training data within the neurons of LLMs, allowing us to precisely identify and modify neurons associated with the unlearned data. Through comprehensive evaluations on two benchmarks across four different LLMs, we demonstrate that modifying the outputs of a few fraction of the total neurons can effectively achieve MU while preserving the model&apos;s utility across downstream tasks.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

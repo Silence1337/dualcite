@@ -1,3 +1,8 @@
+"""
+download_acl.py: download the PDFs of the 2025 CL papers from the ACL Anthology.
+
+Input: acl_papers_2025.json. Output: acl_pdfs_2025/<anthology_id>.pdf
+"""
 import json
 import requests
 from pathlib import Path
@@ -12,7 +17,7 @@ PDF_FOLDER.mkdir(exist_ok=True)
 with open(JSON_FILE, 'r', encoding='utf-8') as f:
     papers = json.load(f)
 
-print(f"Всего статей: {len(papers)}")
+print(f"Papers: {len(papers)}")
 
 for i, paper in enumerate(papers, 1):
     anthology_id = paper['anthology_id']
@@ -28,10 +33,10 @@ for i, paper in enumerate(papers, 1):
         if response.status_code == 200:
             with open(pdf_path, 'wb') as f:
                 f.write(response.content)
-            print(f"  -> Сохранён ({len(response.content) / 1024:.1f} KB)")
+            print(f"  -> saved ({len(response.content) / 1024:.1f} KB)")
         else:
-            print(f"  -> Ошибка HTTP {response.status_code}")
+            print(f"  -> HTTP error {response.status_code}")
     except Exception as e:
-        print(f"  -> Ошибка: {e}")
+        print(f"  -> error: {e}")
 
     time.sleep(DELAY)

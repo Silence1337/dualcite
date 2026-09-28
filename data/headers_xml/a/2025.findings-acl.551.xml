@@ -96,9 +96,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>State Space Models (SSMs), such as Mamba, have recently demonstrated potential in language understanding tasks, positioning them as competitors to transformer architectures. However, our investigations reveal that the Mamba architecture still has room for further optimization-not only in linear projections but also in state caches, which contribute significantly to memory consumption, particularly after quantizing the former into low bits. After a theoretical analysis of the causes of outliers in states, we propose Decoupled Scale Quantization (DSQ), which mitigates outliers in both the state and channel dimensions by applying separate quantization scales. To preserve the selective ability of quantized Mamba, we introduce Efficient Selectivity Reconstruction (ESR), a novel quantization simulation scheme in block-wise reconstruction that enables fast parallel scan algorithms with the non-linear quantization function. We demonstrate the effectiveness of Q-Mamba across various quantization settings, model sizes, and both generation and zero-shot tasks. In particular, for Mamba2-2.7B with W8A8H4 (8-bit weights and activations, 4-bit state caches) quantization, Q-Mamba achieves a 50% reduction in memory consumption with only a 2.13% average accuracy degradation on zero-shot tasks.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

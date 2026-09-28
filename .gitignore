@@ -1,10 +1,24 @@
+# Python
 __pycache__/
 *.pyc
-data/.precomputed/
 *.egg-info/
 .venv/
 venv/
 .DS_Store
 
-# all-years reference lists (large, dataset-specific — generate locally)
+# PDFs are not redistributed (the folders are kept with .gitkeep)
+pdfs/**/*.pdf
+
+# uncompressed local copies of the historical lists; the .json.gz files are published
 reference-lists/*.json
+
+# outputs of export_summary.py in the repository root; published copies are in examples/
+/results_summary.md
+/results_acl_sigir.md
+
+# intermediate files of the collection scripts, written to the working directory
+/*.json
+/acl_pdfs_2025/
+failed_downloads.txt
+grobid_failed_*.txt
+*.bak

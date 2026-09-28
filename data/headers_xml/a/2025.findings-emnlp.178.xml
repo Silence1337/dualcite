@@ -137,9 +137,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Stealthy data poisoning during fine-tuning can backdoor large language models (LLMs), threatening downstream safety. Existing detectors either use classifier-style probability signals-ill-suited to generation-or rely on rewriting, which can degrade quality and even introduce new triggers. We address the practical need to efficiently remove poisoned examples before or during fine-tuning. We observe a robust signal in the response space: after applying TF-IDF to model responses, poisoned examples form compact clusters (driven by consistent malicious outputs), while clean examples remain dispersed. We leverage this with RFTC-Reference-Filtration + TF-IDF Clustering. RFTC first compares each example&apos;s response with that of a reference model and flags those with large deviations as suspicious; it then performs TF-IDF clustering on the suspicious set and identifies true poisoned examples using intra-class distance. On two machine translation datasets and one QA dataset, RFTC outperforms prior detectors in both detection accuracy and the downstream performance of the fine-tuned models. Ablations with different reference models further validate the effectiveness and robustness of Reference-Filtration. 1 * Corresponding author.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -127,9 +127,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Reward modeling in large language models is known to be susceptible to reward hacking, causing models to latch onto superficial features such as the tendency to generate lists or unnecessarily long responses. In RLHF, and more generally during post-training, flawed reward signals often lead to outputs that optimize for these spurious correlates instead of genuine quality or correctness. We propose CARMO (Context-Aware Reward Modeling), a novel approach that first generates dynamic, context-relevant criteria to ground the reward model prior to producing reward scores. Unlike prior methods that use static rubrics, CARMO leverages powerful LLMs to adaptively create evaluation criteria-e.g., logical consistency, clarity, and depth-tailored to the user query. Our theoretical analysis shows that such criteria generation can mitigate reward hacking. We further demonstrate how CARMO can be distilled into smaller models, thereby lowering the computational cost of alignment. We establish a new state-of-the-art performance on zero shot setting for generative models, with a 2.1% improvement on Reward Bench. Furthermore, alignment performed on the CARMO-curated preference dataset achieves 22.5% and 21.1% LC-WR (%) and WR (%) on Mistral-Base (7B). We release our datasets at huggingface/-CARMO.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

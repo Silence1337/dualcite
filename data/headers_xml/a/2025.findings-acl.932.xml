@@ -76,9 +76,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>In light of the widespread deployment of Large Language Models (LLMs), the responsibility for safeguarding and regulating LLMgenerated content has taken on heightened significance. Recent advancements in LLM-based moderation methods, e.g., LlamaGuard, have demonstrated remarkable promise in identifying safety risks associated with both inputs and outputs in human-AI interactions. However, integrating LLM-based safeguards into a chatbot system requires an additional inference stage involving a moderation LLM with billions of parameters, which significantly increases computational costs and reduces overall efficiency. In this paper, we demonstrate that simply learning a classification head on the last-layer hidden states of the dialogue model provides a strong capability to identify harmful contents. The classification head, referred to as Shield-Head, serves as an auxiliary branch paralleled with next-token-prediction LM head, enabling the detection of potential risks in past text sequences. Additionally, a label disambiguation technique is employed to supervise ShieldHead with both token-level and sentence-level labels, which further enhances its performance. Shield-Head exhibits remarkable efficiency during inference, providing real-time moderation results alongside token-wise streaming output during the chatbot system&apos;s decoding phase. Extensive experimental results demonstrate the superiority of the proposed framework: a state-of-theart performance on the XSTest and SafeRLHF datasets while running at a speed about 300× faster (&lt;1ms) than previous LLM-based moderation models with ∼99% less parameters of LlamaGuard.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

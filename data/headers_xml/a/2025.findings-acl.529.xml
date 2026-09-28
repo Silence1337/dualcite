@@ -83,9 +83,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Honest alignment refers to the ability of a language model to truthfully convey its knowledge limitations by appropriately refusing to answer questions when it lacks sufficient information. Existing solutions, such as prompt engineering and fine-tuning, face limitations: the former provides only marginal improvements, while the latter struggles to enhance honesty when annotated data is scarce. To overcome the above limitations, we propose WHAT, a novel framework that enhances honesty through weak-to-strong generalization. Specifically, we train the strong LLMs under weak model supervision to improve their honesty. For the weak model, we employ a learning-to-rank strategy to train a &quot;honest head&quot;, which learns to select the most honest response among model&apos;s outputs generated through beam search. For the strong LLM, we leverage the self-labeled dataset to update its parameters. Our proposal requires only minimal training data to train the weak honest model, yet achieve decent performance for labeling data. In addition, it enables the strong LLMs to have the capabilities to generalize even facing with the flawed label data. Extensive experiments show WHAT significantly boosts honest alignment in large models even with limited labeled data.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

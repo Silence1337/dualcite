@@ -1,5 +1,5 @@
 """
-export_summary.py — dump all the valuable aggregates from a built DualCite index
+export_summary.py: dump all the valuable aggregates from a built DualCite index
 into a single compact Markdown file (results_summary.md).
 
 This is the file to feed to an AI (or read yourself) when looking for patterns
@@ -13,6 +13,7 @@ Run from the dualcite folder:
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
@@ -36,9 +37,21 @@ def cname(a2):
         return a2
 
 
+def _read_json(path):
+    """Read a JSON file, or its gzip-compressed version (path + ".gz") if only
+    that exists. The historical lists are published compressed."""
+    p = Path(path)
+    if not p.exists() and Path(str(p) + ".gz").exists():
+        p = Path(str(p) + ".gz")
+    if p.suffix == ".gz":
+        with gzip.open(p, "rt", encoding="utf-8") as f:
+            return json.load(f)
+    return json.loads(p.read_text("utf-8"))
+
+
 def _load_ref_titles(path):
     """Return (normalized_titles_set, dois_set) from an all-years reference list."""
-    data = json.loads(Path(path).read_text("utf-8"))
+    data = _read_json(path)
     titles, dois = set(), set()
     for x in data:
         t = x.get("title")
@@ -54,8 +67,8 @@ def _load_ref_titles(path):
 
 def count_all_years(cfg, index, cl_refs_path, ir_refs_path):
     """
-    Classify every outgoing reference from the 2025 papers against full
-    all-years reference lists, as internal / external / other. Returns
+    Classify every reference of the corpus papers against the all-years
+    reference lists, as internal / external / other. Returns
     {cluster: {internal, external, other}}.
     """
     papers = index["papers"]
@@ -69,7 +82,7 @@ def count_all_years(cfg, index, cl_refs_path, ir_refs_path):
         ck = p["cluster"]
         refs = parse_refs(ref_paths[pid])
         seen = set()
-        for title, doi in refs:
+        for title, doi, _ in refs:
             doi = (doi or "").strip().lower()
             n = norm_title(title)
             key = doi or n
@@ -96,9 +109,9 @@ def count_venue_references(cfg, index):
     the GROBID XML (monogr/title) and matches it to a venue via the config
     patterns.
 
-    This is the "2025 -> all years" view: unlike the citation graph (which only
-    links 2025->2025 papers inside the corpus), this counts every reference to
-    one of the tracked venues no matter when the cited work was published.
+    Unlike the in-corpus links, which only connect papers of the corpus, this
+    counts every reference to a configured venue, whenever the cited work was
+    published.
 
     Returns {source_cluster: {cited_venue: count}} plus totals.
     """
@@ -139,6 +152,102 @@ def count_venue_references(cfg, index):
     return result, totals
 
 
+def flow_shares(papers, edges):
+    """Cross-community shares for a set of (src, tgt) edges."""
+    f = {"a_a": 0, "a_b": 0, "b_a": 0, "b_b": 0}
+    for s, t in edges:
+        f[f"{papers[s]['cluster']}_{papers[t]['cluster']}"] += 1
+    a_tot, b_tot = f["a_a"] + f["a_b"], f["b_a"] + f["b_b"]
+    return f, (f["a_b"] / a_tot * 100 if a_tot else 0.0), (f["b_a"] / b_tot * 100 if b_tot else 0.0)
+
+
+def robustness_section(w, cfg, index, A, B):
+    papers, log_ = index["papers"], index.get("match_log", [])
+    if not log_:
+        return
+    thr = cfg.fuzzy_threshold
+
+    def edges(cond):
+        return {(m[0], m[1]) for m in log_ if cond(m)}
+    ok_score = lambda m, t: m[2] != "fuzzy" or m[3] >= t
+    scen = [
+        (f"Configured rule: DOI + exact + fuzzy >= {thr}, year check", lambda m: m[5] and ok_score(m, thr)),
+        ("Same rule without the year check", lambda m: ok_score(m, thr)),
+        ("DOI + exact title only (no fuzzy), year check", lambda m: m[5] and m[2] != "fuzzy"),
+        ("DOI only", lambda m: m[2] == "doi"),
+    ]
+    for t in (80, 85, 90, 95):
+        scen.append((f"Fuzzy threshold {t}, year check", lambda m, t=t: m[5] and ok_score(m, t)))
+    w("## Robustness of the in-corpus citation flow")
+    w()
+    w("The same flow computed under stricter and looser matching rules. "
+      "Shares are the share of each cluster's in-corpus citations that go to the other cluster.")
+    w()
+    w(f"| Matching rule | Links | {A} -> {B} | {A} -> {B} share | {B} -> {A} | {B} -> {A} share |")
+    w("|---|---:|---:|---:|---:|---:|")
+    for name, cond in scen:
+        es = edges(cond)
+        f, sa, sb = flow_shares(papers, es)
+        w(f"| {name} | {len(es):,} | {f['a_b']:,} | {sa:.1f}% | {f['b_a']:,} | {sb:.1f}% |")
+    w()
+    kinds = {k: len(edges(lambda m, k=k: m[2] == k and m[5] and ok_score(m, thr))) for k in ("doi", "exact", "fuzzy")}
+    w(f"- Accepted links by match type: DOI {kinds['doi']:,}, exact title {kinds['exact']:,}, fuzzy title {kinds['fuzzy']:,}")
+    w(f"- Candidate links rejected by the year check: {len(edges(lambda m: not m[5])):,}")
+    w()
+    before, after = collections_counter(edges(lambda m: ok_score(m, thr))), collections_counter(edges(lambda m: m[5] and ok_score(m, thr)))
+    w("### Most-cited papers before and after the year check")
+    w()
+    w("| Paper | Cluster | Before | After |")
+    w("|---|---|---:|---:|")
+    for pid, n in before.most_common(10):
+        w(f"| {papers[pid]['title'][:70].replace('|', '/')} | {A if papers[pid]['cluster'] == 'a' else B} | {n:,} | {after.get(pid, 0):,} |")
+    w()
+
+
+def collections_counter(edges):
+    c = Counter()
+    for _, t in edges:
+        c[t] += 1
+    return c
+
+
+def fractional_section(w, index, clusters):
+    papers, affil = index["papers"], index["affiliations"]
+    w("## Country ranking: full versus fractional counting")
+    w()
+    w("Full counting gives each country 1 per paper; fractional counting splits each paper equally between its countries.")
+    w()
+    for ck, short in clusters:
+        full, frac = Counter(), Counter()
+        for pid, p in papers.items():
+            cs = sorted(set(affil.get(pid, {}).get("countries", [])))
+            if p["cluster"] != ck or not cs:
+                continue
+            for c in cs:
+                full[c] += 1
+                frac[c] += 1 / len(cs)
+        rank_full = {c: i + 1 for i, (c, _) in enumerate(full.most_common())}
+        w(f"### {short}")
+        w()
+        w("| Rank (fractional) | Country | Fractional | Full | Rank (full) |")
+        w("|---:|---|---:|---:|---:|")
+        for i, (c, v) in enumerate(frac.most_common(15), 1):
+            w(f"| {i} | {cname(c)} ({c}) | {v:,.1f} | {full[c]:,} | {rank_full[c]} |")
+        w()
+
+
+def affiliation_source_section(w, index):
+    affil = index["affiliations"]
+    src = Counter(s for a in affil.values() for s in a.get("country_source", {}).values())
+    w("## How countries were identified")
+    w()
+    w("| Source | Paper-country assignments |")
+    w("|---|---:|")
+    for k in ("key", "text", "address", "inferred"):
+        w(f"| {k} | {src.get(k, 0):,} |")
+    w()
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="config.yaml")
@@ -169,7 +278,7 @@ def main():
     def w(s=""):
         L.append(s)
 
-    w(f"# DualCite results summary")
+    w("# DualCite results summary")
     w()
     w(f"Two venue groups compared: **{a.name} ({A})** vs "
       f"**{b.name} ({B})**.")
@@ -200,23 +309,21 @@ def main():
           f"({other/total_refs_all*100:.1f}%)")
     w()
     if total_refs_all:
-        w("> The vast majority of references point outside the single-year "
-          "corpus (to earlier years or untracked venues). This is expected: "
-          "most citations in any paper are to prior work. The citation-flow "
-          "analysis below therefore concerns only the small fraction of "
-          "references that link two papers *inside* the 2025 corpus — the "
-          "asymmetry and relative shares matter more than the absolute counts.")
+        w("> Most references point to works outside the corpus, such as earlier "
+          "papers or papers of other venues. The in-corpus citation flow below "
+          "therefore covers only the references that link two papers of the "
+          "corpus; its shares are more informative than its absolute counts.")
         w()
 
     # ---------- citation flows ----------
     w("## Citation flows between the two communities")
     w()
-    w("*(Only references that resolve to another paper inside the corpus — "
-      "i.e. 2025→2025 links. The \"other\" bucket above is excluded here.)*")
+    w("*(Only references that resolve to another paper of the corpus; the "
+      "\"other\" references above are excluded.)*")
     w()
     tot = sum(flows.values()) or 1
-    w(f"| Direction | Citations | % of all intra-corpus citations |")
-    w(f"|---|---:|---:|")
+    w("| Direction | Citations | % of all intra-corpus citations |")
+    w("|---|---:|---:|")
     w(f"| {A} → {A} (within {A}) | {flows['a_a']:,} | {flows['a_a']/tot*100:.1f}% |")
     w(f"| {B} → {B} (within {B}) | {flows['b_b']:,} | {flows['b_b']/tot*100:.1f}% |")
     w(f"| {A} → {B} (cross) | {flows['a_b']:,} | {flows['a_b']/tot*100:.1f}% |")
@@ -231,16 +338,14 @@ def main():
           f"{flows['a_b']:,} vs {flows['b_a']:,}  (ratio {ratio:.2f})")
     w()
 
-    # ---------- 2025 -> all years (venue reference counting) ----------
+    # ---------- all years: cited venue names ----------
     w("## References to tracked venues across all years")
     w()
-    w("Unlike the citation flows above (which only link 2025→2025 papers inside "
-      "the corpus), this counts every reference our 2025 papers make to one of "
-      "the tracked venues **regardless of the cited work's year**. It is the "
-      "broader 'do these communities cite each other's venues at all' view, and "
-      "the numbers are naturally much larger.")
+    w("This measurement counts every reference whose cited venue name matches "
+      "a configured venue, **whenever the cited work was published**. It "
+      "therefore covers far more references than the in-corpus links.")
     w()
-    vref, vtot = count_venue_references(cfg, index)
+    vref, _ = count_venue_references(cfg, index)
 
     def venue_ref_block(src_ck, src_short):
         own = a.venues if src_ck == "a" else b.venues
@@ -255,8 +360,8 @@ def main():
         w(f"- To other community venues: {other_hits:,} "
           f"({other_hits/tot*100:.1f}%)")
         w()
-        w(f"| Cited venue | Cluster | References |")
-        w(f"|---|---|---:|")
+        w("| Cited venue | Cluster | References |")
+        w("|---|---|---:|")
         for v in a.venues + b.venues:
             n = vref[src_ck].get(v, 0)
             if n == 0:
@@ -275,17 +380,16 @@ def main():
 
     # ---------- optional: all-years internal/external/other ----------
     if args.cl_refs and args.ir_refs:
-        w("## Internal / external / other — matched against all-years lists")
+        w("## Internal / external / other, matched against all-years lists")
         w()
-        w("Every outgoing reference from the 2025 papers, matched against full "
-          f"all-years reference lists of **{A}** and **{B}** and classified as "
-          "internal (same community, any year), external (other community, any "
-          "year), or other (in neither list). This is the most complete view "
-          "of how the two communities cite each other.")
+        w("Every reference of the corpus papers is matched against the all-years "
+          f"reference lists of **{A}** and **{B}** and classified as internal "
+          "(same community), external (other community), or other (in neither "
+          "list). This measurement covers the full history of both communities.")
         w()
         counts, sizes = count_all_years(cfg, index, args.cl_refs, args.ir_refs)
-        w(f"*(Reference lists: {A} — {sizes[0]:,} titles / {sizes[1]:,} DOIs; "
-          f"{B} — {sizes[2]:,} titles / {sizes[3]:,} DOIs.)*")
+        w(f"*(Reference lists: {A}: {sizes[0]:,} titles / {sizes[1]:,} DOIs; "
+          f"{B}: {sizes[2]:,} titles / {sizes[3]:,} DOIs.)*")
         w()
         for ck, short in (("a", A), ("b", B)):
             c = counts[ck]
@@ -293,8 +397,8 @@ def main():
             other_short = B if ck == "a" else A
             w(f"### References made by {short} papers")
             w()
-            w(f"| Target | References | % |")
-            w(f"|---|---:|---:|")
+            w("| Target | References | % |")
+            w("|---|---:|---:|")
             w(f"| Internal (→ {short}, any year) | {c['internal']:,} | "
               f"{c['internal']/tot*100:.1f}% |")
             w(f"| External (→ {other_short}, any year) | {c['external']:,} | "
@@ -334,8 +438,8 @@ def main():
             venue_out[sv] += 1
             if papers[t]["cluster"] != sc:
                 venue_cross_out[sv] += 1
-    w(f"| Venue | Cluster | Papers | Citations made | Cross-cluster citations made |")
-    w(f"|---|---|---:|---:|---:|")
+    w("| Venue | Cluster | Papers | Citations made | Cross-cluster citations made |")
+    w("|---|---|---:|---:|---:|")
     for v in a.venues + b.venues:
         cl = A if v in a.venues else B
         w(f"| {v.upper()} | {cl} | {venue_papers.get(v,0):,} | "
@@ -345,12 +449,11 @@ def main():
     # ---------- bridge venues ----------
     w("## Bridge venues (most cross-community citations)")
     w()
-    w("Venues ranked by how many cross-community citations their papers make "
-      "(outgoing) — candidates for 'bridges' between the two fields.")
+    w("Venues ranked by the number of cross-community citations their papers make.")
     w()
     bridges = sorted(venue_cross_out.items(), key=lambda kv: -kv[1])[:10]
-    w(f"| Venue | Cross-cluster citations made |")
-    w(f"|---|---:|")
+    w("| Venue | Cross-cluster citations made |")
+    w("|---|---:|")
     for v, n in bridges:
         w(f"| {v.upper()} | {n:,} |")
     w()
@@ -366,10 +469,10 @@ def main():
         return cnt.most_common(n)
 
     for ck, short in (("a", A), ("b", B)):
-        w(f"## Top countries — {short}")
+        w(f"## Top countries: {short}")
         w()
-        w(f"| Rank | Country | Papers |")
-        w(f"|---:|---|---:|")
+        w("| Rank | Country | Papers |")
+        w("|---:|---|---:|")
         for i, (c, n) in enumerate(top_countries(ck), 1):
             w(f"| {i} | {cname(c)} ({c}) | {n:,} |")
         w()
@@ -385,10 +488,10 @@ def main():
         return cnt.most_common(n)
 
     for ck, short in (("a", A), ("b", B)):
-        w(f"## Top institutions — {short}")
+        w(f"## Top institutions: {short}")
         w()
-        w(f"| Rank | Institution | Papers |")
-        w(f"|---:|---|---:|")
+        w("| Rank | Institution | Papers |")
+        w("|---:|---|---:|")
         for i, (inst, n) in enumerate(top_institutions(ck), 1):
             w(f"| {i} | {inst} | {n:,} |")
         w()
@@ -400,8 +503,8 @@ def main():
       "(international collaboration).")
     w()
     pairs = sorted(geo["country_pairs"].items(), key=lambda kv: -kv[1])[:20]
-    w(f"| Rank | Country pair | Papers |")
-    w(f"|---:|---|---:|")
+    w("| Rank | Country pair | Papers |")
+    w("|---:|---|---:|")
     for i, (key, n) in enumerate(pairs, 1):
         c1, c2 = key.split("|")
         w(f"| {i} | {cname(c1)} – {cname(c2)} | {n:,} |")
@@ -414,8 +517,8 @@ def main():
       "*other* community (cross-community incoming).")
     w()
     ranked = sorted(papers, key=lambda pid: -(stats[pid]["ii"] + stats[pid]["ie"]))[:25]
-    w(f"| Rank | Cluster | Venue | In-cites (total) | of which cross | Title |")
-    w(f"|---:|---|---|---:|---:|---|")
+    w("| Rank | Cluster | Venue | In-cites (total) | of which cross | Title |")
+    w("|---:|---|---|---:|---:|---|")
     for i, pid in enumerate(ranked, 1):
         p = papers[pid]
         st = stats[pid]
@@ -424,6 +527,10 @@ def main():
         title = p["title"][:70].replace("|", "/")
         w(f"| {i} | {cl} | {p['venue'].upper()} | {total_in} | {st['ie']} | {title} |")
     w()
+
+    robustness_section(w, cfg, index, A, B)
+    fractional_section(w, index, (("a", A), ("b", B)))
+    affiliation_source_section(w, index)
 
     out = Path(args.out)
     out.write_text("\n".join(L), encoding="utf-8")

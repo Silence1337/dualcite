@@ -68,9 +68,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>As autonomous agents and assistants, large language models (LLMs) often struggle with &quot;hallucinations.&quot; Fundamentally, the problem is one of prioritization and balance: the LLM needs to understand or infer when it needs to be creative and balance that with its need to be accurate. Most efforts focus on either updating intrinsic knowledge via targeted post-training or by adding external knowledge sources which the LLM can reference neurosymbolically (e.g., via retrieval-augmented generation). However, these all eventually rely on the LLM&apos;s implicit reasoning ability during generation, still allowing for these random hallucinations despite high-quality training examples and references. Using aspect-oriented summarization as a case study, we propose LOgit REwriting (LORE), a new controlled generation paradigm which can simultaneously be faithful to external knowledge and to the LLM&apos;s intentions. LORE works by adding a rewriting module at left-to-right inference time, continuously reflecting on the newest prediction and trying to find a replacement that is more faithful to the source document. Then, it merges the logits of the replacement with those of the original prediction to generate the next token. We proposed a new long-context aspect-oriented summarization dataset, SLPAspect, and find that LORE generates 5.8% better summaries compared to the LLM without LORE-rewriting. 1</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

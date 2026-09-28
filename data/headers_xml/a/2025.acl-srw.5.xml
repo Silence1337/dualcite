@@ -71,9 +71,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Active learning (AL) aims to reduce annotation effort by iteratively selecting the most informative samples for labeling. The dominant strategy in AL involves fully finetuning the model on all acquired data after each round, which is computationally expensive in multilingual and low-resource settings. This paper investigates continual finetuning (CF), an alternative update strategy where the model is updated only on newly acquired samples at each round. We evaluate CF against full finetuning (FA) across 28 African languages using MasakhaNEWS and SIB-200. Our analysis reveals three key findings. First, CF matches or outperforms FA for languages included in the model&apos;s pretraining, achieving up to 35% reductions in GPU memory, FLOPs, and training time. Second, CF performs comparably even for languages not seen during pretraining when they are typologically similar to those that were. Third, CF&apos;s effectiveness depends critically on uncertainty-based acquisition; without it, performance deteriorates significantly. While FA remains preferable for some low-resource languages, the overall results establish CF as a robust, cost-efficient alternative for active learning in multilingual NLP. These findings motivate the development of hybrid AL strategies that adapt fine-tuning behavior based on pretraining coverage, language typology, and acquisition dynamics. Our code is available here.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

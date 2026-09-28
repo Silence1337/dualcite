@@ -80,9 +80,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Recent Large-Language Models (LLMs) pruning methods typically operate at the posttraining phase without the expensive weight finetuning, however, their pruning criteria often rely on heuristically hand-crafted metrics, potentially leading to suboptimal performance. We instead propose a novel optimizationbased structural pruning that learns the pruning masks in a probabilistic space directly by optimizing the loss of the pruned model. To preserve efficiency, our method eliminates the back-propagation through the LLM per se during optimization, requiring only the forward pass of the LLM. We achieve this by learning an underlying Bernoulli distribution to sample binary pruning masks, where we decouple the Bernoulli parameters from LLM loss, facilitating efficient optimization via policy gradient estimator without back-propagation. Thus, our method can 1) support global and heterogeneous pruning (i.e., automatically determine different redundancy for different layers), and 2) optionally initialize with a metric-based method (for our Bernoulli distributions). Extensive experiments conducted on LLaMA, LLaMA-2, LLaMA-3, Vicuna, and Mistral models using the C4 and WikiText2 datasets demonstrate the promising performance of our method in efficiency and effectiveness. Code is available at https://github.com/ ethanygao/backprop-free_LLM_pruning.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

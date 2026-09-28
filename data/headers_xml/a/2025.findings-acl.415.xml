@@ -70,9 +70,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>As large language models continue to scale up, knowledge editing techniques that modify models&apos; internal knowledge without full retraining have gained significant attention. MEMIT, a prominent batch editing algorithm, stands out for its capability to perform mass knowledge modifications. However, we uncover that MEMIT&apos;s editing efficacy significantly deteriorates when processing batches containing multiple edits sharing the same subject. Our analysis reveals this stems from MEMIT&apos;s key value modeling framework: identical keys (derived from the shared subject) are forced to represent different values (corresponding to different knowledge), resulting in update conflicts during editing. Addressing this issue, we propose MEMIT-Merge, an enhanced approach that merges value computation processes for facts sharing the same subject, effectively resolving the performance degradation in samesubject batch editing scenarios. Experimental results demonstrate that when MEMIT&apos;s edit success rate drops to around 50% at larger batch sizes, MEMIT-Merge maintains a success rate exceeding 90%, showcasing remarkable robustness to subject entity collisions. The code is available at https://github.com/NUSTM/ MEMIT-Merge.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

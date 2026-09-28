@@ -1,5 +1,5 @@
 """
-config.py — load and validate the DualCite configuration.
+config.py: load and validate the DualCite configuration.
 
 The config is the single source of truth for everything venue- and
 dataset-specific. Nothing in the rest of the codebase hard-codes venue names,
@@ -37,28 +37,15 @@ class Config:
     min_words_for_fuzzy: int
     port: int
     open_browser: bool
+    fuzzy_floor: int = 80
+    max_year_gap: int = 1
+    exclude_patterns: list = field(default_factory=list)
+    exclude_title_prefixes: list = field(default_factory=lambda: ["proceedings of"])
+    exclude_id_suffixes: list = field(default_factory=list)
+    include_id_prefixes: list = field(default_factory=list)
     _root: Path = field(default=Path("."))
 
     # --- convenience accessors -------------------------------------------
-
-    @property
-    def venues_a(self) -> list[str]:
-        return self.clusters["a"].venues
-
-    @property
-    def venues_b(self) -> list[str]:
-        return self.clusters["b"].venues
-
-    def cluster_of(self, venue: str) -> str | None:
-        """Return 'a' or 'b' for a venue, or None if it belongs to neither."""
-        if venue in self.clusters["a"].venues:
-            return "a"
-        if venue in self.clusters["b"].venues:
-            return "b"
-        return None
-
-    def color_of_cluster(self, cluster_key: str) -> str:
-        return self.clusters[cluster_key].color
 
     def path(self, key: str) -> Path:
         """Resolve a data path relative to the config file's directory."""
@@ -101,6 +88,12 @@ def load_config(config_path: str | Path = "config.yaml") -> Config:
         min_words_for_fuzzy=matching.get("min_words_for_fuzzy", 4),
         port=server.get("port", 8050),
         open_browser=server.get("open_browser", True),
+        fuzzy_floor=matching.get("fuzzy_candidate_floor", 80),
+        max_year_gap=matching.get("max_year_gap", 1),
+        exclude_patterns=[x.lower() for x in raw.get("exclude_source_patterns", [])],
+        exclude_title_prefixes=[x.lower() for x in raw.get("exclude_title_prefixes", ["proceedings of"])],
+        exclude_id_suffixes=list(raw.get("exclude_id_suffixes", [])),
+        include_id_prefixes=list(raw.get("include_id_prefixes", [])),
         _root=path.parent,
     )
 
@@ -122,7 +115,7 @@ def _validate(raw: dict, path: Path):
             if "venues" in c and not c["venues"]:
                 errors.append(f"cluster '{key}' has empty venue list")
 
-    # venue overlap check — a venue can't be in both clusters
+    # venue overlap check, a venue can't be in both clusters
     if not errors and "clusters" in raw:
         va = set(v.lower() for v in raw["clusters"]["a"].get("venues", []))
         vb = set(v.lower() for v in raw["clusters"]["b"].get("venues", []))
@@ -138,12 +131,22 @@ def _validate(raw: dict, path: Path):
         msg = "\n  - ".join(errors)
         sys.exit(f"Config errors in {path}:\n  - {msg}")
 
+    # a venue without patterns is only recognized when a record names it directly,
+    # and never in cited venue names; warn instead of failing silently
+    known = {k.lower() for k in (raw.get("venue_patterns") or {})}
+    for key in ("a", "b"):
+        for v in raw["clusters"][key].get("venues", []):
+            if v.lower() not in known:
+                print(f"  warning: venue '{v}' has no entry in venue_patterns; it is only "
+                      f"recognized where a record's venue field names it directly",
+                      file=sys.stderr)
+
 
 if __name__ == "__main__":
     # quick self-test
     cfg = load_config(sys.argv[1] if len(sys.argv) > 1 else "config.yaml")
-    print(f"Loaded config with clusters:")
+    print("Loaded config with clusters:")
     for key, c in cfg.clusters.items():
-        print(f"  {key}: {c.name} ({c.short}) — {len(c.venues)} venues: {c.venues}")
+        print(f"  {key}: {c.name} ({c.short}), {len(c.venues)} venues: {c.venues}")
     print(f"Fuzzy threshold: {cfg.fuzzy_threshold}")
     print(f"Port: {cfg.port}")

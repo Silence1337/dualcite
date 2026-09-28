@@ -95,9 +95,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large Vision-Language Models (LVLMs) have a significant issue with object hallucinations, where researchers have noted that LVLMs often mistakenly determine objects as present in images where they do not actually exist. Some recent studies evaluate the occurrence of object hallucinations by asking LVLMs whether they see objects that do not exist in input images. However, we observe that these evaluation methods have some limitations, such as the objects being questioned potentially having little relevance to the image. In this paper, we introduce a more challenging benchmark for evaluating object hallucinations by removing objects from images and then asking the model whether it can still see the removed objects. Our evaluation result reveals that LVLMs suffer from severe hallucinations, as they often still claim to see the removed objects. Through our analysis, we find that biases in training result in LVLMs lacking guidance on learning about the absence of objects, which in turn leads to a lack of ability to determine that objects do not exist in images. To address this issue, we further propose oDPO, a direct preference optimization objective based on visual objects. By guiding LVLMs to learn to determine the existence of objects, oDPO effectively alleviates object hallucinations. It achieves more competitive results than other hallucination mitigation approaches across multiple object hallucination benchmarks and enhances the performance of LVLMs in various vision-language tasks.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

@@ -75,9 +75,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 					<term>Tokenisation-Bias</term>
 				</keywords>
 			</textClass>
-			<abstract>
-				<p>Modern language models are typically trained over subword sequences, but ultimately define probabilities over character-strings. Ideally, the choice of the tokeniser-which maps characterstrings to subwords-should not affect the probability assigned to the underlying characterstring; in practice, it does. We define this mismatch as tokenisation bias. In this work, we quantify one particular type of tokenisation bias: the effect of including or not a subword (e.g., ⟨hello⟩) in a tokeniser&apos;s vocabulary on the probability a trained model assigns to the corresponding characters (i.e., &quot;hello&quot;). Estimating this effect is challenging because each model is trained with only one tokeniser. We address this by framing tokenisation bias as a causal effect and estimating it using the regression discontinuity design. Specifically, we exploit the fact that tokenisation algorithms rank subwords and add the first K to a tokeniser&apos;s vocabulary, where K is an arbitrary cutoff point. As such, we can estimate a causal effect by comparing similar subwords around this cutoff. Experimentally, we find that tokenisation consistently affects models&apos; outputs across scales, vocabularies, and tokenisers. Notably, a subword&apos;s presence in a small model&apos;s vocabulary may increase its characters&apos; probability by up to 17 times, highlighting tokenisation as a key design choice in language modelling.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

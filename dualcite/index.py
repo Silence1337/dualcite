@@ -1,5 +1,5 @@
 """
-index.py — build the precomputed index that both tabs read from.
+index.py: build the precomputed index that both tabs read from.
 
 This is the shared analytical core. It:
   1. loads the two clusters' paper lists (schema-driven, from config)
@@ -8,18 +8,17 @@ This is the shared analytical core. It:
   4. computes citation flows and geo/affiliation aggregates
   5. caches everything to data/.precomputed/ so filter changes are instant
 
-Nothing here is venue-specific — cluster membership, venue patterns, and field
+Nothing here is venue-specific, cluster membership, venue patterns, and field
 schemas all come from the Config object.
 """
 from __future__ import annotations
 
-import hashlib
+import html
 import json
-import math
 import re
 import sys
 import xml.etree.ElementTree as ET
-from collections import Counter, defaultdict
+from collections import defaultdict
 from multiprocessing import Pool, cpu_count
 from pathlib import Path
 
@@ -36,7 +35,7 @@ except ImportError:
     pycountry = None   # geo features degrade gracefully
 
 TEI = "{http://www.tei-c.org/ns/1.0}"
-INDEX_VERSION = 9
+INDEX_VERSION = 13
 
 # ============================== title normalization ==============================
 
@@ -86,8 +85,8 @@ def _full_text(elem) -> str:
     return "".join(elem.itertext()).strip() if elem is not None else ""
 
 
-def parse_refs(xml_path: Path) -> list[tuple[str, str]]:
-    """Return [(title, doi)] for each citation in a processReferences XML."""
+def parse_refs(xml_path: Path) -> list[tuple[str, str, int | None]]:
+    """Return [(title, doi, year)] for each citation in a processReferences XML."""
     if not xml_path.exists():
         return []
     try:
@@ -117,8 +116,14 @@ def parse_refs(xml_path: Path) -> list[tuple[str, str]]:
                 if d:
                     doi = d
                     break
+        year = None
+        for date in bib.iter(f"{TEI}date"):
+            m = re.match(r"(\d{4})", date.get("when") or "")
+            if m:
+                year = int(m.group(1))
+                break
         if title or doi:
-            refs.append((title, doi))
+            refs.append((title, doi, year))
     return refs
 
 
@@ -153,14 +158,14 @@ COUNTRY_ALIASES = {
 # Two-letter ISO codes that are far more often non-country abbreviations in
 # free-text academic affiliations than the actual (tiny) country. Bare
 # occurrences of these in free text are NOT treated as countries. This is only
-# applied to free text — a GROBID <country key="..."> attribute is authoritative
+# applied to free text, a GROBID <country key="..."> attribute is authoritative
 # and bypasses this check (see from_key below).
 AMBIGUOUS_CC = {
     "AI",  # Anguilla vs "Artificial Intelligence"
     "ML",  # Mali vs "Machine Learning"
     "IS",  # Iceland vs the word "is" / "Information Systems"
     "AS",  # American Samoa vs "as"
-    "OR",  # Oregon-ish / "or"  (not a country anyway)
+    "OR",  # the word "or"; also Oregon
     "SO",  # Somalia vs "so"
     "TO",  # Tonga vs "to"
     "AM",  # Armenia vs "am"
@@ -172,7 +177,7 @@ AMBIGUOUS_CC = {
     "MS",  # Montserrat vs "MS" (degree, Microsoft)
     "MD",  # Moldova vs "MD" (Maryland, doctor)
     "MT",  # Malta vs "MT" (Montana, mount)
-    "MO",  # Macao — keep? "MO" = Missouri. Macao resolves via alias.
+    "MO",  # Macao vs "MO" (Missouri); Macao is still matched by its name
 }
 
 
@@ -200,29 +205,72 @@ def normalize_country(raw: str, from_key: bool = False) -> str | None:
     return None
 
 
-def _extract_country(text: str) -> str | None:
-    if not text:
+US_STATES = {
+    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
+    "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
+    "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
+    "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY", "DC"}
+# Words that are country names but usually mean a US state or a city here.
+_AMBIGUOUS_WORDS = {"georgia", "jersey", "victoria", "washington", "guinea"}
+
+
+def _country_exact(s: str) -> str | None:
+    """Exact country lookup (aliases, ISO codes, official names); no fuzzy search."""
+    s = s.strip(" .,;()")
+    if not s or pycountry is None:
         return None
-    code = normalize_country(text)
-    if code:
-        return code
-    words = text.split()
-    for w in reversed(words):
-        w = w.strip(" .,;()")
-        if len(w) >= 2:
-            code = normalize_country(w)
-            if code:
-                return code
+    low = s.lower()
+    if low in COUNTRY_ALIASES:
+        return COUNTRY_ALIASES[low]
+    if len(s) == 2 and s.isalpha():
+        code = s.upper()
+        if code in AMBIGUOUS_CC:
+            return None
+        return code if pycountry.countries.get(alpha_2=code) else None
+    try:
+        return pycountry.countries.lookup(s).alpha_2
+    except LookupError:
+        return None
+
+
+def _extract_countries(text: str) -> list[str]:
+    """
+    All countries named in a free-text string. GROBID sometimes merges the
+    countries of several affiliations ("India Italy") or appends an author name
+    ("United Kingdom Richard ..."), so the string is scanned for two-word and
+    one-word country names instead of being read as a single name. Fuzzy
+    matching is used only as a last resort on short strings.
+    """
+    if not text:
+        return []
+    whole = _country_exact(text)
+    if whole:
+        return [whole]
+    words = [w.strip(" .,;()") for w in text.split()]
+    found, used = [], set()
     for i in range(len(words) - 1):
-        code = normalize_country(f"{words[i]} {words[i+1]}".strip(" .,;()"))
+        code = _country_exact(f"{words[i]} {words[i+1]}")
         if code:
-            return code
-    # GROBID sometimes puts a city or region in the <country> tag
-    # (e.g. "Pisa"). Fall back to a small city map.
-    low = text.lower().strip(" .,;()")
-    if low in CITY_COUNTRY:
-        return CITY_COUNTRY[low]
-    return None
+            found.append(code); used |= {i, i + 1}
+    for i, w in enumerate(words):
+        if i in used or len(w) < 2 or w.lower() in _AMBIGUOUS_WORDS:
+            continue
+        code = _country_exact(w)
+        if code:
+            found.append(code)
+    if not found:
+        low = text.lower().strip(" .,;()")
+        if low in CITY_COUNTRY:
+            found.append(CITY_COUNTRY[low])
+        elif 5 <= len(text) and len(words) <= 3:
+            code = normalize_country(text)
+            if code:
+                found.append(code)
+    found = list(dict.fromkeys(found))
+    # "Hong Kong SAR, China", "Taiwan, Province of China": keep the region only
+    if "CN" in found and any(c in found for c in ("HK", "MO", "TW")):
+        found.remove("CN")
+    return found
 
 
 # Cities that GROBID occasionally mislabels as countries. Kept small and
@@ -238,14 +286,14 @@ CITY_COUNTRY = {
     "geneva": "CH", "beijing": "CN", "shanghai": "CN", "shenzhen": "CN",
     "hangzhou": "CN", "guangzhou": "CN", "nanjing": "CN", "wuhan": "CN",
     "tokyo": "JP", "kyoto": "JP", "osaka": "JP", "seoul": "KR",
-    "singapore": "SG", "london": "GB", "cambridge": "GB", "oxford": "GB",
+    "singapore": "SG", "london": "GB", "oxford": "GB",
     "edinburgh": "GB", "manchester": "GB", "dublin": "IE",
-    "boston": "US", "cambridge, ma": "US", "new york": "US",
+    "boston": "US", "new york": "US",
     "pittsburgh": "US", "seattle": "US", "chicago": "US",
     "toronto": "CA", "montreal": "CA", "montréal": "CA",
     "sydney": "AU", "melbourne": "AU", "delhi": "IN", "bangalore": "IN",
     "mumbai": "IN", "hyderabad": "IN", "tel aviv": "IL", "haifa": "IL",
-    "moscow": "RU", "warsaw": "PL", "prague": "CZ", "athens": "GR",
+    "moscow": "RU", "shenyang": "CN", "warsaw": "PL", "prague": "CZ", "athens": "GR",
     "stockholm": "SE", "copenhagen": "DK", "oslo": "NO", "helsinki": "FI",
 }
 
@@ -332,7 +380,7 @@ INSTITUTION_HINTS = [
     # Canada
     ("university of toronto", "CA"), ("mcgill", "CA"),
     ("university of waterloo", "CA"), ("université de montréal", "CA"),
-    ("university of montreal", "CA"), ("mila", "CA"),
+    ("university of montreal", "CA"), (" mila ", "CA"),
     ("university of british columbia", "CA"), ("university of alberta", "CA"),
     ("vector institute", "CA"),
     # Others
@@ -415,8 +463,9 @@ INSTITUTION_HINTS = [
     ("delhi", "IN"), ("mumbai", "IN"), ("bangalore", "IN"),
     ("hyderabad", "IN"), ("chennai", "IN"), ("kanpur", "IN"),
     ("kharagpur", "IN"), ("madras", "IN"), ("guwahati", "IN"),
-    # More US — state universities, UC system, common abbreviations
-    ("michigan state", "US"), ("northeastern university", "US"),
+    # More US, state universities, UC system, common abbreviations
+    ("michigan state", "US"), ("northeastern university, china", "CN"), ("northeastern university, shenyang", "CN"),
+    ("northeastern university", "US"),
     ("arizona state", "US"), ("texas a&m", "US"), ("texas a & m", "US"),
     ("uc davis", "US"), ("uc san diego", "US"), ("uc irvine", "US"),
     ("uc santa barbara", "US"), ("uc riverside", "US"), ("uc merced", "US"),
@@ -449,7 +498,7 @@ INSTITUTION_HINTS = [
     ("bielefeld", "DE"), ("bonn", "DE"), ("cologne", "DE"), ("köln", "DE"),
     ("freiburg", "DE"), ("mannheim", "DE"), ("potsdam", "DE"),
     ("leipzig", "DE"), ("dresden", "DE"), ("bochum", "DE"),
-    ("fraunhofer", "DE"), ("dfki", "DE"), ("kit ", "DE"),
+    ("fraunhofer", "DE"), ("dfki", "DE"), (" kit ", "DE"),
     # Poland
     ("nask", "PL"), ("wut", "PL"), ("agh university", "PL"),
     ("gdańsk", "PL"), ("gdansk", "PL"), ("łódź", "PL"), ("lodz", "PL"),
@@ -476,7 +525,7 @@ INSTITUTION_HINTS = [
     ("city university of hong kong", "HK"),
     ("chinese university of hong kong", "HK"),
     ("indian institute", "IN"), ("iisc", "IN"),
-    # Russia and CIS (explicit — avoid generic 'state university' misfires)
+    # Russia and CIS (explicit, avoid generic 'state university' misfires)
     ("moscow", "RU"), ("lomonosov", "RU"), ("saint petersburg", "RU"),
     ("st. petersburg", "RU"), ("st petersburg", "RU"), ("skoltech", "RU"),
     ("higher school of economics", "RU"), ("hse university", "RU"),
@@ -501,7 +550,7 @@ INSTITUTION_HINTS = [
     ("noah's ark", "CN"), ("noah ark", "CN"),
     ("guangdong university", "CN"), ("nankai", "CN"), ("soochow", "CN"),
     ("shandong", "CN"), ("hefei", "CN"), ("university of macau", "MO"),
-    ("northeastern university, china", "CN"), ("ocean university", "CN"),
+    ("ocean university", "CN"),
     ("beijing institute of technology", "CN"), ("jinan university", "CN"),
     ("cas ", "CN"), ("institute of computing technology", "CN"),
     ("institute of automation", "CN"), ("institute of software", "CN"),
@@ -511,6 +560,12 @@ INSTITUTION_HINTS = [
 ]
 
 
+# Longer keywords are more specific ("microsoft research asia" before
+# "microsoft", "universidad de chile" before "universidad"), so they are tried
+# first. Duplicates are removed.
+_HINTS_BY_LENGTH = sorted(dict(INSTITUTION_HINTS).items(), key=lambda kv: -len(kv[0]))
+
+
 def _country_from_institution(name: str) -> str | None:
     """Guess a country from a bare institution name (no address/country tag)."""
     if not name:
@@ -518,7 +573,7 @@ def _country_from_institution(name: str) -> str | None:
     # pad so patterns ending in a space (e.g. "ucl ", "mit ") also match when
     # the token sits at the very end of the string
     low = " " + name.lower() + " "
-    for kw, code in INSTITUTION_HINTS:
+    for kw, code in _HINTS_BY_LENGTH:
         if kw in low:
             return code
     return None
@@ -570,7 +625,7 @@ def _clean_institution(name: str) -> str:
             return cut
 
     # strip a trailing city ONLY if the token before it is an institutional
-    # word — i.e. the name already looks complete and the city is tacked on
+    # word, i.e. the name already looks complete and the city is tacked on
     # ("Tsinghua University | Beijing"). This protects names that legitimately
     # END in a place ("National University of | Singapore").
     if last in CITY_COUNTRY and prev in INST_TAIL:
@@ -580,68 +635,185 @@ def _clean_institution(name: str) -> str:
     return name
 
 
-def parse_header(xml_path: Path) -> tuple[list[str], list[str]]:
-    """Return (countries, institutions) from a processHeaderDocument XML."""
+# ACM papers print the conference short name, year, and location on their
+# first page ("SIGIR '25, Padua, Italy"). GROBID sometimes parses this line as
+# an author affiliation, which would assign every such paper to the host
+# country. The tag below recognizes the conference marker ("SIGIR '25",
+# "CHIIR '25", "WWW'25", ...).
+FOOTER_TAG = re.compile(r"\b[A-Z][A-Za-z]{1,11}\s*['\u2019\u2018`]\s?\d{2}\b")
+_ADDR_FIELDS = ("settlement", "region", "addrLine", "country")
+
+
+def _norm_tag(t: str) -> str:
+    return re.sub(r"[\s'\u2019\u2018`]", "", t).upper()
+
+
+def _aff_tag(aff) -> str | None:
+    """Return the normalized conference tag if this affiliation contains one."""
+    m = FOOTER_TAG.search(" ".join(aff.itertext()))
+    return _norm_tag(m.group(0)) if m else None
+
+
+def _org_texts_without_tag(aff) -> list[tuple[str, str]]:
+    out = []
+    for org in aff.findall(f"{TEI}orgName"):
+        txt = FOOTER_TAG.sub(" ", org.text or "")
+        txt = re.sub(r"\s+", " ", txt).strip(" ,;")
+        if txt:
+            out.append(((org.get("type") or "").lower(), txt))
+    return out
+
+
+def learn_footer_locations(xml_paths, min_share: float = 0.6,
+                           min_count: int = 3) -> dict[str, dict]:
+    """
+    Learn the printed location of each conference from the affiliations that
+    carry its footer tag. The conference location occurs in (almost) every
+    such affiliation, while genuine author addresses that GROBID merged into
+    some of them vary, so only address words occurring in at least
+    `min_share` of the tagged affiliations are kept. Returns
+    {tag: {"tokens": {lower-case words}, "codes": {country codes}}}.
+    """
+    seen: dict[str, int] = {}
+    counts: dict[str, dict[str, int]] = {}
+    for path in xml_paths:
+        try:
+            raw = Path(path).read_text("utf-8", errors="ignore")
+        except OSError:
+            continue
+        # the apostrophe may be stored as an XML entity, so this raw check is
+        # only a cheap prefilter; the real check runs on the parsed text
+        if not re.search(r"(?:'|&apos;|&#39;|&#x27;|\u2019|&#8217;)\s?\d{2}", raw):
+            continue
+        try:
+            root = ET.fromstring(raw)
+        except ET.ParseError:
+            continue
+        for aff in root.iter(f"{TEI}affiliation"):
+            tag = _aff_tag(aff)
+            if not tag:
+                continue
+            words = set()
+            for addr in aff.findall(f"{TEI}address"):
+                for fld in _ADDR_FIELDS:
+                    el = addr.find(f"{TEI}{fld}")
+                    if el is not None:
+                        words |= {w.lower().strip(" .,;()") for w in (el.text or "").split()}
+            words.discard("")
+            seen[tag] = seen.get(tag, 0) + 1
+            c = counts.setdefault(tag, {})
+            for w in words:
+                c[w] = c.get(w, 0) + 1
+    locs: dict[str, dict] = {}
+    for tag, n in seen.items():
+        if n < min_count:
+            continue
+        tokens = {w for w, k in counts[tag].items() if k >= min_share * n}
+        codes = {code for code in (normalize_country(w) for w in tokens) if code}
+        if tokens:
+            locs[tag] = {"tokens": tokens, "codes": codes}
+    return locs
+
+
+def _strip_tokens(text: str, tokens: set) -> str:
+    if not tokens:
+        return text
+    return " ".join(w for w in text.split()
+                    if w.lower().strip(" .,;()") not in tokens)
+
+
+_SOURCE_RANK = {"key": 0, "text": 1, "address": 2, "inferred": 3}
+
+
+def parse_header(xml_path: Path, footer_locs: dict | None = None) -> dict:
+    """
+    Return {"countries", "institutions", "inst_country", "country_source"} for
+    a processHeaderDocument XML. inst_country pairs each institution with the
+    countries of its own affiliation; country_source records how each country
+    was found: key (GROBID code), text (country element), address (city,
+    region, or address line), or inferred (from an organization name).
+    """
+    empty = {"countries": [], "institutions": [], "inst_country": [], "country_source": {}}
     if not xml_path.exists():
-        return [], []
+        return empty
     try:
         tree = ET.parse(xml_path)
     except ET.ParseError:
-        return [], []
-    countries, institutions = set(), set()
+        return empty
+    footer_locs = footer_locs or {}
+    source: dict[str, str] = {}
+    institutions, inst_country = set(), set()
+
+    def add(code, how, bucket):
+        bucket.add(code)
+        if code not in source or _SOURCE_RANK[how] < _SOURCE_RANK[source[code]]:
+            source[code] = how
+
     for aff in tree.iter(f"{TEI}affiliation"):
-        aff_insts = []      # institution names (for the institutions list)
-        aff_all_org = []    # ALL org text incl. department/laboratory (for inference)
-        for org in aff.findall(f"{TEI}orgName"):
-            txt = (org.text or "").strip()
-            if not txt:
-                continue
-            otype = (org.get("type") or "").lower()
-            if otype == "institution":
-                clean = _clean_institution(txt)
-                institutions.add(clean)
-                aff_insts.append(clean)
-            aff_all_org.append(txt)
+        tag = _aff_tag(aff)
+        orgs = _org_texts_without_tag(aff) if tag else [
+            ((o.get("type") or "").lower(), (o.text or "").strip())
+            for o in aff.findall(f"{TEI}orgName") if (o.text or "").strip()]
+        if tag and not orgs:
+            continue    # pure conference footer, not an affiliation
+        strip = footer_locs.get(tag, {}) if tag else {}
+        strip_tokens, strip_codes = strip.get("tokens", set()), strip.get("codes", set())
+        aff_insts = [_clean_institution(t) for k, t in orgs if k == "institution"]
+        aff_all_org = [t for _, t in orgs]
+        here: set[str] = set()
 
-        aff_country_found = False
-        for addr in aff.findall(f"{TEI}address"):
-            cel = addr.find(f"{TEI}country")
-            if cel is not None:
-                code = normalize_country(cel.get("key", ""), from_key=True) or \
-                       _extract_country((cel.text or "").strip())
-                if code:
-                    countries.add(code)
-                    aff_country_found = True
-            # settlement / region often hold a city that implies a country
-            # (and GROBID sometimes misplaces the city here while putting
-            # junk like "University" in <country>).
-            if not aff_country_found:
-                for tag in ("settlement", "region", "addrLine"):
-                    el = addr.find(f"{TEI}{tag}")
-                    if el is not None:
-                        code = _extract_country((el.text or "").strip())
-                        if code:
-                            countries.add(code)
-                            aff_country_found = True
-                            break
-        for cel in aff.findall(f"{TEI}country"):
-            code = normalize_country(cel.get("key", ""), from_key=True) or \
-                   _extract_country((cel.text or "").strip())
+        country_els = [a.find(f"{TEI}country") for a in aff.findall(f"{TEI}address")]
+        country_els += aff.findall(f"{TEI}country")
+        for cel in [c for c in country_els if c is not None]:
+            key = (cel.get("key") or "").upper()
+            code = normalize_country(key, from_key=True) if key and key not in strip_codes else None
             if code:
-                countries.add(code)
-                aff_country_found = True
-
-        # fallback: infer from any org name (institution, dept, or lab)
-        if not aff_country_found:
+                add(code, "key", here)
+                continue
+            for c in _extract_countries(_strip_tokens((cel.text or "").strip(), strip_tokens)):
+                add(c, "text", here)
+        if not here:
+            for addr in aff.findall(f"{TEI}address"):
+                for fld in ("region", "settlement", "addrLine"):
+                    el = addr.find(f"{TEI}{fld}")
+                    if el is None:
+                        continue
+                    txt = _strip_tokens((el.text or "").strip(), strip_tokens)
+                    if txt.replace(".", "").upper() in US_STATES:
+                        add("US", "address", here)     # "CA", "VA": US states, not countries
+                        break
+                    codes = _extract_countries(txt)
+                    for c in codes:
+                        add(c, "address", here)
+                    if codes:
+                        break
+        if not here:
             for name in aff_insts + aff_all_org:
                 code = _country_from_institution(name)
                 if code:
-                    countries.add(code)
+                    add(code, "inferred", here)
                     break
-    return sorted(countries), sorted(institutions)
+        for inst in aff_insts:
+            institutions.add(inst)
+            inst_country.add((inst, tuple(sorted(here))))
+    countries = sorted(source)
+    return {"countries": countries, "institutions": sorted(institutions),
+            "inst_country": [[i, list(c)] for i, c in sorted(inst_country)],
+            "country_source": source}
 
 
 # ============================== data loading ==============================
+
+def _clean_markup(title: str) -> str:
+    """
+    Remove markup that some metadata sources (Crossref) keep in titles, such as
+    <scp>Fin-Fact</scp> or <i>ImageScope</i>, so that the title can be matched
+    against references. The paper id, which names its XML files, is built from
+    the original title and is not affected.
+    """
+    t = re.sub(r"<[^>]+>", "", title or "")
+    return re.sub(r"\s+", " ", html.unescape(t)).strip()
+
 
 def load_papers(cfg: Config) -> tuple[dict, dict, dict]:
     """
@@ -663,7 +835,11 @@ def load_papers(cfg: Config) -> tuple[dict, dict, dict]:
 
         for p in raw:
             title = p.get(sch["title"]) or ""
-            if title.lower().startswith("proceedings of the"):
+            pid_raw = str(p.get(sch["id"]) or "") if sch.get("id") else ""
+            if (title.lower().startswith(tuple(cfg.exclude_title_prefixes))
+                    or (pid_raw and pid_raw.endswith(tuple(cfg.exclude_id_suffixes)))
+                    or (pid_raw and cfg.include_id_prefixes
+                        and not pid_raw.startswith(tuple(cfg.include_id_prefixes)))):
                 continue
 
             # resolve venue by trying, in order:
@@ -694,6 +870,10 @@ def load_papers(cfg: Config) -> tuple[dict, dict, dict]:
 
             if venue is None:
                 continue
+            src_text = " ".join(str(p.get(sch.get(k) or "", "") or "")
+                                for k in ("venue", "venue_from")).lower()
+            if any(x in src_text for x in cfg.exclude_patterns):
+                continue
 
             doi = (p.get(sch["doi"]) or "").strip().lower() if sch.get("doi") else ""
 
@@ -711,7 +891,7 @@ def load_papers(cfg: Config) -> tuple[dict, dict, dict]:
 
             url = p.get("url") or (f"https://doi.org/{doi}" if doi else "")
             papers[pid] = {
-                "id": pid, "title": title, "doi": doi, "venue": venue,
+                "id": pid, "title": _clean_markup(title), "doi": doi, "venue": venue,
                 "cluster": cluster_key, "year": p.get("year"), "url": url,
             }
             if doi:
@@ -735,15 +915,18 @@ def _init_worker(title_set, title_list, threshold, minwords):
 
 
 def _match_one(norm):
+    """Return (cited_norm, matched_corpus_norm, score, kind)."""
     if not norm:
-        return (norm, None)
+        return (norm, None, 0.0, None)
     if norm in _W_SET:
-        return (norm, norm)
+        return (norm, norm, 100.0, "exact")
     if len(norm.split()) < _W_MINWORDS:
-        return (norm, None)
+        return (norm, None, 0.0, None)
+    # _W_THRESHOLD holds the candidate floor here; candidates between the floor
+    # and the acceptance threshold are kept only for the sensitivity analysis.
     r = process.extractOne(norm, _W_LIST, scorer=fuzz.ratio,
                            score_cutoff=_W_THRESHOLD)
-    return (norm, r[0] if r else None)
+    return (norm, r[0], round(float(r[1]), 1), "fuzzy") if r else (norm, None, 0.0, None)
 
 
 # ============================== index building ==============================
@@ -752,13 +935,43 @@ def _cache_path(cfg: Config) -> Path:
     return cfg.path("precomputed") / "index.json"
 
 
+def _fingerprint(cfg: Config) -> str:
+    """Hash of everything the index depends on besides the code: the analysis
+    settings of the configuration, the content of the paper lists, and the number
+    and total size of the XML files. File dates are not used, so a cached index
+    stays valid after the repository is cloned. A change makes the index rebuild."""
+    import hashlib
+    parts = {
+        "clusters": {k: sorted(c.venues) for k, c in cfg.clusters.items()},
+        "patterns": cfg.venue_patterns, "schema": cfg.schema,
+        "matching": [cfg.fuzzy_threshold, cfg.fuzzy_floor, cfg.min_words_for_fuzzy, cfg.max_year_gap],
+        "exclude": [cfg.exclude_patterns, cfg.exclude_title_prefixes, cfg.exclude_id_suffixes,
+                    cfg.include_id_prefixes],
+    }
+    for key in ("papers_a", "papers_b"):          # small files: hash their content
+        try:
+            parts[key] = hashlib.sha1(cfg.path(key).read_bytes()).hexdigest()
+        except (OSError, KeyError):
+            parts[key] = None
+    # XML folders: the files sit in subfolders a/ and b/; count and measure them
+    for key in ("refs_xml", "headers_xml"):
+        n = size = 0
+        try:
+            for f in cfg.path(key).rglob("*.xml"):
+                n += 1; size += f.stat().st_size
+        except (OSError, KeyError):
+            pass
+        parts[key] = [n, size]
+    return hashlib.sha1(json.dumps(parts, sort_keys=True, default=str).encode()).hexdigest()
+
+
 def build_index(cfg: Config, force: bool = False, quiet: bool = False) -> dict:
     """Build (or load) the full precomputed index."""
     cache = _cache_path(cfg)
     if cache.exists() and not force:
         try:
             c = json.loads(cache.read_text("utf-8"))
-            if c.get("version") == INDEX_VERSION:
+            if c.get("version") == INDEX_VERSION and c.get("fingerprint") == _fingerprint(cfg):
                 if not quiet:
                     print(f"  Index loaded from {cache}", file=sys.stderr)
                 return c
@@ -798,45 +1011,63 @@ def build_index(cfg: Config, force: bool = False, quiet: bool = False) -> dict:
     # --- collect unique cited titles, fuzzy-match in parallel ---
     unique = set()
     for refs in all_refs.values():
-        for t, _ in refs:
+        for t, _, _ in refs:
             n = norm_title(t)
             if n:
                 unique.add(n)
     unique_list = list(unique)
     log(f"Matching {len(unique_list)} unique cited titles...")
 
-    norm_to_corpus = {}
+    floor = min(cfg.fuzzy_threshold, cfg.fuzzy_floor)
+    norm_to_match = {}          # cited_norm -> (pid, score, kind)
     nw = min(cpu_count(), 8)
     with Pool(nw, _init_worker,
-              (title_set, title_list, cfg.fuzzy_threshold,
-               cfg.min_words_for_fuzzy)) as pool:
+              (title_set, title_list, floor, cfg.min_words_for_fuzzy)) as pool:
         chunk = max(1, len(unique_list) // (nw * 8))
-        for cited_norm, matched in pool.map(_match_one, unique_list, chunk):
+        for cited_norm, matched, score, kind in pool.map(_match_one, unique_list, chunk):
             if matched is not None:
-                norm_to_corpus[cited_norm] = norm_to_pid[matched]
-    log(f"  matched {len(norm_to_corpus)}")
+                norm_to_match[cited_norm] = (norm_to_pid[matched], score, kind)
+    log(f"  candidates: {len(norm_to_match)}")
+
+    def _year(v):
+        try:
+            return int(v)
+        except (TypeError, ValueError):
+            return None
 
     # --- resolve citations ---
-    citations = {}
-    total_refs = {}   # per paper: total unique references made (incl. outside corpus)
+    # Every candidate link is logged with its kind (doi / exact / fuzzy), score,
+    # the year of the cited reference, and whether that year is compatible with
+    # the target paper. A reference published years before the target paper
+    # cannot cite it (e.g. LoRA, 2021, matched by title to DenseLoRA, 2025).
+    # The accepted citations use the configured threshold and the year check;
+    # the full log supports the robustness and sensitivity analyses.
+    citations, total_refs, match_log = {}, {}, []
     for pid, refs in all_refs.items():
-        cited = set()
-        unique = set()
-        for t, d in refs:
-            # count unique references (dedup by DOI or normalized title)
-            key = d if d else (norm_title(t) or f"_anon_{len(unique)}")
-            unique.add(key)
-            tgt = None
+        cited, unique = set(), set()
+        for t, d, y in refs:
+            unique.add(d if d else (norm_title(t) or f"_anon_{len(unique)}"))
+            tgt = kind = None
+            score = 0.0
             if d and d in doi_to_id:
-                tgt = doi_to_id[d]
+                tgt, score, kind = doi_to_id[d], 100.0, "doi"
             else:
                 n = norm_title(t)
-                if n:
-                    tgt = norm_to_corpus.get(n)
-            if tgt and tgt != pid:
+                if n and n in norm_to_match:
+                    tgt, score, kind = norm_to_match[n]
+            if not tgt or tgt == pid:
+                continue
+            ty = _year(papers[tgt].get("year"))
+            year_ok = kind == "doi" or y is None or ty is None or y >= ty - cfg.max_year_gap
+            match_log.append([pid, tgt, kind, score, y, year_ok, t])
+            if year_ok and (kind != "fuzzy" or score >= cfg.fuzzy_threshold):
                 cited.add(tgt)
         citations[pid] = sorted(cited)
         total_refs[pid] = len(unique)
+    n_year = sum(1 for m in match_log if not m[5])
+    log("  accepted links by kind: " + ", ".join(
+        f"{k}={sum(1 for m in match_log if m[2] == k and m[5] and (k != 'fuzzy' or m[3] >= cfg.fuzzy_threshold))}"
+        for k in ("doi", "exact", "fuzzy")) + f"; rejected by year check: {n_year}")
 
     n_edges = sum(len(v) for v in citations.values())
     log(f"  {n_edges} intra-corpus citations")
@@ -853,22 +1084,29 @@ def build_index(cfg: Config, force: bool = False, quiet: bool = False) -> dict:
     # --- affiliations (header XML) ---
     log("Parsing affiliations...")
     headers_root = cfg.path("headers_xml")
+    footer_locs = learn_footer_locations(
+        headers_root / p["cluster"] / f"{pid}.xml" for pid, p in papers.items())
+    if footer_locs:
+        log("  conference footers detected: " + ", ".join(
+            f"{t} ({', '.join(sorted(v['codes'])) or '?'})" for t, v in sorted(footer_locs.items())))
     affiliations = {}
     n_with_country = 0
     for pid, p in papers.items():
         # header filename uses the same stem as refs, in the cluster subfolder
         h_path = headers_root / p["cluster"] / f"{pid}.xml"
-        countries, institutions = parse_header(h_path)
-        affiliations[pid] = {"countries": countries, "institutions": institutions}
+        affiliations[pid] = parse_header(h_path, footer_locs)
+        countries = affiliations[pid]["countries"]
         if countries:
             n_with_country += 1
     log(f"  {n_with_country}/{len(papers)} papers with country data")
 
     index = {
         "version": INDEX_VERSION,
+        "fingerprint": _fingerprint(cfg),
         "papers": papers,
         "citations": citations,
         "total_refs": total_refs,
+        "match_log": match_log,
         "affiliations": affiliations,
         "flows": flows,
     }

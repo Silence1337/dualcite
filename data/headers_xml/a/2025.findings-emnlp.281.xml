@@ -118,9 +118,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>In competitive programming task, problem statements are often embedded within elaborate narrative backgrounds, requiring deep understanding of the underlying solutions to successfully complete the tasks. Current code generation models primarily focus on tokenlevel semantic modeling, highly susceptible to distractions from irrelevant narrative statements. Inspired by RAG, retrieving reference code with similar solutions may help enhance model performance on difficult problems. However, existing retrieval models also emphasize surface-level semantic similarity, neglecting the deeper solution-level logical similarities that are critical in competitive programming. Therefore, designing ranking models capable of accurately identifying and retrieving problems and corresponding codes remains an urgent research problem in competitive code generation. In this paper, we propose SolveRank, a solution-aware ranking model empowered by synthetic data for competitive programming tasks. Specifically, we leverage the DeepSeek-R1 model to generate logically equivalent but differently phrased new problems, verified by GPT-4o for solution consistency. Then, we train SolveRank with these as positive samples and BM25/random-retrieved problems as negatives. During inference, SolveRank retrieves relevant problems and corresponding code from the corpus to assist a downstream code generator. Experiments on the xCodeEval dataset demonstrate that SolveRank outperforms SOTA ranking methods in precision and recall metrics, and boosts code generation performance for difficult problems.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

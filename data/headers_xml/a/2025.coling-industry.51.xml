@@ -66,9 +66,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>The two-stage retrieval paradigm has gained popularity, where a neural model serves as a re-ranker atop a non-neural first-stage retriever. We argue that this approach, involving two disparate models without interaction, represents a suboptimal choice. To address this, we propose a unified encoder-decoder architecture with a novel training regimen which enables the encoder representation to be used for retrieval and the decoder for re-ranking within a single unified model, facilitating end-to-end retrieval. We incorporate XTR-style retrieval on top of the trained Mono-T5 reranker to specifically concentrate on addressing practical constraints to create a lightweight model. Results on the BIER benchmark demonstrate the effectiveness of our unified architecture, featuring a highly optimized index and parameters. It outperforms ColBERT, XTR, and even serves as a superior re-ranker compared to the Mono-T5 reranker. The performance gains of our proposed system in reranking become increasingly evident as model capacity grows, particularly when compared to rerankers operating over traditional first-stage retrievers like BM25. This is encouraging, as it suggests that we can integrate more advanced retrievers to further enhance final reranking performance. In contrast, BM25&apos;s static nature limits its potential for such improvements.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

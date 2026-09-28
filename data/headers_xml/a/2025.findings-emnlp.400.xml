@@ -63,9 +63,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>We propose Rotate, Clip, and Partition (RCP), a Quantization-Aware Training (QAT) approach that first realizes extreme compression of LLMs with W2A4KV4 (2-bit weight, 4-bit activation, and 4-bit KV-cache) configuration. RCP integrates recent rotation techniques with a novel non-uniform weight quantizer design by theoretically and empirically analyzing the impact of rotation on the non-uniformity of weight distribution. Our weight quantizer, Learnable Direct Partitioning (LDP), introduces learnable parameters to directly learn non-uniform intervals jointly with LLM weights. We also present a GPU kernel supporting GEMV on non-uniform W2A4 as proof of concept. Experiments show that RCP can compress LLaMA-2-7B to W2A4KV4 with a loss of only 2.84 WikiText2 PPL and 5.29 times reduced memory footprint. Furthermore, RCP can quantize challenging mobile-targeted LLaMA-3.2 models and domain-specific WizardCoder-7B and MetaMath-7B with no critical problems such as convergence failure and repetition. Code is available at https://github.com/ songsm921/RCP. * indicates equal contribution † indicates corresponding author 1 We call l-bit weight, m-bit activation, and n-bit KV-cache WlAmKVn like W2A4KV4.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">

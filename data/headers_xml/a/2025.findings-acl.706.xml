@@ -76,9 +76,7 @@ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.co
 			</appInfo>
 		</encodingDesc>
 		<profileDesc>
-			<abstract>
-				<p>Large Language Models (LLMs) exhibit emergent in-context learning (ICL) capabilities, allowing them to adapt to unseen tasks based on example demonstrations. Traditional ICL embeds examples within the prompt, while activation steering, uses a vector derived from examples to guide the latent states of LLMs toward desired behaviors. However, traditional ICL is difficult to control quantitatively and consumes valuable context space. Existing activation steering methods apply a single sentence-level steering vector uniformly across all tokens, ignoring LLMs&apos; token-wise, auto-regressive nature. This coarse control can lead to inconsistencies and suboptimal adjustments during generation. To address this problem, we introduce Dynamic Steering with Episodic Memory (DSEM), a novel training-free framework that aligns LLMs to given demonstrations by steering at the token level conditioned on the input query. DSEM employs a key-value memory to store associations between generated tokens and steering vectors. During inference, it uses a nearest-neighbor mechanism to dynamically compute steering vectors for each token chunk, enabling more precise and adaptive guidance. Our method surpasses strong baselines across diverse alignment tasks-including safety, style transfer, and role-playing-demonstrating improved alignment as demonstration size scales.</p>
-			</abstract>
+			
 		</profileDesc>
 	</teiHeader>
 	<text xml:lang="en">
