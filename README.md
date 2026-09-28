@@ -144,13 +144,10 @@ often, and its most-cited papers.
 
 ```bash
 # main configuration: all venues
-python export_summary.py --cl-refs reference-lists/acl_all_papers_full.json \
-                         --ir-refs reference-lists/ir_all_years_works.json
+python export_summary.py --cl-refs reference-lists/acl_all_papers_full.json --ir-refs reference-lists/ir_all_years_works.json
 
 # second configuration: main ACL and SIGIR conferences
-python export_summary.py --config config_acl_sigir.yaml --out results_acl_sigir.md \
-                         --cl-refs reference-lists/acl_main_all_years.json \
-                         --ir-refs reference-lists/sigir_main_all_years.json
+python export_summary.py --config config_acl_sigir.yaml --out results_acl_sigir.md --cl-refs reference-lists/acl_main_all_years.json --ir-refs reference-lists/sigir_main_all_years.json
 
 # precision of citation matching and accuracy of affiliation processing
 python validation/score.py
